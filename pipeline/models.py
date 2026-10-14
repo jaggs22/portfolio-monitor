@@ -90,24 +90,75 @@ def margin_model(stmts, engine_current_margin):
     return out
 
 
+def implied_shares(stmts):
+    """Diluted share count implied by net income over diluted EPS, as [(end, shares)] oldest first.
+    The reported share-count tag mixes share classes for some companies (Visa), so the implied count is used
+    wherever EPS exists; the reported count only fills gaps."""
+    out = {}
+    for blk in ("quarterly", "annual"):  # annual last so fiscal-year points are the annual weighted count
+        b = stmts.get(blk) or {}
+        rows = b.get("rows") or {}
+        for end, ni, eps, sh in zip(b.get("period_ends") or [], _vals(rows, "net_income"), _vals(rows, "eps_diluted"),
+                                    _vals(rows, "shares_diluted") or [None] * len(b.get("period_ends") or [])):
+            if ni is not None and eps not in (None, 0) and ni / eps > 0:
+                out[end] = ni / eps
+            elif sh and end not in out:  # reported count only fills gaps
+                out[end] = sh
+    return sorted(out.items())
+
+
 def share_model(stmts):
-    ann = stmts["annual"]["rows"]
-    sh = _clean(_vals(ann, "shares_diluted"))
+    ser = implied_shares(stmts)
+    ann_ends = set((stmts.get("annual") or {}).get("period_ends") or [])
+    ann = [(e, v) for e, v in ser if e in ann_ends]
     q = ttm_series(stmts, "revenue")  # only to confirm there is recent data
-    if len(sh) < 4 or not q:
+    if len(ann) < 3 or not q:
         return None
-    n = min(5, len(sh) - 1)
-    chg3 = (sh[-1] / sh[-1 - min(3, len(sh) - 1)]) ** (1 / min(3, len(sh) - 1)) - 1
-    chg5 = (sh[-1] / sh[-1 - n]) ** (1 / n) - 1
-    value = (0.6 * chg3 + 0.4 * chg5) * 100
+    sh = [v for _, v in ann]
+    n3 = min(3, len(sh) - 1)
+    n5 = min(5, len(sh) - 1)
+    chg3 = (sh[-1] / sh[-1 - n3]) ** (1 / n3) - 1
+    chg5 = (sh[-1] / sh[-1 - n5]) ** (1 / n5) - 1
+    value = (0.6 * chg3 + 0.4 * chg5) * 100 if n5 > n3 else chg3 * 100
     return {"value": round(value, 2), "unit": "% a year",
-            "method": "Annualised change in diluted share count: 3-year (60%) and 5-year (40%)",
-            "inputs": {"chg3_pct": round(chg3 * 100, 2), "chg5_pct": round(chg5 * 100, 2)}}
+            "method": "Annualised change in the diluted share count implied by net income over diluted EPS: 3-year (60%) and 5-year (40%) where five years exist, otherwise the 3-year rate",
+            "inputs": {"chg3_pct": round(chg3 * 100, 2), "chg5_pct": round(chg5 * 100, 2), "years_used": n5}}
+
+
+def _ttm_eps(stmts):
+    """TTM EPS per quarter end. Uses reported quarterly EPS where four consecutive quarters exist, otherwise TTM net
+    income over the implied share count interpolated between known points (flat outside them)."""
+    direct = dict(ttm_series(stmts, "eps_diluted"))
+    ni = ttm_series(stmts, "net_income")
+    sh = implied_shares(stmts)
+    if not ni or not sh:
+        return sorted(direct.items())
+    ds = [(dt.date.fromisoformat(e), v) for e, v in sh]
+    first = ds[0][0]
+    out = {}
+    for end, n in ni:
+        if end in direct:
+            out[end] = direct[end]
+            continue
+        d = dt.date.fromisoformat(end)
+        if d < first:
+            continue
+        if d >= ds[-1][0]:
+            v = ds[-1][1]
+        else:
+            v = ds[0][1]
+            for (d0, v0), (d1, v1) in zip(ds, ds[1:]):
+                if d0 <= d <= d1:
+                    span = (d1 - d0).days or 1
+                    v = v0 + (v1 - v0) * (d - d0).days / span
+                    break
+        out[end] = n / v
+    return sorted(out.items())
 
 
 def pe_history(stmts, bars):
     """P/E at each quarter end: close on or before the date over GAAP TTM EPS. Needs price bars [t,o,h,l,c,v]."""
-    eps = ttm_series(stmts, "eps_diluted")
+    eps = _ttm_eps(stmts)
     if not eps or not bars:
         return []
     days = [(dt.datetime.fromtimestamp(b[0], dt.timezone.utc).date().isoformat() if b[0] > 1e8 else str(b[0]), b[4]) for b in bars]
@@ -168,7 +219,7 @@ def driver_models(stmts, bars, research, price):
         entry = dict(m, engine=base["base"], bear=base["bear"], bull=base["bull"])
         if m.get("value") is not None:
             gap = base["base"] - m["value"]
-            span = max(abs(base["bull"] - base["bear"]) / 2, 0.5)
+            span = max(abs(base["bull"] - base["bear"]) / 2, 1.0)
             entry["gap"] = round(gap, 1)
             entry["verdict"] = ("inside the model's neighbourhood" if abs(gap) <= span * 0.5 else
                                 "above what the record implies" if gap > 0 else "below what the record implies")

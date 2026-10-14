@@ -23,7 +23,7 @@ def stmts(growth=0.12, n=20):
     rev = [100 * (1 + growth) ** (i / 4) for i in range(n)]
     q = {"period_ends": ends, "rows": {
         "revenue": rev, "op_income": [r * 0.30 for r in rev], "net_income": [r * 0.22 for r in rev],
-        "gross_profit": [r * 0.80 for r in rev], "eps_diluted": [r * 0.22 / 50 for r in rev], "shares_diluted": [50 - i * 0.1 for i in range(n)]}}
+        "gross_profit": [r * 0.80 for r in rev], "eps_diluted": [r * 0.22 / (50 - i * 0.1) for i, r in enumerate(rev)], "shares_diluted": [50 - i * 0.1 for i in range(n)]}}
     ann_rev = [sum(rev[i:i + 4]) for i in range(n - 4, -1, -4)][::-1]
     na = len(ann_rev)
     a = {"period_ends": [f"{2026 - na + 1 + i}-12-31" for i in range(na)], "rows": {
@@ -32,7 +32,8 @@ def stmts(growth=0.12, n=20):
         "equity": [r * 0.9 for r in ann_rev], "total_debt": [r * 0.3 for r in ann_rev], "cash": [r * 0.2 for r in ann_rev],
         "net_debt": [r * 0.1 for r in ann_rev], "ebitda": [r * 0.34 for r in ann_rev], "tax": [r * 0.05 for r in ann_rev],
         "pretax": [r * 0.27 for r in ann_rev], "dividends": [r * 0.05 for r in ann_rev], "buybacks": [r * 0.10 for r in ann_rev],
-        "goodwill": [r * 0.2 for r in ann_rev], "shares_diluted": [50 - i * 1.2 for i in range(na)]}}
+        "goodwill": [r * 0.2 for r in ann_rev], "shares_diluted": [50 - i * 1.2 for i in range(na)],
+        "eps_diluted": [r * 0.22 / (50 - i * 1.2) for i, r in enumerate(ann_rev)]}}
     return {"annual": a, "quarterly": q, "ttm": {}, "meta": {"latest_period_end": ends[-1]}}
 
 
@@ -72,6 +73,20 @@ def test_two_quarter_rule():
     assert st["status"] == "watch" and "1 of the last 2" in st["note"]
     rows["op_income"][-2] = rows["revenue"][-2] * 0.20
     assert evidence.tripwire_status(tw, evidence.BINDINGS["V"]["v4"], s)["status"] == "tripped"
+
+
+def test_implied_shares_ignore_mixed_class_count():
+    s = stmts(0.12)
+    s["annual"]["rows"]["shares_diluted"] = [999.0] * len(s["annual"]["period_ends"])  # wrong class count must not be used
+    m = models.share_model(s)
+    assert -5 < m["value"] < 0 and "implied" in m["method"]
+
+
+def test_pe_history_has_points_when_quarterly_eps_missing():
+    s = stmts(0.12)
+    s["quarterly"]["rows"]["eps_diluted"] = [None] * 16 + s["quarterly"]["rows"]["eps_diluted"][16:]
+    bars = [[int(dt.datetime.fromisoformat(e).replace(tzinfo=dt.timezone.utc).timestamp()), 1, 1, 1, 100.0, 1] for e in s["quarterly"]["period_ends"]]
+    assert len(models.pe_history(s, bars)) >= 6
 
 
 def test_models_have_methods_and_flags():

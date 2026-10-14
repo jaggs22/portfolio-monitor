@@ -29,6 +29,7 @@ BINDINGS = {
     "PG": {},
 }
 STALE_DAYS = 120
+GAP_UNIT = {"rev_cagr": "points a year", "margin_end": "points", "share_chg": "points a year", "exit_pe": "turns"}
 
 
 def _q(stmts, key):
@@ -125,7 +126,7 @@ def needs_review(research, filing, stmts, models_out, tripwires, now):
             reasons.append({"kind": "tripwire", "text": f"Tripwire {t['id']} reads {t['auto_value']} against its threshold; the thesis needs a decision."})
     for k, m in (models_out or {}).items():
         if m.get("flag"):
-            reasons.append({"kind": "model_gap", "text": f"{k}: the engine's base {m['engine']} is {abs(m['gap'])} {m['unit'] if m.get('unit') else ''} away from the statistical read ({m['value']}), {m['verdict']}."})
+            reasons.append({"kind": "model_gap", "text": f"{k}: the engine's base {m['engine']} is {abs(m['gap'])} {GAP_UNIT.get(k, '')} away from the statistical read ({m['value']}), {m['verdict']}.".replace("  ", " ")})
     return reasons
 
 
