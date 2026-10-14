@@ -1,0 +1,239 @@
+{
+ "ticker": "LLY",
+ "name": "Eli Lilly",
+ "depth": "deep",
+ "as_of": "2026-08-05",
+ "horizon": 3,
+ "header": {
+  "one_liner": "The incretin franchise: volume is exploding, price per unit is falling, and the multiple already assumes the volume wins.",
+  "thesis": "Revenue grew 48% on 60% more volume and 13% lower prices. The base case fades growth to 18% a year and compresses the P/E from 32x to 24x, which beats the hurdle (10.1% a year), but the bear case loses 18% a year, so the probability-weighted return is about the hurdle. The central debate is price erosion versus volume."
+ },
+ "base": {
+  "eps0": 36.0,
+  "eps_label": "FY2026 non-GAAP EPS, midpoint of guidance $35.50 to $36.50 (includes $3.03 of Q2 acquired IPR&D)",
+  "rev0": 86.0,
+  "shares0": 0.894,
+  "div": 6.92,
+  "rev_label": "FY2026 revenue, midpoint of guidance $85B to $87B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 18,
+   "bear": 8,
+   "bull": 25,
+   "kind": "judgment",
+   "why": "Q2 revenue +48%: volume +60%, price -13% (US price -3%, outside US -36%). Retatrutide BLA is planned for Q1 2027 and orforglipron (Foundayo) is launching. The base case fades growth from 48% toward the high teens as price erosion and comparables bite. This is the engine's judgment.",
+   "source": "Lilly Q2 2026 release"
+  },
+  "margin_end": {
+   "base": 40,
+   "bear": 32,
+   "bull": 43,
+   "kind": "judgment",
+   "why": "Net margin is about 37% on guided EPS including acquired IPR&D. Gross margin was 85.8%. The base case assumes slight leverage as R&D falls as a share of revenue (17% in Q2), offset by price erosion.",
+   "source": "Lilly Q2 2026 release; engine judgment"
+  },
+  "share_chg": {
+   "base": -0.3,
+   "bear": 0,
+   "bull": -0.5,
+   "kind": "sourced",
+   "why": "Weighted diluted shares fell from 894.8M (H1) to 893.7M (Q2). The release does not state repurchases.",
+   "source": "Lilly Q2 2026 release"
+  },
+  "exit_pe": {
+   "base": 24,
+   "bear": 16,
+   "bull": 30,
+   "kind": "judgment",
+   "why": "Current multiple is 32x. Large pharmaceutical growth names have historically traded between 16x and 30x. The base case assumes a growth-driven premium that narrows as volume growth slows. The bear case prices a patent-style cliff on pricing.",
+   "source": "Engine judgment"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Volume is the story, price is the cost",
+   "claim": "Volume +60% against price -13% means the franchise is growing by getting cheaper per dose and bigger in aggregate. The ex-US price drop of 36% is the leading indicator of where US pricing could go.",
+   "evidence": [
+    {
+     "t": "Revenue $22,974M, +48%; US $14.4B (+33%), ex-US $8.6B (+80%)",
+     "src": "Q2 release"
+    },
+    {
+     "t": "Mounjaro $9,943M (+91%); Zepbound $4,928M (+46%)",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does US realised price stay within -5% a year while volume grows above 30%?"
+  },
+  {
+   "title": "Margins are very high and rising",
+   "claim": "Non-GAAP gross margin 86.3% and operating margin about 39% after $2.8B of acquired IPR&D; R&D is only 17% of revenue.",
+   "evidence": [
+    {
+     "t": "Gross margin 85.8% GAAP; R&D $3,819M (+14%)",
+     "src": "Q2 release"
+    },
+    {
+     "t": "Operating income $8,978M (+31%)",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does gross margin stay above 85% as prices fall?"
+  },
+  {
+   "title": "The pipeline widens the franchise",
+   "claim": "Retatrutide has a complete obesity data package with BLA in Q1 2027; orforglipron was submitted for type 2 diabetes; new products added $98M to $201M each in the quarter.",
+   "evidence": [
+    {
+     "t": "Foundayo $98M, Jaypirca $192M, Ebglyss $201M, Kisunla $167M",
+     "src": "Q2 release"
+    },
+    {
+     "t": "Retatrutide BLA planned for Q1 2027",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Is the retatrutide BLA submitted on schedule?"
+  },
+  {
+   "title": "Guidance was raised on revenue, not EPS",
+   "claim": "Revenue guide rose $3B to $85B to $87B but EPS guide midpoint fell $0.25 because of $3.03 of IPR&D charges. Underlying EPS rose $2.78.",
+   "evidence": [
+    {
+     "t": "EPS guide $35.50 to $36.50 from $35.50 to $37.00; performance margin raised to 49% to 50.5%",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does acquired IPR&D stay a one-off or become a recurring charge?"
+  }
+ ],
+ "variant": {
+  "street": "The market prices a long runway of incretin growth at 32x earnings and a $1.1T market cap.",
+  "ours": "The engine lands neutral: the base case clears the hurdle but the bear tail is fat. Three of four drivers are judgment, so this is the position to challenge hardest on price erosion and the multiple.",
+  "could_be_wrong": "If volume keeps compounding at 50% and price stabilises, the bull case is understated.",
+  "would_change_mind": "US realised price falling more than 8% a year, or retatrutide delayed beyond 2027."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "Patent-protected incretin franchise with manufacturing scale; buyers (wholesalers and PBMs) and government pricing are the weak spot.",
+  "detail": "Existing Porter card (FY2025 10-K) rates Lilly Moderate because buyer power is high."
+ },
+ "quality": {
+  "leverage_note": "Cash and debt not stated in the release.",
+  "leverage_ok": null,
+  "incentive_note": "Acquired IPR&D of $3.36B in H1 is large; ask whether it is a recurring cost of staying ahead.",
+  "incentive_ok": false,
+  "checks": []
+ },
+ "catalysts": [
+  {
+   "date": "2026-10-30",
+   "label": "Lilly Q3 2026 earnings (date not confirmed; typically late October or early November)",
+   "confirmed": false,
+   "note": "Watch US price versus volume split."
+  },
+  {
+   "date": "2027-03-31",
+   "label": "Retatrutide BLA submission planned for Q1 2027",
+   "confirmed": true,
+   "note": "Company-stated timing."
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "y1",
+   "text": "Realised price decline worse than -15% in a quarter",
+   "metric": "price",
+   "op": "<",
+   "threshold": -15,
+   "current": -13,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr",
+    "margin_end"
+   ],
+   "src": "Q2 release"
+  },
+  {
+   "id": "y2",
+   "text": "US price decline worse than -6%",
+   "metric": "us_price",
+   "op": "<",
+   "threshold": -6,
+   "current": -3,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q2 release"
+  },
+  {
+   "id": "y3",
+   "text": "Gross margin below 85%",
+   "metric": "gm",
+   "op": "<",
+   "threshold": 85,
+   "current": 85.8,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q2 release"
+  },
+  {
+   "id": "y4",
+   "text": "Retatrutide BLA slips beyond Q1 2027",
+   "metric": "bla",
+   "op": "slip",
+   "threshold": null,
+   "current": null,
+   "unit": "",
+   "drivers": [
+    "rev_cagr",
+    "exit_pe"
+   ],
+   "src": "Q2 release",
+   "status": "holding",
+   "note": "Company still states Q1 2027."
+  }
+ ],
+ "risks": [
+  "Government pricing action and wholesaler concentration.",
+  "Compounded and competing GLP-1 products.",
+  "Manufacturing capacity and supply.",
+  "Large acquired IPR&D charges."
+ ],
+ "lenses": {
+  "eisman": "Volume +60% with price -13%: ask whether growth is being bought with price, and what the ex-US 36% decline implies for the US.",
+  "munger": "Invert it: what kills this? A pricing reset that arrives faster than volume.",
+  "buffett": "Wonderful business, but he would refuse to underwrite a three-year price path he cannot see; circle-of-competence test is hard.",
+  "hohn": "Durable demand and pricing power are the test: price is falling, so durability rests on volume and the pipeline."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Eli Lilly Form 8-K, Q2 2026 sales and earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000077/q226lillysalesandearningsp.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "tier": "C",
+   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
+   "url": "https://site.financialmodelingprep.com",
+   "date": "2026-10-14"
+  }
+ ],
+ "gaps": [
+  "Verzenio, Jardiance, Trulicity revenue not stated in the release.",
+  "Cash, debt and repurchases not stated.",
+  "Q3 earnings date not confirmed.",
+  "Consensus estimates not retrieved."
+ ],
+ "base_period_end": "2026-06-30"
+}

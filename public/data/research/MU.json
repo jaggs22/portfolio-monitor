@@ -1,0 +1,163 @@
+{
+ "ticker": "MU",
+ "name": "Micron",
+ "depth": "lighter",
+ "as_of": "2026-09-30",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Memory at the top of a violent cycle: record earnings, a single-digit multiple, and a stance that is mostly a bet on whether this is the peak.",
+  "thesis": "Revenue went from $37.4B to $133.2B in one fiscal year with 81% GAAP gross margin. A 12.6x multiple on peak earnings is how the market prices a cycle. The engine's wide scenario spread is the honest answer."
+ },
+ "base": {
+  "eps0": 75.52,
+  "eps_label": "FY2026 non-GAAP EPS",
+  "rev0": 133.19,
+  "shares0": 1.149,
+  "div": 0.6,
+  "rev_label": "FY2026 revenue ($B)"
+ },
+ "probs": {
+  "bear": 0.3,
+  "base": 0.4,
+  "bull": 0.3
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 20,
+   "bear": 5,
+   "bull": 35,
+   "kind": "judgment",
+   "why": "FQ1-27 revenue is guided to $61.5B (about $246B annualised) but memory pricing is cyclical. The base case assumes three-year growth well below the current run-rate because supply responds.",
+   "source": "Micron FQ4 2026 release (guidance); engine judgment"
+  },
+  "margin_end": {
+   "base": 45,
+   "bear": 25,
+   "bull": 62,
+   "kind": "judgment",
+   "why": "Net margin today is 65% (non-GAAP net income $86.76B on $133.19B). Gross margin was -9.1% in FY2023, so the base case assumes substantial mean reversion.",
+   "source": "Micron FQ4 2026 release; prior-cycle history from the existing card"
+  },
+  "share_chg": {
+   "base": 0,
+   "bear": 0.5,
+   "bull": -0.5,
+   "kind": "sourced",
+   "why": "FY2026 repurchases were only $0.65B against a $1.08T market cap, so share count barely moves.",
+   "source": "Micron FQ4 2026 release"
+  },
+  "exit_pe": {
+   "base": 9,
+   "bear": 6,
+   "bull": 12,
+   "kind": "judgment",
+   "why": "Memory trades at single-digit multiples at peak earnings because the market expects mean reversion.",
+   "source": "Engine judgment"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Earnings at an unprecedented level",
+   "claim": "FQ4 revenue $54.2B and non-GAAP EPS $33.42 against $11.3B revenue a year earlier. FQ1-27 guide EPS $38.15.",
+   "evidence": [
+    {
+     "t": "FY2026 revenue $133.19B; non-GAAP operating margin 76.0%",
+     "src": "FQ4 release"
+    }
+   ],
+   "test": "Does FQ1-27 land inside the $61.5B plus or minus $1.5B guide?"
+  },
+  {
+   "title": "The multiple prices a peak",
+   "claim": "At about 12.6x FY26 EPS the stock is cheap if earnings persist and expensive if margins revert to cycle averages.",
+   "evidence": [
+    {
+     "t": "Gross margin was -9.1% in FY2023 (existing card, FY2025 10-K)",
+     "src": "Existing Porter card"
+    }
+   ],
+   "test": "Does gross margin hold above 80% for another two quarters?"
+  }
+ ],
+ "variant": {
+  "street": "Not retrieved (no consensus access).",
+  "ours": "The engine is deliberately wide: the value is in the spread of outcomes, not the point estimate.",
+  "could_be_wrong": "If AI memory demand is structurally under-supplied, margins stay high.",
+  "would_change_mind": "Contract price declines for two consecutive quarters."
+ },
+ "moat": {
+  "rating": 3,
+  "summary": "Three-player DRAM oligopoly with huge capital barriers, but price is set by the cycle, not the firm.",
+  "detail": "Existing card rates Micron Contested."
+ },
+ "quality": {
+  "leverage_note": "Debt $5.18B against cash and investments of $73.5B: net cash.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": []
+ },
+ "catalysts": [
+  {
+   "date": "2026-10-29",
+   "label": "Quarterly dividend $0.15 payable (record date 14 October)",
+   "confirmed": true,
+   "note": "Declared 30 September."
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "m1",
+   "text": "FQ1-27 gross margin below 85% (guide about 86%)",
+   "metric": "gm",
+   "op": "<",
+   "threshold": 85,
+   "current": 86.8,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "FQ4 release"
+  },
+  {
+   "id": "m2",
+   "text": "Revenue below $60B in FQ1-27",
+   "metric": "rev",
+   "op": "<",
+   "threshold": 60,
+   "current": 54.23,
+   "unit": "$B (FQ4 actual)",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "FQ4 release",
+   "status": "holding",
+   "note": "FQ1-27 guide is $61.5B plus or minus $1.5B, above the $60B line."
+  }
+ ],
+ "risks": [
+  "Capacity additions across the three suppliers.",
+  "Customer inventory build.",
+  "Export controls and China exposure (not covered here)."
+ ],
+ "lenses": {},
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Micron Technology Form 8-K, fiscal Q4 2026 press release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+   "date": "2026-09-30"
+  },
+  {
+   "tier": "C",
+   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
+   "url": "https://site.financialmodelingprep.com",
+   "date": "2026-10-14"
+  }
+ ],
+ "gaps": [
+  "DRAM, NAND and HBM revenue split not in the release.",
+  "FY2027 capex plan not stated.",
+  "Consensus not retrieved."
+ ],
+ "base_period_end": "2026-09-03"
+}

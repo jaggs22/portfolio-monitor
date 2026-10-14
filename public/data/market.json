@@ -1,0 +1,174 @@
+{
+ "as_of": "2026-10-14",
+ "source": "Financial Modeling Prep company profile (price, market cap, beta, 52-week range, trailing dividend per share)",
+ "rates": {
+  "rf": 5.21,
+  "erp": 4.46,
+  "rf_src": "US 10Y Treasury 2026-10-13 (FMP treasury-rates)",
+  "erp_src": "FMP market-risk-premium (US)"
+ },
+ "stocks": {
+  "V": {
+   "price": 396.06,
+   "mcap": 739.5,
+   "beta": 0.77,
+   "div": 2.68,
+   "lo": 293.89,
+   "hi": 396.35,
+   "chg": 1.74429,
+   "cik": "0001403161"
+  },
+  "LIN": {
+   "price": 492.11,
+   "mcap": 227.7,
+   "beta": 0.713,
+   "div": 6.3,
+   "lo": 387.78,
+   "hi": 548.2,
+   "chg": 0.97671,
+   "cik": "0001707925"
+  },
+  "LLY": {
+   "price": 1166.51,
+   "mcap": 1098.6,
+   "beta": 0.454,
+   "div": 6.69,
+   "lo": 783.85,
+   "hi": 1292.65,
+   "chg": -1.36223,
+   "cik": "0000059478"
+  },
+  "MU": {
+   "price": 953.19,
+   "mcap": 1076.5,
+   "beta": 2.226,
+   "div": 0.53,
+   "lo": 186.25,
+   "hi": 1255.0,
+   "chg": -3.62473,
+   "industry": "Semiconductors",
+   "cik": "0000723125"
+  },
+  "PG": {
+   "price": 153.05,
+   "mcap": 363.8,
+   "beta": 0.377,
+   "div": 4.2906,
+   "lo": 137.62,
+   "hi": 167.25,
+   "chg": -0.09791123,
+   "industry": "Household & Personal Products",
+   "cik": "0000080424"
+  },
+  "MSFT": {
+   "price": 543.45,
+   "mcap": 4035.4,
+   "beta": 1.099,
+   "div": 3.64,
+   "lo": 349.2,
+   "hi": 553.72,
+   "chg": 0.42502,
+   "industry": "Software - Infrastructure",
+   "cik": "0000789019"
+  },
+  "JPM": {
+   "price": 331.43,
+   "mcap": 888.1,
+   "beta": 1.015,
+   "div": 6.15,
+   "lo": 279.1,
+   "hi": 366.5,
+   "chg": -0.85851,
+   "industry": "Banks - Diversified",
+   "cik": "0000019617"
+  },
+  "WM": {
+   "price": 211.83,
+   "mcap": 84.7,
+   "beta": 0.43,
+   "div": 3.66,
+   "lo": 194.11,
+   "hi": 248.13,
+   "chg": 0.3268,
+   "industry": "Waste Management",
+   "cik": "0000823768"
+  },
+  "AMZN": {
+   "price": 258.58,
+   "mcap": 2781.6,
+   "beta": 1.456,
+   "div": 0,
+   "lo": 196.0,
+   "hi": 287.2,
+   "chg": -0.36605,
+   "industry": "Specialty Retail",
+   "cik": "0001018724"
+  },
+  "COST": {
+   "price": 954.63,
+   "mcap": 423.4,
+   "beta": 0.87,
+   "div": 5.54,
+   "lo": 844.06,
+   "hi": 1096.5,
+   "chg": -0.50133,
+   "industry": "Discount Stores",
+   "cik": "0000909832"
+  },
+  "KO": {
+   "price": 90.11,
+   "mcap": 387.7,
+   "beta": 0.319,
+   "div": 2.1,
+   "lo": 66.75,
+   "hi": 92.49,
+   "chg": 0.35639,
+   "industry": "Beverages - Non-Alcoholic",
+   "cik": "0000021344"
+  },
+  "GOOGL": {
+   "price": 353.78,
+   "mcap": 4281.5,
+   "beta": 1.211,
+   "div": 0.86,
+   "lo": 240.51,
+   "hi": 408.61,
+   "chg": 0.30052,
+   "industry": "Internet Content & Information",
+   "cik": "0001652044"
+  },
+  "XOM": {
+   "price": 174.13,
+   "mcap": 721.7,
+   "beta": 0.175,
+   "div": 4.12,
+   "lo": 110.39,
+   "hi": 176.41,
+   "chg": 1.15016,
+   "industry": "Oil & Gas Integrated",
+   "cik": "0002115436"
+  },
+  "NEE": {
+   "price": 78.22,
+   "mcap": 163.2,
+   "beta": 0.639,
+   "div": 2.4361,
+   "lo": 74.41,
+   "hi": 98.75,
+   "chg": -0.36938,
+   "industry": "Regulated Electric",
+   "cik": "0000753308"
+  },
+  "AMT": {
+   "price": 179.43,
+   "mcap": 83.6,
+   "beta": 0.885,
+   "div": 7.07,
+   "lo": 160.06,
+   "hi": 196.08,
+   "chg": -1.7145,
+   "industry": "REIT - Specialty",
+   "cik": "0001053507"
+  }
+ }
+}

@@ -1,0 +1,66 @@
+[build]
+  publish = "public"
+
+# Netlify variant: no functions. /api/* is proxied straight to the data branch on GitHub.
+# Replace jaggs22/portfolio-monitor below. /api/live (the 30 s quote proxy) is not available on this variant; the app falls back
+# to the 10-minute pipeline quotes.
+
+[[redirects]]
+  from = "/api/quotes"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/quotes.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/news"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/news.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/baseline"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/filings.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/health"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/health.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/history/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/history/:t.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/intraday/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/intraday/:t.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/fundamentals/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/fundamentals/:t.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/evidence/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/evidence/:t.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/mgmt/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/mgmt/:t.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/news/:t"
+  to = "https://raw.githubusercontent.com/jaggs22/portfolio-monitor/data/news/:t.json"
+  status = 200
+  force = true

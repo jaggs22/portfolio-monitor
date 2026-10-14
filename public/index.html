@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio Monitor</title>
+  <meta name="description" content="A daily two-minute read on your portfolio, with the structural thesis behind each holding.">
+  <meta name="theme-color" content="#0F1E2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Monitor">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+
+  <header id="top">
+    <div class="top-inner">
+      <h1 id="app-name">Portfolio Monitor</h1>
+      <p id="updated" aria-live="polite"></p>
+    </div>
+    <div id="banners"></div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav id="tabs" aria-label="Sections"></nav>
+
+  <div id="sheet-root" hidden></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">This app needs JavaScript. Turn it on in Safari settings and reopen the app.</p></noscript>
+
+  <script src="config.js"></script>
+  <script src="lib.js"></script>
+  <script src="engine.js"></script>
+  <script src="fin.js"></script>
+  <script src="charts.js"></script>
+  <script src="dataapi.js"></script>
+  <script src="research-ui.js"></script>
+  <script src="stock.js"></script>
+  <script src="markets.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

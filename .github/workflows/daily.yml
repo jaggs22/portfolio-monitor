@@ -1,0 +1,36 @@
+name: daily
+# After the US close, and again before the open (fundamentals, news, management record, evidence).
+on:
+  schedule:
+    - cron: "40 21 * * 1-5"
+    - cron: "15 11 * * 1-5"
+  workflow_dispatch:
+concurrency:
+  group: data-publish
+  cancel-in-progress: false
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Load current data branch
+        run: scripts/fetch_data.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: History, filings, statements, news, management, evidence
+        run: python -m pipeline.run all --out out
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Publish
+        run: scripts/publish.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

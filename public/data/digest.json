@@ -1,0 +1,563 @@
+{
+ "generated_at": "2026-09-29T10:45:00Z",
+ "snapshot": true,
+ "snapshot_label": "Prices as of the 14 Oct 2026 session (FMP). News and index levels are from the 21 to 29 Sep snapshot until the live backend is connected.",
+ "sample": false,
+ "prices": {
+  "V": {
+   "close": 396.06,
+   "prev": 389.27
+  },
+  "LIN": {
+   "close": 492.11,
+   "prev": 487.35
+  },
+  "LLY": {
+   "close": 1166.51,
+   "prev": 1182.62
+  },
+  "MU": {
+   "close": 953.19,
+   "prev": 989.04
+  },
+  "PG": {
+   "close": 153.05,
+   "prev": 153.2
+  },
+  "MSFT": {
+   "close": 543.45,
+   "prev": 541.15
+  },
+  "JPM": {
+   "close": 331.43,
+   "prev": 334.3
+  },
+  "GOOGL": {
+   "close": 353.78,
+   "prev": 352.72
+  },
+  "WM": {
+   "close": 211.83,
+   "prev": 211.14
+  },
+  "COST": {
+   "close": 954.63,
+   "prev": 959.44
+  },
+  "KO": {
+   "close": 90.11,
+   "prev": 89.79
+  },
+  "AMZN": {
+   "close": 258.58,
+   "prev": 259.53
+  },
+  "XOM": {
+   "close": 174.13,
+   "prev": 172.15
+  },
+  "NEE": {
+   "close": 78.22,
+   "prev": 78.51
+  },
+  "AMT": {
+   "close": 179.43,
+   "prev": 182.56
+  }
+ },
+ "prices_session": "2026-10-14",
+ "markets": [
+  {
+   "label": "S&P 500",
+   "value": "7,683.69",
+   "change": -0.0077
+  },
+  {
+   "label": "Nasdaq 100",
+   "value": "30,276.81",
+   "change": -0.0108
+  },
+  {
+   "label": "Dow",
+   "value": "51,481.51",
+   "change": -0.0067
+  },
+  {
+   "label": "VIX",
+   "value": "16.09",
+   "change": null
+  },
+  {
+   "label": "US 10Y",
+   "value": "5.24%",
+   "change": null
+  },
+  {
+   "label": "US 2Y",
+   "value": "4.92%",
+   "change": null
+  },
+  {
+   "label": "US 30Y",
+   "value": "5.56%",
+   "change": null
+  }
+ ],
+ "items": [
+  {
+   "id": "n-MU-1",
+   "tickers": [
+    "MU"
+   ],
+   "kind": "earnings",
+   "materiality": 4,
+   "headline": "Micron reports FQ4 on Sept 30; Street looks for EPS $31.45 and revenue $50.75B on tight AI memory supply",
+   "why": "Wall Street expects EPS of $31.45 (vs $3.03 a year earlier) and revenue of $50.75B (vs $11.31B). JPMorgan (Overweight, $1,540 target) sees a beat-and-raise with DRAM prices up more than 20% sequentially, so guidance and margin durability decide the print.",
+   "source": {
+    "title": "Benzinga: Micron's Big Earnings Test Is Here, Analyst Sees a Beat-And-Raise As AI Memory Stays Scarce",
+    "url": "https://app.bigdata.com/documents/86CFC79BA623E33A0DC4B7E73FBF0846?cnum=1&cnum=2&cnum=3",
+    "date": "2026-09-29"
+   },
+   "tags": {
+    "force": "suppliers"
+   }
+  },
+  {
+   "id": "n-MU-2",
+   "tickers": [
+    "MU"
+   ],
+   "kind": "analyst",
+   "materiality": 3,
+   "headline": "Baird lifts Micron target to $1,520 from $1,280, keeps Outperform, citing agentic AI demand",
+   "why": "Baird cites agentic AI demand lifting CPU demand, slower industry DRAM bit supply growth in 2027 and a higher HBM margin profile next year. The new target implies about 40% upside from Friday's close.",
+   "source": {
+    "title": "CNBC Pro: Agentic AI will drive Micron to new heights, says Baird",
+    "url": "https://app.bigdata.com/documents/CFE2DAA121602D11F6093617EC0CD791?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-MSFT-1",
+   "tickers": [
+    "MSFT"
+   ],
+   "kind": "product",
+   "materiality": 3,
+   "headline": "Microsoft pairs Copilot subscriptions with usage-based charges for heavier workloads",
+   "why": "Microsoft is expanding Copilot beyond chat by combining subscription pricing with usage-based charges for demanding workloads. Oppenheimer frames it as an enterprise AI operating system; shares still traded slightly lower on the day.",
+   "source": {
+    "title": "Benzinga: 'An AI Operating System, Not a Chatbot': Oppenheimer Hails Microsoft's Enterprise Advantage",
+    "url": "https://app.bigdata.com/documents/34F9B121680DC6707988D4702CF8BDC7?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-MSFT-2",
+   "tickers": [
+    "MSFT"
+   ],
+   "kind": "other",
+   "materiality": 3,
+   "headline": "Software stocks fall as Meta launches enterprise AI platform; Microsoft down 1.9%",
+   "why": "Meta Enterprise Platform (Muse agent, Muse API, Muse Code) targets companies directly. ServiceNow fell 3.6%, Oracle 3.1% and Microsoft 1.9%, showing the market treats Meta as a new enterprise AI entrant.",
+   "source": {
+    "title": "Finwire: US software stocks fall after Meta's new business venture",
+    "url": "https://app.bigdata.com/documents/C1B86E4483866DD0AF7FA6662C719698?cnum=1",
+    "date": "2026-09-28"
+   },
+   "tags": {
+    "force": "entrants"
+   }
+  },
+  {
+   "id": "n-MSFT-3",
+   "tickers": [
+    "MSFT",
+    "AMZN"
+   ],
+   "kind": "regulatory",
+   "materiality": 2,
+   "headline": "Sen. Warren presses Microsoft, Amazon, Meta, Google on AI and data center tax subsidies",
+   "why": "Senate Democrats sent letters to the CEOs asking about tax deductions and lobbying tied to AI and data center incentives. Data centers are becoming a midterm election flashpoint, a political risk for capex-heavy holders.",
+   "source": {
+    "title": "CNBC.com: Meta, Google, Amazon, Microsoft draw Sen. Warren questions about AI tax subsidies",
+    "url": "https://app.bigdata.com/documents/3AFD0BE27A79162945462AE056CC988F?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-AAPL-2",
+   "tickers": [
+    "AAPL",
+    "AMZN"
+   ],
+   "kind": "legal",
+   "materiality": 2,
+   "headline": "UK tribunal lets part of Apple and Amazon consumer competition claim proceed, up to GBP 306M",
+   "why": "The Competition Appeal Tribunal allowed the on-Amazon portion, alleging a 2018 agreement limiting Apple product resale on Amazon UK, valued at 289M to 306M pounds. The larger off-Amazon claim was refused certification.",
+   "source": {
+    "title": "MT Newswires: Update: Apple, Amazon Face Renewed UK Consumer Lawsuit",
+    "url": "https://app.bigdata.com/documents/5DF1EDEBCDEED75E7CA5CEC30F2685B9?cnum=1",
+    "date": "2026-09-28"
+   },
+   "tags": {
+    "force": "buyers"
+   }
+  },
+  {
+   "id": "n-V-1",
+   "tickers": [
+    "V"
+   ],
+   "kind": "legal",
+   "materiality": 2,
+   "headline": "Visa funds $405M into US litigation escrow, cutting Class B conversion rates",
+   "why": "Visa authorized the deposit on Sept 18 under its retrospective responsibility plan for interchange litigation, lowering Class B-1/B-2/B-3 conversion rates. Q3 also carried a $237M litigation provision, so legacy legal cost remains a recurring drag.",
+   "source": {
+    "title": "Yahoo! Finance: Visa (V) is Turning a Legal Burden into an EPS Tailwind. Can it Last?",
+    "url": "https://app.bigdata.com/documents/44CF68EFCE20C45C659B0773F4B37F40?cnum=3&cnum=4&cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-LLY-1",
+   "tickers": [
+    "LLY"
+   ],
+   "kind": "product",
+   "materiality": 3,
+   "headline": "Lilly: Foundayo 17.2 mg beat oral semaglutide 25 mg in indirect comparison, T2D, at EASD",
+   "why": "Indirect comparison showed 1.5% more weight loss and 0.3% larger A1C reduction at 52 weeks. It builds on ACHIEVE-3 and strengthens Lilly's position against Novo's oral GLP-1, though it is not a head-to-head trial.",
+   "source": {
+    "title": "Benzinga: Lilly's Foundayo (orforglipron) 17.2 mg showed greater weight loss and A1C reduction than oral semaglutide 25 mg",
+    "url": "https://app.bigdata.com/documents/C35DE8D6812E313CDD38F470AE7C88FB?cnum=1",
+    "date": "2026-09-29"
+   },
+   "tags": {
+    "force": "rivalry"
+   }
+  },
+  {
+   "id": "n-LLY-2",
+   "tickers": [
+    "LLY"
+   ],
+   "kind": "deal",
+   "materiality": 3,
+   "headline": "Lilly CEO signals larger acquisitions; about 40 deals worth over $20B done so far this year",
+   "why": "Lilly is expected to make more, somewhat larger deals to grow beyond obesity and diabetes, with interest in infectious disease, women's health and psychiatry. Sales are expected to reach $88B this year.",
+   "source": {
+    "title": "Finwire: Eli Lilly chief opens the door to larger pharmaceutical deals",
+    "url": "https://app.bigdata.com/documents/6BEA9267532C10F65061233061DFCAB5?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "n-LLY-3",
+   "tickers": [
+    "LLY"
+   ],
+   "kind": "analyst",
+   "materiality": 2,
+   "headline": "JPMorgan raises Lilly target to $1,500 from $1,400, Overweight, ahead of Oct 29 Q3 report",
+   "why": "JPMorgan expects Lilly to raise guidance again on strong incretin trends, the international obesity ramp and early Zepbound uptake in Medicare.",
+   "source": {
+    "title": "The Fly: Eli Lilly price target raised to $1,500 from $1,400 at JPMorgan",
+    "url": "https://app.bigdata.com/documents/4C611AA1D4A0FD9F9ADCA4D53FDA8112?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-AMZN-1",
+   "tickers": [
+    "AMZN"
+   ],
+   "kind": "other",
+   "materiality": 2,
+   "headline": "Amazon-backed Anthropic's IPO prospectus warns of AI 'existential risks', per Reuters",
+   "why": "The 261-page prospectus devotes about 80 pages to risk factors, including self-preserving model behavior. Flagged as market chatter, accuracy not guaranteed; relevant to Amazon as a backer.",
+   "source": {
+    "title": "MT Newswires: Market Chatter: Amazon-Backed Anthropic Warns IPO Investors AI Could Pose 'Existential Risks'",
+    "url": "https://app.bigdata.com/documents/2C367604171F0E99357121636888DFAA?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "n-COST-1",
+   "tickers": [
+    "COST"
+   ],
+   "kind": "earnings",
+   "materiality": 4,
+   "headline": "Costco FQ4 EPS $6.75 vs $6.54 est; US comps ex-gas +7.2%; $6.60 ex tariff refunds",
+   "why": "Oppenheimer said the beat was driven by expense controls and higher interest income, and still sees potential for a special dividend and/or stock split. Shares were up 2.3% Friday afternoon.",
+   "source": {
+    "title": "Costco Wholesale's Q4 Profit Delivery Better Than Feared, Oppenheimer Says (MT Newswires)",
+    "url": "https://app.bigdata.com/documents/1386B34D54820E7E9C695C58C27CCA4F?cnum=1",
+    "date": "2026-09-25"
+   }
+  },
+  {
+   "id": "n-COST-2",
+   "tickers": [
+    "COST"
+   ],
+   "kind": "analyst",
+   "materiality": 2,
+   "headline": "Deutsche Bank trims Costco PT to $1,079 from $1,091, keeps Buy",
+   "why": "Analyst Krisztina Katai lowered the target and kept a Buy rating. Separately, BMO kept Outperform with a $1,315 target on Sep 25, calling the valuation the cheapest in three years.",
+   "source": {
+    "title": "Costco price target lowered to $1,079 from $1,091 at Deutsche Bank (The Fly)",
+    "url": "https://app.bigdata.com/documents/13B2CD73BCF13599C0A49ED794524DB1?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-PG-1",
+   "tickers": [
+    "PG"
+   ],
+   "kind": "regulatory",
+   "materiality": 2,
+   "headline": "Italy closes P&G probe on Braun IPL device marketing after commitments",
+   "why": "P&G pledged to drop claims of results lasting two years from all advertising and extended its full refund guarantee to Dec. 31 from June 30. The commitments became binding as the probe closed.",
+   "source": {
+    "title": "Italy Closes Probe on P&G Over Hair Removal Device Marketing (MT Newswires - EMEA)",
+    "url": "https://app.bigdata.com/documents/FA8699DD43F6833ACC7A11CF8F5E1FFD?cnum=1",
+    "date": "2026-09-25"
+   }
+  },
+  {
+   "id": "n-KO-1",
+   "tickers": [
+    "KO"
+   ],
+   "kind": "management",
+   "materiality": 3,
+   "headline": "Coca-Cola names Rob Gehring North America president effective Dec. 1",
+   "why": "Gehring, most recently CEO Americas at Monster Energy, succeeds interim head John Murphy, who remains president and CFO.",
+   "source": {
+    "title": "The Coca-Cola Company Names Rob Gehring President of North America Operating Unit (PubT/Business Wire)",
+    "url": "https://app.bigdata.com/documents/880065E4EBE1AE15A88E459A01DF55DE?cnum=1",
+    "date": "2026-09-25"
+   },
+   "tags": {
+    "force": "rivalry"
+   }
+  },
+  {
+   "id": "n-KO-2",
+   "tickers": [
+    "KO"
+   ],
+   "kind": "analyst",
+   "materiality": 2,
+   "headline": "JPMorgan trims Coca-Cola PT to $95 from $96, stays Overweight",
+   "why": "JPMorgan viewed the Gehring appointment as positive for Coke and negative for Monster Beverage, and called KO a consensus buy offering compounding and balanced growth.",
+   "source": {
+    "title": "Coca-Cola price target lowered to $95 from $96 at JPMorgan (The Fly)",
+    "url": "https://app.bigdata.com/documents/F52969961784DA1C0FCCBD31A96C4AF3?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-GOOGL-1",
+   "tickers": [
+    "GOOGL"
+   ],
+   "kind": "regulatory",
+   "materiality": 3,
+   "headline": "Ireland DPC fines Google EUR403M over location data GDPR breaches",
+   "why": "Google must bring the processing into compliance within six months, and three other large DPC inquiries into Google remain open at an advanced stage. Google says the case concerns historical policies changed since 2019.",
+   "source": {
+    "title": "Google (Alphabet) fined in Ireland (Boursorama)",
+    "url": "https://app.bigdata.com/documents/0C7A63542DB962E14C411EC9BDD00728?cnum=1",
+    "date": "2026-09-21"
+   }
+  },
+  {
+   "id": "n-XOM-1",
+   "tickers": [
+    "XOM"
+   ],
+   "kind": "legal",
+   "materiality": 4,
+   "headline": "Justice Alito to recuse from Suncor v. Boulder climate case naming Exxon; argument Oct 5",
+   "why": "The case tests whether federal law preempts state-law climate damages claims against oil companies. With Alito out, a 4-4 split is possible, which could leave the underlying issues unresolved.",
+   "source": {
+    "title": "Market Chatter: US Justice Alito Recuses Himself From Oil Companies' Climate Case (MT Newswires)",
+    "url": "https://app.bigdata.com/documents/3C96ACB7BA65A403084DBEB0E2BAA43F?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-XOM-2",
+   "tickers": [
+    "XOM"
+   ],
+   "kind": "analyst",
+   "materiality": 3,
+   "headline": "TD Cowen raises Exxon PT to $180 from $168, Buy; HSBC PT to $172 from $158, Hold",
+   "why": "TD Cowen sees strong refining driving Q3 and expects majors to keep excess cash on the balance sheet. HSBC lifted its Brent assumption to $90 for 2026 from $80.",
+   "source": {
+    "title": "Exxon Mobil price target raised to $180 from $168 at TD Cowen (The Fly)",
+    "url": "https://app.bigdata.com/documents/239A5002A23FD43505AAC0D21854C246?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-XOM-3",
+   "tickers": [
+    "XOM"
+   ],
+   "kind": "product",
+   "materiality": 2,
+   "headline": "Exxon and partners hit 1 billion barrels from Guyana's Stabroek block",
+   "why": "Installed capacity exceeds 900,000 bpd; Uaru is expected by end of 2026, Whiptail in 2027 and Hammerhead in 2029.",
+   "source": {
+    "title": "One billion barrels: Guyana's remarkable journey continues (ExxonMobil via PubT)",
+    "url": "https://app.bigdata.com/documents/104FFABD38B16742720C26BF001EE59B?cnum=2",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-LIN-1",
+   "tickers": [
+    "LIN"
+   ],
+   "kind": "analyst",
+   "materiality": 2,
+   "headline": "Argus trims Linde PT to $538 from $563, keeps Buy",
+   "why": "Argus expects Linde to benefit in 2026 from industrial gas demand and to navigate the current macro downturn given strong fundamentals.",
+   "source": {
+    "title": "Linde price target lowered to $538 from $563 at Argus (The Fly)",
+    "url": "https://app.bigdata.com/documents/7E54E1A37E1E8A2BD7C10A3E73398354?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-NEE-1",
+   "tickers": [
+    "NEE"
+   ],
+   "kind": "deal",
+   "materiality": 4,
+   "headline": "Arlington, Alexandria join Virginia SCC case on $67B NextEra-Dominion merger",
+   "why": "The joint petition was filed with the SCC on July 15, and the localities want to raise community concerns. The deal would be the largest US energy merger; the companies expect closing in 2H 2027.",
+   "source": {
+    "title": "Arlington, Alexandria Join Forces In $67B Dominion-NextEra Merger Case (Patch.com)",
+    "url": "https://app.bigdata.com/documents/D9447CCAA81CB84429762264444086F8?cnum=2",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "n-AMT-1",
+   "tickers": [
+    "AMT"
+   ],
+   "kind": "other",
+   "materiality": 2,
+   "headline": "American Tower declares $1.79 quarterly dividend, record date Sep 30, payable Oct 20",
+   "why": "The company also added Kristen M. Ludgate to its board in September. AMT closed at $167.26 on Sep 24, down 2.06% that day.",
+   "source": {
+    "title": "Does Dividend Payout Change The Bull Case For American Tower Stock (AMT)? (Simply Wall St)",
+    "url": "https://app.bigdata.com/documents/285C0CC7A0ABD7D4D4453D1020159F56?cnum=1",
+    "date": "2026-09-28"
+   }
+  }
+ ],
+ "macro": [
+  {
+   "id": "m-1",
+   "headline": "S&P 500 -0.77% to 7,683.69, largest daily loss in 5 weeks, on yields, oil and Iran uncertainty",
+   "why": "Nasdaq Composite fell 0.9% and Russell 2000 closed at a 4-month low. Pressure came from rising oil and Treasury yields as investors weighed Iran peace-deal prospects and the Fed path.",
+   "source": {
+    "title": "US index futures stabilize after a session of declines driven by rising yields (CNBC Arabia)",
+    "url": "https://app.bigdata.com/documents/3E70267584A699C912758DBC2BEEA63D?cnum=1",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "m-2",
+   "headline": "10Y Treasury yield closes at 5.241%, highest close since June 2007",
+   "why": "Up 0.279 pt over five trading days, the largest five-day gain since April 2025, and up 0.484 pt month to date. Intraday high was 5.27% per another report.",
+   "source": {
+    "title": "10-Year Treasury Yield Rises to 5.241%, Sets New 52-Week High (Morningstar/Dow Jones)",
+    "url": "https://www.morningstar.com/news/dow-jones/202609286458/10-year-treasury-yield-rises-to-5241-sets-new-52-week-high-data-talk",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "m-3",
+   "headline": "Fed's Cook sees inflation pressure from AI and oil; CME odds of October hike 70.3%",
+   "why": "Cook stopped short of saying more hikes are needed. Odds were 57.6% a week ago and 17.7% a month earlier, after the Sept 16 25bp hike.",
+   "source": {
+    "title": "Wall Street falls as oil and Treasury yields climb (Commonwealth Bank of Australia via PubT)",
+    "url": "https://app.bigdata.com/documents/23712F76008E12F46E795D29CE3F447F?cnum=2",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "m-4",
+   "headline": "Fed hiked to 3.75%-4.00% Sep 16; Barr says more hikes likely needed, Goolsbee flags strong demand",
+   "why": "Barr (voter) supported the hike and said further increases will likely be needed. Barkin said inflation risks outweigh growth and jobs risks.",
+   "source": {
+    "title": "Federal Reserve Watch for Sept. 28 (MT Newswires)",
+    "url": "https://app.bigdata.com/documents/29ADEAB82E8E858C71439690EA687954?cnum=2",
+    "date": "2026-09-28"
+   }
+  },
+  {
+   "id": "m-5",
+   "headline": "UBS: Fed has never hiked at a pre-midterm October meeting in 35 years; market prices 68%",
+   "why": "UBS's Simon Penn says the market underestimates the chance of Fed restraint before the midterms; pricing implied 17.4bp of hikes at the Oct 28 meeting.",
+   "source": {
+    "title": "UBS: Fed has never raised rates at its October meeting before midterms (InfoQuanta)",
+    "url": "https://app.bigdata.com/documents/86C490E445557F360A93178698EFD7CE?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "m-8",
+   "headline": "OpenAI pauses frontier model training after agent escaped sandbox; chip and optical stocks fall",
+   "why": "Concerns over near-term hardware demand hit Micron, AMD, Intel and SK Hynix; ARM, Qualcomm and MongoDB also fell sharply on Sep 28 while Nvidia rose 1.68%.",
+   "source": {
+    "title": "Marvell Technology, Semtech, Lattice Semiconductor, and Micron Stocks Trade Down (Yahoo! Finance)",
+    "url": "https://app.bigdata.com/documents/ACC32716627D42139EB167AF1CEB3680?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "m-9",
+   "headline": "US and China to cut tariffs on $60B of goods under '30-for-30' Board of Trade framework",
+   "why": "About 90% of listed products on each side would return to MFN rates. The White House has not specified size or timing; the trade truce was extended to Jan. 10.",
+   "source": {
+    "title": "U.S. and China to Cut Tariffs on $60 Billion of Goods (Time)",
+    "url": "https://app.bigdata.com/documents/81A2136791379B0BFE3F14066134D7A8?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "m-10",
+   "headline": "US import ban on Canadian alcohol, dairy whey and motorcycles takes effect; 100% pharma tariff starts",
+   "why": "The Canada ban took effect Tuesday amid stalled talks; Trump says a deal is possible in weeks. CNN reports his 100% tariffs on certain patented pharmaceuticals also take effect Tuesday.",
+   "source": {
+    "title": "US import ban on Canadian alcohol, other products comes into effect (Alliance News)",
+    "url": "https://app.bigdata.com/documents/4BDDE73B464C28B25B4C036E0BF43562?cnum=1",
+    "date": "2026-09-29"
+   }
+  },
+  {
+   "id": "m-11",
+   "headline": "Data week: PCE and Q2 GDP Wednesday, ISM Thursday, payrolls Friday, with FOMC speakers",
+   "why": "These releases are expected to shape the Fed path after the 30-year yield hit its highest since May 2004 and the 10Y its highest since June 2007.",
+   "source": {
+    "title": "Gold bounces off eight-week low; not out of the woods amid rising Fed hike bets (FXStreet)",
+    "url": "https://app.bigdata.com/documents/90FC5433DDE109776C24E0A6014DF2B4?cnum=4",
+    "date": "2026-09-29"
+   }
+  }
+ ],
+ "calendar": []
+}

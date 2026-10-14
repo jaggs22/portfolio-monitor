@@ -1,0 +1,92 @@
+[
+ {
+  "ticker": "LIN",
+  "name": "Linde",
+  "sector": "Materials",
+  "tier": "core"
+ },
+ {
+  "ticker": "LLY",
+  "name": "Eli Lilly",
+  "sector": "Health care",
+  "tier": "core"
+ },
+ {
+  "ticker": "V",
+  "name": "Visa",
+  "sector": "Financials",
+  "tier": "core"
+ },
+ {
+  "ticker": "MU",
+  "name": "Micron Technology",
+  "sector": "Technology",
+  "tier": "lighter"
+ },
+ {
+  "ticker": "PG",
+  "name": "Procter & Gamble",
+  "sector": "Consumer staples",
+  "tier": "lighter"
+ },
+ {
+  "ticker": "AMT",
+  "name": "American Tower",
+  "sector": "Real estate",
+  "tier": "basic"
+ },
+ {
+  "ticker": "AMZN",
+  "name": "Amazon",
+  "sector": "Consumer discretionary",
+  "tier": "basic"
+ },
+ {
+  "ticker": "COST",
+  "name": "Costco",
+  "sector": "Consumer staples",
+  "tier": "basic"
+ },
+ {
+  "ticker": "GOOGL",
+  "name": "Alphabet",
+  "sector": "Communication services",
+  "tier": "basic"
+ },
+ {
+  "ticker": "JPM",
+  "name": "JPMorgan Chase",
+  "sector": "Financials",
+  "tier": "basic"
+ },
+ {
+  "ticker": "KO",
+  "name": "Coca-Cola",
+  "sector": "Consumer staples",
+  "tier": "basic"
+ },
+ {
+  "ticker": "MSFT",
+  "name": "Microsoft",
+  "sector": "Technology",
+  "tier": "basic"
+ },
+ {
+  "ticker": "NEE",
+  "name": "NextEra Energy",
+  "sector": "Utilities",
+  "tier": "basic"
+ },
+ {
+  "ticker": "WM",
+  "name": "Waste Management",
+  "sector": "Industrials",
+  "tier": "basic"
+ },
+ {
+  "ticker": "XOM",
+  "name": "Exxon Mobil",
+  "sector": "Energy",
+  "tier": "basic"
+ }
+]

@@ -1,0 +1,213 @@
+{
+ "ticker": "LIN",
+ "name": "Linde",
+ "depth": "deep",
+ "as_of": "2026-07-31",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Contracted industrial gases with pass-through pricing; steady, and priced like it.",
+  "thesis": "Linde compounds at 8% to 9% EPS growth with a record $8.1B contractual gas backlog. The engine's base case assumes a modest de-rating from 27.6x, which leaves the expected return below the hurdle. The disagreement is almost entirely about the exit multiple."
+ },
+ "base": {
+  "eps0": 17.8,
+  "eps_label": "FY2026 adjusted EPS, midpoint of company guidance $17.70 to $17.90",
+  "rev0": 37.0,
+  "shares0": 0.464,
+  "div": 6.3,
+  "rev_label": "FY2026E sales ($B), annualised from Q2 sales of $9.289B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 5,
+   "bear": 2,
+   "bull": 7,
+   "kind": "sourced",
+   "why": "Q2 underlying sales rose 4% (2% price, 2% volume); reported sales rose 9% with currency and acquisitions. A record $8.1B sale-of-gas backlog and $11B project backlog support mid single digit growth.",
+   "source": "Linde Q2 2026 release"
+  },
+  "margin_end": {
+   "base": 23,
+   "bear": 21.5,
+   "bull": 24,
+   "kind": "judgment",
+   "why": "Net margin is about 22.3% on guided EPS. The base case adds roughly twenty basis points a year from productivity and mix. Adjusted operating margin was 29.5% in Q2, but the release says margin fell 60 basis points year on year, so expansion is not a given.",
+   "source": "Linde Q2 2026 release; engine judgment"
+  },
+  "share_chg": {
+   "base": -1,
+   "bear": -0.5,
+   "bull": -1.5,
+   "kind": "judgment",
+   "why": "Shareholder returns were $1,590M in Q2 including dividends; the split is not disclosed. The base case assumes a net buyback of about one percent a year.",
+   "source": "Linde Q2 2026 release (split not stated)"
+  },
+  "exit_pe": {
+   "base": 25,
+   "bear": 20,
+   "bull": 28,
+   "kind": "judgment",
+   "why": "Current multiple is 27.6x on guided EPS. The base case assumes a two-and-a-half point de-rating to 25x, against the 10-year at 5.2%. This is the number that decides the stance.",
+   "source": "Engine judgment"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Contracts lock in volume and pass through energy",
+   "claim": "Most gas is sold under long contracts with minimum purchase terms and energy cost pass-through, so profit grows even when volume is flat.",
+   "evidence": [
+    {
+     "t": "Q2 sales +9% but underlying +4%; 2% price, 2% volume",
+     "src": "Q2 release"
+    },
+    {
+     "t": "Record sale-of-gas backlog of $8.1B (contractual)",
+     "src": "Q2 release"
+    },
+    {
+     "t": "APAC margin down 120 bps but only 70 bps excluding cost pass-through",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does underlying sales growth stay at or above 3%?"
+  },
+  {
+   "title": "Margin is flat to slightly down at the group",
+   "claim": "Group operating margin was 60 basis points lower than a year ago in the quarter. Segment margins fell in all three regions.",
+   "evidence": [
+    {
+     "t": "Americas 31.2% (-50 bps), APAC 28.4% (-120 bps), EMEA 35.7% (-40 bps)",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does adjusted operating margin stop falling in Q3?"
+  },
+  {
+   "title": "Capital intensity is rising",
+   "claim": "FY2026 capex is guided to $5.5B to $6.0B; Q2 free cash flow was $833M on $2,271M operating cash flow. Growth is being funded by investment.",
+   "evidence": [
+    {
+     "t": "Q2 capex $1,438M; free cash flow $833M",
+     "src": "Q2 release"
+    },
+    {
+     "t": "Return on capital 23.5%",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does return on capital hold above 23% as capex rises?"
+  },
+  {
+   "title": "Engineering backlog is a lead indicator",
+   "claim": "Third-party equipment backlog of $3.0B and order intake of $871M show project demand, but engineering margin is only 16%.",
+   "evidence": [
+    {
+     "t": "Engineering sales $625M, +13%; operating profit $100M, 16.0% margin",
+     "src": "Q2 release"
+    }
+   ],
+   "test": "Does order intake stay above $800M a quarter?"
+  }
+ ],
+ "variant": {
+  "street": "Premium multiple for the most defensive industrial: low volatility, contracted cash flows, and a record backlog.",
+  "ours": "The business case is intact. The return case is weak because the price already pays a staple-like multiple while Treasuries yield 5.2%; the engine needs a 28x exit to reach the hurdle.",
+  "could_be_wrong": "If long rates fall and defensive compounders re-rate, a 28x multiple is plausible and this becomes a positive stance.",
+  "would_change_mind": "Underlying volume above 3% for two quarters, or the price falling toward 22x guided EPS."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Local density, long contracts and pass-through pricing; the duopoly-style structure makes margin defensible.",
+  "detail": "Existing Porter card (FY2025 10-K) rates Linde Strong."
+ },
+ "quality": {
+  "leverage_note": "Net debt not retrieved from the release (not stated).",
+  "leverage_ok": null,
+  "incentive_note": null,
+  "checks": []
+ },
+ "catalysts": [
+  {
+   "date": "2026-10-29",
+   "label": "Linde Q3 2026 earnings and conference call",
+   "confirmed": true,
+   "note": "Guide: Q3 adjusted EPS $4.45 to $4.55 (+6% to +8%); FY $17.70 to $17.90."
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "l1",
+   "text": "Q3 adjusted EPS below $4.45 (bottom of guide)",
+   "metric": "q3_eps",
+   "op": "<",
+   "threshold": 4.45,
+   "current": 4.5,
+   "unit": "$ (Q2 actual)",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q2 release"
+  },
+  {
+   "id": "l2",
+   "text": "Underlying sales growth below 3%",
+   "metric": "underlying",
+   "op": "<",
+   "threshold": 3,
+   "current": 4,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q2 release"
+  },
+  {
+   "id": "l3",
+   "text": "Sale-of-gas backlog falls below $8.0B",
+   "metric": "backlog",
+   "op": "<",
+   "threshold": 8.0,
+   "current": 8.1,
+   "unit": "$B",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q2 release"
+  }
+ ],
+ "risks": [
+  "Industrial and chemical volume weakness in EMEA (volume was lower in Q2).",
+  "Project execution on large on-site plants.",
+  "Rising capex diluting free cash flow."
+ ],
+ "lenses": {
+  "eisman": "Segment margins fell in all three regions; ask whether pass-through is hiding real cost pressure.",
+  "munger": "A great business bought at 27x earnings is still an average investment if rates stay here.",
+  "buffett": "Exactly his kind of franchise; the question is only the price.",
+  "hohn": "Durable, contracted, pricing power: the cleanest profile of the four, the question is the 8.1B backlog conversion."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Linde plc Form 8-K, Q2 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001707925/000165495426007052/lin_ex991.htm",
+   "date": "2026-07-31"
+  },
+  {
+   "tier": "C",
+   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
+   "url": "https://site.financialmodelingprep.com",
+   "date": "2026-10-14"
+  }
+ ],
+ "gaps": [
+  "Net debt, dividends and buybacks not stated in the release.",
+  "FY2026 reported sales not stated; annualised from Q2.",
+  "Consensus estimates not retrieved."
+ ],
+ "base_period_end": "2026-06-30"
+}

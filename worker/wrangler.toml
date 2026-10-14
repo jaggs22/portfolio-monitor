@@ -1,0 +1,15 @@
+name = "portfolio-monitor"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# The PWA is served from ../public as static assets; /api/* is answered by the Worker first.
+[assets]
+directory = "../public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+not_found_handling = "single-page-application"
+
+[vars]
+# owner/repo of the GitHub repository whose `data` branch the Actions workflows publish to
+REPO = "jaggs22/portfolio-monitor"
+DATA_BRANCH = "data"

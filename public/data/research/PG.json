@@ -1,0 +1,160 @@
+{
+ "ticker": "PG",
+ "name": "Procter & Gamble",
+ "depth": "lighter",
+ "as_of": "2026-07-29",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Staples compounder at its slowest: 1% organic growth, an 8% EPS cost drag guided for FY27, and a yield that loses to Treasuries.",
+  "thesis": "FY26 core EPS rose 1% and FY27 guides to flat to +3%. At 22x against a 5.2% Treasury the engine's base case earns well below the hurdle."
+ },
+ "base": {
+  "eps0": 6.89,
+  "eps_label": "FY2026 core EPS",
+  "rev0": 87.0,
+  "shares0": 2.35,
+  "div": 4.29,
+  "rev_label": "FY2026 net sales ($B)"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 2.5,
+   "bear": 0.5,
+   "bull": 4,
+   "kind": "sourced",
+   "why": "FY26 organic growth was 1% and FY27 guidance is 1% to 3%.",
+   "source": "P&G FY2026 release"
+  },
+  "margin_end": {
+   "base": 18.3,
+   "bear": 16.5,
+   "bull": 19.3,
+   "kind": "judgment",
+   "why": "Net margin is about 18.6% (core). FY27 carries about $1B of after-tax cost headwinds ($0.56 a share, an 8% drag), so the base case dips slightly.",
+   "source": "P&G FY2026 release; engine judgment"
+  },
+  "share_chg": {
+   "base": -0.8,
+   "bear": -0.5,
+   "bull": -1,
+   "kind": "sourced",
+   "why": "About $5B of buybacks planned in FY27 against a $364B market cap.",
+   "source": "P&G FY2026 release"
+  },
+  "exit_pe": {
+   "base": 20,
+   "bear": 16.5,
+   "bull": 23,
+   "kind": "judgment",
+   "why": "Currently 22.2x on FY26 core EPS. A three-turn de-rating is assumed as growth stays at the low end.",
+   "source": "Engine judgment"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Growth has stalled at the low end",
+   "claim": "Organic sales +1% for FY26 and flat in Q4; FY27 guide is 1% to 3%.",
+   "evidence": [
+    {
+     "t": "FY26 net sales $87.0B, +3%; organic +1%; Q4 organic flat",
+     "src": "FY2026 release"
+    }
+   ],
+   "test": "Does organic growth reach 2% in the first half of FY27?"
+  },
+  {
+   "title": "Costs are the FY27 swing factor",
+   "claim": "About $1B after tax of raw material, energy and transport costs is an 8% EPS drag; guide core EPS $6.89 to $7.11.",
+   "evidence": [
+    {
+     "t": "Core EPS headwind $0.56 per share",
+     "src": "FY2026 release"
+    }
+   ],
+   "test": "Does commodity inflation fade before the second half?"
+  }
+ ],
+ "variant": {
+  "street": "Not retrieved.",
+  "ours": "A great brand portfolio at a full price in a 5.2% rate world. The engine's stance rests on the multiple.",
+  "could_be_wrong": "A rotation into defensives would re-rate the multiple above 22x.",
+  "would_change_mind": "Organic growth back above 3%."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "Brand portfolio with 50% gross margin and 22.7% operating margin; Walmart is about 16% of sales.",
+  "detail": "Existing card rates P&G Moderate."
+ },
+ "quality": {
+  "leverage_note": null,
+  "leverage_ok": null,
+  "incentive_note": null,
+  "checks": []
+ },
+ "catalysts": [
+  {
+   "date": "2026-10-22",
+   "label": "P&G fiscal Q1 2027 earnings (date not confirmed; typically third or fourth week of October)",
+   "confirmed": false,
+   "note": ""
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "p1",
+   "text": "Organic sales growth below 1% in a quarter",
+   "metric": "organic",
+   "op": "<",
+   "threshold": 1,
+   "current": 0,
+   "unit": "% (Q4 actual)",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "FY2026 release"
+  },
+  {
+   "id": "p2",
+   "text": "Core EPS guide cut below $6.89",
+   "metric": "guide",
+   "op": "<",
+   "threshold": 6.89,
+   "current": 7.0,
+   "unit": "$ (midpoint)",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "FY2026 release"
+  }
+ ],
+ "risks": [
+  "Commodity and tariff costs.",
+  "Retailer concentration.",
+  "Private label share gains."
+ ],
+ "lenses": {},
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Procter & Gamble Form 8-K, fiscal 2026 Q4 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000093/fy2526q4amj8-kexhibit991.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "tier": "C",
+   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
+   "url": "https://site.financialmodelingprep.com",
+   "date": "2026-10-14"
+  }
+ ],
+ "gaps": [
+  "Diluted share count estimated; not in the release.",
+  "Consensus not retrieved."
+ ],
+ "base_period_end": "2026-06-30"
+}

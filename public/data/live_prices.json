@@ -1,0 +1,162 @@
+{
+ "as_of_session": "2026-09-28",
+ "fetched_utc": "2026-09-29T10:45:00Z",
+ "sources": {
+  "FMP historical-price-eod-light": [
+   "AAPL",
+   "ADBE",
+   "AMZN",
+   "COST",
+   "GE",
+   "GOOGL",
+   "JPM",
+   "KO",
+   "LMT",
+   "MSFT",
+   "NFLX",
+   "NKE",
+   "NVDA",
+   "PFE",
+   "UNH",
+   "V",
+   "XOM"
+  ],
+  "Bigdata.com company tearsheet (FMP-backed quote)": [
+   "AMT",
+   "BX",
+   "CAT",
+   "COP",
+   "HD",
+   "ISRG",
+   "LIN",
+   "LLY",
+   "MU",
+   "NEE",
+   "PG",
+   "SPGI",
+   "WM"
+  ]
+ },
+ "prices": {
+  "MSFT": {
+   "close": 509.22,
+   "prev": 516.17
+  },
+  "AAPL": {
+   "close": 338.4,
+   "prev": 341.07
+  },
+  "NVDA": {
+   "close": 228.86,
+   "prev": 225.07
+  },
+  "ADBE": {
+   "close": 231.01,
+   "prev": 235.47
+  },
+  "V": {
+   "close": 367.74,
+   "prev": 367.38
+  },
+  "JPM": {
+   "close": 336.59,
+   "prev": 343.06
+  },
+  "UNH": {
+   "close": 377.83,
+   "prev": 376.59
+  },
+  "PFE": {
+   "close": 28.72,
+   "prev": 28.67
+  },
+  "GE": {
+   "close": 318.24,
+   "prev": 327.09
+  },
+  "LMT": {
+   "close": 518.1,
+   "prev": 519.56
+  },
+  "AMZN": {
+   "close": 246.15,
+   "prev": 249.67
+  },
+  "NKE": {
+   "close": 36.39,
+   "prev": 35.75
+  },
+  "COST": {
+   "close": 922.92,
+   "prev": 922.77
+  },
+  "KO": {
+   "close": 87.18,
+   "prev": 87.81
+  },
+  "GOOGL": {
+   "close": 342.75,
+   "prev": 343.92
+  },
+  "NFLX": {
+   "close": 69.23,
+   "prev": 71.15
+  },
+  "XOM": {
+   "close": 162.52,
+   "prev": 160.59
+  },
+  "MU": {
+   "close": 1053.98,
+   "prev": 1082.28
+  },
+  "SPGI": {
+   "close": 395.92,
+   "prev": 403.3
+  },
+  "BX": {
+   "close": 114.55,
+   "prev": 118.42
+  },
+  "LLY": {
+   "close": 1185.97,
+   "prev": 1183.46
+  },
+  "ISRG": {
+   "close": 414.79,
+   "prev": 405.18
+  },
+  "WM": {
+   "close": 206.44,
+   "prev": 206.83
+  },
+  "CAT": {
+   "close": 819.95,
+   "prev": 821.58
+  },
+  "HD": {
+   "close": 289.89,
+   "prev": 293.2
+  },
+  "PG": {
+   "close": 149.045,
+   "prev": 146.23
+  },
+  "COP": {
+   "close": 126.04,
+   "prev": 127.3
+  },
+  "NEE": {
+   "close": 75.49,
+   "prev": 76.08
+  },
+  "AMT": {
+   "close": 168.0,
+   "prev": 169.03
+  },
+  "LIN": {
+   "close": 472.04,
+   "prev": 469.89
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-monitor",
+  "private": true,
+  "scripts": {
+    "test": "node test/engine.test.js && node test/fin.test.js && node test/worker.test.mjs && python3 -m pytest pipeline -q",
+    "dev": "wrangler dev --config worker/wrangler.toml",
+    "deploy": "wrangler deploy --config worker/wrangler.toml"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}

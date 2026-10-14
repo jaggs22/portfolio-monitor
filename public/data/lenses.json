@@ -1,0 +1,49 @@
+{
+ "note": "Lenses are the engine's reading of each investor's published approach, expressed as checks on its own numbers. They are not statements by those investors.",
+ "lenses": [
+  {
+   "id": "eisman",
+   "name": "Eisman",
+   "tagline": "Where is the incentive or leverage distortion?",
+   "checks": [
+    "incentives",
+    "leverage",
+    "judgment_share",
+    "margin_of_safety"
+   ]
+  },
+  {
+   "id": "munger",
+   "name": "Munger",
+   "tagline": "Invert it: what makes this a bad investment?",
+   "checks": [
+    "moat",
+    "margin_of_safety",
+    "skew",
+    "earnings_yield_vs_rf"
+   ]
+  },
+  {
+   "id": "buffett",
+   "name": "Buffett",
+   "tagline": "Durable franchise at a sensible price.",
+   "checks": [
+    "moat",
+    "earnings_yield_vs_rf",
+    "implied_gap",
+    "capital_allocation"
+   ]
+  },
+  {
+   "id": "hohn",
+   "name": "Hohn",
+   "tagline": "Durable pricing power and disciplined capital allocation.",
+   "checks": [
+    "moat",
+    "capital_allocation",
+    "leverage",
+    "implied_gap"
+   ]
+  }
+ ]
+}

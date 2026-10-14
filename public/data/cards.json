@@ -1,0 +1,3968 @@
+{
+ "COST": {
+  "id": "COST-2026Q3",
+  "ticker": "COST",
+  "name": "Costco Wholesale",
+  "version": "1.0",
+  "as_of": "2025-08-31",
+  "data_note": "Based on SEC filings up to the FY2025 10-K (fiscal year ended 2025-08-31). Later quarters were not reviewed.",
+  "verdict": "Strong",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Costco deliberately sells at thin margins and earns its profit from membership fees: $5.3B of fees were 51% of FY2025 operating income. Members renew at 92.3% in the US and Canada, and the September 2024 fee increase passed without hurting renewals. The moat is customer loyalty and purchasing scale, not high prices, so the risks are a retail price war, tariffs and labour costs.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing names Walmart, Target, Kroger and Amazon as significant competitors, plus Sam's Club and BJ's in warehouse clubs, and calls the industry highly competitive on price, quality and selection.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     },
+     {
+      "text": "Operating margin held in a 3.3% to 3.8% band: FY2021 3.4%, FY2022 3.4%, FY2023 3.3%, FY2024 3.6%, FY2025 3.8%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss and revenue series, CIK 909832",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000909832/us-gaap/OperatingIncomeLoss.json",
+       "date": "2025-08-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Renewal rate was 92.3% in the US and Canada and 89.8% worldwide at the end of 2025; paid members rose from 71.0M to 81.0M in two years.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 7 Membership",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     },
+     {
+      "text": "The fee increase effective September 1, 2024 accounted for roughly 40% of membership income growth in 2025, with renewal rates still above 90% in the US and Canada.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 7 Membership",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: Costco does not obtain a significant portion of merchandise from any one supplier.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 1 Suppliers",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     },
+     {
+      "text": "Gross margin on net sales rose from 10.57% (FY2023) to 10.92% (FY2024) and 11.12% (FY2025) despite tariff exposure the filing describes.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 7 MD&A",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "914 warehouses with 134.7M square feet of operating floor space (861 warehouses in FY2023).",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 2 Properties",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     },
+     {
+      "text": "Return on ending equity: FY2021 28.5%, FY2022 28.3%, FY2023 25.1%, FY2024 31.2%, FY2025 27.8%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 909832",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000909832/us-gaap/StockholdersEquity.json",
+       "date": "2025-08-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Digitally enabled sales were about 10% of net sales in 2025 and e-commerce comparable sales grew 16%; Amazon is a named competitor.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 7 and Item 1",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     },
+     {
+      "text": "Filing: higher tariffs could adversely impact results; competitors compete vigorously on price.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Costco FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+       "date": "2025-08-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Membership fee revenue of $5,323M in FY2025 (up from $4,580M in FY2023) is 51.3% of operating income.",
+    "source": {
+     "title": "Costco FY2025 10-K, Item 7 Membership",
+     "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+     "date": "2025-08-31"
+    }
+   },
+   {
+    "text": "Operating income rose 54.8% from $6,708M (FY2021) to $10,383M (FY2025) while revenue rose 40.5%.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss and revenue series, CIK 909832",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000909832/us-gaap/OperatingIncomeLoss.json",
+     "date": "2025-08-31"
+    }
+   },
+   {
+    "text": "Gross margin expanded from 10.57% to 11.12% in two years.",
+    "source": {
+     "title": "Costco FY2025 10-K, Item 7 MD&A",
+     "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+     "date": "2025-08-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "About half of operating income comes from membership fees, so profit depends on renewal rates staying above 90%.",
+    "source": {
+     "title": "Costco FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+     "date": "2025-08-31"
+    }
+   },
+   {
+    "text": "SG&A rose from 9.08% to 9.25% of net sales in two years; the filing flags labour, benefit and healthcare costs.",
+    "source": {
+     "title": "Costco FY2025 10-K, Item 7 MD&A",
+     "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+     "date": "2025-08-31"
+    }
+   },
+   {
+    "text": "The September 2024 fee increase drove roughly 40% of 2025 membership income growth, a one-time lift that will not repeat annually.",
+    "source": {
+     "title": "Costco FY2025 10-K, Item 7 Membership",
+     "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+     "date": "2025-08-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "COST-F1",
+    "text": "Members stop renewing.",
+    "threshold": "US and Canada renewal rate below 90%",
+    "status": "holding"
+   },
+   {
+    "id": "COST-F2",
+    "text": "Price war or tariffs squeeze merchandise margin.",
+    "threshold": "Gross margin on net sales below 10.5%",
+    "status": "holding"
+   },
+   {
+    "id": "COST-F3",
+    "text": "Membership growth stalls.",
+    "threshold": "Paid member growth below 3% a year",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "2021 to 2023 margin change versus peers",
+     "result": "Operating margin 3.4% to 3.3%, flat through the 2022 inflation shock. Peer margins (Walmart, Target) were not retrieved, so this test is incomplete."
+    },
+    {
+     "name": "Margin volatility FY2021 to FY2025",
+     "result": "Range 3.3% to 3.8%. Very low volatility."
+    },
+    {
+     "name": "Return on ending equity persistence",
+     "result": "28.5%, 28.3%, 25.1%, 31.2%, 27.8%. Persistent, in a 25% to 31% band."
+    },
+    {
+     "name": "Price, volume, mix split",
+     "result": "Not disclosed. Revenue grew 8.2% in FY2025; membership fees grew 10.3%, helped by the fee increase."
+    }
+   ]
+  }
+ },
+ "LIN": {
+  "id": "LIN-2026Q3",
+  "ticker": "LIN",
+  "name": "Linde plc",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on SEC filings up to the FY2025 10-K (fiscal year ended 2025-12-31). Later quarters were not reviewed.",
+  "verdict": "Strong",
+  "trend": "strengthening",
+  "confidence": "Medium",
+  "summary": "Linde sells industrial gases mostly under 10 to 20 year contracts with minimum purchase terms and energy cost pass-through, which locks in volume and protects margin. Operating margin rose from 16.2% in 2021 to 26.3% in 2025 on almost flat sales, which is the signature of pricing power rather than growth. The risks are a slow top line, heavy capex and hydrogen demand that may not arrive on schedule.",
+  "forces": {
+   "rivalry": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Competitors named: Air Liquide, Air Products, Messer and Taiyo Nippon Sanso, plus many small local independents. Basis of competition includes price, reliability and local distribution density.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating margin (operating income / sales): 2021 16.2%, 2022 16.1%, 2023 24.4%, 2024 26.2%, 2025 26.3%, while sales rose only 1.9% from 2022 to 2025.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss series, CIK 1707925",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001707925/us-gaap/OperatingIncomeLoss.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "On-site contracts run 10 to 20 years with minimum purchase requirements and price escalation provisions; merchant contracts run three to seven years.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Contracts",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "The filing states Linde is not dependent on a single customer or a few customers.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Customers",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Energy is the single largest cost; electricity, natural gas and diesel costs are mitigated contractually through pricing formulas, surcharges and cost pass-through.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Raw materials and energy",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Cost of sales excluding depreciation was 51.2% of sales in 2025 versus 51.9% in 2024 ($17,389M and $17,143M).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Linde FY2025 10-K, MD&A consolidated results",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "2025 capital expenditures were $5,261M, 15.5% of sales; production plants and pipeline networks require high capital and give Linde an advantage where pipelines exist.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 and MD&A",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending equity: 2021 8.7%, 2022 10.4%, 2023 15.6%, 2024 17.2%, 2025 18.0% (equity base shrank from $44.0B to $38.2B).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 1707925",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001707925/us-gaap/StockholdersEquity.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "A significant portion of the international gases market relates to customer-owned plants, so some buyers can self-supply.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Linde itself sells VPSA and membrane technology that produce oxygen and nitrogen on site, so on-site generation is a partial substitute it also profits from.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Linde FY2025 10-K, Item 1 Products",
+       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Majority of business is under long-term contracts that give cash-flow stability and pass through energy and feedstock costs.",
+    "source": {
+     "title": "Linde FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Operating income rose 66.2% from $5,369M (2022) to $8,923M (2025) on sales up 1.9%.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss series, CIK 1707925",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001707925/us-gaap/OperatingIncomeLoss.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Americas segment operating margin was 31.2% in 2025 ($4,747M on $15,208M sales).",
+    "source": {
+     "title": "Linde FY2025 10-K, MD&A segment results",
+     "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Sales grew only 1.9% in three years ($33,364M in 2022 to $33,986M in 2025); margin expansion cannot continue indefinitely.",
+    "source": {
+     "title": "SEC XBRL revenue series, CIK 1707925",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001707925/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Equity fell from $49.1B (2019) to $38.2B (2025), so return on equity is flattered by a shrinking base.",
+    "source": {
+     "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 1707925",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001707925/us-gaap/StockholdersEquity.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Capex of $5,261M is 15.5% of sales; clean hydrogen growth is described as anticipated, not contracted at scale.",
+    "source": {
+     "title": "Linde FY2025 10-K, Item 1 and MD&A",
+     "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "LIN-F1",
+    "text": "Pricing power fades and margin drops.",
+    "threshold": "Operating margin below 22% for two consecutive fiscal years",
+    "status": "holding"
+   },
+   {
+    "id": "LIN-F2",
+    "text": "Cost pass-through breaks down.",
+    "threshold": "Cost of sales excluding depreciation above 55% of sales",
+    "status": "holding"
+   },
+   {
+    "id": "LIN-F3",
+    "text": "Returns on the capex programme disappoint.",
+    "threshold": "Return on ending equity below 12%",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "2021 to 2023 margin change versus peers",
+     "result": "Linde operating margin rose 8.2 points (16.2% to 24.4%). Peer margins (Air Liquide, Air Products) were not retrieved in this pass, so this test is not complete."
+    },
+    {
+     "name": "Margin volatility 2021 to 2025",
+     "result": "Steady upward path: 16.2%, 16.1%, 24.4%, 26.2%, 26.3%. The 2022 to 2023 step was not decomposed; its cause was not verified."
+    },
+    {
+     "name": "Return on ending equity persistence",
+     "result": "Rising each year from 8.7% to 18.0%."
+    },
+    {
+     "name": "Price, volume, mix split",
+     "result": "Not retrieved. Sales were flat while margin rose, which fits pricing or mix, but this is inference."
+    }
+   ]
+  }
+ },
+ "MSFT": {
+  "id": "MSFT-2026Q3",
+  "ticker": "MSFT",
+  "name": "Microsoft",
+  "version": "1.0",
+  "as_of": "2026-06-30",
+  "data_note": "Financial series run to the fiscal year ended 2026-06-30. Qualitative evidence is from the FY2025 10-K (fiscal year ended 2025-06-30); the FY2026 10-K text was not reviewed.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Microsoft's pricing power comes from switching costs: multi-year enterprise agreements and workflows built around Office and Azure. Margins prove it, with operating margin up from 41.6% to 46.8% across five years of 15% plus growth. The weak spots are physical supply (limited GPU and datacenter component suppliers), a dependency on OpenAI, and AI-first rivals that the filing says face low barriers in many areas.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: Azure faces diverse competition from cloud providers and open source; AI offerings compete with hyperscalers and emerging competitors.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     },
+     {
+      "text": "Operating margin rose each year from FY2022: 42.1%, 41.8%, 44.6%, 45.6%, 46.8% (FY2026) despite this competition.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss and revenue series, CIK 789019",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/OperatingIncomeLoss.json",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Enterprise Agreements license products organisation-wide over a three-year period; users may incur costs to move data and buy new content when switching platforms.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     },
+     {
+      "text": "Gross margin held in a 68.4% to 69.8% band from FY2021 to FY2025 while revenue grew 68%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL GrossProfit series, CIK 789019",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/GrossProfit.json",
+       "date": "2025-06-30"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: there are limited suppliers for certain device and datacenter components; datacenters depend on land, energy, networking supplies and servers including GPUs.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     },
+     {
+      "text": "Filing names OpenAI as a strategic partner developing AI that Microsoft relies on; a third phase of the partnership was announced in January 2023.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the company spends substantial amounts to build, purchase or lease datacenters; its cloud benefits from economies of scale and ecosystem network effects.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     },
+     {
+      "text": "Filing also says barriers to entry in many of its businesses are low and the areas evolve rapidly.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: AI is a highly competitive and rapidly evolving market with new entrants; Office competes with AI-first application companies.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     },
+     {
+      "text": "Filing: open source products at little or no cost mimic features of Microsoft products; mobile devices take over tasks once done on PCs.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Microsoft FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+       "date": "2025-06-30"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Revenue grew from $168.1B (FY2021) to $331.8B (FY2026), 15% to 18% a year in four of five years.",
+    "source": {
+     "title": "SEC XBRL revenue series, CIK 789019",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Operating income of $155.2B in FY2026 is 46.8% of revenue, the highest in the series.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss and revenue series, CIK 789019",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/OperatingIncomeLoss.json",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "No single customer is disclosed above 10% of revenue.",
+    "source": {
+     "title": "Microsoft FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+     "date": "2025-06-30"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Return on ending equity fell from 43.2% (FY2021) to 30.2% (FY2026) as equity grew from $142.0B to $442.4B.",
+    "source": {
+     "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 789019",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/StockholdersEquity.json",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "FY2026 net income grew 31.3% against operating income growth of 20.8%; the source of the gap (non-operating items) was not verified in this pass.",
+    "source": {
+     "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 789019",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/StockholdersEquity.json",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Filing: government agencies closely scrutinise Microsoft under competition laws, including the EU Digital Markets Act.",
+    "source": {
+     "title": "Microsoft FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+     "date": "2025-06-30"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "MSFT-F1",
+    "text": "Cloud and AI competition compresses margins.",
+    "threshold": "Operating margin below 40% for two consecutive fiscal years",
+    "status": "holding"
+   },
+   {
+    "id": "MSFT-F2",
+    "text": "Growth stalls as AI substitutes seat-based software.",
+    "threshold": "Annual revenue growth below 8%",
+    "status": "holding"
+   },
+   {
+    "id": "MSFT-F3",
+    "text": "Capital intensity erodes returns.",
+    "threshold": "Return on ending equity below 25%",
+    "status": "watch"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "2021 to 2023 margin change versus peers",
+     "result": "Operating margin 41.6% to 41.8%, stable through the 2022 to 2023 software slowdown. Peer margins (Alphabet, Amazon, Oracle) were not retrieved, so this test is incomplete."
+    },
+    {
+     "name": "Margin volatility FY2021 to FY2026",
+     "result": "Range 41.6% to 46.8%, low volatility with an upward drift."
+    },
+    {
+     "name": "Return on ending equity persistence",
+     "result": "43.2%, 43.7%, 35.1%, 32.8%, 29.6%, 30.2%. Still high but lower; equity base tripled."
+    },
+    {
+     "name": "Price, volume, mix split",
+     "result": "Not disclosed in the sections reviewed."
+    }
+   ]
+  }
+ },
+ "MU": {
+  "id": "MU-2026Q3",
+  "ticker": "MU",
+  "name": "Micron Technology",
+  "version": "1.0",
+  "as_of": "2025-08-28",
+  "data_note": "Based on SEC filings up to the FY2025 10-K (fiscal year ended 2025-08-28). Later quarters were not reviewed.",
+  "verdict": "Contested",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Micron sits in a three-player DRAM oligopoly with huge capital barriers, which reads as strong pricing power. The numbers disagree: gross margin went from 45.2% in FY2022 to -9.1% in FY2023 and back to 39.8% in FY2025, so Micron takes the cycle's price rather than setting it. HBM is the new lever, but the filing itself warns that a demand shift could flood conventional DRAM.",
+  "forces": {
+   "rivalry": {
+    "score": 2,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "The 10-K names Samsung, SK hynix, Kioxia, Sandisk, CXMT and YMTC as competitors, and notes government assistance to CXMT and YMTC.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Competitive Conditions",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Gross margin (gross profit / revenue): FY2021 37.6%, FY2022 45.2%, FY2023 -9.1%, FY2024 22.4%, FY2025 39.8%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL GrossProfit and Revenue series, CIK 723125",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000723125/us-gaap/GrossProfit.json",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Filing: in some prior periods average selling prices were below manufacturing costs.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1A volatility in ASP",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Approximately one-half of total revenue came from the top ten customers in each of the last three years.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Marketing and Customers",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Revenue fell 49.5% from $30.758B (FY2022) to $15.540B (FY2023), then rose to $37.378B in FY2025, so volume and price follow the market, not Micron.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL revenue series, CIK 723125",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000723125/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json",
+       "date": "2025-08-28"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Only a limited number of suppliers can deliver certain materials, in some cases single or sole source; certain materials come predominantly from China.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Resources",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Supply chain depends on third-party controller makers and outsourced foundries, assembly and test providers.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Resources",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Semiconductor manufacturing is capital intensive; fabs are complex projects needing specialised skills, and fab building has been uncommon in recent years.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Manufacturing and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Return on ending equity: FY2021 13.3%, FY2022 17.4%, FY2023 -13.2%, FY2024 1.7%, FY2025 15.8%. Entry is hard but returns are not persistent.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity series, CIK 723125",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000723125/us-gaap/StockholdersEquity.json",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "State-backed CXMT and YMTC are named as government-assisted competitors, which weakens the capital barrier.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 Competitive Conditions",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Competitors are developing new memory and storage technologies that may offer performance or cost advantages and render existing technologies obsolete.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1A new technologies",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     },
+     {
+      "text": "Volume production of 8-high 24GB HBM3E began in 2024; the filing warns that a shift of capacity away from HBM could significantly raise conventional DRAM supply.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Micron FY2025 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+       "date": "2025-08-28"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Three-player DRAM oligopoly with very high fab capital needs; fab building has been uncommon in recent years.",
+    "source": {
+     "title": "Micron FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+     "date": "2025-08-28"
+    }
+   },
+   {
+    "text": "FY2025 revenue of $37.378B and operating income of $9.770B (26.1% margin) are the strongest in the series.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss and revenue series, CIK 723125",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000723125/us-gaap/OperatingIncomeLoss.json",
+     "date": "2025-08-28"
+    }
+   },
+   {
+    "text": "HBM3E volume production started in 2024, a higher-value product line.",
+    "source": {
+     "title": "Micron FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+     "date": "2025-08-28"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "FY2023 operating loss of $5.745B on $15.540B revenue (-37.0% margin) shows the oligopoly did not protect margins in a downturn.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss series, CIK 723125",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000723125/us-gaap/OperatingIncomeLoss.json",
+     "date": "2023-08-31"
+    }
+   },
+   {
+    "text": "Filing: annual DRAM ASP changes have ranged from about +40% to -40%, so price is set by the market.",
+    "source": {
+     "title": "Micron FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+     "date": "2025-08-28"
+    }
+   },
+   {
+    "text": "Filing: China's CAC barred critical information infrastructure operators from buying Micron products (May 2023), and a majority of 2025 DRAM output came from Taiwan fabs.",
+    "source": {
+     "title": "Micron FY2025 10-K, Item 1A geopolitical risks",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+     "date": "2025-08-28"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "MU-F1",
+    "text": "Gross margin collapses as in the last downturn.",
+    "threshold": "Gross margin below 30% for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "MU-F2",
+    "text": "HBM demand weakens and capacity shifts to conventional DRAM.",
+    "threshold": "DRAM average selling price down more than 20% year on year",
+    "status": "watch"
+   },
+   {
+    "id": "MU-F3",
+    "text": "Customer concentration rises.",
+    "threshold": "Top ten customers above 60% of revenue",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "conflict",
+   "tests": [
+    {
+     "name": "2021 to 2023 operating margin change",
+     "result": "22.7% to -37.0%, a 59.7 point fall. Peer figures (Samsung, SK hynix) are not SEC filers and were not retrieved, so no peer comparison."
+    },
+    {
+     "name": "Margin volatility FY2021 to FY2025",
+     "result": "Operating margin 22.7%, 31.5%, -37.0%, 5.2%, 26.1%. Very high."
+    },
+    {
+     "name": "Return on ending equity persistence",
+     "result": "13.3%, 17.4%, -13.2%, 1.7%, 15.8%. Not persistent."
+    }
+   ],
+   "story": "Oligopoly structure and capital barriers suggest durable pricing power.",
+   "numbers": "Gross margin swung from 45.2% to -9.1% to 39.8% within three years, and return on equity turned negative in FY2023."
+  }
+ },
+ "V": {
+  "id": "V-2026Q3",
+  "ticker": "V",
+  "name": "Visa",
+  "version": "1.0",
+  "as_of": "2025-09-30",
+  "data_note": "Based on SEC filings up to the FY2025 10-K (fiscal year ended 2025-09-30). FY2021 data and later quarters were not reviewed. Financial figures come from the two earnings releases above; the 10-K was read for business and risk text only.",
+  "verdict": "Strong",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Visa is a two-sided network with 14,500 financial institutions and over 175 million merchant locations, so every extra participant makes it harder to replace. GAAP operating margin has held at 60% to 66% and return on equity has climbed past 50%. The pressure points are client incentives, now 28% of gross revenue and growing faster than revenue, and regulators and real-time payment systems attacking the fee.",
+  "forces": {
+   "rivalry": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing compares Visa's $15.9T total volume and 311B transactions with Mastercard's $8.0T and 204B, and American Express's $1.8T and 12B.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     },
+     {
+      "text": "GAAP operating margin: FY2022 64.2%, FY2023 64.3%, FY2024 65.7%, FY2025 60.0% (litigation provision of $2.562B vs $462M).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+       "date": "2025-10-28"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Client incentives were $15,751M in FY2025 (+14%) against net revenue growth of 11%; as a share of gross revenue they rose from 27.7% to 28.3%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+       "date": "2025-10-28"
+      }
+     },
+     {
+      "text": "Filing: governments use regulation to drive down merchant discount rates; interchange caps exist in the EU (20 and 30 bps), Australia, New Zealand and Latin America; Credit Card Competition Act may be reintroduced.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1A Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 5,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing identifies four global data centers and telecommunications infrastructure as critical; no vendor concentration is disclosed.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     },
+     {
+      "text": "Personnel expense of $6.961B in FY2025 was the main non-litigation cost and no input supplier is described as a constraint.",
+      "basis": "filing",
+      "tier": "L",
+      "source": {
+       "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+       "date": "2025-10-28"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Scale: nearly 14,500 financial institutions, more than 175 million merchant locations, about 12 billion cards, accounts and wallets, 329 billion transactions in fiscal 2025.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     },
+     {
+      "text": "Return on ending equity: FY2022 42.0%, FY2023 44.6%, FY2024 50.4%, FY2025 52.9%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+       "date": "2025-10-28"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: real-time payment networks have launched in at least 80 countries with strong government sponsorship (FedNow, PIX, UPI) and can compete on consumer, B2B and P2P payments.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     },
+     {
+      "text": "Filing cites stablecoins, account-to-account payments, BNPL and cash and checks as competing forms of payment.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Visa FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+       "date": "2025-09-30"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Net revenue grew 11.4%, 10.0% and 11.3% in FY2023, FY2024 and FY2025 ($32.7B to $40.0B).",
+    "source": {
+     "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+     "date": "2025-10-28"
+    }
+   },
+   {
+    "text": "Non-GAAP net income rose 11% to $22.5B in FY2025, excluding litigation and other special items.",
+    "source": {
+     "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+     "date": "2025-10-28"
+    }
+   },
+   {
+    "text": "Payments volume +8%, cross-border volume +13% and processed transactions +10% in FY2025.",
+    "source": {
+     "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+     "date": "2025-10-28"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "GAAP operating income grew only 2% in FY2025 ($23,994M vs $23,595M) because the litigation provision rose to $2.562B from $462M.",
+    "source": {
+     "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+     "date": "2025-10-28"
+    }
+   },
+   {
+    "text": "Client incentives grew 14% in FY2025, faster than net revenue (11%), a sign issuers and merchants capture more of the economics.",
+    "source": {
+     "title": "Visa Q4 FY2025 earnings release (8-K Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000077/q42025earningsrelease.htm",
+     "date": "2025-10-28"
+    }
+   },
+   {
+    "text": "A District Court ruling in August 2025 vacated the Federal Reserve debit fee standard, and new interchange caps keep appearing (New Zealand cross-border caps adopted July 2025).",
+    "source": {
+     "title": "Visa FY2025 10-K, Item 1A Regulation",
+     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+     "date": "2025-09-30"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "V-F1",
+    "text": "Incentives keep outgrowing revenue.",
+    "threshold": "Client incentives above 30% of gross revenue",
+    "status": "watch"
+   },
+   {
+    "id": "V-F2",
+    "text": "Margins erode beyond litigation noise.",
+    "threshold": "Non-GAAP operating margin below 60% or GAAP below 55%",
+    "status": "holding"
+   },
+   {
+    "id": "V-F3",
+    "text": "Volume growth slows as substitutes gain share.",
+    "threshold": "Payments volume growth below 5%",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "2021 to 2023 margin change versus peers",
+     "result": "FY2022 to FY2023 GAAP operating margin 64.2% to 64.3%, flat. FY2021 and peer (Mastercard) figures were not retrieved, so this test is incomplete."
+    },
+    {
+     "name": "Margin volatility FY2022 to FY2025",
+     "result": "64.2%, 64.3%, 65.7%, 60.0%. The FY2025 dip is attributed to the litigation provision, not pricing."
+    },
+    {
+     "name": "Return on ending equity persistence",
+     "result": "42.0%, 44.6%, 50.4%, 52.9%. Rising; helped by buybacks (equity fell from $39.1B to $37.9B in FY2025)."
+    },
+    {
+     "name": "Price, volume, mix split",
+     "result": "Volume-driven: payments volume +8%, processed transactions +10%, revenue +11%. No pure price split disclosed in sections reviewed."
+    }
+   ]
+  }
+ },
+ "GOOGL": {
+  "id": "GOOGL-2026Q3",
+  "ticker": "GOOGL",
+  "name": "Alphabet",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31). Later quarters were not reviewed. 2022 revenue was not available under the same XBRL tag, so 2022 is omitted.",
+  "verdict": "Moderate",
+  "trend": "weakening",
+  "confidence": "Medium",
+  "summary": "Alphabet earns a steady 32% operating margin on a very wide base of advertisers, and returns on equity are above 30%. The weak force is substitutes: the company itself flags generative AI as a way users may bypass its products, and a December 2025 US court judgment limits how search is distributed. Those risks have not yet shown up in the numbers.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing lists competitors across search engines, e-commerce, ad networks, cloud providers, AI model developers, hardware makers, video and social networks.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating margin: 2021 30.6%, 2023 27.4%, 2024 32.1%, 2025 32.0%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss and Revenues, CIK 1652044",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/OperatingIncomeLoss and Revenues.json",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Revenue grew 15.1% in 2025, from $350.018B to $402.836B.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL Revenues, CIK 1652044",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/Revenues.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: over 70% of 2025 revenue came from online advertising, sold to a very large base of advertisers and delivered across Search, YouTube and Network partners.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1 Revenues",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating margin stayed between 32.0% and 32.1% in 2024 and 2025 while revenue grew 15.1%, so advertisers did not extract price concessions. Single-customer concentration was not retrieved.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss and Revenues, CIK 1652044",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/OperatingIncomeLoss and Revenues.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: operations depend on TPUs (custom, seventh generation Ironwood), specialised GPUs, a limited set of server and networking suppliers, energy and data centre capacity.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1A Supply",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: extended or unforeseen disruptions at these suppliers could affect the ability to meet customer demand.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 3,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing names AI model developers and providers of AI products and services as competitors, alongside large incumbents and emerging startups.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending equity: 2023 26.0%, 2024 30.8%, 2025 31.8%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity, CIK 1652044",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/NetIncomeLoss and StockholdersEquity.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 2,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: generative AI is changing how users obtain information online, potentially reducing the utility of existing products and services.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: the December 2025 final judgment in the US search case restricts how Alphabet distributes its services and requires sharing certain search data and offering syndication to certain competitors.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1A Legal",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: April 2025 ad tech ruling found publisher tools unfairly excluded rivals; DOJ proposed structural remedies and a remedies decision is pending.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Alphabet FY2025 10-K, Item 1A Legal",
+       "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 revenue $402.836B, operating income $129.039B (32.0% margin), net income $132.170B.",
+    "source": {
+     "title": "SEC XBRL Revenues, OperatingIncomeLoss, NetIncomeLoss, CIK 1652044",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/Revenues, OperatingIncomeLoss, NetIncomeLoss.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Operating income grew 14.8% in 2025 on revenue growth of 15.1%, so margin held.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss and Revenues, CIK 1652044",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/OperatingIncomeLoss and Revenues.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Return on ending equity rose from 26.0% (2023) to 31.8% (2025).",
+    "source": {
+     "title": "SEC XBRL NetIncomeLoss and StockholdersEquity, CIK 1652044",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/NetIncomeLoss and StockholdersEquity.json",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Over 70% of revenue is advertising, so one profit pool carries the business.",
+    "source": {
+     "title": "Alphabet FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "The December 2025 search judgment limits distribution deals and forces data sharing and syndication to competitors.",
+    "source": {
+     "title": "Alphabet FY2025 10-K, Item 1A Legal",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Generative AI is named by the company as a way users may get information outside its products.",
+    "source": {
+     "title": "Alphabet FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "GOOGL-F1",
+    "text": "Search is displaced.",
+    "threshold": "Revenue growth below 8% year on year for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "GOOGL-F2",
+    "text": "Remedies bite.",
+    "threshold": "Operating margin below 28% for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "GOOGL-F3",
+    "text": "Ad tech structural break-up ordered.",
+    "threshold": "Court orders divestiture of ad exchange or publisher ad server",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2023 to 2025",
+     "result": "27.4%, 32.1%, 32.0%. Held after the 2024 step up."
+    },
+    {
+     "name": "Return on ending equity",
+     "result": "26.0%, 30.8%, 31.8%. Rising with a growing equity base."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Microsoft, Meta) were not retrieved for this card."
+    }
+   ],
+   "story": "Scale and distribution give strong pricing power, but legal remedies and generative AI threaten the search franchise.",
+   "numbers": "Margins and returns are strong and stable, so the threats are not yet in the numbers; the risk is forward looking."
+  }
+ },
+ "AMZN": {
+  "id": "AMZN-2026Q3",
+  "ticker": "AMZN",
+  "name": "Amazon",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31) and the Q4 2025 results release for segment data. Segment figures come from the release, not the 10-K text. Customer concentration was not retrieved.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Amazon's group operating margin rose from 2.4% in 2022 to 11.2% in 2025, but one segment carries it: AWS earned 57% of operating income on 18% of revenue. Retail competes in an intensely competitive market at a 6.9% North America margin. 2025 capital spending of $131.8B exceeded operating income, so the cloud thesis has to keep paying.",
+  "forces": {
+   "rivalry": {
+    "score": 2,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: businesses are rapidly evolving and intensely competitive, with many competitors across geographies and industries including retailers, cloud providers, media, logistics and advertising.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Amazon FY2025 10-K, Item 1A Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "North America segment operating margin was 6.9% in 2025 ($29.6B on $426.3B) against 6.5% in 2024.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Amazon Q4 2025 results release",
+       "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+       "date": "2026-02-04"
+      }
+     },
+     {
+      "text": "Consolidated operating margin: 2021 5.3%, 2022 2.4%, 2023 6.4%, 2024 10.8%, 2025 11.2%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL OperatingIncomeLoss and Revenue, CIK 1018724",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001018724/us-gaap/OperatingIncomeLoss and Revenue.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "AWS operating margin was 35.4% in 2025 ($45.6B on $128.7B), down from 37.0% in 2024, so large cloud buyers have not forced it down sharply.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Amazon Q4 2025 results release",
+       "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+       "date": "2026-02-04"
+      }
+     },
+     {
+      "text": "Retail buyers are millions of consumers and sellers; no single buyer sets terms. Customer concentration figures were not retrieved.",
+      "basis": "judgment",
+      "tier": "L",
+      "source": {
+       "title": "Amazon FY2025 10-K, Item 1",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: Amazon relies on a limited group of suppliers for semiconductor products, including GPUs for AI infrastructure.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Amazon FY2025 10-K, Item 1A Supply",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Capital spending (purchases of property and equipment, net) was $131.8B in 2025, which exceeds 2025 operating income of $79.975B.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Amazon Q4 2025 results release",
+       "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+       "date": "2026-02-04"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "AWS net sales were $128.7B in 2025 (+20%) and Q4 growth was 24%; group capital spending was $131.8B in 2025, a scale few entrants can fund.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Amazon Q4 2025 results release",
+       "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+       "date": "2026-02-04"
+      }
+     },
+     {
+      "text": "Return on ending equity: 2021 24.1%, 2022 -1.9%, 2023 15.1%, 2024 20.7%, 2025 18.9%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity, CIK 1018724",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001018724/us-gaap/NetIncomeLoss and StockholdersEquity.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: open investigations and litigation on competition and consumer protection, including FTC and state attorneys general suits, cover the stores and certain AWS offerings.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Amazon FY2025 10-K, Item 1A Legal",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing lists web search engines, comparison shopping sites and social networks among competitors for consumer attention.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Amazon FY2025 10-K, Item 1A Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 revenue $716.924B (+12.4%), operating income $79.975B (11.2% margin), net income $77.670B.",
+    "source": {
+     "title": "SEC XBRL Revenue, OperatingIncomeLoss, NetIncomeLoss, CIK 1018724",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001018724/us-gaap/Revenue, OperatingIncomeLoss, NetIncomeLoss.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "AWS earned $45.6B of operating income on 18.0% of revenue, 57% of the company total.",
+    "source": {
+     "title": "Amazon Q4 2025 results release",
+     "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "Operating margin rose from 2.4% in 2022 to 11.2% in 2025.",
+    "source": {
+     "title": "SEC XBRL OperatingIncomeLoss and Revenue, CIK 1018724",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001018724/us-gaap/OperatingIncomeLoss and Revenue.json",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Retail margin is thin: North America 6.9% and International 2.9% ($4.7B on $161.9B) in 2025.",
+    "source": {
+     "title": "Amazon Q4 2025 results release",
+     "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "Capex of $131.8B in 2025 is larger than operating income, so returns depend on AI and cloud demand holding.",
+    "source": {
+     "title": "Amazon Q4 2025 results release",
+     "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "AWS margin slipped from 37.0% to 35.4% in 2025.",
+    "source": {
+     "title": "Amazon Q4 2025 results release",
+     "url": "https://www.businesswire.com/news/home/20260204777163/en/Amazon.com-Announces-Fourth-Quarter-Results",
+     "date": "2026-02-04"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "AMZN-F1",
+    "text": "Cloud pricing power fades.",
+    "threshold": "AWS operating margin below 30% for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "AMZN-F2",
+    "text": "Capex outruns returns.",
+    "threshold": "Capex above 100% of operating cash flow for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "AMZN-F3",
+    "text": "Retail margin stalls.",
+    "threshold": "North America operating margin below 5% for two consecutive quarters",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2022 to 2025",
+     "result": "2.4%, 6.4%, 10.8%, 11.2%. Rising and now flattening."
+    },
+    {
+     "name": "Segment mix",
+     "result": "AWS is 18.0% of revenue and 57% of operating income; the group margin rests on one segment."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Microsoft, Walmart) were not retrieved for this card."
+    }
+   ],
+   "story": "Scale in cloud and logistics gives pricing power in cloud, while retail stays intensely competitive.",
+   "numbers": "Group margin is rising, but retail margins are thin and AWS carries 57% of profit."
+  }
+ },
+ "JPM": {
+  "id": "JPM-2026Q3",
+  "ticker": "JPM",
+  "name": "JPMorgan Chase",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31) and the Q4 2025 earnings release narrative for ROE, ROTCE and CET1. Banks are scored on revenue, net income and capital, not gross margin. Customer concentration was not retrieved.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "JPMorgan has earned 13% to 17% on ending equity for five years with a 14.5% CET1 ratio, and net interest income has risen to $95.4B. The risks are slowing growth (net interest income +3.1% in 2025) and a 33% rise in credit provisions. Capital rules and fintech competition are the named structural threats.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: competitors include banks, brokerages, investment banks, hedge funds, private equity, insurers, asset managers, card companies, e-commerce and digital asset and fintech firms.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "JPMorgan FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Net income as a share of revenue: 2021 39.7%, 2022 29.3%, 2023 31.3%, 2024 32.9%, 2025 31.3%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and Revenues, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/NetIncomeLoss and Revenues.json",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Revenue grew 2.8% in 2025 ($177.556B to $182.447B), after 12.3% growth in 2024.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL Revenues, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/Revenues.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Net interest income was $95.443B in 2025, up 3.1% on 2024 and up from $52.311B in 2021, so lending spreads held as rates moved.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL InterestIncomeExpenseNet, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/InterestIncomeExpenseNet.json",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Retail, corporate and institutional clients are numerous. Customer concentration figures were not retrieved, so this is a judgment.",
+      "basis": "judgment",
+      "tier": "L",
+      "source": {
+       "title": "JPMorgan FY2025 10-K, Item 1",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Net interest income equals 52.3% of 2025 revenue and has risen every year since 2021.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL InterestIncomeExpenseNet and Revenues, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/InterestIncomeExpenseNet and Revenues.json",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Capital is the scarce input: CET1 ratio was 14.5% (Standardized) and 14.1% (Advanced) at 31 December 2025.",
+      "basis": "management",
+      "tier": "M",
+      "source": {
+       "title": "JPMorgan Q4 2025 earnings release narrative (8-K)",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026001902/a4q25erfexhibit991narrative.htm",
+       "date": "2026-01-13"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: firms offering products solely through internet channels and non-financial companies are named as competitors that may disintermediate traditional banking.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "JPMorgan FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: the Firm is subject to extensive supervision and regulation, including a July 2023 US proposal to revise risk-based capital rules for banks with assets of $100B or more.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "JPMorgan FY2025 10-K, Item 1A Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending equity: 2021 16.4%, 2022 12.9%, 2023 15.1%, 2024 17.0%, 2025 15.7%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/NetIncomeLoss and StockholdersEquity.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing names digital asset and other financial technology companies and e-commerce firms among competitors for banking services.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "JPMorgan FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Provision for credit losses rose 33.1% in 2025 to $14.212B (7.8% of revenue) from $10.678B (6.0%).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL ProvisionForLoanLeaseAndOtherLosses, CIK 19617",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/ProvisionForLoanLeaseAndOtherLosses.json",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 net income $57.048B; management reports ROE 17% and ROTCE 20%.",
+    "source": {
+     "title": "JPMorgan Q4 2025 earnings release narrative (8-K)",
+     "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026001902/a4q25erfexhibit991narrative.htm",
+     "date": "2026-01-13"
+    }
+   },
+   {
+    "text": "Equity grew from $294.1B (2021) to $362.4B (2025) while ending-equity returns stayed 12.9% to 17.0%.",
+    "source": {
+     "title": "SEC XBRL StockholdersEquity, CIK 19617",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/StockholdersEquity.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "CET1 ratios of 14.5% (Standardized) and 14.1% (Advanced) at 31 December 2025.",
+    "source": {
+     "title": "JPMorgan Q4 2025 earnings release narrative (8-K)",
+     "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026001902/a4q25erfexhibit991narrative.htm",
+     "date": "2026-01-13"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Net income fell from $58.471B to $57.048B in 2025 while revenue rose 2.8%.",
+    "source": {
+     "title": "SEC XBRL NetIncomeLoss and Revenues, CIK 19617",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/NetIncomeLoss and Revenues.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Credit provisions rose 33.1% in 2025.",
+    "source": {
+     "title": "SEC XBRL ProvisionForLoanLeaseAndOtherLosses, CIK 19617",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/ProvisionForLoanLeaseAndOtherLosses.json",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net interest income growth slowed to 3.1% in 2025 from 3.7% in 2024.",
+    "source": {
+     "title": "SEC XBRL InterestIncomeExpenseNet, CIK 19617",
+     "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000019617/us-gaap/InterestIncomeExpenseNet.json",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "JPM-F1",
+    "text": "Earnings power fades.",
+    "threshold": "Return on ending equity below 13% for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "JPM-F2",
+    "text": "Credit costs rise sharply.",
+    "threshold": "Provision for credit losses above 10% of revenue for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "JPM-F3",
+    "text": "Capital cushion shrinks.",
+    "threshold": "CET1 ratio (Standardized) below 12.5%",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Return on ending equity 2021 to 2025",
+     "result": "16.4%, 12.9%, 15.1%, 17.0%, 15.7%. Range 4.1 points."
+    },
+    {
+     "name": "Net interest income trend",
+     "result": "$52.3B, $66.7B, $89.3B, $92.6B, $95.4B. Growth slowing to 3.1% in 2025."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Bank of America, Citigroup) were not retrieved for this card."
+    }
+   ],
+   "story": "Scale, funding strength and a high capital base support durable returns above 15%.",
+   "numbers": "Returns stayed in a 13% to 17% band, but credit provisions rose 33% in 2025 and income growth is slowing."
+  }
+ },
+ "LLY": {
+  "id": "LLY-2026Q3",
+  "ticker": "LLY",
+  "name": "Eli Lilly",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31) and the Q4 2025 results release for gross margin, operating income and product revenue. Wholesaler percentages were not retrieved.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Lilly's gross margin is 83.0% and operating margin jumped to 40.4% as revenue grew 44.7%, helped by two incretin brands that are now 56% of sales. Buyers are the weak spot: three wholesalers carry distribution, Medicare has set a 66% discount on Jardiance, and 2025 agreements lower prices further. Compound patents to 2036 protect the core franchise.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: competition includes generic and biosimilar makers, counterfeit and mass-compounded incretins, and Chinese and other international rivals with expanded R&D capabilities.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Gross margin rose from 81.3% in 2024 to 83.0% in 2025 on revenue growth of 44.7%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Lilly Q4 2025 results release",
+       "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+       "date": "2026-02-04"
+      }
+     },
+     {
+      "text": "Patent expiry dates in the 10-K: Mounjaro and Zepbound compound U.S. 2036, Trulicity 2027, Jardiance 2029, Verzenio 2031, Cyramza 2026.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Patents",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 2,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: three US wholesale distributors (McKesson, Cencora, Cardinal Health) each accounted for a significant percentage of revenue in 2025, 2024 and 2023. Exact percentages were not retrieved.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 and Notes",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: HHS set a price for Jardiance 66% below its 2023 list price under Medicare negotiation, and Lilly agreed in 2025 to lower Medicaid and certain other drug prices and to a direct-to-patient platform with discounts.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Pricing",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: pharmacy benefit managers, health plans and wholesalers are described as consolidated organisations with significant market power.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: most principal materials are available from more than one source, but certain materials are procured from a single source; portions of the supply chain are China-based.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Raw Materials and Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: manufacturing expansion at new sites in the US, Ireland, Germany and the Netherlands to support anticipated demand.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Manufacturing",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Cost of sales rose 31.3% in 2025 ($8.418B to $11.052B), slower than revenue growth of 44.7%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Lilly Q4 2025 results release",
+       "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+       "date": "2026-02-04"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing patent table: U.S. compound protection on Mounjaro and Zepbound to 2036 and in the EU to 2037.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Patents",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending equity: 2021 62.2%, 2022 58.6%, 2023 48.6%, 2024 74.2%, 2025 77.8%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "SEC XBRL NetIncomeLoss and StockholdersEquity, CIK 59478",
+       "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000059478/us-gaap/NetIncomeLoss and StockholdersEquity.json",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "R&D spend was $13.337B in 2025 (20.5% of revenue), a scale a new entrant must match.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Lilly Q4 2025 results release",
+       "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+       "date": "2026-02-04"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: production and sale of counterfeit, misbranded and mass-compounded incretins is named as a competitive threat.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Lilly FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Mounjaro and Zepbound were 56.0% of 2025 revenue ($36.507B of $65.179B), up from 36.6% in 2024, so one drug class carries the company.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Lilly Q4 2025 results release",
+       "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+       "date": "2026-02-04"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 revenue $65.179B (+44.7%), operating income $26.302B (40.4% margin vs 28.6% in 2024), net income $20.640B.",
+    "source": {
+     "title": "Lilly Q4 2025 results release",
+     "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "Gross margin 83.0%; Mounjaro revenue $22.965B (about 2.0x) and Zepbound $13.542B (about 2.75x) year on year.",
+    "source": {
+     "title": "Lilly Q4 2025 results release",
+     "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "Management guides 2026 revenue to $80B to $83B.",
+    "source": {
+     "title": "Lilly Q4 2025 results release",
+     "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+     "date": "2026-02-04"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Two products are 56.0% of revenue; patent protection runs to 2036 but pricing is set by payers.",
+    "source": {
+     "title": "Lilly Q4 2025 results release",
+     "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+     "date": "2026-02-04"
+    }
+   },
+   {
+    "text": "Government-set and negotiated prices are already in place (Jardiance 66% discount) and 2025 agreements lower prices further.",
+    "source": {
+     "title": "Lilly FY2025 10-K, Item 1 Pricing",
+     "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Trulicity compound protection ends in 2027 and Cyramza in 2026.",
+    "source": {
+     "title": "Lilly FY2025 10-K, Item 1 Patents",
+     "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "LLY-F1",
+    "text": "Price erosion on incretins.",
+    "threshold": "Gross margin below 78% for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "LLY-F2",
+    "text": "Concentration risk grows.",
+    "threshold": "Mounjaro plus Zepbound above 65% of revenue",
+    "status": "watch"
+   },
+   {
+    "id": "LLY-F3",
+    "text": "Growth stalls.",
+    "threshold": "Revenue growth below 20% year on year for two consecutive quarters",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Gross margin 2024 to 2025",
+     "result": "81.3% to 83.0%, up 1.7 points while prices were being lowered."
+    },
+    {
+     "name": "Operating margin 2024 to 2025",
+     "result": "28.6% to 40.4%, up 11.8 points."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Novo Nordisk is a foreign filer) were not retrieved."
+    }
+   ],
+   "story": "Patent-protected incretins give pricing power, but payers and government set prices and a few wholesalers carry distribution.",
+   "numbers": "Margins rose despite price concessions, which supports the story; growth depends on two drug brands."
+  }
+ },
+ "KO": {
+  "id": "KO-2026Q3",
+  "ticker": "KO",
+  "name": "Coca-Cola",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31). Only 2023 to 2025 income statement figures were retrieved; earlier years and the reasons for the 2024 operating income dip were not. Retailer concentration was not found.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Coca-Cola's gross margin rose from 59.5% to 61.6% over 2023 to 2025 on revenue growth of only 1.9% in 2025, which shows pricing power in a mature category. Five bottling partners carry 44% of volume. Operating margin has been volatile (24.7%, 21.2%, 28.7%) and the filing names weight-loss drugs and sweetened-beverage taxes as demand risks.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the commercial beverage industry is highly competitive; named competitors include PepsiCo, Nestle, Keurig Dr Pepper, Danone, Suntory, Anheuser-Busch InBev, Kirin, Heineken, Diageo and Red Bull, plus regional firms and e-commerce microbrands.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Gross margin: 2023 59.5%, 2024 61.1%, 2025 61.6%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Net operating revenue grew 2.9% in 2024 and 1.9% in 2025 ($47.061B to $47.941B).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the five largest bottling partners (Coca-Cola FEMSA, CCEP, CCHBC, Arca Continental, Swire) represented 44% of worldwide unit case volume in 2025.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1 Bottling Partners",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Gross margin rose 2.1 points between 2023 and 2025, so concentrated bottlers did not squeeze price. A retailer share of sales (for example Walmart) was not found in the retrieved text.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: sweeteners are generally readily available from numerous sources; aluminum cans are available from a limited number of suppliers; sucralose is bought mainly from suppliers in the US and China.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1 Raw Materials",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Cost of goods sold was $18.520B in 2023, $18.324B in 2024 and $18.397B in 2025 while revenue rose $2.2B.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: orange juice depends on a primary supplier (Cutrale) and is exposed to citrus greening and weather.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1 Raw Materials",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the competitive set includes small and emerging companies and e-commerce microbrands, which indicates entry is possible in niches but not at global scale.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending shareowners' equity: 2024 42.8%, 2025 40.7%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Consolidated Balance Sheet",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R5.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: obesity and health concerns may reduce demand, including the effects or perceived effects of weight-loss drugs on consumption patterns.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1A Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: potential new or increased taxes on sweetened beverages are named as a risk to demand.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Coca-Cola FY2025 10-K, Item 1A Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 gross profit $29.544B (61.6% margin) and operating income $13.762B (28.7% margin).",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net income attributable to shareowners was $13.107B in 2025 against $10.631B in 2024.",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Gross margin rose each year from 59.5% in 2023 to 61.6% in 2025 on low single-digit revenue growth.",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Revenue growth was only 1.9% in 2025.",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Operating margin swung from 24.7% (2023) to 21.2% (2024) to 28.7% (2025); the drivers of the 2024 dip and 2025 rebound were not retrieved.",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Filing flags weight-loss drugs, obesity concerns and sweetened-beverage taxes as demand risks.",
+    "source": {
+     "title": "Coca-Cola FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "KO-F1",
+    "text": "Pricing power erodes.",
+    "threshold": "Gross margin below 58% for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "KO-F2",
+    "text": "Volume declines.",
+    "threshold": "Global unit case volume declines for two consecutive quarters",
+    "status": "watch"
+   },
+   {
+    "id": "KO-F3",
+    "text": "Input cost squeeze.",
+    "threshold": "Cost of goods sold growing more than 5 points faster than revenue for a full year",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Gross margin 2023 to 2025",
+     "result": "59.5%, 61.1%, 61.6%. Steady rise."
+    },
+    {
+     "name": "Operating margin 2023 to 2025",
+     "result": "24.7%, 21.2%, 28.7%. Volatile; drivers not retrieved."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (PepsiCo) were not retrieved for this card."
+    }
+   ],
+   "story": "Global brands and a bottler network support stable pricing power in a low-growth category.",
+   "numbers": "Gross margin is stable and rising; operating margin is more volatile than the story implies."
+  }
+ },
+ "XOM": {
+  "id": "XOM-2026Q3",
+  "ticker": "XOM",
+  "name": "ExxonMobil",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31). Only 2023 to 2025 income statement figures and 2024 to 2025 balance sheet figures were retrieved. Customer concentration was not found. Weak here means weak pricing power, not a weak company.",
+  "verdict": "Weak",
+  "trend": "weakening",
+  "confidence": "Medium",
+  "summary": "ExxonMobil sells commodities whose prices it does not set, so Porter's forces point to weak pricing power: rivalry, buyers and substitutes all score 2. Scale (4.7 million barrels a day), a 16% debt-to-equity ratio and Guyana projects keep returns near 11% to 13%. Pre-tax margin fell from 15.8% to 12.7% over two years as prices softened.",
+  "forces": {
+   "rivalry": {
+    "score": 2,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the oil, gas and petrochemical businesses are fundamentally commodity businesses, with prices set by supply and demand beyond the company's control.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1A Market Risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Pre-tax income as a share of sales and other operating revenue: 2023 15.8%, 2024 14.4%, 2025 12.7%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Consolidated Statement of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Sales and other operating revenue fell 4.5% in 2025 ($339.247B to $323.905B) and net income attributable fell 14.4% ($33.680B to $28.844B).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Consolidated Statement of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 2,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Products are commodities priced by the market, so buyers can switch between producers on price. A customer above 10% of revenue was not found in the retrieved text.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1A Market Risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Net income margin: 2023 10.8%, 2024 9.9%, 2025 8.9%. Margin moves with prices rather than with ExxonMobil's own choices.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Consolidated Statement of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: results depend on costs of third-party equipment and services such as drilling rigs and shipping, supply chain disruptions and inflationary cost pressures.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1A Operational Risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Capital spending of $19.0B in 2025 on developing proved undeveloped reserves.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 2 Properties",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Production was 4,736 thousand oil-equivalent barrels per day in 2025, with projects in Guyana (Yellowtail started; Uaru, Whiptail, Hammerhead) and the Permian Basin.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 2 Properties",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Return on ending ExxonMobil equity: 2024 12.8%, 2025 11.1%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Consolidated Balance Sheet",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R5.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Total debt was $43.537B at the end of 2025 ($9.296B current and $34.241B long-term), 16.3% of total equity.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Consolidated Balance Sheet",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R5.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 2,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: increased competitiveness of alternative energy and government policy support for substitutes may reduce demand.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1A Market Risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: technological advances in energy storage and other areas may make wind, solar, nuclear or other alternatives more competitive for power generation.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1A Market Risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: the Low Carbon Solutions unit pursues carbon capture, hydrogen, ammonia, lower-emission fuels and lithium, a hedge against the substitution risk.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "ExxonMobil FY2025 10-K, Item 1 Low Carbon Solutions",
+       "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Production of 4,736 thousand oil-equivalent barrels per day in 2025 gives scale.",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Item 2",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Return on ending equity stayed above 11% (11.1% in 2025) with debt at 16.3% of equity.",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Consolidated Balance Sheet",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R5.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Guyana projects (Yellowtail, Uaru, Whiptail, Hammerhead) are growth projects named in the filing.",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Item 2",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Pre-tax margin fell from 15.8% (2023) to 12.7% (2025) as prices and volumes moved.",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Consolidated Statement of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net income fell 14.4% in 2025 and 6.5% in 2024 ($36.010B to $33.680B).",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Consolidated Statement of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "The company states its earnings are significantly affected by prices it does not control.",
+    "source": {
+     "title": "ExxonMobil FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "XOM-F1",
+    "text": "Returns fall below the cost of capital.",
+    "threshold": "Return on ending equity below 8% for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "XOM-F2",
+    "text": "Balance sheet stretches.",
+    "threshold": "Total debt above 25% of total equity",
+    "status": "watch"
+   },
+   {
+    "id": "XOM-F3",
+    "text": "Production growth stalls.",
+    "threshold": "Production below 4,500 thousand oil-equivalent barrels per day",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Pre-tax margin 2023 to 2025",
+     "result": "15.8%, 14.4%, 12.7%. Down 3.1 points in two years."
+    },
+    {
+     "name": "Return on ending equity 2024 to 2025",
+     "result": "12.8% to 11.1%. Still positive and well covered."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Chevron, ConocoPhillips) were not retrieved for this card."
+    }
+   ],
+   "story": "A commodity producer is a price taker, so pricing power is weak by structure; scale and low-cost projects protect returns.",
+   "numbers": "Margins fall with revenue, which matches the weak pricing-power story; returns stay solid on scale."
+  }
+ },
+ "NEE": {
+  "id": "NEE-2026Q3",
+  "ticker": "NEE",
+  "name": "NextEra Energy",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31). Interest rate sensitivity, supply-chain and tariff exposure, and data centre load figures were not retrieved. Utility pricing is set by regulators.",
+  "verdict": "Moderate",
+  "trend": "weakening",
+  "confidence": "Medium",
+  "summary": "NextEra's regulated utility (FPL) has a settled rate path through 2029 and a 10.95% authorized ROE, which makes pricing predictable but regulator-set. The pressure is financing: interest expense doubled to $4.6B and operating income covered it only 1.8 times in 2025. Net income attributable has fallen two years in a row.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: wholesale power generation is capital-intensive and commodity-driven with numerous participants; NEER competes on price, project track record, creditworthiness, scale and ability to offer risk solutions. NEER has about 37,505 MW of capacity.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 NEER Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating margin: 2023 36.4%, 2024 30.2%, 2025 30.2%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Revenue grew 10.7% in 2025 ($24.753B to $27.412B) and operating income grew 10.7% ($7.479B to $8.280B).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: FPL serves about 12 million people through more than 6 million customer accounts, under regulated rates.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 FPL",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: the 2025 rate agreement (2026 to 2029) raises annualized retail base revenue by $945M from 1 January 2026 and $705M from 1 January 2027; authorized ROE is 10.95% (range 9.95% to 11.95%).",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 FPL Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Pricing at FPL is set by the regulator, not by buyers or by NextEra, which limits both pricing power and buyer power.",
+      "basis": "judgment",
+      "tier": "L",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 FPL Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: FPL holds firm gas pipeline transportation contracts with ten suppliers (2,836,000 MMBtu per day, expiring through 2042) and nuclear fuel supply contracts expiring through 2039.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 Fuel",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Fuel, purchased power and interchange cost fell from $5.457B (2023) to $4.944B (2025) against revenue of $28.114B in 2023 and $27.412B in 2025.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Supply chain and tariff risks for solar and batteries were not retrieved from the filing text.",
+      "basis": "judgment",
+      "tier": "L",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: FPL has a regulated franchise serving more than 6 million accounts; wholesale generation is capital-intensive.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 FPL and NEER",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Long-term debt rose 23.7% in 2025 to $89.556B, 164% of common equity of $54.608B.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "NextEra FY2025 10-K, Consolidated Balance Sheets",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R6.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "In 2025 FPL added 894 MW of solar and 522 MW of battery storage, and expects about 1,420 MW more storage in 2026.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1 FPL Generation",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: changing technology, particularly the rising efficiency of solar generation, tax incentives and regulatory changes could alter FPL's favorable relative cost position against self-generation.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1A Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: wind and solar get 100% PTC or 30% ITC only if construction begins before 5 July 2026 or they are placed in service by 31 December 2027; an IRS notice on 15 August 2025 removed the 5% spend safe harbor.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "NextEra FY2025 10-K, Item 1A Tax Credits",
+       "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "2025 revenue $27.412B and operating income $8.280B (30.2% margin); net income attributable $6.835B.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "FPL's 2025 rate agreement lifts base revenue by $945M in 2026 and $705M in 2027 with a 10.95% authorized ROE.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Item 1 FPL Regulation",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Return on ending common equity was 12.5% in 2025 and 13.9% in 2024.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Consolidated Balance Sheets",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R6.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Interest expense rose 104.6% in 2025 to $4.572B (from $2.235B), 16.7% of revenue.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Operating income covered interest expense 1.81 times in 2025, against 3.35 times in 2024 and 3.08 times in 2023.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net income attributable to NEE fell for a second year: $7.310B, $6.946B, $6.835B.",
+    "source": {
+     "title": "NextEra FY2025 10-K, Consolidated Statements of Income",
+     "url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/R3.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "NEE-F1",
+    "text": "Financing cost outruns earnings.",
+    "threshold": "Operating income below 1.5 times interest expense for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "NEE-F2",
+    "text": "Rate relief is cut.",
+    "threshold": "Authorized FPL ROE below 9.95% or a rate order below the 2025 agreement",
+    "status": "watch"
+   },
+   {
+    "id": "NEE-F3",
+    "text": "Leverage keeps climbing.",
+    "threshold": "Long-term debt above 180% of common equity",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2023 to 2025",
+     "result": "36.4%, 30.2%, 30.2%. Stable since 2024."
+    },
+    {
+     "name": "Interest cover (operating income / interest expense)",
+     "result": "3.08x, 3.35x, 1.81x. Fell sharply in 2025."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Duke, Southern) were not retrieved for this card."
+    }
+   ],
+   "story": "A regulated utility franchise gives stable, rate-set returns, with a growth arm in renewables.",
+   "numbers": "Operating margin is stable, but interest expense doubled and net income has fallen two years in a row, so earnings quality is under pressure from financing."
+  }
+ },
+ "PG": {
+  "id": "PG-2026Q3",
+  "ticker": "PG",
+  "name": "Procter & Gamble",
+  "version": "1.0",
+  "as_of": "2026-06-30",
+  "data_note": "Based on the FY2026 10-K (year ended 2026-06-30). Income statement figures for FY2024 to FY2026 and balance sheet figures for 2026-06-30 and 2025-06-30 were retrieved. FY2026 net sales ($87.0B), diluted EPS ($6.62) and net earnings attributable ($16,046M) matched the earnings-release 8-K. Peer margins, private-label share and e-commerce share were not found.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "P&G's brands held gross margin above 50% and operating margin above 22% across FY2024 to FY2026 on net sales of $87.0B, which supports moderate to good pricing power. Walmart is about 16% of sales and retailers' private labels compete directly. In FY2026 cost of products sold grew 5.3% against 3.3% sales growth and gross margin eased to 50.2%.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the markets in which products are sold are highly competitive, against similar products from a broad range of companies, large and small, established and new, including well-known global competitors. Filing also says P&G often holds a leadership or significant market share position.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1 Competition and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Gross margin (net sales less cost of products sold): FY2024 51.4%, FY2025 51.2%, FY2026 50.2%. Down 1.2 points in two years.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Operating margin: FY2024 22.1% (after a $1,341M indefinite-lived intangible impairment), FY2025 24.3%, FY2026 22.7%. Operating income fell 3.4% in FY2026 ($20,451M to $19,748M) on net sales growth of 3.3% ($84,284M to $87,032M).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: sales to Walmart Inc. and its affiliates were approximately 16% of total sales in 2026, 2025 and 2024; no other customer represented more than 10%.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1 Customers",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Filing: P&G competes against other branded products and retailers' private-label brands; evolving sales channels and growth in hard discounter channels may affect customer and consumer preferences.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1A Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "A 16% share of FY2026 net sales of $87,032M is about $13.9B of sales tied to one retailer.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "weakening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: almost all raw and packaging materials are purchased from third parties, some of whom are single-source suppliers.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1 Raw Materials",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Filing: costs are subject to fluctuations in commodities (such as petroleum-derived resins and pulp), raw and packaging materials, labor, tariffs and transportation; when prices change, P&G may or may not pass the change to customers.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1A Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Cost of products sold grew 5.3% in FY2026 ($41,164M to $43,362M) against net sales growth of 3.3%, a gap of 2.1 points.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: competitors include companies that are both established and new, so new competitors exist. The filing text retrieved gave no market share or entry barrier figures.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Gross margin stayed above 50% and operating margin above 22% in all three years (FY2024 to FY2026), while net sales were $87,032M in FY2026.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Return on ending shareholders' equity (net earnings attributable to P&G over total shareholders' equity): FY2025 30.6%, FY2026 29.5%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Balance Sheets",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R6.htm",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: P&G competes against retailers' private-label brands, and growth in hard discounter channels is named as an influence on customer and consumer preferences.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1 and Item 1A",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Filing: evolving sales channels and business models may continue to affect preferences, for example a growing consumer preference for shopping online.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "P&G FY2026 10-K, Item 1A Risk Factors",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+       "date": "2026-06-30"
+      }
+     },
+     {
+      "text": "Gross margin fell 1.0 point in FY2026 (51.2% to 50.2%) while net sales grew 3.3%. The retrieved text did not give private-label share data.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+       "date": "2026-06-30"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Net sales rose to $87,032M in FY2026 from $84,039M in FY2024, with net earnings attributable to P&G of $16,046M.",
+    "source": {
+     "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Return on ending shareholders' equity of 29.5% in FY2026 with total debt of $34,138M, 62.9% of total shareholders' equity.",
+    "source": {
+     "title": "P&G FY2026 10-K, Consolidated Balance Sheets",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R6.htm",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Five reportable segments (Beauty; Grooming; Health Care; Fabric & Home Care; Baby, Feminine & Family Care) spread revenue across categories.",
+    "source": {
+     "title": "P&G FY2026 10-K, Item 1 Segments",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+     "date": "2026-06-30"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Gross margin slipped from 51.4% (FY2024) to 50.2% (FY2026) as cost of products sold outgrew sales.",
+    "source": {
+     "title": "P&G FY2026 10-K, Consolidated Statements of Earnings",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/R3.htm",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Walmart and its affiliates were about 16% of sales in each of the last three years.",
+    "source": {
+     "title": "P&G FY2026 10-K, Item 1 Customers",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+     "date": "2026-06-30"
+    }
+   },
+   {
+    "text": "Filing says P&G may or may not pass commodity, tariff and labor cost changes to customers.",
+    "source": {
+     "title": "P&G FY2026 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/pg-20260630.htm",
+     "date": "2026-06-30"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "PG-F1",
+    "text": "Pricing power erodes.",
+    "threshold": "Gross margin below 48% for a full fiscal year",
+    "status": "watch"
+   },
+   {
+    "id": "PG-F2",
+    "text": "Cost pass-through fails.",
+    "threshold": "Cost of products sold growing more than 4 points faster than net sales for a full fiscal year (FY2026 gap was 2.1 points)",
+    "status": "holding"
+   },
+   {
+    "id": "PG-F3",
+    "text": "Customer concentration rises.",
+    "threshold": "Any single customer above 20% of net sales in the 10-K",
+    "status": "watch"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Gross margin FY2024 to FY2026",
+     "result": "51.4%, 51.2%, 50.2%. Down 1.2 points; still above 50%."
+    },
+    {
+     "name": "Operating margin FY2024 to FY2026",
+     "result": "22.1% (with a $1,341M impairment), 24.3%, 22.7%. Drop of 1.6 points in FY2026."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Colgate-Palmolive, Unilever, Kimberly-Clark) were not retrieved for this card."
+    }
+   ],
+   "story": "Leading brands in everyday categories support steady pricing power, with Walmart and private label as the main counterweights.",
+   "numbers": "Margins remain high but both gross and operating margin eased in FY2026 as costs grew faster than sales; consistent with a moderate, slightly pressured position."
+  }
+ },
+ "WM": {
+  "id": "WM-2026Q3",
+  "ticker": "WM",
+  "name": "Waste Management",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31). Income statement figures for 2023 to 2025 and balance sheet figures for 2024 and 2025 were retrieved. Core price or yield figures, fuel cost data and a vendor concentration statement were not found.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "Waste Management owns 253 solid waste landfills, the largest network in the U.S. and Canada per the filing, and its largest customer is under 5% of revenue. Buyers and entrants score 4. Operating margin held at 17.1% to 18.4% over 2023 to 2025, while higher interest cost cut 2025 net income by 1.4%.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: we principally compete with large national waste management companies, counties and municipalities that maintain their own waste collection and disposal operations and regional and local companies. We face intense competition based on pricing and quality of service.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Income from operations as a share of operating revenues: 2023 17.5%, 2024 18.4%, 2025 17.1%. Operating revenues grew 8.0% in 2024 and 14.2% in 2025 ($22.063B to $25.204B).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Selling, general and administrative expense rose from 9.4% of revenue (2023) to 10.3% (2024) and 10.8% (2025).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: during 2025, our largest customer represented less than 5% of annual revenues.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Customers",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: commercial and industrial collection typically runs on three-year service agreements; residential collection is typically under a contract or franchise with a municipality for three to ten years.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Collection",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating margin held at 17.1% in 2025 after 18.4% in 2024 while revenue grew 14.2%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: tariffs on foreign trade could increase the cost of certain equipment and other materials procured from outside the U.S., including trucks.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1A Trade risk",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: approximately 9,200 employees are covered by collective bargaining agreements.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Employees",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating costs and expenses fell from 61.7% of revenue (2023) to 60.7% (2024) and 59.6% (2025). A vendor concentration statement was not found in the retrieved text.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: the significant capital requirements of developing and operating a landfill serve as a barrier to landfill ownership.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Disposal",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: as of December 31, 2025, WM owned or operated 253 solid waste landfills and four hazardous waste landfills, the largest network of landfills throughout the U.S. and Canada.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Business",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Property and equipment, net was $20.378B at 2025-12-31, 80.9% of 2025 operating revenues.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "WM FY2025 10-K, Consolidated Balance Sheets",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R2.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: many state and local governments mandate recycling and waste reduction at the source and prohibit the disposal of certain materials at landfills, such as recyclable materials, yard waste, food waste and electronics.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1A Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: regulations requiring diversion of organic wastes away from landfills could decrease landfill gas produced over time and negatively impact the Renewable Energy segment.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1A Regulation",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: counties and municipalities that maintain their own collection and disposal operations are named competitors, so public self-supply is an alternative to WM.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "WM FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Operating margin was 17.1% to 18.4% across 2023 to 2025 with the largest customer under 5% of revenue.",
+    "source": {
+     "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Operating revenues rose from $20.426B (2023) to $25.204B (2025); income from operations rose from $3.575B to $4.308B.",
+    "source": {
+     "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "253 solid waste landfills, the largest U.S. and Canada network per the filing, with landfill capital needs acting as an entry barrier.",
+    "source": {
+     "title": "WM FY2025 10-K, Item 1",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/wm-20251231x10k.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Net income attributable to WM fell 1.4% in 2025 ($2.746B to $2.708B) despite 14.2% revenue growth.",
+    "source": {
+     "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net interest expense rose 52.5% in 2025 ($598M to $912M); operating income covered it 4.7 times against 6.8 times in 2024.",
+    "source": {
+     "title": "WM FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R4.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Total debt was $22.907B at 2025-12-31 (229.3% of total equity of $9.991B) against $23.900B (289.6%) a year earlier.",
+    "source": {
+     "title": "WM FY2025 10-K, Consolidated Balance Sheets",
+     "url": "https://www.sec.gov/Archives/edgar/data/823768/000110465926012049/R2.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "WM-F1",
+    "text": "Operating margin erodes.",
+    "threshold": "Income from operations below 15.0% of operating revenues for a full year",
+    "status": "watch"
+   },
+   {
+    "id": "WM-F2",
+    "text": "Interest burden rises.",
+    "threshold": "Operating income covers net interest expense less than 3.5 times in a full year",
+    "status": "watch"
+   },
+   {
+    "id": "WM-F3",
+    "text": "SG&A creep continues.",
+    "threshold": "Selling, general and administrative above 12.0% of operating revenues for a full year",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2023 to 2025",
+     "result": "17.5%, 18.4%, 17.1%. Stable in a narrow band."
+    },
+    {
+     "name": "Interest coverage 2024 to 2025",
+     "result": "Operating income over net interest expense: 6.8 times to 4.7 times. Weaker but adequate."
+    },
+    {
+     "name": "Cross-check of 2025 results",
+     "result": "10-K operating revenues $25.204B and net income attributable $2.708B match the earnings release (revenue $25,204 million, net income $2,708 million)."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Republic Services, Waste Connections) were not retrieved for this card."
+    }
+   ],
+   "story": "Landfill ownership and long contracts with a diversified customer base support steady pricing power.",
+   "numbers": "Margins sit near 17% to 18% and the largest customer is under 5%, consistent with the story; higher interest cost trimmed 2025 net income."
+  }
+ },
+ "AMT": {
+  "id": "AMT-2026Q3",
+  "ticker": "AMT",
+  "name": "American Tower",
+  "version": "1.0",
+  "as_of": "2025-12-31",
+  "data_note": "Based on the FY2025 10-K (year ended 2025-12-31), cross-checked to the Q4 2025 earnings release 8-K. Income statement figures for 2023 to 2025 and balance sheet figures for 2024 and 2025 were retrieved. Customer percentages are shares of total operating revenues as the filing states. Share of sites on leased land, barriers to entry and the floating-rate debt share were not found in the retrieved text. Weak does not apply here; scores reflect pricing power only, not company quality.",
+  "verdict": "Moderate",
+  "trend": "stable",
+  "confidence": "Medium",
+  "summary": "American Tower rents towers to a few large carriers on long leases with a fixed escalator averaging about 3%, and churn was about 2% of billings in 2025. Buyer power is the weak spot: T-Mobile, AT&T and Verizon were 49% of 2025 revenue and DISH defaulted in January 2026. Operating margin reached 45.5%, but debt of $37.2B is 359% of equity.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: named competitors are Crown Castle International Corp., SBA Communications Corporation, Vertical Bridge, Telesites S.A.B. de C.V. and Cellnex Telecom, S.A. Market share data was not found in the retrieved text.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1 Competition",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Operating income as a share of total operating revenues: 2023 31.2%, 2024 44.6%, 2025 45.5%. The 2023 figure includes $2,928.5M of depreciation, amortization and accretion and a $80.0M goodwill impairment.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Total operating revenues grew 1.1% in 2024 ($10,012.2M to $10,127.2M) and 5.1% in 2025 ($10,644.6M).",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 2,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: a substantial portion of total operating revenues comes from a small number of customers. 2025 shares of total operating revenues: T-Mobile 18%, AT&T 17%, Verizon Wireless 14%, Telefonica 10%.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A Customer concentration",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "The top three carriers were 51% of total operating revenues in 2023, 50% in 2024 and 49% in 2025. Adding Telefonica, four customers were 59% in 2025.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A Customer concentration",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: DISH represented approximately 2% of total annual property revenue and 4% of U.S. & Canada property revenue for 2025, and was in default on its Strategic Collocation Agreement as of January 2026.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A DISH",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: churn was approximately 2% of tenant billings in 2025. Leases have initial non-cancellable terms of five to ten years with multiple renewal terms and a fixed escalator averaging approximately 3% in the United States.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1 Tenant leases",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: ground rent is primarily fixed under long-term lease agreements with annual cost escalations. The share of sites on leased land and landlord concentration were not found in the retrieved text.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A Ground leases",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Property operating expense was $2,501.4M in 2023, $2,481.8M in 2024 and $2,574.1M in 2025, equal to 25.0%, 24.5% and 24.2% of total operating revenues.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Operating income margin of 45.5% in 2025 and 44.6% in 2024 on total operating revenues, with property revenue the dominant line. Management reports a 67.0% Adjusted EBITDA margin for 2025.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Competitors named in the filing are a short list of large tower owners; a barriers-to-entry discussion was not found in the retrieved text, so the score rests on margins and asset scale: property and equipment, net of $20,356.3M.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "American Tower FY2025 10-K, Consolidated Balance Sheets",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R5.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Management reports 2025 Adjusted EBITDA of $7,130M and a 67.0% margin.",
+      "basis": "management",
+      "tier": "M",
+      "source": {
+       "title": "American Tower Q4 and full year 2025 results press release (8-K)",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000032/pressreleaseq42025.htm",
+       "date": "2026-02-24"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Filing: small cell complementary network technologies or satellite services could shift a portion of customers' network investments away from traditional tower-based networks; DAS networks are named as alternative infrastructure.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A Technology risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Filing: more spectrally efficient technologies could reduce the capacity customers need from towers.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1A Technology risks",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     },
+     {
+      "text": "Churn was approximately 2% of tenant billings in 2025, so substitution had not yet shown up materially in lost billings.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "American Tower FY2025 10-K, Item 1 Churn",
+       "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+       "date": "2025-12-31"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Operating income rose 7.3% in 2025 ($4,516.5M to $4,845.8M) on revenue growth of 5.1%; operating margin 45.5%.",
+    "source": {
+     "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Interest expense fell 3.2% in 2025 ($1,404.5M to $1,359.4M) and operating income covered it 3.56 times (2.25 times in 2023).",
+    "source": {
+     "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Net income was $2,628.5M in 2025 against $2,280.2M in 2024 (the 2024 figure includes a $978.3M loss from discontinued operations).",
+    "source": {
+     "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Debt of $37,220.3M (current $3,387.8M plus long-term $33,832.5M) is 359% of total equity of $10,355.3M and 58.9% of total assets.",
+    "source": {
+     "title": "American Tower FY2025 10-K, Consolidated Balance Sheets",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R5.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Three carriers were 49% of total operating revenues in 2025, and DISH was in default as of January 2026.",
+    "source": {
+     "title": "American Tower FY2025 10-K, Item 1A",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/amt-20251231.htm",
+     "date": "2025-12-31"
+    }
+   },
+   {
+    "text": "Other expense was -$576.2M in 2025 against +$377.6M in 2024, pulling pre-tax income down 16.0% ($3,624.8M to $3,044.2M) despite higher operating income. The drivers were not retrieved.",
+    "source": {
+     "title": "American Tower FY2025 10-K, Consolidated Statements of Operations",
+     "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000035/R3.htm",
+     "date": "2025-12-31"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "AMT-F1",
+    "text": "Customer concentration or churn worsens.",
+    "threshold": "Churn above 4% of tenant billings in any full year, or any single customer above 20% of total operating revenues",
+    "status": "watch"
+   },
+   {
+    "id": "AMT-F2",
+    "text": "Debt service outgrows earnings.",
+    "threshold": "Operating income divided by interest expense below 3.0 times for a full year",
+    "status": "holding"
+   },
+   {
+    "id": "AMT-F3",
+    "text": "Margin erodes.",
+    "threshold": "Operating income below 42% of total operating revenues for a full year",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2023 to 2025",
+     "result": "31.2%, 44.6%, 45.5%. The 2023 level reflects heavy depreciation and impairment charges."
+    },
+    {
+     "name": "Revenue and net income cross-check to 8-K",
+     "result": "Total revenue $10,645M, operating income $4,845.8M, net income $2,628.5M and interest expense $1,359.4M match the 10-K statements."
+    },
+    {
+     "name": "Customer concentration trend",
+     "result": "Top three share of total operating revenues 51%, 50%, 49% (2023 to 2025). Slowly easing, still high."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Peer filings (Crown Castle, SBA) were not retrieved for this card."
+    }
+   ],
+   "story": "Long non-cancellable leases with fixed escalators and a short list of tower peers support stable pricing, but three carriers hold about half of revenue and give buyers leverage.",
+   "numbers": "Operating margin of 45.5% and 2% churn fit the story; the DISH default and 359% debt to equity show the concentration and leverage risks."
+  }
+ }
+}
