@@ -1,0 +1,45 @@
+{
+ "quotes": {
+  "last_run": "2026-10-23T23:59:08Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "generated_at": "2026-10-24T16:37:04Z",
+ "history": {
+  "last_run": "2026-10-23T23:59:08Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "news": {
+  "last_run": "2026-10-23T23:59:08Z",
+  "ok": true,
+  "count": 60,
+  "errors": []
+ },
+ "filings": {
+  "last_run": "2026-10-24T16:37:04Z",
+  "ok": true,
+  "count": 0,
+  "errors": []
+ },
+ "fundamentals": {
+  "last_run": "2026-10-23T23:59:08Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "mgmt": {
+  "last_run": "2026-10-23T23:59:08Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "evidence": {
+  "last_run": "2026-10-24T16:37:04Z",
+  "ok": true,
+  "count": 5,
+  "errors": []
+ }
+}

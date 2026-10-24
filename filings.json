@@ -1,0 +1,16 @@
+{
+ "generated_at": "2026-10-24T16:37:04Z",
+ "source": "SEC EDGAR",
+ "filings": {
+  "PG": {
+   "form": "10-Q",
+   "period": "2026-09-30",
+   "filed": "2026-10-22",
+   "accession": "0000080424-26-000256",
+   "eps_ratio": 1.003021,
+   "rev_ratio": 1.010226,
+   "shares_ratio": -729.454545,
+   "metrics": true
+  }
+ }
+}
