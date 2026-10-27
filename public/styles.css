@@ -161,6 +161,7 @@ p { margin: 0; }
   .rp-body { overflow-x: auto; }
 }
 @page { size: A4; margin: 0; }
+
 @media print {
   html, body { background: #fff !important; }
   .side, .topbar, .tabbar, .foot, .co-hero, .view-toggle, .rp-loading, #toast, #win-root { display: none !important; }
@@ -551,3 +552,120 @@ button.li:hover, a.li:hover { background: var(--sunk); }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* ---------- phone layer: larger type and touch targets on small screens ---------- */
+@media screen and (max-width: 760px) {
+  body { font-size: 16px; }
+  h3 { font-size: 15px; }
+  .brand-name { font-size: 18.5px; }
+  .side-co b { font-size: 15px; }
+  .side-co span { font-size: 14px; }
+  .side-co small { font-size: 13.5px; }
+  .avatar { font-size: 14px; }
+  .user b { font-size: 15px; }
+  .user small { font-size: 13.5px; }
+  .marker { font-size: 13px; }
+  .crumbs { font-size: 15px; }
+  .live { font-size: 14px; }
+  .foot { font-size: 13.5px; }
+  .lede { font-size: 17.5px; }
+  .small { font-size: 14.5px; }
+  .note { font-size: 14px; }
+  .empty { font-size: 15px; }
+  .sec-head h2 { font-size: 21px; }
+  .sec-head a, .linkish { font-size: 14.5px; }
+  /* ---------- controls ---------- */
+.btn { font-size: 15px; }
+  .btn.small { font-size: 14.5px; }
+  .seg button { font-size: 14.5px; }
+  label.fld { font-size: 14.5px; }
+  /* ---------- pills ---------- */
+.pill { font-size: 13.5px; }
+  .tile-big small { font-size: 15px; }
+  .tile-line { font-size: 15px; }
+  .tile-foot { font-size: 14px; }
+  .stat-l { font-size: 13.5px; }
+  .stat-v { font-size: 20px; }
+  .stat-s { font-size: 13.5px; }
+  .legend { font-size: 14px; }
+  .co-card .co-name { font-size: 21px; }
+  .co-card .co-tk { font-size: 13px; }
+  .co-card .co-px b { font-size: 23px; }
+  .co-card .co-line { font-size: 15px; }
+  .li-sub { font-size: 14px; }
+  .li-end { font-size: 14.5px; }
+  .date-chip b { font-size: 18.5px; }
+  .tickers { font-size: 13.5px; }
+  .mini b { font-size: 14px; }
+  .mini span { font-size: 14px; }
+  .mkt-l { font-size: 13.5px; }
+  .mkt-v { font-size: 17.5px; }
+  .call-title { font-size: 25px; }
+  .call-text .headline { font-size: 17.5px; }
+  .sc-v { font-size: 21px; }
+  .sc-w { font-size: 13.5px; }
+  .arg-l { font-size: 14px; }
+  .dv { font-size: 15.5px; }
+  .dv b { font-size: 16.5px; }
+  .dv.total b { font-size: 19px; }
+  .sub-h { font-size: 14px; }
+  .co-quote .chg { font-size: 16.5px; }
+  .co-quote small { font-size: 14px; }
+  .stance-box .stance b { font-size: 23px; }
+  .headline { font-size: 18.5px; }
+  .mixrow { font-size: 14.5px; }
+  .win-title { font-size: 23px; }
+  .win-sub { font-size: 14.5px; }
+  .callout { font-size: 15.5px; }
+  .read { font-size: 16.5px; }
+  .dsc-body { font-size: 15px; }
+  .tbl { font-size: 14.5px; }
+  .chart-tip { font-size: 14px; }
+  .ch-empty { font-size: 14px; }
+  .scen .s-ret { font-size: 25px; }
+  .scen .s-px { font-size: 14.5px; }
+  .scen .s-story { font-size: 15px; }
+  .drv-v { font-size: 18.5px; }
+  .drv-v s { font-size: 15px; }
+  .drv-b { font-size: 14px; }
+  .tor { font-size: 14.5px; }
+  .risk-c { font-size: 16.5px; }
+  .risk-h { font-size: 15px; }
+  .ev-v { font-size: 21px; }
+  .ev-l { font-size: 14.5px; }
+  .ev-q { font-size: 14px; }
+  /* toast */
+#toast { font-size: 15px; }
+  .pop button { font-size: 15px; }
+}
+
+/* The report on a phone: a readable document, not a shrunken A4 sheet. Print is unaffected. */
+@media screen and (max-width: 760px) {
+  .rp-page { font-size: 14px; line-height: 1.55; }
+  .rp-band { flex-wrap: wrap; }
+  .rp-band-r { font-size: 10px; gap: 10px; }
+  .rp-brand b { font-size: 17px; } .rp-brand small { font-size: 9px; }
+  .rp-title h1 { font-size: 26px; line-height: 1.15; }
+  .rp-eyebrow, .rp-sec h3, .rp-side h3 { font-size: 11px; }
+  .rp-callline { font-size: 14px; flex-wrap: wrap; } .rp-pill { font-size: 11px; }
+  .rp-lead { font-size: 16px; } .rp-head { font-size: 16px; }
+  .rp-tbl { font-size: 13px; } .rp-tbl thead th { font-size: 10px; }
+  .rp-tbl th, .rp-tbl td { padding: 6px 6px; }
+  .rp-tbl.wrap-last td:last-child { min-width: 180px; }
+  .rp-tbl.wrap td { min-width: 110px; }
+  .rp-note, .rp-chart-ax, .rp-disc p, .rp-src, .rp-foot { font-size: 11.5px; }
+  .rp-kv dt { font-size: 12px; } .rp-fw div { font-size: 13px; }
+  .rp-rating b { font-size: 22px; } .rp-pt b { font-size: 28px; } .rp-rating small, .rp-pt small { font-size: 10px; }
+  .rp-earn, .rp-evs, .rp-two { grid-template-columns: 1fr; }
+  .rp-earn b { font-size: 14px; } .rp-earn span, .rp-evs span { font-size: 13px; } .rp-evs b { font-size: 20px; }
+  .rp-evs { grid-template-columns: 1fr 1fr; }
+  .rp-sec { gap: 8px; } .rp-body { gap: 20px; }
+  .rp-foot { flex-direction: column; gap: 4px; }
+}
+
+@media screen and (max-width: 760px) {
+  .co-hero { grid-template-columns: minmax(0, 1fr); }
+  .co-hero > * { min-width: 0; }
+  .co-meta .pill { white-space: normal; height: auto; line-height: 1.35; padding-top: 4px; padding-bottom: 4px; }
+}
+@media screen and (max-width: 760px) { .rp-grid > .rp-side { order: -1; } }
