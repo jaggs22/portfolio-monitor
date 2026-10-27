@@ -51,7 +51,7 @@
    "bear": 20,
    "bull": 28,
    "kind": "judgment",
-   "why": "Current multiple is 27.6x on guided EPS. The base case assumes a two-and-a-half point de-rating to 25x, against the 10-year at 5.2%. This is the number that decides the stance.",
+   "why": "Current multiple is 27.6x on guided EPS. The base case assumes a two-and-a-half point de-rating to 25x, against a 10-year yield near 5%. This is the number that decides the stance.",
    "source": "Engine judgment"
   }
  },
@@ -115,7 +115,7 @@
  ],
  "variant": {
   "street": "Premium multiple for the most defensive industrial: low volatility, contracted cash flows, and a record backlog.",
-  "ours": "The business case is intact. The return case is weak because the price already pays a staple-like multiple while Treasuries yield 5.2%; the engine needs a 28x exit to reach the hurdle.",
+  "ours": "The business case is intact. The return case is weak because the price already pays a staple-like multiple while Treasuries yield about 5%; the engine needs a 28x exit to reach the hurdle.",
   "could_be_wrong": "If long rates fall and defensive compounders re-rate, a 28x multiple is plausible and this becomes a positive stance.",
   "would_change_mind": "Underlying volume above 3% for two quarters, or the price falling toward 22x guided EPS."
  },
@@ -209,5 +209,207 @@
   "FY2026 reported sales not stated; annualised from Q2.",
   "Consensus estimates not retrieved."
  ],
- "base_period_end": "2026-06-30"
+ "base_period_end": "2026-06-30",
+ "review": {
+  "as_of": "2026-10-27",
+  "basis": "Q2 2026 10-Q and release. Q3 reports on 29 October; this review refreshes after the print.",
+  "headline": "The best operator in a three-player oligopoly. The business is not the debate; the 20% premium to gas peers is.",
+  "model": "Linde sells industrial gases (oxygen, nitrogen, hydrogen, specialty gases) under long contracts, and builds the plants that make them.",
+  "how_it_earns": [
+   {
+    "k": "On-site",
+    "v": "Plant built next to a customer, 15 to 20 year take-or-pay contract, energy costs passed through."
+   },
+   {
+    "k": "Merchant",
+    "v": "Liquid gas trucked locally. Density of plants and routes sets the cost advantage."
+   },
+   {
+    "k": "Packaged",
+    "v": "Cylinders to small users. Highest price per unit, most local."
+   },
+   {
+    "k": "Engineering",
+    "v": "Designs and builds plants for Linde and third parties. Lumpy, low margin, early signal of demand."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Segment profit is Linde's own measure, excluding Linde AG merger purchase accounting. EBITDA adds back segment depreciation.",
+   "rows": [
+    {
+     "match": "Americas",
+     "label": "Americas",
+     "role": "Largest and steadiest",
+     "driver": "US electronics and manufacturing volumes, 2% pricing"
+    },
+    {
+     "match": "EMEA",
+     "label": "EMEA",
+     "role": "Highest margin, weakest volume",
+     "driver": "Price and productivity offset falling manufacturing volume"
+    },
+    {
+     "match": "APAC",
+     "label": "APAC",
+     "role": "Fastest growth",
+     "driver": "New plants starting up, electronics and chemicals"
+    },
+    {
+     "match": "Engineering",
+     "label": "Engineering",
+     "role": "Lead indicator",
+     "driver": "Project timing; $3.0B third-party backlog, $871M Q2 orders"
+    },
+    {
+     "match": "Corporate And Other",
+     "label": "Other",
+     "role": "Helium and coatings",
+     "driver": "LAMT coatings and global helium wholesale"
+    }
+   ]
+  },
+  "position": "One of three global gas majors with Air Liquide and Air Products, and the largest by sales. Local density makes each regional market close to a duopoly.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Take-or-pay contracts",
+    "Local route density",
+    "Energy pass-through",
+    "Switching cost of an on-site plant"
+   ],
+   "threat": "Moat is safe. The return on new capital is what can slip."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Growth is half price, half volume",
+    "d": "Underlying sales +4% in Q2: price +2%, volume +2%. Reported +9% adds currency, acquisitions and pass-through, which carry little profit."
+   },
+   {
+    "t": "Margin slipped 60 bps",
+    "d": "Adjusted operating margin 29.5% vs 30.1%. Cost inflation outran pricing in every region; EMEA held up only after stripping pass-through."
+   },
+   {
+    "t": "Capex is rising to fund the backlog",
+    "d": "H1 capex $2.78B against $4.51B operating cash flow. Full-year capex guide $5.5B to $6.0B for an $8.1B sale-of-gas backlog."
+   },
+   {
+    "t": "Returns to shareholders exceed free cash flow",
+    "d": "H1 buybacks $1.66B plus dividends $1.48B against free cash flow of $1.73B; net new debt of $1.65B filled the gap."
+   }
+  ],
+  "balance": {
+   "read": "Leverage is modest and the rating is protected, but buybacks are now partly debt-funded.",
+   "facts": [
+    "$5.0B and $1.5B undrawn credit lines, no covenants",
+    "€1.6B notes issued, $725M repaid in H1",
+    "Management commits to strong Moody's and S&P ratings"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Adjusted EPS excludes merger accounting, eight years on",
+    "evidence": "Linde AG purchase accounting adds $0.35 to Q2 adjusted EPS of $4.50 (8%). GAAP EPS was $4.15.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Return on capital is quoted on the adjusted base",
+    "evidence": "Company quotes 23.5% return on capital. On reported equity and debt, ROIC is about 12% because the merger goodwill stays in the base.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Pass-through inflates sales, not profit",
+    "evidence": "Cost pass-through added 1% to Q2 sales with minimal profit. Margin comparisons should use underlying sales.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: price plus volume plus backlog start-ups, cross-checked with guidance",
+   "margin_end": "Judgment: assumes productivity offsets inflation; Q2 shows it did not",
+   "share_chg": "Below trend: buybacks ran -2.2% a year; base assumes -1% as capex rises",
+   "exit_pe": "Judgment: modest de-rating with 10-year yields near 5%"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Price and start-ups carry 4% to 5% underlying growth, EPS compounds 8% to 9%, the multiple drifts lower.",
+    "needs": "Pricing at or above inflation; backlog starts on time"
+   },
+   "downside": {
+    "story": "Industrial recession: volumes fall in EMEA and the Americas, price fades, the premium multiple compresses.",
+    "needs": "Underlying growth below 2% for two quarters"
+   },
+   "upside": {
+    "story": "Electronics fabs and clean-energy plants start up together; EPS growth reaches double digits and the multiple holds.",
+    "needs": "Backlog conversion plus volume recovery in EMEA"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Industrial demand rolls over",
+    "how": "Manufacturing and chemicals customers cut output, so merchant and packaged volumes fall. EMEA volume is already -1%.",
+    "watch": "Underlying sales growth",
+    "trip": "l2",
+    "sev": "high"
+   },
+   {
+    "cause": "Electronics capex cycle turns",
+    "how": "Chip fabs are the main source of new on-site contracts. Delays push out start-ups and shrink the backlog.",
+    "watch": "Sale-of-gas backlog",
+    "trip": "l3",
+    "sev": "medium"
+   },
+   {
+    "cause": "Pricing power fades as inflation cools",
+    "how": "Linde's price gains track inflation. If price falls below cost inflation, margin compresses, as it did by 60 bps in Q2.",
+    "watch": "Price/mix vs margin change",
+    "trip": "l1",
+    "sev": "medium"
+   },
+   {
+    "cause": "New capital earns less than old",
+    "how": "Capex is near 16% of sales. If new plants earn less than the 23.5% company return on capital, growth dilutes returns.",
+    "watch": "Return on capital, FCF margin",
+    "trip": null,
+    "sev": "medium"
+   },
+   {
+    "cause": "Premium multiple compresses with rates",
+    "how": "A staple-like multiple competes with a 5% Treasury yield. Higher-for-longer rates lower what investors pay for steady growth.",
+    "watch": "10-year yield",
+    "trip": null,
+    "sev": "medium"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Linde earns more on capital than Air Liquide and Air Products, has delivered 12 straight earnings beats, and has avoided the large project write-downs that hit Air Products.",
+   "why_not": "Air Products' normalised EBITDA margin is higher, and Air Liquide trades at a lower multiple on similar consensus growth. The premium rests on execution, not structural superiority.",
+   "peers_note": "Air Liquide reports half-yearly, so its trailing figures are the last full fiscal year."
+  },
+  "questions": [
+   "Is buyback spending above free cash flow a sign of confidence or of a mature business?",
+   "Should the eight-year-old merger adjustment still be excluded from EPS?",
+   "Does the 23.5% return on capital hold on new electronics contracts?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Linde plc Form 10-Q, quarter ended 30 June 2026 (MD&A, segment note)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026051289/lin-20260630.htm",
+    "date": "2026-07-31"
+   },
+   {
+    "tier": "A",
+    "title": "Linde plc Form 10-K, year ended 31 December 2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+    "date": "2026-02-25"
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "AI.PA",
+   "APD",
+   "4091.T"
+  ]
+ }
 }

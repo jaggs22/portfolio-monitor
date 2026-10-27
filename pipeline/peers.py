@@ -227,7 +227,8 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
         "pe": ntm_pe,
         "ev_ocf": ratio(ev, cfo * scale) if cfo and scale else None,
         "ev_fcf": ratio(ev, fcf * scale) if fcf and fcf > 0 and scale else None,
-        "rev_growth": round(scale - 1, 4) if scale else None,
+        # consensus growth over the next twelve months, blended like the NTM figures; independent of how stale LTM is
+        "rev_growth": round(frac * g0 + (1 - frac) * (g1 if g1 is not None else g0), 4) if frac is not None and g0 is not None else None,
     }
     ltm_m = {"ev_ebitda": ratio(ev, ebitda), "pe": ratio(mcap, ni) if ni and ni > 0 else None, "ev_ocf": ratio(ev, cfo),
              "ev_fcf": ratio(ev, fcf) if fcf and fcf > 0 else None}

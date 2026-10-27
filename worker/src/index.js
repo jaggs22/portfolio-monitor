@@ -21,6 +21,8 @@ const ROUTES = [
   [/^\/api\/fundamentals\/([A-Z.\-]+)$/, (m) => `fundamentals/${m[1]}.json`, 1800],
   [/^\/api\/evidence\/([A-Z.\-]+)$/, (m) => `evidence/${m[1]}.json`, 900],
   [/^\/api\/mgmt\/([A-Z.\-]+)$/, (m) => `mgmt/${m[1]}.json`, 1800],
+  [/^\/api\/peers\/([A-Z.\-]+)$/, (m) => `peers/${m[1]}.json`, 1800],
+  [/^\/api\/segments\/([A-Z.\-]+)$/, (m) => `segments/${m[1]}.json`, 3600],
 ];
 
 const SEC_HEADERS = { 'x-content-type-options': 'nosniff', 'referrer-policy': 'no-referrer' };

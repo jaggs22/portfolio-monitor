@@ -4,7 +4,7 @@
 (function () {
   'use strict';
   const mem = new Map();
-  const TTL = { quotes: 60e3, history: 10 * 60e3, intraday: 60e3, fundamentals: 30 * 60e3, evidence: 10 * 60e3, mgmt: 30 * 60e3, news: 5 * 60e3 };
+  const TTL = { quotes: 60e3, history: 10 * 60e3, intraday: 60e3, fundamentals: 30 * 60e3, evidence: 10 * 60e3, mgmt: 30 * 60e3, news: 5 * 60e3, peers: 30 * 60e3, segments: 60 * 60e3 };
 
   function timed(url, ms) {
     const ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;

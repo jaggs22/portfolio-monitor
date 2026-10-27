@@ -133,8 +133,8 @@
  "catalysts": [
   {
    "date": "2026-10-27",
-   "label": "Visa fiscal Q4 2026 earnings (date not confirmed; last year's was late October)",
-   "confirmed": false,
+   "label": "Visa fiscal Q4 2026 earnings",
+   "confirmed": true,
    "note": "Guide: net revenue growth high end of low double digits, EPS growth low end of mid-teens, tax rate about 19%."
   }
  ],
@@ -230,5 +230,212 @@
   "Interchange settlement and regulatory status not retrieved.",
   "Consensus estimates not retrieved."
  ],
- "base_period_end": "2026-06-30"
+ "base_period_end": "2026-06-30",
+ "review": {
+  "as_of": "2026-10-27",
+  "basis": "Fiscal Q3 2026 10-Q (June quarter). Fiscal Q4 reports on 27 October US time; this review refreshes after the print.",
+  "headline": "A toll road on global spending with 68% EBITDA margins. Quality is not in question; the price already assumes it lasts.",
+  "model": "Visa runs the network that connects card-issuing banks and merchants' banks. It earns a small fee on volume and per transaction, and never lends money.",
+  "how_it_earns": [
+   {
+    "k": "Service",
+    "v": "Fees on payments volume, charged to issuers. Tracks spending."
+   },
+   {
+    "k": "Data processing",
+    "v": "Per-transaction fees for authorising, clearing and settling, plus value-added services."
+   },
+   {
+    "k": "International",
+    "v": "Cross-border and currency-conversion fees. Highest margin, tracks travel and e-commerce."
+   },
+   {
+    "k": "Client incentives",
+    "v": "Payments back to banks and merchants to win and keep volume. A contra-revenue line."
+   }
+  ],
+  "mix": {
+   "axis": "product",
+   "note": "Revenue only: Visa reports one segment. Shares are of gross revenue before client incentives, which are netted off to reach net revenue.",
+   "rows": [
+    {
+     "match": "Data Processing Revenues",
+     "label": "Data processing",
+     "role": "Largest",
+     "driver": "Processed transactions +10%, pricing, value-added services"
+    },
+    {
+     "match": "Service",
+     "label": "Service",
+     "role": "Volume tollgate",
+     "driver": "Payments volume +11% (prior quarter), pricing"
+    },
+    {
+     "match": "International Transaction Revenues",
+     "label": "International",
+     "role": "Highest margin, slowing",
+     "driver": "Cross-border volume +14%, offset by lower FX volatility"
+    },
+    {
+     "match": "Service Other",
+     "label": "Other",
+     "role": "Fastest growth",
+     "driver": "Advisory, consulting and other services"
+    },
+    {
+     "match": "Client Incentives",
+     "label": "Client incentives",
+     "role": "The cost of share",
+     "driver": "Growing faster than gross revenue"
+    }
+   ],
+   "callout": {
+    "match": "Value Added Services",
+    "label": "Value-added services",
+    "text": "Cuts across the lines above. Growing about a third a year and now a third of net revenue."
+   }
+  },
+  "position": "One of two global open-loop networks with Mastercard. Larger by revenue and market value; Mastercard is growing slightly faster.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Two-sided network effect",
+    "Near-universal acceptance",
+    "Bank relationships and tokens",
+    "Scale in fraud data"
+   ],
+   "threat": "Regulators and big issuers, not rivals, decide how much of the toll Visa keeps."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Revenue outgrows volume",
+    "d": "Net revenue +14% on payments volume +11% and transactions +10%. Pricing and value-added services add the gap."
+   },
+   {
+    "t": "Value-added services are the new engine",
+    "d": "$3.8B in Q3, +33%. Consulting engagements up about 30%."
+   },
+   {
+    "t": "Incentives keep creeping up",
+    "d": "Client incentives +18% vs gross revenue +15%. They are now about 29% of gross revenue."
+   },
+   {
+    "t": "Costs ran ahead of revenue",
+    "d": "Non-GAAP opex +17% vs net revenue +14%, on marketing (World Cup) and hiring. GAAP opex +19% with $563M severance."
+   }
+  ],
+  "balance": {
+   "read": "Net cash-like leverage. The real liabilities are litigation and settlement guarantees, not debt.",
+   "facts": [
+    "Repaid $5.6B of notes, issued $3.0B in FY2026",
+    "$16.5B buybacks in nine months; $28.4B authorised",
+    "Interchange litigation funded by class B conversion, not class A cash"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Litigation costs sit outside non-GAAP and outside class A",
+    "evidence": "$1.1B of interchange accruals in nine months, excluded from non-GAAP. They are funded by reducing class B conversion rates, so class A EPS is unaffected.",
+    "severity": "info"
+   },
+   {
+    "flag": "Cash conversion dipped",
+    "evidence": "Nine-month operating cash flow $16.3B vs GAAP net income $17.5B, on litigation payments, incentive payments and tax timing.",
+    "severity": "watch"
+   },
+   {
+    "flag": "New off-balance-sheet guarantee in Brazil",
+    "evidence": "New Brazilian rules will require Visa to extend settlement guarantees to sellers; Visa expects settlement exposure to increase.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: volume plus pricing plus value-added services, fading toward 10%",
+   "margin_end": "Trend: held flat because opex is guided to grow with revenue",
+   "share_chg": "Trend: about 2.5% a year from buybacks",
+   "exit_pe": "Judgment: modest de-rating as growth slows"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Volume grows high single digits, pricing and services add a few points, buybacks add three; EPS compounds low teens.",
+    "needs": "No change to US interchange or routing rules"
+   },
+   "downside": {
+    "story": "Routing mandates or an interchange settlement cut the toll; incentives rise to defend share; the multiple falls toward the low twenties.",
+    "needs": "Credit Card Competition Act passes, or incentives grow above 20%"
+   },
+   "upside": {
+    "story": "Value-added services and agentic commerce become a second engine; growth holds at 12% and the multiple stays near 30x.",
+    "needs": "Services above a third of revenue with margins intact"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Regulators cut the toll",
+    "how": "Routing mandates or interchange limits let merchants send transactions to cheaper networks, lowering Visa's fee per dollar.",
+    "watch": "Service revenue per dollar of volume",
+    "trip": null,
+    "sev": "high"
+   },
+   {
+    "cause": "Big banks demand a bigger share",
+    "how": "Issuers are concentrated and can switch networks at renewal. Visa pays them through rising incentives.",
+    "watch": "Incentive growth vs revenue growth",
+    "trip": "v2",
+    "sev": "medium"
+   },
+   {
+    "cause": "Cross-border spending normalises",
+    "how": "International fees are the highest-margin line and depend on travel and currency volatility, both cyclical.",
+    "watch": "Cross-border volume growth",
+    "trip": "v3",
+    "sev": "medium"
+   },
+   {
+    "cause": "Alternative rails take low-value payments",
+    "how": "Real-time account-to-account systems (Pix, UPI) and stablecoins bypass cards, starting with small transactions in emerging markets.",
+    "watch": "Transactions growth vs volume growth",
+    "trip": null,
+    "sev": "low"
+   },
+   {
+    "cause": "Costs outgrow revenue",
+    "how": "Visa is investing in marketing, people and acquisitions. If that persists, the margin slips from a very high base.",
+    "watch": "Opex growth vs revenue growth",
+    "trip": "v4",
+    "sev": "low"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Visa has the highest EBITDA margin in the group, the largest network, and no credit risk. Mastercard earns more on its smaller capital base.",
+   "why_not": "Mastercard grows faster on consensus and trades at a slightly lower forward EV/EBITDA, so Visa's premium over its closest twin is hard to justify on growth alone.",
+   "peers_note": "American Express is a lender, so it is compared on P/E only. PayPal trades on a very different multiple because its growth and margins are lower."
+  },
+  "questions": [
+   "Are rising incentives a cost of growth or a sign of weakening bargaining power?",
+   "Does value-added services growth carry the same margin as the core network?",
+   "Would you pay a premium to Mastercard for slower growth?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Visa Inc. Form 10-Q, quarter ended 30 June 2026 (MD&A, revenue components)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm",
+    "date": "2026-07-29"
+   },
+   {
+    "tier": "A",
+    "title": "Visa Inc. Form 10-K, year ended 30 September 2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+    "date": "2025-11-06"
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "MA",
+   "AXP",
+   "PYPL"
+  ]
+ }
 }

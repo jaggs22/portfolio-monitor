@@ -235,5 +235,223 @@
   "Q3 earnings date not confirmed.",
   "Consensus estimates not retrieved."
  ],
- "base_period_end": "2026-06-30"
+ "base_period_end": "2026-06-30",
+ "review": {
+  "as_of": "2026-10-27",
+  "basis": "Q2 2026 10-Q. Q3 is expected around 30 October (date not confirmed); this review refreshes after the print.",
+  "headline": "The incretin leader, growing 48% on one molecule. Volume is winning; price and policy decide how long the premium lasts.",
+  "model": "Lilly discovers, makes and sells branded medicines. Tirzepatide, sold as Mounjaro for diabetes and Zepbound for obesity, is now the company.",
+  "how_it_earns": [
+   {
+    "k": "Cardiometabolic",
+    "v": "Incretins for diabetes and obesity. 80% of Q2 revenue."
+   },
+   {
+    "k": "Oncology",
+    "v": "Verzenio for breast cancer plus newer launches. Flat to low growth."
+   },
+   {
+    "k": "Immunology",
+    "v": "Taltz, Ebglyss, Omvoh. Steady, small."
+   },
+   {
+    "k": "Neuroscience",
+    "v": "Kisunla for Alzheimer's. Early."
+   }
+  ],
+  "mix": {
+   "axis": "product",
+   "note": "Revenue only: Lilly reports one segment, so profit by product is not disclosed. Cardiometabolic, Oncology, Immunology and Neuroscience are Lilly's own groupings.",
+   "rows": [
+    {
+     "match": "Cardiometabolic Health",
+     "label": "Cardiometabolic",
+     "role": "The engine",
+     "driver": "Volume +60% group-wide; price down on access deals and China NRDL",
+     "children": [
+      "Mounjaro",
+      "Zepbound",
+      "Jardiance",
+      "Trulicity",
+      "Other Cardiometabolic Health"
+     ]
+    },
+    {
+     "match": "Oncology",
+     "label": "Oncology",
+     "role": "Mature",
+     "driver": "Verzenio flat; newer launches add growth",
+     "children": [
+      "Verzenio",
+      "Other Oncology"
+     ]
+    },
+    {
+     "match": "Immunology",
+     "label": "Immunology",
+     "role": "Steady",
+     "driver": "Taltz flat, newer products growing",
+     "children": [
+      "Taltz",
+      "Other Immunology"
+     ]
+    },
+    {
+     "match": "Neuroscience",
+     "label": "Neuroscience",
+     "role": "Option",
+     "driver": "Kisunla launch"
+    },
+    {
+     "match": "Product And Service Other",
+     "label": "Other",
+     "role": "Small",
+     "driver": "Other products"
+    }
+   ]
+  },
+  "position": "One of two companies, with Novo Nordisk, that dominate obesity and diabetes incretins. Lilly is taking share: consensus has Novo's revenue falling in 2026 while Lilly's grows over a third.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Patents on tirzepatide",
+    "Manufacturing scale for injectables",
+    "Pipeline depth (retatrutide, orforglipron)",
+    "Clinical data lead"
+   ],
+   "threat": "Buyers are concentrated (PBMs, government). They take a growing share of the value through price."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Volume is doing all the work",
+    "d": "Q2 revenue +48%: volume +60%, price -13%. Outside the US, price fell 36% as Mounjaro entered China's reimbursement list."
+   },
+   {
+    "t": "Margins rose despite lower prices",
+    "d": "Gross margin 85.8% (+1.5 pts) on better production cost and mix. R&D fell to 17% of revenue as sales outgrew it."
+   },
+   {
+    "t": "Concentration is extreme",
+    "d": "Mounjaro and Zepbound were 65% of H1 revenue. Any setback to one molecule hits the whole company."
+   },
+   {
+    "t": "Growth is now partly bought",
+    "d": "$13.3B spent on acquisitions in H1 2026, $2.0B more in July and a $2.8B deal pending. Acquired IPR&D was $2.8B in Q2."
+   }
+  ],
+  "balance": {
+   "read": "Leverage is still low against EBITDA, but debt rose $12.4B in six months to fund deals.",
+   "facts": [
+    "Total debt $54.9B at 30 June, up from $42.5B",
+    "Cash $9.0B plus $3.9B investments",
+    "$10.1B undrawn credit facilities; $7.0B buyback authorisation left"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Rebate estimate changes flattered US price",
+    "evidence": "MD&A: lower US realised prices were partially offset by adjustments to estimates for rebates and discounts. Gross-to-net reserves are judgment calls.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Acquired IPR&D is large and recurring",
+    "evidence": "$2.8B in Q2 and $3.4B in H1. Lilly includes it in non-GAAP EPS, which is the conservative choice, but it makes EPS lumpy.",
+    "severity": "info"
+   },
+   {
+    "flag": "Government price-setting is scheduled",
+    "evidence": "Jardiance price set from 2026; Trulicity and Verzenio selected, effective 2028 (IRA).",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Changed assumption: fades from 48% toward high teens as price cuts and comparisons bite",
+   "margin_end": "Judgment: operating leverage offset by price erosion",
+   "share_chg": "Trend: share count barely moves; buybacks offset dilution",
+   "exit_pe": "Judgment: growth premium narrows as growth slows"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Volume keeps compounding as access widens; price erosion slows; growth fades to the high teens and the multiple compresses.",
+    "needs": "US price decline stays mild; orforglipron and retatrutide launch on time"
+   },
+   "downside": {
+    "story": "Policy and competition reset US price faster than volume grows; the market re-rates Lilly toward big-pharma multiples.",
+    "needs": "US price falling more than 8% a year, or a safety or supply setback"
+   },
+   "upside": {
+    "story": "Oral and next-generation launches open new patients; price stabilises and growth stays above 30%.",
+    "needs": "Retatrutide approved in 2027 and Medicare obesity coverage made permanent"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Price falls faster than volume grows",
+    "how": "Wider access (Medicare bridge, cash-pay cuts, China NRDL) lowers price per dose. If volume growth slows first, revenue growth collapses.",
+    "watch": "Realised price change",
+    "trip": "y1",
+    "sev": "high"
+   },
+   {
+    "cause": "US policy resets drug prices",
+    "how": "Most-favoured-nation pricing and IRA negotiation pull US prices toward international levels, which are far lower.",
+    "watch": "US realised price",
+    "trip": "y2",
+    "sev": "high"
+   },
+   {
+    "cause": "Competitors and compounders take share",
+    "how": "Novo's next-generation and oral products, and illegal compounded copies, compete for the same patients.",
+    "watch": "Incretin revenue growth vs market",
+    "trip": null,
+    "sev": "medium"
+   },
+   {
+    "cause": "One molecule carries the company",
+    "how": "65% of revenue is tirzepatide. A safety signal, supply problem or patent challenge would hit everything at once.",
+    "watch": "Revenue concentration",
+    "trip": null,
+    "sev": "medium"
+   },
+   {
+    "cause": "Deal spending earns too little",
+    "how": "Debt-funded acquisitions are expensed as IPR&D. If the programmes fail, the cash is gone and leverage stays higher.",
+    "watch": "Acquired IPR&D, net debt",
+    "trip": null,
+    "sev": "low"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Lilly is the only large pharma growing revenue above 30%, with the highest EBITDA margin and return on capital in the group.",
+   "why_not": "Novo Nordisk sells the same class of drug at well under half of Lilly's forward P/E because its growth has stalled. That gap shows how much of Lilly's value depends on continued share gains.",
+   "peers_note": "Novo reports in DKK; ratios are computed in DKK and sizes converted to USD. Trailing pharma P/Es are distorted by acquired IPR&D, so NTM is the cleaner read."
+  },
+  "questions": [
+   "How much of the US price decline is policy, and how much is Lilly buying volume?",
+   "Is debt-funded deal-making a sign of a thin pipeline outside incretins?",
+   "Would you own this at Novo's multiple if growth halved?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Eli Lilly Form 10-Q, quarter ended 30 June 2026 (MD&A, revenue by product)",
+    "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000081/lly-20260630.htm",
+    "date": "2026-08-05"
+   },
+   {
+    "tier": "A",
+    "title": "Eli Lilly Form 10-K, year ended 31 December 2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+    "date": "2026-02-12"
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "NVO",
+   "ABBV",
+   "MRK",
+   "AZN"
+  ]
+ }
 }
