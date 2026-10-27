@@ -210,7 +210,7 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
     e0, e1 = _f((est or {}).get("eps0")), _f((est or {}).get("eps1"))
     fwd_eps = _f(info.get("forwardEps"))
     same_ccy = (info.get("currency") or "") == (info.get("financialCurrency") or info.get("currency") or "")
-    if fwd_eps and fwd_eps > 0 and same_ccy and e1 and abs(e1 / fwd_eps - 1) > 0.07:
+    if fwd_eps and fwd_eps > 0 and same_ccy and e1 and abs(e1 / fwd_eps - 1) > 0.04:
         notes.append(f"Next-year consensus EPS ({e1:.2f}) disagreed with Yahoo's forward EPS ({fwd_eps:.2f}); forward EPS used.")
         e1 = fwd_eps
     ntm_pe = None
