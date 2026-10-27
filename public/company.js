@@ -436,9 +436,9 @@
           h('div', { class: 'small muted' }, `${fmt.spct(c.upside, 1)} upside · ${fmt.spct(c.totalReturn, 1)} total return · cost of equity ${fmt.pct(c.hurdle)}`),
           cm ? h('div', { class: 'small' }, h('b', null, 'Your view: '), `${cm.rating}, ${fmt.px(cm.pt)}`) : null,
           h('span', { class: 'btn small', style: { alignSelf: 'flex-start' } }, 'How we get there')) : null,
-        rv ? h('div', { class: 'call-text' }, h('h2', { class: 'call-title' }, rv.title), h('p', { class: 'headline' }, fill(t, rv.lead))) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
-        scorecard(t),
-        rv ? h('div', { class: 'args' }, eyebrow('Key arguments'), rv.arguments.map((a) => disclose([h('b', { class: 'arg-l' }, a.label), h('span', { class: 'arg-t' }, fill(t, a.text).split('. ')[0].replace(/\.$/, '') + '.')], fill(t, a.text)))) : null,
+        mode === 'report' ? null : rv ? h('div', { class: 'call-text' }, h('h2', { class: 'call-title' }, rv.title), h('p', { class: 'headline' }, fill(t, rv.lead))) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
+        mode === 'report' ? null : scorecard(t),
+        rv && mode !== 'report' ? h('div', { class: 'args' }, eyebrow('Key arguments'), rv.arguments.map((a) => disclose([h('b', { class: 'arg-l' }, a.label), h('span', { class: 'arg-t' }, fill(t, a.text).split('. ')[0].replace(/\.$/, '') + '.')], fill(t, a.text)))) : null,
         h('div', { class: 'co-meta' },
           next ? pill(`${next.label.replace(/ \(.*\)/, '')} · ${fmt.dayShort(next.date)}${next.confirmed ? '' : ' (unconfirmed)'}`, 'info') : null,
           rv ? pill('Review as of ' + fmt.date(rv.as_of), '') : null,
@@ -798,7 +798,7 @@
       out.push(block('Our estimates vs consensus', estTable(t)));
       const cons = e.consensus;
       out.push(note(cons ? 'Consensus is the Yahoo Finance analyst mean. Our estimates are the base case of the scenario model; dispute any assumption in Target and thesis and they move.' : 'Consensus not loaded yet.'));
-      return h('div', null, out);
+      return h('div', { class: 'stack', style: { marginTop: '16px' } }, out);
     }
     function valPeers(t) {
       const S = us(t), ps = peerStats(t);
@@ -894,9 +894,8 @@
         out.push(h('h3', { class: 'sub-h' }, `${r.horizon}-year scenarios`));
       }
       out.push(h('div', { class: 'stats boxed' },
-        stat('Engine stance', base.stance, base.conviction + ' conviction'),
-        yours ? stat('Your view', mine.stance, 'after your disputes') : null,
-        stat('Expected return', fmt.pct(shown.expectedIrr), 'a year, probability-weighted'),
+        stat('Expected return', fmt.pct(shown.expectedIrr), 'a year over ' + r.horizon + ' years, probability-weighted'),
+        stat('Edge over hurdle', fmt.pts(shown.edge), yours ? 'with your disputes' : base.conviction + ' conviction'),
         stat('Hurdle', fmt.pct(shown.hurdle), `${rates().rf}% + beta × ${rates().erp}%`),
         stat('Price implies', E.impliedGrowth(r, m, rates(), { overrides: overrides(t) }).toFixed(1) + '%', 'revenue growth a year')));
       if (!(rv && rv.thesis_long)) out.push(h('p', { class: 'read' }, r.header.thesis));
@@ -942,7 +941,7 @@
       const a = df.baseline, b = df.yours;
       return block('Engine baseline vs your view',
         h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl' }, h('thead', null, h('tr', null, h('th', null, ''), h('th', null, 'Engine'), h('th', null, 'Yours'))),
-          h('tbody', null, [['Stance', a.stance, b.stance], ['Expected return', fmt.pct(a.expectedIrr), fmt.pct(b.expectedIrr)], ['Edge over hurdle', fmt.pts(a.edge), fmt.pts(b.edge)], ['Base-case price', fmt.px(a.scenarios.base.exitPrice), fmt.px(b.scenarios.base.exitPrice)]].map((x) => h('tr', null, h('th', null, x[0]), h('td', null, x[1]), h('td', null, x[2])))))),
+          h('tbody', null, [['Rating', (callOf(t, false) || {}).rating, (callOf(t, true) || {}).rating], ['12-month target', fmt.px((callOf(t, false) || {}).pt), fmt.px((callOf(t, true) || {}).pt)], ['Expected return', fmt.pct(a.expectedIrr), fmt.pct(b.expectedIrr)], ['Edge over hurdle', fmt.pts(a.edge), fmt.pts(b.edge)], ['Base-case price', fmt.px(a.scenarios.base.exitPrice), fmt.px(b.scenarios.base.exitPrice)]].map((x) => h('tr', null, h('th', null, x[0]), h('td', null, x[1]), h('td', null, x[2])))))),
         note(df.context));
     }
     function lensesBlock(t, r, ev, m) {
@@ -981,7 +980,7 @@
             const c = E.challenge(r, m, rates(), disp, state.disputes);
             result.replaceChildren(
               h('div', { class: 'callout' }, h('b', null, '1. The case for the engine. '), c.steelman),
-              h('div', { class: 'callout' }, h('b', null, '2. What your number does. '), c.quantified, ' ', `Expected return ${fmt.pct(c.before.expectedIrr)} → ${fmt.pct(c.after.expectedIrr)}; stance ${c.before.stance === c.after.stance ? 'stays ' + c.after.stance : c.before.stance + ' → ' + c.after.stance}.`),
+              h('div', { class: 'callout' }, h('b', null, '2. What your number does. '), c.quantified, ' ', `Expected return ${fmt.pct(c.before.expectedIrr)} → ${fmt.pct(c.after.expectedIrr)}; edge over hurdle ${fmt.pts(c.before.edge)} → ${fmt.pts(c.after.edge)}.`),
               c.tripwires.length ? h('div', { class: 'callout' }, h('b', null, '3. What would prove you right. '), c.tripwires.map((x) => x.text).join('; ') + '.') : null,
               h('div', { class: 'row-actions' },
                 btn('Keep my view', () => {
@@ -996,7 +995,7 @@
     function askClaude(t) {
       const r = researchOf(t), rv = review(t), ev = evalFor(t, true);
       const lines = [`Challenge this investment thesis on ${nameOf(t)} (${t}). Be specific and sceptical; cite what would prove it wrong.`, '',
-        `Engine stance: ${ev.stance}, expected ${fmt.pct(ev.expectedIrr)} a year vs hurdle ${fmt.pct(ev.hurdle)}.`, `Thesis: ${r.header.thesis}`];
+        (() => { const c = callOf(t, true); return c ? `Our call: ${c.rating}, 12-month target ${fmt.px(c.pt)} (${fmt.spct(c.upside, 1)}), total return ${fmt.spct(c.totalReturn, 1)} vs cost of equity ${fmt.pct(c.hurdle)}.` : ''; })(), `Thesis: ${r.header.thesis}`];
       if (rv) {
         lines.push('', 'What the numbers say:', ...rv.what_numbers_say.map((x) => `- ${x.t}: ${x.d}`), '', 'Risks:', ...rv.risks.map((x) => `- ${x.cause}: ${x.how}`));
       }

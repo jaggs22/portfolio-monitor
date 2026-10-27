@@ -191,8 +191,8 @@
       h('div', { class: 'co-id' }, h('span', { class: 'co-name' }, nameOf(t)), h('span', { class: 'co-tk' }, t)),
       h('div', { class: 'co-px' }, h('b', null, p ? fmt.px(p.price) : '–'), p ? chg(p.pct) : null),
       spark(sp, { cls: r3 == null ? '' : r3 >= 0 ? 'up' : 'down' }),
-      rv ? h('p', { class: 'co-line' }, rv.headline) : null,
-      h('div', { class: 'tile-foot' }, ev ? pill(ev.stance, CO.stanceKind(ev.stance)) : null, next ? pill('Results ' + fmt.dayShort(next.date), 'info') : null, r3 != null ? h('span', null, '3M ' + fmt.spct(r3, 1)) : null));
+      rv ? h('p', { class: 'co-line' }, rv.title || rv.headline) : null,
+      h('div', { class: 'tile-foot' }, (() => { const c = CO.callOf(t, false); return c ? pill(`${c.rating} · ${fmt.px(c.pt)}`, CO.ratingKind(c.rating)) : null; })(), next ? pill('Results ' + fmt.dayShort(next.date), 'info') : null, r3 != null ? h('span', null, '3M ' + fmt.spct(r3, 1)) : null));
   }
 
   /* ---------- coverage ---------- */
@@ -206,11 +206,11 @@
         if (!rows.length) return null;
         return h('section', null, h('div', { class: 'sec-head' }, h('h2', null, label), h('span', { class: 'small muted' }, rows.length + ' names')),
           h('div', { class: 'card list' }, rows.map((u) => {
-            const p = priceOf(u.ticker), ev = CO.evalFor(u.ticker, true);
+            const p = priceOf(u.ticker), cl = CO.callOf(u.ticker, false);
             return h('button', { type: 'button', class: 'li', onclick: () => go('c/' + u.ticker) },
               h('span', { class: 'tickers', style: { width: '52px' } }, u.ticker),
               h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, u.name), h('div', { class: 'li-sub' }, u.sector)),
-              ev ? pill(ev.stance, CO.stanceKind(ev.stance)) : (state.deepen.includes(u.ticker) ? pill('Deepen requested', 'info') : null),
+              cl ? pill(cl.rating, CO.ratingKind(cl.rating)) : (state.deepen.includes(u.ticker) ? pill('Deepen requested', 'info') : null),
               h('div', { class: 'li-end' }, h('div', { style: { color: 'var(--ink)' } }, p ? fmt.px(p.price) : '–'), p ? chg(p.pct) : null), icon('chev'));
           })));
       }).filter(Boolean));
