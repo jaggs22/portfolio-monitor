@@ -28,18 +28,32 @@ def test_ntm_factor_weights_current_and_next_year():
 def test_build_row_multiples_and_currency():
     q = [(e, _q(10 * B, 3 * B, 2 * B, 2.5 * B, -1 * B, 2.6 * B, 0.5 * B, 2.5 * B)) for e in ("2026-06-30", "2026-03-31", "2025-12-31", "2025-09-30")]
     a = [("2025-12-31", {"revenue": 38 * B, "net_income": 7.5 * B})]
-    fy_end = int(dt.datetime(2026, 12, 31, tzinfo=dt.timezone.utc).timestamp())
-    info = {"marketCap": 200 * B, "currency": "USD", "financialCurrency": "DKK", "nextFiscalYearEnd": fy_end}
+    fy_end = int(dt.datetime(2025, 12, 31, tzinfo=dt.timezone.utc).timestamp())
+    info = {"marketCap": 200 * B, "currency": "USD", "financialCurrency": "DKK", "lastFiscalYearEnd": fy_end, "currentPrice": 40.0}
     # quote currency USD, reporting DKK: 1 USD = 6.5 DKK; 1 DKK = 1/6.5 USD
-    row = P.build_row("NVO", info, q, a, {"rev_g0": 0.10, "rev_g1": 0.10, "eps_g0": 0.10, "eps_g1": 0.10}, 6.5, 1 / 6.5, today=dt.date(2026, 9, 30))
+    row = P.build_row("NVO", info, q, a, {"rev_g0": 0.10, "rev_g1": 0.10, "eps0": 2.0, "eps1": 2.2}, 6.5, 1 / 6.5, today=dt.date(2026, 9, 30))
     mcap_dkk = 200 * B * 6.5
     ev_dkk = mcap_dkk + 15 * B
     assert row["ltm"]["ev_ebitda"] == round(ev_dkk / (12 * B), 2)
     assert row["ltm"]["pe"] == round(mcap_dkk / (8 * B), 2)
+    frac = (dt.date(2026, 12, 31) - dt.date(2026, 9, 30)).days / 365
+    assert row["ntm"]["pe"] == round(40.0 / (frac * 2.0 + (1 - frac) * 2.2), 2)
     assert row["ltm"]["ev_fcf"] == round(ev_dkk / (6 * B), 2)
     assert abs(row["mcap_usd_b"] - 200) < 0.01
     assert row["ntm"]["ev_ebitda"] < row["ltm"]["ev_ebitda"]  # growth lowers the forward multiple
     assert 0 < row["roic"] < 1
+
+
+def test_frac_zero_when_current_year_has_ended():
+    last = int(dt.datetime(2025, 9, 30, tzinfo=dt.timezone.utc).timestamp())
+    frac, _ = P.frac_of_year_left(last, dt.date(2026, 10, 27))
+    assert frac == 0.0
+
+
+def test_lender_has_no_ev_multiples():
+    q = [(e, _q(10 * B, 3 * B, 2 * B, 2.5 * B, -1 * B, 2.6 * B)) for e in ("2026-06-30", "2026-03-31", "2025-12-31", "2025-09-30")]
+    row = P.build_row("AXP", {"marketCap": 200 * B}, q, [], {}, 1.0, 1.0)
+    assert row["ltm"]["ev_ebitda"] is None and row["ltm"]["pe"] is not None and row["ev_usd_b"] is None
 
 
 def test_summary_median_excludes_subject_and_optional():

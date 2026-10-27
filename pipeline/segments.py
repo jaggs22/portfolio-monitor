@@ -81,8 +81,30 @@ def parse_instance(xml_text):
             continue
         ns, concept = el.tag[1:].split("}") if el.tag.startswith("{") else ("", el.tag)
         ctx = contexts[ref]
-        facts.append({"concept": concept, "ns": ns, "dims": ctx["dims"], "start": ctx["start"], "end": ctx["end"], "value": v})
+        facts.append({"concept": concept, "ns": ns, "dims": _clean(ctx["dims"]), "raw_dims": ctx["dims"], "start": ctx["start"], "end": ctx["end"], "value": v})
     return facts
+
+
+NEUTRAL = {"ConsolidationItemsAxis": ("OperatingSegmentsMember",), "SegmentReportingInformationAdditionalItemAxis": ()}
+
+
+def _clean(dims):
+    """Drop axes that only say 'this is the operating segment figure' so a segment fact tagged with them still counts."""
+    out = {}
+    for a, m in dims.items():
+        if a in NEUTRAL and (not NEUTRAL[a] or any(m.endswith(x) for x in NEUTRAL[a])):
+            continue
+        out[a] = m
+    return out
+
+
+def inventory(facts):
+    """(concept, axes) -> number of facts; written beside the views to help map new concepts."""
+    inv = {}
+    for f in facts:
+        k = f["concept"] + " | " + ",".join(sorted(f.get("raw_dims", f["dims"])))
+        inv[k] = inv.get(k, 0) + 1
+    return dict(sorted(inv.items()))
 
 
 def _days(f):
@@ -226,6 +248,7 @@ def fetch_segments(sec_http, cik, submissions):
                 continue
             facts = parse_instance(sec_http.text(f"{base}/{name}"))
             res[key] = build_views(facts, quarterly=(form == "10-Q"))
+            res.setdefault("inventory", {})[key] = inventory(facts)
             res["filings"][key] = dict(f, url=f"{base}/{f['primary']}")
         except Exception as e:  # noqa: BLE001
             errors.append(f"{form}: {e}")

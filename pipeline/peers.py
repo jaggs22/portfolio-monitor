@@ -4,10 +4,12 @@ For every company and its peers the job publishes LTM and NTM multiples (EV/EBIT
 EV/free cash flow) plus size and quality columns (market cap, EBITDA, EBITDA margin, revenue growth, ROIC, leverage).
 
 Method, stated in the output so the app can show it:
+- EBITDA and LTM earnings exclude unusual items as Yahoo tags them (Normalized EBITDA, Normalized Income), so one-off
+  impairments and acquired IPR&D charges do not distort the multiples; reported EBITDA is the fallback.
 - LTM flows are the sum of the last four reported quarters (yfinance quarterly statements), with Yahoo's TTM fields as a
   fallback. Balance sheet items are the latest quarter.
-- NTM uses consensus. NTM revenue and net income are built from the consensus growth rates for the current and next
-  fiscal year, weighted by how much of the current fiscal year is still ahead. NTM EBITDA, operating cash flow and free
+- NTM uses consensus. NTM P/E divides the price by consensus EPS for the next twelve months (current and next fiscal
+  year, weighted by how much of the current year is still ahead), on the adjusted basis brokers quote. NTM EBITDA, operating cash flow and free
   cash flow scale the LTM figure by the NTM / LTM revenue ratio, holding margins flat. There is no free consensus for
   those three lines, so they are labelled as derived.
 - Statements can be in a different currency from the share price (Novo Nordisk's ADR trades in USD and reports in DKK).
@@ -18,11 +20,14 @@ Pure functions take plain dicts so the tests run offline; fetch() is the only pa
 import datetime as dt
 import math
 
+# EV-based multiples mean little for a lender: its debt is raw material, not financing. P/E only for these.
+EV_NOT_MEANINGFUL = {"AXP": "American Express is a lender as well as a network, so EV-based multiples are not meaningful; compare on P/E."}
+
 # Default peers are switched on in the table; optional peers can be added by the user in the app.
 PEERS = {
     "LIN": {
         "default": ["AI.PA", "APD", "4091.T"],
-        "optional": ["ECL", "SHW", "DD"],
+        "optional": ["ECL", "SHW"],
         "why": "Air Liquide, Air Products and Nippon Sanso are the other three global industrial gas majors. Ecolab and "
                "Sherwin-Williams are optional quality-industrial comparisons that the market prices on similar terms.",
     },
@@ -48,14 +53,14 @@ NAMES = {
 }
 
 QROWS = {
-    "Total Revenue": "revenue", "Operating Income": "op_income", "EBITDA": "ebitda", "Normalized EBITDA": "ebitda_norm",
-    "Net Income Common Stockholders": "net_income", "Net Income": "net_income_all", "Pretax Income": "pretax",
+    "Total Revenue": "revenue", "Operating Income": "op_income", "EBITDA": "ebitda_gaap", "Normalized EBITDA": "ebitda",
+    "Normalized Income": "ni_norm", "Net Income Common Stockholders": "net_income", "Net Income": "net_income_all", "Pretax Income": "pretax",
     "Tax Provision": "tax", "Operating Cash Flow": "cfo", "Capital Expenditure": "capex",
     "Total Debt": "total_debt", "Cash And Cash Equivalents": "cash",
     "Cash Cash Equivalents And Short Term Investments": "cash_sti", "Stockholders Equity": "equity",
     "Interest Expense": "interest",
 }
-FLOWS = ("revenue", "op_income", "ebitda", "ebitda_norm", "net_income", "net_income_all", "pretax", "tax", "cfo",
+FLOWS = ("revenue", "op_income", "ebitda", "ebitda_gaap", "ni_norm", "net_income", "net_income_all", "pretax", "tax", "cfo",
          "capex", "interest")
 STOCKS = ("total_debt", "cash", "cash_sti", "equity")
 
@@ -105,9 +110,10 @@ def ltm(quarters, annual=None):
             vals[k] = src[k]
     if "capex" in vals:
         vals["capex"] = -abs(vals["capex"])
-    if vals.get("ebitda") is None and vals.get("ebitda_norm") is not None:
-        vals["ebitda"] = vals["ebitda_norm"]
-        basis["ebitda"] = basis.get("ebitda_norm")
+    if vals.get("ebitda") is None and vals.get("ebitda_gaap") is not None:  # no normalised line: fall back to reported
+        vals["ebitda"] = vals["ebitda_gaap"]
+        basis["ebitda"] = basis.get("ebitda_gaap")
+        basis["ebitda_kind"] = "reported"
     if vals.get("net_income") is None and vals.get("net_income_all") is not None:
         vals["net_income"] = vals["net_income_all"]
     return vals, basis
@@ -129,15 +135,20 @@ def ntm_factors(rev_growth_0y, rev_growth_1y, eps_growth_0y, eps_growth_1y, frac
     return fac(rev_growth_0y, rev_growth_1y), fac(eps_growth_0y, eps_growth_1y)
 
 
-def frac_of_year_left(next_fy_end_epoch, today=None):
-    if not next_fy_end_epoch:
+def frac_of_year_left(last_fy_end_epoch, today=None):
+    """Share of the consensus 'current year' (the year after the last reported fiscal year) still ahead.
+    Zero when that year has ended but is not yet reported, so NTM then rests on next year's consensus."""
+    if not last_fy_end_epoch:
         return None
     today = today or dt.date.today()
-    end = dt.datetime.fromtimestamp(int(next_fy_end_epoch), dt.timezone.utc).date()
-    while end < today:  # Yahoo sometimes lags by a year
-        end = end.replace(year=end.year + 1)
-    days = (end - today).days
-    return max(0.0, min(1.0, days / 365.0))
+    last = dt.datetime.fromtimestamp(int(last_fy_end_epoch), dt.timezone.utc).date()
+    cur_end = last + dt.timedelta(days=365)
+    days = (cur_end - today).days
+    return max(0.0, min(1.0, days / 365.0)), last
+
+
+def sane_growth(g):
+    return g if g is not None and -0.6 < g < 1.5 else None
 
 
 def ratio(a, b):
@@ -147,73 +158,110 @@ def ratio(a, b):
     return round(a / b, 2)
 
 
+def _fy_row(annual, last_fy):
+    """The annual row for the last reported fiscal year (within 20 days), else the latest."""
+    if not annual:
+        return {}
+    if last_fy:
+        for end, row in annual:
+            if abs((dt.date.fromisoformat(end) - last_fy).days) <= 20:
+                return row
+    return annual[0][1]
+
+
 def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, today=None):
     """One peer row. info: yfinance info dict. quarters/annual: frame_to_periods output in reporting currency.
-    est: {'rev_g0','rev_g1','eps_g0','eps_g1'} consensus growth rates (decimals) or empty.
-    fx_to_fin: multiply a quote-currency amount by this to get reporting currency.
-    fx_fin_to_usd: multiply a reporting-currency amount by this to get USD."""
+    est: consensus {'rev_g0','rev_g1','eps0','eps1'} (growth decimals, EPS averages) or empty.
+    fx_to_fin: quote currency -> reporting currency. fx_fin_to_usd: reporting currency -> USD."""
     v, basis = ltm(quarters, annual)
     mcap_q = _f(info.get("marketCap"))
     notes = []
     if mcap_q is None:
         return None
     mcap = mcap_q * fx_to_fin
-    debt, cash = v.get("total_debt") or 0.0, v.get("cash_sti", v.get("cash")) or 0.0
+    debt, cash = v.get("total_debt"), v.get("cash_sti", v.get("cash"))
+    if debt is None and _f(info.get("totalDebt")) is not None:
+        debt = _f(info["totalDebt"]) * fx_to_fin
+        notes.append("Debt from Yahoo summary (no quarterly balance sheet).")
+    if cash is None and _f(info.get("totalCash")) is not None:
+        cash = _f(info["totalCash"]) * fx_to_fin
+    debt, cash = debt or 0.0, cash or 0.0
     ev = mcap + debt - cash
-    if v.get("revenue") is None:
-        notes.append("Revenue not retrieved.")
-    ebitda, ni, cfo, capex, rev = v.get("ebitda"), v.get("net_income"), v.get("cfo"), v.get("capex"), v.get("revenue")
+    ebitda, cfo, capex, rev = v.get("ebitda"), v.get("cfo"), v.get("capex"), v.get("revenue")
+    ni = v.get("ni_norm") if v.get("ni_norm") is not None else v.get("net_income")
     fcf = cfo + capex if cfo is not None and capex is not None else None
-    # NTM
-    last_fy_rev = annual[0][1].get("revenue") if annual else None
-    last_fy_ni = (annual[0][1].get("net_income") or annual[0][1].get("net_income_all")) if annual else None
-    fl = frac_of_year_left(info.get("nextFiscalYearEnd"), today)
-    rf, ef = (None, None)
-    if est and fl is not None:
-        rf, ef = ntm_factors(est.get("rev_g0"), est.get("rev_g1"), est.get("eps_g0"), est.get("eps_g1"), fl)
-    ntm_rev = last_fy_rev * rf if rf is not None and last_fy_rev else None
-    ntm_ni = last_fy_ni * ef if ef is not None and last_fy_ni and last_fy_ni > 0 else None
+    # NTM: consensus for the current and next fiscal year, weighted by time
+    fl = frac_of_year_left(info.get("lastFiscalYearEnd"), today)
+    frac, last_fy = fl if fl else (None, None)
+    fy = _fy_row(annual, last_fy)
+    g0, g1 = sane_growth((est or {}).get("rev_g0")), sane_growth((est or {}).get("rev_g1"))
+    ntm_rev = None
+    if frac is not None and g0 is not None and fy.get("revenue"):
+        fac = frac * (1 + g0) + (1 - frac) * (1 + g0) * (1 + (g1 if g1 is not None else 0))
+        ntm_rev = fy["revenue"] * fac
+        if g1 is None:
+            notes.append("Next-year revenue consensus missing; NTM holds the current-year level.")
     scale = ntm_rev / rev if ntm_rev and rev else None
+    if scale is not None and not 0.6 < scale < 1.8:
+        notes.append("NTM revenue looked inconsistent with LTM, so derived NTM multiples are hidden.")
+        scale = None
+    # NTM P/E on consensus EPS (adjusted basis, as brokers quote it), checked against Yahoo's forward P/E
+    price = _f(info.get("currentPrice")) or _f(info.get("regularMarketPrice"))
+    e0, e1 = _f((est or {}).get("eps0")), _f((est or {}).get("eps1"))
+    ntm_pe = None
+    if price and frac is not None and e1 and e1 > 0:
+        ntm_eps = frac * (e0 if e0 and e0 > 0 else e1) + (1 - frac) * e1
+        ntm_pe = round(price / ntm_eps, 2)
+    fpe = _f(info.get("forwardPE"))
+    if fpe and (ntm_pe is None or not 0.6 < ntm_pe / fpe < 1.6):
+        if ntm_pe is not None:
+            notes.append("Consensus EPS looked mis-scaled (ADR ratio or currency); NTM P/E uses Yahoo's forward P/E.")
+        ntm_pe = round(fpe, 2)
     ntm = {
         "ev_ebitda": ratio(ev, ebitda * scale) if ebitda and scale else None,
-        "pe": ratio(mcap, ntm_ni) if ntm_ni else None,
+        "pe": ntm_pe,
         "ev_ocf": ratio(ev, cfo * scale) if cfo and scale else None,
         "ev_fcf": ratio(ev, fcf * scale) if fcf and fcf > 0 and scale else None,
         "rev_growth": round(scale - 1, 4) if scale else None,
     }
-    if ntm["pe"] is None and _f(info.get("forwardPE")):
-        ntm["pe"] = round(_f(info.get("forwardPE")), 2)
-        notes.append("NTM P/E is Yahoo's forward P/E (next fiscal year).")
+    ltm_m = {"ev_ebitda": ratio(ev, ebitda), "pe": ratio(mcap, ni) if ni and ni > 0 else None, "ev_ocf": ratio(ev, cfo),
+             "ev_fcf": ratio(ev, fcf) if fcf and fcf > 0 else None}
+    if ticker in EV_NOT_MEANINGFUL:
+        for blk in (ltm_m, ntm):
+            for k in ("ev_ebitda", "ev_ocf", "ev_fcf"):
+                blk[k] = None
+        notes.append(EV_NOT_MEANINGFUL[ticker])
     # quality
     tax_rate = None
     if v.get("tax") is not None and v.get("pretax"):
         tax_rate = max(0.0, min(0.35, v["tax"] / v["pretax"]))
-    ic = (v.get("total_debt") or 0.0) + (v.get("equity") or 0.0) - (v.get("cash") or 0.0)
+    ic = debt + (v.get("equity") or 0.0) - cash
     roic = None
-    if v.get("op_income") is not None and ic > 0:
+    if v.get("op_income") is not None and v.get("equity") is not None and ic > 0 and ticker not in EV_NOT_MEANINGFUL:
         roic = round(v["op_income"] * (1 - (tax_rate if tax_rate is not None else 0.21)) / ic, 4)
         if tax_rate is None:
             notes.append("ROIC uses a 21% tax rate; the effective rate was not retrieved.")
-    prior = None
-    if len(quarters) >= 8 and all(quarters[i][1].get("revenue") is not None for i in range(8)):
-        prior = sum(quarters[i][1]["revenue"] for i in range(4, 8))
-    elif len(annual) >= 2:
-        prior = annual[1][1].get("revenue")
-    rev_g = round(rev / prior - 1, 4) if rev and prior else None
+    # growth: last reported fiscal year over the one before
+    rev_g, growth_basis = None, None
+    if len(annual) >= 2 and fy.get("revenue"):
+        idx = next((i for i, (_, r) in enumerate(annual) if r is fy), 0)
+        if idx + 1 < len(annual) and annual[idx + 1][1].get("revenue"):
+            rev_g = round(fy["revenue"] / annual[idx + 1][1]["revenue"] - 1, 4)
+            growth_basis = "FY " + annual[idx][0][:4]
     usd = lambda x: round(x * fx_fin_to_usd / 1e9, 2) if x is not None else None  # noqa: E731
     return {
         "ticker": ticker, "name": NAMES.get(ticker) or info.get("shortName") or ticker,
         "quote_currency": info.get("currency"), "report_currency": info.get("financialCurrency") or info.get("currency"),
-        "mcap_usd_b": usd(mcap), "ev_usd_b": usd(ev), "revenue_usd_b": usd(rev), "ebitda_usd_b": usd(ebitda),
-        "ltm": {"ev_ebitda": ratio(ev, ebitda), "pe": ratio(mcap, ni), "ev_ocf": ratio(ev, cfo), "ev_fcf": ratio(ev, fcf) if fcf and fcf > 0 else None},
-        "ntm": ntm,
-        "ebitda_margin": round(ebitda / rev, 4) if ebitda and rev else None,
+        "mcap_usd_b": usd(mcap), "ev_usd_b": usd(ev) if ticker not in EV_NOT_MEANINGFUL else None,
+        "revenue_usd_b": usd(rev), "ebitda_usd_b": usd(ebitda) if ticker not in EV_NOT_MEANINGFUL else None,
+        "ltm": ltm_m, "ntm": ntm,
+        "ebitda_margin": round(ebitda / rev, 4) if ebitda and rev and ticker not in EV_NOT_MEANINGFUL else None,
         "op_margin": round(v["op_income"] / rev, 4) if v.get("op_income") is not None and rev else None,
-        "rev_growth_ltm": rev_g,
+        "rev_growth_fy": rev_g, "growth_basis": growth_basis,
         "roic": roic,
-        "net_debt_ebitda": round((debt - cash) / ebitda, 2) if ebitda and ebitda > 0 else None,
+        "net_debt_ebitda": round((debt - cash) / ebitda, 2) if ebitda and ebitda > 0 and ticker not in EV_NOT_MEANINGFUL else None,
         "interest_cover": ratio(v.get("op_income"), abs(v["interest"])) if v.get("interest") else None,
-        "basis": basis.get("revenue", "n/a"),
+        "basis": basis.get("revenue", "n/a"), "ebitda_kind": basis.get("ebitda_kind", "adjusted"),
         "notes": notes,
     }
 
@@ -276,7 +324,7 @@ def fetch(ticker):
     try:
         re_ = t.revenue_estimate
         ee = t.earnings_estimate
-        est = {"rev_g0": _growth(re_, "0y"), "rev_g1": _growth(re_, "+1y"), "eps_g0": _growth(ee, "0y"), "eps_g1": _growth(ee, "+1y")}
+        est = {"rev_g0": _growth(re_, "0y"), "rev_g1": _growth(re_, "+1y"), "eps0": _growth(ee, "0y", "avg"), "eps1": _growth(ee, "+1y", "avg")}
     except Exception as e:  # noqa: BLE001
         errors.append(f"{ticker} estimates: {e}")
     qc, fc = info.get("currency"), info.get("financialCurrency") or info.get("currency")
