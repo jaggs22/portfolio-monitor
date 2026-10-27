@@ -313,8 +313,9 @@
     }
 
     /* ================= page ================= */
-    function page(t) {
+    function page(t, mode) {
       load(t);
+      const isReport = mode === 'report';
       const u = state.uniMap[t] || {}, p = priceOf(t), r = researchOf(t), rv = review(t);
       const base = r ? evalFor(t, false) : null;
       const depth = r ? (r.depth === 'deep' ? 'Full research' : 'Lighter research') : 'Basic view';
@@ -335,9 +336,13 @@
           next ? pill(`${next.label.replace(/ \(.*\)/, '')} · ${fmt.dayShort(next.date)}${next.confirmed ? '' : ' (unconfirmed)'}`, 'info') : null,
           rv ? pill('Review as of ' + fmt.date(rv.as_of), '') : null,
           rv ? h('span', { class: 'small muted', style: { alignSelf: 'center' } }, rv.basis) : null));
+      const toggle = h('div', { class: 'view-toggle' },
+        seg([['quick', 'Quick view'], ['report', 'Detailed sell-side analysis']], isReport ? 'report' : 'quick', (m) => kit.setMode(t, m), 'View'),
+        isReport ? btn([icon('ext'), 'Download PDF'], () => window.print(), 'primary small') : h('span', { class: 'small muted' }, 'Tap any tile to open it'));
+      if (isReport) return [hero, toggle, kit.report(t)];
       const tiles = h('section', { class: 'tiles' },
         tBusiness(t), tMoat(t), tFinancials(t), tBalance(t), tManagement(t), tValuation(t), tThesis(t), tRisks(t), tPrice(t), tNews(t));
-      return [hero, tiles, !r ? deepenCard(t) : null];
+      return [hero, toggle, tiles, !r ? deepenCard(t) : null];
     }
 
     function deepenCard(t) {
@@ -942,6 +947,6 @@
       })), note('Collected automatically; links go to the publisher. Not curated or rated.'));
     }
 
-    return { page, openWin, load, priceOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS };
+    return { page, openWin, load, priceOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel };
   };
 })();

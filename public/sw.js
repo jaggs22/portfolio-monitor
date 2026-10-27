@@ -1,6 +1,6 @@
 /* Service worker: offline shell plus fresh data.
    Bump VERSION whenever a shell file changes so installed copies pick it up. */
-const VERSION = 'v10';
+const VERSION = 'v11';
 const SHELL_CACHE = 'shell-' + VERSION;
 const DATA_CACHE = 'data-' + VERSION;
 const SHELL = [
@@ -12,6 +12,8 @@ const SHELL = [
   'engine.js',
   'ui.js',
   'company.js',
+  'report.js',
+  'icons/favicon.svg',
   'fin.js',
   'charts.js',
   'dataapi.js',

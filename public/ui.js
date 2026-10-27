@@ -35,7 +35,7 @@
     mult: (x, d) => (num(x) === null || x <= 0 ? '–' : x.toFixed(d == null ? 1 : d) + 'x'),
     px: (x) => (num(x) === null ? '–' : '$' + (x >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits: 2, minimumFractionDigits: 2 }) : x.toFixed(2))),
     usdB: (b) => (num(b) === null ? '–' : b >= 1000 ? '$' + (b / 1000).toFixed(2) + 'T' : b >= 100 ? '$' + Math.round(b) + 'B' : '$' + b.toFixed(1) + 'B'),
-    usdM: (m) => (num(m) === null ? '–' : Math.abs(m) >= 1000 ? (m < 0 ? '−' : '') + '$' + (Math.abs(m) / 1000).toFixed(Math.abs(m) >= 10000 ? 1 : 2) + 'B' : (m < 0 ? '−' : '') + '$' + Math.round(Math.abs(m)) + 'M'),
+    usdM: (m) => (num(m) === null ? '–' : Math.abs(m) >= 1e6 ? (m < 0 ? '−' : '') + '$' + (Math.abs(m) / 1e6).toFixed(2) + 'T' : Math.abs(m) >= 1000 ? (m < 0 ? '−' : '') + '$' + (Math.abs(m) / 1000).toFixed(Math.abs(m) >= 10000 ? 1 : 2) + 'B' : (m < 0 ? '−' : '') + '$' + Math.round(Math.abs(m)) + 'M'),
     date: (s) => {
       const d = new Date(String(s).length <= 10 ? s + 'T00:00:00Z' : s);
       if (isNaN(d)) return String(s || '');
@@ -85,6 +85,10 @@
     news: '<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/>'
   };
   const icon = (id, cls) => h('span', { class: 'ic ' + (cls || ''), 'aria-hidden': 'true', html: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICON[id] || ''}</svg>` });
+
+  /* Brand mark: the keep (an M with battlements) inside a moat ring with a drawbridge gap. Colours follow the theme. */
+  const MARK = '<svg viewBox="0 0 64 64" aria-hidden="true"><rect class="lg-t" width="64" height="64" rx="14"/><path class="lg-r" d="M25.33 51.38A20.5 20.5 0 1 1 38.67 51.38" fill="none" stroke-width="2.4" stroke-linecap="round"/><path class="lg-k" d="M21.5 41V22.5h5v3.5h3.25v-3.5h4.5v3.5h3.25v-3.5h5V41h-6v-7.2L32 37.2l-4.5-3.4V41z"/></svg>';
+  const logo = (cls) => h('span', { class: 'logo ' + (cls || ''), html: MARK });
 
   /* Small building blocks */
   const pill = (text, kind) => h('span', { class: 'pill ' + (kind || '') }, text);
@@ -217,6 +221,6 @@
   }
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && stack.length) closeWin(); });
 
-  window.UI = { h, fmt, icon, pill, chg, eyebrow, seg, btn, empty, note, stat, disclose, spark, shareBar, store, applyTheme, isDark, toast,
+  window.UI = { h, fmt, icon, logo, MARK, pill, chg, eyebrow, seg, btn, empty, note, stat, disclose, spark, shareBar, store, applyTheme, isDark, toast,
     win: { open: openWin, close: closeWin, refresh: refreshWin, depth: () => stack.length, top: () => stack[stack.length - 1] } };
 })();

@@ -50,7 +50,7 @@
   /* ---------- routing ---------- */
   function route() {
     const p = (location.hash || '#/').replace(/^#\/?/, '').split('/').filter(Boolean);
-    if (p[0] === 'c' && p[1]) return { page: 'company', t: p[1].toUpperCase(), win: p[2] || null };
+    if (p[0] === 'c' && p[1]) return p[2] === 'report' ? { page: 'company', t: p[1].toUpperCase(), win: null, mode: 'report' } : { page: 'company', t: p[1].toUpperCase(), win: p[2] || null, mode: 'quick' };
     if (['coverage', 'markets', 'view'].includes(p[0])) return { page: p[0] };
     return { page: 'home' };
   }
@@ -58,7 +58,7 @@
   let pushedWin = 0, lastRoute = null;
   window.addEventListener('hashchange', () => {
     const r = route();
-    const same = lastRoute && lastRoute.page === r.page && lastRoute.t === r.t;
+    const same = lastRoute && lastRoute.page === r.page && lastRoute.t === r.t && lastRoute.mode === r.mode;
     lastRoute = r;
     if (r.page === 'company' && r.win) {
       const top = win.top();
@@ -75,7 +75,7 @@
   const NAV = [['home', '', 'Home', 'home'], ['coverage', 'coverage', 'Coverage', 'grid'], ['markets', 'markets', 'Markets', 'markets'], ['view', 'view', 'Your view', 'view']];
   function sidebar(r) {
     return h('aside', { class: 'side' },
-      h('a', { class: 'brand', href: '#/', style: { textDecoration: 'none' } }, h('span', { class: 'brand-mark' }, 'P'), h('span', { class: 'brand-name' }, CFG.appName || 'Portfolio Monitor')),
+      h('a', { class: 'brand', href: '#/', style: { textDecoration: 'none' } }, UI.logo('brand-mark'), h('span', { class: 'brand-text' }, h('span', { class: 'brand-name' }, CFG.appName || 'Moat Monitor'), h('span', { class: 'brand-sub' }, 'AI Native Equity Research'))),
       h('nav', { class: 'nav', 'aria-label': 'Main' }, NAV.map(([id, path, label, ic]) => h('a', { href: '#/' + path, 'aria-current': r.page === id ? 'page' : null }, icon(ic), label))),
       state.data ? h('div', { class: 'side-sec' }, h('div', { class: 'side-label' }, 'Full research'),
         CORE.map((t) => {
@@ -337,7 +337,7 @@
   }
   function sendFeedback() {
     const text = L.feedbackToText(state.feedback, { app: CFG.appName });
-    if (CFG.feedbackEmail) { location.href = `mailto:${CFG.feedbackEmail}?subject=${encodeURIComponent((CFG.appName || 'Portfolio Monitor') + ' feedback')}&body=${encodeURIComponent(text.slice(0, 1800))}`; return; }
+    if (CFG.feedbackEmail) { location.href = `mailto:${CFG.feedbackEmail}?subject=${encodeURIComponent((CFG.appName || 'Moat Monitor') + ' feedback')}&body=${encodeURIComponent(text.slice(0, 1800))}`; return; }
     (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => toast('Feedback copied. Paste it into a message.'), () => toast('Could not copy.'));
   }
   function requestDeepen(t) {
@@ -359,13 +359,13 @@
     }
     const y = window.scrollY;
     let content;
-    if (r.page === 'company' && state.uniMap[r.t]) content = CO.page(r.t);
+    if (r.page === 'company' && state.uniMap[r.t]) content = CO.page(r.t, r.mode);
     else if (r.page === 'company') content = [h('h1', null, 'Not covered'), h('p', { class: 'muted' }, r.t + ' is not in the coverage list.')];
     else if (r.page === 'coverage') content = coverage();
     else if (r.page === 'markets') content = markets();
     else if (r.page === 'view') content = yourView();
     else content = home();
-    document.title = (r.page === 'company' ? nameOf(r.t) + ' · ' : '') + (CFG.appName || 'Portfolio Monitor');
+    document.title = (r.page === 'company' ? nameOf(r.t) + ' · ' : '') + (CFG.appName || 'Moat Monitor');
     app.replaceChildren(h('div', { class: 'shell' }, sidebar(r),
       h('div', { class: 'main' }, topbar(r), h('main', { class: 'page', id: 'view', tabindex: '-1' }, content),
         h('footer', { class: 'foot' }, 'Research and monitoring tool, not investment advice. Prices delayed. Filings from SEC EDGAR; market data from Yahoo Finance.'))),
@@ -378,9 +378,13 @@
     state, go, nameOf, safeUrl, save, openTv, requestDeepen,
     render: () => render(),
     currentTicker: () => { const r = route(); return r.page === 'company' ? r.t : null; },
+    setMode: (t, m) => go(m === 'report' ? `c/${t}/report` : `c/${t}`),
+    report: (t) => REPORT.build(t),
     openedWin: (t, id) => { pushedWin++; history.pushState(null, '', `#/c/${t}/${id}`); },
     closedWin: (t) => { const r = route(); if (r.page === 'company' && r.win) { if (pushedWin > 0) { pushedWin--; history.back(); } else history.replaceState(null, '', '#/c/' + t); } }
   });
+
+  const REPORT = window.makeReport(CO, { state, nameOf });
 
   async function init() {
     lastRoute = route();

@@ -1,16 +1,37 @@
 {
-  "name": "Portfolio Monitor",
-  "short_name": "Monitor",
-  "description": "A daily two-minute read on your portfolio, with the structural thesis behind each holding.",
+  "name": "Moat Monitor",
+  "short_name": "Moat Monitor",
+  "description": "Moat Monitor: AI Native Equity Research Solution. How each business makes money, what it is worth against peers, and what would break the thesis.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#F2F4F6",
-  "theme_color": "#0F1E2E",
+  "background_color": "#f7f7f5",
+  "theme_color": "#1d1d1b",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ]
 }

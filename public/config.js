@@ -1,6 +1,6 @@
 /* Settings you may want to change before sending the app out. */
 window.APP_CONFIG = {
-  appName: 'Portfolio Monitor',
+  appName: 'Moat Monitor',
 
   // Where the "Send feedback" button sends the week's notes. Leave empty to use the
   // share sheet instead. Set it to your own address before sending the app out.

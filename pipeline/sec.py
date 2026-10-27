@@ -239,6 +239,26 @@ def build_statements(facts, max_years=10, max_quarters=20):
         # EPS fallback: net income over diluted shares when the filer reports EPS only by class
         rows["eps_diluted"] = [e if e is not None else (round(n_ / s, 4) if n_ is not None and s else None)
                                for e, n_, s in zip(col("eps_diluted"), col("net_income"), col("shares_diluted"))]
+        # Share counts are averages, not flows: a "full year minus nine months" value is meaningless. Replace any
+        # derived or implausible quarterly count with the full-year count for that period, or its neighbours' mean.
+        if which == 1 and rows.get("shares_diluted"):
+            sh = rows["shares_diluted"]
+            drv = flags.get("shares_diluted", [False] * n)
+            ann_ends, ann_vals = a_ends, [None] * len(a_ends)
+            for k in SHARES:
+                av, _ = pull(k, a_ends, 0)
+                ann_vals = av
+            good = sorted(v for v in sh if v is not None and v > 0)
+            med = good[len(good) // 2] if good else None
+            for i, v in enumerate(sh):
+                bad = v is None or v <= 0 or (med and abs(v / med - 1) > 0.25)
+                if (drv[i] or bad) and v is not None:
+                    m = _match(dict(zip(ann_ends, ann_vals)), ends[i], 12)
+                    rep = dict(zip(ann_ends, ann_vals)).get(m) if m else None
+                    if rep is None:
+                        nb = [x for x in (sh[i - 1] if i else None, sh[i + 1] if i + 1 < n else None) if x and x > 0 and (not med or abs(x / med - 1) <= 0.25)]
+                        rep = round(sum(nb) / len(nb), 3) if nb else None
+                    sh[i] = rep
         result[name] = {"period_ends": ends, "rows": rows, "derived": flags}
 
     # trailing twelve months from the last four quarters (flow lines only)

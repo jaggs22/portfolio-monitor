@@ -103,8 +103,14 @@
     const R = rowsOf(st, 'quarterly'), n = endsOf(st, 'quarterly').length;
     const t = st.ttm || {};
     const lastBs = (k) => (R[k] ? last(R[k]) : null);
-    const shares = t.shares_diluted || lastBs('shares_diluted');
-    const mcap = num(shares) !== null ? price * shares : (profile && profile.market_cap) || null;
+    let shares = t.shares_diluted || lastBs('shares_diluted');
+    // guard against a bad share count in the statements: fall back to Yahoo's shares outstanding
+    const so = profile && num(profile.shares_outstanding) ? profile.shares_outstanding / 1e6 : null;
+    if (!(num(shares) && shares > 0) || (so && Math.abs(shares / so - 1) > 0.3)) shares = so || null;
+    let mcap = num(shares) !== null ? price * shares : (profile && profile.market_cap) || null;
+    // multi-class issuers (Visa) report a diluted count that differs from the market's: defer to Yahoo's market cap
+    const ymc = profile && num(profile.market_cap) ? profile.market_cap / 1e6 : null;
+    if (ymc && num(mcap) && Math.abs(mcap / ymc - 1) > 0.1) { mcap = ymc; shares = ymc / price; }
     const debt = lastBs('total_debt'), cash = lastBs('cash'), sti = lastBs('st_investments');
     const ev = num(mcap) !== null && num(debt) !== null ? mcap + debt - (cash || 0) - (sti || 0) : null;
     const eq = lastBs('equity');
