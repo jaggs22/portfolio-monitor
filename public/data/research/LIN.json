@@ -135,7 +135,8 @@
    "date": "2026-10-29",
    "label": "Linde Q3 2026 earnings and conference call",
    "confirmed": true,
-   "note": "Guide: Q3 adjusted EPS $4.45 to $4.55 (+6% to +8%); FY $17.70 to $17.90."
+   "note": "Guide: Q3 adjusted EPS $4.45 to $4.55 (+6% to +8%); FY $17.70 to $17.90.",
+   "importance": "High"
   }
  ],
  "tripwires": [
@@ -349,35 +350,40 @@
     "how": "Manufacturing and chemicals customers cut output, so merchant and packaged volumes fall. EMEA volume is already -1%.",
     "watch": "Underlying sales growth",
     "trip": "l2",
-    "sev": "high"
+    "sev": "high",
+    "cat": "Demand"
    },
    {
     "cause": "Electronics capex cycle turns",
     "how": "Chip fabs are the main source of new on-site contracts. Delays push out start-ups and shrink the backlog.",
     "watch": "Sale-of-gas backlog",
     "trip": "l3",
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Cycle"
    },
    {
     "cause": "Pricing power fades as inflation cools",
     "how": "Linde's price gains track inflation. If price falls below cost inflation, margin compresses, as it did by 60 bps in Q2.",
     "watch": "Price/mix vs margin change",
     "trip": "l1",
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Pricing"
    },
    {
     "cause": "New capital earns less than old",
     "how": "Capex is near 16% of sales. If new plants earn less than the 23.5% company return on capital, growth dilutes returns.",
     "watch": "Return on capital, FCF margin",
     "trip": null,
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Capital"
    },
    {
     "cause": "Premium multiple compresses with rates",
     "how": "A staple-like multiple competes with a 5% Treasury yield. Higher-for-longer rates lower what investors pay for steady growth.",
     "watch": "10-year yield",
     "trip": null,
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Valuation"
    }
   ],
   "peer_read": {
@@ -402,6 +408,46 @@
     "title": "Linde plc Form 10-K, year ended 31 December 2025",
     "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
     "date": "2026-02-25"
+   }
+  ],
+  "title": "Best in class, priced for it",
+  "lead": "We rate Linde {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). This is the best-run industrial gas company, but a premium to gas peers already pays for that, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Quality is fully reflected: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Underlying sales grew 4% in Q2, split evenly between price and volume. The record $8.1B sale-of-gas backlog, mostly electronics, supports mid single digit growth as plants start up, but EMEA volumes are already falling."
+   },
+   {
+    "label": "Moat",
+    "text": "Long take-or-pay contracts, local route density and energy pass-through make each regional market close to a duopoly. The moat is not the question; the return on the next dollar of capex is."
+   },
+   {
+    "label": "Profitability",
+    "text": "Adjusted operating margin of 29.5% leads the sector, but it fell 60 bps as cost inflation outran pricing in every region. Productivity has to do more of the work from here."
+   },
+   {
+    "label": "Capital",
+    "text": "Buybacks and dividends ran ahead of free cash flow in H1, partly funded with new debt, while capex rises to $5.5B to $6.0B for the year. Leverage is still modest."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} On our numbers the shares return {ret} over 12 months, short of the cost of equity."
+   }
+  ],
+  "thesis_long": [
+   "Linde is the highest-quality way to own industrial gases. Contracts, density and pass-through pricing make its profit stream unusually predictable: earnings have beaten consensus in each of the last 12 quarters and adjusted EPS is guided up 8% to 9% in 2026. We do not argue with any of that.",
+   "What we question is how much more the market will pay for it. The stock trades at about 28x this year's guided earnings and at a premium to Air Liquide and Air Products on forward EV/EBITDA, while 10-year Treasuries yield close to 5%. Growth is not accelerating: underlying sales rose 4%, EMEA volumes are falling and margins slipped. To beat its cost of equity, the shares need either faster growth than the backlog implies or a multiple that holds near today's level.",
+   "Our base case has EPS compounding about 7% a year with a modest de-rating, which leaves the shares close to fair value over 12 months. The upside case needs electronics start-ups and a European recovery to coincide; the downside is an industrial recession that takes volume and the premium multiple together. We would turn more positive on underlying volume growth above 3% for two quarters, or a price nearer 22x earnings."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Electronics and clean-energy start-ups land together",
+    "how": "The $8.1B backlog converts faster than planned, lifting volume growth above 3% and making today's multiple look reasonable."
+   },
+   {
+    "cause": "Long rates fall",
+    "how": "Lower Treasury yields would re-rate defensive compounders, and a 28x multiple would then look sustainable."
    }
   ]
  },

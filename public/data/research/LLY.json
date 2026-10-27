@@ -136,13 +136,15 @@
    "date": "2026-10-30",
    "label": "Lilly Q3 2026 earnings (date not confirmed; typically late October or early November)",
    "confirmed": false,
-   "note": "Watch US price versus volume split."
+   "note": "Watch US price versus volume split.",
+   "importance": "High"
   },
   {
    "date": "2027-03-31",
    "label": "Retatrutide BLA submission planned for Q1 2027",
    "confirmed": true,
-   "note": "Company-stated timing."
+   "note": "Company-stated timing.",
+   "importance": "High"
   }
  ],
  "tripwires": [
@@ -390,35 +392,40 @@
     "how": "Wider access (Medicare bridge, cash-pay cuts, China NRDL) lowers price per dose. If volume growth slows first, revenue growth collapses.",
     "watch": "Realised price change",
     "trip": "y1",
-    "sev": "high"
+    "sev": "high",
+    "cat": "Pricing"
    },
    {
     "cause": "US policy resets drug prices",
     "how": "Most-favoured-nation pricing and IRA negotiation pull US prices toward international levels, which are far lower.",
     "watch": "US realised price",
     "trip": "y2",
-    "sev": "high"
+    "sev": "high",
+    "cat": "Regulatory"
    },
    {
     "cause": "Competitors and compounders take share",
     "how": "Novo's next-generation and oral products, and illegal compounded copies, compete for the same patients.",
     "watch": "Incretin revenue growth vs market",
     "trip": null,
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Competitive"
    },
    {
     "cause": "One molecule carries the company",
     "how": "65% of revenue is tirzepatide. A safety signal, supply problem or patent challenge would hit everything at once.",
     "watch": "Revenue concentration",
     "trip": null,
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Concentration"
    },
    {
     "cause": "Deal spending earns too little",
     "how": "Debt-funded acquisitions are expensed as IPR&D. If the programmes fail, the cash is gone and leverage stays higher.",
     "watch": "Acquired IPR&D, net debt",
     "trip": null,
-    "sev": "low"
+    "sev": "low",
+    "cat": "Capital"
    }
   ],
   "peer_read": {
@@ -443,6 +450,46 @@
     "title": "Eli Lilly Form 10-K, year ended 31 December 2025",
     "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
     "date": "2026-02-12"
+   }
+  ],
+  "title": "Winning on volume, exposed on price",
+  "lead": "We rate Eli Lilly {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Lilly is winning the incretin market on volume, but price per dose is falling fast and our next-year EPS is {vs_cons} consensus: the shares already discount much of the good news.",
+  "call_reason": "Leadership is priced in: the target implies {ret} over 12 months against a cost of equity of {hurdle}, with a fat tail if US prices reset.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Q2 revenue grew 48% on 60% more volume and 13% lower prices. Mounjaro and Zepbound were 65% of H1 revenue: the growth is real, but it rests on one molecule."
+   },
+   {
+    "label": "Moat",
+    "text": "Patents, injectable manufacturing scale and a deep follow-on pipeline (orforglipron launched for obesity, retatrutide filing planned for Q1 2027) keep Lilly ahead. Buyers and governments, not rivals, are the weak spot."
+   },
+   {
+    "label": "Profitability",
+    "text": "Gross margin rose to 85.8% even as prices fell, and R&D dropped to 17% of revenue. Operating leverage is strong for as long as volume grows faster than price falls."
+   },
+   {
+    "label": "Capital",
+    "text": "Debt rose $12.4B in six months to $54.9B to fund $13.3B of acquisitions, with more pending. Leverage is still low against EBITDA, but more of the growth is now bought."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Novo Nordisk sells the same class of drug at well under half of Lilly's forward P/E because its growth has stalled."
+   }
+  ],
+  "thesis_long": [
+   "Lilly has won the first round of the obesity and diabetes market. Volume grew about 60% in the quarter, revenue outside the US rose 80%, and consensus has Novo Nordisk's revenue falling in 2026 while Lilly's grows by more than a third. Margins expanded despite lower prices. On execution there is little to criticise.",
+   "The debate is price. Realised prices fell 13% in Q2, and 36% outside the US as Mounjaro entered China's reimbursement list. Wider US access points the same way: the Medicare obesity bridge, lower cash-pay prices, and government price-setting for Jardiance now and Trulicity and Verzenio from 2028. Lilly's own filing notes that changes in rebate estimates softened the reported US price decline. As volume growth normalises, price erosion matters more each quarter.",
+   "Our base case fades revenue growth to the high teens and lets the multiple compress toward large-pharma levels, which leaves 12-month returns close to the cost of equity. The upside case needs the oral and next-generation launches to open new patient groups while price stabilises; the downside is a US price reset that arrives before volume growth slows. A US realised price decline worse than 8% a year, or a retatrutide delay, would turn us negative."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Price stabilises while volume keeps compounding",
+    "how": "If realised price declines ease as access widens, revenue growth stays above 30% and EPS runs well ahead of our base case."
+   },
+   {
+    "cause": "Medicare obesity coverage becomes permanent",
+    "how": "Permanent coverage beyond the bridge programme would add a large, durable patient pool."
    }
   ]
  },

@@ -135,7 +135,8 @@
    "date": "2026-10-27",
    "label": "Visa fiscal Q4 2026 earnings",
    "confirmed": true,
-   "note": "Guide: net revenue growth high end of low double digits, EPS growth low end of mid-teens, tax rate about 19%."
+   "note": "Guide: net revenue growth high end of low double digits, EPS growth low end of mid-teens, tax rate about 19%.",
+   "importance": "High"
   }
  ],
  "tripwires": [
@@ -375,35 +376,40 @@
     "how": "Routing mandates or interchange limits let merchants send transactions to cheaper networks, lowering Visa's fee per dollar.",
     "watch": "Service revenue per dollar of volume",
     "trip": null,
-    "sev": "high"
+    "sev": "high",
+    "cat": "Regulatory"
    },
    {
     "cause": "Big banks demand a bigger share",
     "how": "Issuers are concentrated and can switch networks at renewal. Visa pays them through rising incentives.",
     "watch": "Incentive growth vs revenue growth",
     "trip": "v2",
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Competitive"
    },
    {
     "cause": "Cross-border spending normalises",
     "how": "International fees are the highest-margin line and depend on travel and currency volatility, both cyclical.",
     "watch": "Cross-border volume growth",
     "trip": "v3",
-    "sev": "medium"
+    "sev": "medium",
+    "cat": "Cycle"
    },
    {
     "cause": "Alternative rails take low-value payments",
     "how": "Real-time account-to-account systems (Pix, UPI) and stablecoins bypass cards, starting with small transactions in emerging markets.",
     "watch": "Transactions growth vs volume growth",
     "trip": null,
-    "sev": "low"
+    "sev": "low",
+    "cat": "Technology"
    },
    {
     "cause": "Costs outgrow revenue",
     "how": "Visa is investing in marketing, people and acquisitions. If that persists, the margin slips from a very high base.",
     "watch": "Opex growth vs revenue growth",
     "trip": "v4",
-    "sev": "low"
+    "sev": "low",
+    "cat": "Cost"
    }
   ],
   "peer_read": {
@@ -428,6 +434,46 @@
     "title": "Visa Inc. Form 10-K, year ended 30 September 2025",
     "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
     "date": "2025-11-06"
+   }
+  ],
+  "title": "A full toll on a great road",
+  "lead": "We rate Visa {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). The network turns about 10% volume growth into low-teens EPS growth with no credit risk, but the shares trade at a premium to Mastercard despite slower consensus growth, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Great business, full price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Net revenue grew 14% in the June quarter on 11% payments volume growth and 10% more transactions. Value-added services grew 33% and are now about a third of net revenue."
+   },
+   {
+    "label": "Moat",
+    "text": "A two-sided network accepted almost everywhere and embedded with banks and merchants. Regulators and large issuers, not rival networks, decide how much of the toll Visa keeps."
+   },
+   {
+    "label": "Profitability",
+    "text": "Margins lead the industry, but non-GAAP operating expenses grew 17% against 14% revenue growth, and client incentives grew 18%. The cost of growth is rising."
+   },
+   {
+    "label": "Capital",
+    "text": "Buybacks of $16.5B in nine months cut the share count by about 2.5% a year. The real liabilities are interchange litigation, funded through the class B shares, and a new settlement guarantee in Brazil."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Mastercard is expected to grow faster at a slightly lower multiple."
+   }
+  ],
+  "thesis_long": [
+   "Visa earns a small fee on a very large and steadily growing base of card spending, never lends money, and converts roughly two-thirds of revenue into EBITDA. Earnings have been predictable for years and buybacks add about 3 points to EPS growth every year. Quality is not in question.",
+   "The question is what it is worth against its twin. Consensus expects Mastercard to grow revenue faster over the next year, yet Visa trades at a slightly higher forward EV/EBITDA. Inside Visa the mix is shifting: incentives paid to banks are growing faster than gross revenue, cross-border fees are slowing as currency volatility falls, and costs grew ahead of revenue in the latest quarter.",
+   "Our base case keeps growth near 11% with flat margins and steady buybacks, which supports low-teens EPS growth and a 12-month return close to the cost of equity. The upside case needs value-added services and agentic commerce to become a second engine; the downside is US routing legislation or an interchange settlement that cuts the toll while incentives rise. Two quarters of net revenue growth below 10%, or incentives growing faster than 20%, would turn us negative."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Services become a second engine",
+    "how": "Value-added services above a third of revenue at core-network margins would lift growth and support a premium to Mastercard."
+   },
+   {
+    "cause": "The regulatory overhang clears",
+    "how": "An interchange settlement on manageable terms, or the routing bill failing again, would remove the main bear argument."
    }
   ]
  },

@@ -149,6 +149,105 @@
       return days < 100 ? `Quarter to ${mon}` : days < 300 ? `${Math.round(days / 30.4)} months to ${mon}` : `Year to ${mon}`;
     };
 
+    /* ================= the call: target, estimates, framework ================= */
+    const SECTOR_BENCH = { Materials: 'XLB', 'Health care': 'XLV', Financials: 'XLF', Technology: 'XLK', 'Consumer staples': 'XLP', 'Consumer discretionary': 'XLY', 'Communication services': 'XLC', Energy: 'XLE', Utilities: 'XLU', 'Real estate': 'XLRE', Industrials: 'XLI' };
+    const BENCH_NAME = { SPY: 'S&P 500', XLB: 'S&P 500 Materials', XLV: 'S&P 500 Health Care', XLF: 'S&P 500 Financials', XLK: 'S&P 500 Technology', XLP: 'S&P 500 Staples', XLY: 'S&P 500 Discretionary', XLC: 'S&P 500 Communication', XLE: 'S&P 500 Energy', XLU: 'S&P 500 Utilities', XLRE: 'S&P 500 Real Estate', XLI: 'S&P 500 Industrials' };
+    const benchOf = (t) => SECTOR_BENCH[(state.uniMap[t] || {}).sector] || 'SPY';
+    function callOf(t, mine) {
+      const r = researchOf(t), m = mkOf(t);
+      if (!r || !m) return null;
+      return E.target(r, m, rates(), mine ? { overrides: overrides(t) } : {});
+    }
+    const ratingKind = (x) => (x === 'Overweight' ? 'ok' : x === 'Underweight' ? 'bad' : '');
+    function consensusOf(t) {
+      const d = dat(t, 'peers');
+      const me = d && d.rows ? d.rows.find((x) => x.role === 'subject') : null;
+      return (me && me.consensus) || null;
+    }
+    /* Our base-case path beside consensus for the current and next two fiscal years. */
+    function estimates(t) {
+      const r = researchOf(t), c = consensusOf(t);
+      if (!r) return null;
+      const p = E.path(r, 'base');
+      const fy0 = c && c.fy0_end ? +c.fy0_end.slice(0, 4) : +(r.base_period_end || r.as_of).slice(0, 4);
+      const rows = p.slice(0, 3).map((x, i) => {
+        const cEps = c ? (i === 0 ? c.eps0 : i === 1 ? c.eps1 : null) : null;
+        const cRev = c ? (i === 0 ? c.rev0_m : i === 1 ? c.rev1_m : null) : null;
+        return { label: `FY${String(fy0 + i).slice(2)}E`, year: fy0 + i, rev: x.rev * 1000, eps: x.eps, margin: x.margin, dps: x.dps,
+          cEps, cRev, gapEps: cEps ? x.eps / cEps - 1 : null, gapRev: cRev ? (x.rev * 1000) / cRev - 1 : null };
+      });
+      return { rows, fy0, consensus: c };
+    }
+    function relPerf(t) {
+      const a = dat(t, 'history'), bk = benchOf(t);
+      const b = dat(bk, 'history');
+      if (!loaded(bk, 'history')) { cs(bk).history = { data: null }; D.get('history', bk).then((r) => { cs(bk).history = r; rerender(); }); }
+      if (!a || !a.bars) return null;
+      const last = a.bars[a.bars.length - 1][0];
+      const at = (bars, ts) => { let v = null; for (const x of bars) { if (x[0] <= ts) v = x[4]; else break; } return v; };
+      const ret = (bars, days, ytd) => {
+        if (!bars || !bars.length) return null;
+        const end = at(bars, last);
+        const startTs = ytd ? Date.UTC(new Date(last * 1000).getUTCFullYear(), 0, 1) / 1000 - 86400 : last - days * 86400;
+        const st = at(bars, startTs);
+        return end && st ? end / st - 1 : null;
+      };
+      const win = [['1M', 31], ['3M', 92], ['12M', 366], ['YTD', 0, true]];
+      return { bench: bk, benchName: BENCH_NAME[bk], rows: win.map(([k, d, y]) => { const x = ret(a.bars, d, y), y2 = b && b.bars ? ret(b.bars, d, y) : null; return { k, abs: x, rel: x != null && y2 != null ? (1 + x) / (1 + y2) - 1 : null }; }), benchBars: b && b.bars };
+    }
+    /* Fill {tokens} in review text with live figures, so prose never contradicts the numbers beside it. */
+    function fill(t, text) {
+      if (!text) return '';
+      const c = callOf(t, false), e = estimates(t), ps = peerStats(t);
+      const g = e && e.rows[1] && e.rows[1].gapEps;
+      const k = ps && ps.me && ps.me.ntm.ev_ebitda != null ? 'ev_ebitda' : 'pe';
+      const mine = ps && ps.me ? ps.me.ntm[k] : null, med = ps ? ps.med('ntm', k) : null;
+      const prem = mine && med ? mine / med - 1 : null;
+      const map = {
+        rating: c ? c.rating : 'not rated', pt: c ? fmt.px(c.pt) : '–', upside: c ? fmt.spct(c.upside, 1) : '–', ret: c ? fmt.spct(c.totalReturn, 1) : '–', hurdle: c ? fmt.pct(c.hurdle) : '–',
+        vs_cons: g == null ? 'compared with consensus' : Math.abs(g) < 0.01 ? 'in line with' : `${fmt.pct(Math.abs(g))} ${g < 0 ? 'below' : 'above'}`,
+        peer_line: prem == null ? '' : `The shares trade at ${fmt.mult(mine)} next-12-month ${k === 'pe' ? 'P/E' : 'EV/EBITDA'}, a ${fmt.pct(Math.abs(prem), 0)} ${prem >= 0 ? 'premium' : 'discount'} to the peer median of ${fmt.mult(med)}.`
+      };
+      return text.replace(/\{(\w+)\}/g, (_, k2) => (map[k2] !== undefined ? map[k2] : ''));
+    }
+    /* The framework: eight tests, each a traffic light with the number behind it. Thresholds are fixed and shown. */
+    function framework(t) {
+      const out = [], rv = review(t), r = research(t), card = state.data.cards && state.data.cards[t];
+      const ps = peerStats(t), s = finSnapshot(t), m = dat(t, 'mgmt'), e = estimates(t), rp = relPerf(t);
+      const L = (key, label, light, value, why, win) => out.push({ key, label, light, value, why, win });
+      const moat = rv ? rv.moat.rating : r && r.moat ? r.moat.rating : null;
+      if (moat != null) L('moat', 'Moat', moat >= 4 ? 'g' : moat === 3 ? 'a' : 'r', `${moat} / 5`, rv ? rv.moat.sources.slice(0, 2).join(', ') : r.moat.summary, 'moat');
+      else if (card) L('moat', 'Moat', card.verdict === 'Strong' ? 'g' : card.verdict === 'Weak' ? 'r' : 'a', card.verdict, 'Five-forces score', 'moat');
+      if (ps && ps.me && ps.me.ntm.rev_growth != null) {
+        const d = ps.me.ntm.rev_growth - ps.med('ntm', 'rev_growth');
+        L('growth', 'Growth', d >= 0.02 ? 'g' : d <= -0.02 ? 'r' : 'a', fmt.spct(ps.me.ntm.rev_growth, 1), `Consensus next 12 months vs peers ${fmt.spct(ps.med('ntm', 'rev_growth'), 1)}`, 'business');
+      } else if (s && s.growth != null) L('growth', 'Growth', s.growth >= 0.08 ? 'g' : s.growth < 0.03 ? 'r' : 'a', fmt.spct(s.growth, 1), 'Revenue, last 12 months', 'financials');
+      const roic = ps && ps.me && ps.me.roic != null ? ps.me.roic : s && s.roic;
+      if (roic != null) L('returns', 'Returns', roic >= 0.15 ? 'g' : roic < 0.08 ? 'r' : 'a', fmt.pct(roic), ps && ps.me ? `ROIC vs peer median ${fmt.pct(ps.med(null, 'roic'))}` : 'ROIC on reported capital', 'financials');
+      if (s && s.ndE != null) L('balance', 'Balance sheet', s.ndE < 1.5 ? 'g' : s.ndE <= 3 ? 'a' : 'r', s.ndE < 0 ? 'Net cash' : fmt.mult(s.ndE), 'Net debt to EBITDA', 'balance');
+      const eq = m && (m.components || []).find((c) => c.key === 'earnings_quality');
+      const cc = eq && eq.note ? +((eq.note.match(/([\d.]+)x net income/) || [])[1]) : null;
+      if (cc) L('quality', 'Cash quality', cc >= 1 ? 'g' : cc < 0.8 ? 'r' : 'a', cc.toFixed(2) + 'x', `Operating cash flow to net income, 5 years${rv ? '; ' + rv.flags.filter((x) => x.severity === 'watch').length + ' flags to judge' : ''}`, 'management');
+      if (e && e.rows[1] && e.rows[1].gapEps != null) { const g = e.rows[1].gapEps; L('estimates', 'Estimates', g >= 0.03 ? 'g' : g <= -0.03 ? 'r' : 'a', fmt.spct(g, 1), `Our ${e.rows[1].label} EPS vs consensus`, 'valuation:estimates'); }
+      if (ps && ps.me) {
+        const k = ps.me.ntm.ev_ebitda != null ? 'ev_ebitda' : 'pe', mine = ps.me.ntm[k], med = ps.med('ntm', k);
+        if (mine && med) { const pr = mine / med - 1; L('valuation', 'Valuation', pr <= 0 ? 'g' : pr > 0.25 ? 'r' : 'a', fmt.spct(pr, 0), `Premium to peers, NTM ${k === 'pe' ? 'P/E' : 'EV/EBITDA'}`, 'valuation:peers'); }
+      } else {
+        const f = dat(t, 'fundamentals'), pz = priceOf(t), hist = dat(t, 'history');
+        if (f && pz && hist) { const v = F.valuation(f, pz.price, f.profile), pc = F.percentile(F.valuationHistory(f, hist.bars), 'pe', v.pe); if (pc) L('valuation', 'Valuation', pc.pct < 0.3 ? 'g' : pc.pct > 0.7 ? 'r' : 'a', `${Math.round(pc.pct * 100)}th pct`, 'P/E against its own history', 'valuation:history'); }
+      }
+      if (rp && rp.rows[2].rel != null) { const x = rp.rows[2].rel; L('momentum', 'Momentum', x >= 0.05 ? 'g' : x <= -0.05 ? 'r' : 'a', fmt.spct(x, 0), `12 months vs ${rp.benchName}`, 'price'); }
+      return out;
+    }
+    function lights(light) { return h('span', { class: 'tl', 'aria-label': light === 'g' ? 'positive' : light === 'r' ? 'negative' : 'neutral' }, ['r', 'a', 'g'].map((x) => h('i', { class: x === light ? 'on ' + x : '' }))); }
+    function scorecard(t) {
+      const fw = framework(t);
+      if (!fw.length) return null;
+      return h('section', { class: 'scorecard', 'aria-label': 'Moat Monitor framework' }, fw.map((x) =>
+        h('button', { type: 'button', class: 'sc', onclick: () => { const [w, tab] = x.win.split(':'); if (tab) us(t).valTab = tab; openWin(t, w); }, title: x.why },
+          h('div', { class: 'sc-top' }, h('span', { class: 'eyebrow' }, x.label), lights(x.light)), h('div', { class: 'sc-v' }, x.value), h('div', { class: 'sc-w' }, x.why))));
+    }
+
     /* ================= tiles ================= */
     function tile(id, ic, label, body, foot, opts) {
       const locked = opts && opts.locked;
@@ -272,13 +371,17 @@
     }
 
     function tThesis(t) {
-      const ev = evalFor(t, true), base = evalFor(t, false);
-      if (!ev) return tile('thesis', 'branch', 'Scenarios', [line('No research file yet. The engine states no view rather than guess one.')], [pill('Not deepened', '')], { locked: true });
-      return tile('thesis', 'branch', hasMine(t) ? 'Scenarios · your view' : 'Scenarios',
-        [h('div', { class: 'row-actions' }, pill(ev.stance, stanceKind(ev.stance)), h('span', { class: 'small muted' }, `${ev.conviction} conviction`)),
-          line(`Expected ${fmt.pct(ev.expectedIrr)} a year against a ${fmt.pct(ev.hurdle)} hurdle.`), rangeViz(ev)],
-        [`Downside ${fmt.spct(ev.scenarios.bear.irr, 0)}`, '·', `Base ${fmt.spct(ev.scenarios.base.irr, 0)}`, '·', `Upside ${fmt.spct(ev.scenarios.bull.irr, 0)}`,
-          hasMine(t) && base.stance !== ev.stance ? pill('Engine: ' + base.stance, '') : null]);
+      const c = callOf(t, false), mine = hasMine(t) ? callOf(t, true) : null;
+      if (!c) return tile('thesis', 'branch', '12-month target', [line('No research file yet, so no target. The engine states no view rather than guess one.')], [pill('Not deepened', '')], { locked: true });
+      const p = priceOf(t), lo = Math.min(c.bear.value, p.price) * 0.97, hi = Math.max(c.bull.value, p.price) * 1.03;
+      const X = (v) => ((v - lo) / (hi - lo) * 100).toFixed(1) + '%';
+      return tile('thesis', 'branch', '12-month target',
+        [h('div', { class: 'row-actions' }, h('div', { class: 'tile-big' }, fmt.px(c.pt)), pill(c.rating, ratingKind(c.rating))),
+          line(`${fmt.spct(c.upside, 1)} upside, ${fmt.spct(c.totalReturn, 1)} with dividends, against a ${fmt.pct(c.hurdle)} cost of equity.`),
+          h('div', { class: 'range', role: 'img', 'aria-label': `Downside ${fmt.px(c.bear.value)}, target ${fmt.px(c.pt)}, upside ${fmt.px(c.bull.value)}, price ${fmt.px(p.price)}` },
+            h('div', { class: 'track' }), h('div', { class: 'seg-r', style: { left: X(c.bear.value), width: `calc(${X(c.bull.value)} - ${X(c.bear.value)})` } }),
+            h('div', { class: 'mk base', style: { left: X(c.pt) }, title: 'Target' }), h('div', { class: 'zero', style: { left: X(p.price), background: 'var(--info)', width: '2px' }, title: 'Price' }))],
+        [`Downside ${fmt.px(c.bear.value)}`, `Upside ${fmt.px(c.bull.value)}`, mine && mine.rating !== c.rating ? pill('Yours: ' + mine.rating, '') : null]);
     }
 
     function tRisks(t) {
@@ -320,18 +423,22 @@
       const base = r ? evalFor(t, false) : null;
       const depth = r ? (r.depth === 'deep' ? 'Full research' : 'Lighter research') : 'Basic view';
       const next = r && (r.catalysts || []).filter((c) => c.date >= new Date().toISOString().slice(0, 10)).sort((a, b) => a.date.localeCompare(b.date))[0];
+      const c = r ? callOf(t, false) : null, cm = r && hasMine(t) ? callOf(t, true) : null;
       const hero = h('section', { class: 'co-hero' },
         h('div', null,
           eyebrow([t, u.sector, depth].filter(Boolean).join(' · ')),
           h('h1', null, nameOf(t)),
           p ? h('div', { class: 'co-quote' }, h('span', { class: 'px' }, fmt.px(p.price)), chg(p.pct),
             h('small', null, p.src === 'live' ? 'Delayed quote · ' + fmt.ago(p.asof) : p.src === 'pipeline' ? 'Last update ' + fmt.ago(p.asof) : 'Snapshot')) : null),
-        base ? h('button', { type: 'button', class: 'card stance-box', style: { textAlign: 'left', cursor: 'pointer' }, onclick: () => openWin(t, 'thesis') },
-          eyebrow('Engine view'),
-          h('div', { class: 'stance' }, h('b', null, base.stance), pill(base.conviction + ' conviction', '')),
-          h('div', { class: 'small muted' }, 'A position to challenge, not a verdict.'),
-          h('span', { class: 'btn small', style: { alignSelf: 'flex-start' } }, 'Challenge it')) : null,
-        rv ? h('p', { class: 'headline' }, rv.headline) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
+        c ? h('button', { type: 'button', class: 'card stance-box', style: { textAlign: 'left', cursor: 'pointer' }, onclick: () => openWin(t, 'thesis') },
+          eyebrow('Moat Monitor call'),
+          h('div', { class: 'stance' }, h('b', null, c.rating), pill('Target ' + fmt.px(c.pt), ratingKind(c.rating) || 'info')),
+          h('div', { class: 'small muted' }, `${fmt.spct(c.upside, 1)} upside · ${fmt.spct(c.totalReturn, 1)} total return · cost of equity ${fmt.pct(c.hurdle)}`),
+          cm ? h('div', { class: 'small' }, h('b', null, 'Your view: '), `${cm.rating}, ${fmt.px(cm.pt)}`) : null,
+          h('span', { class: 'btn small', style: { alignSelf: 'flex-start' } }, 'How we get there')) : null,
+        rv ? h('div', { class: 'call-text' }, h('h2', { class: 'call-title' }, rv.title), h('p', { class: 'headline' }, fill(t, rv.lead))) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
+        scorecard(t),
+        rv ? h('div', { class: 'args' }, eyebrow('Key arguments'), rv.arguments.map((a) => disclose([h('b', { class: 'arg-l' }, a.label), h('span', { class: 'arg-t' }, fill(t, a.text).split('. ')[0].replace(/\.$/, '') + '.')], fill(t, a.text)))) : null,
         h('div', { class: 'co-meta' },
           next ? pill(`${next.label.replace(/ \(.*\)/, '')} · ${fmt.dayShort(next.date)}${next.confirmed ? '' : ' (unconfirmed)'}`, 'info') : null,
           rv ? pill('Review as of ' + fmt.date(rv.as_of), '') : null,
@@ -361,7 +468,7 @@
       balance: { title: 'Balance sheet', build: wBalance },
       management: { title: 'Management, governance and earnings quality', build: wManagement, wide: true },
       valuation: { title: 'Valuation', build: wValuation, wide: true },
-      thesis: { title: 'Scenarios and thesis', build: wThesis, wide: true },
+      thesis: { title: 'Target, scenarios and thesis', build: wThesis, wide: true },
       risks: { title: 'What could break the thesis', build: wRisks },
       price: { title: 'Price', build: wPrice, wide: true },
       news: { title: 'News', build: wNews }
@@ -648,15 +755,50 @@
     function wValuation(t) {
       const S = us(t), doc = dat(t, 'peers');
       const tabs = [];
+      if (researchOf(t)) tabs.push(['estimates', 'Target and estimates']);
       if (doc) tabs.push(['peers', 'Peers']);
       tabs.push(['multiples', 'Multiples'], ['history', 'vs own history'], ['targets', 'Analyst targets']);
       const cur = tabs.some((x) => x[0] === S.valTab) ? S.valTab : tabs[0][0];
       let body;
-      if (cur === 'peers') body = valPeers(t);
+      if (cur === 'estimates') body = valEstimates(t);
+      else if (cur === 'peers') body = valPeers(t);
       else if (cur === 'history') body = valHistory(t);
       else if (cur === 'targets') body = valTargets(t);
       else body = valMultiples(t);
       return h('div', null, seg(tabs, cur, (x) => { S.valTab = x; win.refresh(); }, 'Valuation view'), body);
+    }
+    function estTable(t) {
+      const e = estimates(t);
+      if (!e) return null;
+      const c = e.consensus, td = (x, cls) => h('td', { class: cls || null }, x);
+      const gap = (x) => (x == null ? '–' : h('span', { class: Math.abs(x) < 0.01 ? '' : x > 0 ? 'up' : 'down' }, fmt.spct(x, 1)));
+      const row = (label, f) => h('tr', null, h('th', null, label), e.rows.map((r) => td(f(r))));
+      return h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl' },
+        h('thead', null, h('tr', null, h('th', null, 'Fiscal year'), e.rows.map((r) => h('th', null, r.label)))),
+        h('tbody', null,
+          row('Revenue, ours', (r) => fmt.usdM(r.rev)), row('Revenue, consensus', (r) => (r.cRev ? fmt.usdM(r.cRev) : '–')), row('Gap', (r) => gap(r.gapRev)),
+          row('EPS, ours', (r) => '$' + r.eps.toFixed(2)), row('EPS, consensus', (r) => (r.cEps ? '$' + r.cEps.toFixed(2) : '–')), row('Gap', (r) => gap(r.gapEps)),
+          row('Net margin, ours', (r) => fmt.pct(r.margin)), row('Dividend, ours', (r) => '$' + r.dps.toFixed(2)))));
+    }
+    function valEstimates(t) {
+      const c = callOf(t, false), e = estimates(t), r = researchOf(t);
+      if (!c) return empty('No research file, so no target.');
+      const out = [];
+      out.push(h('div', { class: 'stats boxed' },
+        stat('Rating', h('span', { class: ratingKind(c.rating) === 'ok' ? 'up' : ratingKind(c.rating) === 'bad' ? 'down' : '' }, c.rating), '±5 pts vs cost of equity'),
+        stat('12-month target', fmt.px(c.pt), fmt.spct(c.upside, 1) + ' upside'),
+        stat('Total return', fmt.spct(c.totalReturn, 1), 'incl. ' + fmt.pct(c.divYield, 1) + ' dividend'),
+        stat('Cost of equity', fmt.pct(c.hurdle), `${rates().rf}% + beta × ${rates().erp}%`)));
+      out.push(block('How the target is built', h('div', { class: 'card derive' },
+        h('div', { class: 'dv' }, h('span', null, `${e.rows[1].label} EPS, our base case`), h('b', null, '$' + c.eps1.toFixed(2))),
+        h('div', { class: 'dv' }, h('span', null, `Target P/E: today ${c.pe0.toFixed(1)}x, moved a third of the way to the ${r.horizon}-year exit multiple`), h('b', null, '× ' + c.targetPE.toFixed(1) + 'x')),
+        h('div', { class: 'dv total' }, h('span', null, '12-month price target'), h('b', null, fmt.px(c.pt))),
+        h('div', { class: 'dv' }, h('span', null, `Downside case (${c.bear.pe.toFixed(1)}x × $${c.bear.eps1.toFixed(2)})`), h('b', null, fmt.px(c.bear.value))),
+        h('div', { class: 'dv' }, h('span', null, `Upside case (${c.bull.pe.toFixed(1)}x × $${c.bull.eps1.toFixed(2)})`), h('b', null, fmt.px(c.bull.value))))));
+      out.push(block('Our estimates vs consensus', estTable(t)));
+      const cons = e.consensus;
+      out.push(note(cons ? 'Consensus is the Yahoo Finance analyst mean. Our estimates are the base case of the scenario model; dispute any assumption in Target and thesis and they move.' : 'Consensus not loaded yet.'));
+      return h('div', null, out);
     }
     function valPeers(t) {
       const S = us(t), ps = peerStats(t);
@@ -741,13 +883,23 @@
       const base = evalFor(t, false), mine = evalFor(t, true), yours = hasMine(t);
       const shown = yours ? mine : base;
       const out = [];
+      const c = callOf(t, false), cm = yours ? callOf(t, true) : null;
+      if (c) {
+        out.push(block('12-month call', h('div', { class: 'scen' }, [['bear', 'Downside'], ['base', 'Target'], ['bull', 'Upside']].map(([k, lab]) => {
+          const v = k === 'base' ? c.pt : c[k].value, pe = k === 'base' ? c.targetPE : c[k].pe, ep = k === 'base' ? c.eps1 : c[k].eps1;
+          return h('div', { class: 'card ' + k }, h('div', { class: 'ev-top' }, eyebrow(lab), k === 'base' ? pill(c.rating, ratingKind(c.rating)) : null),
+            h('div', { class: 's-ret' }, fmt.px(v)), h('div', { class: 's-px' }, `${fmt.spct(v / m.price - 1, 1)} · ${pe.toFixed(1)}x × $${ep.toFixed(2)}`));
+        })), cm ? note(`With your disputes: ${cm.rating}, target ${fmt.px(cm.pt)} (${fmt.spct(cm.upside, 1)}).`) : null));
+        if (rv && rv.thesis_long) out.push(block('Investment thesis', ...rv.thesis_long.map((x) => h('p', { class: 'read' }, fill(t, x)))));
+        out.push(h('h3', { class: 'sub-h' }, `${r.horizon}-year scenarios`));
+      }
       out.push(h('div', { class: 'stats boxed' },
         stat('Engine stance', base.stance, base.conviction + ' conviction'),
         yours ? stat('Your view', mine.stance, 'after your disputes') : null,
         stat('Expected return', fmt.pct(shown.expectedIrr), 'a year, probability-weighted'),
         stat('Hurdle', fmt.pct(shown.hurdle), `${rates().rf}% + beta × ${rates().erp}%`),
         stat('Price implies', E.impliedGrowth(r, m, rates(), { overrides: overrides(t) }).toFixed(1) + '%', 'revenue growth a year')));
-      out.push(h('p', { class: 'read' }, r.header.thesis));
+      if (!(rv && rv.thesis_long)) out.push(h('p', { class: 'read' }, r.header.thesis));
       const sc = shown.scenarios, pr = shown.probs;
       const story = (k) => (rv && rv.scenarios[k === 'bear' ? 'downside' : k === 'bull' ? 'upside' : 'base']) || null;
       out.push(h('div', { class: 'scen' }, ['bear', 'base', 'bull'].map((k) => {
@@ -895,6 +1047,14 @@
       return bars.filter((b) => b[0] >= last - spec * 86400);
     }
     function sma(bars, n) { const out = []; let s = 0; for (let i = 0; i < bars.length; i++) { s += bars[i][4]; if (i >= n) s -= bars[i - n][4]; if (i >= n - 1) out.push([bars[i][0], s / n]); } return out; }
+    function relBlock(t) {
+      const rp = relPerf(t);
+      if (!rp) return null;
+      const td = (x) => h('td', null, x == null ? '–' : h('span', { class: fmt.dir(x) }, fmt.spct(x, 1)));
+      return block('Performance vs ' + rp.benchName, h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl' },
+        h('thead', null, h('tr', null, h('th', null, ''), rp.rows.map((x) => h('th', null, x.k)))),
+        h('tbody', null, h('tr', null, h('th', null, 'Absolute'), rp.rows.map((x) => td(x.abs))), h('tr', null, h('th', null, 'Relative to ' + rp.bench), rp.rows.map((x) => td(x.rel)))))));
+    }
     function wPrice(t) {
       const S = us(t), hist = dat(t, 'history'), intra = dat(t, 'intraday');
       const host = h('div', { class: 'chart-host' });
@@ -931,6 +1091,7 @@
         st ? h('div', { class: 'stats boxed' },
           ...[['1 month', st.ret_1m], ['3 months', st.ret_3m], ['Year to date', st.ret_ytd], ['1 year', st.ret_1y], ['3 years', st.ret_3y]].filter((x) => num(x[1]) !== null).map(([k, v]) => stat(k, h('span', { class: fmt.dir(v) }, fmt.spct(v, 1)))),
           stat('RSI (14)', num(st.rsi14) ? st.rsi14.toFixed(0) : '–'), stat('Volatility', num(st.vol60) ? fmt.pct(st.vol60, 0) : '–', '60-day, annualised'), stat('Worst drawdown', num(st.max_dd_1y) ? fmt.pct(st.max_dd_1y, 0) : '–', 'past year')) : null,
+        relBlock(t),
         tr && tr.label ? block('Technical read: ' + tr.label, h('div', { class: 'list card' }, (tr.reasons || []).map((x) => h('div', { class: 'li' }, h('span', { class: 'dot' }), h('div', { class: 'li-main small' }, x))))) : null,
         h('div', { class: 'row-actions' }, btn([icon('ext'), 'Open live TradingView chart'], () => kit.openTv(t), '')),
         note('Delayed prices from Yahoo Finance’s public feed, Stooq as backup. For monitoring, not trading.'));
@@ -947,6 +1108,6 @@
       })), note('Collected automatically; links go to the publisher. Not curated or rated.'));
     }
 
-    return { page, openWin, load, priceOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel };
+    return { page, openWin, load, priceOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel, callOf, estimates, estTable, consensusOf, relPerf, fill, framework, ratingKind, benchOf, rates };
   };
 })();

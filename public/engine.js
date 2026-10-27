@@ -286,8 +286,53 @@
     return r;
   }
 
+  /* Year-by-year base path. Year 0 is the current fiscal year the research is anchored on (eps0, rev0).
+     Revenue compounds at the growth driver, net margin moves in a straight line from today's to the year-N margin,
+     and the share count changes at the buyback driver. Year N matches runScenario exactly. */
+  function path(research, scen, overrides) {
+    const b = research.base, N = research.horizon || 3;
+    const g = driverValue(research, 'rev_cagr', scen || 'base', overrides) / 100;
+    const mEnd = driverValue(research, 'margin_end', scen || 'base', overrides) / 100;
+    const s = driverValue(research, 'share_chg', scen || 'base', overrides) / 100;
+    const m0 = (b.eps0 * b.shares0) / b.rev0;
+    const out = [];
+    let d = b.div || 0;
+    for (let t = 0; t <= N; t++) {
+      const rev = b.rev0 * Math.pow(1 + g, t);
+      const m = m0 + (mEnd - m0) * (t / N);
+      const shares = b.shares0 * Math.pow(1 + s, t);
+      if (t > 0) d *= 1 + Math.max(g, 0) * 0.6;
+      out.push({ t, rev, margin: m, shares, eps: t === 0 ? b.eps0 : (rev * m) / shares, dps: d });
+    }
+    return out;
+  }
+
+  const RATINGS = ['Underweight', 'Equal weight', 'Overweight'];
+  /* Twelve-month view. The target applies a multiple to next year's EPS, so in a year the stock is valued on the
+     same "current fiscal year" basis it is today. The target multiple moves one year's worth (1/N) of the way from
+     today's P/E toward the scenario's exit P/E. Total return adds a year of dividends. Rating: Overweight if that
+     return beats the cost of equity by 5 points or more, Underweight if it falls 5 points or more short. */
+  function target(research, market, rates, opts) {
+    opts = opts || {};
+    const N = research.horizon || 3, price = market.price;
+    const pe0 = price / research.base.eps0;
+    const hr = hurdle(market.beta, rates);
+    const one = (scen) => {
+      const p = path(research, scen, opts.overrides);
+      const exit = driverValue(research, 'exit_pe', scen, opts.overrides);
+      const tpe = pe0 + (exit - pe0) / N;
+      const value = p[1].eps * tpe;
+      return { value, pe: tpe, eps1: p[1].eps, ret: value / price - 1 + p[1].dps / price };
+    };
+    const base = one('base'), bull = one('bull'), bear = one('bear');
+    const spread = base.ret - hr;
+    const rating = spread >= 0.05 ? RATINGS[2] : spread <= -0.05 ? RATINGS[0] : RATINGS[1];
+    return { pt: base.value, upside: base.value / price - 1, totalReturn: base.ret, divYield: path(research, 'base', opts.overrides)[1].dps / price,
+      hurdle: hr, spread, rating, pe0, targetPE: base.pe, eps1: base.eps1, bull, bear, base, path: path(research, 'base', opts.overrides) };
+  }
+
   return {
-    DRIVERS, DRIVER_META, STANCES, LENS_CHECKS,
+    DRIVERS, DRIVER_META, STANCES, LENS_CHECKS, RATINGS, path, target,
     adjBeta, hurdle, runScenario, evaluate, impliedGrowth, sensitivity, overridesFrom, diff, challenge,
     profile, lensRead, lightValuation, technicalRead, baselineChange, rebaseFromFiling, normProbs, stanceOf, round
   };

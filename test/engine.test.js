@@ -75,4 +75,24 @@ ok('rebase from filing replaces starting point only', () => {
   assert.strictEqual(r.base.eps0, 18.0); assert.strictEqual(r.drivers.exit_pe.base, 25);
   assert.strictEqual(E.baselineChange(rs.LIN, r).length, 1);
 });
+ok('path year N equals the scenario model and year 0 equals the anchor', () => {
+  for (const t in rs) {
+    const p = E.path(rs[t], 'base');
+    const sc = E.runScenario(rs[t], mk.stocks[t].price, 'base');
+    assert.ok(Math.abs(p[0].eps - rs[t].base.eps0) < 1e-9, t);
+    assert.ok(Math.abs(p[p.length - 1].eps - sc.eps) < 1e-6, t + ' ' + p[p.length - 1].eps + ' ' + sc.eps);
+  }
+});
+ok('target: bear < base < bull, rating follows the spread to the hurdle', () => {
+  for (const t in rs) {
+    const x = E.target(rs[t], mk.stocks[t], mk.rates);
+    assert.ok(x.bear.value < x.pt && x.pt < x.bull.value, t);
+    const want = x.spread >= 0.05 ? 'Overweight' : x.spread <= -0.05 ? 'Underweight' : 'Equal weight';
+    assert.strictEqual(x.rating, want);
+  }
+});
+ok('raising the exit multiple raises the target', () => {
+  const a = E.target(rs.LIN, mk.stocks.LIN, mk.rates), b = E.target(rs.LIN, mk.stocks.LIN, mk.rates, { overrides: { exit_pe: 30 } });
+  assert.ok(b.pt > a.pt);
+});
 console.log(n + ' passed');
