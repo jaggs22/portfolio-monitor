@@ -24,14 +24,19 @@ jobs:
         run: node test/engine.test.js && node test/fin.test.js && node test/worker.test.mjs
       - name: Install Wrangler 4 from package.json
         run: npm install --no-audit --no-fund
-      - name: Deploy to Cloudflare
+      - name: Deploy to Cloudflare (retries on rate limits)
         if: env.HAS_TOKEN == 'true'
-        uses: cloudflare/wrangler-action@v3
-        with:
-          wranglerVersion: "4"
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --config worker/wrangler.toml
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          for wait in 0 45 90 180; do
+            sleep "$wait"
+            if npx wrangler deploy --config worker/wrangler.toml 2>&1 | tee deploy.log; test "${PIPESTATUS[0]}" -eq 0; then exit 0; fi
+            if ! grep -qE "10429|Rate limited|429" deploy.log; then echo "Deploy failed for a reason other than rate limiting"; exit 1; fi
+            echo "Cloudflare rate-limited the deploy; retrying"
+          done
+          exit 1
       - name: Deploy skipped
         if: env.HAS_TOKEN != 'true'
         run: echo "::warning::CLOUDFLARE_API_TOKEN is not set, so nothing was deployed. Add the secrets (see the comment at the top of this file) or use Cloudflare's Git integration."
