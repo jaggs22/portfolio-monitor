@@ -1,0 +1,38 @@
+name: research
+# Peer valuation table (yfinance) and segment views from the latest 10-Q / 10-K (SEC XBRL) for the three core names.
+# Runs daily, on demand, and whenever the code behind it changes.
+on:
+  schedule:
+    - cron: "5 22 * * 1-5"
+  push:
+    branches: [main]
+    paths: ["pipeline/peers.py", "pipeline/segments.py", "pipeline/jobs.py", ".github/workflows/research.yml"]
+  workflow_dispatch:
+concurrency:
+  group: data-publish
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Load current data branch
+        run: scripts/fetch_data.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Peers and segments
+        run: python -m pipeline.run research --out out
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+      - name: Publish
+        run: scripts/publish.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

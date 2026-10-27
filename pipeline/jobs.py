@@ -261,3 +261,84 @@ def job_mgmt(sec_http, yf_mgmt, llm_call, out, tickers=None, now=None, ciks=None
     write_json(out / "mgmt_cache.json", cache)
     record(out, "mgmt", done > 0, errors, done, now)
     return done
+
+
+# ---------- peers and segments (core names) ----------
+CORE = ["LIN", "LLY", "V"]
+
+
+def job_peers(peer_fetch, out, tickers=None, now=None):
+    """Peer valuation table per core name. peer_fetch(ticker) -> (row, errors). Each distinct ticker is fetched once."""
+    from . import peers as P
+    subjects = [t for t in (tickers or CORE) if t in P.PEERS]
+    errors, cache, done = [], {}, 0
+    prev = {t: read_json(Path(out) / "peers" / f"{t}.json", {}) or {} for t in subjects}
+    for sub in subjects:
+        cfg = P.PEERS[sub]
+        rows = []
+        for tk in [sub] + cfg["default"] + cfg["optional"]:
+            if tk not in cache:
+                try:
+                    row, errs = peer_fetch(tk)
+                    errors.extend(errs)
+                except Exception as e:  # noqa: BLE001
+                    row = None
+                    errors.append(f"{tk}: {e}")
+                if row is None:  # keep the last good row rather than drop the peer
+                    old = next((r for r in prev[sub].get("rows", []) if r["ticker"] == tk), None)
+                    if old:
+                        row = dict(old, stale=True)
+                cache[tk] = row
+            if cache[tk]:
+                rows.append(dict(cache[tk], role="subject" if tk == sub else "default" if tk in cfg["default"] else "optional"))
+        if not rows:
+            continue
+        doc = {"ticker": sub, "asof": iso(now), "source": "Yahoo Finance via yfinance (statements, consensus estimates, FX)",
+               "why": cfg["why"], "method": P.__doc__.split("Method, stated in the output so the app can show it:")[1].split("Pure functions")[0].strip(),
+               "rows": rows, "summary": P.summarise(rows, sub, set(cfg["default"]))}
+        write_json(Path(out) / "peers" / f"{sub}.json", doc)
+        done += 1
+    record(out, "peers", done > 0, errors, done, now)
+    return done
+
+
+def job_segments(sec_http, out, tickers=None, now=None, ciks=None):
+    """Segment and revenue-mix views from each core name's latest 10-Q and 10-K, plus the plain-text MD&A and the
+    latest earnings release saved under raw/ so the written analysis can be checked against the source."""
+    from . import segments as S, llm
+    ciks = ciks or config.ciks()
+    errors, done = [], 0
+    for sym in [t for t in (tickers or CORE) if t in CORE]:
+        if sym not in ciks:
+            continue
+        try:
+            subs = sec_http.json(sec.SUBMISSIONS.format(cik=ciks[sym]))
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"{sym} submissions: {e}")
+            continue
+        res, errs = S.fetch_segments(sec_http, ciks[sym], subs)
+        errors.extend(f"{sym} {x}" for x in errs)
+        if res["quarterly"] or res["annual"]:
+            write_json(Path(out) / "segments" / f"{sym}.json", dict(ticker=sym, asof=iso(now), source="SEC EDGAR XBRL instance (dimensional facts)", **res))
+            done += 1
+        # source text for the analysis
+        lf = S.latest_filings(subs)
+        f = max(lf.values(), key=lambda x: x["filed"]) if lf else None
+        if f:
+            try:
+                acc = f["accession"].replace("-", "")
+                html = sec_http.text(f"https://www.sec.gov/Archives/edgar/data/{int(ciks[sym])}/{acc}/{f['primary']}")
+                (Path(out) / "raw").mkdir(parents=True, exist_ok=True)
+                (Path(out) / "raw" / f"{sym}_mdna.txt").write_text(f"{f['form']} for period {f['period']}, filed {f['filed']}\n\n" + S.mdna_text(html))
+            except Exception as e:  # noqa: BLE001
+                errors.append(f"{sym} mdna: {e}")
+        rel = llm.earnings_filings(subs, n=1)
+        if rel:
+            try:
+                txt = llm.fetch_release(sec_http, ciks[sym], rel[0])
+                if txt:
+                    (Path(out) / "raw" / f"{sym}_release.txt").write_text(f"8-K earnings release filed {rel[0]['filed']}\n\n" + txt[:150000])
+            except Exception as e:  # noqa: BLE001
+                errors.append(f"{sym} release: {e}")
+    record(out, "segments", done > 0, errors, done, now)
+    return done
