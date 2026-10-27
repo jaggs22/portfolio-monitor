@@ -2,7 +2,7 @@
   "name": "Moat Monitor",
   "short_name": "Moat Monitor",
   "description": "Moat Monitor: AI Native Equity Research Solution. How each business makes money, what it is worth against peers, and what would break the thesis.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",

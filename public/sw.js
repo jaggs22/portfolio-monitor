@@ -1,11 +1,10 @@
 /* Service worker: offline shell plus fresh data.
    Bump VERSION whenever a shell file changes so installed copies pick it up. */
-const VERSION = 'v11';
+const VERSION = 'v12';
 const SHELL_CACHE = 'shell-' + VERSION;
 const DATA_CACHE = 'data-' + VERSION;
 const SHELL = [
   './',
-  'index.html',
   'styles.css',
   'app.js',
   'lib.js',
@@ -60,19 +59,36 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Shell: serve from cache immediately, refresh in the background.
+  // Page loads: network first, cached shell as the offline fallback. Cloudflare redirects /index.html to /,
+  // and a browser refuses to show a redirected response for a page load, so every navigation is answered
+  // with the shell stored under './' (never a redirected copy).
+  if (req.mode === 'navigate') {
+    event.respondWith(
+      fetch(req)
+        .then((res) => (res.redirected ? clean(res) : res))
+        .catch(() => caches.match('./'))
+    );
+    return;
+  }
+
+  // Other shell files: serve from cache immediately, refresh in the background.
   event.respondWith(
     caches.match(req, { ignoreSearch: true }).then((cached) => {
       const refresh = fetch(req)
         .then((res) => {
-          if (res.ok) {
+          if (res.ok && !res.redirected) {
             const copy = res.clone();
             caches.open(SHELL_CACHE).then((c) => c.put(req, copy));
           }
           return res;
         })
-        .catch(() => cached || (req.mode === 'navigate' ? caches.match('index.html') : undefined));
+        .catch(() => cached);
       return cached || refresh;
     })
   );
 });
+
+/* A redirected response cannot answer a navigation, so copy its body into a fresh, non-redirected one. */
+function clean(res) {
+  return res.blob().then((body) => new Response(body, { status: res.status, statusText: res.statusText, headers: res.headers }));
+}
