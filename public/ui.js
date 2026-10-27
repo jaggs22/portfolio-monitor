@@ -143,9 +143,37 @@
   }
 
   /* ---------- storage ---------- */
-  const store = {
+  /* Device storage. Each username on a device gets its own holdings, disputes and peer choices: data keys are
+     stored under u:<name>:<key>. The theme and the current username are device-wide. */
+  const GLOBAL = new Set(['theme', 'user', 'legacy_owner']);
+  const raw = {
     get(k, fb) { try { const v = localStorage.getItem(k); return v === null ? fb : JSON.parse(v); } catch (e) { return fb; } },
-    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } }
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+    del(k) { try { localStorage.removeItem(k); } catch (e) { /* ignore */ } }
+  };
+  const userSlug = (n) => String(n || '').trim().toLowerCase().replace(/\s+/g, ' ');
+  const scoped = (k) => { if (GLOBAL.has(k)) return k; const u = raw.get('user', null); return u ? `u:${userSlug(u)}:${k}` : k; };
+  const store = {
+    get: (k, fb) => raw.get(scoped(k), fb),
+    set: (k, v) => raw.set(scoped(k), v),
+    user: () => raw.get('user', null),
+    /* Sign in on this device. The first person to sign in inherits anything saved before usernames existed. */
+    signIn(name) {
+      const n = String(name || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+      if (!n) return false;
+      raw.set('user', n);
+      if (!raw.get('legacy_owner', null)) {
+        raw.set('legacy_owner', userSlug(n));
+        try {
+          Object.keys(localStorage).filter((k) => !k.startsWith('u:') && !GLOBAL.has(k)).forEach((k) => {
+            const dest = `u:${userSlug(n)}:${k}`;
+            if (localStorage.getItem(dest) === null) localStorage.setItem(dest, localStorage.getItem(k));
+          });
+        } catch (e) { /* storage unavailable */ }
+      }
+      return true;
+    },
+    signOut() { raw.del('user'); }
   };
 
   /* ---------- theme ---------- */

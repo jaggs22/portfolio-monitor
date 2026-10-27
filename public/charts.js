@@ -2,6 +2,8 @@
    Charts measure their container and redraw on resize. Colours come from CSS custom properties. */
 (function () {
   'use strict';
+  const PH = () => window.matchMedia && matchMedia('(max-width: 760px)').matches;
+  const FS = () => (PH() ? 13 : 11);
   const NS = 'http://www.w3.org/2000/svg';
   const css = (name, fb) => (getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fb);
 
@@ -30,7 +32,7 @@
     function draw() {
       const W = Math.max(260, host.clientWidth || 600), H = spec.height || 260;
       host.replaceChildren();
-      const pad = { l: 8, r: 52, t: 10, b: 22 };
+      const pad = { l: 8, r: PH() ? 60 : 52, t: 10, b: PH() ? 26 : 22 };
       const volH = spec.volume && spec.volume.length ? 44 : 0;
       const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': spec.label || 'Chart' });
       host.append(svg);
@@ -49,11 +51,11 @@
       const yf = spec.yFmt || defaultFmt;
       niceTicks(y0, y1, 4).filter((v) => v >= y0 && v <= y1).forEach((v) => {
         el('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: grid, 'stroke-width': 1 }, svg);
-        const t = el('text', { x: W - pad.r + 6, y: Y(v) + 4, fill: muted, 'font-size': 11 }, svg); t.textContent = yf(v);
+        const t = el('text', { x: W - pad.r + 6, y: Y(v) + 4, fill: muted, 'font-size': FS() }, svg); t.textContent = yf(v);
       });
       (spec.xTicks || []).forEach((xt) => {
         if (xt < x0 || xt > x1) return;
-        const t = el('text', { x: X(xt), y: H - 6, fill: muted, 'font-size': 11, 'text-anchor': 'middle' }, svg);
+        const t = el('text', { x: X(xt), y: H - 6, fill: muted, 'font-size': FS(), 'text-anchor': 'middle' }, svg);
         t.textContent = spec.xFmt ? spec.xFmt(xt) : xt;
       });
       if (volH) {
@@ -110,7 +112,7 @@
       const W = Math.max(260, host.clientWidth || 600), H = spec.height || 220;
       host.replaceChildren();
       const hasLine = spec.line && spec.line.values.some((v) => v != null);
-      const pad = { l: 8, r: hasLine ? 46 : 8, t: 10, b: 24 };
+      const pad = { l: 8, r: hasLine ? (PH() ? 54 : 46) : 8, t: 10, b: PH() ? 28 : 24 };
       const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': spec.label || 'Bar chart' });
       host.append(svg);
       const n = spec.labels.length;
@@ -132,7 +134,7 @@
       const step = Math.ceil(n / Math.max(2, Math.floor(plotW / 54)));
       spec.labels.forEach((l, i) => {
         if (i % step && i !== n - 1) return;
-        const t = el('text', { x: pad.l + i * slot + slot / 2, y: H - 7, fill: muted, 'font-size': 11, 'text-anchor': 'middle' }, svg); t.textContent = l;
+        const t = el('text', { x: pad.l + i * slot + slot / 2, y: H - 7, fill: muted, 'font-size': FS(), 'text-anchor': 'middle' }, svg); t.textContent = l;
       });
       if (hasLine) {
         const lv = spec.line.values, mn = Math.min.apply(null, lv.filter((v) => v != null)), mx = Math.max.apply(null, lv.filter((v) => v != null));
@@ -140,7 +142,7 @@
         const d = lv.map((v, i) => (v == null ? null : [pad.l + i * slot + slot / 2, LY(v)])).filter(Boolean);
         el('path', { d: d.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(''), fill: 'none', stroke: spec.line.color, 'stroke-width': 1.8 }, svg);
         d.forEach((p, i) => { el('circle', { cx: p[0], cy: p[1], r: 2.4, fill: spec.line.color }, svg); });
-        const lt = el('text', { x: W - pad.r + 5, y: LY(lv.filter((v) => v != null).slice(-1)[0]) + 4, fill: spec.line.color, 'font-size': 11 }, svg);
+        const lt = el('text', { x: W - pad.r + 5, y: LY(lv.filter((v) => v != null).slice(-1)[0]) + 4, fill: spec.line.color, 'font-size': FS() }, svg);
         lt.textContent = (spec.line.fmt || defaultFmt)(lv.filter((v) => v != null).slice(-1)[0]);
       }
     }

@@ -17,6 +17,8 @@
     feedback: store.get('feedback', {}) || {}, covQ: '', tvSymbol: 'LIN', demoFiling: false
   };
   const save = () => { store.set('disputes', state.disputes); store.set('tilt', state.tilt); store.set('deepen', state.deepen); store.set('holdings', state.holdings); };
+  const usd = (v) => '$' + Math.round(v || 0).toLocaleString('en-US');
+  const bookUsd = () => (store.get('holdings_usd', false) ? L.cleanHoldings(state.holdings).reduce((a, x) => a + x.weight, 0) : 0);
   const nameOf = (t) => (state.uniMap && state.uniMap[t] ? state.uniMap[t].name : t);
   const CORE = ['LIN', 'LLY', 'V'];
 
@@ -77,14 +79,28 @@
     return h('aside', { class: 'side' },
       h('a', { class: 'brand', href: '#/', style: { textDecoration: 'none' } }, UI.logo('brand-mark'), h('span', { class: 'brand-text' }, h('span', { class: 'brand-name' }, CFG.appName || 'Moat Monitor'), h('span', { class: 'brand-sub' }, 'AI Native Equity Research'))),
       h('nav', { class: 'nav', 'aria-label': 'Main' }, NAV.map(([id, path, label, ic]) => h('a', { href: '#/' + path, 'aria-current': r.page === id ? 'page' : null }, icon(ic), label))),
-      state.data ? h('div', { class: 'side-sec' }, h('div', { class: 'side-label' }, 'Full research'),
-        CORE.map((t) => {
-          const p = priceOf(t);
-          return h('a', { class: 'side-co', href: '#/c/' + t, 'aria-current': r.t === t ? 'page' : null }, h('b', null, nameOf(t)), p ? chg(p.pct) : h('span'), h('small', null, t + (p ? ' · ' + fmt.px(p.price) : '')));
-        })) : null,
       h('div', { class: 'side-foot' },
-        h('button', { type: 'button', class: 'user', onclick: (e) => userMenu(e.currentTarget) }, h('span', { class: 'avatar' }, 'J'), h('span', null, h('b', null, 'Your workspace'), h('small', null, 'Holdings, theme, help'))),
+        h('button', { type: 'button', class: 'user', onclick: (e) => userMenu(e.currentTarget) }, h('span', { class: 'avatar' }, initial()), h('span', { class: 'user-t' }, h('b', null, workspaceName()), h('small', null, 'Holdings, theme, help'))),
         h('div', { class: 'marker' }, 'Prototype · live data, delayed')));
+  }
+  const userName = () => store.user() || '';
+  const initial = () => (userName().trim()[0] || '?').toUpperCase();
+  const workspaceName = () => (userName() ? `${userName()}'s workspace` : 'Your workspace');
+  /* Sign-in: a username only, no password. It names the workspace and keeps each person's data separate on this device. */
+  function gate() {
+    const inp = h('input', { type: 'text', class: 'gate-in', placeholder: 'Enter your name', autocomplete: 'given-name', autocapitalize: 'words', maxlength: '40', 'aria-label': 'Your name' });
+    const go2 = () => { if (store.signIn(inp.value)) location.reload(); else inp.focus(); };
+    inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') go2(); });
+    const view = h('div', { class: 'gate' }, h('div', { class: 'gate-card' },
+      UI.logo('gate-mark'),
+      h('h1', null, CFG.appName || 'Moat Monitor'),
+      h('p', { class: 'gate-sub' }, 'AI Native Equity Research'),
+      h('label', { class: 'gate-q' }, 'What should we call you?'),
+      inp,
+      btn('Continue', go2, 'primary'),
+      h('p', { class: 'gate-note' }, 'No password. Your name labels your workspace and keeps your book separate from anyone else on this device.')));
+    $('#app').replaceChildren(view);
+    setTimeout(() => inp.focus(), 50);
   }
   function tabbar(r) {
     return h('nav', { class: 'tabbar', 'aria-label': 'Main' }, NAV.map(([id, path, label, ic]) => h('a', { href: '#/' + path, 'aria-current': r.page === id || (id === 'coverage' && r.page === 'company') ? 'page' : null }, icon(ic), label)));
@@ -110,12 +126,17 @@
     const outside = (e) => { if (!pop.contains(e.target)) close(); };
     const item = (ic, label, fn) => h('button', { type: 'button', onclick: () => { close(); fn(); } }, icon(ic), label);
     const pop = h('div', { class: 'pop', role: 'menu' },
+      h('div', { class: 'pop-head' }, h('span', { class: 'avatar' }, initial()), h('b', null, workspaceName())),
       item('grid', 'Edit holdings', holdingsWin),
+      item('chev', 'Take the tour', () => { go(''); setTimeout(() => OB.tour('home'), 300); }),
       item(isDark() ? 'sun' : 'moon', isDark() ? 'Light mode' : 'Dark mode', () => { applyTheme(isDark() ? 'light' : 'dark'); render(); }),
       item('view', 'Your view and disputes', () => go('view')),
       h('hr'),
       item('news', 'How this works', helpWin),
-      item('ext', 'Send feedback', sendFeedback));
+      item('ext', 'Send feedback', sendFeedback),
+      h('hr'),
+      item('view', 'Switch user', () => { store.signOut(); location.reload(); }));
+
     document.body.append(pop);
     const top = r.bottom + 6 + pop.offsetHeight > innerHeight ? r.top - pop.offsetHeight - 6 : r.bottom + 6;
     pop.style.top = Math.max(8, top) + 'px';
@@ -134,8 +155,9 @@
     const today = new Date();
     const out = [];
     out.push(h('section', { class: 'hero' },
-      h('div', null, eyebrow(today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
+      h('div', null, eyebrow(workspaceName() + ' · ' + today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
         h('h1', { style: { marginTop: '8px' } }, pm.move == null ? 'Your book' : ['Your book is ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? 'up ' : 'down ') + fmt.pct(Math.abs(pm.move), 2)), ' today']),
+        bookUsd() ? h('p', { class: 'book-usd' }, h('b', null, usd(bookUsd())), ' book', pm.move != null ? [' · ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? '+' : '−') + usd(Math.abs(pm.move * bookUsd()))), ' today'] : null) : null,
         h('p', { class: 'sub' }, [pm.best ? `${nameOf(pm.best.ticker)} leads at ${fmt.spct(pm.best.change, 1)}` : null, pm.worst && pm.worst !== pm.best ? `${nameOf(pm.worst.ticker)} lags at ${fmt.spct(pm.worst.change, 1)}` : null].filter(Boolean).join('. ') + (pm.best ? '.' : ''))),
       btn('Edit holdings', holdingsWin, 'small')));
 
@@ -291,18 +313,21 @@
   /* ---------- holdings, backup, help, feedback ---------- */
   const stackOf = (fn) => { const n = fn(); n.classList.add('stack'); return n; };
   function holdingsWin() {
-    win.open({ title: 'Holdings', sub: 'Weights are relative and stay on this device.', build: () => stackOf(() => {
+    win.open({ title: 'Holdings', sub: 'In dollars. Your daily move is weighted by them. Kept on this device.', build: () => stackOf(() => {
       const hs = L.cleanHoldings(state.holdings).sort((a, b) => b.weight - a.weight);
+      const setAmt = (t, v) => { state.holdings = state.holdings.map((y) => (y.ticker === t ? { ticker: y.ticker, weight: v } : y)); store.set('holdings_usd', true); save(); render(); };
       const rows = hs.map((x) => {
-        const inp = h('input', { type: 'number', min: '0', step: '0.5', inputmode: 'decimal', style: { width: '84px' }, 'aria-label': 'Weight for ' + x.ticker });
-        inp.value = x.weight;
-        inp.addEventListener('change', () => { const w = Number(inp.value); if (!isFinite(w) || w < 0) { inp.value = x.weight; return; } state.holdings = state.holdings.map((y) => (y.ticker === x.ticker ? { ticker: y.ticker, weight: w } : y)); save(); render(); });
-        return h('div', { class: 'li' }, h('span', { class: 'tickers', style: { width: '52px' } }, x.ticker), h('div', { class: 'li-main' }, nameOf(x.ticker)), inp, btn('Remove', () => { state.holdings = state.holdings.filter((y) => y.ticker !== x.ticker); save(); win.refresh(); render(); }, 'ghost small'));
+        const inp = h('input', { type: 'text', inputmode: 'numeric', class: 'amt', 'aria-label': 'Dollars in ' + x.ticker });
+        inp.value = usd(x.weight);
+        inp.addEventListener('change', () => { const w = Number(inp.value.replace(/[^0-9.]/g, '')); if (!isFinite(w) || w < 0) { inp.value = usd(x.weight); return; } setAmt(x.ticker, w); inp.value = usd(w); tot.textContent = usd(bookUsd()); });
+        return h('div', { class: 'li' }, h('span', { class: 'tickers', style: { width: '52px' } }, x.ticker), h('div', { class: 'li-main' }, nameOf(x.ticker)), inp, h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Remove ' + x.ticker, onclick: () => { state.holdings = state.holdings.filter((y) => y.ticker !== x.ticker); save(); win.refresh(); render(); } }, icon('close')));
       });
       const held = new Set(hs.map((x) => x.ticker));
       const sel = h('select', { 'aria-label': 'Add a stock' }, h('option', { value: '' }, 'Add a stock'), state.data.universe.filter((u) => !held.has(u.ticker)).map((u) => h('option', { value: u.ticker }, `${u.ticker} · ${u.name}`)));
-      sel.addEventListener('change', () => { if (!sel.value) return; state.holdings = state.holdings.concat([{ ticker: sel.value, weight: 5 }]); save(); win.refresh(); render(); });
-      return h('div', null, h('div', { class: 'card list' }, rows.length ? rows : h('div', { class: 'li' }, 'No holdings.')), sel);
+      sel.addEventListener('change', () => { if (!sel.value) return; state.holdings = state.holdings.concat([{ ticker: sel.value, weight: 10000 }]); store.set('holdings_usd', true); save(); win.refresh(); render(); });
+      const tot = h('b', null, usd(bookUsd()));
+      return h('div', null, h('div', { class: 'row-actions', style: { justifyContent: 'space-between' } }, h('span', { class: 'muted' }, 'Total ', tot), btn('Start over', () => { win.close(); OB.book(); }, 'small ghost')),
+        h('div', { class: 'card list' }, rows.length ? rows : h('div', { class: 'li' }, 'No holdings.')), sel);
     }) });
   }
   async function exportBackup() {
@@ -385,17 +410,24 @@
   });
 
   const REPORT = window.makeReport(CO, { state, nameOf });
+  const OB = window.makeOnboard({ state, nameOf, go, render: () => render() });
 
   async function init() {
+    if (!store.user()) { gate(); return; }
     lastRoute = route();
     render();
     await loadData();
     render();
+    if (state.data && OB.maybeStart()) return subscribe();
     const r = route();
     if (r.page === 'company' && r.win && state.data) CO.openWin(r.t, r.win, { fromRoute: true });
-    D.subscribe(state.data ? state.data.universe.map((u) => u.ticker) : CORE, () => { if (!win.depth() && !document.querySelector('input:focus, select:focus, textarea:focus')) render(); });
+    if (state.data && r.page === 'company' && CORE.includes(r.t) && r.mode === 'quick' && !r.win && !store.get('tour_company', false) && store.get('tour_home', false)) setTimeout(() => OB.tour('company'), 800);
+    subscribe();
+  }
+  function subscribe() {
+    D.subscribe(state.data ? state.data.universe.map((u) => u.ticker) : CORE, () => { if (!win.depth() && !document.querySelector('.ob, .tour') && !document.querySelector('input:focus, select:focus, textarea:focus')) render(); });
   }
   if ('serviceWorker' in navigator && location.protocol !== 'file:') window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   init();
-  window.__monitor = { state, CO, render, go };
+  window.__monitor = { state, CO, render, go, OB };
 })();
