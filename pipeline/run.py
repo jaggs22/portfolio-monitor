@@ -39,6 +39,8 @@ def main(argv=None):
         jobs.job_fundamentals(sec_http, fetch_yf, a.out, changed, now)
     if a.job in ("mgmt", "all"):
         jobs.job_mgmt(sec_http, fetch_yf_mgmt, llm.make_caller(), a.out, tickers, now)
+    if a.job == "research":  # benchmarks for relative performance, without waiting for the daily run
+        jobs.job_history(yahoo, stooq, a.out, config.BENCH, now, job="bench")
     if a.job in ("peers", "research", "all"):
         from . import peers
         jobs.job_peers(peers.fetch, a.out, None, now)

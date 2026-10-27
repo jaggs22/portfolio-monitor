@@ -257,6 +257,14 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
             rev_g = round(fy["revenue"] / annual[idx + 1][1]["revenue"] - 1, 4)
             growth_basis = "FY " + annual[idx][0][:4]
     usd = lambda x: round(x * fx_fin_to_usd / 1e9, 2) if x is not None else None  # noqa: E731
+    # Consensus for the current and next fiscal year, as used above (next-year EPS already reconciled)
+    consensus = {
+        "fy0_end": (last_fy + dt.timedelta(days=365)).isoformat() if last_fy else None,
+        "eps0": e0, "eps1": e1, "rev_g0": g0, "rev_g1": g1,
+        "rev0_m": round(fy["revenue"] * (1 + g0) * fx_fin_to_usd / 1e6, 1) if fy.get("revenue") and g0 is not None else None,
+        "rev1_m": round(fy["revenue"] * (1 + g0) * (1 + g1) * fx_fin_to_usd / 1e6, 1) if fy.get("revenue") and g0 is not None and g1 is not None else None,
+        "eps_currency": info.get("currency"),
+    }
     return {
         "ticker": ticker, "name": NAMES.get(ticker) or info.get("shortName") or ticker,
         "quote_currency": info.get("currency"), "report_currency": info.get("financialCurrency") or info.get("currency"),
@@ -270,6 +278,7 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
         "net_debt_ebitda": round((debt - cash) / ebitda, 2) if ebitda and ebitda > 0 and ticker not in EV_NOT_MEANINGFUL else None,
         "interest_cover": ratio(v.get("op_income"), abs(v["interest"])) if v.get("interest") else None,
         "basis": basis.get("revenue", "n/a"), "ebitda_kind": basis.get("ebitda_kind", "adjusted"),
+        "consensus": consensus,
         "notes": notes,
     }
 

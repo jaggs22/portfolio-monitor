@@ -23,6 +23,12 @@ TIERS = {
 BASIC = ["MSFT", "JPM", "GOOGL", "WM", "COST", "KO", "AMZN", "XOM", "NEE", "AMT"]
 TICKERS = list(TIERS) + BASIC
 
+# Benchmarks for relative performance: the S&P 500 and the SPDR sector funds (price history only).
+BENCH = ["SPY", "XLB", "XLV", "XLF", "XLK", "XLP", "XLY", "XLC", "XLE", "XLU", "XLRE", "XLI"]
+SECTOR_BENCH = {"Materials": "XLB", "Health care": "XLV", "Financials": "XLF", "Technology": "XLK",
+                "Consumer staples": "XLP", "Consumer discretionary": "XLY", "Communication services": "XLC",
+                "Energy": "XLE", "Utilities": "XLU", "Real estate": "XLRE", "Industrials": "XLI"}
+
 # Index, rates, FX and commodity symbols for the markets strip.
 MARKET_SYMBOLS = {
     "^GSPC": "S&P 500",

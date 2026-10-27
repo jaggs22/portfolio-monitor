@@ -79,8 +79,8 @@ def job_quotes(http, out, tickers=None, now=None, stooq_http=None):
     return doc
 
 
-def job_history(http, stooq_http, out, tickers=None, now=None):
-    tickers = tickers or config.TICKERS
+def job_history(http, stooq_http, out, tickers=None, now=None, job="history"):
+    tickers = tickers or (config.TICKERS + config.BENCH)
     errors, done = [], 0
     for sym in tickers:
         bars, source = [], "yahoo"
@@ -99,7 +99,7 @@ def job_history(http, stooq_http, out, tickers=None, now=None):
         doc.update({"ticker": sym, "asof": iso(now), "source": source})
         write_json(Path(out) / "history" / f"{sym}.json", doc)
         done += 1
-    record(out, "history", done > 0, errors, done, now)
+    record(out, job, done > 0, errors, done, now)
     return done
 
 
