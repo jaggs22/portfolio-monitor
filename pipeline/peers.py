@@ -208,6 +208,11 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
     # NTM P/E on consensus EPS (adjusted basis, as brokers quote it), checked against Yahoo's forward P/E
     price = _f(info.get("currentPrice")) or _f(info.get("regularMarketPrice"))
     e0, e1 = _f((est or {}).get("eps0")), _f((est or {}).get("eps1"))
+    fwd_eps = _f(info.get("forwardEps"))
+    same_ccy = (info.get("currency") or "") == (info.get("financialCurrency") or info.get("currency") or "")
+    if fwd_eps and fwd_eps > 0 and same_ccy and e1 and abs(e1 / fwd_eps - 1) > 0.07:
+        notes.append(f"Next-year consensus EPS ({e1:.2f}) disagreed with Yahoo's forward EPS ({fwd_eps:.2f}); forward EPS used.")
+        e1 = fwd_eps
     ntm_pe = None
     if price and frac is not None and e1 and e1 > 0:
         ntm_eps = frac * (e0 if e0 and e0 > 0 else e1) + (1 - frac) * e1
@@ -226,6 +231,8 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
     }
     ltm_m = {"ev_ebitda": ratio(ev, ebitda), "pe": ratio(mcap, ni) if ni and ni > 0 else None, "ev_ocf": ratio(ev, cfo),
              "ev_fcf": ratio(ev, fcf) if fcf and fcf > 0 else None}
+    if ltm_m["pe"] and ntm["pe"] and ltm_m["pe"] > 1.8 * ntm["pe"]:
+        notes.append("Trailing earnings are depressed by one-off charges (for pharma, usually acquired IPR&D); NTM is the cleaner read.")
     if ticker in EV_NOT_MEANINGFUL:
         for blk in (ltm_m, ntm):
             for k in ("ev_ebitda", "ev_ocf", "ev_fcf"):

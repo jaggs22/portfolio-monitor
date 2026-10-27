@@ -158,9 +158,10 @@ def _total(facts, concept, window):
     return None
 
 
-def build_views(facts, quarterly=True):
-    """One view per axis that has revenue for at least two members. quarterly picks ~3-month windows, else ~12-month."""
-    lo, hi = (80, 100) if quarterly else (350, 380)
+def build_views(facts, quarterly=True, ytd=False):
+    """One view per axis that has revenue for at least two members. quarterly picks ~3-month windows, ytd the
+    6- or 9-month window of a 10-Q, otherwise ~12-month windows."""
+    lo, hi = (80, 100) if quarterly else (170, 285) if ytd else (350, 380)
     axes_present = {a for f in facts for a in f["dims"] if a in AXES}
     views = []
     for axis in sorted(axes_present, key=lambda a: list(AXES).index(a)):
@@ -232,7 +233,7 @@ def latest_filings(submissions, forms=("10-Q", "10-K")):
 
 def fetch_segments(sec_http, cik, submissions):
     """Returns ({quarterly: [...], annual: [...], filings: {...}}, errors)."""
-    errors, res = [], {"quarterly": [], "annual": [], "filings": {}}
+    errors, res = [], {"quarterly": [], "ytd": [], "annual": [], "filings": {}}
     lf = latest_filings(submissions)
     for form, key in (("10-Q", "quarterly"), ("10-K", "annual")):
         f = lf.get(form)
@@ -248,6 +249,8 @@ def fetch_segments(sec_http, cik, submissions):
                 continue
             facts = parse_instance(sec_http.text(f"{base}/{name}"))
             res[key] = build_views(facts, quarterly=(form == "10-Q"))
+            if form == "10-Q":
+                res["ytd"] = build_views(facts, quarterly=False, ytd=True)
             res.setdefault("inventory", {})[key] = inventory(facts)
             res["filings"][key] = dict(f, url=f"{base}/{f['primary']}")
         except Exception as e:  # noqa: BLE001
