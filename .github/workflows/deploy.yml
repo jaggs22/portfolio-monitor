@@ -1,6 +1,7 @@
 name: deploy
 # Publishes the site and Worker to Cloudflare whenever the app or Worker changes on main.
 # Needs two repository secrets: CLOUDFLARE_API_TOKEN (template "Edit Cloudflare Workers") and CLOUDFLARE_ACCOUNT_ID.
+# Without them the deploy step is skipped (not failed), so the job stays green if Cloudflare's own Git build is used instead.
 on:
   push:
     branches: [main]
@@ -13,15 +14,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - name: Tests
         run: node test/engine.test.js && node test/fin.test.js && node test/worker.test.mjs
+      - name: Install Wrangler 4 from package.json
+        run: npm install --no-audit --no-fund
       - name: Deploy to Cloudflare
+        if: env.HAS_TOKEN == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
+          wranglerVersion: "4"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --config worker/wrangler.toml
+      - name: Deploy skipped
+        if: env.HAS_TOKEN != 'true'
+        run: echo "::warning::CLOUDFLARE_API_TOKEN is not set, so nothing was deployed. Add the secrets (see the comment at the top of this file) or use Cloudflare's Git integration."
