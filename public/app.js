@@ -145,6 +145,7 @@
       h('div', { class: 'pop-usage' }, usageBar()),
       item('grid', 'Edit holdings', holdingsWin),
       item('chev', 'Take the tour', () => { go(''); setTimeout(() => OB.tour('home'), 300); }),
+      window.MoatInstall && window.MoatInstall.available() ? item('ext', 'Install the app', () => window.MoatInstall.open()) : null,
       item(isDark() ? 'sun' : 'moon', isDark() ? 'Light mode' : 'Dark mode', () => { applyTheme(isDark() ? 'light' : 'dark'); render(); }),
       item('view', 'Your view and disputes', () => go('view')),
       h('hr'),

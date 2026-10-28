@@ -990,3 +990,30 @@ body.chat-open .fab, body.ob-open .fab, body.win-open .fab { display: none; }
   .ch-model-btn { font-size: 15px; padding: 8px 8px 8px 0; } .ch-model-btn .ic { width: 16px; height: 16px; }
   .ch-mi { padding: 12px 14px; } .ch-mi-t b { font-size: 17px; } .ch-mi-t small { font-size: 14.5px; } .ch-mi-t em { font-size: 13.5px; }
 }
+
+/* install prompt (phones) */
+body.ins-open { overflow: hidden; }
+.ins { position: fixed; inset: 0; z-index: 120; background: rgba(18, 18, 17, .55); display: flex; align-items: flex-end; justify-content: center; animation: ins-fade .2s ease-out; }
+@keyframes ins-fade { from { opacity: 0; } to { opacity: 1; } }
+.ins-card { width: 100%; max-width: 520px; background: var(--surface); color: var(--ink2); border-radius: 20px 20px 0 0; padding: 22px 20px calc(18px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 16px; box-shadow: 0 -12px 40px rgba(0, 0, 0, .2); animation: ins-up .28s cubic-bezier(.2, .8, .2, 1); font-family: var(--sans); }
+@keyframes ins-up { from { transform: translateY(40px); } to { transform: none; } }
+.ins-top { display: flex; gap: 14px; align-items: flex-start; }
+.ins-logo { flex: none; width: 56px; height: 56px; display: inline-flex; }
+.ins-logo svg { width: 100%; height: 100%; }
+.ins-logo .lg-t { fill: var(--ink); } .ins-logo .lg-r { stroke: var(--surface); } .ins-logo .lg-k { fill: var(--surface); }
+.ins-top h2 { margin: 2px 0 4px; font: 500 24px/1.15 var(--serif); color: var(--ink); }
+.ins-lead { margin: 0; font-size: 16px; line-height: 1.45; color: var(--ink2); }
+.ins-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); }
+.ins-steps li { display: flex; align-items: center; gap: 14px; padding: 14px 16px; font-size: 16.5px; line-height: 1.45; color: var(--ink); }
+.ins-steps li + li { border-top: 1px solid var(--line); }
+.ins-n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--bg); display: grid; place-items: center; font: 600 14px/1 var(--sans); }
+.ins-s b { font-weight: 600; }
+.ins-k { display: inline-flex; align-items: center; gap: 5px; vertical-align: middle; padding: 2px 8px 2px 6px; border: 1px solid var(--line2); border-radius: 8px; background: var(--surface); white-space: nowrap; font-weight: 600; }
+.ins-k svg { width: 19px; height: 19px; color: var(--info); }
+.ins-k:not(:has(span)) { padding: 2px 5px; }
+.ins-act { display: flex; flex-direction: column; gap: 8px; }
+.ins-go { height: 52px; justify-content: center; font-size: 17px; border-radius: 12px; gap: 8px; }
+.ins-go svg { width: 20px; height: 20px; }
+.ins-later { all: unset; cursor: pointer; text-align: center; padding: 12px; color: var(--mute); font-size: 15px; }
+.ins-later:hover { color: var(--ink); }
+.ins-steps[hidden] { display: none; }
