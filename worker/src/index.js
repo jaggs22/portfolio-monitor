@@ -310,22 +310,31 @@ function relay(body, kind, meta) {
   const enc = new TextEncoder(), dec = new TextDecoder(), reader = body.getReader();
   let buf = '';
   const lines = (ctrl, flush) => {
-    let i;
+    let i, n = 0;
     while ((i = buf.indexOf('\n')) >= 0 || (flush && buf)) {
       const line = (i >= 0 ? buf.slice(0, i) : buf).trim();
       buf = i >= 0 ? buf.slice(i + 1) : '';
       if (!line.startsWith('data:')) continue;
       const d = line.slice(5).trim();
       if (!d || d === '[DONE]') continue;
-      try { const t = chunkText(kind, JSON.parse(d)); if (t) ctrl.enqueue(enc.encode(JSON.stringify({ t }) + '\n')); } catch (e) { /* skip partial line */ }
+      let j;
+      try { j = JSON.parse(d); } catch (e) { continue; }
+      if (j && j.error) { ctrl.enqueue(enc.encode(JSON.stringify({ e: String(j.error.message || j.error).slice(0, 200) }) + '\n')); n++; continue; }
+      const t = chunkText(kind, j);
+      if (t) { ctrl.enqueue(enc.encode(JSON.stringify({ t }) + '\n')); n++; }
     }
+    return n;
   };
   return new ReadableStream({
+    /* Keep reading until something is sent or the source ends: a pull that enqueues nothing is never called again,
+       which stalls the reply when a network chunk ends mid-line. */
     async pull(ctrl) {
-      const { done, value } = await reader.read();
-      if (done) { buf += dec.decode(); lines(ctrl, true); ctrl.enqueue(enc.encode(JSON.stringify(Object.assign({ done: true }, meta)) + '\n')); ctrl.close(); return; }
-      buf += dec.decode(value, { stream: true });
-      lines(ctrl, false);
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) { buf += dec.decode(); lines(ctrl, true); ctrl.enqueue(enc.encode(JSON.stringify(Object.assign({ done: true }, meta)) + '\n')); ctrl.close(); return; }
+        buf += dec.decode(value, { stream: true });
+        if (lines(ctrl, false)) return;
+      }
     },
     cancel() { reader.cancel(); }
   });

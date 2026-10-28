@@ -79,7 +79,9 @@ const ff = (h) => async (u, o) => {
   hits.push(model);
   return h(model, b, u);
 };
-const sse = (events) => new Response(events.map((e) => 'data: ' + (typeof e === 'string' ? e : JSON.stringify(e)) + '\n\n').join(''), { headers: { 'content-type': 'text/event-stream' } });
+// Deliver every stream in 7-byte pieces so lines are split across network chunks, as they are in production.
+const pieces = (s, n = 7) => { const b = new TextEncoder().encode(s); let i = 0; return new ReadableStream({ pull(c) { if (i >= b.length) { c.close(); return; } c.enqueue(b.slice(i, i + n)); i += n; } }); };
+const sse = (events) => new Response(pieces(events.map((e) => 'data: ' + (typeof e === 'string' ? e : JSON.stringify(e)) + '\r\n\r\n').join('')), { headers: { 'content-type': 'text/event-stream' } });
 const geminiOk = (t) => sse([{ candidates: [{ content: { parts: [{ text: 'hidden', thought: true }, { text: t.slice(0, 3) }] } }] }, { candidates: [{ content: { parts: [{ text: t.slice(3) }] } }] }]);
 const oaiOk = (t) => sse([{ choices: [{ delta: { content: t.slice(0, 2) } }] }, { choices: [{ delta: { content: t.slice(2) } }] }, '[DONE]']);
 const rj = async (r) => {
@@ -175,4 +177,9 @@ r = await pick('nvidia', () => oaiOk('x')); assert.equal(r.status, 503); assert.
 r = await pick('something-else', () => oaiOk('treated as auto')); cj = await rj(r); assert.equal(cj.reply, 'treated as auto');
 r = await handle(new Request('https://x.dev/api/chat/status'), gq, {}, ff(), ccache); cj = await r.json();
 assert.equal(cj.providers.gemini.cap, 1400); assert.equal(cj.providers.groq.cap, 900); assert.equal(cj.providers.groq.left, 900 - 3);
+// an error sent inside a stream reaches the app instead of an empty reply
+_chatTest.reset(); _limitsTest.reset(); cstore.clear();
+r = await call(Object.assign({}, env, { GROQ_API_KEY: 'q' }), () => sse([{ error: { message: 'model overloaded' } }]));
+const errLines = (await r.text()).trim().split('\n').map((x) => JSON.parse(x));
+assert.equal(errLines[0].e, 'model overloaded'); assert.ok(errLines[1].done);
 console.log('worker tests passed');

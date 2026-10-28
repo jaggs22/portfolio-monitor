@@ -211,7 +211,7 @@
         if (r.ok && (r.headers.get('content-type') || '').includes('ndjson') && r.body) {
           // Streamed reply: show words as they arrive.
           const rd = r.body.getReader(), dec = new TextDecoder();
-          let buf = '', out = '';
+          let buf = '', out = '', streamErr = '';
           for (;;) {
             const { done, value } = await rd.read();
             if (done) break;
@@ -221,11 +221,11 @@
               const line = buf.slice(0, i); buf = buf.slice(i + 1);
               if (!line.trim()) continue;
               let x; try { x = JSON.parse(line); } catch (e) { continue; }
-              if (x.t) { out += x.t; live = out; paint(); } else if (x.done) j = x;
+              if (x.t) { out += x.t; live = out; paint(); } else if (x.e) streamErr = x.e; else if (x.done) j = x;
             }
           }
           out = out.replace(/<think>[\s\S]*?(<\/think>|$)/g, '').trim();
-          if (out) { reply = out; via = j.model || ''; } else err = 'No answer this time. Try rephrasing.';
+          if (out) { reply = out; via = j.model || ''; } else err = streamErr ? `The model returned an error: ${streamErr}` : 'No answer this time. Try again, or switch model.';
         } else {
           j = await r.json().catch(() => ({}));
           if (r.ok && j.reply) { reply = j.reply; via = j.model || ''; } else err = j.error || 'The analyst is unavailable right now.';
