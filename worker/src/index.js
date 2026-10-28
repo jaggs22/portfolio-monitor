@@ -185,20 +185,24 @@ async function usage(env) {
 }
 const dailyCap = (env) => Math.max(0, Number(env.CHAT_DAILY_CAP) || DAILY_CAP);
 /* Messages left today for everyone: the overall ceiling, or the room left across configured models, whichever is lower. */
-async function leftToday(env, rungs, used) {
+async function quotaInfo(env, rungs, used) {
   used = used || (await usage(env));
-  let room = 0;
+  let room = 0, total = 0;
   for (const p of rungs) {
     const n = p.models ? p.models.length : p.take || 1;
     const prefix = p.id + ':';
     const spent = Object.entries(used).filter(([k]) => k.startsWith(prefix)).reduce((a, [, v]) => a + v, 0);
-    room += Math.max(0, p.cap * n - spent);
+    total += p.cap * n; room += Math.max(0, p.cap * n - spent);
   }
-  return Math.max(0, Math.min(room, dailyCap(env) - (used.all || 0)));
+  const cap = Math.min(total, dailyCap(env));
+  const left = Math.max(0, Math.min(room, dailyCap(env) - (used.all || 0)));
+  return { left, cap, used: Math.max(0, cap - left) };
 }
+const leftToday = async (env, rungs, used) => (await quotaInfo(env, rungs, used)).left;
 export async function chatStatus(env) {
   const rungs = LADDER.filter((p) => env[p.key]);
-  return json({ left: rungs.length ? await leftToday(env, rungs) : 0, resets_at: resetsAt(), on: rungs.length > 0 }, 200, 0);
+  const q = rungs.length ? await quotaInfo(env, rungs) : { left: 0, cap: 0, used: 0 };
+  return json(Object.assign(q, { resets_at: resetsAt(), on: rungs.length > 0 }), 200, 0);
 }
 const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
 const picks = {}; // provider id -> { at, list }
@@ -257,25 +261,62 @@ export function restFor(status, headers, text) {
   const ra = Number(headers && headers.get && headers.get('retry-after'));
   return isFinite(ra) && ra > 0 ? Math.min(ra, 3600) : 60;
 }
-async function ask(p, model, env, f, system, msgs) {
+/* Open a streaming reply. Gemini thinks before answering by default; the lowest thinking setting is asked for, and
+   if a model rejects that setting the request is repeated without it. Returns { stream } or an error shape. */
+function thinkingFor(model) {
+  const v = verOf(model);
+  if (v >= 3) return { thinkingLevel: 'low' };
+  if (v >= 2.5) return { thinkingBudget: 0 };
+  return null;
+}
+async function openStream(p, model, env, f, system, msgs, noThink) {
   let r;
   if (p.kind === 'gemini') {
-    r = await f(`${GEMINI}models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
-      body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: msgs.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })), generationConfig: { temperature: 0.4, maxOutputTokens: 1200 } }) });
+    const gc = { temperature: 0.4, maxOutputTokens: 1200 };
+    const tc = noThink ? null : thinkingFor(model);
+    if (tc) gc.thinkingConfig = tc;
+    r = await f(`${GEMINI}models/${encodeURIComponent(model)}:streamGenerateContent?alt=sse`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
+      body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: msgs.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })), generationConfig: gc }) });
   } else {
     r = await f(`${p.base}/chat/completions`, { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${env[p.key]}` },
-      body: JSON.stringify(Object.assign({ model, messages: [{ role: 'system', content: system }].concat(msgs), temperature: 0.4, max_tokens: 1200 }, p.id.startsWith('groq') && /gpt-oss/.test(model) ? { reasoning_effort: 'low' } : {})) });
+      body: JSON.stringify(Object.assign({ model, messages: [{ role: 'system', content: system }].concat(msgs), temperature: 0.4, max_tokens: 1200, stream: true }, p.id.startsWith('groq') && /gpt-oss/.test(model) ? { reasoning_effort: 'low' } : {})) });
   }
-  const raw = await r.text();
+  if (r.ok && r.body) return { stream: r.body };
+  const raw = await r.text().catch(() => '');
   let j = {};
   try { j = JSON.parse(raw); } catch (e) { /* non-JSON error body */ }
-  if (!r.ok) return { status: r.status, headers: r.headers, err: ((j.error && (j.error.message || j.error)) || raw).toString().slice(0, 300) };
-  if (p.kind === 'gemini') {
-    const c = (j.candidates || [])[0];
-    return { text: c && c.content && Array.isArray(c.content.parts) ? c.content.parts.filter((x) => !x.thought).map((x) => x.text || '').join('').trim() : '' };
-  }
-  const c = (j.choices || [])[0];
-  return { text: c && c.message && typeof c.message.content === 'string' ? c.message.content.trim() : '' };
+  const err = ((j.error && (j.error.message || j.error)) || raw).toString().slice(0, 300);
+  if (p.kind === 'gemini' && !noThink && r.status === 400 && /think/i.test(err)) return openStream(p, model, env, f, system, msgs, true);
+  return { status: r.status, headers: r.headers, err };
+}
+/* Turn the provider's server-sent events into newline-delimited JSON: {"t": text} chunks, then one {"done": true, ...}. */
+const chunkText = (kind, j) => {
+  if (kind === 'gemini') { const c = (j.candidates || [])[0]; return c && c.content && Array.isArray(c.content.parts) ? c.content.parts.filter((x) => !x.thought).map((x) => x.text || '').join('') : ''; }
+  const c = (j.choices || [])[0]; return (c && c.delta && typeof c.delta.content === 'string' && c.delta.content) || '';
+};
+function relay(body, kind, meta) {
+  const enc = new TextEncoder(), dec = new TextDecoder(), reader = body.getReader();
+  let buf = '';
+  const lines = (ctrl, flush) => {
+    let i;
+    while ((i = buf.indexOf('\n')) >= 0 || (flush && buf)) {
+      const line = (i >= 0 ? buf.slice(0, i) : buf).trim();
+      buf = i >= 0 ? buf.slice(i + 1) : '';
+      if (!line.startsWith('data:')) continue;
+      const d = line.slice(5).trim();
+      if (!d || d === '[DONE]') continue;
+      try { const t = chunkText(kind, JSON.parse(d)); if (t) ctrl.enqueue(enc.encode(JSON.stringify({ t }) + '\n')); } catch (e) { /* skip partial line */ }
+    }
+  };
+  return new ReadableStream({
+    async pull(ctrl) {
+      const { done, value } = await reader.read();
+      if (done) { buf += dec.decode(); lines(ctrl, true); ctrl.enqueue(enc.encode(JSON.stringify(Object.assign({ done: true }, meta)) + '\n')); ctrl.close(); return; }
+      buf += dec.decode(value, { stream: true });
+      lines(ctrl, false);
+    },
+    cancel() { reader.cancel(); }
+  });
 }
 export async function chat(request, env, f = fetch, cache = null) {
   const rungs = LADDER.filter((p) => env[p.key]);
@@ -304,8 +345,11 @@ export async function chat(request, env, f = fetch, cache = null) {
       try {
         // Groq allows about 8k tokens a minute, so it gets a shorter context and history.
         const sys = CHAT_SYSTEM + '\n\nCONTEXT\n' + context.slice(0, p.tight ? 14000 : 30000);
-        const r = await ask(p, model, env, f, sys, p.tight ? msgs.slice(-6) : msgs);
-        if (r.text) return json({ reply: r.text.replace(/<think>[\s\S]*?<\/think>/g, '').trim(), model, provider: p.id, left: await leftToday(env, rungs) }, 200, 0);
+        const r = await openStream(p, model, env, f, sys, p.tight ? msgs.slice(-6) : msgs);
+        if (r.stream) {
+          const meta = Object.assign({ model, provider: p.id }, await quotaInfo(env, rungs));
+          return new Response(relay(r.stream, p.kind, meta), { headers: Object.assign({ 'content-type': 'application/x-ndjson; charset=utf-8', 'cache-control': 'no-store' }, SEC_HEADERS) });
+        }
         const rest = restFor(r.status, r.headers, r.err);
         if (rest) { limited = true; await coolDown(model, rest, cache); last = `${model}: rate limited`; continue; }
         if (r.status === 401 || r.status === 403) { if (p.key) deadKeys.add(p.key); last = `${p.id}: key rejected`; break; }

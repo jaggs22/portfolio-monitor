@@ -8,10 +8,13 @@
 
   window.makeChat = function (kit) {
     const { state, nameOf, CO } = kit;
-    let ctxT = null, panel = null, busy = false, quota = null;
+    let ctxT = null, panel = null, busy = false, quota = null, live = '';
+    let painting = false;
+    const paint = () => { if (painting) return; painting = true; requestAnimationFrame(() => { painting = false; render(); }); };
     /* Shared daily allowance (all users). At zero the chat locks until it resets: there is no paid fallback. */
     async function refreshQuota() {
-      try { const r = await fetch('/api/chat/status', { cache: 'no-store' }); if (r.ok) { quota = await r.json(); render(); } } catch (e) { /* offline: leave as is */ }
+      try { const r = await fetch('/api/chat/status', { cache: 'no-store' }); if (r.ok) { quota = await r.json(); render(); if (kit.onQuota) kit.onQuota(quota); } } catch (e) { /* offline: leave as is */ }
+      return quota;
     }
     const locked = () => !!(quota && (quota.on === false || quota.left === 0));
     const resetLocal = () => (quota && quota.resets_at ? new Date(quota.resets_at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '8:00am');
@@ -156,7 +159,8 @@
           body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub' }, md(clean)), m.fresh && i === xs.length - 1 ? acts.map((a) => actionCard(t, a)) : null, m.via ? h('small', { class: 'ch-via' }, 'via ' + m.via.replace(/^(models\/|@cf\/[^/]+\/|[a-z-]+\/)/, '')) : null));
         }
       });
-      if (busy) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub ch-typing' }, h('i'), h('i'), h('i'))));
+      if (busy && live) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub' }, md(parseTags(live.replace(/<think>[\s\S]*?(<\/think>|$)/g, '')).clean.replace(/\[\[[^\]]*$/, '')))));
+      else if (busy) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub ch-typing' }, h('i'), h('i'), h('i'))));
       const qn = panel.querySelector('.ch-quota'), comp = panel.querySelector('.ch-comp');
       comp.classList.toggle('off', locked());
       panel.querySelector('textarea').disabled = locked();
@@ -176,11 +180,32 @@
       let reply = null, err = null, via = '';
       try {
         const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12).map((m) => ({ role: m.role, content: m.content })), context: contextFor(ctxT) }) });
-        const j = await r.json().catch(() => ({}));
-        if (r.ok && j.reply) { reply = j.reply; via = j.model || ''; } else err = j.error || 'The analyst is unavailable right now.';
-        if (typeof j.left === 'number') quota = Object.assign({}, quota || { on: true }, { left: j.left, resets_at: j.resets_at || (quota && quota.resets_at) });
+        let j = {};
+        if (r.ok && (r.headers.get('content-type') || '').includes('ndjson') && r.body) {
+          // Streamed reply: show words as they arrive.
+          const rd = r.body.getReader(), dec = new TextDecoder();
+          let buf = '', out = '';
+          for (;;) {
+            const { done, value } = await rd.read();
+            if (done) break;
+            buf += dec.decode(value, { stream: true });
+            let i;
+            while ((i = buf.indexOf('\n')) >= 0) {
+              const line = buf.slice(0, i); buf = buf.slice(i + 1);
+              if (!line.trim()) continue;
+              let x; try { x = JSON.parse(line); } catch (e) { continue; }
+              if (x.t) { out += x.t; live = out; paint(); } else if (x.done) j = x;
+            }
+          }
+          out = out.replace(/<think>[\s\S]*?(<\/think>|$)/g, '').trim();
+          if (out) { reply = out; via = j.model || ''; } else err = 'No answer this time. Try rephrasing.';
+        } else {
+          j = await r.json().catch(() => ({}));
+          if (r.ok && j.reply) { reply = j.reply; via = j.model || ''; } else err = j.error || 'The analyst is unavailable right now.';
+        }
+        if (typeof j.left === 'number') { quota = Object.assign({}, quota || { on: true }, { left: j.left, cap: j.cap != null ? j.cap : quota && quota.cap, used: j.used != null ? j.used : quota && quota.used, resets_at: j.resets_at || (quota && quota.resets_at) }); if (kit.onQuota) kit.onQuota(quota); }
       } catch (e) { err = 'No connection. Your message is kept; try again when you are online.'; }
-      busy = false;
+      busy = false; live = '';
       const ys = hist(key).map((m) => ({ role: m.role, content: m.content, via: m.via }));
       ys.push({ role: 'assistant', content: reply || err, fresh: !!reply, via });
       saveHist(key, ys);
@@ -232,6 +257,6 @@
           ns.map((n) => h('div', { class: 'yv-note' }, h('p', null, n.text), h('small', null, new Date(n.at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })), h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Delete note', onclick: () => delNote(t, n.id) }, icon('close')))),
           ds.map((d) => h('div', { class: 'yv-note disp' }, h('p', null, `${E.DRIVER_META[d.driver].label}: ${d.from} → ${d.to} ${E.DRIVER_META[d.driver].unit}${d.note ? '. ' + d.note : ''}`), h('small', null, 'Dispute'), h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Withdraw dispute', onclick: () => { state.disputes = state.disputes.filter((x) => x !== d); kit.save(); kit.render(); } }, icon('close'))))) : null);
     }
-    return { open, close, fab, viewPrompt, notesOf, notesAll, delNote, contextFor };
+    return { open, close, fab, viewPrompt, notesOf, notesAll, delNote, contextFor, refreshQuota, quota: () => quota };
   };
 })();

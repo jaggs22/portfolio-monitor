@@ -79,10 +79,25 @@
     return h('aside', { class: 'side' },
       h('a', { class: 'brand', href: '#/', style: { textDecoration: 'none' } }, UI.logo('brand-mark'), h('span', { class: 'brand-text' }, h('span', { class: 'brand-name' }, CFG.appName || 'Moat Monitor'), h('span', { class: 'brand-sub' }, 'AI Native Equity Research'))),
       h('nav', { class: 'nav', 'aria-label': 'Main' }, NAV.map(([id, path, label, ic]) => h('a', { href: '#/' + path, 'aria-current': r.page === id ? 'page' : null }, icon(ic), label))),
-      h('div', { class: 'side-foot' },
+      h('div', { class: 'side-foot' }, usageBar(),
         h('button', { type: 'button', class: 'user', onclick: (e) => userMenu(e.currentTarget) }, h('span', { class: 'avatar' }, initial()), h('span', { class: 'user-t' }, h('b', null, workspaceName()), h('small', null, 'Holdings, theme, help'))),
         h('div', { class: 'marker' }, 'Prototype · live data, delayed')));
   }
+  /* Shared AI usage today, all users: one bar in the sidebar (and in the menu on phones). */
+  let llmQ = null;
+  function usageBar() {
+    const q = llmQ;
+    if (!q) return h('div', { class: 'llm-use', hidden: true });
+    const on = q.on !== false && q.cap > 0;
+    const pct = on ? Math.min(1, (q.used || 0) / q.cap) : 0;
+    const kind = !on ? '' : pct >= 1 ? 'bad' : pct >= 0.8 ? 'warn' : '';
+    const at = q.resets_at ? new Date(q.resets_at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '';
+    return h('div', { class: 'llm-use ' + kind, title: 'Free AI analyst messages used today by all users. Resets daily; there is no paid overflow.' },
+      h('div', { class: 'llm-top' }, h('span', null, 'AI analyst · today'), h('b', null, on ? Math.round(pct * 100) + '%' : 'Off')),
+      h('div', { class: 'llm-bar', role: 'progressbar', 'aria-label': 'AI usage today, all users', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': String(Math.round(pct * 100)) }, h('i', { style: { width: Math.round(pct * 100) + '%' } })),
+      h('small', null, !on ? 'Chat is not switched on' : pct >= 1 ? `Used up for everyone · back at ${at}` : `${(q.left || 0).toLocaleString('en-US')} of ${q.cap.toLocaleString('en-US')} left · all users · resets ${at}`));
+  }
+  function paintUsage() { document.querySelectorAll('.llm-use').forEach((n) => n.replaceWith(usageBar())); }
   const userName = () => store.user() || '';
   const initial = () => (userName().trim()[0] || '?').toUpperCase();
   const workspaceName = () => (userName() ? `${userName()}'s workspace` : 'Your workspace');
@@ -127,6 +142,7 @@
     const item = (ic, label, fn) => h('button', { type: 'button', onclick: () => { close(); fn(); } }, icon(ic), label);
     const pop = h('div', { class: 'pop', role: 'menu' },
       h('div', { class: 'pop-head' }, h('span', { class: 'avatar' }, initial()), h('b', null, workspaceName())),
+      h('div', { class: 'pop-usage' }, usageBar()),
       item('grid', 'Edit holdings', holdingsWin),
       item('chev', 'Take the tour', () => { go(''); setTimeout(() => OB.tour('home'), 300); }),
       item(isDark() ? 'sun' : 'moon', isDark() ? 'Light mode' : 'Dark mode', () => { applyTheme(isDark() ? 'light' : 'dark'); render(); }),
@@ -533,7 +549,7 @@
 
   const REPORT = window.makeReport(CO, { state, nameOf, notesOf: (t) => CHAT.notesOf(t) });
   const OB = window.makeOnboard({ state, nameOf, go, render: () => render() });
-  const CHAT = window.makeChat({ state, nameOf, CO, go, save, render: () => render() });
+  const CHAT = window.makeChat({ state, nameOf, CO, go, save, render: () => render(), onQuota: (q) => { llmQ = q; paintUsage(); } });
 
   async function init() {
     if (!store.user()) { gate(); return; }
@@ -547,7 +563,9 @@
     if (state.data && r.page === 'company' && CORE.includes(r.t) && r.mode === 'quick' && !r.win && !store.get('tour_company', false) && store.get('tour_home', false)) setTimeout(() => OB.tour('company'), 800);
     subscribe();
   }
+  let quotaTimer = null;
   function subscribe() {
+    if (!quotaTimer) { CHAT.refreshQuota(); quotaTimer = setInterval(() => { if (document.visibilityState === 'visible') CHAT.refreshQuota(); }, 60000); }
     D.subscribe(state.data ? state.data.universe.map((u) => u.ticker) : CORE, () => { if (!win.depth() && !document.querySelector('.ob, .tour') && !document.querySelector('input:focus, select:focus, textarea:focus')) render(); });
   }
   if ('serviceWorker' in navigator && location.protocol !== 'file:') window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));

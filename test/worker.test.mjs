@@ -75,32 +75,38 @@ const ff = (h) => async (u, o) => {
   if (u.endsWith('models?pageSize=200')) return ok({ models: [mk('gemini-3.8-flash'), mk('gemini-3.5-flash')] });
   if (u === 'https://integrate.api.nvidia.com/v1/models') return ok({ data: [{ id: 'deepseek-ai/deepseek-v4-pro' }, { id: 'meta/llama-3.3-70b-instruct' }] });
   const b = o && o.body ? JSON.parse(o.body) : {};
-  const model = b.model || (u.match(/models\/([^:]+):generateContent/) || [])[1];
+  const model = b.model || (u.match(/models\/([^:]+):(?:streamGenerateContent|generateContent)/) || [])[1];
   hits.push(model);
   return h(model, b, u);
 };
-const geminiOk = (t) => ok({ candidates: [{ content: { parts: [{ text: 'hidden', thought: true }, { text: t }] } }] });
-const oaiOk = (t) => ok({ choices: [{ message: { content: t } }] });
+const sse = (events) => new Response(events.map((e) => 'data: ' + (typeof e === 'string' ? e : JSON.stringify(e)) + '\n\n').join(''), { headers: { 'content-type': 'text/event-stream' } });
+const geminiOk = (t) => sse([{ candidates: [{ content: { parts: [{ text: 'hidden', thought: true }, { text: t.slice(0, 3) }] } }] }, { candidates: [{ content: { parts: [{ text: t.slice(3) }] } }] }]);
+const oaiOk = (t) => sse([{ choices: [{ delta: { content: t.slice(0, 2) } }] }, { choices: [{ delta: { content: t.slice(2) } }] }, '[DONE]']);
+const rj = async (r) => {
+  if (!(r.headers.get('content-type') || '').includes('ndjson')) return r.json();
+  const lines = (await r.text()).trim().split('\n').map((x) => JSON.parse(x));
+  return Object.assign({ reply: lines.filter((x) => x.t).map((x) => x.t).join('').replace(/<think>[\s\S]*?<\/think>/g, '') }, lines.find((x) => x.done));
+};
 const q = { messages: [{ role: 'assistant', content: 'hello' }, { role: 'user', content: 'my view' }], context: 'CTX' };
 const call = (e, h) => handle(chatReq(q), e, {}, ff(h), ccache);
 const all = Object.assign({}, env, { GEMINI_API_KEY: 'g', NVIDIA_API_KEY: 'n', GROQ_API_KEY: 'q', MISTRAL_API_KEY: 'ignored', OPENROUTER_API_KEY: 'ignored' });
 _chatTest.reset();
 r = await handle(chatReq(q), env, {}, ff(), ccache); assert.equal(r.status, 503);
 // top rung answers; system prompt carries the context; leading assistant turn dropped
-r = await call(all, (m, b) => { assert.ok(b.systemInstruction.parts[0].text.includes('CTX')); assert.equal(b.contents.length, 1); return geminiOk('Gemini answer'); });
-let cj = await r.json(); assert.equal(cj.reply, 'Gemini answer'); assert.equal(cj.provider, 'gemini'); assert.equal(cj.model, 'gemini-3.8-flash');
+r = await call(all, (m, b, u) => { assert.ok(u.endsWith(':streamGenerateContent?alt=sse')); assert.deepEqual(b.generationConfig.thinkingConfig, { thinkingLevel: 'low' }); assert.ok(b.systemInstruction.parts[0].text.includes('CTX')); assert.equal(b.contents.length, 1); return geminiOk('Gemini answer'); });
+let cj = await rj(r); assert.equal(cj.reply, 'Gemini answer'); assert.equal(cj.provider, 'gemini'); assert.equal(cj.model, 'gemini-3.8-flash');
 // Gemini daily quota spent: both Gemini models rest, NVIDIA answers; next request skips Gemini without calling it
 hits.length = 0;
 r = await call(all, (m) => (/gemini/.test(m) ? new Response('{"error":{"message":"Quota exceeded ... per day"}}', { status: 429 }) : oaiOk('NVIDIA answer')));
-cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.equal(cj.model, 'deepseek-ai/deepseek-v4-pro'); assert.deepEqual(hits, ['gemini-3.8-flash', 'gemini-3.5-flash', 'deepseek-ai/deepseek-v4-pro']);
+cj = await rj(r); assert.equal(cj.provider, 'nvidia'); assert.equal(cj.model, 'deepseek-ai/deepseek-v4-pro'); assert.deepEqual(hits, ['gemini-3.8-flash', 'gemini-3.5-flash', 'deepseek-ai/deepseek-v4-pro']);
 hits.length = 0;
-r = await call(all, () => oaiOk('NVIDIA again')); cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.deepEqual(hits, ['deepseek-ai/deepseek-v4-pro']);
+r = await call(all, () => oaiOk('NVIDIA again')); cj = await rj(r); assert.equal(cj.provider, 'nvidia'); assert.deepEqual(hits, ['deepseek-ai/deepseek-v4-pro']);
 // cooldown is shared through the edge cache: a fresh isolate (cleared memory) still skips Gemini
 _chatTest.reset(); hits.length = 0;
-r = await call(all, () => oaiOk('still NVIDIA')); cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.ok(!hits.some((x) => /gemini/.test(x)));
+r = await call(all, () => oaiOk('still NVIDIA')); cj = await rj(r); assert.equal(cj.provider, 'nvidia'); assert.ok(!hits.some((x) => /gemini/.test(x)));
 // Gemini and NVIDIA limited: Groq answers; only the three providers are ever called
 _chatTest.reset(); cstore.clear(); hits.length = 0;
-r = await call(all, (m) => (/gpt-oss-120b/.test(m) ? oaiOk('Groq answer') : new Response('{}', { status: 429 }))); cj = await r.json(); assert.equal(cj.provider, 'groq');
+r = await call(all, (m) => (/gpt-oss-120b/.test(m) ? oaiOk('Groq answer') : new Response('{}', { status: 429 }))); cj = await rj(r); assert.equal(cj.provider, 'groq');
 assert.deepEqual(hits, ['gemini-3.8-flash', 'gemini-3.5-flash', 'deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
 // every rung limited -> 429, and nothing outside the three providers is tried
 _chatTest.reset(); cstore.clear(); hits.length = 0;
@@ -112,8 +118,8 @@ r = await call(Object.assign({}, env, { GROQ_API_KEY: 'bad', NVIDIA_API_KEY: 'n'
 assert.equal(r.status, 503); assert.deepEqual(hits, ['deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
 // groq gets trimmed context and low reasoning effort; <think> stripped
 _chatTest.reset(); cstore.clear();
-r = await handle(chatReq({ messages: q.messages, context: 'x'.repeat(40000) }), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff((m, b) => { assert.ok(b.messages[0].content.length < 16000); assert.equal(b.reasoning_effort, 'low'); return oaiOk('<think>a</think>Groq'); }), ccache);
-cj = await r.json(); assert.equal(cj.reply, 'Groq');
+r = await handle(chatReq({ messages: q.messages, context: 'x'.repeat(40000) }), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff((m, b) => { assert.ok(b.messages[0].content.length < 16000); assert.equal(b.reasoning_effort, 'low'); assert.equal(b.stream, true); return oaiOk('<think>a</think>Groq'); }), ccache);
+cj = await rj(r); assert.equal(cj.reply, 'Groq');
 r = await handle(chatReq({ messages: [{ role: 'assistant', content: 'x' }] }), all, {}, ff(), ccache); assert.equal(r.status, 400);
 r = await handle(chatReq('nope'), all, {}, ff(), ccache); assert.equal(r.status, 400);
 r = await handle(chatReq(q, 'https://evil.com'), all, {}, ff(), ccache); assert.equal(r.status, 403);
@@ -122,16 +128,16 @@ r = await handle(new Request('https://x.dev/api/chat'), all, {}, ff(), ccache); 
 // zero-cost ceilings
 _chatTest.reset(); _limitsTest.reset(); cstore.clear();
 const capEnv = Object.assign({}, env, { GROQ_API_KEY: 'q', CHAT_DAILY_CAP: '3' });
-for (let i = 0; i < 3; i++) { r = await call(capEnv, () => oaiOk('ok ' + i)); cj = await r.json(); assert.equal(r.status, 200); assert.equal(cj.left, 2 - i); }
+for (let i = 0; i < 3; i++) { r = await call(capEnv, () => oaiOk('ok ' + i)); cj = await rj(r); assert.equal(r.status, 200); assert.equal(cj.left, 2 - i); assert.equal(cj.cap, 3); assert.equal(cj.used, i + 1); assert.equal(cj.reply, 'ok ' + i); }
 hits.length = 0;
-r = await call(capEnv, () => oaiOk('should not be called')); cj = await r.json();
+r = await call(capEnv, () => oaiOk('should not be called')); cj = await rj(r);
 assert.equal(r.status, 429); assert.equal(cj.left, 0); assert.match(cj.error, /used up for everyone/); assert.equal(hits.length, 0);
-r = await handle(new Request('https://x.dev/api/chat/status'), capEnv, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.left, 0); assert.ok(cj.resets_at.endsWith('T00:00:00.000Z')); assert.equal(cj.on, true);
-r = await handle(new Request('https://x.dev/api/chat/status'), env, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.on, false); assert.equal(cj.left, 0);
+r = await handle(new Request('https://x.dev/api/chat/status'), capEnv, {}, ff(), ccache); cj = await rj(r); assert.equal(cj.left, 0); assert.ok(cj.resets_at.endsWith('T00:00:00.000Z')); assert.equal(cj.on, true);
+r = await handle(new Request('https://x.dev/api/chat/status'), env, {}, ff(), ccache); cj = await rj(r); assert.equal(cj.on, false); assert.equal(cj.left, 0);
 // per-model ceiling: NVIDIA stops at 400 a day even with room overall
 _limitsTest.reset(); _chatTest.reset();
 const nvOnly = Object.assign({}, env, { NVIDIA_API_KEY: 'n', CHAT_DAILY_CAP: '5000' });
-for (let i = 0; i < 400; i++) { r = await call(nvOnly, () => oaiOk('x')); assert.equal(r.status, 200); }
+for (let i = 0; i < 400; i++) { r = await call(nvOnly, () => oaiOk('xx')); assert.equal(r.status, 200); await r.text(); }
 r = await call(nvOnly, () => oaiOk('x')); assert.equal(r.status, 429);
 // the Durable Object counter: all-or-nothing, resets on a new day
 const mem = new Map();
@@ -145,4 +151,12 @@ assert.equal(await take('k=all&cap=2&k=m3&cap=5'), false);
 assert.deepEqual(await (await lim.fetch(new Request('https://limits/status'))).json(), { all: 2, m1: 1, m2: 1 });
 mem.set('day', '1999-01-01');
 assert.equal(await take('k=all&cap=2&k=m1&cap=1'), true);
+
+// a model that rejects the thinking setting is asked again without it
+_chatTest.reset(); _limitsTest.reset(); cstore.clear();
+let tries = 0;
+r = await call(Object.assign({}, env, { GEMINI_API_KEY: 'g' }), (m, b) => { tries++; return b.generationConfig.thinkingConfig ? new Response('{"error":{"message":"thinking_level is not supported"}}', { status: 400 }) : geminiOk('plain'); });
+cj = await rj(r); assert.equal(cj.reply, 'plain'); assert.equal(tries, 2);
+r = await handle(new Request('https://x.dev/api/chat/status'), Object.assign({}, env, { GEMINI_API_KEY: 'g', GROQ_API_KEY: 'q' }), {}, ff(), ccache); cj = await r.json();
+assert.equal(cj.cap, 1500); assert.equal(cj.used, 1); assert.equal(cj.left, 1499);
 console.log('worker tests passed');
