@@ -133,14 +133,75 @@ Rules:
 - If their view implies a specific number for one of the model's assumptions that differs from the base case, also add one line: [[dispute: driver=<rev_cagr|margin_end|share_chg|exit_pe> value=<number in the same units as the CONTEXT> reason=<under 12 words>]]
 - Only use those tags for the user's own views, never for your own suggestions, and never more than one of each.`;
 const LADDER = [
-  { id: 'gemini', key: 'GEMINI_API_KEY', kind: 'gemini', take: 2 },
-  { id: 'nvidia', key: 'NVIDIA_API_KEY', kind: 'openai', base: 'https://integrate.api.nvidia.com/v1', prefer: [/deepseek-v4[.\d]*-pro/, /deepseek-v4/, /kimi-k2/, /gpt-oss-120b/, /llama-3\.3-70b-instruct/], take: 1 },
-  { id: 'groq', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['openai/gpt-oss-120b'], tight: true },
-  { id: 'mistral', key: 'MISTRAL_API_KEY', kind: 'openai', base: 'https://api.mistral.ai/v1', models: ['mistral-medium-latest'] },
-  { id: 'openrouter', key: 'OPENROUTER_API_KEY', kind: 'openai', base: 'https://openrouter.ai/api/v1', models: ['openrouter/free'] },
-  { id: 'groq-small', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'], tight: true },
-  { id: 'workers-ai', binding: 'AI', kind: 'workers-ai', models: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast'] }
+  { id: 'gemini', key: 'GEMINI_API_KEY', kind: 'gemini', take: 2, cap: 700 },
+  { id: 'nvidia', key: 'NVIDIA_API_KEY', kind: 'openai', base: 'https://integrate.api.nvidia.com/v1', prefer: [/deepseek-v4[.\d]*-pro/, /deepseek-v4/, /kimi-k2/, /gpt-oss-120b/, /llama-3\.3-70b-instruct/], take: 1, cap: 400 },
+  { id: 'groq', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['openai/gpt-oss-120b'], tight: true, cap: 300 },
+  { id: 'mistral', key: 'MISTRAL_API_KEY', kind: 'openai', base: 'https://api.mistral.ai/v1', models: ['mistral-medium-latest'], cap: 150 },
+  { id: 'openrouter', key: 'OPENROUTER_API_KEY', kind: 'openai', base: 'https://openrouter.ai/api/v1', models: ['openrouter/free'], cap: 45 },
+  { id: 'groq-small', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'], tight: true, cap: 300 },
+  { id: 'workers-ai', binding: 'AI', kind: 'workers-ai', models: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast'], tight: true, cap: 20 }
 ];
+/* Zero-cost guarantee. Every model has a daily ceiling set below its provider's free allowance, and all users share
+   one overall ceiling. The counters live in one Durable Object (exact, shared by every user and server instance).
+   A model is only called after its counter is taken; when every ceiling is reached the chat stops for everyone until
+   00:00 UTC (8am Singapore). Workers AI's ceiling keeps it far inside Cloudflare's free 10,000 neurons a day even on
+   a paid Workers plan. The other providers cannot bill without a card on file, or (Gemini) billing on the project. */
+const DAILY_CAP = 1500;
+const utcDay = () => new Date().toISOString().slice(0, 10);
+const resetsAt = () => { const d = new Date(); d.setUTCHours(24, 0, 0, 0); return d.toISOString(); };
+export class ChatLimits {
+  constructor(state) { this.state = state; }
+  async fetch(request) {
+    const u = new URL(request.url), st = this.state.storage, day = utcDay();
+    if ((await st.get('day')) !== day) { await st.deleteAll(); await st.put('day', day); }
+    if (u.pathname === '/take') {
+      const keys = u.searchParams.getAll('k'), caps = u.searchParams.getAll('cap').map(Number);
+      const counts = await Promise.all(keys.map((k) => st.get('n:' + k)));
+      if (counts.some((n, i) => (n || 0) >= caps[i])) return json({ ok: false });
+      await Promise.all(keys.map((k, i) => st.put('n:' + k, (counts[i] || 0) + 1)));
+      return json({ ok: true });
+    }
+    const all = await st.list({ prefix: 'n:' });
+    return json(Object.fromEntries([...all].map(([k, v]) => [k.slice(2), v])));
+  }
+}
+const memLimits = new Map();
+export const _limitsTest = { reset: () => memLimits.clear() };
+/* Take one unit from each counter (all-or-nothing). Without the Durable Object binding (tests) an in-memory twin is used. */
+async function takeUnits(env, pairs) {
+  if (env.LIMITS) {
+    const stub = env.LIMITS.get(env.LIMITS.idFromName('global'));
+    const q = pairs.map(([k, c]) => `k=${encodeURIComponent(k)}&cap=${c}`).join('&');
+    return (await (await stub.fetch('https://limits/take?' + q)).json()).ok;
+  }
+  const day = utcDay();
+  if (memLimits.get('day') !== day) { memLimits.clear(); memLimits.set('day', day); }
+  if (pairs.some(([k, c]) => (memLimits.get(k) || 0) >= c)) return false;
+  pairs.forEach(([k]) => memLimits.set(k, (memLimits.get(k) || 0) + 1));
+  return true;
+}
+async function usage(env) {
+  if (env.LIMITS) return (await env.LIMITS.get(env.LIMITS.idFromName('global')).fetch('https://limits/status')).json();
+  const day = utcDay();
+  return memLimits.get('day') === day ? Object.fromEntries([...memLimits].filter(([k]) => k !== 'day')) : {};
+}
+const dailyCap = (env) => Math.max(0, Number(env.CHAT_DAILY_CAP) || DAILY_CAP);
+/* Messages left today for everyone: the overall ceiling, or the room left across configured models, whichever is lower. */
+async function leftToday(env, rungs, used) {
+  used = used || (await usage(env));
+  let room = 0;
+  for (const p of rungs) {
+    const n = p.models ? p.models.length : p.take || 1;
+    const prefix = p.id + ':';
+    const spent = Object.entries(used).filter(([k]) => k.startsWith(prefix)).reduce((a, [, v]) => a + v, 0);
+    room += Math.max(0, p.cap * n - spent);
+  }
+  return Math.max(0, Math.min(room, dailyCap(env) - (used.all || 0)));
+}
+export async function chatStatus(env) {
+  const rungs = LADDER.filter((p) => (p.key ? env[p.key] : env[p.binding]));
+  return json({ left: rungs.length ? await leftToday(env, rungs) : 0, resets_at: resetsAt(), on: rungs.length > 0 }, 200, 0);
+}
 const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
 const picks = {}; // provider id -> { at, list }
 const cool = new Map(); // model -> until (ms); also mirrored in the edge cache so other isolates see it
@@ -238,7 +299,7 @@ export async function chat(request, env, f = fetch, cache = null) {
   while (msgs.length && msgs[0].role !== 'user') msgs.shift();
   if (!msgs.length || msgs[msgs.length - 1].role !== 'user') return json({ error: 'no question' }, 400);
   const context = String(body.context || '');
-  let last = '', limited = false;
+  let last = '', limited = false, capped = false;
   const deadKeys = new Set();
   for (const p of rungs) {
     if (p.key && deadKeys.has(p.key)) continue;
@@ -246,11 +307,12 @@ export async function chat(request, env, f = fetch, cache = null) {
     try { models = await modelsFor(p, env, f); } catch (e) { last = `${p.id}: ${e.message}`; continue; }
     for (const model of models) {
       if (await cooling(model, cache)) { limited = true; continue; }
+      if (!(await takeUnits(env, [['all', dailyCap(env)], [`${p.id}:${model}`, p.cap]]))) { capped = true; continue; }
       try {
         // Groq allows about 8k tokens a minute, so it gets a shorter context and history.
         const sys = CHAT_SYSTEM + '\n\nCONTEXT\n' + context.slice(0, p.tight ? 14000 : 30000);
         const r = await ask(p, model, env, f, sys, p.tight ? msgs.slice(-6) : msgs);
-        if (r.text) return json({ reply: r.text.replace(/<think>[\s\S]*?<\/think>/g, '').trim(), model, provider: p.id }, 200, 0);
+        if (r.text) return json({ reply: r.text.replace(/<think>[\s\S]*?<\/think>/g, '').trim(), model, provider: p.id, left: await leftToday(env, rungs) }, 200, 0);
         const rest = restFor(r.status, r.headers, r.err);
         if (rest) { limited = true; await coolDown(model, rest, cache); last = `${model}: rate limited`; continue; }
         if (r.status === 401 || r.status === 403) { if (p.key) deadKeys.add(p.key); last = `${p.id}: key rejected`; break; }
@@ -261,7 +323,8 @@ export async function chat(request, env, f = fetch, cache = null) {
       }
     }
   }
-  if (limited) return json({ error: 'Every free model is busy or out of quota right now. Try again in a minute; daily allowances reset overnight.' }, 429);
+  if (capped && !limited) return json({ error: "Today's free chat allowance is used up for everyone. It resets at 8am Singapore time.", left: 0, resets_at: resetsAt() }, 429);
+  if (limited || capped) return json({ error: 'Every free model is busy or out of quota right now. Try again in a minute; daily allowances reset at 8am Singapore time.', left: await leftToday(env, rungs), resets_at: resetsAt() }, 429);
   return json({ error: 'The analyst is unavailable right now.', detail: last.slice(0, 200) }, 503);
 }
 export const _chatTest = { reset: () => { cool.clear(); Object.keys(picks).forEach((k) => delete picks[k]); } };
@@ -272,6 +335,7 @@ export async function handle(request, env, ctx, f = fetch, cache = (typeof cache
     if (!env.ASSETS) return new Response('not found', { status: 404 });
     return env.ASSETS.fetch(request);
   }
+  if (url.pathname === '/api/chat/status') return await chatStatus(env);
   if (url.pathname === '/api/chat') {
     if (request.method !== 'POST') return json({ error: 'method not allowed' }, 405);
     try { return await chat(request, env, f, cache); } catch (e) { return json({ error: 'internal', detail: String(e && e.message || e) }, 500); }

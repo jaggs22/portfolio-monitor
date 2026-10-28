@@ -17,3 +17,12 @@ DATA_BRANCH = "data"
 # Last rung of the chat ladder: Cloudflare Workers AI (no key; free daily allowance)
 [ai]
 binding = "AI"
+
+# Shared daily ceilings for the chat (zero-cost guarantee). SQLite-backed Durable Objects are free on the Workers Free plan.
+[[durable_objects.bindings]]
+name = "LIMITS"
+class_name = "ChatLimits"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ChatLimits"]

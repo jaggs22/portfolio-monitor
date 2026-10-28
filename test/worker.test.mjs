@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { handle, rankModels, preferModels, restFor, _chatTest } from '../worker/src/index.js';
+import { handle, rankModels, preferModels, restFor, _chatTest, _limitsTest, ChatLimits } from '../worker/src/index.js';
 
 const env = { REPO: 'me/repo', DATA_BRANCH: 'data', ASSETS: { fetch: async () => new Response('<html>app</html>') } };
 const store = new Map();
@@ -115,4 +115,31 @@ r = await handle(chatReq({ messages: [{ role: 'assistant', content: 'x' }] }), a
 r = await handle(chatReq('nope'), all, {}, ff(), ccache); assert.equal(r.status, 400);
 r = await handle(chatReq(q, 'https://evil.com'), all, {}, ff(), ccache); assert.equal(r.status, 403);
 r = await handle(new Request('https://x.dev/api/chat'), all, {}, ff(), ccache); assert.equal(r.status, 405);
+
+// zero-cost ceilings
+_chatTest.reset(); _limitsTest.reset(); cstore.clear();
+const capEnv = Object.assign({}, env, { GROQ_API_KEY: 'q', CHAT_DAILY_CAP: '3' });
+for (let i = 0; i < 3; i++) { r = await call(capEnv, () => oaiOk('ok ' + i)); cj = await r.json(); assert.equal(r.status, 200); assert.equal(cj.left, 2 - i); }
+hits.length = 0;
+r = await call(capEnv, () => oaiOk('should not be called')); cj = await r.json();
+assert.equal(r.status, 429); assert.equal(cj.left, 0); assert.match(cj.error, /used up for everyone/); assert.equal(hits.length, 0);
+r = await handle(new Request('https://x.dev/api/chat/status'), capEnv, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.left, 0); assert.ok(cj.resets_at.endsWith('T00:00:00.000Z')); assert.equal(cj.on, true);
+r = await handle(new Request('https://x.dev/api/chat/status'), env, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.on, false); assert.equal(cj.left, 0);
+// per-model ceiling: Workers AI stops at 20 a day even with room overall
+_limitsTest.reset(); _chatTest.reset();
+const cfOnly = Object.assign({}, env, { AI: { run: async () => ({ response: 'cf' }) } });
+for (let i = 0; i < 20; i++) { r = await call(cfOnly, () => oaiOk('x')); assert.equal(r.status, 200); }
+r = await call(cfOnly, () => oaiOk('x')); assert.equal(r.status, 429);
+// the Durable Object counter: all-or-nothing, resets on a new day
+const mem = new Map();
+const storage = { get: async (k) => mem.get(k), put: async (k, v) => { mem.set(k, v); }, deleteAll: async () => mem.clear(), list: async ({ prefix }) => new Map([...mem].filter(([k]) => k.startsWith(prefix))) };
+const lim = new ChatLimits({ storage });
+const take = async (q) => (await (await lim.fetch(new Request('https://limits/take?' + q))).json()).ok;
+assert.equal(await take('k=all&cap=2&k=m1&cap=1'), true);
+assert.equal(await take('k=all&cap=2&k=m1&cap=1'), false);
+assert.equal(await take('k=all&cap=2&k=m2&cap=5'), true);
+assert.equal(await take('k=all&cap=2&k=m3&cap=5'), false);
+assert.deepEqual(await (await lim.fetch(new Request('https://limits/status'))).json(), { all: 2, m1: 1, m2: 1 });
+mem.set('day', '1999-01-01');
+assert.equal(await take('k=all&cap=2&k=m1&cap=1'), true);
 console.log('worker tests passed');

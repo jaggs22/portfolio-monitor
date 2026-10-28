@@ -8,7 +8,13 @@
 
   window.makeChat = function (kit) {
     const { state, nameOf, CO } = kit;
-    let ctxT = null, panel = null, busy = false;
+    let ctxT = null, panel = null, busy = false, quota = null;
+    /* Shared daily allowance (all users). At zero the chat locks until it resets: there is no paid fallback. */
+    async function refreshQuota() {
+      try { const r = await fetch('/api/chat/status', { cache: 'no-store' }); if (r.ok) { quota = await r.json(); render(); } } catch (e) { /* offline: leave as is */ }
+    }
+    const locked = () => !!(quota && (quota.on === false || quota.left === 0));
+    const resetLocal = () => (quota && quota.resets_at ? new Date(quota.resets_at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '8:00am');
 
     /* ---------- the investor's own research ---------- */
     const notesAll = () => store.get('notes', {}) || {};
@@ -151,13 +157,18 @@
         }
       });
       if (busy) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub ch-typing' }, h('i'), h('i'), h('i'))));
+      const qn = panel.querySelector('.ch-quota'), comp = panel.querySelector('.ch-comp');
+      comp.classList.toggle('off', locked());
+      panel.querySelector('textarea').disabled = locked();
+      qn.textContent = !quota ? '' : quota.on === false ? 'Chat is not switched on yet. Notes and disputes still work.' : quota.left === 0 ? `Today's free allowance is used up for everyone. Back at ${resetLocal()} your time. Notes and disputes still work.` : `${quota.left} free message${quota.left === 1 ? '' : 's'} left today, shared by everyone`;
+      qn.classList.toggle('stop', locked());
       const ns = t ? notesOf(t) : [];
       panel.querySelector('.ch-notes').replaceChildren(...(ns.length ? [h('button', { type: 'button', class: 'ch-notes-btn', onclick: () => kit.go(`c/${t}`) }, icon('report'), `${ns.length} note${ns.length === 1 ? '' : 's'} in your research on ${nameOf(t)}`)] : []));
       requestAnimationFrame(() => { body.scrollTop = body.scrollHeight; });
     }
     async function send(q) {
       const text = String(q || '').trim();
-      if (!text || busy) return;
+      if (!text || busy || locked()) return;
       const key = keyOf(ctxT), xs = hist(key).map((m) => ({ role: m.role, content: m.content, via: m.via }));
       xs.push({ role: 'user', content: text });
       saveHist(key, xs);
@@ -167,6 +178,7 @@
         const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12).map((m) => ({ role: m.role, content: m.content })), context: contextFor(ctxT) }) });
         const j = await r.json().catch(() => ({}));
         if (r.ok && j.reply) { reply = j.reply; via = j.model || ''; } else err = j.error || 'The analyst is unavailable right now.';
+        if (typeof j.left === 'number') quota = Object.assign({}, quota || { on: true }, { left: j.left, resets_at: j.resets_at || (quota && quota.resets_at) });
       } catch (e) { err = 'No connection. Your message is kept; try again when you are online.'; }
       busy = false;
       const ys = hist(key).map((m) => ({ role: m.role, content: m.content, via: m.via }));
@@ -190,7 +202,7 @@
             h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Close', onclick: close }, icon('close'))),
           h('div', { class: 'ch-bar' }, sel, h('div', { class: 'ch-notes' })),
           h('div', { class: 'ch-body', 'aria-live': 'polite' }),
-          h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-comp' }, ta, h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev'))),
+          h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-quota' }), h('div', { class: 'ch-comp' }, ta, h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev'))),
             h('small', null, 'Answers come from free AI models (Gemini, NVIDIA, Groq, Mistral, OpenRouter or Cloudflare), so do not share anything confidential. Research discussion, not advice.')));
         document.body.append(panel);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel && panel.classList.contains('open') && !document.querySelector('.win')) close(); });
@@ -198,6 +210,7 @@
       panel.classList.add('open');
       document.body.classList.add('chat-open');
       render();
+      refreshQuota();
       const ta = panel.querySelector('textarea');
       if (opts && opts.view && ctxT) ta.placeholder = `My view on ${nameOf(ctxT)}: …`;
       else ta.placeholder = 'Ask a question or share your view…';
