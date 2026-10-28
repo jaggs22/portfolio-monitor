@@ -53,7 +53,7 @@
   function route() {
     const p = (location.hash || '#/').replace(/^#\/?/, '').split('/').filter(Boolean);
     if (p[0] === 'c' && p[1]) return p[2] === 'report' ? { page: 'company', t: p[1].toUpperCase(), win: null, mode: 'report' } : { page: 'company', t: p[1].toUpperCase(), win: p[2] || null, mode: 'quick' };
-    if (['coverage', 'markets', 'view'].includes(p[0])) return { page: p[0] };
+    if (['coverage', 'markets', 'view', 'book'].includes(p[0])) return { page: p[0] };
     return { page: 'home' };
   }
   const go = (path) => { location.hash = '#/' + path.replace(/^\//, ''); };
@@ -74,7 +74,7 @@
   });
 
   /* ---------- shell ---------- */
-  const NAV = [['home', '', 'Home', 'home'], ['coverage', 'coverage', 'Coverage', 'grid'], ['markets', 'markets', 'Markets', 'markets'], ['view', 'view', 'Your view', 'view']];
+  const NAV = [['home', '', 'Home', 'home'], ['coverage', 'coverage', 'Coverage', 'grid'], ['book', 'book', 'Your book', 'book'], ['markets', 'markets', 'Markets', 'markets'], ['view', 'view', 'Your view', 'view']];
   function sidebar(r) {
     return h('aside', { class: 'side' },
       h('a', { class: 'brand', href: '#/', style: { textDecoration: 'none' } }, UI.logo('brand-mark'), h('span', { class: 'brand-text' }, h('span', { class: 'brand-name' }, CFG.appName || 'Moat Monitor'), h('span', { class: 'brand-sub' }, 'AI Native Equity Research'))),
@@ -144,7 +144,68 @@
     setTimeout(() => document.addEventListener('pointerdown', outside, true));
   }
 
-  /* ---------- home ---------- */
+  /* ---------- home: a launcher, not a dashboard ---------- */
+  function greeting() { const hr = new Date().getHours(); return hr < 12 ? 'Good morning' : hr < 18 ? 'Good afternoon' : 'Good evening'; }
+  function stockSearch() {
+    const list = h('div', { class: 'hs-list', role: 'listbox' });
+    const inp = h('input', { type: 'search', class: 'hs-in', placeholder: 'Find a stock by name or ticker', 'aria-label': 'Find a stock', autocomplete: 'off' });
+    const depth = { core: 3, lighter: 2, basic: 1 };
+    const draw = () => {
+      const q = inp.value.trim().toLowerCase();
+      const rows = state.data.universe.filter((u) => !q || u.ticker.toLowerCase().startsWith(q) || u.name.toLowerCase().includes(q)).slice(0, q ? 6 : 0);
+      list.replaceChildren(...rows.map((u) => h('button', { type: 'button', class: 'hs-row', role: 'option', onclick: () => go('c/' + u.ticker) },
+        h('span', { class: 'ob-depth', 'aria-hidden': 'true' }, [1, 2, 3].map((i) => h('i', { class: i <= depth[u.tier] ? 'on' : '' }))),
+        h('b', null, u.ticker), h('span', null, u.name), icon('chev'))));
+      list.hidden = !rows.length;
+    };
+    inp.addEventListener('input', draw);
+    inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const b = list.querySelector('.hs-row'); if (b) b.click(); } });
+    list.hidden = true;
+    return h('div', { class: 'home-search' }, h('div', { class: 'hs-box' }, icon('search'), inp), list);
+  }
+  function pickCompany(title, sub, path) {
+    win.open({ title, sub, build: () => stackOf(() => h('div', null, h('div', { class: 'card list' }, CORE.map((t) => {
+      const c = CO.callOf(t, false);
+      return h('button', { type: 'button', class: 'li', onclick: () => { win.close(true); go(`c/${t}${path}`); } },
+        h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, nameOf(t)), h('div', { class: 'li-sub' }, (CO.review(t) || {}).title || t)),
+        c ? pill(c.rating, CO.ratingKind(c.rating)) : null, icon('chev'));
+    })))) });
+  }
+  function comingUpWin() {
+    win.open({ title: 'Coming up', sub: 'The next three weeks across the companies we cover.', build: () => stackOf(() => {
+      const iso = new Date().toISOString().slice(0, 10), end = new Date(Date.now() + 21 * 864e5).toISOString().slice(0, 10);
+      const ev = [];
+      Object.values(state.data.research).forEach((r) => (r.catalysts || []).forEach((c) => { if (c.date >= iso && c.date <= end) ev.push(Object.assign({ t: r.ticker }, c)); }));
+      ev.sort((a, b) => a.date.localeCompare(b.date));
+      return h('div', null, ev.length ? h('div', { class: 'card list' }, ev.map((e) => h('button', { type: 'button', class: 'li', onclick: () => { win.close(true); go('c/' + e.t); } }, dateChip(e.date), h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, e.label.replace(/ \(.*\)/, '')), h('div', { class: 'li-sub' }, nameOf(e.t) + (e.confirmed ? '' : ' · date not confirmed'))), icon('chev')))) : empty('Nothing scheduled in the next three weeks.'));
+    }) });
+  }
+  function home() {
+    const n = state.data.universe.length, deep = state.data.universe.filter((u) => u.tier === 'core').length;
+    const bookN = L.cleanHoldings(state.holdings).length;
+    const A = [
+      ['chat', 'Add your own research', 'Share a view on any stock; the analyst tests it and saves it', () => CHAT.open(null, { view: true }), 'hot'],
+      ['business', 'Read the research', `${CORE.map(nameOf).join(', ')} in full`, () => go('coverage')],
+      ['report', 'Open a sell-side report', 'Five pages, ready to save as PDF', () => pickCompany('Open a report', 'Choose a company.', '/report')],
+      ['branch', 'Challenge a thesis', 'Dispute an assumption and watch the target move', () => pickCompany('Challenge a thesis', 'Choose a company, then tap any assumption.', '/thesis')],
+      ['book', 'View your book', bookUsd() ? `${usd(bookUsd())} across ${bookN} stock${bookN === 1 ? '' : 's'}` : `${bookN} stocks`, () => go('book')],
+      ['calendar', 'What is coming up', 'Earnings and events in the next three weeks', comingUpWin],
+      ['markets', 'Check the markets', 'Indices, rates and live charts', () => go('markets')],
+      ['view', 'Your view', 'Every note and dispute you have made', () => go('view')]
+    ];
+    return [
+      h('section', { class: 'home-hero' },
+        eyebrow(new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
+        h('h1', null, `${greeting()}, ${String(userName()).split(' ')[0]}.`),
+        h('p', { class: 'sub' }, 'Where would you like to start?'),
+        stockSearch()),
+      h('section', { class: 'qa-grid', 'aria-label': 'Quick actions' }, A.map(([ic, t, d, fn, hot]) => h('button', { type: 'button', class: 'qa' + (hot ? ' hot' : ''), onclick: fn },
+        h('span', { class: 'qa-ic' }, icon(ic)), h('span', { class: 'qa-t' }, h('b', null, t), h('span', null, d)), icon('chev', 'qa-go')))),
+      h('p', { class: 'home-foot' }, `${n} stocks covered · ${deep} in full research · `, h('a', { href: '#', onclick: (e) => { e.preventDefault(); OB.tour('home'); } }, 'Take the tour'))
+    ];
+  }
+
+  /* ---------- your book ---------- */
   /* The book's move. A position only counts from the moment it was added: its entry price and time are stamped
      then. Until the market trades after that moment there is no move to show. In the first session after entry
      the move runs from the entry price; from the next session on it is the ordinary move from the prior close. */
@@ -204,12 +265,12 @@
     if (!Object.keys(prices).length) out.move = null;
     return out;
   }
-  function home() {
+  function book() {
     const pm = portfolioMove();
     const today = new Date();
     const out = [];
     out.push(h('section', { class: 'hero' },
-      h('div', null, eyebrow(workspaceName() + ' · ' + today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
+      h('div', null, eyebrow('Your book · ' + today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
         h('h1', { style: { marginTop: '8px' } }, pm.move == null ? 'Your book is set' : [pm.fresh ? 'Since you set it, your book is ' : 'Your book is ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? 'up ' : 'down ') + fmt.pct(Math.abs(pm.move), 2)), pm.fresh ? '' : ' today']),
         bookUsd() ? h('p', { class: 'book-usd' }, h('b', null, usd(bookUsd())), ' book', pm.move != null ? [' · ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? '+' : '−') + usd(Math.abs(pm.move * bookUsd()))), pm.fresh ? ' since you set it' : ' today'] : null) : null,
         pm.move == null ? h('p', { class: 'sub' }, `Tracking starts from your entry prices when the US market next trades, ${new Date(nextOpenMs(Date.now())).toLocaleString('en-GB', { weekday: 'short', hour: 'numeric', minute: '2-digit' })} your time.`) : null,
@@ -339,6 +400,9 @@
       h('div', { class: 'card pad block' }, eyebrow('Your philosophy so far'),
         prof.n ? [h('p', { class: 'read' }, `Across ${prof.n} dispute${prof.n === 1 ? '' : 's'} you lean ${prof.bias}.`), h('div', { class: 'list' }, prof.lines.map((l) => h('div', { class: 'li', style: { padding: '8px 0' } }, h('span', { class: 'dot' }), h('div', { class: 'li-main small' }, l))))] : h('p', { class: 'muted' }, 'No disputes yet. Open a company, then Scenarios, and dispute an assumption.')),
       weightsCard()));
+    const allNotes = CHAT.notesAll();
+    out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, 'Your research notes'), h('button', { type: 'button', class: 'linkish', onclick: () => CHAT.open(null, { view: true }) }, 'Add a view')),
+      Object.keys(allNotes).length ? h('div', { class: 'card list' }, Object.entries(allNotes).flatMap(([t, ns]) => ns.map((n) => h('div', { class: 'li' }, h('span', { class: 'tickers', style: { width: '44px' } }, t), h('div', { class: 'li-main' }, h('div', { class: 'li-title', style: { fontWeight: 400 } }, n.text), h('div', { class: 'li-sub' }, new Date(n.at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }))), h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Delete note', onclick: () => CHAT.delNote(t, n.id) }, icon('close')))))) : empty('No notes yet. Use Ask or add your view on any page.')));
     out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, 'Your disputes')),
       state.disputes.length ? h('div', { class: 'card list' }, state.disputes.map((d) => h('button', { type: 'button', class: 'li', onclick: () => go(`c/${d.ticker}/thesis`) },
         h('span', { class: 'tickers', style: { width: '44px' } }, d.ticker), h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, E.DRIVER_META[d.driver].label), h('div', { class: 'li-sub' }, `Engine ${d.from}, yours ${d.to}${d.note ? '. ' + d.note : ''}`)), icon('chev')))) : empty('None yet.')));
@@ -444,19 +508,22 @@
     else if (r.page === 'coverage') content = coverage();
     else if (r.page === 'markets') content = markets();
     else if (r.page === 'view') content = yourView();
+    else if (r.page === 'book') content = book();
     else content = home();
     document.title = (r.page === 'company' ? nameOf(r.t) + ' · ' : '') + (CFG.appName || 'Moat Monitor');
     app.replaceChildren(h('div', { class: 'shell' }, sidebar(r),
       h('div', { class: 'main' }, topbar(r), h('main', { class: 'page', id: 'view', tabindex: '-1' }, content),
         h('footer', { class: 'foot' }, 'Research and monitoring tool, not investment advice. Prices delayed. Filings from SEC EDGAR; market data from Yahoo Finance.'))),
-      tabbar(r));
+      tabbar(r), r.mode === 'report' ? null : CHAT.fab(r.page === 'company' && state.uniMap[r.t] ? r.t : null));
     if (keepScroll !== false && shellBuilt) window.scrollTo(0, y);
+    if (r.page === 'book' && store.get('tour_home', false) && !store.get('tour_book', false) && !document.querySelector('.tour, .ob')) setTimeout(() => { if (route().page === 'book' && !document.querySelector('.tour')) OB.tour('book'); }, 600);
     shellBuilt = true;
   }
 
   const CO = window.makeCompany({
     state, go, nameOf, safeUrl, save, openTv, requestDeepen,
     render: () => render(),
+    viewPrompt: (t) => CHAT.viewPrompt(t),
     currentTicker: () => { const r = route(); return r.page === 'company' ? r.t : null; },
     setMode: (t, m) => go(m === 'report' ? `c/${t}/report` : `c/${t}`),
     report: (t) => REPORT.build(t),
@@ -464,8 +531,9 @@
     closedWin: (t) => { const r = route(); if (r.page === 'company' && r.win) { if (pushedWin > 0) { pushedWin--; history.back(); } else history.replaceState(null, '', '#/c/' + t); } }
   });
 
-  const REPORT = window.makeReport(CO, { state, nameOf });
+  const REPORT = window.makeReport(CO, { state, nameOf, notesOf: (t) => CHAT.notesOf(t) });
   const OB = window.makeOnboard({ state, nameOf, go, render: () => render() });
+  const CHAT = window.makeChat({ state, nameOf, CO, go, save, render: () => render() });
 
   async function init() {
     if (!store.user()) { gate(); return; }

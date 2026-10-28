@@ -82,7 +82,11 @@
     branch: '<path d="M6 4v16M6 12c6 0 6-6 12-6M6 12c6 0 6 6 12 6"/>',
     alert: '<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/>',
     line: '<path d="M3 17l5-6 4 3 8-9"/>',
-    news: '<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/>'
+    news: '<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+    book: '<path d="M12 3.5v8.5h8.5"/><path d="M20.5 15.5A8.5 8.5 0 1 1 8.5 4.2"/>',
+    report: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+    chat: '<path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M8.5 9.5h7M8.5 12.5h4.5"/>',
+    calendar: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>'
   };
   const icon = (id, cls) => h('span', { class: 'ic ' + (cls || ''), 'aria-hidden': 'true', html: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICON[id] || ''}</svg>` });
 

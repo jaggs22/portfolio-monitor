@@ -437,6 +437,7 @@
           cm ? h('div', { class: 'small' }, h('b', null, 'Your view: '), `${cm.rating}, ${fmt.px(cm.pt)}`) : null,
           h('span', { class: 'btn small', style: { alignSelf: 'flex-start' } }, 'How we get there')) : null,
         mode === 'report' ? null : rv ? h('div', { class: 'call-text' }, h('h2', { class: 'call-title' }, rv.title), h('p', { class: 'headline' }, fill(t, rv.lead))) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
+        mode === 'report' || !kit.viewPrompt ? null : kit.viewPrompt(t),
         mode === 'report' ? null : scorecard(t),
         rv && mode !== 'report' ? h('div', { class: 'args' }, eyebrow('Key arguments'), rv.arguments.map((a) => disclose([h('b', { class: 'arg-l' }, a.label), h('span', { class: 'arg-t' }, fill(t, a.text).split('. ')[0].replace(/\.$/, '') + '.')], fill(t, a.text)))) : null,
         h('div', { class: 'co-meta' },

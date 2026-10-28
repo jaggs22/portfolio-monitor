@@ -331,6 +331,7 @@
           rv.upside_risks ? sec('Risks to our rating and price target: upside', table(['Upside risk', 'How it would show'], rv.upside_risks.map((x) => [h('b', null, x.cause), x.how]), { cls: 'wrap-last' })) : null,
           catalysts(t) ? sec('Catalysts', catalysts(t)) : null,
           sec('Assumptions behind the scenarios', assumptions(t)),
+          kit.notesOf && kit.notesOf(t).length ? sec('Reader notes (your own research, not part of the Moat Monitor view)', h('ul', { class: 'rp-list' }, kit.notesOf(t).slice(-4).map((n) => h('li', null, n.text)))) : null,
           disclosures(t)]);
       } else {
         const title = h('div', { class: 'rp-title' },

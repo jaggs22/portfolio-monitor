@@ -13,3 +13,8 @@ not_found_handling = "single-page-application"
 # owner/repo of the GitHub repository whose `data` branch the Actions workflows publish to
 REPO = "jaggs22/portfolio-monitor"
 DATA_BRANCH = "data"
+# Chat model on Workers AI (free daily allowance; falls back to gpt-oss-120b, then Llama 3.3 70B)
+CHAT_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
+
+[ai]
+binding = "AI"

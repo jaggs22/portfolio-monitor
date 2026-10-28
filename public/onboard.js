@@ -111,18 +111,23 @@
     const phone = () => matchMedia('(max-width: 760px)').matches;
     const TOURS = {
       home: [
-        { sel: '.hero h1', title: 'Your book, live', text: 'Your book counts from the prices when you set it, then day by day, weighted by your dollars. Prices are delayed.' },
+        { sel: '.home-search', title: 'Find any stock', text: 'Type a name or ticker. The bars show how deep the research goes: three for full research, one for the basics.' },
+        { sel: '.fab', title: 'Your research counts', text: 'On every page. Ask the analyst anything, or tell it what you know. It tests your view against the research, saves it to your notes, and if you give a number, shows what it does to the target.' },
+        { sel: '.qa-grid', title: 'Start here', text: 'Shortcuts to what you came for: the research, a full report, challenging a thesis, your book, what is coming up and the markets.' },
+        { sel: () => (phone() ? '.tabbar' : '.side .nav'), title: 'Getting around', text: 'Coverage lists every stock by depth. Your book tracks what you hold. Your view keeps the assumptions you have challenged.' },
+        { sel: () => (phone() ? '.topbar .icon-btn:last-child' : '.side .user'), title: 'Your workspace', text: 'Holdings, dark mode, this tour, and switching user live here.' },
+        { sel: '.qa', title: 'Now open a company', text: 'Next, a quick look at a full research page.', next: 'Open Linde', action: () => { go('c/LIN'); setTimeout(() => tour('company'), 700); } }
+      ],
+      book: [
+        { sel: '.hero h1', title: 'Your book', text: 'It counts from the prices when you set it, then day by day, weighted by your dollars. Prices are delayed.' },
         { sel: '.hero .btn', title: 'Change it any time', text: 'Add, remove or resize positions in dollars.' },
-        { sel: '.cos', title: 'Full research', text: 'Three names with a rating, a 12-month target and a full write-up. Tap one to open it.' },
-        { sel: '.grid.g2', title: 'What is coming, what to watch', text: 'Earnings dates coming up, then the measures that would break a thesis, flagged when they get close.' },
-        { sel: '.mini-tiles', title: 'The rest of the universe', text: 'Lighter research and the basics. Every name has its own page.' },
-        { sel: () => (phone() ? '.tabbar' : '.side .nav'), title: 'Getting around', text: 'Coverage lists every stock by depth. Markets has live charts. Your view keeps the assumptions you have challenged.' },
-        { sel: () => (phone() ? '.topbar .icon-btn:last-child' : '.side .user'), title: 'Your workspace', text: 'Holdings, dark mode, help, and switching user live here.' },
-        { sel: '.cos .co-card', title: 'Now open a company', text: 'Next, a quick look at a full research page.', next: 'Open Linde', action: () => { go('c/LIN'); setTimeout(() => tour('company'), 700); } }
+        { sel: '.cos', title: 'Full research', text: 'Rating, 12-month target and the call for each fully covered name.' },
+        { sel: '.grid.g2', title: 'What is coming, what to watch', text: 'Earnings dates coming up, then the measures that would break a thesis, flagged when they get close.' }
       ],
       company: [
         { sel: '.stance-box', title: 'The call', text: 'Rating and 12-month target, with upside and total return against the cost of equity. Tap it to see how the target is built.' },
         { sel: '.call-text', title: 'The view in one paragraph', text: 'Numbers in the text are filled from live data, so the words never contradict the figures.' },
+        { sel: '.yv', title: 'Add your view', text: 'What do you know that we do not? Your notes and disputes on this stock live here, and they show in your report.' },
         { sel: '.scorecard', title: 'Eight tests', text: 'Moat, growth, returns, balance sheet, cash quality, estimates, valuation and momentum. Green, amber or red against fixed thresholds. Each opens its evidence.' },
         { sel: '.args', title: 'Key arguments', text: 'The five points behind the call. Tap one for the detail.' },
         { sel: '.view-toggle', title: 'Quick view or full report', text: 'Switch to the detailed sell-side report: five pages you can save as a PDF.' },
