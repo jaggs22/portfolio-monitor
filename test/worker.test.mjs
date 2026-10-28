@@ -54,20 +54,4 @@ r = await handle(new Request('https://x.dev/api/quotes', { method: 'POST' }), en
 r = await handle(new Request('https://x.dev/api/quotes'), {}, {}, f, cache); assert.equal(r.status, 500);
 r = await get('/api/nothing'); assert.equal(r.status, 404);
 
-// chat
-const post = (body, e, origin) => handle(new Request('https://x.dev/api/chat', { method: 'POST', headers: origin ? { origin } : {}, body: typeof body === 'string' ? body : JSON.stringify(body) }), e, {}, f, cache);
-const seen = [];
-const ai = (impl) => ({ run: async (model, input) => { seen.push(model); return impl(model, input); } });
-r = await post({ messages: [{ role: 'user', content: 'hi' }] }, env); assert.equal(r.status, 503);
-const env2 = Object.assign({}, env, { CHAT_MODEL: 'm1', AI: ai((m, input) => { assert.equal(input.messages[0].role, 'system'); assert.ok(input.messages[0].content.includes('CTX')); return { response: '<think>x</think>Answer [[note: mine]]' }; }) });
-r = await post({ messages: [{ role: 'user', content: 'view' }], context: 'CTX' }, env2); let c = await r.json();
-assert.equal(r.status, 200); assert.equal(c.reply, 'Answer [[note: mine]]'); assert.equal(c.model, 'm1');
-const env3 = Object.assign({}, env, { CHAT_MODEL: 'm1', AI: ai((m) => { if (m === 'm1') throw new Error('boom'); return { choices: [{ message: { content: 'from fallback' } }] }; }) });
-r = await post({ messages: [{ role: 'user', content: 'q' }] }, env3); c = await r.json(); assert.equal(c.reply, 'from fallback'); assert.equal(c.model, '@cf/openai/gpt-oss-120b');
-const env4 = Object.assign({}, env, { CHAT_MODEL: 'm1', AI: ai(() => { throw new Error('4006: daily free allocation of 10,000 neurons exceeded'); }) });
-r = await post({ messages: [{ role: 'user', content: 'q' }] }, env4); assert.equal(r.status, 429);
-r = await post({ messages: [{ role: 'assistant', content: 'q' }] }, env2); assert.equal(r.status, 400);
-r = await post('not json', env2); assert.equal(r.status, 400);
-r = await post({ messages: [{ role: 'user', content: 'q' }] }, env2, 'https://evil.com'); assert.equal(r.status, 403);
-r = await handle(new Request('https://x.dev/api/chat'), env2, {}, f, cache); assert.equal(r.status, 405);
 console.log('worker tests passed');

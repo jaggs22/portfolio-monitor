@@ -114,69 +114,12 @@ async function live(url, f, cache, request) {
 }
 
 
-/* ---------- chat: Workers AI, no API key, free daily allowance ----------
-   The browser sends the conversation plus a context block built from the research it already shows. The model
-   answers from that context only. Replies may end with [[note: ...]] or [[dispute: ...]] tags, which the app turns
-   into one-tap actions; nothing is saved on the server. */
-const CHAT_FALLBACKS = ['@cf/openai/gpt-oss-120b', '@cf/meta/llama-3.3-70b-instruct-fp8-fast'];
-const CHAT_SYSTEM = `You are the analyst inside Moat Monitor, an AI-native equity research tool. You speak to an investor about the companies in the CONTEXT below.
-Rules:
-- Use only facts and numbers in the CONTEXT or stated by the user. If something is not there, say you do not have it. Never invent figures, dates or quotes.
-- Plain English, short paragraphs, no jargon. At most about 180 words unless asked for more. Use **bold** sparingly and "- " bullets when listing.
-- This is research discussion, not personal investment advice. Do not tell the user to buy or sell.
-- When the user shares their own research or view, take it seriously: say what in the CONTEXT supports it, what argues against it, and what evidence would settle it.
-- Then, if their view is worth keeping, end with one line: [[note: <their view in one sentence, in their voice>]]
-- If their view implies a specific number for one of the model's assumptions that differs from the base case, also add one line: [[dispute: driver=<rev_cagr|margin_end|share_chg|exit_pe> value=<number in the same units as the CONTEXT> reason=<under 12 words>]]
-- Only use those tags for the user's own views, never for your own suggestions, and never more than one of each.`;
-function chatText(r) {
-  if (!r) return '';
-  if (typeof r === 'string') return r;
-  if (typeof r.response === 'string') return r.response;
-  const c = r.choices && r.choices[0];
-  if (c && c.message && typeof c.message.content === 'string') return c.message.content;
-  if (typeof r.output_text === 'string') return r.output_text;
-  if (Array.isArray(r.output)) return r.output.flatMap((o) => (o && Array.isArray(o.content) ? o.content : [])).map((x) => x && (x.text || '')).join('');
-  return '';
-}
-export async function chat(request, env) {
-  if (!env.AI) return json({ error: 'Chat is not switched on for this deployment.' }, 503);
-  const origin = request.headers.get('origin');
-  if (origin && new URL(origin).host !== new URL(request.url).host) return json({ error: 'forbidden' }, 403);
-  const raw = await request.text();
-  if (raw.length > 120000) return json({ error: 'too long' }, 413);
-  let body;
-  try { body = JSON.parse(raw); } catch (e) { return json({ error: 'bad json' }, 400); }
-  const msgs = (Array.isArray(body.messages) ? body.messages : [])
-    .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
-    .slice(-12).map((m) => ({ role: m.role, content: m.content.slice(0, 4000) }));
-  if (!msgs.length || msgs[msgs.length - 1].role !== 'user') return json({ error: 'no question' }, 400);
-  const context = String(body.context || '').slice(0, 24000);
-  const messages = [{ role: 'system', content: CHAT_SYSTEM + '\n\nCONTEXT\n' + context }].concat(msgs);
-  const models = [env.CHAT_MODEL].concat(CHAT_FALLBACKS).filter(Boolean);
-  let last = '';
-  for (const model of models) {
-    try {
-      const r = await env.AI.run(model, { messages, max_tokens: 900, temperature: 0.4 });
-      const text = chatText(r).replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-      if (text) return json({ reply: text, model }, 200, 0);
-      last = 'empty reply from ' + model;
-    } catch (e) {
-      last = String((e && e.message) || e);
-      if (/neuron|quota|limit exceeded|4006|daily/i.test(last)) return json({ error: 'The free daily chat allowance is used up. It resets at 8am Singapore time.' }, 429);
-    }
-  }
-  return json({ error: 'The analyst is unavailable right now.', detail: last.slice(0, 200) }, 503);
-}
 
 export async function handle(request, env, ctx, f = fetch, cache = (typeof caches !== 'undefined' ? caches.default : null)) {
   const url = new URL(request.url);
   if (!url.pathname.startsWith('/api/')) {
     if (!env.ASSETS) return new Response('not found', { status: 404 });
     return env.ASSETS.fetch(request);
-  }
-  if (url.pathname === '/api/chat') {
-    if (request.method !== 'POST') return json({ error: 'method not allowed' }, 405);
-    try { return await chat(request, env); } catch (e) { return json({ error: 'internal', detail: String(e && e.message || e) }, 500); }
   }
   if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'method not allowed' }, 405);
   if (!env.REPO) return json({ error: 'REPO is not configured' }, 500);

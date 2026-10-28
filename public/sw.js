@@ -1,6 +1,6 @@
 /* Service worker: offline shell plus fresh data.
    Bump VERSION whenever a shell file changes so installed copies pick it up. */
-const VERSION = 'v19';
+const VERSION = 'v20';
 const SHELL_CACHE = 'shell-' + VERSION;
 const DATA_CACHE = 'data-' + VERSION;
 const SHELL = [
@@ -14,6 +14,7 @@ const SHELL = [
   'report.js',
   'onboard.js',
   'chat.js',
+  'llm-worker.js',
   'icons/favicon.svg',
   'fin.js',
   'charts.js',
@@ -32,7 +33,8 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== SHELL_CACHE && k !== DATA_CACHE).map((k) => caches.delete(k))))
+      // Only this app's own old caches. The on-device model's weights live in other caches and must survive updates.
+      .then((keys) => Promise.all(keys.filter((k) => /^(shell|data)-/.test(k) && k !== SHELL_CACHE && k !== DATA_CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
