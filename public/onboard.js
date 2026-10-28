@@ -99,6 +99,7 @@
       state.holdings = L.cleanHoldings(holdings);
       store.set('holdings', state.holdings);
       store.set('holdings_usd', true);
+      store.set('entries', {});
       store.set('onboarded', true);
       unmount();
       go('');
@@ -110,7 +111,7 @@
     const phone = () => matchMedia('(max-width: 760px)').matches;
     const TOURS = {
       home: [
-        { sel: '.hero h1', title: 'Your book, live', text: 'How your holdings moved today, weighted by the dollars you entered. Prices are delayed.' },
+        { sel: '.hero h1', title: 'Your book, live', text: 'Your book counts from the prices when you set it, then day by day, weighted by your dollars. Prices are delayed.' },
         { sel: '.hero .btn', title: 'Change it any time', text: 'Add, remove or resize positions in dollars.' },
         { sel: '.cos', title: 'Full research', text: 'Three names with a rating, a 12-month target and a full write-up. Tap one to open it.' },
         { sel: '.grid.g2', title: 'What is coming, what to watch', text: 'Earnings dates coming up, then the measures that would break a thesis, flagged when they get close.' },

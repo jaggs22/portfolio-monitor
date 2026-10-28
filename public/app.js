@@ -145,10 +145,64 @@
   }
 
   /* ---------- home ---------- */
+  /* The book's move. A position only counts from the moment it was added: its entry price and time are stamped
+     then. Until the market trades after that moment there is no move to show. In the first session after entry
+     the move runs from the entry price; from the next session on it is the ordinary move from the prior close. */
+  const ET = 'America/New_York';
+  const etParts = (ms) => Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: ET, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', weekday: 'short', hour12: false }).formatToParts(new Date(ms)).map((x) => [x.type, x.value]));
+  /* Wall-clock time in New York -> epoch ms (handles daylight saving by measuring the offset at that date). */
+  function etToMs(y, mo, d, hh, mm) {
+    const guess = Date.UTC(y, mo - 1, d, hh, mm);
+    const p = etParts(guess);
+    const asUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute);
+    return guess - (asUtc - guess);
+  }
+  /* Close (4pm New York) of the last weekday session before the session that a quote at time ms belongs to. */
+  function prevCloseMs(ms) {
+    const p = etParts(ms);
+    let d = new Date(Date.UTC(+p.year, +p.month - 1, +p.day));
+    const mins = (+p.hour % 24) * 60 + +p.minute;
+    if (mins >= 16 * 60 + 15) return etToMs(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate(), 16, 0);
+    do { d = new Date(d.getTime() - 864e5); } while (d.getUTCDay() === 0 || d.getUTCDay() === 6);
+    return etToMs(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate(), 16, 0);
+  }
+  /* Next 9:30am New York weekday open after now (exchange holidays are not modelled). */
+  function nextOpenMs(now) {
+    const p = etParts(now);
+    let d = new Date(Date.UTC(+p.year, +p.month - 1, +p.day));
+    const mins = (+p.hour % 24) * 60 + +p.minute;
+    const wk = (x) => x.getUTCDay() !== 0 && x.getUTCDay() !== 6;
+    if (!(wk(d) && mins < 9 * 60 + 30)) do { d = new Date(d.getTime() + 864e5); } while (!wk(d));
+    return etToMs(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate(), 9, 30);
+  }
+  function stampEntries() {
+    const ent = store.get('entries', {}) || {};
+    let changed = false;
+    L.cleanHoldings(state.holdings).forEach((x) => {
+      if (ent[x.ticker]) return;
+      const p = priceOf(x.ticker);
+      if (p && p.price && p.src !== 'snapshot') { ent[x.ticker] = { price: p.price, at: Date.now() }; changed = true; }
+    });
+    Object.keys(ent).forEach((t) => { if (!state.holdings.some((x) => x.ticker === t)) { delete ent[t]; changed = true; } });
+    if (changed) store.set('entries', ent);
+    return ent;
+  }
   function portfolioMove() {
+    const ent = stampEntries();
     const prices = {};
-    state.data.universe.forEach((u) => { const p = priceOf(u.ticker); if (p && p.pct != null) prices[u.ticker] = { close: p.price, prev: p.price / (1 + p.pct) }; });
-    return L.portfolioMove(state.holdings, prices);
+    let fresh = 0, waiting = 0;
+    L.cleanHoldings(state.holdings).forEach((x) => {
+      const p = priceOf(x.ticker), e = ent[x.ticker];
+      if (!p || p.pct == null) return;
+      const asof = p.asof || Date.now();
+      if (e && asof <= e.at) { waiting++; return; }
+      if (e && e.at > prevCloseMs(asof)) { prices[x.ticker] = { close: p.price, prev: e.price }; fresh++; return; }
+      prices[x.ticker] = { close: p.price, prev: p.price / (1 + p.pct) };
+    });
+    const out = L.portfolioMove(state.holdings, prices);
+    out.waiting = waiting; out.fresh = fresh;
+    if (!Object.keys(prices).length) out.move = null;
+    return out;
   }
   function home() {
     const pm = portfolioMove();
@@ -156,9 +210,10 @@
     const out = [];
     out.push(h('section', { class: 'hero' },
       h('div', null, eyebrow(workspaceName() + ' · ' + today.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })),
-        h('h1', { style: { marginTop: '8px' } }, pm.move == null ? 'Your book' : ['Your book is ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? 'up ' : 'down ') + fmt.pct(Math.abs(pm.move), 2)), ' today']),
-        bookUsd() ? h('p', { class: 'book-usd' }, h('b', null, usd(bookUsd())), ' book', pm.move != null ? [' · ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? '+' : '−') + usd(Math.abs(pm.move * bookUsd()))), ' today'] : null) : null,
-        h('p', { class: 'sub' }, [pm.best ? `${nameOf(pm.best.ticker)} leads at ${fmt.spct(pm.best.change, 1)}` : null, pm.worst && pm.worst !== pm.best ? `${nameOf(pm.worst.ticker)} lags at ${fmt.spct(pm.worst.change, 1)}` : null].filter(Boolean).join('. ') + (pm.best ? '.' : ''))),
+        h('h1', { style: { marginTop: '8px' } }, pm.move == null ? 'Your book is set' : [pm.fresh ? 'Since you set it, your book is ' : 'Your book is ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? 'up ' : 'down ') + fmt.pct(Math.abs(pm.move), 2)), pm.fresh ? '' : ' today']),
+        bookUsd() ? h('p', { class: 'book-usd' }, h('b', null, usd(bookUsd())), ' book', pm.move != null ? [' · ', h('span', { class: fmt.dir(pm.move) }, (pm.move >= 0 ? '+' : '−') + usd(Math.abs(pm.move * bookUsd()))), pm.fresh ? ' since you set it' : ' today'] : null) : null,
+        pm.move == null ? h('p', { class: 'sub' }, `Tracking starts from your entry prices when the US market next trades, ${new Date(nextOpenMs(Date.now())).toLocaleString('en-GB', { weekday: 'short', hour: 'numeric', minute: '2-digit' })} your time.`) : null,
+        pm.move == null ? null : h('p', { class: 'sub' }, [pm.best ? `${nameOf(pm.best.ticker)} leads at ${fmt.spct(pm.best.change, 1)}` : null, pm.worst && pm.worst !== pm.best ? `${nameOf(pm.worst.ticker)} lags at ${fmt.spct(pm.worst.change, 1)}` : null].filter(Boolean).join('. ') + (pm.best ? '.' : ''))),
       btn('Edit holdings', holdingsWin, 'small')));
 
     // core research cards
