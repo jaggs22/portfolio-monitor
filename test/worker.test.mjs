@@ -159,4 +159,20 @@ r = await call(Object.assign({}, env, { GEMINI_API_KEY: 'g' }), (m, b) => { trie
 cj = await rj(r); assert.equal(cj.reply, 'plain'); assert.equal(tries, 2);
 r = await handle(new Request('https://x.dev/api/chat/status'), Object.assign({}, env, { GEMINI_API_KEY: 'g', GROQ_API_KEY: 'q' }), {}, ff(), ccache); cj = await r.json();
 assert.equal(cj.cap, 1500); assert.equal(cj.used, 1); assert.equal(cj.left, 1499);
+
+// model choice
+_chatTest.reset(); _limitsTest.reset(); cstore.clear();
+const gq = Object.assign({}, env, { GEMINI_API_KEY: 'g', GROQ_API_KEY: 'q' });
+const pick = (provider, h) => handle(chatReq(Object.assign({}, q, { provider })), gq, {}, ff(h), ccache);
+hits.length = 0;
+r = await pick('groq', () => oaiOk('fast')); cj = await rj(r); assert.equal(cj.provider, 'groq'); assert.deepEqual(hits, ['openai/gpt-oss-120b']);
+hits.length = 0;
+r = await pick('gemini', () => new Response('{}', { status: 429 })); cj = await rj(r);
+assert.equal(r.status, 429); assert.match(cj.error, /Gemini is busy/); assert.ok(hits.every((m) => /gemini/.test(m)));
+hits.length = 0;
+r = await pick('auto', () => oaiOk('auto groq')); cj = await rj(r); assert.equal(cj.provider, 'groq'); assert.equal(cj.providers.gemini.on, true); assert.equal(cj.providers.nvidia.on, false);
+r = await pick('nvidia', () => oaiOk('x')); assert.equal(r.status, 503); assert.match((await r.json()).error, /not set up/);
+r = await pick('something-else', () => oaiOk('treated as auto')); cj = await rj(r); assert.equal(cj.reply, 'treated as auto');
+r = await handle(new Request('https://x.dev/api/chat/status'), gq, {}, ff(), ccache); cj = await r.json();
+assert.equal(cj.providers.gemini.cap, 1400); assert.equal(cj.providers.groq.cap, 900); assert.equal(cj.providers.groq.left, 900 - 3);
 console.log('worker tests passed');

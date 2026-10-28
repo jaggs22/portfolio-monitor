@@ -16,6 +16,32 @@
       try { const r = await fetch('/api/chat/status', { cache: 'no-store' }); if (r.ok) { quota = await r.json(); render(); if (kit.onQuota) kit.onQuota(quota); } } catch (e) { /* offline: leave as is */ }
       return quota;
     }
+    /* Model choice, like a model picker: Auto walks the free ladder; Gemini or Groq keeps to one provider. */
+    const MODELS = [
+      { id: 'auto', name: 'Auto', desc: 'Best available. Gemini first, Groq when Gemini is busy.' },
+      { id: 'gemini', name: 'Gemini', desc: 'Smarter, more careful answers. Google Gemini Flash.' },
+      { id: 'groq', name: 'Groq', desc: 'Fastest replies. gpt-oss-120b; does not train on your chats.' }
+    ];
+    const choice = () => { const v = store.get('chat_model', 'auto'); return MODELS.some((m) => m.id === v) ? v : 'auto'; };
+    const provOf = (id) => (quota && quota.providers && quota.providers[id]) || null;
+    function modelMenu(anchor) {
+      document.querySelectorAll('.ch-menu').forEach((n) => n.remove());
+      const close = () => { menu.remove(); document.removeEventListener('pointerdown', out, true); };
+      const out = (e) => { if (!menu.contains(e.target) && e.target !== anchor && !anchor.contains(e.target)) close(); };
+      const menu = h('div', { class: 'ch-menu', role: 'menu', 'aria-label': 'Choose a model' }, MODELS.map((m) => {
+        const pv = m.id === 'auto' ? null : provOf(m.id);
+        const off = pv && !pv.on;
+        const sub = m.id === 'auto' ? (quota && quota.on !== false ? `${(quota.left || 0).toLocaleString('en-US')} left today` : '') : !pv ? '' : !pv.on ? 'Not set up' : pv.left === 0 ? 'Used up today' : `${pv.left.toLocaleString('en-US')} left today`;
+        return h('button', { type: 'button', role: 'menuitemradio', 'aria-checked': String(choice() === m.id), class: 'ch-mi' + (off ? ' off' : ''), disabled: off ? '' : null, onclick: () => { store.set('chat_model', m.id); close(); render(); } },
+          h('span', { class: 'ch-mi-t' }, h('b', null, m.name), h('small', null, m.desc), sub ? h('em', null, sub) : null),
+          choice() === m.id ? h('span', { class: 'ch-mi-ck', 'aria-hidden': 'true' }, '✓') : null);
+      }));
+      panel.append(menu);
+      const r = anchor.getBoundingClientRect(), pr = panel.getBoundingClientRect();
+      menu.style.left = Math.max(12, r.left - pr.left) + 'px';
+      menu.style.bottom = (pr.bottom - r.top + 8) + 'px';
+      setTimeout(() => document.addEventListener('pointerdown', out, true));
+    }
     const locked = () => !!(quota && (quota.on === false || quota.left === 0));
     const resetLocal = () => (quota && quota.resets_at ? new Date(quota.resets_at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : '8:00am');
 
@@ -162,9 +188,10 @@
       if (busy && live) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub' }, md(parseTags(live.replace(/<think>[\s\S]*?(<\/think>|$)/g, '')).clean.replace(/\[\[[^\]]*$/, '')))));
       else if (busy) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub ch-typing' }, h('i'), h('i'), h('i'))));
       const qn = panel.querySelector('.ch-quota'), comp = panel.querySelector('.ch-comp');
+      panel.querySelector('.ch-model-name').textContent = MODELS.find((m) => m.id === choice()).name;
       comp.classList.toggle('off', locked());
       panel.querySelector('textarea').disabled = locked();
-      qn.textContent = !quota ? '' : quota.on === false ? 'Chat is not switched on yet. Notes and disputes still work.' : quota.left === 0 ? `Today's free allowance is used up for everyone. Back at ${resetLocal()} your time. Notes and disputes still work.` : `${quota.left} free message${quota.left === 1 ? '' : 's'} left today, shared by everyone`;
+      qn.textContent = !quota ? '' : quota.on === false ? 'Chat is not switched on yet. Notes and disputes still work.' : quota.left === 0 ? `Today's free allowance is used up for everyone. Back at ${resetLocal()} your time. Notes and disputes still work.` : `${quota.left.toLocaleString('en-US')} free message${quota.left === 1 ? '' : 's'} left today, shared by everyone`;
       qn.classList.toggle('stop', locked());
       const ns = t ? notesOf(t) : [];
       panel.querySelector('.ch-notes').replaceChildren(...(ns.length ? [h('button', { type: 'button', class: 'ch-notes-btn', onclick: () => kit.go(`c/${t}`) }, icon('report'), `${ns.length} note${ns.length === 1 ? '' : 's'} in your research on ${nameOf(t)}`)] : []));
@@ -179,7 +206,7 @@
       busy = true; render();
       let reply = null, err = null, via = '';
       try {
-        const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12).map((m) => ({ role: m.role, content: m.content })), context: contextFor(ctxT) }) });
+        const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12).map((m) => ({ role: m.role, content: m.content })), context: contextFor(ctxT), provider: choice() }) });
         let j = {};
         if (r.ok && (r.headers.get('content-type') || '').includes('ndjson') && r.body) {
           // Streamed reply: show words as they arrive.
@@ -227,7 +254,10 @@
             h('button', { type: 'button', class: 'icon-btn', 'aria-label': 'Close', onclick: close }, icon('close'))),
           h('div', { class: 'ch-bar' }, sel, h('div', { class: 'ch-notes' })),
           h('div', { class: 'ch-body', 'aria-live': 'polite' }),
-          h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-quota' }), h('div', { class: 'ch-comp' }, ta, h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev'))),
+          h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-quota' }), h('div', { class: 'ch-comp' }, ta,
+            h('div', { class: 'ch-row' },
+              h('button', { type: 'button', class: 'ch-model-btn', 'aria-haspopup': 'menu', 'aria-label': 'Choose a model', onclick: (e) => modelMenu(e.currentTarget) }, h('span', { class: 'ch-model-name' }), icon('down')),
+              h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev')))),
             h('small', null, 'Answers come from free AI models (Google Gemini, DeepSeek on NVIDIA, or Groq), so do not share anything confidential. Research discussion, not advice.')));
         document.body.append(panel);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel && panel.classList.contains('open') && !document.querySelector('.win')) close(); });

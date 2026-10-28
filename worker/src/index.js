@@ -195,13 +195,25 @@ async function quotaInfo(env, rungs, used) {
     total += p.cap * n; room += Math.max(0, p.cap * n - spent);
   }
   const cap = Math.min(total, dailyCap(env));
-  const left = Math.max(0, Math.min(room, dailyCap(env) - (used.all || 0)));
-  return { left, cap, used: Math.max(0, cap - left) };
+  const overall = Math.max(0, dailyCap(env) - (used.all || 0));
+  const left = Math.max(0, Math.min(room, overall));
+  /* Per provider family (gemini, groq, nvidia), for the model picker. */
+  const providers = {};
+  for (const p of LADDER) {
+    const fam = familyOf(p.id), n = p.models ? p.models.length : p.take || 1;
+    const x = providers[fam] || (providers[fam] = { on: false, cap: 0, left: 0 });
+    if (!env[p.key]) continue;
+    const spent = Object.entries(used).filter(([k]) => k.startsWith(p.id + ':')).reduce((a, [, v]) => a + v, 0);
+    x.on = true; x.cap += p.cap * n; x.left += Math.max(0, p.cap * n - spent);
+  }
+  Object.values(providers).forEach((x) => { x.left = Math.min(x.left, overall); });
+  return { left, cap, used: Math.max(0, cap - left), providers };
 }
+const familyOf = (id) => id.split('-')[0];
 const leftToday = async (env, rungs, used) => (await quotaInfo(env, rungs, used)).left;
 export async function chatStatus(env) {
   const rungs = LADDER.filter((p) => env[p.key]);
-  const q = rungs.length ? await quotaInfo(env, rungs) : { left: 0, cap: 0, used: 0 };
+  const q = rungs.length ? await quotaInfo(env, rungs) : Object.assign({ left: 0, cap: 0, used: 0 }, { providers: (await quotaInfo(env, [])).providers });
   return json(Object.assign(q, { resets_at: resetsAt(), on: rungs.length > 0 }), 200, 0);
 }
 const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
@@ -318,8 +330,10 @@ function relay(body, kind, meta) {
     cancel() { reader.cancel(); }
   });
 }
+const NAMES = { gemini: 'Gemini', groq: 'Groq', nvidia: 'NVIDIA DeepSeek' };
 export async function chat(request, env, f = fetch, cache = null) {
-  const rungs = LADDER.filter((p) => env[p.key]);
+  const allRungs = LADDER.filter((p) => env[p.key]);
+  let rungs = allRungs;
   if (!rungs.length) return json({ error: 'Chat is not switched on yet: no model API key has been added.' }, 503);
   const origin = request.headers.get('origin');
   if (origin && new URL(origin).host !== new URL(request.url).host) return json({ error: 'forbidden' }, 403);
@@ -327,6 +341,12 @@ export async function chat(request, env, f = fetch, cache = null) {
   if (raw.length > 120000) return json({ error: 'too long' }, 413);
   let body;
   try { body = JSON.parse(raw); } catch (e) { return json({ error: 'bad json' }, 400); }
+  /* The user's model choice: 'auto' walks the whole ladder; a provider name keeps to that provider only. */
+  const want = NAMES[body.provider] ? body.provider : 'auto';
+  if (want !== 'auto') {
+    rungs = allRungs.filter((p) => familyOf(p.id) === want);
+    if (!rungs.length) return json({ error: `${NAMES[want]} is not set up. Choose Auto or another model.` }, 503);
+  }
   const msgs = (Array.isArray(body.messages) ? body.messages : [])
     .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
     .slice(-12).map((m) => ({ role: m.role, content: m.content.slice(0, 4000) }));
@@ -347,7 +367,7 @@ export async function chat(request, env, f = fetch, cache = null) {
         const sys = CHAT_SYSTEM + '\n\nCONTEXT\n' + context.slice(0, p.tight ? 14000 : 30000);
         const r = await openStream(p, model, env, f, sys, p.tight ? msgs.slice(-6) : msgs);
         if (r.stream) {
-          const meta = Object.assign({ model, provider: p.id }, await quotaInfo(env, rungs));
+          const meta = Object.assign({ model, provider: familyOf(p.id) }, await quotaInfo(env, allRungs));
           return new Response(relay(r.stream, p.kind, meta), { headers: Object.assign({ 'content-type': 'application/x-ndjson; charset=utf-8', 'cache-control': 'no-store' }, SEC_HEADERS) });
         }
         const rest = restFor(r.status, r.headers, r.err);
@@ -359,8 +379,10 @@ export async function chat(request, env, f = fetch, cache = null) {
       }
     }
   }
-  if (capped && !limited) return json({ error: "Today's free chat allowance is used up for everyone. It resets at 8am Singapore time.", left: 0, resets_at: resetsAt() }, 429);
-  if (limited || capped) return json({ error: 'Every free model is busy or out of quota right now. Try again in a minute; daily allowances reset at 8am Singapore time.', left: await leftToday(env, rungs), resets_at: resetsAt() }, 429);
+  const q = await quotaInfo(env, allRungs);
+  if (want !== 'auto' && (limited || capped)) return json(Object.assign({ error: `${NAMES[want]} is ${capped && !limited ? 'used up for today' : 'busy right now'}. Switch to ${want === 'gemini' ? 'Groq' : 'Gemini'} or Auto, or try again ${capped && !limited ? 'after 8am Singapore time' : 'in a minute'}.`, resets_at: resetsAt() }, q), 429);
+  if (capped && !limited) return json(Object.assign({ error: "Today's free chat allowance is used up for everyone. It resets at 8am Singapore time.", resets_at: resetsAt() }, q, { left: 0 }), 429);
+  if (limited || capped) return json(Object.assign({ error: 'Every free model is busy or out of quota right now. Try again in a minute; daily allowances reset at 8am Singapore time.', resets_at: resetsAt() }, q), 429);
   return json({ error: 'The analyst is unavailable right now.', detail: last.slice(0, 200) }, 503);
 }
 export const _chatTest = { reset: () => { cool.clear(); Object.keys(picks).forEach((k) => delete picks[k]); } };
