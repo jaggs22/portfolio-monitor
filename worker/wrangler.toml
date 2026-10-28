@@ -14,9 +14,6 @@ not_found_handling = "single-page-application"
 REPO = "jaggs22/portfolio-monitor"
 DATA_BRANCH = "data"
 
-# Last rung of the chat ladder: Cloudflare Workers AI (no key; free daily allowance)
-[ai]
-binding = "AI"
 
 # Shared daily ceilings for the chat (zero-cost guarantee). SQLite-backed Durable Objects are free on the Workers Free plan.
 [[durable_objects.bindings]]

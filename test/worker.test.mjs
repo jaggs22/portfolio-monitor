@@ -60,6 +60,7 @@ const mk = (name, gen = true) => ({ name: 'models/' + name, supportedGenerationM
 assert.deepEqual(rankModels([mk('gemini-2.5-flash'), mk('gemini-3.8-flash'), mk('gemini-3.5-flash-lite'), mk('gemini-3.8-flash-preview-09-2026'), mk('gemini-3.8-flash-image'), mk('gemini-2.5-pro'), mk('text-embedding-004', false)]).slice(0, 3),
   ['gemini-3.8-flash', 'gemini-3.8-flash-preview-09-2026', 'gemini-3.5-flash-lite']);
 assert.deepEqual(preferModels(['meta/llama-3.3-70b-instruct', 'deepseek-ai/deepseek-v4-pro', 'deepseek-ai/deepseek-v4-pro-0813-fp8', 'openai/gpt-oss-120b'], [/deepseek-v4[.\d]*-pro/, /gpt-oss-120b/]), ['deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
+assert.deepEqual(preferModels(['meta/llama-3.3-70b-instruct', 'openai/gpt-oss-120b'], [/deepseek-v4[.\d]*-pro/, /deepseek-v4/]), []);
 assert.equal(restFor(200), 0);
 assert.equal(restFor(429, new Headers({ 'retry-after': '20' }), 'slow down'), 20);
 assert.equal(restFor(429, new Headers(), 'Quota exceeded for metric: generate_content_free_tier_requests, limit: 1500 per day'), 3600);
@@ -82,7 +83,7 @@ const geminiOk = (t) => ok({ candidates: [{ content: { parts: [{ text: 'hidden',
 const oaiOk = (t) => ok({ choices: [{ message: { content: t } }] });
 const q = { messages: [{ role: 'assistant', content: 'hello' }, { role: 'user', content: 'my view' }], context: 'CTX' };
 const call = (e, h) => handle(chatReq(q), e, {}, ff(h), ccache);
-const all = Object.assign({}, env, { GEMINI_API_KEY: 'g', NVIDIA_API_KEY: 'n', GROQ_API_KEY: 'q', MISTRAL_API_KEY: 'm', OPENROUTER_API_KEY: 'o', AI: { run: async () => ({ response: 'from workers ai' }) } });
+const all = Object.assign({}, env, { GEMINI_API_KEY: 'g', NVIDIA_API_KEY: 'n', GROQ_API_KEY: 'q', MISTRAL_API_KEY: 'ignored', OPENROUTER_API_KEY: 'ignored' });
 _chatTest.reset();
 r = await handle(chatReq(q), env, {}, ff(), ccache); assert.equal(r.status, 503);
 // top rung answers; system prompt carries the context; leading assistant turn dropped
@@ -97,16 +98,18 @@ r = await call(all, () => oaiOk('NVIDIA again')); cj = await r.json(); assert.eq
 // cooldown is shared through the edge cache: a fresh isolate (cleared memory) still skips Gemini
 _chatTest.reset(); hits.length = 0;
 r = await call(all, () => oaiOk('still NVIDIA')); cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.ok(!hits.some((x) => /gemini/.test(x)));
-// everything above the last rung limited: Workers AI answers
+// Gemini and NVIDIA limited: Groq answers; only the three providers are ever called
 _chatTest.reset(); cstore.clear(); hits.length = 0;
-r = await call(all, () => new Response('{}', { status: 429 })); cj = await r.json(); assert.equal(cj.provider, 'workers-ai'); assert.equal(cj.reply, 'from workers ai');
-// every rung limited -> 429
-_chatTest.reset(); cstore.clear();
-r = await call(Object.assign({}, all, { AI: { run: async () => { throw new Error('4006: daily neurons exceeded'); } } }), () => new Response('{}', { status: 429 })); assert.equal(r.status, 429);
+r = await call(all, (m) => (/gpt-oss-120b/.test(m) ? oaiOk('Groq answer') : new Response('{}', { status: 429 }))); cj = await r.json(); assert.equal(cj.provider, 'groq');
+assert.deepEqual(hits, ['gemini-3.8-flash', 'gemini-3.5-flash', 'deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
+// every rung limited -> 429, and nothing outside the three providers is tried
+_chatTest.reset(); cstore.clear(); hits.length = 0;
+r = await call(all, () => new Response('{}', { status: 429 })); assert.equal(r.status, 429);
+assert.ok(hits.every((m) => /gemini|deepseek|gpt-oss|qwen/.test(m)));
 // a rejected key skips every rung that uses it (groq and groq-small)
 _chatTest.reset(); cstore.clear(); hits.length = 0;
-r = await call(Object.assign({}, env, { GROQ_API_KEY: 'bad', OPENROUTER_API_KEY: 'o' }), (m) => (m === 'openrouter/free' ? oaiOk('router') : new Response('{}', { status: 401 })));
-cj = await r.json(); assert.equal(cj.provider, 'openrouter'); assert.deepEqual(hits, ['openai/gpt-oss-120b', 'openrouter/free']);
+r = await call(Object.assign({}, env, { GROQ_API_KEY: 'bad', NVIDIA_API_KEY: 'n' }), (m) => (/deepseek/.test(m) ? new Response('{}', { status: 500 }) : new Response('{}', { status: 401 })));
+assert.equal(r.status, 503); assert.deepEqual(hits, ['deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
 // groq gets trimmed context and low reasoning effort; <think> stripped
 _chatTest.reset(); cstore.clear();
 r = await handle(chatReq({ messages: q.messages, context: 'x'.repeat(40000) }), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff((m, b) => { assert.ok(b.messages[0].content.length < 16000); assert.equal(b.reasoning_effort, 'low'); return oaiOk('<think>a</think>Groq'); }), ccache);
@@ -125,11 +128,11 @@ r = await call(capEnv, () => oaiOk('should not be called')); cj = await r.json()
 assert.equal(r.status, 429); assert.equal(cj.left, 0); assert.match(cj.error, /used up for everyone/); assert.equal(hits.length, 0);
 r = await handle(new Request('https://x.dev/api/chat/status'), capEnv, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.left, 0); assert.ok(cj.resets_at.endsWith('T00:00:00.000Z')); assert.equal(cj.on, true);
 r = await handle(new Request('https://x.dev/api/chat/status'), env, {}, ff(), ccache); cj = await r.json(); assert.equal(cj.on, false); assert.equal(cj.left, 0);
-// per-model ceiling: Workers AI stops at 20 a day even with room overall
+// per-model ceiling: NVIDIA stops at 400 a day even with room overall
 _limitsTest.reset(); _chatTest.reset();
-const cfOnly = Object.assign({}, env, { AI: { run: async () => ({ response: 'cf' }) } });
-for (let i = 0; i < 20; i++) { r = await call(cfOnly, () => oaiOk('x')); assert.equal(r.status, 200); }
-r = await call(cfOnly, () => oaiOk('x')); assert.equal(r.status, 429);
+const nvOnly = Object.assign({}, env, { NVIDIA_API_KEY: 'n', CHAT_DAILY_CAP: '5000' });
+for (let i = 0; i < 400; i++) { r = await call(nvOnly, () => oaiOk('x')); assert.equal(r.status, 200); }
+r = await call(nvOnly, () => oaiOk('x')); assert.equal(r.status, 429);
 // the Durable Object counter: all-or-nothing, resets on a new day
 const mem = new Map();
 const storage = { get: async (k) => mem.get(k), put: async (k, v) => { mem.set(k, v); }, deleteAll: async () => mem.clear(), list: async ({ prefix }) => new Map([...mem].filter(([k]) => k.startsWith(prefix))) };

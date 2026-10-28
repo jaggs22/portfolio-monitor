@@ -122,7 +122,8 @@ async function live(url, f, cache, request) {
    Every rung is a free tier with its own quota. A request walks down the ladder, strongest first. A rung that says
    it is rate-limited is skipped (a "cooldown") for a minute, or for an hour if it says its daily quota is spent, so
    later requests go straight to a rung that still has room; the ladder retries the top again once the cooldown ends.
-   Add whichever keys you have as Worker secrets; rungs without a key are skipped. Workers AI needs no key. */
+   Three providers, all free tiers: Google Gemini, NVIDIA (DeepSeek V4 Pro only) and Groq. Add their keys as Worker
+   secrets; a provider without a key is skipped. */
 const CHAT_SYSTEM = `You are the analyst inside Moat Monitor, an AI-native equity research tool. You speak to an investor about the companies in the CONTEXT below.
 Rules:
 - Use only facts and numbers in the CONTEXT or stated by the user. If something is not there, say you do not have it. Never invent figures, dates or quotes.
@@ -134,18 +135,15 @@ Rules:
 - Only use those tags for the user's own views, never for your own suggestions, and never more than one of each.`;
 const LADDER = [
   { id: 'gemini', key: 'GEMINI_API_KEY', kind: 'gemini', take: 2, cap: 700 },
-  { id: 'nvidia', key: 'NVIDIA_API_KEY', kind: 'openai', base: 'https://integrate.api.nvidia.com/v1', prefer: [/deepseek-v4[.\d]*-pro/, /deepseek-v4/, /kimi-k2/, /gpt-oss-120b/, /llama-3\.3-70b-instruct/], take: 1, cap: 400 },
+  { id: 'nvidia', key: 'NVIDIA_API_KEY', kind: 'openai', base: 'https://integrate.api.nvidia.com/v1', prefer: [/deepseek-v4[.\d]*-pro/, /deepseek-v4/], take: 1, cap: 400 },
   { id: 'groq', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['openai/gpt-oss-120b'], tight: true, cap: 300 },
-  { id: 'mistral', key: 'MISTRAL_API_KEY', kind: 'openai', base: 'https://api.mistral.ai/v1', models: ['mistral-medium-latest'], cap: 150 },
-  { id: 'openrouter', key: 'OPENROUTER_API_KEY', kind: 'openai', base: 'https://openrouter.ai/api/v1', models: ['openrouter/free'], cap: 45 },
-  { id: 'groq-small', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'], tight: true, cap: 300 },
-  { id: 'workers-ai', binding: 'AI', kind: 'workers-ai', models: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast'], tight: true, cap: 20 }
+  { id: 'groq-small', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'], tight: true, cap: 300 }
 ];
 /* Zero-cost guarantee. Every model has a daily ceiling set below its provider's free allowance, and all users share
    one overall ceiling. The counters live in one Durable Object (exact, shared by every user and server instance).
    A model is only called after its counter is taken; when every ceiling is reached the chat stops for everyone until
-   00:00 UTC (8am Singapore). Workers AI's ceiling keeps it far inside Cloudflare's free 10,000 neurons a day even on
-   a paid Workers plan. The other providers cannot bill without a card on file, or (Gemini) billing on the project. */
+   00:00 UTC (8am Singapore). Groq and NVIDIA cannot bill without a card on file; Gemini cannot without billing on
+   the Google project. */
 const DAILY_CAP = 1500;
 const utcDay = () => new Date().toISOString().slice(0, 10);
 const resetsAt = () => { const d = new Date(); d.setUTCHours(24, 0, 0, 0); return d.toISOString(); };
@@ -199,7 +197,7 @@ async function leftToday(env, rungs, used) {
   return Math.max(0, Math.min(room, dailyCap(env) - (used.all || 0)));
 }
 export async function chatStatus(env) {
-  const rungs = LADDER.filter((p) => (p.key ? env[p.key] : env[p.binding]));
+  const rungs = LADDER.filter((p) => env[p.key]);
   return json({ left: rungs.length ? await leftToday(env, rungs) : 0, resets_at: resetsAt(), on: rungs.length > 0 }, 200, 0);
 }
 const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
@@ -260,11 +258,6 @@ export function restFor(status, headers, text) {
   return isFinite(ra) && ra > 0 ? Math.min(ra, 3600) : 60;
 }
 async function ask(p, model, env, f, system, msgs) {
-  if (p.kind === 'workers-ai') {
-    const r = await env[p.binding].run(model, { messages: [{ role: 'system', content: system }].concat(msgs), max_tokens: 1000, temperature: 0.4 });
-    const c = r && r.choices && r.choices[0];
-    return { text: String((r && r.response) || (c && c.message && c.message.content) || '').trim() };
-  }
   let r;
   if (p.kind === 'gemini') {
     r = await f(`${GEMINI}models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
@@ -285,7 +278,7 @@ async function ask(p, model, env, f, system, msgs) {
   return { text: c && c.message && typeof c.message.content === 'string' ? c.message.content.trim() : '' };
 }
 export async function chat(request, env, f = fetch, cache = null) {
-  const rungs = LADDER.filter((p) => (p.key ? env[p.key] : env[p.binding]));
+  const rungs = LADDER.filter((p) => env[p.key]);
   if (!rungs.length) return json({ error: 'Chat is not switched on yet: no model API key has been added.' }, 503);
   const origin = request.headers.get('origin');
   if (origin && new URL(origin).host !== new URL(request.url).host) return json({ error: 'forbidden' }, 403);
@@ -319,7 +312,6 @@ export async function chat(request, env, f = fetch, cache = null) {
         last = r.status ? `${model}: ${r.status} ${r.err}` : `${model}: empty reply`;
       } catch (e) {
         last = `${model}: ${String((e && e.message) || e)}`;
-        if (/neuron|4006|daily/i.test(last)) { limited = true; await coolDown(model, 3600, cache); }
       }
     }
   }

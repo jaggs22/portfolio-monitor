@@ -203,7 +203,7 @@
           h('div', { class: 'ch-bar' }, sel, h('div', { class: 'ch-notes' })),
           h('div', { class: 'ch-body', 'aria-live': 'polite' }),
           h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-quota' }), h('div', { class: 'ch-comp' }, ta, h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev'))),
-            h('small', null, 'Answers come from free AI models (Gemini, NVIDIA, Groq, Mistral, OpenRouter or Cloudflare), so do not share anything confidential. Research discussion, not advice.')));
+            h('small', null, 'Answers come from free AI models (Google Gemini, DeepSeek on NVIDIA, or Groq), so do not share anything confidential. Research discussion, not advice.')));
         document.body.append(panel);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel && panel.classList.contains('open') && !document.querySelector('.win')) close(); });
       }
