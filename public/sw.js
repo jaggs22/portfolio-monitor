@@ -1,6 +1,6 @@
 /* Service worker: offline shell plus fresh data.
    Bump VERSION whenever a shell file changes so installed copies pick it up. */
-const VERSION = 'v21';
+const VERSION = 'v22';
 const SHELL_CACHE = 'shell-' + VERSION;
 const DATA_CACHE = 'data-' + VERSION;
 const SHELL = [

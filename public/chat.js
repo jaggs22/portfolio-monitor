@@ -147,7 +147,7 @@
           body.append(h('div', { class: 'ch-msg me' }, h('div', { class: 'ch-bub' }, m.content), save));
         } else {
           const { clean, acts } = parseTags(m.content);
-          body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub' }, md(clean)), m.fresh && i === xs.length - 1 ? acts.map((a) => actionCard(t, a)) : null));
+          body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub' }, md(clean)), m.fresh && i === xs.length - 1 ? acts.map((a) => actionCard(t, a)) : null, m.via ? h('small', { class: 'ch-via' }, 'via ' + m.via.replace(/^(models\/|@cf\/[^/]+\/|[a-z-]+\/)/, '')) : null));
         }
       });
       if (busy) body.append(h('div', { class: 'ch-msg ai' }, h('div', { class: 'ch-bub ch-typing' }, h('i'), h('i'), h('i'))));
@@ -158,19 +158,19 @@
     async function send(q) {
       const text = String(q || '').trim();
       if (!text || busy) return;
-      const key = keyOf(ctxT), xs = hist(key).map((m) => ({ role: m.role, content: m.content }));
+      const key = keyOf(ctxT), xs = hist(key).map((m) => ({ role: m.role, content: m.content, via: m.via }));
       xs.push({ role: 'user', content: text });
       saveHist(key, xs);
       busy = true; render();
-      let reply = null, err = null;
+      let reply = null, err = null, via = '';
       try {
-        const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12), context: contextFor(ctxT) }) });
+        const r = await fetch('/api/chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ messages: xs.slice(-12).map((m) => ({ role: m.role, content: m.content })), context: contextFor(ctxT) }) });
         const j = await r.json().catch(() => ({}));
-        if (r.ok && j.reply) reply = j.reply; else err = j.error || 'The analyst is unavailable right now.';
+        if (r.ok && j.reply) { reply = j.reply; via = j.model || ''; } else err = j.error || 'The analyst is unavailable right now.';
       } catch (e) { err = 'No connection. Your message is kept; try again when you are online.'; }
       busy = false;
-      const ys = hist(key).map((m) => ({ role: m.role, content: m.content }));
-      ys.push({ role: 'assistant', content: reply || err, fresh: !!reply });
+      const ys = hist(key).map((m) => ({ role: m.role, content: m.content, via: m.via }));
+      ys.push({ role: 'assistant', content: reply || err, fresh: !!reply, via });
       saveHist(key, ys);
       render();
     }
@@ -191,7 +191,7 @@
           h('div', { class: 'ch-bar' }, sel, h('div', { class: 'ch-notes' })),
           h('div', { class: 'ch-body', 'aria-live': 'polite' }),
           h('footer', { class: 'ch-foot' }, h('div', { class: 'ch-comp' }, ta, h('button', { type: 'button', class: 'ch-send', 'aria-label': 'Send', onclick: () => { const v = ta.value; ta.value = ''; grow(); send(v); } }, icon('chev'))),
-            h('small', null, 'Answers come from Google Gemini or Groq, so do not share anything confidential. Research discussion, not advice. Notes and disputes stay on this device.')));
+            h('small', null, 'Answers come from free AI models (Gemini, NVIDIA, Groq, Mistral, OpenRouter or Cloudflare), so do not share anything confidential. Research discussion, not advice.')));
         document.body.append(panel);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel && panel.classList.contains('open') && !document.querySelector('.win')) close(); });
       }

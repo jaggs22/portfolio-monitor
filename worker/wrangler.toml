@@ -13,3 +13,7 @@ not_found_handling = "single-page-application"
 # owner/repo of the GitHub repository whose `data` branch the Actions workflows publish to
 REPO = "jaggs22/portfolio-monitor"
 DATA_BRANCH = "data"
+
+# Last rung of the chat ladder: Cloudflare Workers AI (no key; free daily allowance)
+[ai]
+binding = "AI"

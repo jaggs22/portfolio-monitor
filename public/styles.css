@@ -945,3 +945,6 @@ body.chat-open .fab, body.ob-open .fab, body.win-open .fab { display: none; }
 .ch-act-t { flex: 1 1 220px; }
 .ch-done { flex: 1 1 100%; }
 @media screen and (max-width: 760px) { .ch-act { flex-direction: column; align-items: stretch; flex-wrap: nowrap; } .ch-act-t, .ch-done { flex: none; } .ch-act .btn { width: 100%; } }
+
+.ch-via { color: var(--faint); font-size: 11.5px; }
+@media screen and (max-width: 760px) { .ch-via { font-size: 13px; } }

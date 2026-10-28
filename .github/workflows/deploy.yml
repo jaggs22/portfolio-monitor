@@ -1,7 +1,8 @@
 name: deploy
 # Publishes the site and Worker to Cloudflare whenever the app or Worker changes on main.
 # Needs two repository secrets: CLOUDFLARE_API_TOKEN (template "Edit Cloudflare Workers") and CLOUDFLARE_ACCOUNT_ID.
-# Optional chat keys, copied to the Worker as secrets when present: GEMINI_API_KEY (aistudio.google.com) and GROQ_API_KEY (console.groq.com).
+# Optional chat keys (all free tiers), copied to the Worker as secrets when present: GEMINI_API_KEY (aistudio.google.com),
+# NVIDIA_API_KEY (build.nvidia.com), GROQ_API_KEY (console.groq.com), MISTRAL_API_KEY (console.mistral.ai), OPENROUTER_API_KEY (openrouter.ai).
 # Without them the deploy step is skipped (not failed), so the job stays green if Cloudflare's own Git build is used instead.
 on:
   push:
@@ -45,8 +46,11 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          for k in GEMINI_API_KEY GROQ_API_KEY; do
+          for k in GEMINI_API_KEY NVIDIA_API_KEY GROQ_API_KEY MISTRAL_API_KEY OPENROUTER_API_KEY; do
             v="${!k}"
             if [ -n "$v" ]; then printf '%s' "$v" | npx wrangler secret put "$k" --config worker/wrangler.toml >/dev/null && echo "$k set"; else echo "$k not provided"; fi
           done

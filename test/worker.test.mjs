@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { handle, rankModels } from '../worker/src/index.js';
+import { handle, rankModels, preferModels, restFor, _chatTest } from '../worker/src/index.js';
 
 const env = { REPO: 'me/repo', DATA_BRANCH: 'data', ASSETS: { fetch: async () => new Response('<html>app</html>') } };
 const store = new Map();
@@ -55,35 +55,64 @@ r = await handle(new Request('https://x.dev/api/quotes'), {}, {}, f, cache); ass
 r = await get('/api/nothing'); assert.equal(r.status, 404);
 
 
-// chat: Gemini first, Groq as backup
+// chat: a ladder of free models with cooldowns
 const mk = (name, gen = true) => ({ name: 'models/' + name, supportedGenerationMethods: gen ? ['generateContent'] : ['embedContent'] });
 assert.deepEqual(rankModels([mk('gemini-2.5-flash'), mk('gemini-3.8-flash'), mk('gemini-3.5-flash-lite'), mk('gemini-3.8-flash-preview-09-2026'), mk('gemini-3.8-flash-image'), mk('gemini-2.5-pro'), mk('text-embedding-004', false)]).slice(0, 3),
   ['gemini-3.8-flash', 'gemini-3.8-flash-preview-09-2026', 'gemini-3.5-flash-lite']);
+assert.deepEqual(preferModels(['meta/llama-3.3-70b-instruct', 'deepseek-ai/deepseek-v4-pro', 'deepseek-ai/deepseek-v4-pro-0813-fp8', 'openai/gpt-oss-120b'], [/deepseek-v4[.\d]*-pro/, /gpt-oss-120b/]), ['deepseek-ai/deepseek-v4-pro', 'openai/gpt-oss-120b']);
+assert.equal(restFor(200), 0);
+assert.equal(restFor(429, new Headers({ 'retry-after': '20' }), 'slow down'), 20);
+assert.equal(restFor(429, new Headers(), 'Quota exceeded for metric: generate_content_free_tier_requests, limit: 1500 per day'), 3600);
+assert.equal(restFor(429, new Headers(), 'Rate limit reached for model on requests per minute'), 60);
+const cstore = new Map();
+const ccache = { match: async (k) => { const v = cstore.get(k.url); return v ? v.clone() : undefined; }, put: async (k, v) => { cstore.set(k.url, v); } };
 const chatReq = (body, origin) => new Request('https://x.dev/api/chat', { method: 'POST', headers: origin ? { origin } : {}, body: typeof body === 'string' ? body : JSON.stringify(body) });
-const log = [];
-const ff = (gem, grq) => async (u, o) => {
-  u = String(u); log.push(u);
-  if (u.includes('generativelanguage') && u.endsWith('models?pageSize=200')) return new Response(JSON.stringify({ models: [mk('gemini-3.8-flash'), mk('gemini-3.5-flash')] }));
-  if (u.includes('generativelanguage')) return gem(u, JSON.parse(o.body));
-  if (u.includes('groq')) return grq(u, JSON.parse(o.body));
-  return f(u, o);
-};
 const ok = (x) => new Response(JSON.stringify(x));
+const hits = [];
+const ff = (h) => async (u, o) => {
+  u = String(u);
+  if (u.endsWith('models?pageSize=200')) return ok({ models: [mk('gemini-3.8-flash'), mk('gemini-3.5-flash')] });
+  if (u === 'https://integrate.api.nvidia.com/v1/models') return ok({ data: [{ id: 'deepseek-ai/deepseek-v4-pro' }, { id: 'meta/llama-3.3-70b-instruct' }] });
+  const b = o && o.body ? JSON.parse(o.body) : {};
+  const model = b.model || (u.match(/models\/([^:]+):generateContent/) || [])[1];
+  hits.push(model);
+  return h(model, b, u);
+};
+const geminiOk = (t) => ok({ candidates: [{ content: { parts: [{ text: 'hidden', thought: true }, { text: t }] } }] });
+const oaiOk = (t) => ok({ choices: [{ message: { content: t } }] });
 const q = { messages: [{ role: 'assistant', content: 'hello' }, { role: 'user', content: 'my view' }], context: 'CTX' };
-r = await handle(chatReq(q), env, {}, ff(), cache); assert.equal(r.status, 503);
-const envG = Object.assign({}, env, { GEMINI_API_KEY: 'g', GROQ_API_KEY: 'q' });
-r = await handle(chatReq(q), envG, {}, ff((u, b) => { assert.ok(b.systemInstruction.parts[0].text.includes('CTX')); assert.equal(b.contents.length, 1); assert.equal(b.contents[0].role, 'user'); return ok({ candidates: [{ content: { parts: [{ text: 'thinking', thought: true }, { text: 'Gemini answer [[note: x]]' }] } }] }); }), cache);
-let cj = await r.json(); assert.equal(cj.reply, 'Gemini answer [[note: x]]'); assert.equal(cj.model, 'gemini-3.8-flash');
-log.length = 0;
-r = await handle(chatReq(q), envG, {}, ff(() => new Response('{}', { status: 429 }), (u, b) => { assert.equal(b.model, 'openai/gpt-oss-120b'); assert.equal(b.messages[0].role, 'system'); return ok({ choices: [{ message: { content: 'Groq answer' } }] }); }), cache);
-cj = await r.json(); assert.equal(cj.reply, 'Groq answer'); assert.equal(cj.model, 'openai/gpt-oss-120b');
-assert.equal(log.filter((u) => u.includes(':generateContent')).length, 2);
-r = await handle(chatReq(q), envG, {}, ff(() => new Response('{}', { status: 429 }), () => new Response('{}', { status: 429 })), cache); assert.equal(r.status, 429);
-r = await handle(chatReq(q), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff(null, (u, b) => ok({ choices: [{ message: { content: '<think>x</think>Only Groq' } }] })), cache);
-cj = await r.json(); assert.equal(cj.reply, 'Only Groq');
-r = await handle(chatReq(q), envG, {}, ff(() => new Response('{"error":{"message":"bad key"}}', { status: 403 }), () => new Response('{}', { status: 401 })), cache); assert.equal(r.status, 503);
-r = await handle(chatReq({ messages: [{ role: 'assistant', content: 'x' }] }), envG, {}, ff(), cache); assert.equal(r.status, 400);
-r = await handle(chatReq('nope'), envG, {}, ff(), cache); assert.equal(r.status, 400);
-r = await handle(chatReq(q, 'https://evil.com'), envG, {}, ff(), cache); assert.equal(r.status, 403);
-r = await handle(new Request('https://x.dev/api/chat'), envG, {}, ff(), cache); assert.equal(r.status, 405);
+const call = (e, h) => handle(chatReq(q), e, {}, ff(h), ccache);
+const all = Object.assign({}, env, { GEMINI_API_KEY: 'g', NVIDIA_API_KEY: 'n', GROQ_API_KEY: 'q', MISTRAL_API_KEY: 'm', OPENROUTER_API_KEY: 'o', AI: { run: async () => ({ response: 'from workers ai' }) } });
+_chatTest.reset();
+r = await handle(chatReq(q), env, {}, ff(), ccache); assert.equal(r.status, 503);
+// top rung answers; system prompt carries the context; leading assistant turn dropped
+r = await call(all, (m, b) => { assert.ok(b.systemInstruction.parts[0].text.includes('CTX')); assert.equal(b.contents.length, 1); return geminiOk('Gemini answer'); });
+let cj = await r.json(); assert.equal(cj.reply, 'Gemini answer'); assert.equal(cj.provider, 'gemini'); assert.equal(cj.model, 'gemini-3.8-flash');
+// Gemini daily quota spent: both Gemini models rest, NVIDIA answers; next request skips Gemini without calling it
+hits.length = 0;
+r = await call(all, (m) => (/gemini/.test(m) ? new Response('{"error":{"message":"Quota exceeded ... per day"}}', { status: 429 }) : oaiOk('NVIDIA answer')));
+cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.equal(cj.model, 'deepseek-ai/deepseek-v4-pro'); assert.deepEqual(hits, ['gemini-3.8-flash', 'gemini-3.5-flash', 'deepseek-ai/deepseek-v4-pro']);
+hits.length = 0;
+r = await call(all, () => oaiOk('NVIDIA again')); cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.deepEqual(hits, ['deepseek-ai/deepseek-v4-pro']);
+// cooldown is shared through the edge cache: a fresh isolate (cleared memory) still skips Gemini
+_chatTest.reset(); hits.length = 0;
+r = await call(all, () => oaiOk('still NVIDIA')); cj = await r.json(); assert.equal(cj.provider, 'nvidia'); assert.ok(!hits.some((x) => /gemini/.test(x)));
+// everything above the last rung limited: Workers AI answers
+_chatTest.reset(); cstore.clear(); hits.length = 0;
+r = await call(all, () => new Response('{}', { status: 429 })); cj = await r.json(); assert.equal(cj.provider, 'workers-ai'); assert.equal(cj.reply, 'from workers ai');
+// every rung limited -> 429
+_chatTest.reset(); cstore.clear();
+r = await call(Object.assign({}, all, { AI: { run: async () => { throw new Error('4006: daily neurons exceeded'); } } }), () => new Response('{}', { status: 429 })); assert.equal(r.status, 429);
+// a rejected key skips every rung that uses it (groq and groq-small)
+_chatTest.reset(); cstore.clear(); hits.length = 0;
+r = await call(Object.assign({}, env, { GROQ_API_KEY: 'bad', OPENROUTER_API_KEY: 'o' }), (m) => (m === 'openrouter/free' ? oaiOk('router') : new Response('{}', { status: 401 })));
+cj = await r.json(); assert.equal(cj.provider, 'openrouter'); assert.deepEqual(hits, ['openai/gpt-oss-120b', 'openrouter/free']);
+// groq gets trimmed context and low reasoning effort; <think> stripped
+_chatTest.reset(); cstore.clear();
+r = await handle(chatReq({ messages: q.messages, context: 'x'.repeat(40000) }), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff((m, b) => { assert.ok(b.messages[0].content.length < 16000); assert.equal(b.reasoning_effort, 'low'); return oaiOk('<think>a</think>Groq'); }), ccache);
+cj = await r.json(); assert.equal(cj.reply, 'Groq');
+r = await handle(chatReq({ messages: [{ role: 'assistant', content: 'x' }] }), all, {}, ff(), ccache); assert.equal(r.status, 400);
+r = await handle(chatReq('nope'), all, {}, ff(), ccache); assert.equal(r.status, 400);
+r = await handle(chatReq(q, 'https://evil.com'), all, {}, ff(), ccache); assert.equal(r.status, 403);
+r = await handle(new Request('https://x.dev/api/chat'), all, {}, ff(), ccache); assert.equal(r.status, 405);
 console.log('worker tests passed');

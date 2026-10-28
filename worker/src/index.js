@@ -115,17 +115,14 @@ async function live(url, f, cache, request) {
 
 
 
-/* ---------- chat: Google Gemini API (free tier), key kept on the server ----------
+/* ---------- chat: a ladder of free models, key(s) kept on the server ----------
    The browser sends the conversation plus a context block built from the research it already shows. The model
    answers from that context only. Replies may end with [[note: ...]] or [[dispute: ...]] tags, which the app turns
-   into one-tap actions; nothing is stored on the server. Set the key once as the Worker secret GEMINI_API_KEY.
-   Providers, tried in order, each on its own free quota:
-   1. Google Gemini (secret GEMINI_API_KEY): GEMINI_MODEL if set, else the newest stable Flash models the key can use.
-   2. Groq (secret GROQ_API_KEY): gpt-oss-120b, then Qwen3.8 27B. No training on prompts; 8k tokens a minute, so the
-      context sent there is trimmed. Either key alone is enough. */
-const GROQ = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_MODELS = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b'];
-const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
+   into one-tap actions; nothing about the conversation is stored on the server.
+   Every rung is a free tier with its own quota. A request walks down the ladder, strongest first. A rung that says
+   it is rate-limited is skipped (a "cooldown") for a minute, or for an hour if it says its daily quota is spent, so
+   later requests go straight to a rung that still has room; the ladder retries the top again once the cooldown ends.
+   Add whichever keys you have as Worker secrets; rungs without a key are skipped. Workers AI needs no key. */
 const CHAT_SYSTEM = `You are the analyst inside Moat Monitor, an AI-native equity research tool. You speak to an investor about the companies in the CONTEXT below.
 Rules:
 - Use only facts and numbers in the CONTEXT or stated by the user. If something is not there, say you do not have it. Never invent figures, dates or quotes.
@@ -135,7 +132,18 @@ Rules:
 - Then, if their view is worth keeping, end with one line: [[note: <their view in one sentence, in their voice>]]
 - If their view implies a specific number for one of the model's assumptions that differs from the base case, also add one line: [[dispute: driver=<rev_cagr|margin_end|share_chg|exit_pe> value=<number in the same units as the CONTEXT> reason=<under 12 words>]]
 - Only use those tags for the user's own views, never for your own suggestions, and never more than one of each.`;
-let modelPick = null; // { at, list }
+const LADDER = [
+  { id: 'gemini', key: 'GEMINI_API_KEY', kind: 'gemini', take: 2 },
+  { id: 'nvidia', key: 'NVIDIA_API_KEY', kind: 'openai', base: 'https://integrate.api.nvidia.com/v1', prefer: [/deepseek-v4[.\d]*-pro/, /deepseek-v4/, /kimi-k2/, /gpt-oss-120b/, /llama-3\.3-70b-instruct/], take: 1 },
+  { id: 'groq', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['openai/gpt-oss-120b'], tight: true },
+  { id: 'mistral', key: 'MISTRAL_API_KEY', kind: 'openai', base: 'https://api.mistral.ai/v1', models: ['mistral-medium-latest'] },
+  { id: 'openrouter', key: 'OPENROUTER_API_KEY', kind: 'openai', base: 'https://openrouter.ai/api/v1', models: ['openrouter/free'] },
+  { id: 'groq-small', key: 'GROQ_API_KEY', kind: 'openai', base: 'https://api.groq.com/openai/v1', models: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'], tight: true },
+  { id: 'workers-ai', binding: 'AI', kind: 'workers-ai', models: ['@cf/meta/llama-3.3-70b-instruct-fp8-fast'] }
+];
+const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/';
+const picks = {}; // provider id -> { at, list }
+const cool = new Map(); // model -> until (ms); also mirrored in the edge cache so other isolates see it
 const verOf = (n) => { const m = n.match(/gemini-(\d+(?:\.\d+)?)/); return m ? parseFloat(m[1]) : 0; };
 export function rankModels(models) {
   const ok = (models || []).filter((m) => m && /^models\/gemini-/.test(m.name) && (m.supportedGenerationMethods || []).includes('generateContent')
@@ -143,34 +151,81 @@ export function rankModels(models) {
   const score = (n) => verOf(n) * 10 - (/lite/.test(n) ? 3 : 0) - (/(preview|exp)/.test(n) ? 1 : 0) - (/-\d{3,}$/.test(n) ? 0.5 : 0);
   return ok.map((m) => m.name.replace(/^models\//, '')).sort((a, b) => score(b) - score(a));
 }
-async function geminiModels(env, f) {
-  if (env.GEMINI_MODEL) return [env.GEMINI_MODEL];
-  if (modelPick && Date.now() - modelPick.at < 6 * 3600e3) return modelPick.list;
-  const r = await f(`${GEMINI}models?pageSize=200`, { headers: { 'x-goog-api-key': env.GEMINI_API_KEY } });
-  if (!r.ok) throw new Error('model list ' + r.status);
-  const list = rankModels((await r.json()).models).slice(0, 3);
-  if (!list.length) throw new Error('no Gemini Flash model available to this key');
-  modelPick = { at: Date.now(), list };
+export function preferModels(ids, prefer) {
+  const out = [];
+  for (const re of prefer) { const hit = ids.filter((x) => re.test(x) && !out.includes(x)).sort((a, b) => a.length - b.length)[0]; if (hit) out.push(hit); }
+  return out;
+}
+async function modelsFor(p, env, f) {
+  if (p.models) return p.models;
+  const hit = picks[p.id];
+  if (hit && Date.now() - hit.at < 6 * 3600e3) return hit.list;
+  let list = [];
+  if (p.kind === 'gemini') {
+    if (env.GEMINI_MODEL) list = [env.GEMINI_MODEL];
+    else {
+      const r = await f(`${GEMINI}models?pageSize=200`, { headers: { 'x-goog-api-key': env.GEMINI_API_KEY } });
+      if (!r.ok) throw new Error('model list ' + r.status);
+      list = rankModels((await r.json()).models);
+    }
+  } else {
+    const r = await f(`${p.base}/models`, { headers: { authorization: `Bearer ${env[p.key]}` } });
+    if (!r.ok) throw new Error('model list ' + r.status);
+    const j = await r.json();
+    list = preferModels((j.data || []).map((m) => m.id).filter(Boolean), p.prefer || []);
+  }
+  list = list.slice(0, p.take || 3);
+  picks[p.id] = { at: Date.now(), list };
   return list;
 }
-async function askGemini(env, f, model, system, msgs) {
-  const r = await f(`${GEMINI}models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
-    body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: msgs.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })), generationConfig: { temperature: 0.4, maxOutputTokens: 1200 } }) });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) return { status: r.status, err: (j.error && j.error.message) || '' };
-  const c = (j.candidates || [])[0];
-  return { text: c && c.content && Array.isArray(c.content.parts) ? c.content.parts.filter((p) => !p.thought).map((p) => p.text || '').join('').trim() : '', why: c && c.finishReason };
+const coolKey = (m) => new Request('https://cooldown.moat-monitor.internal/' + encodeURIComponent(m));
+async function cooling(m, cache) {
+  const u = cool.get(m);
+  if (u && u > Date.now()) return true;
+  if (!cache) return false;
+  try { const r = await cache.match(coolKey(m)); if (r) { const until = +(await r.text()); if (until > Date.now()) { cool.set(m, until); return true; } } } catch (e) { /* cache optional */ }
+  return false;
 }
-async function askGroq(env, f, model, system, msgs) {
-  const r = await f(GROQ, { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${env.GROQ_API_KEY}` },
-    body: JSON.stringify(Object.assign({ model, messages: [{ role: 'system', content: system }].concat(msgs), temperature: 0.4, max_completion_tokens: 1200 }, /gpt-oss/.test(model) ? { reasoning_effort: 'low' } : {})) });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) return { status: r.status, err: (j.error && j.error.message) || '' };
+async function coolDown(m, secs, cache) {
+  const until = Date.now() + secs * 1000;
+  cool.set(m, until);
+  if (cache) { try { await cache.put(coolKey(m), new Response(String(until), { headers: { 'cache-control': `max-age=${Math.ceil(secs)}` } })); } catch (e) { /* cache optional */ } }
+}
+/* How long to rest a rung after a 429: an hour if it says a daily quota is spent, else its Retry-After, else a minute. */
+export function restFor(status, headers, text) {
+  if (status !== 429) return 0;
+  if (/per.?day|daily|RPD|PerDay|quota exceeded for metric.*day/i.test(text || '')) return 3600;
+  const ra = Number(headers && headers.get && headers.get('retry-after'));
+  return isFinite(ra) && ra > 0 ? Math.min(ra, 3600) : 60;
+}
+async function ask(p, model, env, f, system, msgs) {
+  if (p.kind === 'workers-ai') {
+    const r = await env[p.binding].run(model, { messages: [{ role: 'system', content: system }].concat(msgs), max_tokens: 1000, temperature: 0.4 });
+    const c = r && r.choices && r.choices[0];
+    return { text: String((r && r.response) || (c && c.message && c.message.content) || '').trim() };
+  }
+  let r;
+  if (p.kind === 'gemini') {
+    r = await f(`${GEMINI}models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
+      body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: msgs.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })), generationConfig: { temperature: 0.4, maxOutputTokens: 1200 } }) });
+  } else {
+    r = await f(`${p.base}/chat/completions`, { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${env[p.key]}` },
+      body: JSON.stringify(Object.assign({ model, messages: [{ role: 'system', content: system }].concat(msgs), temperature: 0.4, max_tokens: 1200 }, p.id.startsWith('groq') && /gpt-oss/.test(model) ? { reasoning_effort: 'low' } : {})) });
+  }
+  const raw = await r.text();
+  let j = {};
+  try { j = JSON.parse(raw); } catch (e) { /* non-JSON error body */ }
+  if (!r.ok) return { status: r.status, headers: r.headers, err: ((j.error && (j.error.message || j.error)) || raw).toString().slice(0, 300) };
+  if (p.kind === 'gemini') {
+    const c = (j.candidates || [])[0];
+    return { text: c && c.content && Array.isArray(c.content.parts) ? c.content.parts.filter((x) => !x.thought).map((x) => x.text || '').join('').trim() : '' };
+  }
   const c = (j.choices || [])[0];
-  return { text: c && c.message && typeof c.message.content === 'string' ? c.message.content.replace(/<think>[\s\S]*?<\/think>/g, '').trim() : '', why: c && c.finish_reason };
+  return { text: c && c.message && typeof c.message.content === 'string' ? c.message.content.trim() : '' };
 }
-export async function chat(request, env, f = fetch) {
-  if (!env.GEMINI_API_KEY && !env.GROQ_API_KEY) return json({ error: 'Chat is not switched on yet: no model API key has been added.' }, 503);
+export async function chat(request, env, f = fetch, cache = null) {
+  const rungs = LADDER.filter((p) => (p.key ? env[p.key] : env[p.binding]));
+  if (!rungs.length) return json({ error: 'Chat is not switched on yet: no model API key has been added.' }, 503);
   const origin = request.headers.get('origin');
   if (origin && new URL(origin).host !== new URL(request.url).host) return json({ error: 'forbidden' }, 403);
   const raw = await request.text();
@@ -183,28 +238,33 @@ export async function chat(request, env, f = fetch) {
   while (msgs.length && msgs[0].role !== 'user') msgs.shift();
   if (!msgs.length || msgs[msgs.length - 1].role !== 'user') return json({ error: 'no question' }, 400);
   const context = String(body.context || '');
-  const plan = [];
-  if (env.GEMINI_API_KEY) {
-    try { (await geminiModels(env, f)).slice(0, 2).forEach((m) => plan.push(['gemini', m])); } catch (e) { /* fall through to Groq */ }
-  }
-  if (env.GROQ_API_KEY) (env.GROQ_MODELS ? String(env.GROQ_MODELS).split(',').map((x) => x.trim()) : GROQ_MODELS).forEach((m) => plan.push(['groq', m]));
   let last = '', limited = false;
-  const dead = new Set();
-  for (const [prov, model] of plan) {
-    if (dead.has(prov)) continue;
-    try {
-      // Groq allows 8k tokens a minute, so it gets a shorter context and history.
-      const sys = CHAT_SYSTEM + '\n\nCONTEXT\n' + context.slice(0, prov === 'groq' ? 14000 : 30000);
-      const r = prov === 'gemini' ? await askGemini(env, f, model, sys, msgs) : await askGroq(env, f, model, sys, prov === 'groq' ? msgs.slice(-6) : msgs);
-      if (r.text) return json({ reply: r.text, model }, 200, 0);
-      if (r.status === 429) { limited = true; last = `${model}: rate limited`; continue; }
-      if (r.status === 401 || r.status === 403) { dead.add(prov); last = `${prov}: key rejected`; continue; }
-      last = r.status ? `${model}: ${r.status} ${r.err}` : `${model}: empty reply (${r.why || 'no candidate'})`;
-    } catch (e) { last = String((e && e.message) || e); }
+  const deadKeys = new Set();
+  for (const p of rungs) {
+    if (p.key && deadKeys.has(p.key)) continue;
+    let models;
+    try { models = await modelsFor(p, env, f); } catch (e) { last = `${p.id}: ${e.message}`; continue; }
+    for (const model of models) {
+      if (await cooling(model, cache)) { limited = true; continue; }
+      try {
+        // Groq allows about 8k tokens a minute, so it gets a shorter context and history.
+        const sys = CHAT_SYSTEM + '\n\nCONTEXT\n' + context.slice(0, p.tight ? 14000 : 30000);
+        const r = await ask(p, model, env, f, sys, p.tight ? msgs.slice(-6) : msgs);
+        if (r.text) return json({ reply: r.text.replace(/<think>[\s\S]*?<\/think>/g, '').trim(), model, provider: p.id }, 200, 0);
+        const rest = restFor(r.status, r.headers, r.err);
+        if (rest) { limited = true; await coolDown(model, rest, cache); last = `${model}: rate limited`; continue; }
+        if (r.status === 401 || r.status === 403) { if (p.key) deadKeys.add(p.key); last = `${p.id}: key rejected`; break; }
+        last = r.status ? `${model}: ${r.status} ${r.err}` : `${model}: empty reply`;
+      } catch (e) {
+        last = `${model}: ${String((e && e.message) || e)}`;
+        if (/neuron|4006|daily/i.test(last)) { limited = true; await coolDown(model, 3600, cache); }
+      }
+    }
   }
-  if (limited) return json({ error: 'The free model allowance is busy or used up. Try again in a minute; daily allowances reset overnight.' }, 429);
+  if (limited) return json({ error: 'Every free model is busy or out of quota right now. Try again in a minute; daily allowances reset overnight.' }, 429);
   return json({ error: 'The analyst is unavailable right now.', detail: last.slice(0, 200) }, 503);
 }
+export const _chatTest = { reset: () => { cool.clear(); Object.keys(picks).forEach((k) => delete picks[k]); } };
 
 export async function handle(request, env, ctx, f = fetch, cache = (typeof caches !== 'undefined' ? caches.default : null)) {
   const url = new URL(request.url);
@@ -214,7 +274,7 @@ export async function handle(request, env, ctx, f = fetch, cache = (typeof cache
   }
   if (url.pathname === '/api/chat') {
     if (request.method !== 'POST') return json({ error: 'method not allowed' }, 405);
-    try { return await chat(request, env, f); } catch (e) { return json({ error: 'internal', detail: String(e && e.message || e) }, 500); }
+    try { return await chat(request, env, f, cache); } catch (e) { return json({ error: 'internal', detail: String(e && e.message || e) }, 500); }
   }
   if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'method not allowed' }, 405);
   if (!env.REPO) return json({ error: 'REPO is not configured' }, 500);
