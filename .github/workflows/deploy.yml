@@ -1,6 +1,7 @@
 name: deploy
 # Publishes the site and Worker to Cloudflare whenever the app or Worker changes on main.
 # Needs two repository secrets: CLOUDFLARE_API_TOKEN (template "Edit Cloudflare Workers") and CLOUDFLARE_ACCOUNT_ID.
+# Optional chat keys, copied to the Worker as secrets when present: GEMINI_API_KEY (aistudio.google.com) and GROQ_API_KEY (console.groq.com).
 # Without them the deploy step is skipped (not failed), so the job stays green if Cloudflare's own Git build is used instead.
 on:
   push:
@@ -37,6 +38,18 @@ jobs:
             echo "Cloudflare rate-limited the deploy; retrying"
           done
           exit 1
+      - name: Copy chat keys to the Worker
+        if: env.HAS_TOKEN == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          for k in GEMINI_API_KEY GROQ_API_KEY; do
+            v="${!k}"
+            if [ -n "$v" ]; then printf '%s' "$v" | npx wrangler secret put "$k" --config worker/wrangler.toml >/dev/null && echo "$k set"; else echo "$k not provided"; fi
+          done
       - name: Deploy skipped
         if: env.HAS_TOKEN != 'true'
         run: echo "::warning::CLOUDFLARE_API_TOKEN is not set, so nothing was deployed. Add the secrets (see the comment at the top of this file) or use Cloudflare's Git integration."

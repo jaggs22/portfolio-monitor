@@ -1,6 +1,6 @@
 /* Service worker: offline shell plus fresh data.
    Bump VERSION whenever a shell file changes so installed copies pick it up. */
-const VERSION = 'v20';
+const VERSION = 'v21';
 const SHELL_CACHE = 'shell-' + VERSION;
 const DATA_CACHE = 'data-' + VERSION;
 const SHELL = [
@@ -14,7 +14,6 @@ const SHELL = [
   'report.js',
   'onboard.js',
   'chat.js',
-  'llm-worker.js',
   'icons/favicon.svg',
   'fin.js',
   'charts.js',

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { handle } from '../worker/src/index.js';
+import { handle, rankModels } from '../worker/src/index.js';
 
 const env = { REPO: 'me/repo', DATA_BRANCH: 'data', ASSETS: { fetch: async () => new Response('<html>app</html>') } };
 const store = new Map();
@@ -54,4 +54,36 @@ r = await handle(new Request('https://x.dev/api/quotes', { method: 'POST' }), en
 r = await handle(new Request('https://x.dev/api/quotes'), {}, {}, f, cache); assert.equal(r.status, 500);
 r = await get('/api/nothing'); assert.equal(r.status, 404);
 
+
+// chat: Gemini first, Groq as backup
+const mk = (name, gen = true) => ({ name: 'models/' + name, supportedGenerationMethods: gen ? ['generateContent'] : ['embedContent'] });
+assert.deepEqual(rankModels([mk('gemini-2.5-flash'), mk('gemini-3.8-flash'), mk('gemini-3.5-flash-lite'), mk('gemini-3.8-flash-preview-09-2026'), mk('gemini-3.8-flash-image'), mk('gemini-2.5-pro'), mk('text-embedding-004', false)]).slice(0, 3),
+  ['gemini-3.8-flash', 'gemini-3.8-flash-preview-09-2026', 'gemini-3.5-flash-lite']);
+const chatReq = (body, origin) => new Request('https://x.dev/api/chat', { method: 'POST', headers: origin ? { origin } : {}, body: typeof body === 'string' ? body : JSON.stringify(body) });
+const log = [];
+const ff = (gem, grq) => async (u, o) => {
+  u = String(u); log.push(u);
+  if (u.includes('generativelanguage') && u.endsWith('models?pageSize=200')) return new Response(JSON.stringify({ models: [mk('gemini-3.8-flash'), mk('gemini-3.5-flash')] }));
+  if (u.includes('generativelanguage')) return gem(u, JSON.parse(o.body));
+  if (u.includes('groq')) return grq(u, JSON.parse(o.body));
+  return f(u, o);
+};
+const ok = (x) => new Response(JSON.stringify(x));
+const q = { messages: [{ role: 'assistant', content: 'hello' }, { role: 'user', content: 'my view' }], context: 'CTX' };
+r = await handle(chatReq(q), env, {}, ff(), cache); assert.equal(r.status, 503);
+const envG = Object.assign({}, env, { GEMINI_API_KEY: 'g', GROQ_API_KEY: 'q' });
+r = await handle(chatReq(q), envG, {}, ff((u, b) => { assert.ok(b.systemInstruction.parts[0].text.includes('CTX')); assert.equal(b.contents.length, 1); assert.equal(b.contents[0].role, 'user'); return ok({ candidates: [{ content: { parts: [{ text: 'thinking', thought: true }, { text: 'Gemini answer [[note: x]]' }] } }] }); }), cache);
+let cj = await r.json(); assert.equal(cj.reply, 'Gemini answer [[note: x]]'); assert.equal(cj.model, 'gemini-3.8-flash');
+log.length = 0;
+r = await handle(chatReq(q), envG, {}, ff(() => new Response('{}', { status: 429 }), (u, b) => { assert.equal(b.model, 'openai/gpt-oss-120b'); assert.equal(b.messages[0].role, 'system'); return ok({ choices: [{ message: { content: 'Groq answer' } }] }); }), cache);
+cj = await r.json(); assert.equal(cj.reply, 'Groq answer'); assert.equal(cj.model, 'openai/gpt-oss-120b');
+assert.equal(log.filter((u) => u.includes(':generateContent')).length, 2);
+r = await handle(chatReq(q), envG, {}, ff(() => new Response('{}', { status: 429 }), () => new Response('{}', { status: 429 })), cache); assert.equal(r.status, 429);
+r = await handle(chatReq(q), Object.assign({}, env, { GROQ_API_KEY: 'q' }), {}, ff(null, (u, b) => ok({ choices: [{ message: { content: '<think>x</think>Only Groq' } }] })), cache);
+cj = await r.json(); assert.equal(cj.reply, 'Only Groq');
+r = await handle(chatReq(q), envG, {}, ff(() => new Response('{"error":{"message":"bad key"}}', { status: 403 }), () => new Response('{}', { status: 401 })), cache); assert.equal(r.status, 503);
+r = await handle(chatReq({ messages: [{ role: 'assistant', content: 'x' }] }), envG, {}, ff(), cache); assert.equal(r.status, 400);
+r = await handle(chatReq('nope'), envG, {}, ff(), cache); assert.equal(r.status, 400);
+r = await handle(chatReq(q, 'https://evil.com'), envG, {}, ff(), cache); assert.equal(r.status, 403);
+r = await handle(new Request('https://x.dev/api/chat'), envG, {}, ff(), cache); assert.equal(r.status, 405);
 console.log('worker tests passed');
