@@ -1,0 +1,36 @@
+{
+ "generated_at": "2026-10-31T12:37:24Z",
+ "source": "SEC EDGAR",
+ "filings": {
+  "PG": {
+   "form": "10-Q",
+   "period": "2026-09-30",
+   "filed": "2026-10-22",
+   "accession": "0000080424-26-000256",
+   "eps_ratio": 1.003021,
+   "rev_ratio": 1.010226,
+   "shares_ratio": -729.454545,
+   "metrics": true
+  },
+  "LIN": {
+   "form": "10-Q",
+   "period": "2026-09-30",
+   "filed": "2026-10-29",
+   "accession": "0001628280-26-068079",
+   "eps_ratio": 0.97224,
+   "rev_ratio": 1.022257,
+   "shares_ratio": 0.995671,
+   "metrics": true
+  },
+  "LLY": {
+   "form": "10-Q",
+   "period": "2026-09-30",
+   "filed": "2026-10-29",
+   "accession": "0000059478-26-000108",
+   "eps_ratio": 1.033893,
+   "rev_ratio": 1.085306,
+   "shares_ratio": 0.999664,
+   "metrics": true
+  }
+ }
+}

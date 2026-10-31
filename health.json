@@ -1,0 +1,63 @@
+{
+ "quotes": {
+  "last_run": "2026-10-30T22:33:50Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "generated_at": "2026-10-31T12:37:24Z",
+ "history": {
+  "last_run": "2026-10-28T00:43:50Z",
+  "ok": true,
+  "count": 27,
+  "errors": []
+ },
+ "news": {
+  "last_run": "2026-10-28T00:43:50Z",
+  "ok": true,
+  "count": 60,
+  "errors": []
+ },
+ "filings": {
+  "last_run": "2026-10-31T12:37:24Z",
+  "ok": true,
+  "count": 0,
+  "errors": []
+ },
+ "fundamentals": {
+  "last_run": "2026-10-29T16:10:20Z",
+  "ok": true,
+  "count": 2,
+  "errors": []
+ },
+ "mgmt": {
+  "last_run": "2026-10-28T00:43:50Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "evidence": {
+  "last_run": "2026-10-31T12:37:24Z",
+  "ok": true,
+  "count": 5,
+  "errors": []
+ },
+ "peers": {
+  "last_run": "2026-10-31T01:30:01Z",
+  "ok": true,
+  "count": 3,
+  "errors": []
+ },
+ "segments": {
+  "last_run": "2026-10-31T01:30:01Z",
+  "ok": true,
+  "count": 3,
+  "errors": []
+ },
+ "bench": {
+  "last_run": "2026-10-31T01:30:01Z",
+  "ok": true,
+  "count": 12,
+  "errors": []
+ }
+}
