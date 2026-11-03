@@ -351,3 +351,23 @@ def job_segments(sec_http, out, tickers=None, now=None, ciks=None):
                 errors.append(f"{sym} release: {e}")
     record(out, "segments", done > 0, errors, done, now)
     return done
+
+
+def job_baserates(sec_http, out, now=None, max_age_days=30, last_year=None):
+    """Revenue-growth and margin-change base rates from SEC XBRL frames. Rebuilt monthly (history barely moves)."""
+    from . import baserates as B
+    path = Path(out) / "baserates.json"
+    cur = read_json(path)
+    t = now or time.time()
+    if cur and cur.get("built_ts") and t - cur["built_ts"] < max_age_days * 86400:
+        return cur
+    last = last_year or dt.datetime.fromtimestamp(t, dt.timezone.utc).year - 1
+    first = 2009
+    rev, ni, errors = B.fetch(sec_http, first, last)
+    ok = len(rev) > 1000
+    if ok:
+        res = B.build(rev, ni, first, last)
+        res.update(asof=iso(now), built_ts=t, source="SEC EDGAR XBRL frames API", filers=len(rev))
+        write_json(path, res)
+    record(out, "baserates", ok, errors if not ok else [e for e in errors if "Revenues" in e or "NetIncome" in e], len(rev), now)
+    return read_json(path)

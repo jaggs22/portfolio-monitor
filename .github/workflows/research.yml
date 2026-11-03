@@ -6,7 +6,7 @@ on:
     - cron: "5 22 * * 1-5"
   push:
     branches: [main]
-    paths: ["pipeline/peers.py", "pipeline/segments.py", "pipeline/jobs.py", ".github/workflows/research.yml"]
+    paths: ["pipeline/peers.py", "pipeline/segments.py", "pipeline/baserates.py", "pipeline/jobs.py", ".github/workflows/research.yml"]
   workflow_dispatch:
 concurrency:
   group: data-publish
@@ -28,7 +28,7 @@ jobs:
         run: scripts/fetch_data.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Peers and segments
+      - name: Peers, segments and base rates
         run: python -m pipeline.run research --out out
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}

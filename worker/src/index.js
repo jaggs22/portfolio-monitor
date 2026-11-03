@@ -23,6 +23,7 @@ const ROUTES = [
   [/^\/api\/mgmt\/([A-Z.\-]+)$/, (m) => `mgmt/${m[1]}.json`, 1800],
   [/^\/api\/peers\/([A-Z.\-]+)$/, (m) => `peers/${m[1]}.json`, 1800],
   [/^\/api\/segments\/([A-Z.\-]+)$/, (m) => `segments/${m[1]}.json`, 3600],
+  [/^\/api\/baserates$/, () => 'baserates.json', 86400],
 ];
 
 const SEC_HEADERS = { 'x-content-type-options': 'nosniff', 'referrer-policy': 'no-referrer' };

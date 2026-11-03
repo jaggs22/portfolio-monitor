@@ -11,7 +11,7 @@ from . import llm
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["quotes", "history", "news", "fundamentals", "filings", "evidence", "mgmt", "peers", "segments", "research", "all"])
+    ap.add_argument("job", choices=["quotes", "history", "news", "fundamentals", "filings", "evidence", "mgmt", "peers", "segments", "research", "baserates", "all"])
     ap.add_argument("--out", default="out")
     ap.add_argument("--tickers", default="")
     a = ap.parse_args(argv)
@@ -19,7 +19,7 @@ def main(argv=None):
     yahoo = Http(config.YAHOO_UA, pace=0.25)
     stooq = Http(config.YAHOO_UA, pace=0.3)
     sec_http = None
-    if a.job in ("fundamentals", "filings", "mgmt", "segments", "research", "all"):
+    if a.job in ("fundamentals", "filings", "mgmt", "segments", "research", "baserates", "all"):
         if not config.SEC_USER_AGENT:
             sys.exit("SEC_USER_AGENT is not set. SEC requires a User-Agent with contact details, e.g. 'Name name@example.com'.")
         sec_http = Http(config.SEC_USER_AGENT, pace=0.2)
@@ -46,6 +46,8 @@ def main(argv=None):
         jobs.job_peers(peers.fetch, a.out, None, now)
     if a.job in ("segments", "research", "all"):
         jobs.job_segments(sec_http, a.out, None, now)
+    if a.job in ("baserates", "research"):
+        jobs.job_baserates(sec_http, a.out, now, max_age_days=0 if a.job == "baserates" else 30)
     if a.job in ("evidence", "all", "filings", "fundamentals"):
         jobs.job_evidence(a.out, tickers=tickers, now=now)
     return 0
