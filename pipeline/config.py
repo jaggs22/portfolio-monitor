@@ -15,12 +15,9 @@ YAHOO_UA = os.environ.get(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
 )
 
-# The 15 covered names: 3 core, 2 lighter, 10 basic view.
-TIERS = {
-    "V": "core", "LIN": "core", "LLY": "core",
-    "MU": "lighter", "PG": "lighter",
-}
-BASIC = ["MSFT", "JPM", "GOOGL", "WM", "COST", "KO", "AMZN", "XOM", "NEE", "AMT"]
+# The 15 covered names, all with full research.
+TIERS = {t: "core" for t in ["V", "LIN", "LLY", "MU", "PG", "MSFT", "JPM", "GOOGL", "WM", "COST", "KO", "AMZN", "XOM", "NEE", "AMT"]}
+BASIC = []
 TICKERS = list(TIERS) + BASIC
 
 # Benchmarks for relative performance: the S&P 500 and the SPDR sector funds (price history only).

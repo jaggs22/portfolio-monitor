@@ -273,7 +273,7 @@ def job_mgmt(sec_http, yf_mgmt, llm_call, out, tickers=None, now=None, ciks=None
 
 
 # ---------- peers and segments (core names) ----------
-CORE = ["LIN", "LLY", "V"]
+CORE = [t for t, tier in config.TIERS.items() if tier == "core"]
 
 
 def job_peers(peer_fetch, out, tickers=None, now=None):

@@ -22,6 +22,8 @@ import math
 
 # EV-based multiples mean little for a lender: its debt is raw material, not financing. P/E only for these.
 EV_NOT_MEANINGFUL = {"AXP": "American Express is a lender as well as a network, so EV-based multiples are not meaningful; compare on P/E."}
+_BANK = "Banks fund themselves with deposits and debt, so enterprise value and EBITDA are not meaningful; compare on P/E."
+EV_NOT_MEANINGFUL.update({t: _BANK for t in ["JPM", "BAC", "C", "WFC", "GS", "MS"]})
 
 # Default peers are switched on in the table; optional peers can be added by the user in the app.
 PEERS = {
@@ -43,6 +45,78 @@ PEERS = {
         "why": "Mastercard is the only true like-for-like network. American Express is a closed-loop network and lender. "
                "PayPal, Fiserv and Adyen are the processing and wallet layer that competes for the same transactions.",
     },
+    "MU": {
+        "default": ["000660.KS", "005930.KS", "SNDK"],
+        "optional": ["WDC", "STX"],
+        "why": "SK Hynix and Samsung are the other two DRAM and HBM makers; SanDisk is the NAND pure play. Western Digital "
+               "and Seagate are optional storage comparisons.",
+    },
+    "PG": {
+        "default": ["CL", "KMB", "UL"],
+        "optional": ["CHD", "CLX", "KVUE"],
+        "why": "Colgate, Kimberly-Clark and Unilever are the global household and personal care majors. Church & Dwight, "
+               "Clorox and Kenvue are optional US staples comparisons.",
+    },
+    "MSFT": {
+        "default": ["GOOGL", "AMZN", "ORCL"],
+        "optional": ["AAPL", "CRM", "META"],
+        "why": "Alphabet and Amazon are the other two hyperscale clouds; Oracle is the fastest-growing cloud and database "
+               "rival. Apple, Salesforce and Meta are optional large-cap software and platform comparisons.",
+    },
+    "JPM": {
+        "default": ["BAC", "C", "WFC"],
+        "optional": ["GS", "MS"],
+        "why": "Bank of America, Citigroup and Wells Fargo are the other US universal banks. Goldman Sachs and Morgan "
+               "Stanley are optional comparisons for the investment bank and wealth businesses.",
+    },
+    "GOOGL": {
+        "default": ["META", "MSFT", "AMZN"],
+        "optional": ["AAPL", "NFLX"],
+        "why": "Meta competes for the same advertising budgets; Microsoft and Amazon compete in cloud and AI. Apple and "
+               "Netflix are optional consumer platform comparisons.",
+    },
+    "WM": {
+        "default": ["RSG", "WCN", "GFL"],
+        "optional": ["CWST", "ROL"],
+        "why": "Republic Services, Waste Connections and GFL are the other North American solid waste majors. Casella and "
+               "Rollins are optional route-density service comparisons.",
+    },
+    "COST": {
+        "default": ["WMT", "BJ", "TGT"],
+        "optional": ["DG", "KR", "AMZN"],
+        "why": "Walmart (including Sam's Club) and BJ's are the other warehouse and mass merchants; Target competes for the "
+               "same basket. Dollar General, Kroger and Amazon are optional comparisons.",
+    },
+    "KO": {
+        "default": ["PEP", "KDP", "MNST"],
+        "optional": ["PG", "DEO"],
+        "why": "PepsiCo, Keurig Dr Pepper and Monster are the other large beverage companies. Procter & Gamble and Diageo "
+               "are optional global consumer brand comparisons.",
+    },
+    "AMZN": {
+        "default": ["WMT", "MSFT", "GOOGL"],
+        "optional": ["COST", "SHOP", "BABA"],
+        "why": "Walmart is the retail rival; Microsoft and Alphabet are the cloud rivals to AWS. Costco, Shopify and "
+               "Alibaba are optional commerce comparisons.",
+    },
+    "XOM": {
+        "default": ["CVX", "SHEL", "TTE"],
+        "optional": ["COP", "BP"],
+        "why": "Chevron, Shell and TotalEnergies are the other integrated oil majors. ConocoPhillips and BP are optional "
+               "comparisons.",
+    },
+    "NEE": {
+        "default": ["DUK", "SO", "D"],
+        "optional": ["AEP", "CEG"],
+        "why": "Duke, Southern and Dominion are the other large regulated US utilities. AEP and Constellation are "
+               "optional comparisons for transmission growth and power generation.",
+    },
+    "AMT": {
+        "default": ["CCI", "SBAC"],
+        "optional": ["EQIX", "DLR"],
+        "why": "Crown Castle and SBA Communications are the other two US tower companies. Equinix and Digital Realty are "
+               "optional data center comparisons, a business American Tower owns through CoreSite.",
+    },
 }
 
 NAMES = {
@@ -50,6 +124,18 @@ NAMES = {
     "SHW": "Sherwin-Williams", "DD": "DuPont", "LLY": "Eli Lilly", "NVO": "Novo Nordisk", "ABBV": "AbbVie",
     "MRK": "Merck", "AZN": "AstraZeneca", "JNJ": "Johnson & Johnson", "PFE": "Pfizer", "AMGN": "Amgen", "V": "Visa",
     "MA": "Mastercard", "AXP": "American Express", "PYPL": "PayPal", "FI": "Fiserv", "ADYEN.AS": "Adyen", "FIS": "FIS",
+    "MU": "Micron", "000660.KS": "SK Hynix", "005930.KS": "Samsung Electronics", "SNDK": "SanDisk", "WDC": "Western Digital",
+    "STX": "Seagate", "PG": "Procter & Gamble", "CL": "Colgate-Palmolive", "KMB": "Kimberly-Clark", "UL": "Unilever",
+    "CHD": "Church & Dwight", "CLX": "Clorox", "KVUE": "Kenvue", "MSFT": "Microsoft", "GOOGL": "Alphabet", "AMZN": "Amazon",
+    "ORCL": "Oracle", "AAPL": "Apple", "CRM": "Salesforce", "META": "Meta", "JPM": "JPMorgan Chase", "BAC": "Bank of America",
+    "C": "Citigroup", "WFC": "Wells Fargo", "GS": "Goldman Sachs", "MS": "Morgan Stanley", "NFLX": "Netflix",
+    "WM": "Waste Management", "RSG": "Republic Services", "WCN": "Waste Connections", "GFL": "GFL Environmental",
+    "CWST": "Casella", "ROL": "Rollins", "COST": "Costco", "WMT": "Walmart", "BJ": "BJ's Wholesale", "TGT": "Target",
+    "DG": "Dollar General", "KR": "Kroger", "KO": "Coca-Cola", "PEP": "PepsiCo", "KDP": "Keurig Dr Pepper",
+    "MNST": "Monster Beverage", "DEO": "Diageo", "SHOP": "Shopify", "BABA": "Alibaba", "XOM": "Exxon Mobil", "CVX": "Chevron",
+    "SHEL": "Shell", "TTE": "TotalEnergies", "COP": "ConocoPhillips", "BP": "BP", "NEE": "NextEra Energy", "DUK": "Duke Energy",
+    "SO": "Southern Company", "D": "Dominion Energy", "AEP": "American Electric Power", "CEG": "Constellation Energy",
+    "AMT": "American Tower", "CCI": "Crown Castle", "SBAC": "SBA Communications", "EQIX": "Equinix", "DLR": "Digital Realty",
 }
 
 QROWS = {
