@@ -167,13 +167,11 @@
   function stockSearch() {
     const list = h('div', { class: 'hs-list', role: 'listbox' });
     const inp = h('input', { type: 'search', class: 'hs-in', placeholder: 'Find a stock by name or ticker', 'aria-label': 'Find a stock', autocomplete: 'off' });
-    const depth = { core: 3, lighter: 2, basic: 1 };
     const draw = () => {
       const q = inp.value.trim().toLowerCase();
       const rows = state.data.universe.filter((u) => !q || u.ticker.toLowerCase().startsWith(q) || u.name.toLowerCase().includes(q)).slice(0, q ? 6 : 0);
       list.replaceChildren(...rows.map((u) => h('button', { type: 'button', class: 'hs-row', role: 'option', onclick: () => go('c/' + u.ticker) },
-        h('span', { class: 'ob-depth', 'aria-hidden': 'true' }, [1, 2, 3].map((i) => h('i', { class: i <= depth[u.tier] ? 'on' : '' }))),
-        h('b', null, u.ticker), h('span', null, u.name), icon('chev'))));
+        h('b', null, u.ticker), h('span', null, u.name), (() => { const c = CO.callOf(u.ticker, false); return c ? pill(c.rating, CO.ratingKind(c.rating)) : null; })(), icon('chev'))));
       list.hidden = !rows.length;
     };
     inp.addEventListener('input', draw);
@@ -219,7 +217,7 @@
         stockSearch()),
       h('section', { class: 'qa-grid', 'aria-label': 'Quick actions' }, A.map(([ic, t, d, fn, hot]) => h('button', { type: 'button', class: 'qa' + (hot ? ' hot' : ''), onclick: fn },
         h('span', { class: 'qa-ic' }, icon(ic)), h('span', { class: 'qa-t' }, h('b', null, t), h('span', null, d)), icon('chev', 'qa-go')))),
-      h('p', { class: 'home-foot' }, `${n} stocks covered · ${deep} in full research · `, h('a', { href: '#', onclick: (e) => { e.preventDefault(); OB.tour('home'); } }, 'Take the tour'))
+      h('p', { class: 'home-foot' }, deep < n ? `${n} stocks covered · ${deep} with full research · ` : `${n} stocks covered · `, h('a', { href: '#', onclick: (e) => { e.preventDefault(); OB.tour('home'); } }, 'Take the tour'))
     ];
   }
 
@@ -297,7 +295,7 @@
 
     // the call on each holding
     const held = L.cleanHoldings(state.holdings).filter((x) => x.weight > 0).sort((a, b) => b.weight - a.weight).map((x) => x.ticker).filter((t) => CORE.includes(t));
-    out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, held.length ? 'Your holdings: the call' : 'Full research'), h('a', { href: '#/coverage' }, 'All coverage')),
+    out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, held.length ? 'Your holdings: the call' : 'The call'), h('a', { href: '#/coverage' }, 'All coverage')),
       h('div', { class: 'cos' }, (held.length ? held : CORE.slice(0, 3)).map((t) => coCard(t)))));
 
     // this week
@@ -357,11 +355,12 @@
     const listBox = h('div');
     const draw = () => {
       const q = state.covQ.trim().toLowerCase();
-      const groups = [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basic view']];
+      const mixed = new Set(state.data.universe.map((u) => u.tier)).size > 1;
+      const groups = mixed ? [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basic view']] : [[state.data.universe[0].tier, 'Every stock']];
       listBox.replaceChildren(...groups.map(([tier, label]) => {
         const rows = state.data.universe.filter((u) => u.tier === tier && (!q || u.ticker.toLowerCase().includes(q) || u.name.toLowerCase().includes(q) || (u.sector || '').toLowerCase().includes(q)));
         if (!rows.length) return null;
-        return h('section', null, h('div', { class: 'sec-head' }, h('h2', null, label), h('span', { class: 'small muted' }, rows.length + ' names')),
+        return h('section', null, mixed ? h('div', { class: 'sec-head' }, h('h2', null, label), h('span', { class: 'small muted' }, rows.length + ' names')) : null,
           h('div', { class: 'card list' }, rows.map((u) => {
             const p = priceOf(u.ticker), cl = CO.callOf(u.ticker, false);
             return h('button', { type: 'button', class: 'li', onclick: () => go('c/' + u.ticker) },
@@ -377,7 +376,7 @@
     search.value = state.covQ;
     search.addEventListener('input', () => { state.covQ = search.value; draw(); });
     draw();
-    return [h('section', { class: 'hero' }, h('div', null, eyebrow('15 names, one per sector or more'), h('h1', { style: { marginTop: '8px' } }, 'Coverage')), search), listBox];
+    return [h('section', { class: 'hero' }, h('div', null, eyebrow(`${state.data.universe.length} US stocks · rating, target and 5-page report on each`), h('h1', { style: { marginTop: '8px' } }, 'Coverage')), search), listBox];
   }
 
   /* ---------- markets ---------- */
@@ -426,7 +425,7 @@
       state.disputes.length ? h('div', { class: 'card list' }, state.disputes.map((d) => h('button', { type: 'button', class: 'li', onclick: () => go(`c/${d.ticker}/thesis`) },
         h('span', { class: 'tickers', style: { width: '44px' } }, d.ticker), h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, E.DRIVER_META[d.driver].label), h('div', { class: 'li-sub' }, `Engine ${d.from}, yours ${d.to}${d.note ? '. ' + d.note : ''}`)), icon('chev')))) : empty('None yet.')));
     out.push(h('section', { class: 'grid g2' },
-      h('div', { class: 'card pad block' }, eyebrow('Names to deepen'), state.deepen.length ? h('div', { class: 'chips' }, state.deepen.map((t) => pill(nameOf(t), 'info'))) : h('p', { class: 'muted' }, 'None requested.')),
+      state.deepen.length ? h('div', { class: 'card pad block' }, eyebrow('Names to deepen'), h('div', { class: 'chips' }, state.deepen.map((t) => pill(nameOf(t), 'info')))) : null,
       h('div', { class: 'card pad block' }, eyebrow('Live baseline'),
         h('p', { class: 'small' }, 'When a company files a 10-Q or 10-K, the backend rebuilds its starting EPS, revenue and share count, then refreshes segments and peers. Your disputes stay.'),
         h('div', { class: 'row-actions' }, btn(state.demoFiling ? 'Clear demo filing' : 'Replay a filing (demo)', () => {

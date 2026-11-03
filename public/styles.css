@@ -816,7 +816,7 @@ body.tour-open { overflow: hidden; }
 .hs-row:first-child { border-top: 0; }
 .hs-row:hover, .hs-row:focus-visible { background: var(--sunk); }
 .hs-row b { width: 52px; color: var(--ink); font-size: 13px; letter-spacing: .02em; }
-.hs-row span:not(.ob-depth) { flex: 1; }
+.hs-row span:not(.ob-depth):not(.pill) { flex: 1; }
 .hs-row .ic { width: 16px; height: 16px; color: var(--faint); }
 .hs-row .ob-depth i { width: 4px; height: 12px; }
 .qa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }

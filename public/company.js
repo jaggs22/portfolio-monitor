@@ -426,7 +426,7 @@
       const isReport = mode === 'report';
       const u = state.uniMap[t] || {}, p = priceOf(t), r = researchOf(t), rv = review(t);
       const base = r ? evalFor(t, false) : null;
-      const depth = r ? (r.depth === 'deep' ? 'Full research' : 'Lighter research') : 'Basic view';
+      const depth = r ? (r.depth === 'deep' ? null : 'Lighter research') : 'Basic view';
       const next = r && (r.catalysts || []).filter((c) => c.date >= new Date().toISOString().slice(0, 10)).sort((a, b) => a.date.localeCompare(b.date))[0];
       const c = r ? callOf(t, false) : null, cm = r && hasMine(t) ? callOf(t, true) : null;
       const hero = h('section', { class: 'co-hero' },

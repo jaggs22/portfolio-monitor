@@ -68,13 +68,13 @@
     function contextFor(t) {
       const lines = [];
       const U = state.data.universe;
-      lines.push(`Coverage: ${U.length} US stocks. ` + [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basics only']].map(([k, l]) => { const xs = U.filter((u) => u.tier === k); return xs.length ? `${l}: ${xs.map((u) => u.name).join(', ')}.` : ''; }).filter(Boolean).join(' '));
+      lines.push(`Coverage: ${U.length} US stocks. ` + (new Set(U.map((u) => u.tier)).size === 1 ? `Every one has full research: ${U.map((u) => u.name).join(', ')}.` : '') + (new Set(U.map((u) => u.tier)).size === 1 ? '' : [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basics only']].map(([k, l]) => { const xs = U.filter((u) => u.tier === k); return xs.length ? `${l}: ${xs.map((u) => u.name).join(', ')}.` : ''; }).filter(Boolean).join(' ')));
       const hs = L.cleanHoldings(state.holdings);
       if (hs.length) lines.push(`The investor's book (dollars): ${hs.map((x) => `${x.ticker} ${Math.round(x.weight)}`).join(', ')}.`);
       U.filter((u) => u.tier !== 'basic').forEach((u) => { const c = CO.callOf(u.ticker, false); if (c) lines.push(`${u.name} (${u.ticker}): ${c.rating}, 12-month target $${c.pt.toFixed(2)} (${fmt.spct(c.upside, 1)}).`); });
       if (!t) return lines.join('\n');
       const u = state.uniMap[t] || {}, p = CO.priceOf(t), r = CO.researchOf(t), rv = CO.review(t), c = CO.callOf(t, false), cm = CO.callOf(t, true);
-      lines.push('', `FOCUS: ${nameOf(t)} (${t}), ${u.sector || ''}, research depth: ${u.tier}. Price $${p ? p.price.toFixed(2) : 'n/a'}.`);
+      lines.push('', `FOCUS: ${nameOf(t)} (${t}), ${u.sector || ''}, ${u.tier === 'core' ? '' : `research depth: ${u.tier}. `}Price $${p ? p.price.toFixed(2) : 'n/a'}.`);
       if (c) lines.push(`Call: ${c.rating}. 12-month target $${c.pt.toFixed(2)} = FY+1 EPS $${c.eps1.toFixed(2)} x ${c.targetPE.toFixed(1)}x. Upside ${fmt.spct(c.upside, 1)}, total return ${fmt.spct(c.totalReturn, 1)} vs cost of equity ${fmt.pct(c.hurdle)}. Downside case $${c.bear.value.toFixed(2)}, upside case $${c.bull.value.toFixed(2)}. Rule: Overweight if total return beats cost of equity by 5 points, Underweight if 5 points short.`);
       if (cm && c && cm.pt !== c.pt) lines.push(`With the investor's disputes: ${cm.rating}, target $${cm.pt.toFixed(2)}.`);
       if (rv) {

@@ -41,12 +41,12 @@
         h('h1', { class: 'ob-h' }, `Hey ${first()}.`),
         h('p', { class: 'ob-lead' }, 'Welcome to Moat Monitor, your AI-native equity research tool.'),
         h('div', { class: 'ob-eyebrow' }, `What is covered today · ${state.data.universe.length} stocks`),
-        h('div', { class: 'ob-tiers' }, TIERS.filter((x) => tierRows(x.tier).length).map((x) => {
+        h('div', { class: 'ob-tiers' }, TIERS.filter((x) => tierRows(x.tier).length).map((x, i, all) => {
           const rows = tierRows(x.tier);
           return h('div', { class: 'ob-tier' },
-            h('div', { class: 'ob-tier-h' }, depthBar(x.depth), h('b', null, x.label), h('span', { class: 'ob-n' }, String(rows.length))),
+            all.length > 1 ? h('div', { class: 'ob-tier-h' }, depthBar(x.depth), h('b', null, x.label), h('span', { class: 'ob-n' }, String(rows.length))) : null,
             h('div', { class: 'ob-names' }, rows.map((u) => u.name).join(' · ')),
-            h('div', { class: 'ob-gets' }, x.gets));
+            h('div', { class: 'ob-gets' }, all.length > 1 ? x.gets : 'Each one comes with a rating, a 12-month target, our estimates against consensus, peers, risks and a 5-page report.'));
         })),
         h('p', { class: 'ob-foot' }, TIERS.filter((x) => tierRows(x.tier).length).length > 1 ? 'More names move up a tier as research is added.' : 'More companies are added as research is completed.'),
         h('div', { class: 'ob-actions' }, btn(['Pick my book', icon('chev')], () => book(done), 'primary')));
@@ -78,8 +78,8 @@
         inp.addEventListener('blur', () => { inp.value = amounts[u.ticker] > 0 ? usd(amounts[u.ticker]) : ''; });
         return h('label', { class: 'ob-row' }, h('span', { class: 'ob-tk' }, u.ticker), h('span', { class: 'ob-nm' }, u.name), inp);
       };
-      const list = h('div', { class: 'ob-list' }, TIERS.filter((x) => tierRows(x.tier).length).map((x) => [
-        h('div', { class: 'ob-group' }, depthBar(x.depth), x.label),
+      const list = h('div', { class: 'ob-list' }, TIERS.filter((x) => tierRows(x.tier).length).map((x, i, all) => [
+        all.length > 1 ? h('div', { class: 'ob-group' }, depthBar(x.depth), x.label) : null,
         tierRows(x.tier).map(row)]));
       const preset = starter();
       const view = frame(2, 2,
@@ -111,17 +111,17 @@
     const phone = () => matchMedia('(max-width: 760px)').matches;
     const TOURS = {
       home: [
-        { sel: '.home-search', title: 'Find any stock', text: 'Type a name or ticker. The bars show how deep the research goes: three for full research, one for the basics.' },
+        { sel: '.home-search', title: 'Find any stock', text: 'Type a name or ticker to jump to its page, with our rating shown alongside.' },
         { sel: '.fab', title: 'Your research counts', text: 'On every page. Ask the analyst anything, or tell it what you know. It tests your view against the research, saves it to your notes, and if you give a number, shows what it does to the target.' },
         { sel: '.qa-grid', title: 'Start here', text: 'Shortcuts to what you came for: the research, a full report, challenging a thesis, your book, what is coming up and the markets.' },
-        { sel: () => (phone() ? '.tabbar' : '.side .nav'), title: 'Getting around', text: 'Coverage lists every stock by depth. Your book tracks what you hold. Your view keeps the assumptions you have challenged.' },
+        { sel: () => (phone() ? '.tabbar' : '.side .nav'), title: 'Getting around', text: 'Coverage lists every stock with its rating. Your book tracks what you hold. Your view keeps the assumptions you have challenged.' },
         { sel: () => (phone() ? '.topbar .icon-btn:last-child' : '.side .user'), title: 'Your workspace', text: 'Holdings, dark mode, this tour, and switching user live here.' },
-        { sel: '.qa', title: 'Now open a company', text: 'Next, a quick look at a full research page.', next: 'Open Linde', action: () => { go('c/LIN'); setTimeout(() => tour('company'), 700); } }
+        { sel: '.qa', title: 'Now open a company', text: 'Next, a quick look at a company page.', next: 'Open Linde', action: () => { go('c/LIN'); setTimeout(() => tour('company'), 700); } }
       ],
       book: [
         { sel: '.hero h1', title: 'Your book', text: 'It counts from the prices when you set it, then day by day, weighted by your dollars. Prices are delayed.' },
         { sel: '.hero .btn', title: 'Change it any time', text: 'Add, remove or resize positions in dollars.' },
-        { sel: '.cos', title: 'Full research', text: 'Rating, 12-month target and the call for each fully covered name.' },
+        { sel: '.cos', title: 'The call on what you hold', text: 'Rating, 12-month target and price for each stock in your book.' },
         { sel: '.grid.g2', title: 'What is coming, what to watch', text: 'Earnings dates coming up, then the measures that would break a thesis, flagged when they get close.' }
       ],
       company: [
