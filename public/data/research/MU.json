@@ -14,7 +14,8 @@
   "rev0": 270.0,
   "shares0": 1.147,
   "div": 0.6,
-  "rev_label": "FY2027E revenue ($B): FQ1 guide $61.5B rising to about $73B by FQ4"
+  "rev_label": "FY2027E revenue ($B): FQ1 guide $61.5B rising to about $73B by FQ4",
+  "fy0": 2027
  },
  "probs": {
   "bear": 0.25,
@@ -47,12 +48,12 @@
    "source": "FQ4 2026 release (cash flow statement; cash and investments $73.48B)"
   },
   "exit_pe": {
-   "base": 9,
-   "bear": 7,
-   "bull": 12,
+   "base": 12,
+   "bear": 9,
+   "bull": 15,
    "kind": "judgment",
-   "why": "Memory stocks trade on low multiples of peak earnings because the market prices the cycle, not the year. Today's multiple is about 5x fiscal 2027E. The base case assumes 9x once earnings have fallen back to a mid-cycle level, close to the 10-year median on normalised earnings.",
-   "source": "Engine judgment; current multiple computed from price and FY27E EPS"
+   "why": "A memory maker should be valued on earnings through a full cycle, not at the peak. On mid-cycle EPS the base case applies 12x, in line with Western Digital (11.3x) and Seagate (12.2x) on next-year consensus. The bear case is 9x for a deeper downturn; the bull case is 15x if AI contracts make earnings less cyclical.",
+   "source": "Peer next-twelve-month P/E from the Moat Monitor peer table (consensus EPS); multiple choice is engine judgment"
   }
  },
  "pillars": [
@@ -459,5 +460,47 @@
    "005930.KS",
    "SNDK"
   ]
+ },
+ "valuation": {
+  "method": "normalised",
+  "dcf": {
+   "basis": "mid-cycle earnings",
+   "label": "Mid-cycle EPS, because a cyclical’s peak cash flow is not a base to grow from"
+  },
+  "include_fy0": true,
+  "hist": [
+   {
+    "fy": 2023,
+    "eps": -5.34
+   },
+   {
+    "fy": 2024,
+    "eps": 0.7
+   },
+   {
+    "fy": 2025,
+    "eps": 7.59
+   },
+   {
+    "fy": 2026,
+    "eps": 74.33
+   }
+  ],
+  "hist_label": "Reported diluted EPS, fiscal 2023 to 2026 (SEC filings)",
+  "why": "Mid-cycle EPS averages a full cycle: the fiscal 2023 trough, the recovery, the fiscal 2026 to 2027 peak and our forecast fall to fiscal 2030. Valuing Micron on peak earnings at a low multiple, or on trough earnings at a high one, misprices the cycle.",
+  "labels": {
+   "exit_pe": "Normal P/E on mid-cycle EPS"
+  }
+ },
+ "variant_view": {
+  "metric": "eps",
+  "fy": 2028,
+  "why": "Consensus extrapolates peak pricing into fiscal 2028. We assume new DRAM and HBM capacity from Samsung, SK hynix and Micron itself pulls net margin back toward the prior-cycle peak, so EPS falls from the fiscal 2027 high.",
+  "proof": {
+   "event": "FQ1 2027 results and FQ2 guide: DRAM contract pricing and capex plans",
+   "date": "2026-12-17"
+  },
+  "consensus": 207.76,
+  "consensus_asof": "2026-11-03"
  }
 }

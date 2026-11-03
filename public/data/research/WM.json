@@ -14,7 +14,8 @@
   "rev0": 26.45,
   "shares0": 0.4,
   "div": 3.78,
-  "rev_label": "FY2026E revenue ($B): top of the $26.275B to $26.475B guidance range, as management now expects"
+  "rev_label": "FY2026E revenue ($B): top of the $26.275B to $26.475B guidance range, as management now expects",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -451,5 +452,13 @@
    "WCN",
    "GFL"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 9.35,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }

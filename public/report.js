@@ -262,13 +262,25 @@
     function targetBuild(t) {
       const c = CO.callOf(t, false), r = CO.researchOf(t), e = CO.estimates(t), p = CO.priceOf(t);
       const lab = e ? e.rows[1].label : 'Next year';
+      const how = c.method === 'book'
+        ? `We value ${nameOf(t)} on tangible book against what its equity earns. Tangible book per share rolls forward to $${c.base.basis.toFixed(2)} in a year, and a ${fmt.pct(c.base.roe, 1)} return on tangible equity against a ${fmt.pct(c.hurdle)} cost of equity and ${r.valuation.g}% long-run growth justifies ${c.base.multiple.toFixed(2)}x, a ${fmt.px(c.pt)} target.`
+        : c.method === 'normalised'
+          ? `We value ${nameOf(t)} on mid-cycle earnings, not this year's. Mid-cycle EPS of $${c.base.basis.toFixed(2)} averages ${CO.midYears(r, c.base.mid).length} years of reported and forecast EPS; at ${c.base.multiple.toFixed(1)}x (${E.driverLabel(r, 'exit_pe').toLowerCase()}) that gives a ${fmt.px(c.pt)} target. On a plain P/E it would be ${fmt.px(E.peValue(r, CO.mkOf(t), 'base').value)}.`
+          : `We value ${nameOf(t)} on next-year earnings. The ${fmt.px(c.pt)} target is our ${lab} base-case EPS of ${eps(c.eps1)} times a target P/E of ${c.targetPE.toFixed(1)}x, which moves one year's worth of the way from today's ${c.pe0.toFixed(1)}x toward the ${r.horizon}-year exit multiple, so the target already prices the de-rating or re-rating we expect.`;
+      const vf = CO.variantFacts(t), ck = CO.checkFacts(t);
+      const checks = [vf ? (vf.has ? `Variant view: our ${vf.metric} of ${vf.ours} is ${fmt.spct(vf.gap, 1)} against ${vf.consLabel.toLowerCase()} at ${vf.cons}; ${vf.why.charAt(0).toLowerCase() + vf.why.slice(1)}` : vf.text) : '',
+        c.capped ? ` On the numbers alone the return says ${c.capped.from}; without a variant view we hold it at Equal weight.` : '',
+        ck && ck.dcf ? ` Reverse DCF: the price implies ${ck.dcf.basis} growing ${fmt.spct(ck.dcf.growth, 1)} a year for ${ck.dcf.years} years${ck.rc && ck.rc.dcfRate ? `, the ${Math.round(ck.rc.dcfRate.pct * 100)}th percentile of what US companies of this size achieved` : ''}.` : '',
+        ck && ck.rc ? ck.rc.base.filter((x) => x.kind === 'growth').map((x) => ` Our base-case revenue growth sits at the ${Math.round(x.br.pct * 100)}th percentile for its size.`).join('') : ''].join('');
       return h('div', null,
-        h('p', null, `We value ${nameOf(t)} on next-year earnings. The ${fmt.px(c.pt)} target is our ${lab} base-case EPS of ${eps(c.eps1)} times a target P/E of ${c.targetPE.toFixed(1)}x. That multiple moves one year's worth of the way from today's ${c.pe0.toFixed(1)}x toward the ${r.horizon}-year exit multiple in each scenario, so the target already prices in the de-rating or re-rating we expect. A year of dividends brings the total return to ${fmt.spct(c.totalReturn, 1)} against a ${fmt.pct(c.hurdle)} cost of equity. We rate Overweight when that return clears the cost of equity by 5 points or more, Underweight when it falls 5 points or more short, and Equal weight in between.`),
-        table(['Case', 'EPS ' + lab, 'P/E', 'Value', 'vs price', 'What it takes'], [['bear', 'Downside'], ['base', 'Target'], ['bull', 'Upside']].map(([k, n]) => {
-          const x = k === 'base' ? { eps1: c.eps1, pe: c.targetPE, value: c.pt } : c[k];
+        h('p', null, `${how} A year of dividends brings the total return to ${fmt.spct(c.totalReturn, 1)} against a ${fmt.pct(c.hurdle)} cost of equity. Overweight needs that return 5 points or more above the cost of equity and a stated variant view; Underweight 5 points or more short.`),
+        table(['Case', c.method === 'book' ? 'Book/share' : c.method === 'normalised' ? 'Mid-cycle EPS' : 'EPS ' + lab, 'Multiple', 'Value', 'vs price', 'What it takes'], [['bear', 'Downside'], ['base', 'Target'], ['bull', 'Upside']].map(([k, n]) => {
+          const x = k === 'base' ? c.base : c[k];
           const story = CO.review(t) && CO.review(t).scenarios[k === 'bear' ? 'downside' : k === 'bull' ? 'upside' : 'base'];
-          return { cells: [n, eps(x.eps1), x.pe.toFixed(1) + 'x', fmt.px(x.value), p ? fmt.spct(x.value / p.price - 1, 1) : '–', story ? story.needs : ''], cls: k === 'base' ? 'me' : '' };
-        }), { cls: 'wrap-last' }));
+          const basis = c.method === 'pe' ? x.eps1 : x.basis;
+          return { cells: [n, eps(basis), x.multiple.toFixed(c.method === 'book' ? 2 : 1) + 'x', fmt.px(x.value), p ? fmt.spct(x.value / p.price - 1, 1) : '–', story ? story.needs : ''], cls: k === 'base' ? 'me' : '' };
+        }), { cls: 'wrap-last' }),
+        checks ? h('p', { class: 'rp-note' }, checks.trim()) : null);
     }
 
     function riskTable(t) {

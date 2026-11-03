@@ -14,7 +14,8 @@
   "rev0": 329.0,
   "shares0": 0.4444,
   "div": 5.88,
-  "rev_label": "FY2027E total revenue ($B): fiscal 2026 $303.2B grown about 8.5% (comps, about 25 net new warehouses a year, membership fees)"
+  "rev_label": "FY2027E total revenue ($B): fiscal 2026 $303.2B grown about 8.5% (comps, about 25 net new warehouses a year, membership fees)",
+  "fy0": 2027
  },
  "probs": {
   "bear": 0.25,
@@ -439,5 +440,13 @@
    "BJ",
    "TGT"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 21.11,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }

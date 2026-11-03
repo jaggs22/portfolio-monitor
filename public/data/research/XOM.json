@@ -14,7 +14,8 @@
   "rev0": 418.0,
   "shares0": 4.09,
   "div": 4.28,
-  "rev_label": "FY2026E total revenues ($B), near consensus, with Q3 at $113.2B"
+  "rev_label": "FY2026E total revenues ($B), near consensus, with Q3 at $113.2B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -47,12 +48,12 @@
    "source": "10-Q Q3 2026 (distributions)"
   },
   "exit_pe": {
-   "base": 13,
-   "bear": 10.5,
-   "bull": 15,
-   "kind": "judgment",
-   "why": "Today's multiple is about 14x 2026 earnings excluding identified items, at the top of the large integrated oils. The base case assumes 13x on normalised earnings.",
-   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+   "base": 14.5,
+   "bear": 12,
+   "bull": 16.5,
+   "kind": "sourced",
+   "why": "In the more normal years 2023 to 2025 Exxon traded at 12.2x, 14.5x and 16.6x that year’s EPS (average price over the year); at the 2022 peak it traded at 6.9x. The base case applies the 14.5x median to mid-cycle EPS, the bear case the low end, the bull case the high end.",
+   "source": "Moat Monitor price history and reported EPS, 2022 to 2025"
   }
  },
  "pillars": [
@@ -437,5 +438,52 @@
    "SHEL",
    "TTE"
   ]
+ },
+ "valuation": {
+  "method": "normalised",
+  "dcf": {
+   "basis": "mid-cycle earnings",
+   "label": "Mid-cycle EPS, because this year’s windfall is not a base to grow from"
+  },
+  "include_fy0": true,
+  "hist": [
+   {
+    "fy": 2022,
+    "eps": 13.26
+   },
+   {
+    "fy": 2023,
+    "eps": 8.89
+   },
+   {
+    "fy": 2024,
+    "eps": 7.84
+   },
+   {
+    "fy": 2025,
+    "eps": 6.7
+   }
+  ],
+  "hist_label": "Reported diluted EPS, 2022 to 2025 (SEC filings). 2022 includes the Russia impairment; forecasts exclude identified items",
+  "why": "Oil earnings swing with prices and refining margins. Mid-cycle EPS averages 2022 to 2025 reported results with this year’s windfall and our three-year path as margins normalise, so the target does not capitalise one unusual year.",
+  "labels": {
+   "exit_pe": "Normal P/E on mid-cycle EPS"
+  }
+ },
+ "variant_view": {
+  "metric": "custom",
+  "label": "EPS the price capitalises",
+  "unit": "$",
+  "fy": null,
+  "ours": 10.29,
+  "consensus": 12.39,
+  "material": true,
+  "consensus_label": "Implied: price $179.67 / 14.5x normal multiple",
+  "ours_label": "Our mid-cycle EPS",
+  "why": "At $180 and Exxon’s normal 14.5x the market is capitalising about $12.40 of EPS, close to this year’s windfall. Our mid-cycle EPS across 2022 to 2029 is about $10.30.",
+  "proof": {
+   "event": "Q4 2026 results: refining margins and realised prices as Middle East supply normalises",
+   "date": "2027-01-30"
+  }
  }
 }

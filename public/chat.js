@@ -75,8 +75,14 @@
       if (!t) return lines.join('\n');
       const u = state.uniMap[t] || {}, p = CO.priceOf(t), r = CO.researchOf(t), rv = CO.review(t), c = CO.callOf(t, false), cm = CO.callOf(t, true);
       lines.push('', `FOCUS: ${nameOf(t)} (${t}), ${u.sector || ''}, ${u.tier === 'core' ? '' : `research depth: ${u.tier}. `}Price $${p ? p.price.toFixed(2) : 'n/a'}.`);
-      if (c) lines.push(`Call: ${c.rating}. 12-month target $${c.pt.toFixed(2)} = FY+1 EPS $${c.eps1.toFixed(2)} x ${c.targetPE.toFixed(1)}x. Upside ${fmt.spct(c.upside, 1)}, total return ${fmt.spct(c.totalReturn, 1)} vs cost of equity ${fmt.pct(c.hurdle)}. Downside case $${c.bear.value.toFixed(2)}, upside case $${c.bull.value.toFixed(2)}. Rule: Overweight if total return beats cost of equity by 5 points, Underweight if 5 points short.`);
+      if (c) lines.push(`Call: ${c.rating}${c.capped ? ` (held at Equal weight: the return alone says ${c.capped.from}, but there is no variant view against consensus)` : ''}. Valuation method: ${E.METHOD_LABEL[c.method]}. 12-month target $${c.pt.toFixed(2)} = ${CO.caseText(c, 'base')}. Upside ${fmt.spct(c.upside, 1)}, total return ${fmt.spct(c.totalReturn, 1)} vs cost of equity ${fmt.pct(c.hurdle)}. Downside case $${c.bear.value.toFixed(2)}, upside case $${c.bull.value.toFixed(2)}. Rule: Overweight if total return beats cost of equity by 5 points, Underweight if 5 points short.`);
       if (cm && c && cm.pt !== c.pt) lines.push(`With the investor's disputes: ${cm.rating}, target $${cm.pt.toFixed(2)}.`);
+      if (c && r && r.valuation && r.valuation.why) lines.push(`Why this method: ${r.valuation.why}`);
+      const vf = c ? CO.variantFacts(t) : null;
+      if (vf) lines.push(vf.has ? `Variant view: ${vf.metric} ours ${vf.ours} vs ${vf.consLabel.toLowerCase()} ${vf.cons} (${fmt.spct(vf.gap, 1)}). Why: ${vf.why} Tested by: ${vf.proof ? vf.proof.event + ', ' + vf.proof.date : 'n/a'}.` : `Variant view: none. ${vf.text}`);
+      const ck = c ? CO.checkFacts(t) : null;
+      if (ck && ck.dcf) lines.push(`Reverse DCF: the price implies ${ck.dcf.basis} per share growing ${fmt.spct(ck.dcf.growth, 1)} a year for ${ck.dcf.years} years then ${(ck.dcf.gt * 100).toFixed(0)}%, at a ${fmt.pct(ck.dcf.r, 1)} cost of equity.${ck.rc && ck.rc.dcfRate ? ` That is the ${Math.round(ck.rc.dcfRate.pct * 100)}th percentile of 10-year revenue growth for US companies with ${ck.rc.dcfRate.bucket} of revenue.` : ''}`);
+      if (ck && ck.rc) ck.rc.base.forEach((x) => lines.push(`Base rate: our base-case ${x.kind === 'growth' ? 'revenue growth of ' + fmt.spct(x.value, 1) + ' a year' : 'net margin change of ' + x.value.toFixed(1) + ' points'} over ${x.br.years} years is the ${Math.round(x.br.pct * 100)}th percentile for comparable US companies (median ${x.kind === 'growth' ? fmt.spct(x.br.p50, 1) : x.br.p50.toFixed(1) + ' pts'}).`));
       if (rv) {
         lines.push(`Title: ${rv.title}. Lead: ${CO.fill(t, rv.lead)}`);
         (rv.arguments || []).forEach((a) => lines.push(`${a.label}: ${CO.fill(t, a.text)}`));
@@ -90,7 +96,7 @@
       } else if (r) lines.push(`Thesis: ${r.header.thesis}`);
       if (r) {
         lines.push('Model assumptions (downside / base / upside):');
-        E.DRIVERS.forEach((k) => { const d = r.drivers[k], m = E.DRIVER_META[k]; lines.push(`- ${k} (${m.label}, ${m.unit}): ${d.bear} / ${d.base} / ${d.bull}${rv && rv.forecast_basis ? '. Basis: ' + rv.forecast_basis[k] : ''}`); });
+        E.DRIVERS.forEach((k) => { const d = r.drivers[k], m = E.DRIVER_META[k]; lines.push(`- ${k} (${E.driverLabel(r, k)}, ${m.unit}): ${d.bear} / ${d.base} / ${d.bull}${rv && rv.forecast_basis ? '. Basis: ' + rv.forecast_basis[k] : ''}`); });
         (r.tripwires || []).forEach((tw) => lines.push(`Tripwire: ${tw.text} (last ${tw.current == null ? 'n/a' : tw.current} ${tw.unit || ''}).`));
         (r.catalysts || []).forEach((x) => lines.push(`Event ${x.date}: ${x.label}. ${x.note || ''}`));
       }

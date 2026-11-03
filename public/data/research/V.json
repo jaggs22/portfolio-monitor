@@ -14,7 +14,8 @@
   "rev0": 45.7,
   "shares0": 1.898,
   "div": 2.68,
-  "rev_label": "FY2026E net revenue ($B): 9M actual $33.76B plus Q4 at the guided high end of low double digits"
+  "rev_label": "FY2026E net revenue ($B): 9M actual $33.76B plus Q4 at the guided high end of low double digits",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -483,5 +484,13 @@
    "AXP",
    "PYPL"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 11.16,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }

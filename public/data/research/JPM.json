@@ -14,7 +14,8 @@
   "rev0": 205.0,
   "shares0": 2.683,
   "div": 6.6,
-  "rev_label": "FY2026E managed net revenue ($B): nine months $159.5B less the $4.6B Visa gain, plus a fourth quarter near $50B"
+  "rev_label": "FY2026E managed net revenue ($B): nine months $159.5B less the $4.6B Visa gain, plus a fourth quarter near $50B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -324,7 +325,7 @@
    "rev_cagr": "Judgment: NII flattening, trading normalising",
    "margin_end": "Judgment: credit costs and expenses edge up",
    "share_chg": "Sourced: buybacks under the $50B program, at a slower pace",
-   "exit_pe": "Judgment: small de-rating from a wide premium to peers"
+   "exit_pe": "Judgment: used in the 3-year scenarios; the 12-month target is set by return on tangible equity"
   },
   "scenarios": {
    "base": {
@@ -400,9 +401,9 @@
     "date": "2026-10-13"
    }
   ],
-  "title": "Earned premium, little room",
+  "title": "Earned premium, fairly priced",
   "lead": "We rate JPMorgan {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). It is the best-run bank in the US, but at 3x tangible book with credit costs near a low and buybacks slowing, our 2027 EPS is {vs_cons} consensus.",
-  "call_reason": "Quality fully priced: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "call_reason": "Priced for what it earns: a 20% return on tangible equity justifies about 3x tangible book, where it trades. The target implies {ret} over 12 months against a cost of equity of {hurdle}.",
   "arguments": [
    {
     "label": "Growth",
@@ -422,13 +423,13 @@
    },
    {
     "label": "Valuation",
-    "text": "{peer_line} It trades at about 3x tangible book and a third above US peers on earnings."
+    "text": "{peer_line} At about 3x tangible book it trades a third above US peers, which a 20% return on tangible equity justifies."
    }
   ],
   "thesis_long": [
    "JPMorgan is the strongest bank in the US. It has the cheapest deposits, the largest card and payments franchise and the top investment bank, and it is still growing: loans +10%, net interest income +13% and equity trading +49% in the September quarter. Return on tangible equity was 24% for the first nine months.",
    "The question is what is left for a new buyer. At about 14.5x this year's earnings and 3x tangible book, the stock trades about a third above Bank of America, Citigroup and Wells Fargo. Earnings are flattered by low credit costs and strong trading, rate cuts will slow net interest income, expenses are growing faster than revenue, and buybacks dropped to $1.1B in the quarter.",
-   "Our base case grows revenue about 4% a year with slightly higher credit costs and a modest de-rating. That falls short of the cost of equity over 12 months. We would turn positive if buybacks returned above $7B a quarter or the price fell nearer 2.5x tangible book."
+   "We value JPMorgan on tangible book against what its equity earns, as banks are valued. Our base case grows revenue about 4% a year with slightly higher credit costs, which keeps return on tangible equity near 20%. Against the cost of equity that justifies about 3x tangible book, close to today’s multiple, so the 12-month return comes from book growth and dividends: above the cost of equity, but not by the margin an Overweight needs. We would turn positive if buybacks returned above $7B a quarter or the price fell nearer 2.5x tangible book."
   ],
   "upside_risks": [
    {
@@ -447,5 +448,20 @@
    "C",
    "WFC"
   ]
+ },
+ "valuation": {
+  "method": "book",
+  "dcf": {
+   "basis": "earnings",
+   "label": "EPS. Free cash flow is not meaningful for a bank, whose cash flows include deposits and loans"
+  },
+  "bvps0": 112.64,
+  "g": 4,
+  "bvps_label": "Tangible book value per share $112.64 at 30 September 2026 (third-quarter earnings release)",
+  "why": "A bank is worth what its equity earns. The justified multiple of tangible book is (return on tangible equity less long-run growth) divided by (cost of equity less growth). Return on equity comes from our earnings path, book per share rolls forward a year with earnings, dividends and buybacks at today’s price, and growth is 4%, about the long-run growth of nominal US GDP.",
+  "labels": {
+   "exit_pe": "Exit P/E (3-year scenario only)"
+  },
+  "note_exit": "The 12-month target is set by return on equity against the cost of equity, so a dispute on the exit P/E changes the 3-year scenarios but not the target."
  }
 }

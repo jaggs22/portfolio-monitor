@@ -14,7 +14,8 @@
   "rev0": 86.0,
   "shares0": 0.894,
   "div": 6.92,
-  "rev_label": "FY2026 revenue, midpoint of guidance $85B to $87B"
+  "rev_label": "FY2026 revenue, midpoint of guidance $85B to $87B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -500,5 +501,23 @@
    "MRK",
    "AZN"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "earnings",
+   "label": "EPS. Capex is not split out in our cash flow data for Lilly, and new manufacturing plants hold free cash flow below earnings"
+  }
+ },
+ "variant_view": {
+  "metric": "eps",
+  "fy": 2027,
+  "why": "We assume price erosion continues (realised price fell 13% in Q2) and fades revenue growth toward the high teens; consensus has 2027 EPS growth near 40%. Our research predates Lilly’s Q3 print and is due a refresh.",
+  "proof": {
+   "event": "Q4 2026 results and 2027 guidance (date not confirmed)",
+   "date": "2027-02"
+  },
+  "consensus": 49.76,
+  "consensus_asof": "2026-11-03"
  }
 }

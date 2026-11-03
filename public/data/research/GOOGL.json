@@ -14,7 +14,8 @@
   "rev0": 497.0,
   "shares0": 12.37,
   "div": 0.88,
-  "rev_label": "FY2026E revenue ($B): nine months $357.3B plus a fourth quarter near $140B"
+  "rev_label": "FY2026E revenue ($B): nine months $357.3B plus a fourth quarter near $140B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -441,5 +442,50 @@
    "MSFT",
    "AMZN"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "earnings",
+   "label": "Operating EPS. Free cash flow is held down by the AI capex build, so on free cash flow the growth the price implies would be higher still"
+  },
+  "cross": {
+   "kind": "implied_part",
+   "net_debt": -139.0,
+   "fy": 2027,
+   "anchor": {
+    "name": "Google Cloud",
+    "ebit1": 57.3,
+    "multiple": 19.7,
+    "why": "Cloud valued like Microsoft: about 19.7x EV/EBIT. Conservative for a business doubling revenue with a $561B backlog."
+   },
+   "rest": {
+    "name": "Google Services, after Other Bets and Alphabet-level costs",
+    "ebit1": 144.6
+   },
+   "peers": [
+    {
+     "name": "Meta",
+     "multiple": 14.6
+    },
+    {
+     "name": "Netflix",
+     "multiple": 13.8
+    }
+   ],
+   "ebit_label": "FY2027E operating income: Cloud $38.2B in FY2026E grown 50%; Services $164.2B grown 10%, less Other Bets (about -$9B) and unallocated Alphabet-level costs (about -$27B). Reconciles with our FY2027 EPS",
+   "why": "Value Cloud like Microsoft and the price tells you what the market pays for Search, YouTube and subscriptions. EV/EBIT is approximated as next-year P/E x (1 - 17% tax)."
+  }
+ },
+ "variant_view": {
+  "metric": "eps",
+  "fy": 2027,
+  "why": "Depreciation from $132B of capex in nine months, and share issuance instead of buybacks ($42.9B of new stock in 2026 plus the mandatory convertible), hold per-share earnings below consensus, which keeps margins near today’s.",
+  "proof": {
+   "event": "Q4 2026 results: 2027 capex and depreciation guidance, and whether buybacks restart",
+   "date": "2027-02-03"
+  },
+  "consensus": 14.81,
+  "consensus_asof": "2026-11-03"
  }
 }

@@ -15,7 +15,8 @@
   "shares0": 0.466,
   "div": 7.16,
   "cons_comparable": false,
-  "rev_label": "FY2026E total revenue ($B): property revenue guidance midpoint $10.825B plus services"
+  "rev_label": "FY2026E total revenue ($B): property revenue guidance midpoint $10.825B plus services",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -461,5 +462,12 @@
    "CCI",
    "SBAC"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "AFFO",
+   "label": "Adjusted funds from operations per share, the REIT measure of distributable cash"
+  }
  }
 }

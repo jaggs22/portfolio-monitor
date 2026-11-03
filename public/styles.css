@@ -1017,3 +1017,4 @@ body.ins-open { overflow: hidden; }
 .ins-later { all: unset; cursor: pointer; text-align: center; padding: 12px; color: var(--mute); font-size: 15px; }
 .ins-later:hover { color: var(--ink); }
 .ins-steps[hidden] { display: none; }
+.cap-note { color: var(--ink2); border-left: 2px solid var(--line); padding-left: 8px; max-width: 34ch; }

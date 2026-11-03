@@ -14,7 +14,8 @@
   "rev0": 392.0,
   "shares0": 7.446,
   "div": 3.92,
-  "rev_label": "FY2027E revenue ($B): Q1 actual $92.3B plus sequential growth led by Azure"
+  "rev_label": "FY2027E revenue ($B): Q1 actual $92.3B plus sequential growth led by Azure",
+  "fy0": 2027
  },
  "probs": {
   "bear": 0.25,
@@ -217,7 +218,7 @@
  "review": {
   "as_of": "2026-11-03",
   "basis": "Fiscal Q1 2027 10-Q (quarter to 30 September 2026) and release. Q2 reports in late January; this review refreshes after the print.",
-  "headline": "The best-positioned AI platform, growing faster than a year ago. At 25x earnings the stock does not fully price that growth; the risk is the depreciation bill.",
+  "headline": "The best-positioned AI platform, growing faster than a year ago. The return clears the cost of equity, but our numbers are close to the Street’s; the risk is the depreciation bill.",
   "model": "Microsoft sells cloud computing (Azure), workplace software (Microsoft 365, Teams, Dynamics, LinkedIn) and consumer products (Windows, Xbox, Bing). Most revenue is recurring subscriptions sold to businesses.",
   "how_it_earns": [
    {
@@ -428,7 +429,7 @@
   ],
   "title": "Growth bought with capex",
   "lead": "We rate Microsoft {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Azure grew 48% and the order book is $677B, but capex nearly doubled and free cash flow is falling; our next-year EPS is {vs_cons} consensus.",
-  "call_reason": "Contracted growth at an undemanding multiple: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "call_reason": "Good business, no edge: the target implies {ret} against a cost of equity of {hurdle}, but our earnings sit close to consensus, so there is no variant view to carry an Overweight.",
   "arguments": [
    {
     "label": "Growth",
@@ -454,7 +455,7 @@
   "thesis_long": [
    "Microsoft is the best-positioned large company for enterprise AI. It owns the software most businesses already pay for, one of three hyperscale clouds, and a large stake in the leading AI lab. Growth accelerated this year: revenue +19%, Azure +48%, and a $677B order book that covers years of cloud revenue.",
    "The cost is capital. Additions to property and equipment nearly doubled to $39.4B in the quarter, and free cash flow fell to $18.6B even as net income rose. That spend becomes depreciation over the next several years, so margins depend on AI pricing staying above the cost of the infrastructure. Some of the backlog likely sits with a small number of very large AI customers.",
-   "Our base case lets growth fade toward the mid-teens and margin slip about two points, with the multiple held near 25x. EPS still compounds in the mid-teens, which beats the cost of equity over 12 months. We would turn positive if operating margin held near 50% while capex rose, and negative if Azure growth fell below 35% with capex still climbing."
+   "Our base case lets growth fade toward the mid-teens and margin slip about two points, with the multiple held near 25x. EPS still compounds in the mid-teens, which beats the cost of equity over 12 months. But our estimates sit close to consensus, so that return reflects our cost of equity rather than something the market is missing, and without a variant view we hold the call at Equal weight. We would turn positive if operating margin held near 50% while capex rose, and negative if Azure growth fell below 35% with capex still climbing."
   ],
   "upside_risks": [
    {
@@ -473,5 +474,12 @@
    "AMZN",
    "ORCL"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "earnings",
+   "label": "Operating EPS. Free cash flow is held down by the AI capex build, so on free cash flow the growth the price implies would be higher still"
+  }
  }
 }

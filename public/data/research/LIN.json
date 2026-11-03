@@ -14,7 +14,8 @@
   "rev0": 37.0,
   "shares0": 0.464,
   "div": 6.3,
-  "rev_label": "FY2026E sales ($B), annualised from Q2 sales of $9.289B"
+  "rev_label": "FY2026E sales ($B), annualised from Q2 sales of $9.289B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -457,5 +458,13 @@
    "APD",
    "4091.T"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 10.95,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }

@@ -14,7 +14,8 @@
   "rev0": 827.5,
   "shares0": 10.93,
   "div": 0,
-  "rev_label": "FY2026E net sales ($B): nine months $584.1B plus Q4 guide midpoint $243.5B"
+  "rev_label": "FY2026E net sales ($B): nine months $584.1B plus Q4 guide midpoint $243.5B",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -461,5 +462,54 @@
    "MSFT",
    "GOOGL"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "earnings",
+   "label": "Operating EPS. Free cash flow is held down by the AI capex build, so on free cash flow the growth the price implies would be higher still"
+  },
+  "cross": {
+   "kind": "implied_part",
+   "net_debt": 65.7,
+   "fy": 2027,
+   "anchor": {
+    "name": "AWS",
+    "ebit1": 83.6,
+    "multiple": 19.7,
+    "why": "AWS valued like Microsoft: 23.8x next-year P/E, about 19.7x EV/EBIT after a 17% tax rate. Conservative for a business growing near 40%."
+   },
+   "rest": {
+    "name": "Retail and advertising (North America and International)",
+    "ebit1": 50.7
+   },
+   "peers": [
+    {
+     "name": "Walmart",
+     "multiple": 33.7
+    },
+    {
+     "name": "Costco",
+     "multiple": 37.2
+    },
+    {
+     "name": "Target",
+     "multiple": 13.4
+    }
+   ],
+   "ebit_label": "FY2027E operating income: our FY2026E (nine months reported plus a fourth quarter of AWS $18.3B, North America $13.2B, International $1.3B) grown 25% for AWS and 12% for retail, which reconciles with our FY2027 EPS",
+   "why": "Value AWS like Microsoft and the price tells you what the market pays for the rest. EV/EBIT is approximated as next-year P/E x (1 - 17% tax)."
+  }
+ },
+ "variant_view": {
+  "metric": "eps",
+  "fy": 2027,
+  "why": "Depreciation from about $220B of annual capex grows faster than AWS and retail margins can absorb. Consensus assumes operating margin keeps expanding in 2027.",
+  "proof": {
+   "event": "Q4 2026 results: 2027 capex plan and AWS operating margin",
+   "date": "2027-02-05"
+  },
+  "consensus": 10.67,
+  "consensus_asof": "2026-11-03"
  }
 }

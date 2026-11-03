@@ -156,7 +156,7 @@
     function callOf(t, mine) {
       const r = researchOf(t), m = mkOf(t);
       if (!r || !m) return null;
-      return E.target(r, m, rates(), mine ? { overrides: overrides(t) } : {});
+      return E.target(r, m, rates(), Object.assign({ consensus: consensusOf(t) }, mine ? { overrides: overrides(t) } : {}));
     }
     const ratingKind = (x) => (x === 'Overweight' ? 'ok' : x === 'Underweight' ? 'bad' : '');
     function consensusOf(t) {
@@ -169,10 +169,12 @@
       const r = researchOf(t), c = consensusOf(t);
       if (!r) return null;
       const p = E.path(r, 'base');
-      const fy0 = c && c.fy0_end ? +c.fy0_end.slice(0, 4) : +(r.base_period_end || r.as_of).slice(0, 4);
+      const cfy0 = c && c.fy0_end ? +c.fy0_end.slice(0, 4) : null;
+      const fy0 = r.base.fy0 || cfy0 || +(r.base_period_end || r.as_of).slice(0, 4);
       const rows = p.slice(0, 3).map((x, i) => {
-        const cEps = c && r.base.cons_comparable !== false ? (i === 0 ? c.eps0 : i === 1 ? c.eps1 : null) : null;
-        const cRev = c ? (i === 0 ? c.rev0_m : i === 1 ? c.rev1_m : null) : null;
+        const j = cfy0 == null ? null : fy0 + i - cfy0; // consensus covers its FY0 and FY1
+        const cEps = c && r.base.cons_comparable !== false && (j === 0 || j === 1) ? (j ? c.eps1 : c.eps0) : null;
+        const cRev = c && (j === 0 || j === 1) ? (j ? c.rev1_m : c.rev0_m) : null;
         return { label: `FY${String(fy0 + i).slice(2)}E`, year: fy0 + i, rev: x.rev * 1000, eps: x.eps, margin: x.margin, dps: x.dps,
           cEps, cRev, gapEps: cEps ? x.eps / cEps - 1 : null, gapRev: cRev ? (x.rev * 1000) / cRev - 1 : null };
       });
@@ -386,7 +388,7 @@
           h('div', { class: 'range', role: 'img', 'aria-label': `Downside ${fmt.px(c.bear.value)}, target ${fmt.px(c.pt)}, upside ${fmt.px(c.bull.value)}, price ${fmt.px(p.price)}` },
             h('div', { class: 'track' }), h('div', { class: 'seg-r', style: { left: X(c.bear.value), width: `calc(${X(c.bull.value)} - ${X(c.bear.value)})` } }),
             h('div', { class: 'mk base', style: { left: X(c.pt) }, title: 'Target' }), h('div', { class: 'zero', style: { left: X(p.price), background: 'var(--info)', width: '2px' }, title: 'Price' }))],
-        [`Downside ${fmt.px(c.bear.value)}`, `Upside ${fmt.px(c.bull.value)}`, mine && mine.rating !== c.rating ? pill('Yours: ' + mine.rating, '') : null]);
+        [c.method !== 'pe' ? methodShort(c) : null, `Downside ${fmt.px(c.bear.value)}`, `Upside ${fmt.px(c.bull.value)}`, c.capped ? pill('No variant: held', '') : null, mine && mine.rating !== c.rating ? pill('Yours: ' + mine.rating, '') : null]);
     }
 
     function tRisks(t) {
@@ -439,6 +441,7 @@
           eyebrow('Moat Monitor call'),
           h('div', { class: 'stance' }, h('b', null, c.rating), pill('Target ' + fmt.px(c.pt), ratingKind(c.rating) || 'info')),
           h('div', { class: 'small muted' }, `${fmt.spct(c.upside, 1)} upside · ${fmt.spct(c.totalReturn, 1)} total return · cost of equity ${fmt.pct(c.hurdle)}`),
+          c.capped ? h('div', { class: 'small cap-note' }, `Held at Equal weight: the return says ${c.capped.from}, but there is no variant view.`) : null,
           cm ? h('div', { class: 'small' }, h('b', null, 'Your view: '), `${cm.rating}, ${fmt.px(cm.pt)}`) : null,
           h('span', { class: 'btn small', style: { alignSelf: 'flex-start' } }, 'How we get there')) : null,
         mode === 'report' ? null : rv ? h('div', { class: 'call-text' }, h('h2', { class: 'call-title' }, rv.title), h('p', { class: 'headline' }, fill(t, rv.lead))) : r ? h('p', { class: 'headline' }, r.header.one_liner) : null,
@@ -761,7 +764,7 @@
     function wValuation(t) {
       const S = us(t), doc = dat(t, 'peers');
       const tabs = [];
-      if (researchOf(t)) tabs.push(['estimates', 'Target and estimates']);
+      if (researchOf(t)) tabs.push(['estimates', 'Target, method and checks']);
       if (doc) tabs.push(['peers', 'Peers']);
       tabs.push(['multiples', 'Multiples'], ['history', 'vs own history'], ['targets', 'Analyst targets']);
       const cur = tabs.some((x) => x[0] === S.valTab) ? S.valTab : tabs[0][0];
@@ -795,12 +798,15 @@
         stat('12-month target', fmt.px(c.pt), fmt.spct(c.upside, 1) + ' upside'),
         stat('Total return', fmt.spct(c.totalReturn, 1), 'incl. ' + fmt.pct(c.divYield, 1) + ' dividend'),
         stat('Cost of equity', fmt.pct(c.hurdle), `${rates().rf}% + beta × ${rates().erp}%`)));
-      out.push(block('How the target is built', h('div', { class: 'card derive' },
-        h('div', { class: 'dv' }, h('span', null, `${e.rows[1].label} EPS, our base case`), h('b', null, '$' + c.eps1.toFixed(2))),
-        h('div', { class: 'dv' }, h('span', null, `Target P/E: today ${c.pe0.toFixed(1)}x, moved a third of the way to the ${r.horizon}-year exit multiple`), h('b', null, '× ' + c.targetPE.toFixed(1) + 'x')),
-        h('div', { class: 'dv total' }, h('span', null, '12-month price target'), h('b', null, fmt.px(c.pt))),
-        h('div', { class: 'dv' }, h('span', null, `Downside case (${c.bear.pe.toFixed(1)}x × $${c.bear.eps1.toFixed(2)})`), h('b', null, fmt.px(c.bear.value))),
-        h('div', { class: 'dv' }, h('span', null, `Upside case (${c.bull.pe.toFixed(1)}x × $${c.bull.eps1.toFixed(2)})`), h('b', null, fmt.px(c.bull.value))))));
+      out.push(block('How the target is built', h('p', { class: 'small muted', style: { margin: '0 0 8px' } }, h('b', null, E.METHOD_LABEL[c.method] + '. '), methodWhy(t, c)),
+        h('div', { class: 'card derive' }, deriveRows(t, c, e),
+          h('div', { class: 'dv' }, h('span', null, `Downside case (${caseText(c, 'bear')})`), h('b', null, fmt.px(c.bear.value))),
+          h('div', { class: 'dv' }, h('span', null, `Upside case (${caseText(c, 'bull')})`), h('b', null, fmt.px(c.bull.value)))),
+        c.method !== 'pe' ? note(`On a plain P/E, the method used for most names, the target would be ${fmt.px(E.peValue(r, mkOf(t), 'base').value)}.`) : null));
+      out.push(block('Where we differ from consensus', variantCard(t)));
+      out.push(block('Reality checks', checksView(t)));
+      const ip = E.impliedPart(r, mkOf(t));
+      if (ip) out.push(block('What the price pays for each part', impliedView(ip)));
       out.push(block('Our estimates vs consensus', estTable(t)));
       const cons = e.consensus;
       out.push(note(cons ? 'Consensus is the Yahoo Finance analyst mean. Our estimates are the base case of the scenario model; dispute any assumption in Target and thesis and they move.' : 'Consensus not loaded yet.'));
@@ -882,6 +888,117 @@
         note('Third-party opinions from Yahoo Finance. They trail the price and are context, not the engine’s view.'));
     }
 
+    /* ----- valuation method, variant view and reality checks (shared with the report and the chat) ----- */
+    const ordinal = (n) => { const k = Math.round(n); const s2 = k % 100 >= 11 && k % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][k % 10] || 'th'; return k + s2; };
+    function caseText(c, k) {
+      const x = k === 'base' ? c.base : c[k];
+      if (c.method === 'book') return `${x.multiple.toFixed(2)}x tangible book × $${x.basis.toFixed(2)}`;
+      if (c.method === 'normalised') return `${x.multiple.toFixed(1)}x × $${x.basis.toFixed(2)} mid-cycle EPS`;
+      return `${x.pe.toFixed(1)}x × $${x.eps1.toFixed(2)}`;
+    }
+    function methodShort(c) {
+      if (c.method === 'book') return `${c.base.multiple.toFixed(1)}x tangible book`;
+      if (c.method === 'normalised') return `${c.base.multiple.toFixed(0)}x mid-cycle EPS`;
+      if (c.method === 'sotp') return 'Sum of the parts';
+      return `${c.targetPE.toFixed(1)}x next-year EPS`;
+    }
+    function methodWhy(t, c) {
+      const r = researchOf(t), v = r.valuation || {};
+      return v.why || `Next year's base-case EPS times a target P/E that moves one year's worth of the way from today's ${c.pe0.toFixed(1)}x toward the ${r.horizon}-year exit multiple, so the target already prices the re-rating or de-rating we expect.`;
+    }
+    function midYears(r, mid) {
+      const fy0 = r.base.fy0 || 0, start = r.valuation.include_fy0 === false ? 1 : 0;
+      return mid.hist.map((x) => `FY${String(x.fy).slice(2)} $${x.eps.toFixed(2)}`).concat(mid.fwd.map((x, i) => `FY${String(fy0 + start + i).slice(2)}E $${x.toFixed(2)}`));
+    }
+    function deriveRows(t, c, e) {
+      const r = researchOf(t), v = r.valuation || {}, dv = (a, b, cls) => h('div', { class: 'dv' + (cls ? ' ' + cls : '') }, h('span', null, a), h('b', null, b));
+      const total = dv('12-month price target', fmt.px(c.pt), 'total');
+      if (c.method === 'book') {
+        return [dv(v.bvps_label || 'Tangible book per share today', '$' + v.bvps0.toFixed(2)),
+          dv('In a year, after our earnings, dividends and buybacks at today’s price', '$' + c.base.basis.toFixed(2)),
+          dv('Return on tangible equity next year, from our earnings path', fmt.pct(c.base.roe, 1)),
+          dv(`Justified multiple: (${fmt.pct(c.base.roe, 1)} − ${v.g}%) ÷ (${fmt.pct(c.hurdle, 1)} cost of equity − ${v.g}%)`, '× ' + c.base.multiple.toFixed(2) + 'x'),
+          total];
+      }
+      if (c.method === 'normalised') {
+        const yrs = midYears(r, c.base.mid);
+        return [dv(`Mid-cycle EPS: average of ${yrs.length} years, ${c.base.mid.hist.length} reported and ${c.base.mid.fwd.length} from our base case`, '$' + c.base.basis.toFixed(2)),
+          h('div', { class: 'small muted', style: { padding: '0 0 6px' } }, yrs.join(' · ')),
+          dv(E.driverLabel(r, 'exit_pe') + ' (dispute it under Target and thesis)', '× ' + c.base.multiple.toFixed(1) + 'x'),
+          total];
+      }
+      return [dv(`${e.rows[1].label} EPS, our base case`, '$' + c.eps1.toFixed(2)),
+        dv(`Target P/E: today ${c.pe0.toFixed(1)}x, moved a third of the way to the ${r.horizon}-year exit multiple`, '× ' + c.targetPE.toFixed(1) + 'x'),
+        total];
+    }
+    /* What the variant view says, or why there is none. Shared text so the page, report and chat agree. */
+    function variantFacts(t) {
+      const r = researchOf(t), c = callOf(t, false);
+      if (!r || !c) return null;
+      const vv = r.variant_view ? E.variantOf(r, consensusOf(t)) : null;
+      const val = (x, u) => (x == null ? '–' : u === '$B' ? fmt.usdB(x) : '$' + x.toFixed(2));
+      if (vv && vv.why) {
+        return { has: true, metric: vv.metric, ours: val(vv.ours, vv.unit), cons: val(vv.consensus, vv.unit), gap: vv.gap, why: vv.why, proof: vv.proof,
+          oursLabel: r.variant_view.ours_label || 'Ours', consLabel: r.variant_view.consensus_label || (vv.live ? 'Consensus' : `Consensus (${r.variant_view.consensus_asof || 'snapshot'})`), capped: c.capped };
+      }
+      if (r.base.cons_comparable === false) return { has: false, text: 'Our estimates are on a different basis from consensus (for example AFFO against GAAP EPS), so there is no like-for-like gap to state.', capped: c.capped };
+      const e = estimates(t), row = e && (e.rows.find((x, i) => i >= 1 && x.cEps) || e.rows.find((x) => x.cEps));
+      if (!row) return { has: false, text: 'Consensus is not loaded yet.', capped: c.capped };
+      return { has: false, text: `No material disagreement: our ${row.label} EPS of $${row.eps.toFixed(2)} is ${fmt.spct(row.gapEps, 1)} against consensus at $${row.cEps.toFixed(2)}. A variant view needs a gap of ${E.VARIANT_MIN * 100}% or more with a reason and a date it gets tested.`, capped: c.capped };
+    }
+    function variantCard(t) {
+      const v = variantFacts(t);
+      if (!v) return null;
+      const capLine = v.capped ? h('div', { class: 'callout' }, h('b', null, 'Why the call is held. '), `On the numbers alone the 12-month return says ${v.capped.from}. Without a stated disagreement with consensus that return mostly reflects our cost of equity, not something the market is missing, so the call stays Equal weight. Your own disputes count as a variant view, so your call is not held.`) : null;
+      if (!v.has) return h('div', { class: 'stack' }, h('p', { class: 'small' }, v.text), capLine);
+      return h('div', { class: 'stack' },
+        h('div', { class: 'stats boxed' }, stat(v.metric + ', ' + v.oursLabel.toLowerCase(), v.ours), stat(v.consLabel, v.cons), stat('Gap', h('span', { class: v.gap > 0 ? 'up' : 'down' }, fmt.spct(v.gap, 1)))),
+        h('p', { class: 'small' }, h('b', null, 'Why. '), v.why),
+        v.proof ? h('p', { class: 'small' }, h('b', null, 'Tested by. '), `${v.proof.event}, ${/^\d{4}-\d{2}-\d{2}$/.test(v.proof.date) ? fmt.date(v.proof.date) : v.proof.date}.`) : null,
+        capLine);
+    }
+    function checkFacts(t) {
+      const r = researchOf(t), m = mkOf(t), table = state.data.baserates || null;
+      if (!r || !m) return null;
+      const dcf = E.reverseDCF(r, m, rates());
+      const rc = table ? E.realityChecks(r, m, rates(), table, null) : null;
+      return { r, m, table, dcf, rc };
+    }
+    function checksView(t) {
+      const k = checkFacts(t);
+      if (!k) return null;
+      const { r, dcf, rc, table } = k;
+      const N = r.horizon || 3;
+      const where = (br) => (br ? h('span', null, ordinal(br.pct * 100), ' ', br.pct > 0.9 || br.pct < 0.1 ? pill('Outside 10th–90th', 'warn') : null) : '–');
+      const range = (br, f) => (br ? `median ${f(br.p50)}, 10th to 90th ${f(br.p10)} to ${f(br.p90)}` : 'Loading…');
+      const pc = (x) => fmt.spct(x, 1), pts = (x) => (x >= 0 ? '+' : '−') + Math.abs(x).toFixed(1) + ' pts';
+      const g = (sc) => rc && rc.rows.find((x) => x.kind === 'growth' && x.scen === sc), mg = (sc) => rc && rc.rows.find((x) => x.kind === 'margin' && x.scen === sc);
+      const rows = [];
+      const gb = g('base'), gl = g('bear'), gu = g('bull'), mb = mg('base');
+      rows.push(h('tr', null, h('th', null, `Revenue growth, base case (${N} yrs)`), h('td', null, fmt.spct(r.drivers.rev_cagr.base / 100, 1) + ' a year'), h('td', null, range(gb && gb.br, pc)), h('td', null, where(gb && gb.br))));
+      rows.push(h('tr', null, h('th', null, 'Revenue growth, downside and upside'), h('td', null, `${fmt.spct(r.drivers.rev_cagr.bear / 100, 1)} / ${fmt.spct(r.drivers.rev_cagr.bull / 100, 1)}`), h('td', null, gb ? (gb.br.bucket + ' revenue') : '–'), h('td', null, gl && gu ? `${ordinal(gl.br.pct * 100)} / ${ordinal(gu.br.pct * 100)}` : '–')));
+      if (mb) rows.push(h('tr', null, h('th', null, `Net margin change, base case (${N} yrs)`), h('td', null, `${pts(mb.value)} from ${mb.from.toFixed(1)}%`), h('td', null, range(mb.br, pts) + `; starting margin ${mb.br.bucket}`), h('td', null, where(mb.br))));
+      if (dcf) rows.push(h('tr', null, h('th', null, `Growth the price implies (reverse DCF, ${dcf.years} yrs)`), h('td', null, `${fmt.spct(dcf.growth, 1)} a year in ${dcf.basis}`), h('td', null, rc && rc.dcfRate ? range(rc.dcfRate, pc) + ' (revenue, as a proxy)' : 'Loading…'), h('td', null, rc && rc.dcfRate ? where(rc.dcfRate) : '–')));
+      const flags = rc ? rc.flags.length + (rc.dcfFlag ? 1 : 0) : 0;
+      return h('div', { class: 'stack' },
+        h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl wrap' }, h('thead', null, h('tr', null, ['Check', 'Ours', 'What companies this size actually did', 'Where ours sits'].map((x) => h('th', null, x)))), h('tbody', null, rows))),
+        dcf ? h('p', { class: 'small' }, h('b', null, 'Reverse DCF. '), `At ${fmt.px(k.m.price)} and a ${fmt.pct(dcf.r, 1)} cost of equity, the price implies ${dcf.basis} per share of $${dcf.cf0.toFixed(2)} growing ${fmt.spct(dcf.growth, 1)} a year for ${dcf.years} years, then ${(dcf.gt * 100).toFixed(0)}% a year.${dcf.label ? ' Basis: ' + dcf.label + '.' : ''}`) : null,
+        rc ? (flags ? note(`${flags} assumption${flags === 1 ? '' : 's'} sit outside what 80% of comparable companies achieved. That is not wrong, but it needs a specific reason, which the research should state.`) : note('Every base-case assumption sits inside what 80% of comparable companies achieved.')) : null,
+        table ? disclose('How the base rates are built', [h('p', { class: 'small' }, table.method), h('ul', { class: 'small', style: { paddingLeft: '18px' } }, (table.caveats || []).map((x) => h('li', null, x))), h('p', { class: 'small muted' }, `Source: ${table.source}, ${table.filers ? table.filers.toLocaleString() + ' filers, ' : ''}fiscal years ${table.years[0]} to ${table.years[1]}, built ${fmt.date(table.asof)}.`)])
+          : note('Base rates from SEC filings are loading or have not been built yet.'));
+    }
+    function impliedView(ip) {
+      const dv = (a, b, cls) => h('div', { class: 'dv' + (cls ? ' ' + cls : '') }, h('span', null, a), h('b', null, b));
+      return h('div', { class: 'stack' },
+        h('div', { class: 'card derive' },
+          dv('Enterprise value at today’s price', fmt.usdB(ip.ev)),
+          dv(`${ip.anchor.name}: FY${String(ip.fy).slice(2)}E operating income $${ip.anchor.ebit1.toFixed(1)}B × ${ip.anchor.multiple.toFixed(1)}x`, '− ' + fmt.usdB(ip.anchor.value)),
+          dv(`Left for ${ip.rest.name}`, fmt.usdB(ip.rest.value), 'total'),
+          dv(`That is ${ip.rest.multiple.toFixed(1)}x its FY${String(ip.fy).slice(2)}E operating income of $${ip.rest.ebit1.toFixed(1)}B`, ip.rest.multiple.toFixed(1) + 'x')),
+        h('p', { class: 'small' }, h('b', null, 'Against: '), ip.peers.map((x) => `${x.name} ${x.multiple.toFixed(1)}x`).join(' · '), '. ', ip.anchor.why),
+        note(`${ip.why} ${ip.ebitLabel}.`));
+    }
+
     /* ----- thesis ----- */
     function wThesis(t) {
       const r = researchOf(t), m = mkOf(t), rv = review(t);
@@ -892,9 +1009,9 @@
       const c = callOf(t, false), cm = yours ? callOf(t, true) : null;
       if (c) {
         out.push(block('12-month call', h('div', { class: 'scen' }, [['bear', 'Downside'], ['base', 'Target'], ['bull', 'Upside']].map(([k, lab]) => {
-          const v = k === 'base' ? c.pt : c[k].value, pe = k === 'base' ? c.targetPE : c[k].pe, ep = k === 'base' ? c.eps1 : c[k].eps1;
+          const v = k === 'base' ? c.pt : c[k].value;
           return h('div', { class: 'card ' + k }, h('div', { class: 'ev-top' }, eyebrow(lab), k === 'base' ? pill(c.rating, ratingKind(c.rating)) : null),
-            h('div', { class: 's-ret' }, fmt.px(v)), h('div', { class: 's-px' }, `${fmt.spct(v / m.price - 1, 1)} · ${pe.toFixed(1)}x × $${ep.toFixed(2)}`));
+            h('div', { class: 's-ret' }, fmt.px(v)), h('div', { class: 's-px' }, `${fmt.spct(v / m.price - 1, 1)} · ${caseText(c, k)}`));
         })), cm ? note(`With your disputes: ${cm.rating}, target ${fmt.px(cm.pt)} (${fmt.spct(cm.upside, 1)}).`) : null));
         if (rv && rv.thesis_long) out.push(block('Investment thesis', ...rv.thesis_long.map((x) => h('p', { class: 'read' }, fill(t, x)))));
         out.push(h('h3', { class: 'sub-h' }, `${r.horizon}-year scenarios`));
@@ -918,7 +1035,7 @@
       })));
       const ov = overrides(t) || {};
       out.push(block('Assumptions · tap one to dispute it', h('div', { class: 'card' }, E.DRIVERS.map((k) => {
-        const d = r.drivers[k], meta = E.DRIVER_META[k], basis = rv && rv.forecast_basis ? rv.forecast_basis[k] : (d.kind === 'sourced' ? 'Sourced from filings' : 'Engine judgment');
+        const d = r.drivers[k], meta = Object.assign({}, E.DRIVER_META[k], { label: E.driverLabel(r, k) }), basis = rv && rv.forecast_basis ? rv.forecast_basis[k] : (d.kind === 'sourced' ? 'Sourced from filings' : 'Engine judgment');
         const kindTag = /^Driver-based/.test(basis) ? 'Driver-based' : /^Changed/.test(basis) ? 'Changed assumption' : /^Trend|^Below trend/.test(basis) ? 'Trend' : /^Judgment/.test(basis) ? 'Judgment' : d.kind === 'sourced' ? 'Sourced' : 'Judgment';
         return h('div', { class: 'drv' },
           h('div', null, h('div', { class: 'drv-n' }, meta.label), h('div', { class: 'small muted' }, `Downside ${d.bear} · Base ${d.base} · Upside ${d.bull} ${meta.unit}`)),
@@ -934,7 +1051,7 @@
         h('div', { class: 'tor-bar' }, h('i', { class: 'neg', style: { width: Math.min(50, Math.abs(Math.min(s.up, s.down)) / mx * 50) + '%' } }), h('i', { class: 'pos', style: { width: Math.min(50, Math.abs(Math.max(s.up, s.down)) / mx * 50) + '%' } })),
         h('div', { class: 'tor-v' }, `${fmt.pts(Math.min(s.up, s.down))} / ${fmt.pts(Math.max(s.up, s.down))}`)))));
       const vv = r.variant;
-      out.push(block('Where the engine differs from the market', h('div', { class: 'grid g2' }, h('div', { class: 'callout' }, h('b', null, 'Market assumes. '), vv.street), h('div', { class: 'callout' }, h('b', null, 'Engine view. '), vv.ours)),
+      out.push(block('Where the engine differs from the market', variantCard(t), h('div', { class: 'grid g2' }, h('div', { class: 'callout' }, h('b', null, 'Market assumes. '), vv.street), h('div', { class: 'callout' }, h('b', null, 'Engine view. '), vv.ours)),
         disclose('Where this could be wrong', vv.could_be_wrong), disclose('What would change the view', vv.would_change_mind)));
       out.push(lensesBlock(t, r, shown, m));
       out.push(h('div', { class: 'row-actions' }, btn([icon('ext'), 'Challenge it with Claude'], () => askClaude(t), ''), btn('Reset to engine baseline', () => { state.disputes = state.disputes.filter((x) => x.ticker !== t); kit.save(); win.refresh(); kit.render(); }, 'ghost', { disabled: !overrides(t) })));
@@ -1113,6 +1230,6 @@
       })), note('Collected automatically; links go to the publisher. Not curated or rated.'));
     }
 
-    return { page, openWin, load, priceOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel, callOf, estimates, estTable, consensusOf, relPerf, fill, framework, ratingKind, benchOf, rates };
+    return { page, openWin, load, priceOf, mkOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel, callOf, estimates, estTable, consensusOf, caseText, methodShort, methodWhy, variantFacts, checkFacts, midYears, relPerf, fill, framework, ratingKind, benchOf, rates };
   };
 })();

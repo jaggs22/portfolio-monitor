@@ -14,7 +14,8 @@
   "rev0": 30.6,
   "shares0": 2.09,
   "div": 2.49,
-  "rev_label": "FY2026E operating revenues ($B), near consensus; reported revenue swings with derivative marks"
+  "rev_label": "FY2026E operating revenues ($B), near consensus; reported revenue swings with derivative marks",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -444,5 +445,12 @@
    "SO",
    "D"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "basis": "earnings",
+   "label": "Adjusted EPS. A utility’s free cash flow is negative while it builds rate base, which is funded with debt and equity"
+  }
  }
 }

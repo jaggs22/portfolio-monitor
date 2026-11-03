@@ -46,6 +46,7 @@
       render();
     });
     D.get('news').then((r) => { state.news = (r.data && r.data.items) || []; if (route().page === 'home') render(); });
+    D.get('baserates').then((r) => { if (state.data && r.data && r.data.revenue_cagr) { state.data.baserates = r.data; if (route().page === 'company') render(); } });
   }
 
   function priceOf(t) { return CO ? CO.priceOf(t) : null; }

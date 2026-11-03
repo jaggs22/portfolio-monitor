@@ -14,7 +14,8 @@
   "rev0": 89.6,
   "shares0": 2.405,
   "div": 4.354,
-  "rev_label": "FY2027E net sales ($B): FY2026 $87.03B grown at the 3% midpoint of all-in guidance (includes Thorne)"
+  "rev_label": "FY2027E net sales ($B): FY2026 $87.03B grown at the 3% midpoint of all-in guidance (includes Thorne)",
+  "fy0": 2027
  },
  "probs": {
   "bear": 0.25,
@@ -455,5 +456,13 @@
    "KMB",
    "UL"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 6.38,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }

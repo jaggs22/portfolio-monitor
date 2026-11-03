@@ -38,7 +38,8 @@
     const rev = b.rev0 * Math.pow(1 + g, N);
     const shares = b.shares0 * Math.pow(1 + s, N);
     const eps = (rev * m) / shares;
-    const exitPrice = eps * pe;
+    // a cyclical valued on mid-cycle earnings exits on mid-cycle earnings too, not on year-N EPS
+    const exitPrice = (research.valuation && research.valuation.method === 'normalised' ? midCycleEps(research, scen, overrides).eps : eps) * pe;
     let div = 0, d = b.div || 0;
     for (let i = 1; i <= N; i++) { d *= 1 + Math.max(g, 0) * 0.6; div += d; }
     const total = (exitPrice + div) / price;
@@ -314,25 +315,201 @@
      return beats the cost of equity by 5 points or more, Underweight if it falls 5 points or more short. */
   function target(research, market, rates, opts) {
     opts = opts || {};
-    const N = research.horizon || 3, price = market.price;
+    const price = market.price;
     const pe0 = price / research.base.eps0;
     const hr = hurdle(market.beta, rates);
     const one = (scen) => {
-      const p = path(research, scen, opts.overrides);
-      const exit = driverValue(research, 'exit_pe', scen, opts.overrides);
-      const tpe = pe0 + (exit - pe0) / N;
-      const value = p[1].eps * tpe;
-      return { value, pe: tpe, eps1: p[1].eps, ret: value / price - 1 + p[1].dps / price };
+      const v = valueOf(research, market, rates, scen, opts.overrides);
+      return Object.assign(v, { pe: v.value / v.eps1, ret: v.value / price - 1 + v.dps1 / price });
     };
     const base = one('base'), bull = one('bull'), bear = one('bear');
     const spread = base.ret - hr;
-    const rating = spread >= 0.05 ? RATINGS[2] : spread <= -0.05 ? RATINGS[0] : RATINGS[1];
-    return { pt: base.value, upside: base.value / price - 1, totalReturn: base.ret, divYield: path(research, 'base', opts.overrides)[1].dps / price,
-      hurdle: hr, spread, rating, pe0, targetPE: base.pe, eps1: base.eps1, bull, bear, base, path: path(research, 'base', opts.overrides) };
+    let rating = spread >= 0.05 ? RATINGS[2] : spread <= -0.05 ? RATINGS[0] : RATINGS[1];
+    /* No variant, no conviction: a call away from Equal weight has to say where it differs from consensus. A user's own
+       disputes are their variant, so the cap applies only to the engine's baseline. */
+    let capped = null;
+    const hasOv = opts.overrides && Object.keys(opts.overrides).length;
+    if (rating !== RATINGS[1] && !hasOv) {
+      const vv = variantOf(research, opts.consensus || null, null);
+      const ok = vv && vv.why && (vv.gap == null ? !!research.variant_view.material : Math.abs(vv.gap) >= VARIANT_MIN);
+      if (!ok) { capped = { from: rating, reason: vv ? `The disagreement with consensus is under ${VARIANT_MIN * 100}%, too small to carry a ${rating} call.` : `No stated disagreement with consensus, so the ${rating} return is not enough on its own.` }; rating = RATINGS[1]; }
+    }
+    const p = base.p;
+    return { pt: base.value, upside: base.value / price - 1, totalReturn: base.ret, divYield: p[1].dps / price,
+      hurdle: hr, spread, rating, capped, method: methodOf(research), pe0, targetPE: base.value / base.eps1, eps1: base.eps1, bull, bear, base, path: p };
   }
 
+  /* ---------------- valuation methods ----------------
+     research.valuation = { method: 'pe' | 'book' | 'normalised' | 'sotp', why, ... }.
+     Every method is driven by the same four disputable drivers, so a user's view moves the target whatever the method.
+     pe          next year's EPS x a target P/E that moves 1/N of the way from today's P/E to the exit P/E.
+     book        justified price to (tangible) book = (forward return on equity - g) / (cost of equity - g), applied to
+                 book per share a year out. Book rolls forward with earnings, dividends and buybacks at today's price.
+     normalised  mid-cycle EPS x a normal multiple (the exit_pe driver). Mid-cycle EPS averages reported years
+                 (valuation.hist) and the scenario path, so a cyclical is not valued on peak or trough earnings.
+     sotp        each segment's operating profit a year out x an EV/EBIT multiple anchored on named peers, plus net cash and
+                 other assets, per share. Driver disputes scale segment profit by the change in next year's net income,
+                 and the exit multiple scales every segment multiple. */
+  const METHOD_LABEL = { pe: 'P/E on next year’s earnings', book: 'Price to tangible book against return on equity', normalised: 'Mid-cycle earnings x normal multiple', sotp: 'Sum of the parts' };
+  const methodOf = (r) => (r.valuation && r.valuation.method) || 'pe';
+  function driverLabel(research, key) {
+    const l = research && research.valuation && research.valuation.labels;
+    return (l && l[key]) || DRIVER_META[key].label;
+  }
+
+  function peValue(research, market, scen, overrides) {
+    const N = research.horizon || 3, pe0 = market.price / research.base.eps0;
+    const p = path(research, scen, overrides);
+    const exit = driverValue(research, 'exit_pe', scen, overrides);
+    const tpe = pe0 + (exit - pe0) / N;
+    return { value: p[1].eps * tpe, pe: tpe, eps1: p[1].eps, dps1: p[1].dps, p };
+  }
+
+  function midCycleEps(research, scen, overrides) {
+    const v = research.valuation || {}, p = path(research, scen, overrides);
+    const hist = (v.hist || []).map((x) => x.eps);
+    const fwd = p.slice(v.include_fy0 === false ? 1 : 0).map((x) => x.eps);
+    const all = hist.concat(fwd);
+    return { eps: all.reduce((a, b) => a + b, 0) / all.length, n: all.length, hist: v.hist || [], fwd };
+  }
+
+  function bookRoll(research, market, scen, overrides) {
+    const v = research.valuation, b = research.base, p = path(research, scen, overrides);
+    const bv0 = v.bvps0 * b.shares0;
+    const ni1 = p[1].eps * p[1].shares;
+    const divs = p[1].dps * (b.shares0 + p[1].shares) / 2;
+    const buyback = Math.max(0, b.shares0 - p[1].shares) * market.price; // buybacks at today's price
+    const bv1 = bv0 + ni1 - divs - buyback;
+    const bvps1 = bv1 / p[1].shares;
+    const roe = ni1 / ((bv0 + bv1) / 2);
+    return { bvps1, roe, p };
+  }
+
+  function valueOf(research, market, rates, scen, overrides) {
+    const m = methodOf(research), v = research.valuation || {};
+    const hr = hurdle(market.beta, rates);
+    if (m === 'book') {
+      const g = v.g / 100, k = bookRoll(research, market, scen, overrides);
+      const mult = Math.max(0.3, (k.roe - g) / Math.max(hr - g, 0.01));
+      return { value: k.bvps1 * mult, multiple: mult, multipleLabel: 'P/TBV', basis: k.bvps1, basisLabel: 'tangible book per share in a year', roe: k.roe, eps1: k.p[1].eps, dps1: k.p[1].dps, p: k.p };
+    }
+    if (m === 'normalised') {
+      const mc = midCycleEps(research, scen, overrides), pe = driverValue(research, 'exit_pe', scen, overrides);
+      const p = path(research, scen, overrides);
+      return { value: mc.eps * pe, multiple: pe, multipleLabel: 'P/E', basis: mc.eps, basisLabel: 'mid-cycle EPS', mid: mc, eps1: p[1].eps, dps1: p[1].dps, p };
+    }
+    if (m === 'sotp') {
+      const p = path(research, scen, overrides), p0 = path(research, 'base', null);
+      const k = (p[1].eps * p[1].shares) / (p0[1].eps * p0[1].shares);
+      const mx = driverValue(research, 'exit_pe', scen, overrides) / research.drivers.exit_pe.base;
+      const parts = v.parts.map((x) => { const ebit = x.ebit0 * (1 + x.g / 100) * k; return { name: x.name, ebit, multiple: x.multiple * mx, value: ebit * x.multiple * mx }; });
+      const other = (v.other || []).reduce((a, x) => a + x.value, 0);
+      const eq = parts.reduce((a, x) => a + x.value, 0) + other;
+      return { value: eq / p[1].shares, parts, other, equity: eq, eps1: p[1].eps, dps1: p[1].dps, p, multiple: eq / (p[1].eps * p[1].shares), multipleLabel: 'implied P/E' };
+    }
+    const x = peValue(research, market, scen, overrides);
+    return { value: x.value, multiple: x.pe, multipleLabel: 'P/E', basis: x.eps1, basisLabel: 'next year’s EPS', eps1: x.eps1, dps1: x.dps1, p: x.p };
+  }
+
+  /* Reverse DCF: the constant growth in per-share cash flow over the next ten years (then valuation.dcf.terminal_g,
+     default 3%) that makes the present value at the cost of equity equal today's price. */
+  function reverseDCF(research, market, rates) {
+    const d = (research.valuation && research.valuation.dcf) || {};
+    const cf0 = d.cf0 != null ? d.cf0 : d.basis === 'mid-cycle earnings' ? midCycleEps(research, 'base', null).eps : research.base.eps0;
+    if (!(cf0 > 0)) return null;
+    const r = hurdle(market.beta, rates), gt = (d.terminal_g != null ? d.terminal_g : 3) / 100, n = d.years || 10;
+    if (r <= gt + 0.005) return null;
+    const pv = (g) => { let s = 0, cf = cf0; for (let t = 1; t <= n; t++) { cf *= 1 + g; s += cf / Math.pow(1 + r, t); } return s + (cf * (1 + gt)) / (r - gt) / Math.pow(1 + r, n); };
+    let lo = -0.3, hi = 0.8;
+    if (pv(hi) < market.price) return { growth: hi, capped: true, cf0, basis: d.basis || 'earnings', label: d.label || null, r, gt, years: n };
+    if (pv(lo) > market.price) return { growth: lo, capped: true, cf0, basis: d.basis || 'earnings', label: d.label || null, r, gt, years: n };
+    for (let i = 0; i < 80; i++) { const mid = (lo + hi) / 2; if (pv(mid) < market.price) lo = mid; else hi = mid; }
+    return { growth: (lo + hi) / 2, capped: false, cf0, basis: d.basis || 'earnings', label: d.label || null, r, gt, years: n };
+  }
+
+  /* Variant view: where the research disagrees with consensus, by how much, and how it gets proved.
+     research.variant = {..., metric: 'eps'|'rev'|'custom', fy, ours?, consensus?, unit?, why, proof: {event, date}} */
+  function variantOf(research, consensus, overrides) {
+    const v = research.variant_view || {};
+    if (!v.metric) return null;
+    if (v.metric === 'custom') {
+      const gap = v.consensus ? v.ours / v.consensus - 1 : null;
+      return { metric: v.label, fy: v.fy || null, ours: v.ours, consensus: v.consensus, unit: v.unit || '', gap, why: v.why, proof: v.proof, source: v.source || null, live: false };
+    }
+    const fy0 = research.base.fy0;
+    const c = consensus || {};
+    const cfy0 = c.fy0_end ? +c.fy0_end.slice(0, 4) : null;
+    const p = path(research, 'base', overrides);
+    const i = v.fy - fy0;
+    if (i < 0 || i >= p.length) return null;
+    const ours = v.metric === 'eps' ? p[i].eps : p[i].rev;
+    let cons = null;
+    if (cfy0 != null) {
+      const j = v.fy - cfy0;
+      if (j === 0 || j === 1) cons = v.metric === 'eps' ? (j ? c.eps1 : c.eps0) : (j ? c.rev1_m : c.rev0_m) / 1000;
+    }
+    if (cons == null && v.consensus != null) cons = v.consensus;
+    const label = v.metric === 'eps' ? `FY${v.fy} EPS` : `FY${v.fy} revenue`;
+    return { metric: label, fy: v.fy, ours, consensus: cons, unit: v.metric === 'eps' ? '$' : '$B', gap: cons ? ours / cons - 1 : null, why: v.why, proof: v.proof, source: v.source || null, live: cfy0 != null };
+  }
+  /* Market-implied sum of the parts: value one segment on a peer multiple and solve for what the price pays for the rest. */
+  function impliedPart(research, market) {
+    const c = research.valuation && research.valuation.cross;
+    if (!c || c.kind !== 'implied_part') return null;
+    const ev = market.price * research.base.shares0 + c.net_debt;
+    const anchorV = c.anchor.ebit1 * c.anchor.multiple;
+    const restV = ev - anchorV;
+    return { ev, anchor: Object.assign({ value: anchorV }, c.anchor), rest: Object.assign({ value: restV, multiple: restV / c.rest.ebit1 }, c.rest), peers: c.peers || [], fy: c.fy, why: c.why, ebitLabel: c.ebit_label, netDebt: c.net_debt };
+  }
+  /* Base rates: where a value sits in the historical distribution for companies like this one.
+     table: the pipeline's baserates.json. kind 'growth' (revenue CAGR, decimal) bucketed by starting revenue in $B,
+     or 'margin' (change in net margin, points) bucketed by starting net margin in %. Returns the percentile (0 to 1). */
+  function baseRate(table, kind, years, key, value) {
+    if (!table || value == null || !isFinite(value)) return null;
+    const dist = kind === 'growth' ? table.revenue_cagr : table.net_margin_change_pts;
+    const buckets = kind === 'growth' ? table.size_buckets : table.margin_buckets;
+    const byH = dist && dist[String(years)];
+    if (!byH) return null;
+    const b = buckets.find(([, lo, hi]) => (lo == null || key >= lo) && (hi == null || key < hi));
+    const row = b && byH[b[0]];
+    if (!row) return null;
+    const P = table.pcts, v = row.p;
+    let pct;
+    if (value <= v[0]) pct = 0;
+    else if (value >= v[v.length - 1]) pct = 1;
+    else {
+      let i = 0;
+      while (i < v.length - 1 && v[i + 1] < value) i++;
+      const span = v[i + 1] - v[i];
+      pct = (P[i] + (span > 0 ? (value - v[i]) / span : 0) * (P[i + 1] - P[i])) / 100;
+    }
+    const at = (q) => v[P.indexOf(q)];
+    return { pct, bucket: b[0], n: row.n, companies: row.companies || null, p10: at(10), p50: at(50), p90: at(90), years };
+  }
+  /* Checks for one research file: our base, bear and bull revenue growth and margin change, and the reverse-DCF growth,
+     each placed on the base rates. Flags anything outside the 10th to 90th percentile. */
+  function realityChecks(research, market, rates, table, overrides) {
+    if (!table) return null;
+    const N = research.horizon || 3, size = research.base.rev0, out = [];
+    const m0 = (research.base.eps0 * research.base.shares0) / research.base.rev0 * 100;
+    for (const sc of ['bear', 'base', 'bull']) {
+      const g = driverValue(research, 'rev_cagr', sc, overrides) / 100;
+      const br = baseRate(table, 'growth', N, size, g);
+      if (br) out.push({ kind: 'growth', scen: sc, value: g, br });
+      const dm = driverValue(research, 'margin_end', sc, overrides) - m0;
+      const bm = baseRate(table, 'margin', N, m0, dm);
+      if (bm) out.push({ kind: 'margin', scen: sc, value: dm, from: m0, br: bm });
+    }
+    const dcf = reverseDCF(research, market, rates);
+    const dbr = dcf ? baseRate(table, 'growth', dcf.years, size, dcf.growth) : null;
+    const flag = (x) => x.br.pct > 0.9 || x.br.pct < 0.1;
+    const base = out.filter((x) => x.scen === 'base');
+    return { rows: out, base, flags: base.filter(flag), dcf, dcfRate: dbr, dcfFlag: dbr ? dbr.pct > 0.9 : false, asof: table.asof || null };
+  }
+  const VARIANT_MIN = 0.05; // a disagreement smaller than 5% is not a variant view
+
   return {
-    DRIVERS, DRIVER_META, STANCES, LENS_CHECKS, RATINGS, path, target,
+    DRIVERS, DRIVER_META, STANCES, LENS_CHECKS, RATINGS, METHOD_LABEL, VARIANT_MIN, path, target, valueOf, reverseDCF, variantOf, impliedPart, peValue, baseRate, realityChecks, methodOf, driverLabel, midCycleEps,
     adjBeta, hurdle, runScenario, evaluate, impliedGrowth, sensitivity, overridesFrom, diff, challenge,
     profile, lensRead, lightValuation, technicalRead, baselineChange, rebaseFromFiling, normProbs, stanceOf, round
   };

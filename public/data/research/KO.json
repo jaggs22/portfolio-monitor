@@ -14,7 +14,8 @@
   "rev0": 50.2,
   "shares0": 4.314,
   "div": 2.12,
-  "rev_label": "FY2026E comparable net revenue ($B): 2025 $47.9B grown about 5% (organic growth plus currency, less divestitures)"
+  "rev_label": "FY2026E comparable net revenue ($B): 2025 $47.9B grown about 5% (organic growth plus currency, less divestitures)",
+  "fy0": 2026
  },
  "probs": {
   "bear": 0.25,
@@ -451,5 +452,13 @@
    "KDP",
    "MNST"
   ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 3.31,
+   "basis": "free cash flow",
+   "label": "Last 12 months of cash from operations less capex, per share"
+  }
  }
 }
