@@ -177,18 +177,34 @@ def build_ledger(extractions):
 
 
 # ---------- providers ----------
+def _pick_gemini(requests, hdr):
+    """Newest stable Flash model this key can use (retired model names otherwise break the job)."""
+    try:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers=hdr, timeout=30)
+        names = [m["name"].split("/", 1)[1] for m in r.json().get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+                 and not re.search(r"image|tts|audio|live|embedding|native|computer|preview|exp|lite", m["name"])]
+        ver = lambda n: float((re.search(r"gemini-(\d+(?:\.\d+)?)", n) or [0, 0])[1])
+        if names:
+            return sorted(names, key=lambda n: (ver(n), -len(n)))[-1]
+    except Exception:  # noqa: BLE001
+        pass
+    return "gemini-2.5-flash"
+
 def make_caller(env=None):
     env = env if env is not None else os.environ
     import requests
     if env.get("GEMINI_API_KEY"):
-        model = env.get("LLM_MODEL", "gemini-2.0-flash")
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        # The key goes in a header, never the URL, so it cannot leak into error messages or the published data.
+        hdr = {"x-goog-api-key": env["GEMINI_API_KEY"]}
+        model = env.get("LLM_MODEL") or _pick_gemini(requests, hdr)
 
         def call(prompt):
-            r = requests.post(url, params={"key": env["GEMINI_API_KEY"]}, timeout=90, json={
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", headers=hdr, timeout=90, json={
                 "contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}})
-            r.raise_for_status()
+            if not r.ok:
+                raise RuntimeError(f"Gemini {model} returned {r.status_code}")
             return r.json()["candidates"][0]["content"]["parts"][0]["text"]
         return call
     if env.get("ANTHROPIC_API_KEY"):

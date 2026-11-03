@@ -1,6 +1,7 @@
 """Pipeline jobs. Each job is a function of injected clients and an output directory, so tests run offline."""
 import datetime as dt
 import json
+import re
 import time
 from pathlib import Path
 
@@ -26,9 +27,17 @@ def iso(ts=None):
     return dt.datetime.fromtimestamp(ts or time.time(), dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+# Anything that looks like a credential is masked before errors are published to the public data branch.
+_SECRET = re.compile(r"AIza[0-9A-Za-z_\-]{20,}|nvapi-[0-9A-Za-z_\-]{20,}|gsk_[0-9A-Za-z]{20,}|sk-[0-9A-Za-z_\-]{20,}|gh[pousr]_[0-9A-Za-z]{20,}|(?<=[?&]key=)[^&\s'\"]+")
+
+
+def redact(text):
+    return _SECRET.sub("<redacted>", str(text))
+
+
 def record(out, job, ok, errors, count, now=None):
     h = read_json(Path(out) / "health.json", {}) or {}
-    h[job] = {"last_run": iso(now), "ok": ok, "count": count, "errors": errors[:20]}
+    h[job] = {"last_run": iso(now), "ok": ok, "count": count, "errors": [redact(e) for e in errors[:20]]}
     h["generated_at"] = iso(now)
     write_json(Path(out) / "health.json", h, compact=False)
 
