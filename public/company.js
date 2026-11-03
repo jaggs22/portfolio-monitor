@@ -171,7 +171,7 @@
       const p = E.path(r, 'base');
       const fy0 = c && c.fy0_end ? +c.fy0_end.slice(0, 4) : +(r.base_period_end || r.as_of).slice(0, 4);
       const rows = p.slice(0, 3).map((x, i) => {
-        const cEps = c ? (i === 0 ? c.eps0 : i === 1 ? c.eps1 : null) : null;
+        const cEps = c && r.base.cons_comparable !== false ? (i === 0 ? c.eps0 : i === 1 ? c.eps1 : null) : null;
         const cRev = c ? (i === 0 ? c.rev0_m : i === 1 ? c.rev1_m : null) : null;
         return { label: `FY${String(fy0 + i).slice(2)}E`, year: fy0 + i, rev: x.rev * 1000, eps: x.eps, margin: x.margin, dps: x.dps,
           cEps, cRev, gapEps: cEps ? x.eps / cEps - 1 : null, gapRev: cRev ? (x.rev * 1000) / cRev - 1 : null };
@@ -271,6 +271,11 @@
           [line(rv.model), shareBar(parts),
             h('div', { class: 'legend' }, parts.slice(0, 3).map((p, i) => h('span', null, h('i', { class: 'sb' + i }), `${p.label} ${Math.round(p.v / tot * 100)}%`)))],
           [`${rows.length} ${kind === 'segment' ? 'segments' : 'revenue lines'}`, '·', periodLabel(v)]);
+      }
+      if (rv && rv.model) {
+        const segs = (rv.mix && rv.mix.rows || []).map((x) => x.label);
+        return tile('business', 'business', 'How it makes money', [line(rv.model.split('. ')[0].replace(/\.$/, '') + '.')],
+          [segs.length ? segs.join(' + ') : 'From the research']);
       }
       const summary = f && f.profile && f.profile.summary;
       return tile('business', 'business', 'How it makes money',

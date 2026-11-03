@@ -1,0 +1,451 @@
+{
+ "ticker": "JPM",
+ "name": "JPMorgan Chase",
+ "depth": "deep",
+ "as_of": "2026-10-13",
+ "horizon": 3,
+ "header": {
+  "one_liner": "The best-run US bank, earning a 20% return on tangible equity, priced at three times tangible book.",
+  "thesis": "JPMorgan grew net interest income 13% and earned $5.57 a share in the September quarter, with equity trading up 49% and credit losses steady at 1.35% of loans. The franchise is the strongest in US banking; the question is whether 14.5x earnings and 3x tangible book leave room for a return above the cost of equity as rates and credit normalise."
+ },
+ "base": {
+  "eps0": 23.5,
+  "eps_label": "FY2026E diluted EPS excluding the $4.6B second-quarter gain on Visa shares: nine months $19.20 less about $1.30 for the gain, plus a fourth quarter near $5.60",
+  "rev0": 205.0,
+  "shares0": 2.683,
+  "div": 6.6,
+  "rev_label": "FY2026E managed net revenue ($B): nine months $159.5B less the $4.6B Visa gain, plus a fourth quarter near $50B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 4,
+   "bear": 0,
+   "bull": 6,
+   "kind": "judgment",
+   "why": "Managed revenue grew 8% in the quarter: net interest income +13% on 10% loan growth, investment banking fees +13% and equity trading +49%. Some of that is unusually strong markets activity. The base case assumes about 4% a year as rates ease and trading normalises.",
+   "source": "JPMorgan Q3 2026 earnings release financial supplement"
+  },
+  "margin_end": {
+   "base": 29,
+   "bear": 25,
+   "bull": 31,
+   "kind": "judgment",
+   "why": "Net income is about 31% of revenue this year, helped by low credit costs (net charge-offs 1.35% of loans) and strong fees. The base case assumes credit costs and expenses rise a little faster than revenue; the bear case is a credit cycle.",
+   "source": "Q3 2026 supplement (income statement, credit data)"
+  },
+  "share_chg": {
+   "base": -2,
+   "bear": -1,
+   "bull": -3,
+   "kind": "sourced",
+   "why": "Diluted shares fell 3% over the past year, but buybacks dropped to $1.1B in the third quarter from $8.3B a year earlier, under a new $50B program from 1 July 2026. The base case assumes about 2% a year.",
+   "source": "Q3 2026 supplement (share repurchase program)"
+  },
+  "exit_pe": {
+   "base": 13.5,
+   "bear": 11,
+   "bull": 15.5,
+   "kind": "judgment",
+   "why": "JPMorgan trades at about 14.5x 2026 EPS and 3x tangible book, against 10x to 11x for Bank of America, Citigroup and Wells Fargo. The base case assumes a small de-rating as returns normalise; the premium to peers is earned but already wide.",
+   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Net interest income is still rising",
+   "claim": "NII grew 13% to $27.0B on 10% loan growth and 9% deposit growth.",
+   "evidence": [
+    {
+     "t": "Net interest income $27,036M vs $23,966M",
+     "src": "Q3 supplement"
+    },
+    {
+     "t": "Loans $1.58T, +10%; deposits $2.78T, +9%",
+     "src": "Q3 supplement"
+    }
+   ],
+   "test": "Does NII hold as the Fed cuts?"
+  },
+  {
+   "title": "Markets and banking fees are strong",
+   "claim": "Equity markets revenue rose 49% and investment banking fees 13%; fixed income fell 4%.",
+   "evidence": [
+    {
+     "t": "Equity Markets $4,954M vs $3,331M; Fixed Income Markets $5,366M vs $5,613M",
+     "src": "Q3 supplement"
+    }
+   ],
+   "test": "How much of the trading strength repeats?"
+  },
+  {
+   "title": "Credit is steady",
+   "claim": "Net charge-offs were 1.35% of loans and the allowance was flat; the provision was $2.7B.",
+   "evidence": [
+    {
+     "t": "Total net charge-offs $1,976M; rate 1.35%",
+     "src": "Q3 supplement"
+    }
+   ],
+   "test": "Do card charge-offs rise as unemployment does?"
+  },
+  {
+   "title": "Capital return slowed",
+   "claim": "Buybacks fell to $1.1B in the quarter and CET1 eased to 13.9%; the dividend was raised 10% to $1.65.",
+   "evidence": [
+    {
+     "t": "Aggregate repurchases $1,057M vs $8,315M a year earlier",
+     "src": "Q3 supplement"
+    },
+    {
+     "t": "CET1 ratio 13.9% vs 14.8%",
+     "src": "Q3 supplement"
+    }
+   ],
+   "test": "Do buybacks resume under the new $50B program?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays 14.5x earnings and 3x tangible book for the bank with the highest returns and the strongest franchise.",
+  "ours": "The premium is earned, but it leaves little room. With rates easing and credit costs at a low, our base case earnings grow slowly and the 12-month return falls short of the cost of equity.",
+  "could_be_wrong": "If capital rules ease and JPMorgan deploys its excess capital in buybacks, EPS can grow high single digits with no change in operations.",
+  "would_change_mind": "Buybacks back above $7B a quarter, or the stock nearer 2.5x tangible book."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Scale in deposits, cards, payments and investment banking; the lowest funding cost and highest returns among large US banks.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "CET1 capital ratio 13.9% and supplementary leverage ratio 5.5%: well above requirements.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Second-quarter 2026 earnings include a $4.6B gain on Visa shares",
+   "Net charge-off rate 1.35%, below 1.46% for the first nine months of 2025"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-01-13",
+   "label": "JPMorgan Q4 2026 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Watch 2027 NII guidance, expenses and the pace of buybacks.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "j1",
+   "text": "Net charge-off rate above 1.8%",
+   "metric": "nco",
+   "op": ">",
+   "threshold": 1.8,
+   "current": 1.35,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q3 supplement"
+  },
+  {
+   "id": "j2",
+   "text": "Net interest income falls year on year",
+   "metric": "nii",
+   "op": "<",
+   "threshold": 0,
+   "current": 13,
+   "unit": "% growth",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 supplement"
+  },
+  {
+   "id": "j3",
+   "text": "CET1 ratio below 13%",
+   "metric": "cet1",
+   "op": "<",
+   "threshold": 13,
+   "current": 13.9,
+   "unit": "%",
+   "drivers": [
+    "share_chg"
+   ],
+   "src": "Q3 supplement"
+  }
+ ],
+ "risks": [
+  "Credit cycle.",
+  "Rate cuts squeeze NII.",
+  "Trading normalises.",
+  "Capital rules.",
+  "Succession."
+ ],
+ "lenses": {
+  "eisman": "Credit is the swing factor at a bank this size; check card charge-offs every quarter.",
+  "munger": "The best bank is still a leveraged business; buy it when others are frightened, not at 3x book.",
+  "buffett": "He admires the franchise and has said banks are worth buying at a sensible price to book.",
+  "hohn": "Returns on tangible equity near 20% justify a premium; the question is whether capital comes back to shareholders."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "JPMorgan Chase Form 8-K, Q3 2026 earnings release financial supplement",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K",
+   "date": "2026-10-13"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "Q3 2026 10-Q not yet in the pipeline; figures are from the earnings supplement.",
+  "The reason for the slower buyback pace is not stated in the pages retrieved.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 earnings release financial supplement (quarter to 30 September 2026). Q4 reports in mid-January; this review refreshes after the print.",
+  "headline": "The strongest US bank, earning about 20% on tangible equity. The premium to peers is deserved and already in the price.",
+  "model": "JPMorgan takes deposits and lends them out (consumer, card, commercial), runs the largest US investment bank and trading business, and manages money for wealthy clients and institutions. It earns the spread on loans, plus fees.",
+  "how_it_earns": [
+   {
+    "k": "Consumer & Community Banking",
+    "v": "Chase branches, cards, mortgages and auto loans. Most of the deposits."
+   },
+   {
+    "k": "Commercial & Investment Bank",
+    "v": "Advisory, underwriting, trading, payments and corporate lending."
+   },
+   {
+    "k": "Asset & Wealth Management",
+    "v": "Fees on client assets. Steady and growing."
+   },
+   {
+    "k": "Net interest income",
+    "v": "The spread between loan and deposit rates. About half of revenue."
+   }
+  ],
+  "mix": {
+   "axis": "geography",
+   "note": "Revenue by region from the 2025 10-K. JPMorgan's business segments are in the earnings supplement, summarised on this page.",
+   "rows": [
+    {
+     "match": "North America",
+     "label": "North America",
+     "role": "Core",
+     "driver": "US consumer and commercial banking"
+    },
+    {
+     "match": "EMEA",
+     "label": "Europe, Middle East and Africa",
+     "role": "Largest abroad",
+     "driver": "Investment banking and markets"
+    },
+    {
+     "match": "Asia Pacific",
+     "label": "Asia Pacific",
+     "role": "Fastest growth",
+     "driver": "Markets and payments"
+    },
+    {
+     "match": "Latin America",
+     "label": "Latin America",
+     "role": "Small",
+     "driver": "Corporate banking"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest US bank by assets, deposits and market value, and the largest US investment bank by fees.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Lowest-cost deposit base",
+    "Scale in cards and payments",
+    "Investment banking league-table leadership",
+    "Technology spend no rival can match"
+   ],
+   "threat": "Regulation and the credit cycle, not competitors, set the limits."
+  },
+  "what_numbers_say": [
+   {
+    "t": "NII +13%",
+    "d": "$27.0B on 10% loan growth."
+   },
+   {
+    "t": "Equities +49%",
+    "d": "Equity markets $5.0B; fixed income -4%; IB fees +13%."
+   },
+   {
+    "t": "Credit benign",
+    "d": "Net charge-offs 1.35% of loans; provision $2.7B."
+   },
+   {
+    "t": "Buybacks slowed",
+    "d": "$1.1B in Q3 vs $8.3B a year earlier; CET1 13.9%."
+   }
+  ],
+  "balance": {
+   "read": "Well capitalised: CET1 13.9% and a fortress balance sheet, with excess capital above requirements.",
+   "facts": [
+    "Tangible book value per share $112.64, +7%",
+    "New $50B buyback program from 1 July 2026",
+    "Quarterly dividend raised 10% to $1.65"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "One-off gain in Q2",
+    "evidence": "A $4.6B net gain on Visa class C shares in the second quarter lifts nine-month EPS by about $1.30.",
+    "severity": "info"
+   },
+   {
+    "flag": "Expenses growing faster than revenue",
+    "evidence": "Noninterest expense +12% vs managed revenue +8% in the quarter.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Buyback pace dropped",
+    "evidence": "Repurchases $1.1B in Q3 vs $6.7B in Q2 and $8.3B a year earlier.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Judgment: NII flattening, trading normalising",
+   "margin_end": "Judgment: credit costs and expenses edge up",
+   "share_chg": "Sourced: buybacks under the $50B program, at a slower pace",
+   "exit_pe": "Judgment: small de-rating from a wide premium to peers"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Revenue grows about 4% a year, credit costs normalise slowly and buybacks continue at a moderate pace.",
+    "needs": "No recession"
+   },
+   "downside": {
+    "story": "A recession lifts card and commercial losses while rate cuts squeeze NII; the multiple falls toward 11x.",
+    "needs": "Unemployment rising sharply"
+   },
+   "upside": {
+    "story": "Capital rules ease and excess capital is returned; trading stays strong and EPS grows high single digits.",
+    "needs": "Buybacks back above $7B a quarter"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Credit cycle",
+    "how": "Card and consumer losses rise with unemployment; commercial real estate is a second pocket.",
+    "watch": "Net charge-off rate",
+    "trip": "j1",
+    "sev": "high",
+    "cat": "Credit"
+   },
+   {
+    "cause": "Rate cuts squeeze NII",
+    "how": "Deposit costs fall more slowly than loan yields when the Fed cuts.",
+    "watch": "Net interest income growth",
+    "trip": "j2",
+    "sev": "medium",
+    "cat": "Rates"
+   },
+   {
+    "cause": "Trading normalises",
+    "how": "Equity markets revenue rose 49%; a quieter market would cut fees.",
+    "watch": "Markets revenue",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Cycle"
+   },
+   {
+    "cause": "Capital rules",
+    "how": "Higher capital requirements would slow buybacks further.",
+    "watch": "CET1 ratio and buybacks",
+    "trip": "j3",
+    "sev": "medium",
+    "cat": "Regulatory"
+   },
+   {
+    "cause": "Succession",
+    "how": "Leadership succession at the top is a long-standing question for investors.",
+    "watch": "Management announcements",
+    "trip": null,
+    "sev": "low",
+    "cat": "Governance"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "JPMorgan earns the highest returns on tangible equity among US universal banks and has the strongest deposit franchise.",
+   "why_not": "At 14x earnings it is about a third more expensive than Bank of America, Citigroup and Wells Fargo, which are improving faster from a lower base.",
+   "peers_note": "Banks are compared on P/E only; enterprise value and EBITDA are not meaningful for lenders."
+  },
+  "questions": [
+   "How much of the 20% return on tangible equity is cyclical?",
+   "Why did buybacks slow in the third quarter?",
+   "Is a one-third premium to peers too much?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "JPMorgan Chase earnings release financial supplement, Q3 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=8-K",
+    "date": "2026-10-13"
+   }
+  ],
+  "title": "Earned premium, little room",
+  "lead": "We rate JPMorgan {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). It is the best-run bank in the US, but at 3x tangible book with credit costs near a low and buybacks slowing, our 2027 EPS is {vs_cons} consensus.",
+  "call_reason": "Quality fully priced: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Managed revenue grew 8% in the September quarter: net interest income +13% on 10% loan growth, equity trading +49%, investment banking fees +13%."
+   },
+   {
+    "label": "Moat",
+    "text": "The lowest-cost deposit base and the largest card, payments and investment banking franchises in the US. Regulation and credit set the limits."
+   },
+   {
+    "label": "Profitability",
+    "text": "Return on tangible equity of 20% in the quarter and 24% year to date, with net charge-offs at 1.35% of loans. Expenses grew 12%, faster than revenue."
+   },
+   {
+    "label": "Capital",
+    "text": "CET1 of 13.9% and a new $50B buyback program, but repurchases fell to $1.1B in the quarter. The dividend was raised 10%."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} It trades at about 3x tangible book and a third above US peers on earnings."
+   }
+  ],
+  "thesis_long": [
+   "JPMorgan is the strongest bank in the US. It has the cheapest deposits, the largest card and payments franchise and the top investment bank, and it is still growing: loans +10%, net interest income +13% and equity trading +49% in the September quarter. Return on tangible equity was 24% for the first nine months.",
+   "The question is what is left for a new buyer. At about 14.5x this year's earnings and 3x tangible book, the stock trades about a third above Bank of America, Citigroup and Wells Fargo. Earnings are flattered by low credit costs and strong trading, rate cuts will slow net interest income, expenses are growing faster than revenue, and buybacks dropped to $1.1B in the quarter.",
+   "Our base case grows revenue about 4% a year with slightly higher credit costs and a modest de-rating. That falls short of the cost of equity over 12 months. We would turn positive if buybacks returned above $7B a quarter or the price fell nearer 2.5x tangible book."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Capital rules ease",
+    "how": "Lower capital requirements would release excess capital for buybacks, lifting EPS growth without any change in operations."
+   },
+   {
+    "cause": "Markets stay strong",
+    "how": "Another year of record trading and a recovery in M&A would push earnings well above our base case."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "BAC",
+   "C",
+   "WFC"
+  ]
+ }
+}

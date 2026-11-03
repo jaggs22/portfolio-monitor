@@ -1,117 +1,151 @@
 {
  "ticker": "MU",
- "name": "Micron",
- "depth": "lighter",
+ "name": "Micron Technology",
+ "depth": "deep",
  "as_of": "2026-09-30",
  "horizon": 3,
  "header": {
-  "one_liner": "Memory at the top of a violent cycle: record earnings, a single-digit multiple, and a stance that is mostly a bet on whether this is the peak.",
-  "thesis": "Revenue went from $37.4B to $133.2B in one fiscal year with 81% GAAP gross margin. A 12.6x multiple on peak earnings is how the market prices a cycle. The engine's wide scenario spread is the honest answer."
+  "one_liner": "Memory at the top of the steepest upcycle on record: a 5x multiple says the market already expects it to end.",
+  "thesis": "Micron earned $75.52 of non-GAAP EPS in fiscal 2026 on revenue that more than tripled, and guides the first quarter of fiscal 2027 to $38.15. The debate is not this year but the shape of the cycle: our base case keeps fiscal 2027 near guidance and then lets margins fall back toward prior-peak levels as new clean rooms open from late 2028."
  },
  "base": {
-  "eps0": 75.52,
-  "eps_label": "FY2026 non-GAAP EPS",
-  "rev0": 133.19,
-  "shares0": 1.149,
+  "eps0": 168.0,
+  "eps_label": "FY2027E non-GAAP EPS (year to August 2027): FQ1 guide $38.15, then moderate quarterly growth to about $45",
+  "rev0": 270.0,
+  "shares0": 1.147,
   "div": 0.6,
-  "rev_label": "FY2026 revenue ($B)"
+  "rev_label": "FY2027E revenue ($B): FQ1 guide $61.5B rising to about $73B by FQ4"
  },
  "probs": {
-  "bear": 0.3,
-  "base": 0.4,
-  "bull": 0.3
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
  },
  "drivers": {
   "rev_cagr": {
-   "base": 20,
-   "bear": 5,
-   "bull": 35,
+   "base": -6,
+   "bear": -22,
+   "bull": 8,
    "kind": "judgment",
-   "why": "FQ1-27 revenue is guided to $61.5B (about $246B annualised) but memory pricing is cyclical. The base case assumes three-year growth well below the current run-rate because supply responds.",
-   "source": "Micron FQ4 2026 release (guidance); engine judgment"
+   "why": "Fiscal 2027 is anchored on the $61.5B first-quarter guide and management's call that pricing keeps rising 'at a more moderate pace'. After that the base case assumes revenue drifts down as industry supply catches up: Micron alone is building clean rooms in Idaho, New York, Japan, Singapore and Taiwan, most online from late 2028. Memory has never held peak pricing for more than about two years.",
+   "source": "Micron FQ4 2026 release (guidance); FQ4 call; 10-K FY2026 (capacity projects)"
   },
   "margin_end": {
-   "base": 45,
+   "base": 50,
    "bear": 25,
-   "bull": 62,
+   "bull": 65,
    "kind": "judgment",
-   "why": "Net margin today is 65% (non-GAAP net income $86.76B on $133.19B). Gross margin was -9.1% in FY2023, so the base case assumes substantial mean reversion.",
-   "source": "Micron FQ4 2026 release; prior-cycle history from the existing card"
+   "why": "Non-GAAP net margin was 71% in FQ4 and is guided higher in FQ1. The prior cycle peaked near 47% net margin (fiscal 2018) and troughed below zero (fiscal 2023). The base case assumes a higher floor than past cycles because HBM and long-term agreements now cover about 35% of bit volume, but not today's level.",
+   "source": "FQ4 2026 release; prior-cycle history from 10-K filings; FQ4 call (26 strategic customer agreements, about 35% of bits through 2030)"
   },
   "share_chg": {
-   "base": 0,
-   "bear": 0.5,
-   "bull": -0.5,
+   "base": -0.5,
+   "bear": 0,
+   "bull": -2,
    "kind": "sourced",
-   "why": "FY2026 repurchases were only $0.65B against a $1.08T market cap, so share count barely moves.",
-   "source": "Micron FQ4 2026 release"
+   "why": "Micron bought back only $650M in fiscal 2026 against a market value near $950B, so the share count barely moves. The bull case assumes it uses part of its $73.5B cash pile for buybacks.",
+   "source": "FQ4 2026 release (cash flow statement; cash and investments $73.48B)"
   },
   "exit_pe": {
    "base": 9,
-   "bear": 6,
+   "bear": 7,
    "bull": 12,
    "kind": "judgment",
-   "why": "Memory trades at single-digit multiples at peak earnings because the market expects mean reversion.",
-   "source": "Engine judgment"
+   "why": "Memory stocks trade on low multiples of peak earnings because the market prices the cycle, not the year. Today's multiple is about 5x fiscal 2027E. The base case assumes 9x once earnings have fallen back to a mid-cycle level, close to the 10-year median on normalised earnings.",
+   "source": "Engine judgment; current multiple computed from price and FY27E EPS"
   }
  },
  "pillars": [
   {
    "title": "Earnings at an unprecedented level",
-   "claim": "FQ4 revenue $54.2B and non-GAAP EPS $33.42 against $11.3B revenue a year earlier. FQ1-27 guide EPS $38.15.",
+   "claim": "FQ4 revenue was $54.2B, up from $11.3B a year earlier, at an 87% non-GAAP gross margin. FQ1 2027 is guided to $61.5B and $38.15 EPS.",
    "evidence": [
     {
-     "t": "FY2026 revenue $133.19B; non-GAAP operating margin 76.0%",
+     "t": "FY2026 revenue $133.19B vs $37.38B; non-GAAP operating margin 76.0%",
+     "src": "FQ4 release"
+    },
+    {
+     "t": "FQ1-27 guide: revenue $61.5B ± $1.5B, gross margin about 86.25%, EPS $38.15 ± $1.00",
      "src": "FQ4 release"
     }
    ],
-   "test": "Does FQ1-27 land inside the $61.5B plus or minus $1.5B guide?"
+   "test": "Does FQ1 2027 land inside the guided range, and does FQ2 guidance rise again?"
   },
   {
-   "title": "The multiple prices a peak",
-   "claim": "At about 12.6x FY26 EPS the stock is cheap if earnings persist and expensive if margins revert to cycle averages.",
+   "title": "Contracts now cover part of the cycle",
+   "claim": "26 strategic customer agreements cover about 35% of bit volume through 2030, and more than 75% of fiscal 2027 shipments are committed.",
    "evidence": [
     {
-     "t": "Gross margin was -9.1% in FY2023 (existing card, FY2025 10-K)",
-     "src": "Existing Porter card"
+     "t": "Ten new strategic customer agreements signed in FQ4; about three quarters of their revenue has a pricing framework with floors and ceilings",
+     "src": "FQ4 call"
     }
    ],
-   "test": "Does gross margin hold above 80% for another two quarters?"
+   "test": "Do the floors hold if spot DRAM prices fall?"
+  },
+  {
+   "title": "Capacity is coming",
+   "claim": "Micron is adding clean rooms in Idaho, New York, Hiroshima, Singapore and Taiwan; most new space comes online from late 2028.",
+   "evidence": [
+    {
+     "t": "Hiroshima cleanroom ground broken July 2026, output late calendar 2028; Tongluo, Taiwan fab bought for $1.8B in March 2026",
+     "src": "10-K FY2026"
+    },
+    {
+     "t": "FY2026 net capex $27.37B",
+     "src": "FQ4 release"
+    }
+   ],
+   "test": "Does industry DRAM supply growth stay constrained through 2027?"
+  },
+  {
+   "title": "Cash piles up",
+   "claim": "Operating cash flow of $89.7B and adjusted free cash flow of $62.3B in fiscal 2026 leave $73.5B of cash and investments against $5.2B of debt.",
+   "evidence": [
+    {
+     "t": "Cash, marketable investments and restricted cash $73.48B; long-term debt $4.69B",
+     "src": "FQ4 release"
+    }
+   ],
+   "test": "Is the cash returned or spent on more capacity?"
   }
  ],
  "variant": {
-  "street": "Not retrieved (no consensus access).",
-  "ours": "The engine is deliberately wide: the value is in the spread of outcomes, not the point estimate.",
-  "could_be_wrong": "If AI memory demand is structurally under-supplied, margins stay high.",
-  "would_change_mind": "Contract price declines for two consecutive quarters."
+  "street": "The market pays about 5x fiscal 2027 consensus EPS, which already prices a sharp fall in earnings after the peak.",
+  "ours": "The business case is the strongest it has ever been; the question is how long peak margins last. Our base case keeps fiscal 2027 near guidance and assumes margins fall back toward prior-peak levels as new capacity opens, which leaves the 12-month return below Micron's high cost of equity.",
+  "could_be_wrong": "If AI demand keeps DRAM supply tight through 2028 and HBM pricing keeps rising, margins can stay above 60% and the stock is far too cheap.",
+  "would_change_mind": "Strategic agreements covering more than half of bit volume with price floors, or two more quarters of guided price increases with capex held flat."
  },
  "moat": {
-  "rating": 3,
-  "summary": "Three-player DRAM oligopoly with huge capital barriers, but price is set by the cycle, not the firm.",
-  "detail": "Existing card rates Micron Contested."
+  "rating": 4,
+  "summary": "Scale, process technology and HBM qualification in a three-player market; still a commodity at the margin.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
  },
  "quality": {
-  "leverage_note": "Debt $5.18B against cash and investments of $73.5B: net cash.",
+  "leverage_note": "Net cash of about $68B: $73.5B of cash and investments against $5.2B of debt at fiscal year end.",
   "leverage_ok": true,
   "incentive_note": null,
-  "checks": []
+  "checks": [
+   "Non-GAAP adjustments small: FY2026 GAAP EPS $74.33 vs non-GAAP $75.52",
+   "Cash conversion: operating cash flow $89.7B vs GAAP net income $85.0B"
+  ]
  },
  "catalysts": [
   {
-   "date": "2026-10-29",
-   "label": "Quarterly dividend $0.15 payable (record date 14 October)",
-   "confirmed": true,
-   "note": "Declared 30 September."
+   "date": "2026-12-17",
+   "label": "Micron fiscal Q1 2027 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Guide: revenue $61.5B ± $1.5B; non-GAAP gross margin about 86.25%; EPS $38.15 ± $1.00.",
+   "importance": "High"
   }
  ],
  "tripwires": [
   {
    "id": "m1",
-   "text": "FQ1-27 gross margin below 85% (guide about 86%)",
-   "metric": "gm",
+   "text": "Non-GAAP gross margin below 75% in a quarter",
+   "metric": "gross_margin",
    "op": "<",
-   "threshold": 85,
-   "current": 86.8,
+   "threshold": 75,
+   "current": 87.0,
    "unit": "%",
    "drivers": [
     "margin_end"
@@ -120,44 +154,310 @@
   },
   {
    "id": "m2",
-   "text": "Revenue below $60B in FQ1-27",
-   "metric": "rev",
+   "text": "Quarterly revenue below $50B",
+   "metric": "revenue_b",
    "op": "<",
-   "threshold": 60,
-   "current": 54.23,
-   "unit": "$B (FQ4 actual)",
+   "threshold": 50,
+   "current": 54.2,
+   "unit": "$B",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "FQ4 release",
-   "status": "holding",
-   "note": "FQ1-27 guide is $61.5B plus or minus $1.5B, above the $60B line."
+   "src": "FQ4 release"
+  },
+  {
+   "id": "m3",
+   "text": "Fiscal 2027 capex guided above $45B",
+   "metric": "capex",
+   "op": ">",
+   "threshold": 45,
+   "current": 27.4,
+   "unit": "$B (FY2026 actual)",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "FQ4 release; FQ4 call"
   }
  ],
  "risks": [
-  "Capacity additions across the three suppliers.",
-  "Customer inventory build.",
-  "Export controls and China exposure (not covered here)."
+  "Industry capacity arrives at once.",
+  "AI spending pauses.",
+  "Lower HBM share with the largest GPU maker.",
+  "Capex runs ahead of demand.",
+  "Export controls and China."
  ],
- "lenses": {},
+ "lenses": {
+  "eisman": "Ask what happens to an 87% gross margin when every competitor's new fab comes online at once.",
+  "munger": "A wonderful year in a hard business. The test is the cycle, not the quarter.",
+  "buffett": "Commodity economics with a temporary moat; he would admire the execution and pass on the cycle.",
+  "hohn": "HBM and long-term agreements are the first real attempt to make memory less cyclical; the floors are what to verify."
+ },
  "sources": [
   {
    "tier": "A",
-   "title": "Micron Technology Form 8-K, fiscal Q4 2026 press release",
+   "title": "Micron Technology Form 8-K, fiscal Q4 2026 earnings release",
    "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
    "date": "2026-09-30"
   },
   {
    "tier": "C",
-   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
-   "url": "https://site.financialmodelingprep.com",
-   "date": "2026-10-14"
+   "title": "Micron Q4 2026 earnings call transcript (Webull)",
+   "url": "https://www.webull.com/news/15672802111996928",
+   "date": "2026-09-30"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
   }
  ],
  "gaps": [
-  "DRAM, NAND and HBM revenue split not in the release.",
-  "FY2027 capex plan not stated.",
-  "Consensus not retrieved."
+  "Fiscal 2027 capex guidance in dollars not retrieved.",
+  "HBM revenue is not disclosed separately.",
+  "Fiscal Q1 2027 report date not yet confirmed by the company."
  ],
- "base_period_end": "2026-09-03"
+ "base_period_end": "2026-09-03",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Fiscal 2026 10-K (year to 3 September 2026) and FQ4 release. FQ1 2027 reports in December; this review refreshes after the print.",
+  "headline": "Record earnings at a single-digit multiple. The market is not missing the boom; it is pricing the end of it.",
+  "model": "Micron makes memory chips: DRAM, which holds the data a processor is working on, and NAND, which stores it. AI servers need far more of both, especially high-bandwidth memory (HBM) stacked next to the GPU.",
+  "how_it_earns": [
+   {
+    "k": "Cloud memory",
+    "v": "HBM and server DRAM sold to hyperscalers and GPU makers. The AI engine."
+   },
+   {
+    "k": "Core data center",
+    "v": "Server DRAM and data center SSDs for enterprise and cloud."
+   },
+   {
+    "k": "Mobile and client",
+    "v": "Memory for phones and PCs. Most exposed to consumer demand."
+   },
+   {
+    "k": "Automotive and embedded",
+    "v": "Memory for cars, industrial and networking. Longer product cycles."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Business units as reported in the 10-K. Operating margin is the unit's operating income over its revenue.",
+   "rows": [
+    {
+     "match": "CMBU",
+     "label": "Cloud memory",
+     "role": "AI engine",
+     "driver": "HBM and high-capacity server DRAM for hyperscalers"
+    },
+    {
+     "match": "CDBU",
+     "label": "Core data center",
+     "role": "Fastest growth",
+     "driver": "Server DRAM and data center SSDs"
+    },
+    {
+     "match": "MCBU",
+     "label": "Mobile and client",
+     "role": "Consumer exposure",
+     "driver": "Phone and PC memory, priced up by data center demand"
+    },
+    {
+     "match": "AEBU",
+     "label": "Auto and embedded",
+     "role": "Steadier",
+     "driver": "Automotive, industrial and networking"
+    }
+   ],
+   "callout": null
+  },
+  "position": "One of three DRAM makers with Samsung and SK Hynix, and the only US-based one. Smaller than both in DRAM, catching up in HBM.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Process technology lead (1-gamma DRAM)",
+    "HBM qualification with GPU makers",
+    "Scale in a three-player market",
+    "US manufacturing and CHIPS Act funding"
+   ],
+   "threat": "New capacity from all three makers, timed together, has ended every previous upcycle."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Revenue more than tripled",
+    "d": "Fiscal 2026 revenue $133.2B vs $37.4B; FQ4 alone $54.2B vs $11.3B a year earlier."
+   },
+   {
+    "t": "Margins above any prior peak",
+    "d": "FQ4 non-GAAP gross margin 87% and operating margin 82%. The prior-cycle peak gross margin was about 61%."
+   },
+   {
+    "t": "Every unit is booming",
+    "d": "All four business units grew more than 200% in fiscal 2026, with operating margins between 71% and 80%."
+   },
+   {
+    "t": "Guide says higher again",
+    "d": "FQ1 2027 revenue $61.5B and EPS $38.15, both above FQ4."
+   }
+  ],
+  "balance": {
+   "read": "Net cash of about $68B. Balance sheet risk is nil; the risk is how the cash is spent.",
+   "facts": [
+    "Cash and investments $73.5B vs debt $5.2B",
+    "Net capex $27.4B in FY2026, rising in FY2027",
+    "Dividend $0.15 a quarter; buybacks only $0.65B in FY2026"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Capex is accelerating into the peak",
+    "evidence": "FY2026 net capex $27.4B; management said fiscal 2027 construction capex rises, mostly for clean rooms online from late 2028.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Little capital returned",
+    "evidence": "Buybacks $0.65B and dividends $0.61B in FY2026 against $62.3B adjusted free cash flow.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Non-GAAP close to GAAP",
+    "evidence": "FY2026 non-GAAP EPS $75.52 vs GAAP $74.33: adjustments are small and mostly stock compensation.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: guided FQ1, moderate price rises in FY2027, then supply catches up",
+   "margin_end": "Cycle-based: fade toward a higher-than-historical mid-cycle margin",
+   "share_chg": "Trend: almost no buybacks",
+   "exit_pe": "Judgment: memory is priced on mid-cycle earnings"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Fiscal 2027 lands near guidance; from 2028 new capacity brings prices down and margins fall toward 50%.",
+    "needs": "Industry clean rooms open on schedule from late 2028"
+   },
+   "downside": {
+    "story": "AI capex pauses in 2027 while new capacity arrives; DRAM prices fall fast and margins return to cycle averages.",
+    "needs": "A hyperscaler capex cut or a GPU product delay"
+   },
+   "upside": {
+    "story": "AI demand absorbs all new supply through 2029; contracts with price floors keep margins above 60%.",
+    "needs": "Strategic agreements covering over half of bits"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Industry capacity arrives at once",
+    "how": "Micron, Samsung and SK Hynix are all building new clean rooms. When they open together, DRAM prices fall faster than costs.",
+    "watch": "Industry DRAM bit supply growth",
+    "trip": "m1",
+    "sev": "high",
+    "cat": "Cycle"
+   },
+   {
+    "cause": "AI spending pauses",
+    "how": "Hyperscalers buy memory ahead of GPUs. A pause in AI capex hits HBM and server DRAM orders first.",
+    "watch": "Cloud memory unit revenue",
+    "trip": "m2",
+    "sev": "high",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Lower HBM share with the largest GPU maker",
+    "how": "HBM is sold into a few GPU platforms. Losing share on one product generation cuts the highest-value revenue.",
+    "watch": "HBM commentary each quarter",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Competitive"
+   },
+   {
+    "cause": "Capex runs ahead of demand",
+    "how": "Building capacity at peak margins is how memory cycles end. The cash pile makes over-building easy.",
+    "watch": "Capex guidance",
+    "trip": "m3",
+    "sev": "medium",
+    "cat": "Capital"
+   },
+   {
+    "cause": "Export controls and China",
+    "how": "China was about 6% of fiscal 2026 revenue, and US export rules can restrict sales to Chinese customers.",
+    "watch": "China revenue",
+    "trip": null,
+    "sev": "low",
+    "cat": "Regulatory"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Micron has the highest margins and return on capital among the memory makers on Yahoo's figures, and a cleaner balance sheet than Samsung.",
+   "why_not": "SK Hynix leads HBM and trades on an even lower multiple; Micron's premium to its Korean peers mostly reflects its US listing.",
+   "peers_note": "Samsung's memory business is inside a conglomerate, so its multiples include phones and displays."
+  },
+  "questions": [
+   "How much of the 87% gross margin survives a normal supply response?",
+   "Are price floors in the strategic agreements binding if spot prices fall?",
+   "Would you rather Micron returned more cash or built more capacity?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Micron Technology Form 10-K, year ended 3 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-K",
+    "date": "2026-10-09"
+   },
+   {
+    "tier": "A",
+    "title": "Micron Technology Form 8-K, fiscal Q4 2026 earnings release",
+    "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+    "date": "2026-09-30"
+   }
+  ],
+  "title": "Paid for the peak",
+  "lead": "We rate Micron {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Earnings are at an all-time high and still rising, but memory has never held peak margins for long, our fiscal 2027 EPS is {vs_cons} consensus, and a high-beta stock needs a high return.",
+  "call_reason": "Cheap on this year, not on the cycle: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Fiscal 2026 revenue more than tripled to $133.2B and the first quarter of fiscal 2027 is guided to $61.5B. More than 75% of fiscal 2027 shipments are already committed."
+   },
+   {
+    "label": "Moat",
+    "text": "One of three DRAM makers, with process leadership and HBM qualification at the largest GPU makers. In memory the moat protects share, not price: the cycle sets margins."
+   },
+   {
+    "label": "Profitability",
+    "text": "FQ4 non-GAAP gross margin of 87% is far above the prior peak of about 61%. Our base case lets it fall back as industry clean rooms open from late 2028."
+   },
+   {
+    "label": "Capital",
+    "text": "Net cash of about $68B, but only $1.3B returned to shareholders in fiscal 2026 while capex rises into the peak."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} About 5x this year's earnings is how the market prices the top of a memory cycle."
+   }
+  ],
+  "thesis_long": [
+   "Micron is having the best year any memory maker has ever had. AI servers need far more DRAM and high-bandwidth memory than ordinary servers, supply has not kept up, and prices have risen so fast that every business unit now earns operating margins above 70%. Fiscal 2026 EPS was $75.52 and the first quarter of fiscal 2027 is guided to $38.15.",
+   "The question is duration. Memory supply responds to price with a lag of two to three years, and all three makers are now building. Micron's own new clean rooms in Japan, Singapore and Taiwan mostly come online from late 2028. Strategic agreements covering about 35% of bits soften the cycle but do not remove it. A 5x multiple says the market agrees the earnings will fall; it does not yet say how far.",
+   "Our base case keeps fiscal 2027 near the guided run-rate and then lets revenue drift down and net margin fall to about 50%, which is still above any prior peak. On that path the 12-month return falls short of Micron's high cost of equity. We would turn positive if long-term agreements with price floors covered more than half of bits, or if two more quarters of guided price rises came with flat capex."
+  ],
+  "upside_risks": [
+   {
+    "cause": "AI demand absorbs all new supply",
+    "how": "If GPU and custom-chip demand keeps growing faster than memory capacity through 2029, prices and margins stay near today's levels and 5x earnings is far too cheap."
+   },
+   {
+    "cause": "Cash returned to shareholders",
+    "how": "A large buyback from the $73.5B cash pile would cut the share count quickly at today's multiple."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "000660.KS",
+   "005930.KS",
+   "SNDK"
+  ]
+ }
 }

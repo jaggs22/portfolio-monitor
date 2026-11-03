@@ -21,72 +21,72 @@
   "ticker": "MU",
   "name": "Micron Technology",
   "sector": "Technology",
-  "tier": "lighter"
+  "tier": "core"
  },
  {
   "ticker": "PG",
   "name": "Procter & Gamble",
   "sector": "Consumer staples",
-  "tier": "lighter"
+  "tier": "core"
  },
  {
   "ticker": "AMT",
   "name": "American Tower",
   "sector": "Real estate",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "AMZN",
   "name": "Amazon",
   "sector": "Consumer discretionary",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "COST",
   "name": "Costco",
   "sector": "Consumer staples",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "GOOGL",
   "name": "Alphabet",
   "sector": "Communication services",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "JPM",
   "name": "JPMorgan Chase",
   "sector": "Financials",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "KO",
   "name": "Coca-Cola",
   "sector": "Consumer staples",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "MSFT",
   "name": "Microsoft",
   "sector": "Technology",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "NEE",
   "name": "NextEra Energy",
   "sector": "Utilities",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "WM",
   "name": "Waste Management",
   "sector": "Industrials",
-  "tier": "basic"
+  "tier": "core"
  },
  {
   "ticker": "XOM",
   "name": "Exxon Mobil",
   "sector": "Energy",
-  "tier": "basic"
+  "tier": "core"
  }
 ]

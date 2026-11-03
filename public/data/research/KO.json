@@ -1,0 +1,455 @@
+{
+ "ticker": "KO",
+ "name": "Coca-Cola",
+ "depth": "deep",
+ "as_of": "2026-10-27",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Volume is growing 5% and guidance went up; at 29x earnings the stock already prices that in.",
+  "thesis": "Coca-Cola grew unit case volume 5% and organic revenue 7% in the third quarter, widened its comparable operating margin by a point and raised full-year guidance to at least 11% comparable EPS growth. The sale of its African bottling business will cut 2027 revenue by about 8% but raise margins. The franchise is excellent; the valuation leaves little to earn."
+ },
+ "base": {
+  "eps0": 3.34,
+  "eps_label": "FY2026E comparable EPS: guidance of at least 11% growth on 2025, in line with consensus",
+  "rev0": 50.2,
+  "shares0": 4.314,
+  "div": 2.12,
+  "rev_label": "FY2026E comparable net revenue ($B): 2025 $47.9B grown about 5% (organic growth plus currency, less divestitures)"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 2,
+   "bear": 0,
+   "bull": 3.5,
+   "kind": "sourced",
+   "why": "Organic revenue is guided to grow at least 5% in 2026, but the sale of the African bottling operations creates an 8% revenue headwind in 2027. The base case nets these to about 2% a year over three years: roughly -3% in 2027, then mid single digits.",
+   "source": "Coca-Cola Q3 2026 release (2026 guidance, 2027 considerations)"
+  },
+  "margin_end": {
+   "base": 31.5,
+   "bear": 29,
+   "bull": 33,
+   "kind": "sourced",
+   "why": "Net margin is about 29% today. Selling low-margin bottling operations lifts the group margin: the 8% revenue headwind costs only about 2% of EPS. The base case adds about three points over three years.",
+   "source": "Q3 2026 release (2027 considerations: revenue -8%, EPS -2% from divestitures)"
+  },
+  "share_chg": {
+   "base": -0.3,
+   "bear": 0,
+   "bull": -0.6,
+   "kind": "sourced",
+   "why": "Buybacks run near $1B a year against a market value above $400B; most cash goes to the dividend.",
+   "source": "Statement of cash flows (trailing repurchases about $1.0B)"
+  },
+  "exit_pe": {
+   "base": 25,
+   "bear": 21,
+   "bull": 28,
+   "kind": "judgment",
+   "why": "Today's multiple is about 29x 2026 comparable EPS, at the top of Coca-Cola's long-run range and far above PepsiCo and Keurig Dr Pepper. The base case assumes a de-rating toward 25x as growth returns to mid single digits.",
+   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Volume is growing everywhere",
+   "claim": "Unit case volume grew 5%, led by India, China, Mexico and Brazil; the company gained value share in nonalcoholic ready-to-drink beverages.",
+   "evidence": [
+    {
+     "t": "Unit case volume +5%; concentrate sales +7%; price/mix +1%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does volume stay above 3% as pricing stays low?"
+  },
+  {
+   "title": "Margins widened",
+   "claim": "Comparable operating margin rose to 32.9% from 31.9% on revenue growth and currency, despite higher marketing.",
+   "evidence": [
+    {
+     "t": "Operating margin 33.4% vs 32.0%; comparable 32.9% vs 31.9%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does margin hold when the currency tailwind fades?"
+  },
+  {
+   "title": "Guidance raised",
+   "claim": "Full-year comparable EPS growth raised to at least 11% from 9% to 10%, and free cash flow to at least $13.0B.",
+   "evidence": [
+    {
+     "t": "Organic revenue at least 5%; comparable currency neutral EPS ex divestitures at least 9%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does 2027 guidance in February hold high single digits?"
+  },
+  {
+   "title": "Refranchising shrinks revenue, lifts margins",
+   "claim": "The pending sale of African bottling operations creates an 8% revenue headwind but only a 2% EPS headwind in 2027.",
+   "evidence": [
+    {
+     "t": "2027 considerations: comparable net revenues about -8% and comparable EPS about -2% from acquisitions and divestitures",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does the deal close in Q4 as assumed?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 29x 2026 earnings, the top of Coca-Cola's range, for accelerating volume and raised guidance.",
+  "ours": "This is a very good year for a very good business, priced as if it lasts. Our base case grows EPS mid single digits and lets the multiple drift down, which earns less than the cost of equity over 12 months.",
+  "could_be_wrong": "If emerging-market volume keeps growing 5% and currency stays a tailwind, high-single-digit EPS growth supports today's multiple.",
+  "would_change_mind": "2027 guidance above 8% comparable EPS growth, or the price falling toward 24x earnings."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "The world's most valuable beverage brand portfolio and a bottling system that puts it within reach of almost everyone.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net debt about $23B, about 1.2 times EBITDA: comfortable for a business this stable.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Comparable EPS includes a 2-point currency tailwind this quarter",
+   "Year-to-date free cash flow $11.4B; full-year at least $13.0B"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-02-10",
+   "label": "Coca-Cola Q4 2026 earnings and 2027 guidance (date not confirmed)",
+   "confirmed": false,
+   "note": "2027 considerations: about 8% revenue and 2% EPS headwind from divestitures; slight currency headwind.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "k1",
+   "text": "Unit case volume growth below 2%",
+   "metric": "volume",
+   "op": "<",
+   "threshold": 2,
+   "current": 5,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "k2",
+   "text": "Comparable operating margin below 31%",
+   "metric": "op_margin",
+   "op": "<",
+   "threshold": 31,
+   "current": 32.9,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "k3",
+   "text": "Organic revenue growth below 4%",
+   "metric": "organic",
+   "op": "<",
+   "threshold": 4,
+   "current": 7,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  }
+ ],
+ "risks": [
+  "Emerging-market volume slows.",
+  "Health trends and weight-loss drugs.",
+  "Currency turns.",
+  "Valuation compresses.",
+  "Tax disputes."
+ ],
+ "lenses": {
+  "eisman": "Concentrate shipments ran 2 points ahead of consumer volume; check that bottlers are not building inventory.",
+  "munger": "One of the great businesses of all time; 29x earnings asks you to pay for that twice.",
+  "buffett": "His longest-held stock, a perfect franchise; he would note the price is full.",
+  "hohn": "Asset-light, pricing power, growing volume: the refranchising makes it cleaner still."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "The Coca-Cola Company Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K",
+   "date": "2026-10-27"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "2027 guidance not given until the Q4 report.",
+  "Terms of the African bottling sale not retrieved.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-10-02",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q and release (quarter to 2 October 2026). Q4 and 2027 guidance come in February; this review refreshes after the print.",
+  "headline": "A rare year of volume, margin and guidance all moving up. At 29x earnings, the stock already pays for it.",
+  "model": "Coca-Cola makes concentrate and sells it to bottlers, which make, package and distribute the drinks. It earns high margins on concentrate and owns a few bottlers it is gradually selling.",
+  "how_it_earns": [
+   {
+    "k": "Concentrate",
+    "v": "Syrups sold to independent bottlers. About 60% of revenue at very high margins."
+   },
+   {
+    "k": "Finished products",
+    "v": "Drinks sold directly, including fairlife and Costa. Lower margins."
+   },
+   {
+    "k": "Bottling investments",
+    "v": "Company-owned bottlers, being sold over time."
+   },
+   {
+    "k": "Brands",
+    "v": "Coca-Cola, Sprite, Fanta, fairlife, Powerade, Minute Maid, Costa."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported segments. Operating margin is segment operating income over segment revenue, before corporate costs.",
+   "rows": [
+    {
+     "match": "North America",
+     "label": "North America",
+     "role": "Largest",
+     "driver": "Price/mix and fairlife; volume flat"
+    },
+    {
+     "match": "Europe Middle East Africa",
+     "label": "EMEA",
+     "role": "Steady",
+     "driver": "Volume +5%"
+    },
+    {
+     "match": "Latin America",
+     "label": "Latin America",
+     "role": "Highest margin",
+     "driver": "Mexico and Brazil volume, pricing"
+    },
+    {
+     "match": "A.Pacific",
+     "label": "Asia Pacific",
+     "role": "Volume engine",
+     "driver": "India and China, +6% volume"
+    },
+    {
+     "match": "Bottling Investments",
+     "label": "Bottling investments",
+     "role": "Being sold",
+     "driver": "Africa sale pending"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest nonalcoholic beverage company in the world, and gaining value share in ready-to-drink beverages.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Brand portfolio",
+    "Global bottling and distribution system",
+    "Shelf and cooler space",
+    "Asset-light concentrate model"
+   ],
+   "threat": "Health trends and sugar taxes on soft drinks, and weight-loss drugs reducing consumption."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Volume +5%",
+    "d": "Led by India, China, Mexico and Brazil; organic revenue +7%."
+   },
+   {
+    "t": "Margin up a point",
+    "d": "Comparable operating margin 32.9% vs 31.9%."
+   },
+   {
+    "t": "Guidance raised",
+    "d": "Comparable EPS growth at least 11%; free cash flow at least $13.0B."
+   },
+   {
+    "t": "2027 shrinks on paper",
+    "d": "Divestitures cut 2027 revenue about 8% but EPS only about 2%."
+   }
+  ],
+  "balance": {
+   "read": "Solid: net debt about 1.2 times EBITDA, with most cash going to a dividend of $2.12 a share.",
+   "facts": [
+    "Net debt about $23B at 2 October 2026",
+    "Capex about $2.2B a year",
+    "African bottling sale expected to close in Q4 2026"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Concentrate shipments ahead of volume",
+    "evidence": "Concentrate sales grew 7% vs unit case volume 5%; the company attributes the gap to timing.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Currency helps",
+    "evidence": "A 2-point currency tailwind to EPS in the quarter and about 3% for the year.",
+    "severity": "info"
+   },
+   {
+    "flag": "Divestitures change the base",
+    "evidence": "2027 revenue falls about 8% from divestitures; compare margins, not revenue.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: organic growth net of the divestiture headwind",
+   "margin_end": "Sourced: refranchising lifts margins",
+   "share_chg": "Sourced: small buybacks",
+   "exit_pe": "Judgment: drift down from the top of the historical range"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Organic growth returns to mid single digits after this strong year; refranchising lifts margins; the multiple drifts toward 25x.",
+    "needs": "Volume growth above 3%"
+   },
+   "downside": {
+    "story": "Emerging-market volume slows and currency turns into a headwind; the multiple falls toward 21x.",
+    "needs": "Volume growth below 2%"
+   },
+   "upside": {
+    "story": "Volume keeps growing 5% and margins keep widening; high-single-digit EPS growth supports a high multiple.",
+    "needs": "2027 guidance above 8% EPS growth"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Emerging-market volume slows",
+    "how": "Growth this year comes mostly from India, China, Mexico and Brazil; a slowdown there takes volume first.",
+    "watch": "Unit case volume",
+    "trip": "k1",
+    "sev": "medium",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Health trends and weight-loss drugs",
+    "how": "Sugar taxes and GLP-1 drugs could reduce how much people drink, especially in the US.",
+    "watch": "North America volume",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Structural"
+   },
+   {
+    "cause": "Currency turns",
+    "how": "Currency added about 3% to EPS this year; a stronger dollar reverses it.",
+    "watch": "Currency impact on EPS",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Currency"
+   },
+   {
+    "cause": "Valuation compresses",
+    "how": "At 29x, a return to the middle of its historical range would cost 15% or more.",
+    "watch": "Price-to-earnings vs history",
+    "trip": "k3",
+    "sev": "medium",
+    "cat": "Valuation"
+   },
+   {
+    "cause": "Tax disputes",
+    "how": "Coca-Cola has a long-running US tax dispute over transfer pricing; a final loss would require a large payment.",
+    "watch": "Litigation updates",
+    "trip": null,
+    "sev": "low",
+    "cat": "Legal"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Coca-Cola has higher margins and faster volume growth than PepsiCo and Keurig Dr Pepper, and is more asset-light.",
+   "why_not": "At 27x next-year earnings it is far more expensive than PepsiCo (16x) and Keurig Dr Pepper (15x).",
+   "peers_note": "Monster trades higher still because it grows faster with no bottling assets."
+  },
+  "questions": [
+   "Is this year's volume growth repeatable?",
+   "How much of the multiple depends on falling interest rates?",
+   "Is a premium of about 70% to PepsiCo justified?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "The Coca-Cola Company Form 10-Q, quarter ended 2 October 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=10-Q",
+    "date": "2026-10-28"
+   },
+   {
+    "tier": "A",
+    "title": "The Coca-Cola Company Form 8-K, Q3 2026 earnings release",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K",
+    "date": "2026-10-27"
+   }
+  ],
+  "title": "A great year, already paid for",
+  "lead": "We rate Coca-Cola {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Volume grew 5% and guidance went up, but at 29x earnings the stock prices that in, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Excellent franchise, full multiple: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Unit case volume grew 5% and organic revenue 7% in the third quarter. Full-year guidance was raised to at least 5% organic growth and 11% comparable EPS growth."
+   },
+   {
+    "label": "Moat",
+    "text": "The strongest brand portfolio in beverages and a bottling system that reaches almost everyone. Health trends and weight-loss drugs are the long-run threats."
+   },
+   {
+    "label": "Profitability",
+    "text": "Comparable operating margin rose a point to 32.9%. Selling the African bottlers cuts 2027 revenue about 8% but EPS only about 2%."
+   },
+   {
+    "label": "Capital",
+    "text": "Free cash flow of at least $13B this year goes mostly to a $2.12 dividend; net debt is about 1.2 times EBITDA."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} PepsiCo and Keurig Dr Pepper trade at 15x to 16x."
+   }
+  ],
+  "thesis_long": [
+   "Coca-Cola is having one of its best years. Unit case volume grew 5% in the third quarter, led by India, China, Mexico and Brazil, organic revenue grew 7% and comparable operating margin widened by a point. Management raised full-year guidance to at least 11% comparable EPS growth and $13B of free cash flow.",
+   "The question is price. At about 29x this year's earnings the stock sits at the top of its historical range and about 70% above PepsiCo's multiple. Part of this year's growth came from currency (about 3 points of EPS) and concentrate shipments that ran ahead of consumer volume. 2027 will look smaller on paper as the African bottlers are sold, though margins rise.",
+   "Our base case grows EPS mid single digits and lets the multiple drift toward 25x, which earns less than the cost of equity over 12 months even for a low-risk stock. We would turn positive on 2027 guidance above 8% EPS growth or a price nearer 24x earnings."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Volume growth persists",
+    "how": "Another year of 5% volume with price/mix would keep EPS growth high and support today's multiple."
+   },
+   {
+    "cause": "Rates fall",
+    "how": "Lower bond yields tend to lift defensive, dividend-paying stocks like Coca-Cola."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "PEP",
+   "KDP",
+   "MNST"
+  ]
+ }
+}

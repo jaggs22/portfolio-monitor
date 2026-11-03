@@ -1,0 +1,477 @@
+{
+ "ticker": "MSFT",
+ "name": "Microsoft",
+ "depth": "deep",
+ "as_of": "2026-10-28",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Azure is growing almost 50% and the order book is $677B; the price is the depreciation bill on the capex behind it.",
+  "thesis": "Microsoft grew revenue 19% and non-GAAP EPS 18% in the September quarter, with Azure up 48% and commercial remaining performance obligations up 73% to $677B. Capex of $39.4B in the quarter nearly doubled. The question is whether returns on that spend hold margins as depreciation rises."
+ },
+ "base": {
+  "eps0": 20.0,
+  "eps_label": "FY2027E non-GAAP EPS (year to June 2027), excluding OpenAI gains and losses: Q1 actual $4.89 plus continued high-teens growth",
+  "rev0": 392.0,
+  "shares0": 7.446,
+  "div": 3.92,
+  "rev_label": "FY2027E revenue ($B): Q1 actual $92.3B plus sequential growth led by Azure"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 17,
+   "bear": 10,
+   "bull": 21,
+   "kind": "driver",
+   "why": "Revenue grew 19% in the September quarter: Agents and Infra +25% with Azure +48%, Devices and Consumer -3%. Commercial remaining performance obligations of $677B (+73%) cover several years of cloud revenue. The base case fades growth from about 19% toward the mid-teens as Azure's base gets larger.",
+   "source": "Microsoft FQ1 2027 release; segment revenue from the 10-Q"
+  },
+  "margin_end": {
+   "base": 36,
+   "bear": 32,
+   "bull": 40,
+   "kind": "judgment",
+   "why": "Non-GAAP net margin was 39.5% in the quarter. Capex of $39.4B in one quarter turns into depreciation over the next five to six years, so the base case lets margin slip about two points despite revenue growth. The bear case is AI pricing that does not cover the infrastructure cost.",
+   "source": "FQ1 2027 release (net income, capex); engine judgment on depreciation"
+  },
+  "share_chg": {
+   "base": -0.3,
+   "bear": 0,
+   "bull": -0.6,
+   "kind": "sourced",
+   "why": "Buybacks of $4.4B in the quarter against a market value near $3.8T are about 0.5% a year, mostly offsetting employee share grants.",
+   "source": "FQ1 2027 release (cash flow statement)"
+  },
+  "exit_pe": {
+   "base": 25,
+   "bear": 20,
+   "bull": 30,
+   "kind": "judgment",
+   "why": "Today's multiple is about 25x fiscal 2027E EPS. The base case holds it, because growth accelerated this year; the bear case is a de-rating if AI capex stops earning its keep.",
+   "source": "Engine judgment; current multiple computed from price and FY27E EPS"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Azure is the growth engine",
+   "claim": "Azure grew 48% and Microsoft Cloud 30% to $63.9B, the fastest growth in several years.",
+   "evidence": [
+    {
+     "t": "Microsoft Cloud revenue $63.9B, +30% (+31% constant currency)",
+     "src": "FQ1 2027 release"
+    },
+    {
+     "t": "Agents and Infra revenue $76.8B, +25%",
+     "src": "FQ1 2027 release"
+    }
+   ],
+   "test": "Does Azure growth stay above 35% as the base grows?"
+  },
+  {
+   "title": "The order book is enormous",
+   "claim": "Commercial remaining performance obligations rose 73% to $677B, several years of cloud revenue under contract.",
+   "evidence": [
+    {
+     "t": "Commercial RPO $677B, +73%",
+     "src": "FQ1 2027 release"
+    }
+   ],
+   "test": "How much of the backlog sits with a single AI customer?"
+  },
+  {
+   "title": "Capex is doubling",
+   "claim": "Additions to property and equipment were $39.4B in the quarter; free cash flow fell to $18.6B on $58.0B of operating cash flow.",
+   "evidence": [
+    {
+     "t": "Cash from operations $58.0B; additions to property and equipment $39.4B",
+     "src": "FQ1 2027 release"
+    }
+   ],
+   "test": "Does operating margin hold near 50% as depreciation rises?"
+  },
+  {
+   "title": "The consumer side is shrinking",
+   "claim": "Devices and Consumer revenue fell 3%, with Windows OEM and devices down 22%.",
+   "evidence": [
+    {
+     "t": "Devices and Consumer $15.5B, -3%; search and advertising ex TAC +12%",
+     "src": "FQ1 2027 release"
+    }
+   ],
+   "test": "Is the PC decline cyclical or structural?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 25x fiscal 2027 earnings for accelerating cloud growth and a $677B order book.",
+  "ours": "Growth is excellent and well covered by contracts. The engine's base case holds the multiple and lets margin slip on depreciation, and still compounds EPS in the mid-teens: on an unchanged multiple that beats the cost of equity.",
+  "could_be_wrong": "If AI services earn software-like margins, depreciation is absorbed easily and earnings grow faster than revenue.",
+  "would_change_mind": "Azure growth below 35% while capex keeps rising, or operating margin below 45%."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Enterprise distribution, the Microsoft 365 installed base and one of three hyperscale clouds.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net cash: cash and investments about $64.5B against debt of about $35.5B at 30 September 2026.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Non-GAAP excludes only OpenAI investment gains and losses: Q1 GAAP EPS $4.92 vs non-GAAP $4.89",
+   "Free cash flow $18.6B in the quarter, down as capex doubled"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-01-27",
+   "label": "Microsoft fiscal Q2 2027 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Watch Azure growth, capex and operating margin guidance.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "ms1",
+   "text": "Azure growth below 35% in a quarter",
+   "metric": "azure",
+   "op": "<",
+   "threshold": 35,
+   "current": 48,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "FQ1 2027 release"
+  },
+  {
+   "id": "ms2",
+   "text": "Quarterly capex above $50B",
+   "metric": "capex",
+   "op": ">",
+   "threshold": 50,
+   "current": 39.4,
+   "unit": "$B",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "FQ1 2027 release"
+  },
+  {
+   "id": "ms3",
+   "text": "GAAP operating margin below 45%",
+   "metric": "op_margin",
+   "op": "<",
+   "threshold": 45,
+   "current": 49.7,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "FQ1 2027 release"
+  }
+ ],
+ "risks": [
+  "AI capex earns too little.",
+  "One customer is a large share of growth.",
+  "Capacity and power constraints.",
+  "PC and consumer decline.",
+  "Regulation."
+ ],
+ "lenses": {
+  "eisman": "Ask how much of the $677B backlog is one AI lab, and what happens to the capex if that customer slows.",
+  "munger": "A great business spending like a utility. The test is whether returns on capital stay high.",
+  "buffett": "Durable, enterprise-locked revenue; he would watch free cash flow, which halved while earnings rose.",
+  "hohn": "Monopoly-like positions in productivity software fund the cloud build; check the incremental return on capex."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Microsoft Form 8-K, fiscal Q1 2027 earnings release",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K",
+   "date": "2026-10-28"
+  },
+  {
+   "tier": "C",
+   "title": "Microsoft Q1 FY27: revenue $92.3B, Azure up 48%, capex $39.4B (AI Weekly)",
+   "url": "https://aiweekly.co/alerts/microsoft-q1-revenue-hits-923b-azure-up-48-as-capex-jumps-to-394b-with-175b",
+   "date": "2026-10-28"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "Full-year capex guidance: press reports differ on whether the about $175B figure is for fiscal 2027 or calendar 2026.",
+  "Share of the remaining performance obligation from OpenAI not disclosed in the sources retrieved.",
+  "Fiscal Q2 report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Fiscal Q1 2027 10-Q (quarter to 30 September 2026) and release. Q2 reports in late January; this review refreshes after the print.",
+  "headline": "The best-positioned AI platform, growing faster than a year ago. At 25x earnings the stock does not fully price that growth; the risk is the depreciation bill.",
+  "model": "Microsoft sells cloud computing (Azure), workplace software (Microsoft 365, Teams, Dynamics, LinkedIn) and consumer products (Windows, Xbox, Bing). Most revenue is recurring subscriptions sold to businesses.",
+  "how_it_earns": [
+   {
+    "k": "Azure",
+    "v": "Rents computing, storage and AI capacity. Billed on use. The growth engine."
+   },
+   {
+    "k": "Microsoft 365 cloud",
+    "v": "Per-user subscriptions for Office, Teams, security and Copilot."
+   },
+   {
+    "k": "Search and advertising",
+    "v": "Bing and Edge advertising, net of payments to partners."
+   },
+   {
+    "k": "Windows, devices and Xbox",
+    "v": "PC licences, Surface and gaming. Cyclical and shrinking."
+   }
+  ],
+  "mix": {
+   "axis": "product",
+   "note": "Revenue by product line as tagged in the 10-Q. Fiscal 2027 introduced two reporting segments: Agents and Infra, and Devices and Consumer.",
+   "rows": [
+    {
+     "match": "Azure",
+     "label": "Azure",
+     "role": "Growth engine",
+     "driver": "AI and cloud consumption, +48%"
+    },
+    {
+     "match": "Microsoft Three Six Five Cloud",
+     "label": "Microsoft 365 cloud",
+     "role": "Recurring core",
+     "driver": "Seats, price and Copilot add-ons"
+    },
+    {
+     "match": "Productivity And Server Licensing",
+     "label": "On-premises licensing",
+     "role": "Shrinking",
+     "driver": "Customers moving to the cloud"
+    },
+    {
+     "match": "Search And Advertising",
+     "label": "Search and advertising",
+     "role": "Steady",
+     "driver": "Bing and Edge ad volume"
+    },
+    {
+     "match": "XBOX",
+     "label": "Xbox",
+     "role": "Flat",
+     "driver": "Game content and services"
+    },
+    {
+     "match": "Industry Solutions",
+     "label": "Industry solutions",
+     "role": "Steady",
+     "driver": "Consulting and industry clouds"
+    },
+    {
+     "match": "Windows OEM And Devices",
+     "label": "Windows and devices",
+     "role": "Declining",
+     "driver": "PC shipments and Surface"
+    }
+   ],
+   "callout": null
+  },
+  "position": "One of three hyperscale clouds with Amazon and Google, and the leader in enterprise productivity software.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Enterprise relationships and licensing",
+    "Microsoft 365 installed base",
+    "Hyperscale cloud scale",
+    "Developer and security ecosystem"
+   ],
+   "threat": "AI could shift where value sits in software; the capex race could lower returns for all three clouds."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Growth accelerated",
+    "d": "Revenue +19%, Microsoft Cloud +30%, Azure +48%."
+   },
+   {
+    "t": "Backlog up 73%",
+    "d": "Commercial remaining performance obligations of $677B."
+   },
+   {
+    "t": "Capex nearly doubled",
+    "d": "$39.4B of additions to property and equipment in one quarter; free cash flow $18.6B."
+   },
+   {
+    "t": "Consumer shrinking",
+    "d": "Devices and Consumer -3%; Windows OEM and devices -22%."
+   }
+  ],
+  "balance": {
+   "read": "Net cash, AAA-rated. The balance sheet is not the constraint; free cash flow is.",
+   "facts": [
+    "Cash and investments about $64.5B vs debt about $35.5B",
+    "$10.2B returned in the quarter: $6.8B dividends, $4.4B buybacks",
+    "Large finance and operating lease commitments for data centers"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "OpenAI gains and losses excluded",
+    "evidence": "Non-GAAP removes the equity-method impact of the OpenAI investment: +$0.03 to GAAP EPS this quarter, -$0.41 a year earlier.",
+    "severity": "info"
+   },
+   {
+    "flag": "Free cash flow falling while earnings rise",
+    "evidence": "Operating cash flow $58.0B less capex $39.4B gave $18.6B of free cash flow in the quarter.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Backlog concentration",
+    "evidence": "The 73% rise in commercial RPO likely includes large multi-year AI contracts; the customer split is not disclosed.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: Azure and Microsoft 365 growth, fading toward the mid-teens",
+   "margin_end": "Judgment: depreciation from the capex step-up takes about two points",
+   "share_chg": "Sourced: buybacks roughly offset share grants",
+   "exit_pe": "Judgment: multiple held while growth stays high"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Azure growth slows gradually from 48%; depreciation takes a little margin; EPS grows mid-teens.",
+    "needs": "AI pricing covers infrastructure cost"
+   },
+   "downside": {
+    "story": "AI demand slows while depreciation keeps rising; margins fall and the multiple compresses toward 20x.",
+    "needs": "Azure below 30% with capex still rising"
+   },
+   "upside": {
+    "story": "AI services earn software margins; operating leverage returns and the multiple expands.",
+    "needs": "Operating margin rising with capex"
+   }
+  },
+  "risks": [
+   {
+    "cause": "AI capex earns too little",
+    "how": "Capex nearly doubled to $39.4B a quarter. If AI prices fall faster than costs, depreciation erodes margins.",
+    "watch": "Operating margin vs capex",
+    "trip": "ms3",
+    "sev": "high",
+    "cat": "Capital"
+   },
+   {
+    "cause": "One customer is a large share of growth",
+    "how": "Much of the backlog growth likely comes from multi-year AI contracts. A slowdown at one large customer would cut Azure growth.",
+    "watch": "Azure growth",
+    "trip": "ms1",
+    "sev": "high",
+    "cat": "Concentration"
+   },
+   {
+    "cause": "Capacity and power constraints",
+    "how": "Azure growth is limited by how fast data centers and power can be added, not only by demand.",
+    "watch": "Capex and capacity commentary",
+    "trip": "ms2",
+    "sev": "medium",
+    "cat": "Execution"
+   },
+   {
+    "cause": "PC and consumer decline",
+    "how": "Windows OEM and devices fell 22%; a longer PC slump drags on the consumer segment.",
+    "watch": "Devices and Consumer revenue",
+    "trip": null,
+    "sev": "low",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Regulation",
+    "how": "Competition authorities in the US and Europe are examining cloud licensing and AI partnerships.",
+    "watch": "Regulatory actions",
+    "trip": null,
+    "sev": "low",
+    "cat": "Regulatory"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Microsoft has the highest EBITDA margin among the clouds, net cash and the largest enterprise software base.",
+   "why_not": "Alphabet grows faster on consensus with Google Cloud doubling, and trades at a lower multiple.",
+   "peers_note": "Oracle's multiple is low because heavy capex and debt make its earnings less certain."
+  },
+  "questions": [
+   "What return does Microsoft earn on the next $100B of AI capex?",
+   "How concentrated is the $677B backlog?",
+   "Is 25x fair for earnings growth in the high teens?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Microsoft Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-Q",
+    "date": "2026-10-29"
+   },
+   {
+    "tier": "A",
+    "title": "Microsoft Form 8-K, fiscal Q1 2027 earnings release",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K",
+    "date": "2026-10-28"
+   }
+  ],
+  "title": "Growth bought with capex",
+  "lead": "We rate Microsoft {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Azure grew 48% and the order book is $677B, but capex nearly doubled and free cash flow is falling; our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Contracted growth at an undemanding multiple: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Revenue grew 19% in the September quarter, Microsoft Cloud 30% and Azure 48%. Commercial remaining performance obligations rose 73% to $677B."
+   },
+   {
+    "label": "Moat",
+    "text": "The enterprise software base and one of three hyperscale clouds. The risk is not a rival but a capex race that lowers returns for all three clouds."
+   },
+   {
+    "label": "Profitability",
+    "text": "GAAP operating margin was about 50% and non-GAAP EPS grew 18%. Depreciation from the capex step-up is the drag in our base case."
+   },
+   {
+    "label": "Capital",
+    "text": "Net cash and $10.2B returned in the quarter, but free cash flow fell to $18.6B as capex reached $39.4B."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Alphabet grows faster on consensus at a lower multiple."
+   }
+  ],
+  "thesis_long": [
+   "Microsoft is the best-positioned large company for enterprise AI. It owns the software most businesses already pay for, one of three hyperscale clouds, and a large stake in the leading AI lab. Growth accelerated this year: revenue +19%, Azure +48%, and a $677B order book that covers years of cloud revenue.",
+   "The cost is capital. Additions to property and equipment nearly doubled to $39.4B in the quarter, and free cash flow fell to $18.6B even as net income rose. That spend becomes depreciation over the next several years, so margins depend on AI pricing staying above the cost of the infrastructure. Some of the backlog likely sits with a small number of very large AI customers.",
+   "Our base case lets growth fade toward the mid-teens and margin slip about two points, with the multiple held near 25x. EPS still compounds in the mid-teens, which beats the cost of equity over 12 months. We would turn positive if operating margin held near 50% while capex rose, and negative if Azure growth fell below 35% with capex still climbing."
+  ],
+  "upside_risks": [
+   {
+    "cause": "AI services earn software margins",
+    "how": "If Copilot and AI agents are priced like software, revenue would grow faster than depreciation and margins would rise."
+   },
+   {
+    "cause": "Capex peaks sooner",
+    "how": "A visible peak in capex would lift free cash flow quickly and support a higher multiple."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "GOOGL",
+   "AMZN",
+   "ORCL"
+  ]
+ }
+}

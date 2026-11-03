@@ -13,7 +13,7 @@
     const first = () => String(store.user() || '').trim().split(' ')[0];
 
     const TIERS = [
-      { tier: 'core', label: 'Full research', depth: 3, gets: 'Rating, 12-month target, estimates vs consensus, peers, risks and a 5-page report.' },
+      { tier: 'core', label: 'Full research', depth: 3, gets: 'Rating, 12-month target, estimates vs consensus, peers, risks and a 5-page report for every company.' },
       { tier: 'lighter', label: 'Lighter research', depth: 2, gets: 'Rating, target, scenarios, moat and tripwires. No written review yet.' },
       { tier: 'basic', label: 'The basics', depth: 1, gets: 'Price, statements, valuation against its own history, and news.' }
     ];
@@ -41,14 +41,14 @@
         h('h1', { class: 'ob-h' }, `Hey ${first()}.`),
         h('p', { class: 'ob-lead' }, 'Welcome to Moat Monitor, your AI-native equity research tool.'),
         h('div', { class: 'ob-eyebrow' }, `What is covered today · ${state.data.universe.length} stocks`),
-        h('div', { class: 'ob-tiers' }, TIERS.map((x) => {
+        h('div', { class: 'ob-tiers' }, TIERS.filter((x) => tierRows(x.tier).length).map((x) => {
           const rows = tierRows(x.tier);
           return h('div', { class: 'ob-tier' },
             h('div', { class: 'ob-tier-h' }, depthBar(x.depth), h('b', null, x.label), h('span', { class: 'ob-n' }, String(rows.length))),
             h('div', { class: 'ob-names' }, rows.map((u) => u.name).join(' · ')),
             h('div', { class: 'ob-gets' }, x.gets));
         })),
-        h('p', { class: 'ob-foot' }, 'More names move up a tier as research is added.'),
+        h('p', { class: 'ob-foot' }, TIERS.filter((x) => tierRows(x.tier).length).length > 1 ? 'More names move up a tier as research is added.' : 'More companies are added as research is completed.'),
         h('div', { class: 'ob-actions' }, btn(['Pick my book', icon('chev')], () => book(done), 'primary')));
       mount(view);
     }
@@ -78,7 +78,7 @@
         inp.addEventListener('blur', () => { inp.value = amounts[u.ticker] > 0 ? usd(amounts[u.ticker]) : ''; });
         return h('label', { class: 'ob-row' }, h('span', { class: 'ob-tk' }, u.ticker), h('span', { class: 'ob-nm' }, u.name), inp);
       };
-      const list = h('div', { class: 'ob-list' }, TIERS.map((x) => [
+      const list = h('div', { class: 'ob-list' }, TIERS.filter((x) => tierRows(x.tier).length).map((x) => [
         h('div', { class: 'ob-group' }, depthBar(x.depth), x.label),
         tierRows(x.tier).map(row)]));
       const preset = starter();

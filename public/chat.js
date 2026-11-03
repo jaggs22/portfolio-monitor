@@ -68,7 +68,7 @@
     function contextFor(t) {
       const lines = [];
       const U = state.data.universe;
-      lines.push(`Coverage: ${U.length} US stocks. Full research: ${U.filter((u) => u.tier === 'core').map((u) => u.name).join(', ')}. Lighter research: ${U.filter((u) => u.tier === 'lighter').map((u) => u.name).join(', ')}. Basics only: ${U.filter((u) => u.tier === 'basic').map((u) => u.name).join(', ')}.`);
+      lines.push(`Coverage: ${U.length} US stocks. ` + [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basics only']].map(([k, l]) => { const xs = U.filter((u) => u.tier === k); return xs.length ? `${l}: ${xs.map((u) => u.name).join(', ')}.` : ''; }).filter(Boolean).join(' '));
       const hs = L.cleanHoldings(state.holdings);
       if (hs.length) lines.push(`The investor's book (dollars): ${hs.map((x) => `${x.ticker} ${Math.round(x.weight)}`).join(', ')}.`);
       U.filter((u) => u.tier !== 'basic').forEach((u) => { const c = CO.callOf(u.ticker, false); if (c) lines.push(`${u.name} (${u.ticker}): ${c.rating}, 12-month target $${c.pt.toFixed(2)} (${fmt.spct(c.upside, 1)}).`); });

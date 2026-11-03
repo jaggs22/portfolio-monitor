@@ -1,0 +1,445 @@
+{
+ "ticker": "GOOGL",
+ "name": "Alphabet",
+ "depth": "deep",
+ "as_of": "2026-10-29",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Google Cloud doubled and Search still grows double digits, but Alphabet now issues shares and debt to fund the AI build.",
+  "thesis": "Alphabet grew revenue 25% in the September quarter: Search +12%, Google Cloud +103% with a $561B cloud backlog. To pay for $132B of capex in nine months and the $29.5B Wiz deal, it stopped buybacks and raised $42.9B of new shares, $19.1B of convertible preferred and $85B of debt. Reported earnings also include $127B of investment gains, so we value it on operating earnings."
+ },
+ "base": {
+  "eps0": 11.2,
+  "eps_label": "FY2026E EPS excluding investment gains and losses: operating income after tax at about 17%, on 12.37B diluted shares. Reported 2026 EPS is far higher because of about $127B of mark-to-market gains.",
+  "rev0": 497.0,
+  "shares0": 12.37,
+  "div": 0.88,
+  "rev_label": "FY2026E revenue ($B): nine months $357.3B plus a fourth quarter near $140B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 18,
+   "bear": 10,
+   "bull": 24,
+   "kind": "driver",
+   "why": "Revenue grew 25% in the quarter: Search & other +12%, YouTube ads +9%, subscriptions +11% and Google Cloud +103%. Cloud's $561B backlog covers years of growth, and consensus has 2027 revenue up 27%. The base case fades total growth toward the mid-teens as Cloud's base gets larger.",
+   "source": "Alphabet 10-Q, quarter ended 30 September 2026 (revenue by type, revenue backlog); Yahoo consensus"
+  },
+  "margin_end": {
+   "base": 27,
+   "bear": 23,
+   "bull": 31,
+   "kind": "judgment",
+   "why": "Operating margin was 32% in the quarter and net margin on operating earnings about 28%. Capex of $132B in nine months, twice last year's, becomes depreciation over the next several years, so the base case lets net margin slip about a point.",
+   "source": "10-Q (income statement, cash flow); engine judgment on depreciation"
+  },
+  "share_chg": {
+   "base": 0.8,
+   "bear": 2,
+   "bull": 0,
+   "kind": "sourced",
+   "why": "Alphabet bought back no stock in 2026 and issued $42.9B of new common shares; the 6.25% mandatory convertible preferred converts into about 2.5 shares each by May 2029. The base case assumes the share count rises slowly instead of falling.",
+   "source": "10-Q (statement of cash flows; mandatory convertible preferred note)"
+  },
+  "exit_pe": {
+   "base": 21,
+   "bear": 16,
+   "bull": 25,
+   "kind": "judgment",
+   "why": "Today's multiple is about 25x 2026 operating EPS and 19x consensus 2027. The base case settles at 21x, below the market multiple, because heavy capex and dilution lower the quality of earnings.",
+   "source": "Engine judgment; current multiple computed from price and FY26E operating EPS"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Google Cloud has become a second engine",
+   "claim": "Cloud revenue doubled to $30.7B in the quarter at a 36% operating margin, with $560.8B of backlog.",
+   "evidence": [
+    {
+     "t": "Google Cloud revenue $30,709M vs $15,157M a year earlier",
+     "src": "10-Q"
+    },
+    {
+     "t": "Revenue backlog $567.7B, of which $560.8B Google Cloud",
+     "src": "10-Q"
+    }
+   ],
+   "test": "Does Cloud growth stay above 50% while margins hold above 30%?"
+  },
+  {
+   "title": "Search keeps growing",
+   "claim": "Search & other revenue grew 12% to $63.4B, despite AI answer engines.",
+   "evidence": [
+    {
+     "t": "Google Search & other $63,350M vs $56,567M",
+     "src": "10-Q"
+    }
+   ],
+   "test": "Does Search growth stay above 8%?"
+  },
+  {
+   "title": "Funding has changed",
+   "claim": "Alphabet stopped buybacks and raised equity and debt to fund capex.",
+   "evidence": [
+    {
+     "t": "Nine-month capex $131,953M vs $63,596M; operating cash flow $127,149M",
+     "src": "10-Q cash flow"
+    },
+    {
+     "t": "Proceeds: common stock $42,870M, mandatory convertible preferred $19,063M, debt $85,222M; buybacks $0",
+     "src": "10-Q cash flow"
+    }
+   ],
+   "test": "Does capex peak before free cash flow turns sharply negative?"
+  },
+  {
+   "title": "Earnings are flattered by gains",
+   "claim": "Nine-month other income of $127.5B is mostly unrealised gains on private holdings; the third quarter had an $8.2B loss.",
+   "evidence": [
+    {
+     "t": "Unrealised gain on non-marketable equity securities $116.3B in nine months; carrying value $128.2B",
+     "src": "10-Q equity securities note"
+    }
+   ],
+   "test": "Value on operating income, not net income."
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 19x consensus 2027 EPS, below Microsoft, for faster growth and a doubling cloud business.",
+  "ours": "Growth is excellent, but the per-share return is diluted: Alphabet now issues stock to fund capex, and free cash flow was negative over nine months. Our base case earns about the cost of equity.",
+  "could_be_wrong": "If Cloud keeps doubling at rising margins and capex peaks in 2027, Alphabet is the cheapest of the AI platforms.",
+  "would_change_mind": "Search growth below 8%, or capex guided higher again without a return to buybacks."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Search distribution, YouTube, Android and a vertically integrated AI stack with its own TPU chips.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Cash and investments about $265B against debt about $126B, but debt rose by $85B in 2026 and free cash flow was negative over nine months.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Reported earnings include about $127B of unrealised investment gains in 2026",
+   "Free cash flow: operating cash flow $127.1B less capex $132.0B over nine months"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-02-03",
+   "label": "Alphabet Q4 2026 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Watch Cloud growth and margin, 2027 capex guidance and whether buybacks resume.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "g1",
+   "text": "Search & other growth below 8% in a quarter",
+   "metric": "search",
+   "op": "<",
+   "threshold": 8,
+   "current": 12,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "10-Q"
+  },
+  {
+   "id": "g2",
+   "text": "Google Cloud operating margin below 30%",
+   "metric": "cloud_margin",
+   "op": "<",
+   "threshold": 30,
+   "current": 36,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "10-Q segment note"
+  },
+  {
+   "id": "g3",
+   "text": "Free cash flow negative for the full year",
+   "metric": "fcf",
+   "op": "<",
+   "threshold": 0,
+   "current": -4.8,
+   "unit": "$B (nine months)",
+   "drivers": [
+    "share_chg"
+   ],
+   "src": "10-Q cash flow"
+  }
+ ],
+ "risks": [
+  "AI changes search economics.",
+  "Capex earns too little.",
+  "More dilution.",
+  "Antitrust remedies.",
+  "Investment gains reverse."
+ ],
+ "lenses": {
+  "eisman": "Strip out the private-company gains and look at free cash flow: it was negative for nine months, funded by new shares and debt.",
+  "munger": "A wonderful business that has started selling shares to build data centers. Ask what it earns on them.",
+  "buffett": "He would admire Search and worry that the company now needs outside capital.",
+  "hohn": "Search is a toll; Cloud is a capital-heavy race. Check the incremental return on the $132B."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Alphabet Form 10-Q, quarter ended 30 September 2026",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-Q",
+   "date": "2026-10-29"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "2027 capex guidance not retrieved.",
+  "Status of US search and ad tech antitrust remedies not retrieved.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q (quarter to 30 September 2026). Q4 reports in early February; this review refreshes after the print.",
+  "headline": "Two engines now, Search and a doubling Cloud. But Alphabet has switched from buying back stock to issuing it to fund the AI build.",
+  "model": "Alphabet earns most of its money from advertising on Google Search, YouTube and partner sites, and increasingly from Google Cloud, which rents AI computing (including its own TPU chips) and software to businesses. Subscriptions, devices and Other Bets make up the rest.",
+  "how_it_earns": [
+   {
+    "k": "Search & other",
+    "v": "Ads beside search results and AI answers. Half of revenue and most of the profit."
+   },
+   {
+    "k": "YouTube ads",
+    "v": "Video advertising, brand and performance."
+   },
+   {
+    "k": "Google Cloud",
+    "v": "AI infrastructure, TPUs, Workspace and security (Wiz). Doubling, with $561B of backlog."
+   },
+   {
+    "k": "Subscriptions and devices",
+    "v": "YouTube Premium and TV, Google One, Pixel."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported segments. Operating margin is segment operating income over revenue; Other Bets loses money.",
+   "rows": [
+    {
+     "match": "Google Services",
+     "label": "Google Services",
+     "role": "Profit engine",
+     "driver": "Search +12%, YouTube ads +9%, subscriptions +11%"
+    },
+    {
+     "match": "Google Cloud",
+     "label": "Google Cloud",
+     "role": "Growth engine",
+     "driver": "AI infrastructure demand, +103%"
+    },
+    {
+     "match": "All Other Segments",
+     "label": "Other Bets",
+     "role": "Loss-making",
+     "driver": "Waymo, Verily and others"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest search and video advertiser, and the third hyperscale cloud, growing fastest of the three this year.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Search distribution and data",
+    "YouTube's audience",
+    "Android and Chrome",
+    "Own AI chips (TPUs) and models"
+   ],
+   "threat": "AI assistants could change how people search and how ads are priced; regulators are targeting distribution deals."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Cloud doubled",
+    "d": "$30.7B in the quarter, +103%, at a 36% operating margin."
+   },
+   {
+    "t": "Search still +12%",
+    "d": "$63.4B; YouTube ads +9%; Network flat."
+   },
+   {
+    "t": "Capex doubled",
+    "d": "$132.0B in nine months vs $63.6B; free cash flow about -$4.8B."
+   },
+   {
+    "t": "Gains distort EPS",
+    "d": "Nine-month other income $127.5B, mostly private-company revaluations; Q3 had an $8.2B loss."
+   }
+  ],
+  "balance": {
+   "read": "Still net cash, but the direction changed: Alphabet raised about $147B of debt, shares and preferred stock in 2026.",
+   "facts": [
+    "Cash and investments about $265B vs debt about $126B",
+    "$85.2B of new debt and $42.9B of new shares in nine months",
+    "$19.1B of 6.25% mandatory convertible preferred, converting by May 2029"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Earnings include large paper gains",
+    "evidence": "$116.3B of unrealised gains on private holdings in nine months; carrying value $128.2B. Not cash, and can reverse.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Shares issued, not bought back",
+    "evidence": "No repurchases in 2026; $42.9B of common stock issued and a preferred that converts into common stock.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Free cash flow negative",
+    "evidence": "Operating cash flow $127.1B less capex $132.0B over nine months.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: Search high single digits, Cloud fading from 100%",
+   "margin_end": "Judgment: depreciation takes about a point of net margin",
+   "share_chg": "Sourced: issuance and convertible preferred",
+   "exit_pe": "Judgment: below-market multiple for capex-heavy, diluted earnings"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Cloud growth slows from 100% toward 40%; Search grows high single digits; dilution offsets part of EPS growth.",
+    "needs": "Capex peaks in 2027"
+   },
+   "downside": {
+    "story": "AI answers cut search monetisation while capex keeps rising; more equity is issued and the multiple falls toward 16x.",
+    "needs": "Search growth below 8%"
+   },
+   "upside": {
+    "story": "Cloud keeps doubling with rising margins and buybacks resume in 2027.",
+    "needs": "Free cash flow positive again"
+   }
+  },
+  "risks": [
+   {
+    "cause": "AI changes search economics",
+    "how": "If AI answers show fewer or cheaper ads than links, Search revenue per query falls.",
+    "watch": "Search & other growth",
+    "trip": "g1",
+    "sev": "high",
+    "cat": "Technology"
+   },
+   {
+    "cause": "Capex earns too little",
+    "how": "Capex doubled to $132B in nine months. If AI prices fall, depreciation erodes margins.",
+    "watch": "Operating margin and Cloud margin",
+    "trip": "g2",
+    "sev": "high",
+    "cat": "Capital"
+   },
+   {
+    "cause": "More dilution",
+    "how": "Funding the build with shares and convertibles lowers per-share growth.",
+    "watch": "Share count and financing",
+    "trip": "g3",
+    "sev": "medium",
+    "cat": "Capital"
+   },
+   {
+    "cause": "Antitrust remedies",
+    "how": "US courts and EU regulators are acting on search distribution and ad tech; remedies could raise costs or cut traffic.",
+    "watch": "Court rulings",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Regulatory"
+   },
+   {
+    "cause": "Investment gains reverse",
+    "how": "$128B of private-company holdings are marked up; a reversal would hit reported earnings, though not operations.",
+    "watch": "Other income",
+    "trip": null,
+    "sev": "low",
+    "cat": "Accounting"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Alphabet grows faster than Microsoft and Meta on consensus, with a doubling cloud and the largest search franchise.",
+   "why_not": "It trades at a discount because it now issues shares and its free cash flow turned negative, unlike Meta and Microsoft.",
+   "peers_note": "Amazon's multiple is distorted by gains on its own AI investments; compare on 2027 estimates."
+  },
+  "questions": [
+   "What does Alphabet earn on the $132B of capex?",
+   "Should a company this profitable be issuing shares?",
+   "How much of the $561B Cloud backlog is a few AI labs?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Alphabet Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-Q",
+    "date": "2026-10-29"
+   }
+  ],
+  "title": "Two engines, now with dilution",
+  "lead": "We rate Alphabet {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Google Cloud doubled and Search grew 12%, but Alphabet now funds its AI build with new shares and debt, and our 2027 EPS is {vs_cons} consensus.",
+  "call_reason": "Growth is real, per-share returns are diluted: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Revenue grew 25% in the September quarter: Google Cloud +103% with $561B of backlog, Search & other +12%, YouTube ads +9%."
+   },
+   {
+    "label": "Moat",
+    "text": "Search distribution, YouTube and its own AI chips and models. The threats are AI changing how search is monetised and antitrust remedies on distribution deals."
+   },
+   {
+    "label": "Profitability",
+    "text": "Operating margin was 32% and Cloud earned 36%. Reported net income includes about $127B of paper gains in 2026, so we value Alphabet on operating earnings."
+   },
+   {
+    "label": "Capital",
+    "text": "Capex doubled to $132B in nine months and free cash flow turned negative. Buybacks stopped and Alphabet raised $147B of shares, preferred and debt."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} It trades below Microsoft for faster growth, because it now issues shares."
+   }
+  ],
+  "thesis_long": [
+   "Alphabet has two growth engines for the first time. Search & other grew 12% despite the arrival of AI assistants, and Google Cloud doubled to $30.7B in the quarter at a 36% operating margin, with $561B of contracted backlog. Operating income grew 30%.",
+   "The cost is a change in capital policy. Capex doubled to $132B in nine months and free cash flow turned slightly negative. Alphabet stopped buying back stock, issued $42.9B of new shares and $19.1B of convertible preferred, and borrowed $85B. Reported earnings also include about $127B of mark-to-market gains on private investments, which we exclude. On operating earnings the stock trades at about 25x this year and 19x consensus 2027.",
+   "Our base case lets Cloud growth fade, holds Search in high single digits and assumes the share count drifts up rather than down. That earns about the cost of equity over 12 months. We would turn positive if capex peaked and buybacks resumed, and negative if Search growth fell below 8%."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Capex peaks and buybacks resume",
+    "how": "With operating cash flow near $170B a year, a capex plateau would restore large buybacks quickly."
+   },
+   {
+    "cause": "Cloud margins keep rising",
+    "how": "If Cloud reaches Search-like margins at its current growth, earnings would grow far faster than our base case."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "META",
+   "MSFT",
+   "AMZN"
+  ]
+ }
+}

@@ -1,0 +1,465 @@
+{
+ "ticker": "AMZN",
+ "name": "Amazon",
+ "depth": "deep",
+ "as_of": "2026-10-29",
+ "horizon": 3,
+ "header": {
+  "one_liner": "AWS is growing 39% again and retail margins are at a record; $220B of capex has turned free cash flow negative.",
+  "thesis": "Amazon earned a record 13.9% operating margin in the September quarter as AWS grew 39% and North America retail margins nearly doubled. The price is capital: 2026 cash capex of about $220B, $60B of investments in OpenAI and Anthropic, and trailing free cash flow of -$42B. Reported earnings also swing with gains on those stakes, so we value Amazon on operating income."
+ },
+ "base": {
+  "eps0": 8.03,
+  "eps_label": "FY2026E EPS excluding investment gains and losses: operating income (nine months actual plus Q4 guide midpoint $31B) less net interest, taxed at 20%, on 10.93B diluted shares",
+  "rev0": 827.5,
+  "shares0": 10.93,
+  "div": 0,
+  "rev_label": "FY2026E net sales ($B): nine months $584.1B plus Q4 guide midpoint $243.5B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 14,
+   "bear": 8,
+   "bull": 17,
+   "kind": "driver",
+   "why": "AWS grew 39% to a $184B run rate and management projects AWS growth above 40% in both 2027 and 2028. Retail grew mid single digits in the quarter, about 4 points lower because Prime Day moved into Q2. With AWS near a quarter of sales, the base case assumes about 14% total growth.",
+   "source": "Amazon Q3 2026 release (segments, CEO statement, Q4 guidance)"
+  },
+  "margin_end": {
+   "base": 12.5,
+   "bear": 9,
+   "bull": 15,
+   "kind": "judgment",
+   "why": "Net margin on operating earnings is about 10.6% this year. AWS earns about 39% operating margin and retail margins are rising, but depreciation from about $220B of 2026 capex is still ahead. The base case lifts net margin two points over three years.",
+   "source": "Q3 2026 release (segment operating income); 10-Q (2026 capex expectation)"
+  },
+  "share_chg": {
+   "base": 0.7,
+   "bear": 1.2,
+   "bull": 0.3,
+   "kind": "sourced",
+   "why": "Amazon does not buy back stock in size; diluted shares rose about 0.8% over the past year from stock compensation.",
+   "source": "Diluted share counts, Q3 2025 to Q3 2026"
+  },
+  "exit_pe": {
+   "base": 26,
+   "bear": 20,
+   "bull": 32,
+   "kind": "judgment",
+   "why": "Today's multiple is about 31x 2026 operating EPS and 23x consensus 2027. The base case assumes a modest de-rating as heavy capex keeps free cash flow low.",
+   "source": "Engine judgment; current multiple computed from price and FY26E operating EPS"
+  }
+ },
+ "pillars": [
+  {
+   "title": "AWS re-accelerated",
+   "claim": "AWS sales grew 39% to $46.0B at a 39% operating margin, its fastest growth in nearly five years.",
+   "evidence": [
+    {
+     "t": "AWS segment sales $46.0B, +39%; operating income $17.8B vs $11.4B",
+     "src": "Q3 2026 release"
+    },
+    {
+     "t": "CEO projects AWS revenue growth above 40% in both 2027 and 2028",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does AWS growth stay above 35% as capacity comes online?"
+  },
+  {
+   "title": "Retail margins at a record",
+   "claim": "North America operating income rose to $8.7B from $4.8B on 6% sales growth.",
+   "evidence": [
+    {
+     "t": "North America sales $112.9B, +6%; operating margin about 7.7%",
+     "src": "Q3 2026 release"
+    },
+    {
+     "t": "Q4 guide: sales $240B to $247B, operating income $28.5B to $33.5B",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does North America margin hold above 7% through the holiday quarter?"
+  },
+  {
+   "title": "Capex has overwhelmed cash flow",
+   "claim": "Trailing free cash flow was an outflow of $42.4B after a $94.8B rise in capex; 2026 cash capex is expected near $220B.",
+   "evidence": [
+    {
+     "t": "Operating cash flow $168.3B trailing twelve months, +29%",
+     "src": "Q3 2026 release"
+    },
+    {
+     "t": "Purchases of property and equipment, net $210.7B in nine months vs $115.9B",
+     "src": "10-Q"
+    }
+   ],
+   "test": "Does capex level off in 2027?"
+  },
+  {
+   "title": "Big bets on AI labs",
+   "claim": "Amazon invested $50.0B in OpenAI preferred stock and $10.0B in Anthropic in 2026; gains on these stakes swing reported profit.",
+   "evidence": [
+    {
+     "t": "Nine-month other income $68.4B vs $14.1B",
+     "src": "10-Q"
+    }
+   ],
+   "test": "Value on operating income, not net income."
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 23x consensus 2027 EPS for AWS re-acceleration and rising retail margins.",
+  "ours": "Operations are the best they have been, but the cash is going into capex and AI stakes. Our base case earns a little above Amazon's cost of equity: a good business at a reasonable price, not yet a bargain.",
+  "could_be_wrong": "If AWS grows above 40% for two years as management projects and capex then levels off, free cash flow could swing by more than $100B and the stock is cheap.",
+  "would_change_mind": "AWS growth below 30%, or 2027 capex guided materially above 2026 without faster AWS growth."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Logistics scale, Prime, AWS's customer base and a fast-growing advertising business.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net debt about $66B (debt about $180B including new notes, against $114B of cash and securities), rising to fund capex and AI investments.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Reported 2026 earnings include large gains on Anthropic and other equity stakes",
+   "Trailing free cash flow -$42.4B"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-02-05",
+   "label": "Amazon Q4 2026 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Guide: net sales $240.0B to $247.0B; operating income $28.5B to $33.5B; 2027 capex outlook.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "a1",
+   "text": "AWS growth below 30% in a quarter",
+   "metric": "aws",
+   "op": "<",
+   "threshold": 30,
+   "current": 39.3,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "a2",
+   "text": "North America operating margin below 6%",
+   "metric": "na_margin",
+   "op": "<",
+   "threshold": 6,
+   "current": 7.7,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "a3",
+   "text": "2027 capex guided above $260B",
+   "metric": "capex",
+   "op": ">",
+   "threshold": 260,
+   "current": 220,
+   "unit": "$B (2026 expected)",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "10-Q"
+  }
+ ],
+ "risks": [
+  "Capex outruns demand.",
+  "AWS growth slows.",
+  "Consumer slowdown.",
+  "AI stakes lose value.",
+  "Regulation."
+ ],
+ "lenses": {
+  "eisman": "Take out the gains on AI stakes and look at free cash flow: minus $42B over twelve months.",
+  "munger": "Two great businesses inside one company, both spending as if the future is certain.",
+  "buffett": "He would like the retail franchise and the cloud, and ask when the capex ends.",
+  "hohn": "AWS is the asset; check the incremental return on $220B a year of capex."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Amazon.com Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=8-K",
+   "date": "2026-10-29"
+  },
+  {
+   "tier": "A",
+   "title": "Amazon.com Form 10-Q, quarter ended 30 September 2026",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-Q",
+   "date": "2026-10-30"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "2027 capex guidance not yet given.",
+  "AWS backlog not retrieved from the sources.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 reports in early February; this review refreshes after the print.",
+  "headline": "Record margins and AWS back near 40% growth. The catch is capex: free cash flow has gone negative.",
+  "model": "Amazon runs the largest online store, a marketplace for third-party sellers, a fast-growing advertising business and AWS, the largest cloud provider. Retail is high-volume and low-margin; AWS and advertising make most of the profit.",
+  "how_it_earns": [
+   {
+    "k": "Online and physical stores",
+    "v": "Its own retail sales. Low margin, huge volume."
+   },
+   {
+    "k": "Third-party seller services",
+    "v": "Commissions and fulfilment fees from marketplace sellers."
+   },
+   {
+    "k": "Advertising",
+    "v": "Sponsored products and Prime Video ads. High margin."
+   },
+   {
+    "k": "AWS",
+    "v": "Cloud computing and AI infrastructure. Most of the operating profit."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported segments. Operating margin is segment operating income over sales.",
+   "rows": [
+    {
+     "match": "North America",
+     "label": "North America",
+     "role": "Largest",
+     "driver": "Retail, marketplace and ads; +6% with Prime Day in Q2"
+    },
+    {
+     "match": "International",
+     "label": "International",
+     "role": "Lowest margin",
+     "driver": "+8% excluding currency"
+    },
+    {
+     "match": "Amazon Web Services",
+     "label": "AWS",
+     "role": "Profit engine",
+     "driver": "AI and cloud demand, +39%"
+    }
+   ],
+   "callout": {
+    "match": "Advertising Services",
+    "label": "Advertising",
+    "text": "Cuts across the retail segments. $19.6B in the quarter, guided to grow in the high teens in Q4."
+   }
+  },
+  "position": "The largest cloud provider and US online retailer. AWS is gaining speed again against Microsoft and Google.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Logistics network and delivery speed",
+    "Prime membership",
+    "AWS scale and customer base",
+    "Shopping data for advertising"
+   ],
+   "threat": "The capex race in AI could lower cloud returns; regulators target marketplace practices."
+  },
+  "what_numbers_say": [
+   {
+    "t": "AWS +39%",
+    "d": "$46.0B at a 39% operating margin; $184B run rate."
+   },
+   {
+    "t": "Record operating margin",
+    "d": "13.9% overall; North America operating income $8.7B vs $4.8B."
+   },
+   {
+    "t": "Free cash flow -$42B",
+    "d": "Trailing twelve months, after a $94.8B rise in capex."
+   },
+   {
+    "t": "$60B into AI labs",
+    "d": "$50.0B in OpenAI and $10.0B in Anthropic in 2026."
+   }
+  ],
+  "balance": {
+   "read": "Strong credit, but borrowing to fund capex: net debt about $66B and rising.",
+   "facts": [
+    "Debt about $180B vs cash and securities about $114B",
+    "Interest expense $1.7B in Q3 vs $0.5B a year earlier",
+    "No buybacks; no dividend"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Reported earnings include AI-stake gains",
+    "evidence": "Nine-month other income $68.4B, mostly equity revaluations. Q3 net income fell despite operating income up 61%.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Free cash flow negative",
+    "evidence": "Trailing free cash flow -$42.4B vs +$14.8B a year earlier.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Energy derivative remeasurements",
+    "evidence": "Guidance assumes no impact from energy derivative contract remeasurements, a new swing factor in operating income.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Driver-based: AWS near 40%, retail mid-to-high single digits",
+   "margin_end": "Judgment: mix shift to AWS and ads, offset by depreciation",
+   "share_chg": "Sourced: stock compensation dilution",
+   "exit_pe": "Judgment: modest de-rating while free cash flow is low"
+  },
+  "scenarios": {
+   "base": {
+    "story": "AWS grows 30% to 40%, retail margins keep improving, depreciation absorbs part of the gain.",
+    "needs": "Capex levels off in 2027"
+   },
+   "downside": {
+    "story": "AI demand slows while capex keeps rising; AWS margins compress and the multiple falls toward 20x.",
+    "needs": "AWS growth below 30%"
+   },
+   "upside": {
+    "story": "AWS above 40% for two years and capex peaks; free cash flow swings sharply positive.",
+    "needs": "Management's AWS projection holds"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Capex outruns demand",
+    "how": "About $220B of 2026 capex becomes depreciation; if AI prices fall, AWS margins compress.",
+    "watch": "AWS operating margin",
+    "trip": "a3",
+    "sev": "high",
+    "cat": "Capital"
+   },
+   {
+    "cause": "AWS growth slows",
+    "how": "Growth depends on capacity coming online and a few very large AI customers.",
+    "watch": "AWS growth",
+    "trip": "a1",
+    "sev": "high",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Consumer slowdown",
+    "how": "Retail and advertising depend on US consumer spending.",
+    "watch": "North America margin",
+    "trip": "a2",
+    "sev": "medium",
+    "cat": "Cycle"
+   },
+   {
+    "cause": "AI stakes lose value",
+    "how": "$60B invested in OpenAI and Anthropic this year; write-downs would hit reported earnings.",
+    "watch": "Other income",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Capital"
+   },
+   {
+    "cause": "Regulation",
+    "how": "The FTC case on marketplace practices and EU rules could limit how Amazon ranks and charges sellers.",
+    "watch": "Court rulings",
+    "trip": null,
+    "sev": "low",
+    "cat": "Regulatory"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "AWS is growing faster than at any time in five years and retail margins are at a record; Amazon trades at a discount to Walmart.",
+   "why_not": "Free cash flow is negative and Microsoft offers similar cloud growth with net cash.",
+   "peers_note": "Walmart is valued as a retailer; Microsoft and Alphabet as cloud and software platforms. Amazon is both."
+  },
+  "questions": [
+   "When does capex peak?",
+   "How much of AWS growth comes from a few AI labs that Amazon also invests in?",
+   "Should reported earnings or operating earnings drive the valuation?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Amazon.com Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-Q",
+    "date": "2026-10-30"
+   },
+   {
+    "tier": "A",
+    "title": "Amazon.com Form 8-K, Q3 2026 earnings release",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=8-K",
+    "date": "2026-10-29"
+   }
+  ],
+  "title": "Record margins, negative cash",
+  "lead": "We rate Amazon {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). AWS is back near 40% growth and retail margins are at a record, but capex has turned free cash flow negative, and our 2027 EPS is {vs_cons} consensus.",
+  "call_reason": "Operations are excellent; cash is the question: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Sales grew 12% in the September quarter, about 16% excluding the Prime Day shift. AWS grew 39% and management projects over 40% in 2027 and 2028."
+   },
+   {
+    "label": "Moat",
+    "text": "Logistics scale, Prime and the largest cloud customer base. The risk is a capex race that lowers cloud returns for everyone."
+   },
+   {
+    "label": "Profitability",
+    "text": "Operating margin hit a record 13.9%: AWS earned 39% and North America operating income nearly doubled."
+   },
+   {
+    "label": "Capital",
+    "text": "About $220B of 2026 capex and $60B of AI-lab investments turned trailing free cash flow to -$42B, funded partly with new debt."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Valued on operating earnings, because gains on AI stakes inflate reported EPS."
+   }
+  ],
+  "thesis_long": [
+   "Amazon's operations have never been stronger. AWS grew 39% in the quarter, its fastest in nearly five years, at a 39% operating margin, and management projects more than 40% growth in both 2027 and 2028. In retail, North America operating income rose to $8.7B from $4.8B and the company posted a record 13.9% operating margin.",
+   "The question is capital. Cash capex of about $220B this year, plus $50B invested in OpenAI and $10B in Anthropic, turned trailing free cash flow to -$42B, and interest expense has tripled. Reported earnings are inflated by gains on those AI stakes, so we value Amazon on operating income: about $8 a share this year.",
+   "Our base case grows sales about 14% a year with AWS near 40%, lifts net margin by two points and allows a modest de-rating. That earns slightly more than the cost of equity over 12 months. We would turn positive if 2027 capex levelled off while AWS stayed above 40%, and negative if AWS growth fell below 30%."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Capex peaks in 2027",
+    "how": "With operating cash flow of $168B and rising, flat capex would swing free cash flow by tens of billions."
+   },
+   {
+    "cause": "AWS beats its projection",
+    "how": "Over 40% growth on a $184B run rate would add more profit than the whole retail business earns."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "WMT",
+   "MSFT",
+   "GOOGL"
+  ]
+ }
+}

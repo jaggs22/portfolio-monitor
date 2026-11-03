@@ -1,0 +1,443 @@
+{
+ "ticker": "COST",
+ "name": "Costco",
+ "depth": "deep",
+ "as_of": "2026-09-24",
+ "horizon": 3,
+ "header": {
+  "one_liner": "The most loyal customers in retail and steady 6% to 7% comps, at 46 times earnings.",
+  "thesis": "Costco grew fiscal 2026 net sales 10% and EPS 14% to $20.76, with comparable sales up 6.6% excluding gasoline and currency, a 92.3% renewal rate in the US and Canada, and digital sales up a fifth. Nothing in the business is wrong. At about 46x fiscal 2027 earnings, the share price already assumes it stays that way for a long time."
+ },
+ "base": {
+  "eps0": 22.6,
+  "eps_label": "FY2027E diluted EPS (year to August 2027): fiscal 2026 $20.76 less the $0.15 tariff-refund benefit, grown about 10%",
+  "rev0": 329.0,
+  "shares0": 0.4444,
+  "div": 5.88,
+  "rev_label": "FY2027E total revenue ($B): fiscal 2026 $303.2B grown about 8.5% (comps, about 25 net new warehouses a year, membership fees)"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 7.5,
+   "bear": 5,
+   "bull": 9,
+   "kind": "sourced",
+   "why": "Comparable sales grew 6.6% in fiscal 2026 excluding gasoline and currency, on a 5% higher average ticket and 3% more shopping trips, plus 25 net new warehouses. The base case holds about 7.5% a year.",
+   "source": "Costco 10-K fiscal 2026 (MD&A); Q4 release"
+  },
+  "margin_end": {
+   "base": 3.2,
+   "bear": 2.9,
+   "bull": 3.4,
+   "kind": "judgment",
+   "why": "Net margin is about 3.0%: Costco deliberately keeps merchandise margins thin and earns on membership fees ($5.9B, +11%). The base case adds a little margin from membership fee growth and Kirkland Signature mix.",
+   "source": "10-K fiscal 2026 (gross margin, membership fees)"
+  },
+  "share_chg": {
+   "base": -0.2,
+   "bear": 0,
+   "bull": -0.5,
+   "kind": "sourced",
+   "why": "Costco bought back only about $0.85B of stock in fiscal 2026 against a market value above $450B; it prefers special dividends.",
+   "source": "10-K fiscal 2026 (repurchases)"
+  },
+  "exit_pe": {
+   "base": 40,
+   "bear": 32,
+   "bull": 46,
+   "kind": "judgment",
+   "why": "Today's multiple is about 46x fiscal 2027 EPS, near the top of Costco's range and above Walmart. The base case assumes it drifts toward 40x as EPS grows about 10% a year.",
+   "source": "Engine judgment; current multiple computed from price and FY27E EPS"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Comparable sales are steady",
+   "claim": "Fiscal 2026 comparable sales grew 6.6% excluding gasoline and currency: 5% from ticket, 3% from traffic.",
+   "evidence": [
+    {
+     "t": "Net sales $297.2B, +10.1%; total comparable sales +8.4% reported, +6.6% adjusted",
+     "src": "Q4 release; 10-K"
+    }
+   ],
+   "test": "Do adjusted comps stay above 5%?"
+  },
+  {
+   "title": "Members keep renewing",
+   "claim": "Paid members reached 84.1M, Executive members 42.3M, and renewal rates were 92.3% in the US and Canada.",
+   "evidence": [
+    {
+     "t": "Membership fee revenue $5,907M, +11%; worldwide renewal rate 89.8%",
+     "src": "10-K fiscal 2026"
+    }
+   ],
+   "test": "Does the worldwide renewal rate stay near 90% as international members grow?"
+  },
+  {
+   "title": "Digital is growing fast",
+   "claim": "Digitally-enabled comparable sales grew 20.7% in fiscal 2026, excluding gasoline and currency.",
+   "evidence": [
+    {
+     "t": "Digitally-enabled comps +19.8% adjusted in Q4",
+     "src": "Q4 release"
+    }
+   ],
+   "test": "Does digital growth come without diluting gross margin?"
+  },
+  {
+   "title": "Thin margin by design",
+   "claim": "Gross margin fell 3 basis points (up 10 excluding gasoline); Costco reinvests to keep its pricing authority.",
+   "evidence": [
+    {
+     "t": "Q4 EPS $6.75 included a $0.15 benefit from tariff refunds, partly reinvested in member values",
+     "src": "Q4 release"
+    }
+   ],
+   "test": "Does EPS growth stay near 10% without one-offs?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 46x fiscal 2027 earnings for the most consistent retailer in the world.",
+  "ours": "The business is close to flawless; the multiple is the risk. Our base case grows EPS about 10% a year and lets the multiple drift toward 40x, which earns less than the cost of equity over 12 months.",
+  "could_be_wrong": "If the market keeps paying any price for consistency, the multiple holds and returns track EPS growth plus the dividend.",
+  "would_change_mind": "The price nearer 38x earnings, or another membership fee increase that lifts EPS growth into the mid-teens."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Membership model, buying scale on a limited range, Kirkland Signature and member loyalty no rival has matched.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net cash of about $15B at fiscal year end.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Q4 EPS includes a non-recurring $0.15 tariff-refund benefit",
+   "Operating cash flow $15.8B vs net income $9.2B in fiscal 2026"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2026-12-10",
+   "label": "Costco fiscal Q1 2027 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Monthly sales reports in between; watch adjusted comps and membership fee growth.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "c1",
+   "text": "Adjusted comparable sales below 5%",
+   "metric": "comps",
+   "op": "<",
+   "threshold": 5,
+   "current": 6.6,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q4 release"
+  },
+  {
+   "id": "c2",
+   "text": "US and Canada renewal rate below 91%",
+   "metric": "renewal",
+   "op": "<",
+   "threshold": 91,
+   "current": 92.3,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "10-K fiscal 2026"
+  },
+  {
+   "id": "c3",
+   "text": "Membership fee revenue growth below 6%",
+   "metric": "fees",
+   "op": "<",
+   "threshold": 6,
+   "current": 11,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "10-K fiscal 2026"
+  }
+ ],
+ "risks": [
+  "The multiple compresses.",
+  "Comparable sales slow.",
+  "Renewal rates slip.",
+  "Gasoline and tariffs.",
+  "Membership fee timing."
+ ],
+ "lenses": {
+  "eisman": "Nothing to short in the business; the only question is the multiple.",
+  "munger": "Exactly the kind of business he admired; he also knew that price decides the return.",
+  "buffett": "A wonderful company; at 46x it is not a wonderful price.",
+  "hohn": "Customer loyalty, a fee annuity and pricing discipline; the return now depends on the multiple holding."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Costco Wholesale Form 8-K, fiscal Q4 2026 results",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000909832&type=8-K",
+   "date": "2026-09-24"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "No formal earnings guidance; Costco does not provide it.",
+  "Timing of any future membership fee increase or special dividend is unknown.",
+  "Fiscal Q1 2027 report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-08-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Fiscal 2026 10-K (year to 30 August 2026) and Q4 release. Q1 fiscal 2027 reports in December; this review refreshes after the print.",
+  "headline": "Close to a flawless retailer. At 46x earnings the stock is priced like one.",
+  "model": "Costco charges an annual membership fee for access to warehouses that sell a limited range of goods at very low markups. Membership fees are most of the profit; merchandise is sold close to cost to keep members loyal.",
+  "how_it_earns": [
+   {
+    "k": "Membership fees",
+    "v": "$5.9B a year from 84M paid members; most of operating profit."
+   },
+   {
+    "k": "Food and sundries",
+    "v": "The largest category: groceries, snacks, household goods."
+   },
+   {
+    "k": "Non-foods and fresh",
+    "v": "Electronics, home, apparel; meat, produce and bakery."
+   },
+   {
+    "k": "Ancillary",
+    "v": "Gasoline, pharmacy, optical, food court: traffic drivers at thin margins."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported geographic segments for fiscal 2026. Operating margin is segment operating income over total revenue including membership fees.",
+   "rows": [
+    {
+     "match": "United States",
+     "label": "United States",
+     "role": "Core",
+     "driver": "647 warehouses; adjusted comps +6.6%"
+    },
+    {
+     "match": "Canada",
+     "label": "Canada",
+     "role": "Highest margin",
+     "driver": "115 warehouses"
+    },
+    {
+     "match": "Other International",
+     "label": "Other international",
+     "role": "Expansion",
+     "driver": "Mexico, Japan, UK, Korea, Australia, Taiwan, China and Europe"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest warehouse club in the world and one of the largest retailers, competing with Walmart's Sam's Club and BJ's.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Membership fees and renewal habit",
+    "Buying scale on a limited assortment",
+    "Kirkland Signature private label",
+    "Low-cost operating model"
+   ],
+   "threat": "The valuation, not competitors: no rival has matched its renewal rates."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Sales +10%",
+    "d": "Fiscal 2026 net sales $297.2B; adjusted comps +6.6%."
+   },
+   {
+    "t": "EPS +14%",
+    "d": "$20.76 vs $18.21, including a $0.15 one-off tariff refund in Q4."
+   },
+   {
+    "t": "Loyalty intact",
+    "d": "Renewal rate 92.3% in the US and Canada; 84.1M paid members."
+   },
+   {
+    "t": "Digital +21%",
+    "d": "Digitally-enabled comps +20.7% excluding gasoline and currency."
+   }
+  ],
+  "balance": {
+   "read": "Net cash of about $15B; capital goes to new warehouses, the dividend and occasional special dividends.",
+   "facts": [
+    "Capex about $6.4B a year",
+    "25 net new warehouses in fiscal 2026; 939 in total",
+    "Buybacks about $0.85B in fiscal 2026"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "One-off in Q4",
+    "evidence": "A $0.15 per share benefit from IEEPA tariff refunds, partly reinvested in member values.",
+    "severity": "info"
+   },
+   {
+    "flag": "Valuation risk acknowledged by the company",
+    "evidence": "The 10-K risk factors say the share price reflects high market expectations for future results.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Concentration in California",
+    "evidence": "California is 26% of US net sales.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: comparable sales plus new warehouses",
+   "margin_end": "Judgment: small gains from fees and private label",
+   "share_chg": "Sourced: minimal buybacks",
+   "exit_pe": "Judgment: drift down from near the top of the range"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Comps 6% to 7%, 25 to 30 new warehouses a year, EPS about 10%; the multiple drifts toward 40x.",
+    "needs": "Renewal rates stay above 90%"
+   },
+   "downside": {
+    "story": "Comps slow to the low single digits and the market stops paying for consistency; the multiple falls toward 32x.",
+    "needs": "Adjusted comps below 5%"
+   },
+   "upside": {
+    "story": "A membership fee increase and a special dividend lift returns while the multiple holds.",
+    "needs": "Fee increase in the next two years"
+   }
+  },
+  "risks": [
+   {
+    "cause": "The multiple compresses",
+    "how": "At 46x earnings, a move to Walmart-like or historical multiples would cost far more than a year of EPS growth.",
+    "watch": "Price-to-earnings",
+    "trip": null,
+    "sev": "high",
+    "cat": "Valuation"
+   },
+   {
+    "cause": "Comparable sales slow",
+    "how": "Ticket growth includes inflation; slower inflation or weaker consumers would slow comps.",
+    "watch": "Adjusted comparable sales",
+    "trip": "c1",
+    "sev": "medium",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Renewal rates slip",
+    "how": "Digital-first members renew at lower rates than long-time warehouse shoppers.",
+    "watch": "Renewal rate",
+    "trip": "c2",
+    "sev": "medium",
+    "cat": "Competitive"
+   },
+   {
+    "cause": "Gasoline and tariffs",
+    "how": "Gasoline prices swing reported sales and margins; tariffs raise costs on imported goods.",
+    "watch": "Gross margin excluding gasoline",
+    "trip": null,
+    "sev": "low",
+    "cat": "Cost"
+   },
+   {
+    "cause": "Membership fee timing",
+    "how": "Fee increases have come about every five to seven years; the last took effect in September 2024, so fee growth slows until the next one.",
+    "watch": "Membership fee growth",
+    "trip": "c3",
+    "sev": "low",
+    "cat": "Pricing"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Costco has the highest renewal rates and most consistent comps in retail, and net cash.",
+   "why_not": "Walmart now trades near 41x with faster digital and advertising growth; BJ's trades at about 22x.",
+   "peers_note": "Target and Dollar General trade at much lower multiples on weaker sales trends."
+  },
+  "questions": [
+   "What multiple is right for 10% EPS growth, however reliable?",
+   "When is the next membership fee increase?",
+   "Can digital keep growing 20% without diluting margins?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Costco Wholesale Form 10-K, fiscal year ended 30 August 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000909832&type=10-K",
+    "date": "2026-10-07"
+   },
+   {
+    "tier": "A",
+    "title": "Costco Wholesale Form 8-K, fiscal Q4 2026 results",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000909832&type=8-K",
+    "date": "2026-09-24"
+   }
+  ],
+  "title": "Flawless, and priced that way",
+  "lead": "We rate Costco {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Comps, renewals and digital growth are excellent, our next-year EPS is {vs_cons} consensus, and at 46x earnings the multiple, not the business, sets the return.",
+  "call_reason": "The business is fine; the multiple carries the risk: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Fiscal 2026 net sales grew 10% with comparable sales up 6.6% excluding gasoline and currency, and digitally-enabled sales up about 21%."
+   },
+   {
+    "label": "Moat",
+    "text": "84M paid members renewing at 92% in the US and Canada, buying scale on a limited range, and Kirkland Signature. No rival has matched it."
+   },
+   {
+    "label": "Profitability",
+    "text": "A 3% net margin by design: merchandise is sold close to cost and $5.9B of membership fees (+11%) make most of the profit."
+   },
+   {
+    "label": "Capital",
+    "text": "Net cash of about $15B funds about 25 new warehouses a year, a $5.88 dividend and occasional special dividends."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} About 46x earnings is near the top of Costco's own range."
+   }
+  ],
+  "thesis_long": [
+   "Costco is the most consistent large retailer in the world. Fiscal 2026 sales grew 10%, comparable sales grew 6.6% excluding gasoline and currency on both higher tickets and more trips, digital sales grew about a fifth and the renewal rate in the US and Canada held at 92.3%. EPS rose 14% to $20.76.",
+   "The problem is only price. At about 46x fiscal 2027 earnings, the stock trades near the top of its range and above Walmart, and the company's own 10-K warns that the share price reflects high expectations. EPS growth near 10% a year cannot keep up with even a modest return toward historical multiples.",
+   "Our base case grows EPS about 10% a year and lets the multiple drift toward 40x, which earns less than the cost of equity over 12 months. We would turn positive nearer 38x earnings, or on a membership fee increase that lifts EPS growth into the mid-teens."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Membership fee increase",
+    "how": "A fee increase drops almost entirely to profit and would lift EPS growth for two years."
+   },
+   {
+    "cause": "Special dividend",
+    "how": "Costco has paid large special dividends from excess cash; another would add several points to the return."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "WMT",
+   "BJ",
+   "TGT"
+  ]
+ }
+}

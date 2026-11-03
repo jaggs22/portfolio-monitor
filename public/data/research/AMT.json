@@ -1,0 +1,465 @@
+{
+ "ticker": "AMT",
+ "name": "American Tower",
+ "depth": "deep",
+ "as_of": "2026-10-27",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Global tower landlord with a fast-growing data center arm; slow tower growth, 17x AFFO and a 3.8% yield.",
+  "thesis": "American Tower raised its 2026 outlook for the third time: AFFO per share is guided up about 3% to $11.10 at the midpoint, with CoreSite data centers growing 16% while US and Canada tower revenue falls about 3% on lower straight-line revenue. Leverage is down to 4.9x and buybacks are back. The stock is priced for the slow growth it delivers."
+ },
+ "base": {
+  "eps0": 11.1,
+  "eps_label": "FY2026E AFFO per share (the REIT measure of recurring cash earnings): midpoint of guidance $11.04 to $11.16. Multiples on this page are price to AFFO.",
+  "rev0": 11.0,
+  "shares0": 0.466,
+  "div": 7.16,
+  "cons_comparable": false,
+  "rev_label": "FY2026E total revenue ($B): property revenue guidance midpoint $10.825B plus services"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 4,
+   "bear": 2,
+   "bull": 5.5,
+   "kind": "sourced",
+   "why": "Property revenue is guided up 5% in 2026 at the midpoint, with Data Centers +16%, Africa & APAC +16%, Latin America +11% and Europe +10%, but US & Canada -3% including a negative straight-line effect of over 3%. Organic tenant billings grew only 1.1% in the quarter. The base case assumes about 4% a year.",
+   "source": "American Tower Q3 2026 release (2026 outlook by segment)"
+  },
+  "margin_end": {
+   "base": 47.5,
+   "bear": 45,
+   "bull": 49,
+   "kind": "judgment",
+   "why": "AFFO is about 47% of revenue. Data centers and buybacks help; higher interest costs on refinanced debt and international currency moves hurt. The base case holds it roughly flat.",
+   "source": "Q3 2026 release (AFFO, financing)"
+  },
+  "share_chg": {
+   "base": -1,
+   "bear": -0.3,
+   "bull": -1.5,
+   "kind": "sourced",
+   "why": "American Tower bought back $315M of stock in the quarter and the board added $2.0B of authorisation on top of $1.1B remaining. The base case assumes about 1% a year.",
+   "source": "Q3 2026 release (stock repurchase program)"
+  },
+  "exit_pe": {
+   "base": 17,
+   "bear": 14,
+   "bull": 20,
+   "kind": "judgment",
+   "why": "The stock trades at about 17x 2026 AFFO. The base case holds that multiple: low growth offsets the lower leverage. The bear case is a further de-rating if US carrier spending stays weak.",
+   "source": "Engine judgment; current multiple computed from price and AFFO guidance"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Data centers are the growth",
+   "claim": "Data Centers cash revenue grew 16.3% and the segment is guided up about 16% for 2026.",
+   "evidence": [
+    {
+     "t": "Data Centers property revenue guidance $1,218M to $1,228M",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does CoreSite keep growing double digits as AI demand shifts to larger campuses?"
+  },
+  {
+   "title": "US towers are slow",
+   "claim": "Organic tenant billings grew 1.1%; US & Canada property revenue is guided down about 3%, mostly from lower straight-line revenue.",
+   "evidence": [
+    {
+     "t": "Total property revenue $2,734M, +4.5%; total revenue $2,785M, +2.5%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does US carrier leasing pick up in 2027?"
+  },
+  {
+   "title": "Balance sheet repaired",
+   "claim": "Net leverage is 4.9x annualised adjusted EBITDA, low enough to restart buybacks.",
+   "evidence": [
+    {
+     "t": "Net debt $35.7B; liquidity $10.6B",
+     "src": "Q3 2026 release"
+    },
+    {
+     "t": "Additional $2.0B buyback authorised 23 October 2026",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does leverage stay near 5x while buybacks continue?"
+  },
+  {
+   "title": "Portfolio simplified",
+   "claim": "The company is selling its Canadian towers for about $202M after earlier exits; the portfolio is more focused.",
+   "evidence": [
+    {
+     "t": "Sale of Canadian subsidiaries for about C$288M, closing Q4 2026",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Is capital recycled into higher-growth assets or buybacks?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 17x AFFO and a 3.8% dividend yield for slow but secure tower cash flows.",
+  "ours": "A fair price for a slow-growing, contracted business. Our base case grows AFFO per share about 5% a year with the multiple held, which earns about the cost of equity.",
+  "could_be_wrong": "If US carriers step up 5G and AI-related network spending, organic growth could return to 4% to 5% and the multiple would rise.",
+  "would_change_mind": "Organic tenant billings growth back above 4%, or the price nearer 14x AFFO."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "Irreplaceable tower sites with long contracts and escalators, plus interconnection-rich data centers.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net leverage 4.9x annualised adjusted EBITDA; about $37.6B of debt with steady refinancing.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "GAAP net income swings with currency and equity marks; AFFO is the cash measure",
+   "Straight-line revenue changes depress reported growth by about 2% this year"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-02-24",
+   "label": "American Tower Q4 2026 earnings and 2027 outlook (date not confirmed)",
+   "confirmed": false,
+   "note": "2026 guide: AFFO per share $11.04 to $11.16; property revenue $10.785B to $10.865B.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "t1",
+   "text": "Organic tenant billings growth below 0%",
+   "metric": "organic_billings",
+   "op": "<",
+   "threshold": 0,
+   "current": 1.1,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "t2",
+   "text": "Data Centers revenue growth below 10%",
+   "metric": "dc_growth",
+   "op": "<",
+   "threshold": 10,
+   "current": 16.3,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "t3",
+   "text": "Net leverage above 5.5x",
+   "metric": "leverage",
+   "op": ">",
+   "threshold": 5.5,
+   "current": 4.9,
+   "unit": "x",
+   "drivers": [
+    "share_chg"
+   ],
+   "src": "Q3 2026 release"
+  }
+ ],
+ "risks": [
+  "Carrier spending stays weak.",
+  "Interest rates.",
+  "Currency.",
+  "Data center competition.",
+  "Carrier consolidation and churn."
+ ],
+ "lenses": {
+  "eisman": "Look at organic tenant billings, not headline revenue: 1.1% growth is a utility, priced like one.",
+  "munger": "A landlord with long leases and few competitors; growth has slowed to inflation.",
+  "buffett": "He likes toll-like assets; he would ask why carriers are spending less.",
+  "hohn": "Infrastructure with pricing escalators and a data center option; returns depend on the cost of debt."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "American Tower Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001053507&type=8-K",
+   "date": "2026-10-27"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "Consensus EPS is on a GAAP basis and is not comparable with AFFO per share.",
+  "Carrier-level churn detail not retrieved.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 and the 2027 outlook come in February; this review refreshes after the print.",
+  "headline": "Towers grow slowly, data centers fast. At 17x AFFO with leverage repaired, the stock is fairly priced.",
+  "model": "American Tower owns more than 100,000 communications sites worldwide and leases space on them to mobile carriers under long contracts with annual escalators. It also owns CoreSite data centers in the US.",
+  "how_it_earns": [
+   {
+    "k": "US & Canada towers",
+    "v": "Leases to AT&T, Verizon and T-Mobile with fixed escalators. The largest profit pool."
+   },
+   {
+    "k": "International towers",
+    "v": "Latin America, Africa, Asia-Pacific and Europe; faster growth, currency risk."
+   },
+   {
+    "k": "Data centers",
+    "v": "CoreSite: interconnection-heavy data centers. Growing about 16%."
+   },
+   {
+    "k": "Services",
+    "v": "Site development and zoning for carriers. Small and volatile."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported property segments. Operating margin is segment gross margin over segment revenue.",
+   "rows": [
+    {
+     "match": "Property US And Canada",
+     "label": "US & Canada",
+     "role": "Largest",
+     "driver": "Carrier leasing; straight-line revenue down"
+    },
+    {
+     "match": "Property Latin America",
+     "label": "Latin America",
+     "role": "Currency-exposed",
+     "driver": "Escalators and new leases"
+    },
+    {
+     "match": "Property Africa APAC",
+     "label": "Africa & APAC",
+     "role": "Fastest towers",
+     "driver": "Escalators linked to inflation"
+    },
+    {
+     "match": "Property Data Centers",
+     "label": "Data centers",
+     "role": "Growth engine",
+     "driver": "CoreSite leasing, +16% cash revenue"
+    },
+    {
+     "match": "Property Europe",
+     "label": "Europe",
+     "role": "Steady",
+     "driver": "Escalators and new tenants"
+    },
+    {
+     "match": "Services",
+     "label": "Services",
+     "role": "Small",
+     "driver": "Site development work"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest independent tower company in the world, ahead of Crown Castle and SBA Communications.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Tower sites that are hard to replicate",
+    "Long contracts with escalators",
+    "Multiple tenants per tower",
+    "Interconnection ecosystems at CoreSite"
+   ],
+   "threat": "Carrier consolidation and lower network spending; satellite connectivity at the edges."
+  },
+  "what_numbers_say": [
+   {
+    "t": "AFFO per share +3.2%",
+    "d": "$2.87 in Q3; full year guided $11.04 to $11.16."
+   },
+   {
+    "t": "Organic growth 1.1%",
+    "d": "Organic tenant billings; total property revenue +4.5%."
+   },
+   {
+    "t": "Data centers +16%",
+    "d": "CoreSite cash revenue growth, outlook raised again."
+   },
+   {
+    "t": "Leverage 4.9x",
+    "d": "Net debt $35.7B; buybacks resumed with $3.1B available."
+   }
+  ],
+  "balance": {
+   "read": "Leverage down to 4.9x, investment grade, refinancing maturities steadily.",
+   "facts": [
+    "Total debt $37.6B; cash $1.9B",
+    "$1.6B of new notes issued in September; $1.6B repaid in September and October",
+    "Quarterly dividend $1.79, +5.3%"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Straight-line revenue declining",
+    "evidence": "Non-cash straight-line revenue swung to -$24M from +$28M, lowering reported growth about 2 points this year.",
+    "severity": "info"
+   },
+   {
+    "flag": "Equity investment losses",
+    "evidence": "Unrealised losses of about $72M on equity investments lowered net income in the quarter.",
+    "severity": "info"
+   },
+   {
+    "flag": "Slow organic growth",
+    "evidence": "Organic tenant billings growth of 1.1% is low for a tower company.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: segment outlook, slow US towers and fast data centers",
+   "margin_end": "Judgment: AFFO margin roughly flat",
+   "share_chg": "Sourced: buybacks under the enlarged program",
+   "exit_pe": "Judgment: price-to-AFFO held near 17x"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Towers grow low single digits, data centers mid-teens; AFFO per share grows about 5% with buybacks.",
+    "needs": "No major carrier churn"
+   },
+   "downside": {
+    "story": "Carrier spending stays weak and rates stay high; the multiple falls toward 14x AFFO.",
+    "needs": "Organic billings growth below zero"
+   },
+   "upside": {
+    "story": "Carrier leasing recovers with new network builds and AI traffic; organic growth returns to 4% to 5%.",
+    "needs": "US leasing acceleration in 2027"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Carrier spending stays weak",
+    "how": "US carriers have cut network capex; tower leasing slows with it.",
+    "watch": "Organic tenant billings growth",
+    "trip": "t1",
+    "sev": "high",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Interest rates",
+    "how": "A leveraged REIT refinances debt at higher rates and competes with bond yields.",
+    "watch": "Interest expense and multiple",
+    "trip": "t3",
+    "sev": "medium",
+    "cat": "Rates"
+   },
+   {
+    "cause": "Currency",
+    "how": "International towers earn in local currencies; a strong dollar lowers reported results.",
+    "watch": "Currency assumptions in the outlook",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Currency"
+   },
+   {
+    "cause": "Data center competition",
+    "how": "Hyperscalers build their own capacity; CoreSite depends on interconnection demand.",
+    "watch": "Data Centers growth",
+    "trip": "t2",
+    "sev": "medium",
+    "cat": "Competitive"
+   },
+   {
+    "cause": "Carrier consolidation and churn",
+    "how": "Mergers and exits remove tenants from shared sites.",
+    "watch": "Churn disclosures",
+    "trip": null,
+    "sev": "low",
+    "cat": "Structural"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "American Tower has the most diversified portfolio, the data center business and the lowest leverage among the three US tower companies.",
+   "why_not": "SBA Communications trades at a lower GAAP multiple, and Crown Castle offers more US-only exposure for a recovery.",
+   "peers_note": "Peer P/E multiples are on GAAP earnings; tower companies are usually compared on price to AFFO, which this page uses for the target."
+  },
+  "questions": [
+   "When does US carrier leasing recover?",
+   "Is CoreSite worth more inside American Tower or outside it?",
+   "What return does a 3.8% yield plus 5% growth give against a 9% cost of equity?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "American Tower Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001053507&type=10-Q",
+    "date": "2026-10-28"
+   },
+   {
+    "tier": "A",
+    "title": "American Tower Form 8-K, Q3 2026 earnings release",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001053507&type=8-K",
+    "date": "2026-10-27"
+   }
+  ],
+  "title": "Slow towers, fast data centers",
+  "lead": "We rate American Tower {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Data centers grow 16% and leverage is repaired, but organic tower growth is 1%, and at 17x AFFO the stock is priced for that.",
+  "call_reason": "Fairly priced, slow growth: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Property revenue grew 4.5% in the third quarter, but organic tenant billings only 1.1%. Data centers grew 16% and the full-year outlook was raised for the third time."
+   },
+   {
+    "label": "Moat",
+    "text": "Tower sites that are hard to replicate, long contracts with escalators and several tenants per tower. Carrier consolidation and lower network spending are the threats."
+   },
+   {
+    "label": "Profitability",
+    "text": "Property gross margin is 73.5% and adjusted EBITDA margin 65.8%. AFFO per share grew 3.2% to $2.87."
+   },
+   {
+    "label": "Capital",
+    "text": "Net leverage fell to 4.9x, buybacks resumed and the board added $2.0B of authorisation. The dividend yields about 3.8%."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} On price to AFFO, the measure used here, the stock trades at about 17x."
+   }
+  ],
+  "thesis_long": [
+   "American Tower is a landlord to mobile carriers and data center tenants. Its tower leases run for years with built-in escalators, and its CoreSite data centers are growing about 16% a year. This year the company raised its outlook three times, cut leverage to 4.9x and restarted buybacks.",
+   "The weak spot is US towers. Organic tenant billings grew only 1.1% in the quarter and US & Canada property revenue is guided down about 3%, partly because non-cash straight-line revenue is shrinking but also because carriers are spending less on networks. Growth now depends on international escalators and data centers.",
+   "Our base case grows AFFO per share about 5% a year with the multiple held near 17x, which with a 3.8% dividend earns about the cost of equity over 12 months. We would turn positive if organic billings growth returned above 4%, and negative if it turned negative."
+  ],
+  "upside_risks": [
+   {
+    "cause": "US leasing recovers",
+    "how": "A new round of carrier network builds would lift organic growth quickly on a high-margin base."
+   },
+   {
+    "cause": "Value of CoreSite recognised",
+    "how": "A sale or separate valuation of the data center business could show more value than the blended multiple implies."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "CCI",
+   "SBAC"
+  ]
+ }
+}

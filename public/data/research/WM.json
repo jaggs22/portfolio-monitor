@@ -1,0 +1,455 @@
+{
+ "ticker": "WM",
+ "name": "Waste Management",
+ "depth": "deep",
+ "as_of": "2026-10-27",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Pricing power in a landfill oligopoly, compounding cash flow; the valuation already assumes it.",
+  "thesis": "WM grew revenue 6.3% in the third quarter on 5.8% core price, with volume slightly down by choice, and lifted nine-month free cash flow 42% as heavy investment in recycling and renewable gas winds down. Healthcare Solutions (the former Stericycle) is finally adding profit. At about 29x earnings the price already reflects a dependable compounder."
+ },
+ "base": {
+  "eps0": 8.1,
+  "eps_label": "FY2026E adjusted EPS: nine months plus Q4 on the third-quarter trend, in line with consensus",
+  "rev0": 26.45,
+  "shares0": 0.4,
+  "div": 3.78,
+  "rev_label": "FY2026E revenue ($B): top of the $26.275B to $26.475B guidance range, as management now expects"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 5.5,
+   "bear": 3.5,
+   "bull": 7,
+   "kind": "sourced",
+   "why": "Core price of 5.8% and collection and disposal yield of 3.4% drive growth while volume is flat to slightly down, as WM sheds low-margin residential contracts. Recycling and renewable energy add volume from completed projects. The base case holds about 5.5% a year.",
+   "source": "WM Q3 2026 release"
+  },
+  "margin_end": {
+   "base": 13.5,
+   "bear": 11.5,
+   "bull": 14.5,
+   "kind": "judgment",
+   "why": "Net margin is about 12% today. Price-to-cost spread and Healthcare Solutions synergies add margin; higher fuel and risk management costs took 80 basis points in the quarter. The base case adds about a point over three years as sustainability capex rolls off.",
+   "source": "Q3 2026 release (margin bridge)"
+  },
+  "share_chg": {
+   "base": -1.2,
+   "bear": -0.5,
+   "bull": -1.8,
+   "kind": "sourced",
+   "why": "WM expects to buy back $2B of shares in 2026 against a market value near $95B, about 2% a year before employee grants.",
+   "source": "Q3 2026 release (capital return)"
+  },
+  "exit_pe": {
+   "base": 27,
+   "bear": 22,
+   "bull": 30,
+   "kind": "judgment",
+   "why": "Today's multiple is about 29x 2026 adjusted EPS, below Republic Services and Waste Connections. The base case assumes a small de-rating as growth settles in mid single digits.",
+   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Price, not volume",
+   "claim": "Core price rose 5.8% while collection and disposal volume fell 0.4%, as WM shed low-margin residential work.",
+   "evidence": [
+    {
+     "t": "Revenue $6,846M, +6.3%; collection and disposal yield 3.4%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does core price stay above 5% as inflation eases?"
+  },
+  {
+   "title": "Cash flow is inflecting",
+   "claim": "Nine-month free cash flow rose to $3.01B from $2.11B as recycling and renewable natural gas investments are completed.",
+   "evidence": [
+    {
+     "t": "Operating cash flow $4.87B, +12%; 18th new renewable natural gas facility opened",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does free cash flow reach the top of the $3.75B to $3.85B guide?"
+  },
+  {
+   "title": "Healthcare Solutions is turning",
+   "claim": "Revenue in the former Stericycle business grew 3.7% and operating EBITDA more than 30%.",
+   "evidence": [
+    {
+     "t": "Healthcare Solutions added $41M of income from operations",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does the segment reach a double-digit operating margin?"
+  },
+  {
+   "title": "Most cash returned",
+   "claim": "WM returned $2.72B in nine months, more than 90% of free cash flow.",
+   "evidence": [
+    {
+     "t": "Q3: $580M of buybacks and $377M of dividends; $2B of buybacks expected for 2026",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does leverage stay near 3x EBITDA while buybacks continue?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 29x earnings for the largest landfill network in North America and steady pricing power.",
+  "ours": "A dependable compounder at a full price. Our base case grows EPS about 10% a year with a small de-rating, which earns about the cost of equity.",
+  "could_be_wrong": "If Healthcare Solutions and renewable energy lift margins faster, EPS growth could reach the low teens and support the multiple.",
+  "would_change_mind": "Core price below 4%, or the price nearer 24x earnings."
+ },
+ "moat": {
+  "rating": 5,
+  "summary": "Landfills that cannot be replicated, route density and long municipal contracts.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net debt about $23B, close to 3 times EBITDA after the Stericycle purchase; investment grade.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Adjusted EPS excludes about $0.10 of items in Q3: GAAP $2.05 vs adjusted $2.15",
+   "Nine-month free cash flow $3.01B, about 50% of adjusted operating EBITDA"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-01-28",
+   "label": "WM Q4 2026 earnings and 2027 guidance (date not confirmed)",
+   "confirmed": false,
+   "note": "2026 guide: revenue at the high end of $26.275B to $26.475B; adjusted operating EBITDA $8.15B to $8.25B; free cash flow at the high end of $3.75B to $3.85B.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "w1",
+   "text": "Core price below 4%",
+   "metric": "core_price",
+   "op": "<",
+   "threshold": 4,
+   "current": 5.8,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "w2",
+   "text": "Adjusted operating EBITDA margin below 29.5%",
+   "metric": "ebitda_margin",
+   "op": "<",
+   "threshold": 29.5,
+   "current": 31.0,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "w3",
+   "text": "Collection and disposal volume below -2%",
+   "metric": "volume",
+   "op": "<",
+   "threshold": -2,
+   "current": -0.4,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  }
+ ],
+ "risks": [
+  "Price fatigue.",
+  "Cost inflation.",
+  "Industrial slowdown.",
+  "Healthcare Solutions disappoints.",
+  "Commodity and energy prices."
+ ],
+ "lenses": {
+  "eisman": "Volume is falling and price is doing all the work; check how long customers accept 6% increases.",
+  "munger": "Nobody builds a new landfill next to your town. That is a moat.",
+  "buffett": "A toll on what every household throws away; the price is full.",
+  "hohn": "Pricing power and irreplaceable assets; watch that the Stericycle deal earns its cost of capital."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Waste Management Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000823768&type=8-K",
+   "date": "2026-10-27"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "2027 guidance not given until the Q4 report.",
+  "Landfill capacity and remaining life not retrieved.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 and 2027 guidance come in late January; this review refreshes after the print.",
+  "headline": "Steady pricing power and a cash flow upswing as big investments finish. Quality is fully priced.",
+  "model": "WM collects rubbish from homes and businesses, takes it to its own transfer stations and landfills, and earns more from recycling, landfill gas turned into renewable natural gas, and medical waste through Healthcare Solutions.",
+  "how_it_earns": [
+   {
+    "k": "Collection",
+    "v": "Commercial, industrial and residential pickup on long contracts. Priced up every year."
+   },
+   {
+    "k": "Landfill and transfer",
+    "v": "Disposal fees at landfills it owns. The highest-margin and hardest-to-copy asset."
+   },
+   {
+    "k": "Recycling and renewable energy",
+    "v": "Sells recycled materials and renewable natural gas from landfills."
+   },
+   {
+    "k": "Healthcare Solutions",
+    "v": "Medical waste and document shredding (the former Stericycle)."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported segments; the two regional tiers make up collection and disposal. Operating margin is segment income from operations over revenue.",
+   "rows": [
+    {
+     "match": "East Tier",
+     "label": "East tier",
+     "role": "Core",
+     "driver": "Collection and disposal pricing"
+    },
+    {
+     "match": "West Tier Region Areas",
+     "label": "West tier",
+     "role": "Core",
+     "driver": "Collection and disposal pricing"
+    },
+    {
+     "match": "Healthcare Solutions",
+     "label": "Healthcare Solutions",
+     "role": "Turnaround",
+     "driver": "Synergies; operating EBITDA up over 30%"
+    },
+    {
+     "match": "Recycling Processing And Sales",
+     "label": "Recycling",
+     "role": "Commodity-linked",
+     "driver": "Recycled commodity prices up about 20%"
+    },
+    {
+     "match": "Renewable Energy",
+     "label": "Renewable energy",
+     "role": "Fastest growth",
+     "driver": "New renewable natural gas plants"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest waste company in North America by revenue, landfill network and collection fleet, ahead of Republic Services and Waste Connections.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Landfills that are almost impossible to permit new",
+    "Route density",
+    "Long municipal and commercial contracts",
+    "Scale in recycling and landfill gas"
+   ],
+   "threat": "Regulation of landfills and emissions, and slower industrial activity."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Price +5.8%",
+    "d": "Core price; collection and disposal volume -0.4%."
+   },
+   {
+    "t": "EBITDA +5.8%",
+    "d": "Adjusted operating EBITDA $2.12B; margin 31.0%, down 10bp on fuel and risk management costs."
+   },
+   {
+    "t": "Free cash flow +42%",
+    "d": "$3.01B in nine months as growth capex winds down."
+   },
+   {
+    "t": "Healthcare Solutions turning",
+    "d": "Revenue +3.7%; operating EBITDA up more than 30%."
+   }
+  ],
+  "balance": {
+   "read": "Leverage near 3 times EBITDA after the Stericycle deal, falling as free cash flow rises.",
+   "facts": [
+    "Net debt about $23B",
+    "$2B of buybacks planned in 2026",
+    "Dividend $3.78 a share"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Volume is shrinking by choice",
+    "evidence": "Collection and disposal volume -0.4% as WM sheds low-margin residential contracts and after national account losses.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Cost pressure",
+    "evidence": "Operating expenses rose to 59.8% of revenue from 58.9% on fuel and risk management costs.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Adjusted vs reported",
+    "evidence": "Q3 adjusted EPS $2.15 vs GAAP $2.05; the release reconciles the $0.10 of adjustments.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: core price and yield, flat volume",
+   "margin_end": "Judgment: price-to-cost spread and synergies, offset by costs",
+   "share_chg": "Sourced: $2B a year of buybacks",
+   "exit_pe": "Judgment: small de-rating to the high 20s"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Price of 5% to 6% with flat volume; free cash flow keeps rising; EPS grows about 10%.",
+    "needs": "Core price above 4%"
+   },
+   "downside": {
+    "story": "Industrial slowdown cuts volume while cost inflation persists; the multiple falls toward 22x.",
+    "needs": "Volume below -2%"
+   },
+   "upside": {
+    "story": "Healthcare Solutions and renewable energy lift margins faster; EPS grows in the low teens.",
+    "needs": "EBITDA margin above 32%"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Price fatigue",
+    "how": "Customers have accepted near-6% price increases for years; slower inflation or competition could cap them.",
+    "watch": "Core price",
+    "trip": "w1",
+    "sev": "medium",
+    "cat": "Pricing"
+   },
+   {
+    "cause": "Cost inflation",
+    "how": "Fuel and risk management costs took 80 basis points of margin in the quarter.",
+    "watch": "Operating expenses as a share of revenue",
+    "trip": "w2",
+    "sev": "medium",
+    "cat": "Cost"
+   },
+   {
+    "cause": "Industrial slowdown",
+    "how": "Roll-off and special waste volumes fall when construction and industry slow.",
+    "watch": "Collection and disposal volume",
+    "trip": "w3",
+    "sev": "medium",
+    "cat": "Cycle"
+   },
+   {
+    "cause": "Healthcare Solutions disappoints",
+    "how": "The Stericycle purchase raised leverage; the return depends on synergies.",
+    "watch": "Healthcare Solutions margin",
+    "trip": null,
+    "sev": "low",
+    "cat": "Execution"
+   },
+   {
+    "cause": "Commodity and energy prices",
+    "how": "Recycled commodity and renewable fuel credit prices swing earnings in two smaller segments.",
+    "watch": "Commodity price disclosures",
+    "trip": null,
+    "sev": "low",
+    "cat": "Commodity"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "WM has the largest landfill network and is cheaper than Republic Services and Waste Connections on next-year earnings.",
+   "why_not": "Republic and Waste Connections have no large integration to digest; WM's discount partly reflects Healthcare Solutions.",
+   "peers_note": "GFL reports in Canadian dollars; its multiples are computed in its own currency."
+  },
+  "questions": [
+   "How long can price do all the work while volume shrinks?",
+   "When does Healthcare Solutions earn its cost of capital?",
+   "Is 29x right for 10% EPS growth?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Waste Management Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000823768&type=10-Q",
+    "date": "2026-10-28"
+   },
+   {
+    "tier": "A",
+    "title": "Waste Management Form 8-K, Q3 2026 earnings release",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000823768&type=8-K",
+    "date": "2026-10-27"
+   }
+  ],
+  "title": "Pricing power, fully priced",
+  "lead": "We rate Waste Management {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Pricing power and rising free cash flow make it a dependable compounder, our next-year EPS is {vs_cons} consensus, and the multiple already reflects it.",
+  "call_reason": "A dependable compounder at a fair price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Revenue grew 6.3% in the third quarter on 5.8% core price; collection and disposal volume fell 0.4% as WM shed low-margin work."
+   },
+   {
+    "label": "Moat",
+    "text": "The largest landfill network in North America. New landfills are almost impossible to permit, so disposal pricing keeps rising."
+   },
+   {
+    "label": "Profitability",
+    "text": "Adjusted operating EBITDA margin was 31.0%, down 10 basis points as fuel and risk management costs offset pricing and Healthcare Solutions gains."
+   },
+   {
+    "label": "Capital",
+    "text": "Nine-month free cash flow rose 42% to $3.01B, and more than 90% went back to shareholders. Net debt is about 3 times EBITDA."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} It is cheaper than Republic Services and Waste Connections."
+   }
+  ],
+  "thesis_long": [
+   "WM owns the largest network of landfills, transfer stations and collection trucks in North America, and new landfills are almost impossible to permit. That gives it steady pricing power: core price rose 5.8% in the third quarter, enough to grow revenue 6.3% even with volume slightly down.",
+   "Two things are improving. Free cash flow rose 42% in nine months as heavy spending on recycling plants and renewable natural gas facilities winds down, and Healthcare Solutions, bought as Stericycle, grew operating EBITDA more than 30%. Against that, fuel and risk management costs are rising and collection volume is shrinking.",
+   "Our base case grows EPS about 10% a year with a small de-rating from 29x, which earns about the cost of equity over 12 months. We would turn positive if Healthcare Solutions reached a double-digit margin or the price fell nearer 24x, and negative if core price slipped below 4%."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Faster margin gains",
+    "how": "Healthcare Solutions synergies and new renewable gas plants could lift EBITDA margin above 32%."
+   },
+   {
+    "cause": "Capex falls further",
+    "how": "As growth projects finish, free cash flow conversion could rise well above 50% of EBITDA, funding larger buybacks."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "RSG",
+   "WCN",
+   "GFL"
+  ]
+ }
+}

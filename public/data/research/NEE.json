@@ -1,0 +1,448 @@
+{
+ "ticker": "NEE",
+ "name": "NextEra Energy",
+ "depth": "deep",
+ "as_of": "2026-10-21",
+ "horizon": 3,
+ "header": {
+  "one_liner": "America's largest clean-energy developer plus a Florida utility, about to absorb Dominion; 8%+ EPS growth at 21x.",
+  "thesis": "NextEra grew adjusted EPS 9.7% in the third quarter, with Florida Power & Light earnings up about 11% and the renewables and storage backlog at 36.7 GW. It agreed in May to buy Dominion Energy in an all-stock deal expected to close in the second half of 2027, which raises its regulated growth target. The plan is credible; the price pays for most of it."
+ },
+ "base": {
+  "eps0": 4.02,
+  "eps_label": "FY2026E adjusted EPS: top of the $3.92 to $4.02 guidance range, which management is targeting",
+  "rev0": 30.6,
+  "shares0": 2.09,
+  "div": 2.49,
+  "rev_label": "FY2026E operating revenues ($B), near consensus; reported revenue swings with derivative marks"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 9,
+   "bear": 5,
+   "bull": 11,
+   "kind": "sourced",
+   "why": "Management targets adjusted EPS growth of 8% or more a year through 2032 off a 2025 base of $3.71. FPL's regulatory capital employed grew 9.2% and the backlog is 36.7 GW. The base case grows revenue about 9% a year on a standalone basis; the Dominion deal is not modelled until it closes.",
+   "source": "NextEra Q3 2026 release (guidance, backlog); 10-Q"
+  },
+  "margin_end": {
+   "base": 27.5,
+   "bear": 25,
+   "bull": 29,
+   "kind": "judgment",
+   "why": "Adjusted net margin is about 27% of revenue. The base case holds it flat: rate-base growth at FPL is steady, while NEER margins depend on tax credits and contract prices.",
+   "source": "Q3 2026 release; engine judgment"
+  },
+  "share_chg": {
+   "base": 1,
+   "bear": 2,
+   "bull": 0.5,
+   "kind": "judgment",
+   "why": "NextEra funds growth partly with equity and equity units, adding about 1% to the share count a year. The Dominion deal would issue about 0.81 NextEra shares per Dominion share at close, but also adds Dominion's earnings, so it is left out of this standalone model.",
+   "source": "10-Q (merger agreement terms); engine judgment"
+  },
+  "exit_pe": {
+   "base": 19.5,
+   "bear": 16,
+   "bull": 22,
+   "kind": "judgment",
+   "why": "Today's multiple is about 21x 2026 adjusted EPS, above Duke and Southern. The base case assumes a small de-rating toward the regulated-utility range while the merger is pending.",
+   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Both businesses are growing",
+   "claim": "Adjusted EPS rose 9.7% to $1.24: FPL net income up about 11% and NEER adjusted earnings up about 13%.",
+   "evidence": [
+    {
+     "t": "Adjusted earnings $2.592B vs $2.348B; FPL net income $1.62B vs $1.463B",
+     "src": "Q3 2026 release"
+    },
+    {
+     "t": "FPL regulatory capital employed +9.2%",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Does adjusted EPS land at the top of the $3.92 to $4.02 range?"
+  },
+  {
+   "title": "The backlog keeps filling",
+   "claim": "NEER added 3.7 GW in the quarter, including 2.4 GW of battery storage; the backlog is about 36.7 GW.",
+   "evidence": [
+    {
+     "t": "1.8 GW placed in service since July",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Do additions stay above 3 GW a quarter as tax credits phase down?"
+  },
+  {
+   "title": "Dominion changes the company",
+   "claim": "An all-stock merger, 0.8138 NextEra shares per Dominion share, expected to close in the second half of 2027.",
+   "evidence": [
+    {
+     "t": "Shareholders of both companies approved on 3 September; Virginia and South Carolina orders expected January 2027",
+     "src": "Q3 2026 release; 10-Q"
+    }
+   ],
+   "test": "Do the state commissions approve without heavy conditions?"
+  },
+  {
+   "title": "Data centers are a new channel",
+   "claim": "Federal hub projects totalling about 16.5 GW and a planned Paducah campus point to large-load growth.",
+   "evidence": [
+    {
+     "t": "$5.7B of initial funding secured for hub projects year to date",
+     "src": "Q3 2026 release"
+    }
+   ],
+   "test": "Do data center contracts convert into owned, regulated or contracted assets?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 21x 2026 adjusted EPS for 8%+ growth and the largest clean-energy pipeline in the US.",
+  "ours": "The growth plan is credible and the Dominion deal adds regulated rate base. Our base case grows EPS about 8% a year and lets the multiple drift slightly, which earns about the cost of equity.",
+  "could_be_wrong": "If data center demand turns the backlog into faster growth and the merger closes cleanly, 9%+ growth supports a higher multiple.",
+  "would_change_mind": "Merger approval with heavy conditions, or backlog additions below 2 GW a quarter."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "The largest renewables and storage developer in the US, with supply chain scale, plus Florida's largest regulated utility.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net debt about $96B, about 6.7 times EBITDA: high, as usual for a utility building at this pace.",
+  "leverage_ok": false,
+  "incentive_note": null,
+  "checks": [
+   "GAAP EPS swings with derivative marks: Q3 GAAP $2.28 vs adjusted $1.24",
+   "Merger-related expenses of $51M in nine months"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-01-15",
+   "label": "Virginia and South Carolina orders on the Dominion merger (expected January 2027)",
+   "confirmed": false,
+   "note": "Virginia hearings in November, South Carolina in December; North Carolina hearings begin February 2027.",
+   "importance": "High"
+  },
+  {
+   "date": "2027-01-27",
+   "label": "NextEra Q4 2026 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "2026 adjusted EPS guide $3.92 to $4.02, targeting the high end.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "n1",
+   "text": "Quarterly backlog additions below 2 GW",
+   "metric": "backlog",
+   "op": "<",
+   "threshold": 2,
+   "current": 3.7,
+   "unit": "GW",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "n2",
+   "text": "FPL earnings growth below 7%",
+   "metric": "fpl",
+   "op": "<",
+   "threshold": 7,
+   "current": 10.7,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "Q3 2026 release"
+  },
+  {
+   "id": "n3",
+   "text": "Net debt above 7.5 times EBITDA",
+   "metric": "leverage",
+   "op": ">",
+   "threshold": 7.5,
+   "current": 6.7,
+   "unit": "x",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "Peer table"
+  }
+ ],
+ "risks": [
+  "Merger approval and integration.",
+  "Clean-energy policy.",
+  "Interest rates.",
+  "Florida regulation and storms.",
+  "XPLR and related parties."
+ ],
+ "lenses": {
+  "eisman": "Ignore GAAP, which swings with hedges, and watch how much equity it takes to fund the backlog.",
+  "munger": "Regulated monopolies with growth are rare; the merger adds execution risk.",
+  "buffett": "He owns utilities through Berkshire Hathaway Energy; he would ask about the regulators more than the returns.",
+  "hohn": "A regulated compounder with a development engine attached; check the return on each gigawatt."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "NextEra Energy Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000753308/000075330826000077/neeq32026exhibit99.htm",
+   "date": "2026-10-21"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "Segment data not available from the XBRL instance; FPL and NEER figures are from the release.",
+  "Merger accretion per share not stated in the release.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Merger orders expected January 2027; this review refreshes then.",
+  "headline": "Two growth engines and a transforming merger. 8%+ EPS growth is credible; at 21x the shares already pay for it.",
+  "model": "NextEra owns Florida Power & Light, a regulated utility that earns an allowed return on what it invests, and NextEra Energy Resources, which builds wind, solar and battery projects and sells the power under long contracts.",
+  "how_it_earns": [
+   {
+    "k": "Florida Power & Light",
+    "v": "Regulated electricity for about 6 million Florida customers; earns on rate base."
+   },
+   {
+    "k": "Energy Resources",
+    "v": "Develops and owns renewables and storage; sells power under long contracts."
+   },
+   {
+    "k": "Transmission and gas",
+    "v": "Pipelines and transmission lines, regulated or contracted."
+   },
+   {
+    "k": "Dominion (pending)",
+    "v": "Regulated utilities in Virginia and the Carolinas, closing in the second half of 2027."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Segment revenue was not available from the filing's XBRL instance; see earnings by business on this page.",
+   "rows": [
+    {
+     "match": "FPL",
+     "label": "Florida Power & Light",
+     "role": "Regulated core",
+     "driver": "Rate base growth about 9%"
+    },
+    {
+     "match": "NEER",
+     "label": "Energy Resources",
+     "role": "Growth engine",
+     "driver": "Renewables and storage backlog 36.7 GW"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest US utility by market value and the largest developer of wind, solar and battery storage in North America.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Regulated franchise in Florida",
+    "Scale in renewables procurement and construction",
+    "Balance sheet and cost of capital",
+    "Transmission and interconnection positions"
+   ],
+   "threat": "Policy on clean-energy tax credits and regulators' decisions on the Dominion deal."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Adjusted EPS +9.7%",
+    "d": "$1.24 vs $1.13; GAAP $2.28 on derivative gains."
+   },
+   {
+    "t": "FPL +11%",
+    "d": "Net income $1.62B; regulatory capital employed +9.2%."
+   },
+   {
+    "t": "Backlog 36.7 GW",
+    "d": "3.7 GW added in the quarter, 2.4 GW of it battery storage."
+   },
+   {
+    "t": "Dominion on track",
+    "d": "Shareholder approvals done; state orders expected from January 2027."
+   }
+  ],
+  "balance": {
+   "read": "Leveraged by design: net debt about 6.7 times EBITDA, funded with debt, equity units and asset recycling.",
+   "facts": [
+    "Net debt about $96B",
+    "FPL capex $8.2B in nine months",
+    "Dividend growth guided at 6% a year from year-end 2026 through 2028"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "GAAP and adjusted diverge",
+    "evidence": "Q3 GAAP EPS $2.28 vs adjusted $1.24, mostly derivative marks.",
+    "severity": "info"
+   },
+   {
+    "flag": "Equity needs",
+    "evidence": "Growth at this pace needs regular equity and equity-unit issuance.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Related-party structure",
+    "evidence": "NextEra owns about 52.4% of XPLR Infrastructure and provides it services; amounts due from XPLR were about $348M.",
+    "severity": "watch"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: 8%+ EPS growth target and rate-base growth",
+   "margin_end": "Judgment: held flat",
+   "share_chg": "Judgment: about 1% a year of equity issuance, standalone",
+   "exit_pe": "Judgment: small de-rating toward utility peers"
+  },
+  "scenarios": {
+   "base": {
+    "story": "FPL grows rate base about 9%; NEER adds 3 to 4 GW a quarter; adjusted EPS grows about 8%.",
+    "needs": "Merger approved on reasonable terms"
+   },
+   "downside": {
+    "story": "Tax-credit changes and higher rates cut renewables returns; merger conditions add costs; the multiple falls toward 16x.",
+    "needs": "Backlog additions below 2 GW a quarter"
+   },
+   "upside": {
+    "story": "Data center demand accelerates both utilities and the backlog; EPS grows 9%+ as targeted for the combined company.",
+    "needs": "Data center hubs convert into owned assets"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Merger approval and integration",
+    "how": "Virginia, North Carolina and South Carolina regulators must approve; conditions or delays would cost money and time.",
+    "watch": "State commission orders",
+    "trip": null,
+    "sev": "high",
+    "cat": "Regulatory"
+   },
+   {
+    "cause": "Clean-energy policy",
+    "how": "Tax credits underpin renewables returns; changes reduce the value of new projects.",
+    "watch": "Backlog additions",
+    "trip": "n1",
+    "sev": "high",
+    "cat": "Policy"
+   },
+   {
+    "cause": "Interest rates",
+    "how": "A utility this leveraged is sensitive to rates through both funding costs and the multiple.",
+    "watch": "10-year Treasury yield",
+    "trip": "n3",
+    "sev": "medium",
+    "cat": "Rates"
+   },
+   {
+    "cause": "Florida regulation and storms",
+    "how": "FPL's returns depend on Florida regulators; hurricanes bring cost recovery disputes.",
+    "watch": "FPL earnings growth",
+    "trip": "n2",
+    "sev": "medium",
+    "cat": "Regulatory"
+   },
+   {
+    "cause": "XPLR and related parties",
+    "how": "Weakness at XPLR Infrastructure, 52.4% owned, can spill over to NextEra.",
+    "watch": "XPLR results",
+    "trip": null,
+    "sev": "low",
+    "cat": "Governance"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "NextEra grows faster than Duke, Southern and Dominion, with a development business they do not have.",
+   "why_not": "The premium is now small: about 20x next-year earnings against 18x to 19x for Duke, Southern and Dominion, with more leverage and merger risk.",
+   "peers_note": "Dominion is both a peer and the acquisition target; its price moves with NextEra's."
+  },
+  "questions": [
+   "Is the Dominion deal accretive per share, and when?",
+   "How exposed is the backlog to tax-credit changes?",
+   "Does 8%+ growth justify a premium to regulated peers?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "NextEra Energy Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000753308&type=10-Q",
+    "date": "2026-10-21"
+   },
+   {
+    "tier": "A",
+    "title": "NextEra Energy Form 8-K, Q3 2026 earnings release",
+    "url": "https://www.sec.gov/Archives/edgar/data/0000753308/000075330826000077/neeq32026exhibit99.htm",
+    "date": "2026-10-21"
+   }
+  ],
+  "title": "Growth plan credible, price fair",
+  "lead": "We rate NextEra Energy {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Both businesses are growing and the Dominion merger adds regulated rate base, but 8%+ EPS growth is largely in the price, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Credible growth at a fair price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Adjusted EPS grew 9.7% in the third quarter, with Florida Power & Light up about 11%. The backlog is 36.7 GW and management targets 8%+ EPS growth a year through 2032."
+   },
+   {
+    "label": "Moat",
+    "text": "A regulated Florida franchise plus the largest renewables and storage developer in the US. Tax-credit policy and regulators set the limits."
+   },
+   {
+    "label": "Profitability",
+    "text": "FPL earns its allowed return on a rate base growing about 9%; NEER adjusted earnings grew about 13%. GAAP results swing with derivative marks."
+   },
+   {
+    "label": "Capital",
+    "text": "Net debt is about 6.7 times EBITDA and growth needs regular equity. The all-stock Dominion merger is expected to close in the second half of 2027."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} The premium to Duke and Southern is now small."
+   }
+  ],
+  "thesis_long": [
+   "NextEra combines Florida's largest regulated utility with the largest developer of wind, solar and storage in North America. Both are growing: adjusted EPS rose 9.7% in the third quarter, FPL's capital employed grew 9.2%, and the renewables and storage backlog reached 36.7 GW after 3.7 GW of additions. Data center demand is adding a new channel through federal hub projects and owned generation.",
+   "In May NextEra agreed to buy Dominion Energy for about 0.81 NextEra shares per Dominion share, adding regulated utilities in Virginia and the Carolinas. Shareholders have approved; state commissions decide from January 2027 and closing is expected in the second half of 2027. The combined company targets 9%+ EPS growth, but the deal brings approval risk and more leverage to a company already at about 6.7 times EBITDA.",
+   "Our standalone base case grows EPS about 8% a year with a small de-rating from 21x, which earns about the cost of equity over 12 months. We would turn positive on a clean merger approval with data center contracts converting into owned assets, and negative on heavy merger conditions or backlog additions below 2 GW a quarter."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Clean merger approval",
+    "how": "Approval without heavy conditions in January would remove the main overhang and support the 9%+ combined growth target."
+   },
+   {
+    "cause": "Data center demand",
+    "how": "Converting hub projects and large-load contracts into owned assets would lift growth above the plan."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "DUK",
+   "SO",
+   "D"
+  ]
+ }
+}

@@ -1,20 +1,20 @@
 {
  "ticker": "PG",
  "name": "Procter & Gamble",
- "depth": "lighter",
- "as_of": "2026-07-29",
+ "depth": "deep",
+ "as_of": "2026-10-22",
  "horizon": 3,
  "header": {
-  "one_liner": "Staples compounder at its slowest: 1% organic growth, an 8% EPS cost drag guided for FY27, and a yield that loses to Treasuries.",
-  "thesis": "FY26 core EPS rose 1% and FY27 guides to flat to +3%. At 22x against a 5.2% Treasury the engine's base case earns well below the hurdle."
+  "one_liner": "The steadiest compounder in staples: volume is growing again, but commodity costs eat this year's earnings growth.",
+  "thesis": "P&G grew organic sales 4% in the September quarter on 2.4% volume growth, but gross margin fell 160 basis points on commodity costs and product investment, and full-year core EPS is guided flat to up 3%. The business is not the debate; whether 23x earnings is right for low-single-digit EPS growth is."
  },
  "base": {
-  "eps0": 6.89,
-  "eps_label": "FY2026 core EPS",
-  "rev0": 87.0,
-  "shares0": 2.35,
-  "div": 4.29,
-  "rev_label": "FY2026 net sales ($B)"
+  "eps0": 7.0,
+  "eps_label": "FY2027E core EPS (year to June 2027): midpoint of guidance $6.89 to $7.11",
+  "rev0": 89.6,
+  "shares0": 2.405,
+  "div": 4.354,
+  "rev_label": "FY2027E net sales ($B): FY2026 $87.03B grown at the 3% midpoint of all-in guidance (includes Thorne)"
  },
  "probs": {
   "bear": 0.25,
@@ -23,138 +23,437 @@
  },
  "drivers": {
   "rev_cagr": {
-   "base": 2.5,
-   "bear": 0.5,
-   "bull": 4,
+   "base": 3,
+   "bear": 1,
+   "bull": 4.5,
    "kind": "sourced",
-   "why": "FY26 organic growth was 1% and FY27 guidance is 1% to 3%.",
-   "source": "P&G FY2026 release"
+   "why": "Fiscal 2027 all-in sales are guided up 2% to 4% and organic sales 1% to 3%, including the Thorne acquisition from 1 October. The September quarter grew 4% organically on 2.4% volume. The base case holds about 3% a year: volume plus modest pricing and mix.",
+   "source": "P&G FQ1 2027 release (guidance); 10-Q quarter ended 30 September 2026"
   },
   "margin_end": {
-   "base": 18.3,
-   "bear": 16.5,
-   "bull": 19.3,
+   "base": 19.5,
+   "bear": 17.5,
+   "bull": 20.5,
    "kind": "judgment",
-   "why": "Net margin is about 18.6% (core). FY27 carries about $1B of after-tax cost headwinds ($0.56 a share, an 8% drag), so the base case dips slightly.",
-   "source": "P&G FY2026 release; engine judgment"
+   "why": "Core net margin is about 19% today. Commodity costs are a $1.4B after-tax headwind this year, offset by productivity savings (120 basis points of gross margin in the quarter) and the restructuring plan. The base case recovers a little of the margin as commodity costs stabilise.",
+   "source": "FQ1 2027 release; 10-Q gross margin bridge"
   },
   "share_chg": {
-   "base": -0.8,
+   "base": -1,
    "bear": -0.5,
-   "bull": -1,
+   "bull": -1.5,
    "kind": "sourced",
-   "why": "About $5B of buybacks planned in FY27 against a $364B market cap.",
-   "source": "P&G FY2026 release"
+   "why": "P&G plans about $5B of buybacks in fiscal 2027 against a market value near $390B, roughly 1.3% a year before employee share dilution.",
+   "source": "FQ1 2027 release (capital return plan)"
   },
   "exit_pe": {
-   "base": 20,
-   "bear": 16.5,
-   "bull": 23,
+   "base": 22,
+   "bear": 19,
+   "bull": 25,
    "kind": "judgment",
-   "why": "Currently 22.2x on FY26 core EPS. A three-turn de-rating is assumed as growth stays at the low end.",
-   "source": "Engine judgment"
+   "why": "Today's multiple is about 23x fiscal 2027 core EPS. The base case assumes a slight de-rating while EPS growth stays in low single digits; the bear case is close to where P&G traded when growth stalled in the mid-2010s.",
+   "source": "Engine judgment; current multiple computed from price and guided core EPS"
   }
  },
  "pillars": [
   {
-   "title": "Growth has stalled at the low end",
-   "claim": "Organic sales +1% for FY26 and flat in Q4; FY27 guide is 1% to 3%.",
+   "title": "Volume-led growth is back",
+   "claim": "Net sales grew 4% with 2.4% volume growth, 1.1% favourable mix and only 0.4% pricing.",
    "evidence": [
     {
-     "t": "FY26 net sales $87.0B, +3%; organic +1%; Q4 organic flat",
-     "src": "FY2026 release"
+     "t": "Net sales $23.3B, +4.0%; organic sales +4.0%",
+     "src": "10-Q Q1 FY2027"
+    },
+    {
+     "t": "Fabric & Home Care organic +5% with volume +4%",
+     "src": "10-Q Q1 FY2027"
     }
    ],
-   "test": "Does organic growth reach 2% in the first half of FY27?"
+   "test": "Does volume stay positive while pricing stays low?"
   },
   {
-   "title": "Costs are the FY27 swing factor",
-   "claim": "About $1B after tax of raw material, energy and transport costs is an 8% EPS drag; guide core EPS $6.89 to $7.11.",
+   "title": "Costs absorb the growth",
+   "claim": "Gross margin fell 160 basis points to 49.8%: commodity costs and product investment took 280 basis points, productivity gave back 120.",
    "evidence": [
     {
-     "t": "Core EPS headwind $0.56 per share",
-     "src": "FY2026 release"
+     "t": "Commodity costs -140bp, product and packaging investment -140bp, productivity +120bp, tariffs +50bp",
+     "src": "10-Q gross margin bridge"
     }
    ],
-   "test": "Does commodity inflation fade before the second half?"
+   "test": "Does the commodity headwind ease in the second half?"
+  },
+  {
+   "title": "Restructuring funds reinvestment",
+   "claim": "A $2.0B before-tax portfolio and productivity plan, over half spent in fiscal 2026, cuts overhead while marketing rises.",
+   "evidence": [
+    {
+     "t": "SG&A flat at $5.7B; overhead down, marketing up",
+     "src": "10-Q Q1 FY2027"
+    }
+   ],
+   "test": "Does SG&A as a share of sales keep falling?"
+  },
+  {
+   "title": "Capital return is the floor",
+   "claim": "Over $10B of dividends and about $5B of buybacks this year, with net debt near one times EBITDA.",
+   "evidence": [
+    {
+     "t": "Dividend $1.0885 a quarter; Thorne bought for $3.9B cash on 1 October 2026",
+     "src": "FQ1 release; 10-Q"
+    }
+   ],
+   "test": "Is the buyback held after the Thorne purchase?"
   }
  ],
  "variant": {
-  "street": "Not retrieved.",
-  "ours": "A great brand portfolio at a full price in a 5.2% rate world. The engine's stance rests on the multiple.",
-  "could_be_wrong": "A rotation into defensives would re-rate the multiple above 22x.",
-  "would_change_mind": "Organic growth back above 3%."
+  "street": "The market pays about 23x fiscal 2027 core EPS for the most reliable earnings in staples.",
+  "ours": "The volume recovery is real but this year's EPS growth is flat to 3% because of commodity costs. Our base case earns roughly the cost of equity: a fair price for quality, not a bargain.",
+  "could_be_wrong": "If commodity costs fall and productivity savings drop through, EPS growth returns to the mid-to-high single digits and the multiple holds.",
+  "would_change_mind": "Organic sales growth below 2% for two quarters, or the price falling toward 20x core EPS."
  },
  "moat": {
-  "rating": 4,
-  "summary": "Brand portfolio with 50% gross margin and 22.7% operating margin; Walmart is about 16% of sales.",
-  "detail": "Existing card rates P&G Moderate."
+  "rating": 5,
+  "summary": "Category-leading brands, retailer scale and the largest advertising budget in household goods.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
  },
  "quality": {
-  "leverage_note": null,
-  "leverage_ok": null,
+  "leverage_note": "Net debt about $23.6B, close to one times EBITDA, rising slightly for the $3.9B Thorne purchase.",
+  "leverage_ok": true,
   "incentive_note": null,
-  "checks": []
+  "checks": [
+   "Core EPS adds back only incremental restructuring: FQ1 core $2.00 vs GAAP $1.97",
+   "Free cash flow productivity guided at 85% to 90%"
+  ]
  },
  "catalysts": [
   {
-   "date": "2026-10-22",
-   "label": "P&G fiscal Q1 2027 earnings (date not confirmed; typically third or fourth week of October)",
+   "date": "2027-01-21",
+   "label": "P&G fiscal Q2 2027 earnings (date not confirmed)",
    "confirmed": false,
-   "note": ""
+   "note": "FY2027 guide: organic sales +1% to +3%; core EPS $6.89 to $7.11.",
+   "importance": "High"
   }
  ],
  "tripwires": [
   {
    "id": "p1",
-   "text": "Organic sales growth below 1% in a quarter",
+   "text": "Organic sales growth below 2% in a quarter",
    "metric": "organic",
    "op": "<",
-   "threshold": 1,
-   "current": 0,
-   "unit": "% (Q4 actual)",
+   "threshold": 2,
+   "current": 4.0,
+   "unit": "%",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "FY2026 release"
+   "src": "10-Q Q1 FY2027"
   },
   {
    "id": "p2",
-   "text": "Core EPS guide cut below $6.89",
-   "metric": "guide",
+   "text": "Gross margin below 48.5%",
+   "metric": "gross_margin",
    "op": "<",
-   "threshold": 6.89,
-   "current": 7.0,
-   "unit": "$ (midpoint)",
+   "threshold": 48.5,
+   "current": 49.8,
+   "unit": "%",
    "drivers": [
     "margin_end"
    ],
-   "src": "FY2026 release"
+   "src": "10-Q Q1 FY2027"
+  },
+  {
+   "id": "p3",
+   "text": "Unit volume declines in a quarter",
+   "metric": "volume",
+   "op": "<",
+   "threshold": 0,
+   "current": 2.4,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "10-Q Q1 FY2027"
   }
  ],
  "risks": [
-  "Commodity and tariff costs.",
-  "Retailer concentration.",
-  "Private label share gains."
+  "Commodity and energy costs keep rising.",
+  "Consumers trade down.",
+  "Growth stays below the algorithm.",
+  "Higher rates lower the multiple.",
+  "Integration and portfolio moves."
  ],
- "lenses": {},
+ "lenses": {
+  "eisman": "Pricing added only 0.4%; check whether the volume gain is being bought with product investment that shows up as lower gross margin.",
+  "munger": "Brands this strong rarely become bad businesses; the risk is only paying too much for slow growth.",
+  "buffett": "A franchise he already knows well, at a price that pays the cost of equity and little more.",
+  "hohn": "Capital-light, high return on capital, pricing power: check that the restructuring savings reach the bottom line."
+ },
  "sources": [
   {
    "tier": "A",
-   "title": "Procter & Gamble Form 8-K, fiscal 2026 Q4 earnings release",
-   "url": "https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000093/fy2526q4amj8-kexhibit991.htm",
-   "date": "2026-07-29"
+   "title": "Procter & Gamble Form 8-K, fiscal Q1 2027 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm",
+   "date": "2026-10-22"
   },
   {
    "tier": "C",
-   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
-   "url": "https://site.financialmodelingprep.com",
-   "date": "2026-10-14"
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
   }
  ],
  "gaps": [
-  "Diluted share count estimated; not in the release.",
-  "Consensus not retrieved."
+  "Market share by category not retrieved in full.",
+  "Thorne revenue and margin not yet disclosed.",
+  "Fiscal Q2 report date not yet confirmed by the company."
  ],
- "base_period_end": "2026-06-30"
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q1 fiscal 2027 10-Q (quarter to 30 September 2026) and release. Q2 reports in January; this review refreshes after the print.",
+  "headline": "Volume is growing again and the brands are gaining share, but commodity costs take this year's EPS growth. Quality is fully priced.",
+  "model": "P&G sells everyday household and personal care brands: Tide, Pampers, Gillette, Oral-B, Olay, Pantene and Vicks among them. It earns by selling more units and charging more for better products, and spends heavily on advertising to keep shelf space.",
+  "how_it_earns": [
+   {
+    "k": "Fabric & Home Care",
+    "v": "Tide, Ariel, Downy, Dawn, Febreze. The largest segment, a third of sales."
+   },
+   {
+    "k": "Baby, Feminine & Family",
+    "v": "Pampers, Always, Bounty, Charmin. Most exposed to private label."
+   },
+   {
+    "k": "Beauty",
+    "v": "Pantene, Head & Shoulders, Olay, SK-II. Fastest growing this quarter."
+   },
+   {
+    "k": "Health & Grooming",
+    "v": "Oral-B, Crest, Vicks, Gillette. Highest margins; Thorne joins Health Care."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported segments. P&G discloses segment net earnings, not operating income, so margins are shown in the segment window rather than here.",
+   "rows": [
+    {
+     "match": "Fabric Home Care",
+     "label": "Fabric & Home Care",
+     "role": "Largest",
+     "driver": "Volume +4%, distribution gains and innovation"
+    },
+    {
+     "match": "Baby Feminine Family Care",
+     "label": "Baby, Feminine & Family",
+     "role": "Private-label pressure",
+     "driver": "Volume +2%, pricing -1%"
+    },
+    {
+     "match": "Beauty",
+     "label": "Beauty",
+     "role": "Fastest growth",
+     "driver": "Mix +2%, volume +2%, SK-II recovery"
+    },
+    {
+     "match": "Health Care",
+     "label": "Health Care",
+     "role": "Pricing power",
+     "driver": "Pricing +3%, mix +3%, volume -3%"
+    },
+    {
+     "match": "Grooming",
+     "label": "Grooming",
+     "role": "Highest margin",
+     "driver": "Innovation-led pricing +3%"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The world's largest household and personal care company, ahead of Unilever and Colgate-Palmolive, and number one or two in most of its categories.",
+  "moat": {
+   "rating": 5,
+   "sources": [
+    "Category-leading brands",
+    "Retailer scale and shelf space",
+    "Largest advertising budget in the sector",
+    "Manufacturing productivity"
+   ],
+   "threat": "Private label and retailer power in a slow-growth economy, not any single competitor."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Growth from volume, not price",
+    "d": "Organic sales +4% on volume +2.4% and pricing +0.4%. The pricing-led years are over."
+   },
+   {
+    "t": "Gross margin fell 160bp",
+    "d": "To 49.8%, on commodity costs and product investment, partly offset by productivity savings."
+   },
+   {
+    "t": "EPS barely grew",
+    "d": "Core EPS $2.00, +1%. Full-year guide is flat to +3%."
+   },
+   {
+    "t": "Commodities are the swing factor",
+    "d": "A $1.4B after-tax commodity headwind this year, plus $0.5B from interest, non-operating income and FX."
+   }
+  ],
+  "balance": {
+   "read": "Conservative: net debt about one times EBITDA and strong credit ratings, funding a $3.9B acquisition with debt.",
+   "facts": [
+    "Net debt about $23.6B at 30 September 2026",
+    "Thorne acquired for $3.9B cash on 1 October 2026",
+    "Current liabilities exceed current assets by $12.5B, funded by commercial paper"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Core EPS excludes restructuring",
+    "evidence": "The $2.0B restructuring plan runs over fiscal 2026 and 2027; the incremental part is excluded from core EPS.",
+    "severity": "info"
+   },
+   {
+    "flag": "Gross margin falling while volume rises",
+    "evidence": "Product and packaging investment cost 140bp of gross margin in the quarter: some of the volume gain is being paid for.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Cash conversion steady",
+    "evidence": "Operating cash flow $5.8B in the quarter, up $359M; free cash flow productivity guided at 85% to 90%.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: guided all-in sales growth, held near 3%",
+   "margin_end": "Judgment: partial recovery as commodity costs stabilise",
+   "share_chg": "Sourced: about $5B buybacks a year",
+   "exit_pe": "Judgment: slight de-rating at low-single-digit EPS growth"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Organic sales grow about 3%; productivity offsets most cost inflation; EPS grows low-to-mid single digits plus buybacks.",
+    "needs": "Commodity costs stop rising"
+   },
+   "downside": {
+    "story": "Consumers trade down to private label as commodity costs keep rising; margins shrink and the multiple falls toward 19x.",
+    "needs": "Volume turns negative while costs rise"
+   },
+   "upside": {
+    "story": "Commodity costs fall, productivity savings drop through and EPS growth returns to high single digits.",
+    "needs": "Gross margin back above 51%"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Commodity and energy costs keep rising",
+    "how": "Raw materials, energy and freight are guided as a $1.4B after-tax headwind this year. Further rises go straight to margin.",
+    "watch": "Gross margin bridge each quarter",
+    "trip": "p2",
+    "sev": "high",
+    "cat": "Cost"
+   },
+   {
+    "cause": "Consumers trade down",
+    "how": "Private label gains share when budgets tighten, especially in paper products and baby care.",
+    "watch": "Unit volume growth",
+    "trip": "p3",
+    "sev": "medium",
+    "cat": "Competitive"
+   },
+   {
+    "cause": "Growth stays below the algorithm",
+    "how": "P&G targets mid-single-digit organic growth; this year's guide is 1% to 3%. Two years below target would de-rate the stock.",
+    "watch": "Organic sales growth",
+    "trip": "p1",
+    "sev": "medium",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Higher rates lower the multiple",
+    "how": "Staples trade like bonds. With 10-year yields near 5%, a 23x multiple and 2.7% dividend yield face competition from risk-free income.",
+    "watch": "10-year Treasury yield",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Valuation"
+   },
+   {
+    "cause": "Integration and portfolio moves",
+    "how": "Thorne is P&G's largest acquisition in years and brand discontinuations cost 30 to 50bp of organic growth this year.",
+    "watch": "Health Care organic growth",
+    "trip": null,
+    "sev": "low",
+    "cat": "Execution"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "P&G has the most consistent organic growth and the highest return on capital among large household products companies.",
+   "why_not": "Colgate trades at a similar multiple; Unilever and Kimberly-Clark are much cheaper.",
+   "peers_note": "Unilever reports in euros; its multiples are computed in its own currency."
+  },
+  "questions": [
+   "Is the volume recovery bought with product investment that lowers gross margin?",
+   "How much of the commodity headwind reverses if oil prices fall?",
+   "Is 23x right for flat to 3% EPS growth?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Procter & Gamble Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=10-Q",
+    "date": "2026-10-22"
+   },
+   {
+    "tier": "A",
+    "title": "Procter & Gamble Form 8-K, fiscal Q1 2027 earnings release",
+    "url": "https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm",
+    "date": "2026-10-22"
+   }
+  ],
+  "title": "Volume back, margin squeezed",
+  "lead": "We rate Procter & Gamble {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Volume-led growth has returned, but commodity costs cap this year's EPS growth at 0% to 3%, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Quality at a fair price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Organic sales grew 4% in the September quarter, led by 2.4% volume growth. Full-year organic growth is guided at 1% to 3% and Thorne adds about a point of reported sales."
+   },
+   {
+    "label": "Moat",
+    "text": "Number one or two in most categories, with the largest advertising budget in the sector and retailer scale. Private label is the long-run threat, not rival brands."
+   },
+   {
+    "label": "Profitability",
+    "text": "Gross margin fell 160 basis points to 49.8% on commodity costs and product investment. Productivity savings recovered 120 basis points, but core EPS grew only 1%."
+   },
+   {
+    "label": "Capital",
+    "text": "Over $10B of dividends and about $5B of buybacks this year, with net debt near one times EBITDA after the $3.9B Thorne purchase."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Unilever and Kimberly-Clark offer similar quality at lower multiples."
+   }
+  ],
+  "thesis_long": [
+   "P&G is one of the most dependable earners in consumer staples. It returns about $15B a year to shareholders and earns a return on capital near 20%. The September quarter showed the shape of the next phase: growth from volume and mix, with almost no price increase.",
+   "The pressure is on cost. Commodity, energy and freight costs are guided as a $1.4B after-tax headwind this year, and product investment to win volume cost another 140 basis points of gross margin in the quarter. Together with higher interest costs they hold core EPS growth to 0% to 3%. At about 23x earnings the stock pays for P&G's long-run growth rate, not this year's.",
+   "Our base case grows sales about 3% a year and recovers a little margin as commodity costs stabilise, which earns roughly the cost of equity over 12 months. We would turn positive on gross margin back above 51% or the price nearer 20x earnings, and negative on two quarters of organic growth below 2%."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Commodity costs fall",
+    "how": "Lower oil and resin prices would reverse part of the $1.4B headwind and lift EPS growth into high single digits."
+   },
+   {
+    "cause": "Rates fall",
+    "how": "Staples re-rate when bond yields fall; a lower 10-year yield would support a higher multiple."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "CL",
+   "KMB",
+   "UL"
+  ]
+ }
 }

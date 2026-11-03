@@ -20,7 +20,7 @@
   const usd = (v) => '$' + Math.round(v || 0).toLocaleString('en-US');
   const bookUsd = () => (store.get('holdings_usd', false) ? L.cleanHoldings(state.holdings).reduce((a, x) => a + x.weight, 0) : 0);
   const nameOf = (t) => (state.uniMap && state.uniMap[t] ? state.uniMap[t].name : t);
-  const CORE = ['LIN', 'LLY', 'V'];
+  let CORE = ['LIN', 'LLY', 'V']; // replaced by every full-research name once the universe loads
 
   /* ---------- data ---------- */
   const getJson = (u, ms) => Promise.race([fetch(u, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)), new Promise((res) => setTimeout(() => res(null), ms || 6000))]).catch(() => null);
@@ -33,6 +33,7 @@
       const live = (await getJson('/api/baseline', 4000)) || (await getJson('data/baseline.json')) || { filings: {}, quotes: {} };
       state.data = { universe, cards: cards || {}, market, lenses: lenses || { lenses: [] }, research, live, digest: digest || {} };
       state.uniMap = Object.fromEntries(universe.map((u) => [u.ticker, u]));
+      CORE = universe.filter((u) => u.tier === 'core').map((u) => u.ticker);
       const known = new Set(universe.map((u) => u.ticker));
       state.holdings = state.holdings.filter((x) => known.has(x.ticker));
       if (!state.holdings.length) state.holdings = L.cleanHoldings(L.DEFAULT_HOLDINGS).filter((x) => known.has(x.ticker));
@@ -202,7 +203,7 @@
     const bookN = L.cleanHoldings(state.holdings).length;
     const A = [
       ['chat', 'Add your own research', 'Share a view on any stock; the analyst tests it and saves it', () => CHAT.open(null, { view: true }), 'hot'],
-      ['business', 'Read the research', `${CORE.map(nameOf).join(', ')} in full`, () => go('coverage')],
+      ['business', 'Read the research', `All ${CORE.length} companies: rating, target and full write-up`, () => go('coverage')],
       ['report', 'Open a sell-side report', 'Five pages, ready to save as PDF', () => pickCompany('Open a report', 'Choose a company.', '/report')],
       ['branch', 'Challenge a thesis', 'Dispute an assumption and watch the target move', () => pickCompany('Challenge a thesis', 'Choose a company, then tap any assumption.', '/thesis')],
       ['book', 'View your book', bookUsd() ? `${usd(bookUsd())} across ${bookN} stock${bookN === 1 ? '' : 's'}` : `${bookN} stocks`, () => go('book')],
@@ -294,9 +295,10 @@
         pm.move == null ? null : h('p', { class: 'sub' }, [pm.best ? `${nameOf(pm.best.ticker)} leads at ${fmt.spct(pm.best.change, 1)}` : null, pm.worst && pm.worst !== pm.best ? `${nameOf(pm.worst.ticker)} lags at ${fmt.spct(pm.worst.change, 1)}` : null].filter(Boolean).join('. ') + (pm.best ? '.' : ''))),
       btn('Edit holdings', holdingsWin, 'small')));
 
-    // core research cards
-    out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, 'Full research'), h('a', { href: '#/coverage' }, 'All coverage')),
-      h('div', { class: 'cos' }, CORE.map((t) => coCard(t)))));
+    // the call on each holding
+    const held = L.cleanHoldings(state.holdings).filter((x) => x.weight > 0).sort((a, b) => b.weight - a.weight).map((x) => x.ticker).filter((t) => CORE.includes(t));
+    out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, held.length ? 'Your holdings: the call' : 'Full research'), h('a', { href: '#/coverage' }, 'All coverage')),
+      h('div', { class: 'cos' }, (held.length ? held : CORE.slice(0, 3)).map((t) => coCard(t)))));
 
     // this week
     const events = [];
@@ -305,7 +307,7 @@
     const horizon = new Date(today.getTime() + 21 * 864e5).toISOString().slice(0, 10);
     const soon = events.filter((e) => e.date >= iso && e.date <= horizon).sort((a, b) => a.date.localeCompare(b.date));
     const watch = [];
-    CORE.concat(['MU', 'PG']).forEach((t) => { const r = CO.researchOf(t); if (!r) return; r.tripwires.forEach((tw) => { const s = CO.tripStatus(tw); if (s !== 'holding') watch.push({ t, tw, s }); }); });
+    held.concat(CORE.filter((t) => !held.includes(t))).forEach((t) => { const r = CO.researchOf(t); if (!r) return; r.tripwires.forEach((tw) => { const s = CO.tripStatus(tw); if (s !== 'holding') watch.push({ t, tw, s }); }); });
     out.push(h('section', { class: 'grid g2' },
       h('div', null, h('div', { class: 'sec-head' }, h('h2', null, 'Coming up')),
         soon.length ? h('div', { class: 'card list' }, soon.map((e) => h('button', { type: 'button', class: 'li', onclick: () => go('c/' + e.t) }, dateChip(e.date), h('div', { class: 'li-main' }, h('div', { class: 'li-title' }, e.label.replace(/ \(.*\)/, '')), h('div', { class: 'li-sub' }, nameOf(e.t) + ' · ' + (e.confirmed ? fmt.dayShort(e.date) : 'date not confirmed'))), icon('chev')))) : empty('Nothing scheduled in the next three weeks.')),
@@ -327,7 +329,7 @@
 
     // rest of coverage
     out.push(h('section', null, h('div', { class: 'sec-head' }, h('h2', null, 'Rest of coverage'), h('span', { class: 'small muted' }, 'Tap a name for its page')),
-      h('div', { class: 'mini-tiles' }, state.data.universe.filter((u) => !CORE.includes(u.ticker)).map((u) => {
+      h('div', { class: 'mini-tiles' }, state.data.universe.filter((u) => !held.includes(u.ticker)).map((u) => {
         const p = priceOf(u.ticker);
         return h('button', { type: 'button', class: 'mini', onclick: () => go('c/' + u.ticker) }, h('b', null, u.ticker), h('span', { class: 'muted' }, u.name), p ? chg(p.pct) : h('span', { class: 'muted' }, '–'));
       }))));

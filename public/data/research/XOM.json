@@ -1,0 +1,441 @@
+{
+ "ticker": "XOM",
+ "name": "Exxon Mobil",
+ "depth": "deep",
+ "as_of": "2026-11-02",
+ "horizon": 3,
+ "header": {
+  "one_liner": "Peak refining margins from Middle East disruption doubled earnings; we value Exxon on what lasts.",
+  "thesis": "Exxon earned $15.4B in the third quarter, double a year earlier, as supply restrictions through the Strait of Hormuz pushed refining margins to historic highs: Energy Products alone earned $7.2B against $1.8B. Upstream grew too, despite 273,000 fewer barrels a day from Middle East and Kazakhstan disruptions. The question is how much of this lasts once supply returns."
+ },
+ "base": {
+  "eps0": 12.6,
+  "eps_label": "FY2026E EPS excluding identified items: nine months about $8.90 (earnings $34.1B plus $2.7B of identified-item losses) plus a fourth quarter near the third-quarter run rate",
+  "rev0": 418.0,
+  "shares0": 4.09,
+  "div": 4.28,
+  "rev_label": "FY2026E total revenues ($B), near consensus, with Q3 at $113.2B"
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": -4,
+   "bear": -12,
+   "bull": 3,
+   "kind": "judgment",
+   "why": "Revenue rose about a third on higher prices and refining margins caused by Middle East supply disruption. The base case assumes prices and margins drift back toward their 10-year range as supply returns, offset partly by Permian, Guyana and LNG growth.",
+   "source": "Exxon 10-Q Q3 2026 (market overview, earnings drivers)"
+  },
+  "margin_end": {
+   "base": 10.5,
+   "bear": 8,
+   "bull": 12.5,
+   "kind": "judgment",
+   "why": "Net margin is about 12% this year with refining margins above their 10-year range. The base case brings it back toward 10%, still above the 2024 to 2025 level because of cost savings and advantaged barrels.",
+   "source": "10-Q Q3 2026; engine judgment on normalisation"
+  },
+  "share_chg": {
+   "base": -2.5,
+   "bear": -1.5,
+   "bull": -3,
+   "kind": "sourced",
+   "why": "Exxon repurchased $15.1B of stock in nine months, about 2.5% of its market value a year.",
+   "source": "10-Q Q3 2026 (distributions)"
+  },
+  "exit_pe": {
+   "base": 13,
+   "bear": 10.5,
+   "bull": 15,
+   "kind": "judgment",
+   "why": "Today's multiple is about 14x 2026 earnings excluding identified items, at the top of the large integrated oils. The base case assumes 13x on normalised earnings.",
+   "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Refining is the windfall",
+   "claim": "Energy Products earned $7.2B in the quarter vs $1.8B a year earlier, as global refining margins rose above their 10-year range.",
+   "evidence": [
+    {
+     "t": "Energy Products earnings $7,169M vs $1,840M",
+     "src": "10-Q Q3 2026"
+    },
+    {
+     "t": "Global refining margins increased to historically high levels with unavailable capacity",
+     "src": "10-Q market overview"
+    }
+   ],
+   "test": "Do refining margins fall back as Middle East capacity returns?"
+  },
+  {
+   "title": "Upstream grows despite disruption",
+   "claim": "Upstream earned $7.1B vs $5.7B; price added $3.7B while Middle East volumes cost $0.9B.",
+   "evidence": [
+    {
+     "t": "Production 4.5M oil-equivalent barrels a day, down 273k on Middle East and Kazakhstan disruptions and Guyana entitlements",
+     "src": "10-Q Q3 2026"
+    }
+   ],
+   "test": "Do Permian and Guyana growth offset the disruption?"
+  },
+  {
+   "title": "Chemicals are weak",
+   "claim": "Chemical margins fell further below the bottom of their 10-year range, though earnings rose to $0.7B from a weak base.",
+   "evidence": [
+    {
+     "t": "Chemical Products earnings $735M vs $515M",
+     "src": "10-Q Q3 2026"
+    }
+   ],
+   "test": "Does chemical oversupply ease?"
+  },
+  {
+   "title": "Capital discipline",
+   "claim": "Cash capex fell to $7.0B in the quarter while $28B was returned to shareholders in nine months.",
+   "evidence": [
+    {
+     "t": "Dividends $12.9B and buybacks $15.1B in nine months; capex $20.0B",
+     "src": "10-Q Q3 2026"
+    }
+   ],
+   "test": "Is the $20B a year buyback pace sustained when prices fall?"
+  }
+ ],
+ "variant": {
+  "street": "The market pays about 14x this year's earnings, the top of the integrated oils, for Exxon's growth and discipline.",
+  "ours": "This year's earnings include a refining windfall from disrupted Middle East supply. Our base case lets prices and margins normalise, which leaves the shares above our 12-month target.",
+  "could_be_wrong": "If disruption persists through 2027 and Permian and Guyana growth adds volume, earnings stay high and the multiple holds.",
+  "would_change_mind": "Refining margins staying above their 10-year range into 2027, or the price falling toward 11x normalised earnings."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "Scale, low-cost Permian and Guyana barrels, integrated refining and chemicals, and a strong balance sheet; prices are set by the market.",
+  "detail": "Rated from the latest 10-K and 10-Q; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net debt about $32B at mid-year, about half a year of operating cash flow.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "Identified items cost $2.7B in nine months, including impairments from Middle East disruption",
+   "Energy Products had $2.75B of negative timing effects in nine months from rising crude prices"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2027-01-30",
+   "label": "Exxon Mobil Q4 2026 earnings (date not confirmed)",
+   "confirmed": false,
+   "note": "Watch refining margins, Middle East volumes and 2027 capex and buyback plans.",
+   "importance": "High"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "x1",
+   "text": "Energy Products quarterly earnings below $3B",
+   "metric": "refining",
+   "op": "<",
+   "threshold": 3,
+   "current": 7.2,
+   "unit": "$B",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "10-Q Q3 2026"
+  },
+  {
+   "id": "x2",
+   "text": "Production below 4.3M oil-equivalent barrels a day",
+   "metric": "production",
+   "op": "<",
+   "threshold": 4.3,
+   "current": 4.5,
+   "unit": "M boe/d",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "10-Q Q3 2026"
+  },
+  {
+   "id": "x3",
+   "text": "Buybacks below $4B in a quarter",
+   "metric": "buybacks",
+   "op": "<",
+   "threshold": 4,
+   "current": 5.0,
+   "unit": "$B (nine-month average)",
+   "drivers": [
+    "share_chg"
+   ],
+   "src": "10-Q Q3 2026"
+  }
+ ],
+ "risks": [
+  "Refining margins normalise.",
+  "Oil and gas prices fall.",
+  "Middle East operations.",
+  "Chemical oversupply.",
+  "Energy transition and regulation."
+ ],
+ "lenses": {
+  "eisman": "Over 40% of this quarter's segment profit came from refining margins created by a supply disruption; do not capitalise a windfall.",
+  "munger": "A well-run commodity business at a cyclical high; patience is cheaper than the premium.",
+  "buffett": "He has owned oil producers for their cash; he would note this year's cash is unusually high.",
+  "hohn": "Low-cost barrels and discipline; returns depend on prices Exxon does not control."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Exxon Mobil Form 10-Q, quarter ended 30 September 2026",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115436&type=10-Q",
+   "date": "2026-11-02"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-03"
+  }
+ ],
+ "gaps": [
+  "Earnings release and 2027 corporate plan not retrieved.",
+  "Diluted share count and EPS excluding identified items estimated from the 10-Q totals.",
+  "Fourth-quarter report date not yet confirmed by the company."
+ ],
+ "base_period_end": "2026-09-30",
+ "review": {
+  "as_of": "2026-11-03",
+  "basis": "Q3 2026 10-Q (quarter to 30 September 2026). Q4 reports in late January; this review refreshes after the print.",
+  "headline": "Earnings doubled on a refining windfall from disrupted Middle East supply. The business is strong; this year's profit is not the run rate.",
+  "model": "Exxon finds and produces oil and gas (Upstream), refines it into fuels (Energy Products), and makes chemicals and lubricants (Chemical and Specialty Products). Profit depends mostly on oil and gas prices and refining margins.",
+  "how_it_earns": [
+   {
+    "k": "Upstream",
+    "v": "Oil and gas production: Permian, Guyana, LNG. The largest earner over a cycle."
+   },
+   {
+    "k": "Energy Products",
+    "v": "Refining and fuels marketing. Earns the gap between crude and fuel prices."
+   },
+   {
+    "k": "Chemical Products",
+    "v": "Plastics and petrochemicals. Margins are near decade lows."
+   },
+   {
+    "k": "Specialty Products",
+    "v": "Lubricants and specialty chemicals. Steadier margins."
+   }
+  ],
+  "mix": {
+   "axis": "product",
+   "note": "Revenue as tagged in the 10-Q. Exxon's segment earnings are on this page: Upstream $7.1B, Energy Products $7.2B, Chemical $0.7B, Specialty $1.3B in Q3.",
+   "rows": [
+    {
+     "match": "Sales And Other Operating Revenue",
+     "label": "Sales of oil, gas, fuels and chemicals",
+     "role": "Almost all revenue",
+     "driver": "Prices and refining margins"
+    },
+    {
+     "match": "Income From Equity Affiliates",
+     "label": "Equity affiliates",
+     "role": "Joint ventures",
+     "driver": "LNG and partner-operated fields"
+    },
+    {
+     "match": "Other Revenue",
+     "label": "Other income",
+     "role": "Includes asset sales",
+     "driver": "Asset sales and other items"
+    }
+   ],
+   "callout": null
+  },
+  "position": "The largest US oil company and one of the five integrated majors, with Chevron, Shell, TotalEnergies and BP.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Low-cost Permian and Guyana resources",
+    "Integrated refining and chemicals",
+    "Scale and project execution",
+    "Balance sheet strength"
+   ],
+   "threat": "Oil and gas prices, set by the market and by geopolitics, decide most of the earnings."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Earnings doubled",
+    "d": "$15.4B in Q3 vs $7.5B; $34.1B in nine months vs $22.3B."
+   },
+   {
+    "t": "Refining windfall",
+    "d": "Energy Products $7.2B vs $1.8B on historically high margins."
+   },
+   {
+    "t": "Volumes down",
+    "d": "4.5M boe/d, -273k on Middle East and Kazakhstan disruptions."
+   },
+   {
+    "t": "$28B returned",
+    "d": "Dividends $12.9B and buybacks $15.1B in nine months."
+   }
+  ],
+  "balance": {
+   "read": "Strong: net debt about $32B at mid-year against operating cash flow of about $60B a year.",
+   "facts": [
+    "Cash capex $20.0B in nine months, down $1.2B",
+    "Buybacks about $20B a year",
+    "Dividend $4.28 a share"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Earnings include a windfall",
+    "evidence": "Refining margins above their 10-year range because capacity is unavailable after Middle East disruption.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Impairments from disruption",
+    "evidence": "Identified items include $1.9B of losses in Energy Products from impairments and supply disruptions in the Middle East.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Timing effects",
+    "evidence": "Derivative mark-to-market and timing effects swing quarterly earnings by hundreds of millions.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Judgment: prices and margins normalise, volume growth offsets part",
+   "margin_end": "Judgment: back toward 10% net margin",
+   "share_chg": "Sourced: about $20B a year of buybacks",
+   "exit_pe": "Judgment: 13x normalised earnings"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Middle East supply returns over 2027; refining margins fall back; Permian and Guyana growth and buybacks cushion EPS.",
+    "needs": "Strait of Hormuz flows normalise"
+   },
+   "downside": {
+    "story": "Supply returns quickly while demand slows; oil and refining margins fall below the 10-year average.",
+    "needs": "A global slowdown with restored supply"
+   },
+   "upside": {
+    "story": "Disruption persists and volume growth resumes; earnings stay near this year's level.",
+    "needs": "Refining margins high into 2027"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Refining margins normalise",
+    "how": "Over 40% of this quarter's segment earnings came from refining margins lifted by unavailable capacity.",
+    "watch": "Energy Products earnings",
+    "trip": "x1",
+    "sev": "high",
+    "cat": "Commodity"
+   },
+   {
+    "cause": "Oil and gas prices fall",
+    "how": "Upstream earnings move with crude and gas realisations; price added $3.7B to Q3 upstream earnings.",
+    "watch": "Realised prices",
+    "trip": null,
+    "sev": "high",
+    "cat": "Commodity"
+   },
+   {
+    "cause": "Middle East operations",
+    "how": "Disruption cut volumes and caused impairments; escalation could cut more.",
+    "watch": "Middle East volumes",
+    "trip": "x2",
+    "sev": "medium",
+    "cat": "Geopolitical"
+   },
+   {
+    "cause": "Chemical oversupply",
+    "how": "Chemical margins are below their 10-year range on new capacity in Asia.",
+    "watch": "Chemical Products earnings",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Cycle"
+   },
+   {
+    "cause": "Energy transition and regulation",
+    "how": "Climate policy and lower long-run oil demand could reduce the value of long-lived assets.",
+    "watch": "Policy changes",
+    "trip": null,
+    "sev": "low",
+    "cat": "Structural"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Exxon has the lowest-cost growth barrels among the majors in the Permian and Guyana, and the strongest balance sheet.",
+   "why_not": "Shell and TotalEnergies trade at about 8x to 9x next-year earnings with similar exposure to the same windfall.",
+   "peers_note": "European majors trade at lower multiples partly for policy and listing reasons."
+  },
+  "questions": [
+   "What are normalised earnings once Middle East supply returns?",
+   "Is a premium to European majors justified?",
+   "Will buybacks hold at $20B a year if prices fall?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Exxon Mobil Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115436&type=10-Q",
+    "date": "2026-11-02"
+   }
+  ],
+  "title": "Valuing the windfall",
+  "lead": "We rate Exxon Mobil {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Earnings doubled on refining margins lifted by Middle East supply disruption; on normalised earnings the shares look full, and our 2027 EPS is {vs_cons} consensus.",
+  "call_reason": "A windfall is not a run rate: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Earnings rose to $15.4B from $7.5B, mainly on price and refining margins. Production fell 273,000 barrels a day on Middle East and Kazakhstan disruptions despite Permian and Guyana growth."
+   },
+   {
+    "label": "Moat",
+    "text": "Low-cost Permian and Guyana barrels, integrated refining and chemicals, and scale. Prices, set by geopolitics, still decide most of the earnings."
+   },
+   {
+    "label": "Profitability",
+    "text": "Energy Products earned $7.2B against $1.8B a year earlier as refining margins hit historic highs with Middle East capacity unavailable; chemical margins are near decade lows."
+   },
+   {
+    "label": "Capital",
+    "text": "Capex fell to $20.0B in nine months while $28B went back to shareholders. Net debt was about $32B at mid-year."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} Shell and TotalEnergies trade at 8x to 9x with similar exposure."
+   }
+  ],
+  "thesis_long": [
+   "Exxon is having an exceptional year. Restricted supply through the Strait of Hormuz and lost refining capacity pushed refining margins to historic highs and international gas prices above their 10-year range. Third-quarter earnings doubled to $15.4B; Energy Products alone earned $7.2B, nearly four times a year earlier. Underneath, the company is executing well: Permian and Guyana are growing, costs are falling and capex is down.",
+   "The question is what to pay for a windfall. Production actually fell 273,000 barrels a day on Middle East and Kazakhstan disruptions, and the extra profit came from prices and margins that depend on supply staying short. Consensus already expects 2027 EPS to fall about 12%. At about 14x this year's earnings, Exxon trades at the top of the majors.",
+   "Our base case lets prices and refining margins normalise over three years, partly offset by volume growth and $20B a year of buybacks. On that path the 12-month target is below today's price. We would turn positive if refining margins stayed above their 10-year range into 2027, or if the price fell toward 11x normalised earnings."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Disruption persists",
+    "how": "If Middle East supply stays restricted through 2027, refining and gas earnings stay near this year's level."
+   },
+   {
+    "cause": "Volumes recover and grow",
+    "how": "Restored Middle East volumes on top of Permian and Guyana growth would lift upstream earnings even at lower prices."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "CVX",
+   "SHEL",
+   "TTE"
+  ]
+ }
+}
