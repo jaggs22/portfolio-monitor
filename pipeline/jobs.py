@@ -359,7 +359,7 @@ def job_baserates(sec_http, out, now=None, max_age_days=30, last_year=None):
     path = Path(out) / "baserates.json"
     cur = read_json(path)
     t = now or time.time()
-    if cur and cur.get("built_ts") and t - cur["built_ts"] < max_age_days * 86400:
+    if cur and cur.get("version") == B.VERSION and cur.get("built_ts") and t - cur["built_ts"] < max_age_days * 86400:
         return cur
     last = last_year or dt.datetime.fromtimestamp(t, dt.timezone.utc).year - 1
     first = 2009

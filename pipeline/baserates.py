@@ -27,6 +27,8 @@ SIZE = [("Under $1B", 0, 1), ("$1B to $10B", 1, 10), ("$10B to $50B", 10, 50), (
 MARGIN = [("Loss-making", -math.inf, 0), ("0 to 5%", 0, 5), ("5 to 10%", 5, 10), ("10 to 20%", 10, 20), ("20 to 30%", 20, 30), ("Over 30%", 30, math.inf)]
 PCTS = list(range(0, 101, 5))
 MIN_REV = 50e6  # ignore shells and pre-revenue companies at the start of a window
+MARGIN_MIN_REV = 1e9  # margin base rates only for established businesses: small-company margins are mostly one-offs
+VERSION = 2  # bump when the method changes so the monthly job rebuilds
 
 
 def fetch(http, first_year, last_year):
@@ -89,7 +91,7 @@ def build(rev, ni, first_year, last_year, min_n=40):
                 g[b].append(cagr)
                 gc[b].add(cik)
                 n0, n1 = ni.get(cik, {}).get(y0), ni.get(cik, {}).get(y0 + h)
-                if n0 is None or n1 is None:
+                if n0 is None or n1 is None or r0 < MARGIN_MIN_REV:
                     continue
                 m0, m1 = n0 / r0 * 100, n1 / r1 * 100
                 if abs(m0) > 100 or abs(m1) > 100:  # holding companies, one-offs: not a margin
@@ -107,7 +109,9 @@ def build(rev, ni, first_year, last_year, min_n=40):
         "method": "SEC XBRL frames, one annual value per filer per calendar year. Revenue is the first of "
         + ", ".join(REV_TAGS) + " a company reports; net margin is NetIncomeLoss over that revenue. Windows start every "
         f"year from {first_year} and need a value at both ends; companies under ${MIN_REV / 1e6:.0f}M of revenue at the start are excluded. "
-        "Size is revenue at the start of the window. Percentiles pool all windows.",
+        "Size is revenue at the start of the window. Margin changes use companies with $1B or more of revenue at the start, "
+        "bucketed by starting net margin. Percentiles pool all windows.",
+        "version": VERSION,
         "caveats": [
             "Survivorship: companies that failed or were acquired drop out, so growth is biased upward.",
             "Acquisitions count as growth, and a change of revenue tag can create a jump for some filers.",
