@@ -908,7 +908,8 @@
     }
     function midYears(r, mid) {
       const fy0 = r.base.fy0 || 0, start = r.valuation.include_fy0 === false ? 1 : 0;
-      return mid.hist.map((x) => `FY${String(x.fy).slice(2)} $${x.eps.toFixed(2)}`).concat(mid.fwd.map((x, i) => `FY${String(fy0 + start + i).slice(2)}E $${x.toFixed(2)}`));
+      const d = (x) => (x < 0 ? '−$' : '$') + Math.abs(x).toFixed(2);
+      return mid.hist.map((x) => `FY${String(x.fy).slice(2)} ${d(x.eps)}`).concat(mid.fwd.map((x, i) => `FY${String(fy0 + start + i).slice(2)}E ${d(x)}`));
     }
     function deriveRows(t, c, e) {
       const r = researchOf(t), v = r.valuation || {}, dv = (a, b, cls) => h('div', { class: 'dv' + (cls ? ' ' + cls : '') }, h('span', null, a), h('b', null, b));
@@ -970,18 +971,18 @@
       const { r, dcf, rc, table } = k;
       const N = r.horizon || 3;
       const where = (br) => (br ? h('span', null, ordinal(br.pct * 100), ' ', br.pct > 0.9 || br.pct < 0.1 ? pill('Outside 10th–90th', 'warn') : null) : '–');
-      const range = (br, f) => (br ? `median ${f(br.p50)}, 10th to 90th ${f(br.p10)} to ${f(br.p90)}` : 'Loading…');
+      const range = (br, f) => (br ? `median ${f(br.p50)}; 80% between ${f(br.p10)} and ${f(br.p90)}` : 'Loading…');
       const pc = (x) => fmt.spct(x, 1), pts = (x) => (x >= 0 ? '+' : '−') + Math.abs(x).toFixed(1) + ' pts';
       const g = (sc) => rc && rc.rows.find((x) => x.kind === 'growth' && x.scen === sc), mg = (sc) => rc && rc.rows.find((x) => x.kind === 'margin' && x.scen === sc);
       const rows = [];
       const gb = g('base'), gl = g('bear'), gu = g('bull'), mb = mg('base');
       rows.push(h('tr', null, h('th', null, `Revenue growth, base case (${N} yrs)`), h('td', null, fmt.spct(r.drivers.rev_cagr.base / 100, 1) + ' a year'), h('td', null, range(gb && gb.br, pc)), h('td', null, where(gb && gb.br))));
-      rows.push(h('tr', null, h('th', null, 'Revenue growth, downside and upside'), h('td', null, `${fmt.spct(r.drivers.rev_cagr.bear / 100, 1)} / ${fmt.spct(r.drivers.rev_cagr.bull / 100, 1)}`), h('td', null, gb ? (gb.br.bucket + ' revenue') : '–'), h('td', null, gl && gu ? `${ordinal(gl.br.pct * 100)} / ${ordinal(gu.br.pct * 100)}` : '–')));
-      if (mb) rows.push(h('tr', null, h('th', null, `Net margin change, base case (${N} yrs)`), h('td', null, `${pts(mb.value)} from ${mb.from.toFixed(1)}%`), h('td', null, range(mb.br, pts) + `; starting margin ${mb.br.bucket}`), h('td', null, where(mb.br))));
+      rows.push(h('tr', null, h('th', null, 'Revenue growth, downside and upside'), h('td', null, `${fmt.spct(r.drivers.rev_cagr.bear / 100, 1)} / ${fmt.spct(r.drivers.rev_cagr.bull / 100, 1)}`), h('td', null, gb ? `Companies with ${gb.br.bucket.replace(/^Over/, 'over').replace(/^Under/, 'under')} of revenue` : '–'), h('td', null, gl && gu ? `${ordinal(gl.br.pct * 100)} / ${ordinal(gu.br.pct * 100)}` : '–')));
+      if (mb) rows.push(h('tr', null, h('th', null, `Net margin change, base case (${N} yrs)`), h('td', null, `${pts(mb.value)} from ${mb.from.toFixed(1)}%`), h('td', null, range(mb.br, pts) + ` (starting margin ${mb.br.bucket.toLowerCase()})`), h('td', null, where(mb.br))));
       if (dcf) rows.push(h('tr', null, h('th', null, `Growth the price implies (reverse DCF, ${dcf.years} yrs)`), h('td', null, `${fmt.spct(dcf.growth, 1)} a year in ${dcf.basis}`), h('td', null, rc && rc.dcfRate ? range(rc.dcfRate, pc) + ' (revenue, as a proxy)' : 'Loading…'), h('td', null, rc && rc.dcfRate ? where(rc.dcfRate) : '–')));
       const flags = rc ? rc.flags.length + (rc.dcfFlag ? 1 : 0) : 0;
       return h('div', { class: 'stack' },
-        h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl wrap' }, h('thead', null, h('tr', null, ['Check', 'Ours', 'What companies this size actually did', 'Where ours sits'].map((x) => h('th', null, x)))), h('tbody', null, rows))),
+        h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl checks' }, h('thead', null, h('tr', null, ['Check', 'Ours', 'What comparable companies did', 'Percentile'].map((x) => h('th', null, x)))), h('tbody', null, rows))),
         dcf ? h('p', { class: 'small' }, h('b', null, 'Reverse DCF. '), `At ${fmt.px(k.m.price)} and a ${fmt.pct(dcf.r, 1)} cost of equity, the price implies ${dcf.basis} per share of $${dcf.cf0.toFixed(2)} growing ${fmt.spct(dcf.growth, 1)} a year for ${dcf.years} years, then ${(dcf.gt * 100).toFixed(0)}% a year.${dcf.label ? ' Basis: ' + dcf.label + '.' : ''}`) : null,
         rc ? (flags ? note(`${flags} assumption${flags === 1 ? '' : 's'} sit outside what 80% of comparable companies achieved. That is not wrong, but it needs a specific reason, which the research should state.`) : note('Every base-case assumption sits inside what 80% of comparable companies achieved.')) : null,
         table ? disclose('How the base rates are built', [h('p', { class: 'small' }, table.method), h('ul', { class: 'small', style: { paddingLeft: '18px' } }, (table.caveats || []).map((x) => h('li', null, x))), h('p', { class: 'small muted' }, `Source: ${table.source}, ${table.filers ? table.filers.toLocaleString() + ' filers, ' : ''}fiscal years ${table.years[0]} to ${table.years[1]}, built ${fmt.date(table.asof)}.`)])

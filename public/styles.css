@@ -1018,3 +1018,14 @@ body.ins-open { overflow: hidden; }
 .ins-later:hover { color: var(--ink); }
 .ins-steps[hidden] { display: none; }
 .cap-note { color: var(--ink2); border-left: 2px solid var(--line); padding-left: 8px; max-width: 34ch; }
+.tbl.checks th, .tbl.checks td { white-space: normal; vertical-align: top; }
+.tbl.checks td:nth-child(2), .tbl.checks td:nth-child(4) { white-space: nowrap; }
+@media (max-width: 760px) {
+  .tbl.checks thead { display: none; }
+  .tbl.checks tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  .tbl.checks th, .tbl.checks td { display: block; border: 0; padding: 0; text-align: left; white-space: normal !important; background: none; }
+  .tbl.checks th { grid-column: 1 / -1; order: 1; }
+  .tbl.checks td:nth-child(2) { order: 2; }
+  .tbl.checks td:nth-child(4) { order: 3; text-align: right; }
+  .tbl.checks td:nth-child(3) { order: 4; grid-column: 1 / -1; color: var(--ink2); font-size: 12px; }
+}
