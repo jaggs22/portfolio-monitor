@@ -1,0 +1,454 @@
+10-K for period 2026-09-30, filed 2026-11-05
+
+Management’s Discussion and Analysis of Financial Condition and Results of Operations
+This management’s discussion and analysis provides a review of the results of operations, financial condition and liquidity and capital resources of Visa Inc. and its subsidiaries (Visa, we, us, our or the Company) on a historical basis and outlines the factors that have affected recent earnings, as well as those factors that may affect future earnings. The following discussion and analysis should be read in conjunction with the consolidated financial statements and related notes included in Item 8 of this report.
+This section of the report generally discusses fiscal 2026 compared to fiscal 2025. Discussions of fiscal 2025 compared to fiscal 2024 that are not included in this report can be found in “Management’s Discussion and Analysis of Financial Condition and Results of Operations” in Part II, Item 7 in our Annual Report on Form 10-K for the year ended September 30, 2025, filed with the U.S. Securities and Exchange Commission.
+
+Overview
+Visa is a global payments technology company that facilitates secure, reliable and efficient global commerce and money movement. We provide transaction processing services (primarily authorization, clearing and settlement) among consumers, issuing and acquiring financial institutions and sellers. We are focused on extending, enhancing and investing in our proprietary advanced transaction processing network, VisaNet, to offer a single connection point for facilitating money movement to multiple endpoints through various form factors and innovative technologies across more than 200 countries and territories. Visa is not a financial institution. We do not issue cards, extend credit or set rates and fees for account holders of Visa card products.
+Financial overview. A summary of our GAAP and non-GAAP operating results is as follows:
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages and per share data)
+Net revenue$45,903 $40,000 $35,926 15%11%
+Operating expenses$17,793 $16,006 $12,331 11%30%
+Net income$23,504 $20,058 $19,743 17%2%
+Diluted earnings per share$12.32 $10.20 $9.73 21%5%
+
+
+Non-GAAP operating expenses(2)$14,919 $12,906 $11,609 16%11%
+
+Non-GAAP net income(2)$25,314 $22,542 $20,389 12%11%
+
+Non-GAAP diluted earnings per share(2)$13.27 $11.47 $10.05 16%14%
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers.
+(2)For further details and a reconciliation of the GAAP to non-GAAP financial measures presented, see tables in Non-GAAP Financial Measures below.
+Highlights for fiscal 2026. Net revenue increased 15% over the prior year, primarily due to the growth in nominal cross-border volume, processed transactions and nominal payments volume, partially offset by higher client incentives. See Results of Operations—Net Revenue below for further discussion. Exchange rate movements increased our net revenue growth by approximately one percentage point. 
+Operating expenses increased 11% over the prior year, primarily driven by higher personnel and marketing expenses. See Results of Operations—Operating Expenses below for further discussion. Exchange rate movements increased our operating expenses growth by approximately one percentage point. 
+Non-GAAP operating expenses increased 16% over the prior year, primarily driven by higher personnel, marketing and professional fees.
+Acquisitions. In August 2026, we entered into a definitive agreement to acquire BioCatch, a leading provider of behavioral-first, multi-signal fraud intelligence, for $2.4 billion in cash. This acquisition is subject to customary closing conditions, including applicable regulatory approvals. 
+
+
+39
+
+Table of Contents
+In February 2026, we acquired Prisma Medios de Pago S.A.U. (Prisma) and Newpay S.A.U. (Newpay) in Argentina for a total purchase consideration of $1.5 billion in cash. See Note 2—Acquisitions to our consolidated financial statements included in Item 8 of this report.
+Class B-1 and B-2 common stock exchange offer. In May 2026, we accepted 3 million shares of class B-1 common stock and 120 million shares of class B-2 common stock tendered in the exchange offer. In exchange for the shares of class B-1 and B-2 common stock that were retired, we issued 61 million shares of class B-3 common stock and 23 million shares of class C common stock. See Note 15—Stockholders’ Equity to our consolidated financial statements included in Item 8 of this report.
+Visa may, but is under no obligation to, conduct a successive exchange offer if (i) one year has passed since the exchange offer completed in May 2026; and (ii) the estimated interchange reimbursement fees at issue in unresolved claims for damages in the U.S. covered litigation have been reduced by 50% or more since the consummation of the exchange offer in May 2026, as determined by Visa. The estimated interchange reimbursement fees at issue in unresolved claims for damages in the U.S. covered litigation was approximately $17.4 billion(1) as of May 11, 2026 and was approximately $15.9 billion(1) as of October 1, 2026.
+Senior notes. In February 2026, we issued fixed-rate senior notes in a public offering in an aggregate principal amount of $3.0 billion, with maturities ranging between 3 and 10 years. See Note 10—Debt to our consolidated financial statements included in Item 8 of this report.
+Interchange multidistrict litigation. During fiscal 2026, we recorded additional accruals of $1.6 billion to address claims associated with the interchange multidistrict litigation. We also made additional deposits of $1.3 billion into the U.S. litigation escrow account. The additional accruals related to the interchange multidistrict litigation could be higher or lower than deposits made into the U.S. litigation escrow account. See Note 5—U.S. and Europe Retrospective Responsibility Plans and Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report.
+Common stock repurchases. In April 2026, our board of directors authorized an additional $20.0 billion share repurchase program, providing multi-year flexibility. During fiscal 2026, we repurchased 61 million shares of our class A common stock in the open market for $20.5 billion. As of September 30, 2026, our share repurchase programs had remaining authorized funds of $24.4 billion. See Note 15—Stockholders’ Equity to our consolidated financial statements included in Item 8 of this report.
+
+Payments Volume and Processed Transactions 
+Payments volume is the primary driver for our service revenue, and the number of processed transactions is the primary driver for our data processing revenue.
+Payments volume represents the aggregate dollar amount of purchases made with cards and other form factors carrying the Visa, Visa Electron, V PAY and Interlink brands and excludes Europe co-badged volume. Nominal payments volume is denominated in U.S. dollars and is calculated each quarter by applying an established U.S. dollar/foreign currency exchange rate for each local currency in which our volumes are reported. Processed transactions include payments and cash transactions, and represent transactions using cards and other form factors carrying the Visa, Visa Electron, V PAY, Interlink and PLUS brands processed on Visa’s networks.
+
+(1) These figures are estimated and approximated. These estimates do not include interchange reimbursement fees attributable to claims asserted in certain purported indirect purchaser class actions or recently filed merchant class actions, or brought by any opt-outs that have not asserted a claim for damages. The interchange at issue for unresolved claims will continue to increase. See U.S. Covered Litigation in Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report for more information on the Interchange Multidistrict Litigation (MDL) - Individual Merchant Actions.
+
+
+40
+
+Table of Contents
+The following table presents nominal payments and cash volume:
+
+
+U.S.International 
+Visa
+
+
+Twelve Months Ended June 30,(1)
+202620252024202620252024202620252024
+
+(in billions)
+Nominal payments volume
+Consumer credit$2,697 $2,491 $2,356 $3,408 $3,114 $2,958 $6,105 $5,605 $5,314 
+
+Consumer debit(2)3,458 3,213 2,990 3,826 3,343 3,032 7,284 6,556 6,022 
+
+Commercial(3)1,184 1,084 1,042 765 656 614 1,949 1,740 1,655 
+
+Total nominal payments volume(4)7,338 6,788 6,388 8,000 7,112 6,604 15,338 13,901 12,991 
+
+Cash volume(5)602 598 604 1,979 1,891 1,899 2,582 2,489 2,503 
+
+Total nominal volume(4)(6)$7,941 $7,386 $6,991 $9,979 $9,003 $8,503 $17,920 $16,389 $15,494 
+ The following table presents the changes in nominal and constant payments and cash volume:
+
+
+
+U.S.International
+Visa
+
+
+Twelve Months Ended June 30,(1),(4)
+2026 vs. 20252025 vs. 20242026 vs. 20252025 vs. 20242026 vs. 20252025 vs. 2024
+NominalNominalNominal
+Constant(7)Nominal
+Constant(7)Nominal
+Constant(7)Nominal
+Constant(7)
+Payments volume growth
+Consumer credit growth8%6%9%8%5%8%9%8%5%7%
+
+Consumer debit growth(2)8%7%14%10%10%12%11%9%9%10%
+
+Commercial growth(3)9%4%17%14%7%9%12%11%5%6%
+Total payments volume growth8%6%12%10%8%10%10%9%7%8%
+
+Cash volume growth(5)1%(1%)5%1%—%3%4%1%(1%)2%
+Total volume growth8%6%11%8%6%8%9%8%6%7%
+(1)Service revenue in a given quarter is primarily assessed based on nominal payments volume in the prior quarter. Therefore, service revenue reported for the twelve months ended September 30, 2026, 2025 and 2024, was based on nominal payments volume reported by our financial institution clients for the twelve months ended June 30, 2026, 2025 and 2024, respectively. On occasion, previously presented volume information may be updated. Prior period updates are not material.
+(2)Includes consumer prepaid volume and Interlink volume.
+(3)Includes large, medium and small business credit and debit, as well as commercial prepaid volume.
+(4)Figures in the table may not recalculate exactly due to rounding. Percentage changes and totals are calculated based on unrounded numbers. 
+(5)Cash volume generally consists of cash access transactions, balance access transactions, balance transfers and convenience checks.
+(6)Total nominal volume is the sum of total nominal payments volume and cash volume. Total nominal volume is provided by our financial institution clients, subject to review by Visa.
+(7)Growth on a constant-dollar basis excludes the impact of foreign currency fluctuations against the U.S. dollar.
+The following table presents the number of processed transactions:
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages)
+Visa processed transactions281,331 257,545 233,758 9%10%
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers. On occasion, previously presented information may be updated. Prior period updates are not material. 
+
+
+41
+
+
+Table of Contents
+Results of Operations
+Net Revenue
+Our net revenue is primarily generated from payments volume on Visa products for purchased goods and services, as well as the number of transactions processed on our network. See Note 1—Summary of Significant Accounting Policies to our consolidated financial statements included in Item 8 of this report for further discussion on the components of our net revenue.
+The following table presents our net revenue earned in the U.S. and internationally:
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages)
+U.S.$17,423 $15,633 $14,780 11%6%
+International28,480 24,367 21,146 17%15%
+Net revenue$45,903 $40,000 $35,926 15%11%
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers.
+Net revenue increased in fiscal 2026 over the prior year primarily due to the growth in nominal cross-border volume, processed transactions and nominal payments volume, partially offset by higher client incentives. Volume growth was driven primarily by continued resilience in consumer spending and ongoing expansion in digital commerce. Cross-border volume growth was supported by cross-border ecommerce and travel-related activity. Nominal payments volume growth of 10% was supported by broad-based growth across both credit and debit spending, with ecommerce continuing to grow faster than face-to-face spend. We expect that the ongoing shift toward digital commerce and electronic payments will continue; however, the extent to which these trends support volume increases will depend on a number of factors, including consumer spending levels and broader macroeconomic conditions.
+Our net revenue is impacted by the overall strengthening or weakening of the U.S. dollar as payments volume and related revenue denominated in local currencies are converted to U.S. dollars. In fiscal 2026, exchange rate movements increased our net revenue growth by approximately one percentage point. Foreign exchange rate movements and volatility have contributed to periodic variability in our results, and may continue to do so in the future.
+The following table presents the components of our net revenue:
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages)
+
+Service revenue$19,918 $17,539 $16,114 14%9%
+
+Data processing revenue23,374 19,993 17,714 17%13%
+
+International transaction revenue15,251 14,166 12,665 8%12%
+
+Other revenue5,677 4,053 3,197 40%27%
+Client incentives(18,317)(15,751)(13,764)16%14%
+Net revenue $45,903 $40,000 $35,926 15%11%
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers.
+•Service revenue increased in fiscal 2026 over the prior year primarily due to growth in nominal payments volume of 10%, select pricing modifications and growth in card benefits.
+•Data processing revenue increased in fiscal 2026 over the prior year primarily due to growth in processed transactions of 9%, select pricing modifications, growth in value-added services and higher cross-border transaction mix.
+
+
+42
+
+Table of Contents
+•International transaction revenue increased in fiscal 2026 over the prior year primarily due to growth in nominal cross-border volume of 15%, excluding transactions within Europe, partially offset by lower volatility of a broad range of currencies and business mix.
+•Other revenue increased in fiscal 2026 over the prior year primarily due to growth in Advisory and Other Services and select pricing modifications.
+•Client incentives increased in fiscal 2026 over the prior year primarily due to growth in payments volume. The amount of client incentives we record in future periods will vary based on changes in performance expectations, actual client performance, amendments to existing contracts or the execution of new contracts.
+For fiscal 2026, 2025, and 2024, revenue from value-added services was $14.2 billion, $10.9 billion and $8.8 billion, respectively. Value-added services revenue in fiscal 2026 increased 31% over the prior year, reflecting growth across all portfolios, with the largest contributions from Issuing Solutions and Advisory and Other Services.
+Growth across the value-added services portfolios in fiscal 2026 over the prior year was primarily driven by increases in underlying business drivers, including client consulting and marketing engagements, processed transactions and number and mix of payment credentials; and pricing. Client consulting engagements increased approximately 30% over the prior year. Demand for marketing services increased over the prior year primarily due to sponsorship events, including the FIFA World Cup 2026TM and the Olympic and Paralympic Winter Games Milano Cortina 2026. Processed transactions increased 9% and payment credentials increased 6% over the prior year.(2)
+
+Operating Expenses
+Our operating expenses consist of the following: 
+•Personnel expenses include salaries, employee benefits, incentive compensation and share-based compensation. 
+•Marketing expenses include expenses associated with advertising and marketing campaigns, sponsorships and other related promotions of the Visa brand and client marketing. 
+•Network and processing expenses mainly represent expenses for the operation of our processing network, including software and equipment rental, maintenance and fees for other data processing services. 
+•Professional fees mainly consist of expenses associated with client engagements, legal fees and consulting fees. 
+•Depreciation and amortization expenses include amortization of internally developed and purchased software, depreciation expense for property and equipment and amortization of finite-lived intangible assets obtained through acquisitions. 
+•General and administrative expenses consist mainly of card benefits such as costs associated with airport lounge access, extended cardholder protection and concierge services, as well as facilities costs, indirect taxes, travel and meeting costs, foreign exchange gains and losses and other corporate expenses incurred in support of our business. 
+•Litigation provision represents litigation expenses for accruals associated with the interchange multidistrict litigation which are covered by the U.S. retrospective responsibility plan (U.S. covered litigation) and accruals related to legal matters that are not covered by the U.S. retrospective responsibility plan or the Europe retrospective responsibility plan (uncovered legal matters). The accruals are an estimate based on management’s understanding of our litigation profile, the specifics of each case, advice of counsel to the extent appropriate and management’s best estimate of incurred loss.
+
+(2) Growth is calculated based on payment credentials as of June 30, 2026 and 2025 as reported by our financial institution clients.
+
+
+43
+
+Table of Contents
+The following table presents the components of our total operating expenses:
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages)
+Personnel$7,934 $6,961 $6,264 14%11%
+Marketing2,315 1,684 1,560 37%8%
+Network and processing1,066 894 778 19%15%
+Professional fees1,014 759 635 34%19%
+Depreciation and amortization1,403 1,220 1,034 15%18%
+General and administrative2,297 1,926 1,598 19%21%
+Litigation provision1,764 2,562 462 (31%)NM
+Total operating expenses$17,793 $16,006 $12,331 11%30%
+NM – Not meaningful
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers.
+•Personnel expenses increased in fiscal 2026 over the prior year primarily due to a higher number employees and compensation costs, including from acquisitions, and higher severance costs resulting from actions taken to drive operational efficiencies and reinvest in high-growth opportunities.
+•Marketing expenses increased in fiscal 2026 over the prior year primarily due to higher spending for client marketing and various campaigns, both driven in part by the FIFA World Cup 2026TM and the Olympic and Paralympic Winter Games Milano Cortina 2026.
+•Network and processing expenses increased in fiscal 2026 over the prior year primarily due to continued investments in technology and processing network to support ongoing business growth and incremental costs from acquired businesses.
+•Professional fees increased in fiscal 2026 over the prior year primarily due to higher legal fees, higher expenses associated with client engagements and costs incurred in the current year in connection with our acquisitions.
+•General and administrative expenses increased in fiscal 2026 over the prior year primarily due to charitable contributions to the Visa Foundation in the current year.
+•Litigation provision decreased in fiscal 2026 over the prior year primarily due to lower accruals related to the U.S. covered litigation. See Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report.
+
+Non-operating Income (Expense)
+Non-operating income (expense) primarily includes interest income on cash and investments, interest expense from borrowings, interest related to taxes, and gains and losses on equity investments and derivatives.
+The following table presents the components of our non-operating income (expense): 
+
+
+For the Years Ended
+September 30,
+% Change(1)
+2026202520242026
+vs.
+20252025
+vs.
+2024
+(in millions, except percentages)
+Interest expense$(758)$(589)$(641)29%(8%)
+Investment income (expense) and other 741 789 962 (6%)(18%)
+Total non-operating income (expense)$(17)$200 $321 (108%)(38%)
+(1)Figures in the table may not recalculate exactly due to rounding. Percentage changes are calculated based on unrounded numbers.
+
+
+44
+
+Table of Contents
+•Interest expense increased in fiscal 2026 over the prior year primarily due to an interest benefit related to taxes in the prior year.
+•Investment income (expense) and other decreased in fiscal 2026 over the prior year primarily due to lower interest income on our cash and investments, partially offset by gains on our equity investments.
+
+Effective Income Tax Rate
+The following table presents our effective income tax rates:
+
+
+For the Years Ended
+September 30,
+202620252024
+Effective income tax rate16%17%17%
+The effective income tax rates in fiscal 2026 and fiscal 2025 were 16% and 17%, respectively, including the following:
+•during fiscal 2026, a deferred tax benefit of $314 million due to a change in the U.S. taxation of certain foreign earnings; and
+•during fiscal 2026 and 2025, tax benefits of $284 million and $263 million, respectively, related to certain legal settlements.
+The Organization for Economic Cooperation and Development (OECD) issued administrative guidance regarding the implementation of a 15% global minimum tax, which various jurisdictions have enacted or are in the process of enacting. In fiscal 2026, we recorded a provision for global minimum taxes, primarily related to Singapore. The impact on our effective tax rate was largely offset by foreign tax credit benefits across jurisdictions.
+In fiscal 2026, the OECD introduced a side-by-side safe harbor that, if elected and implemented in applicable local jurisdictions, provides qualifying U.S. parented groups relief from certain provisions of the global minimum tax rules. The safe harbor does not eliminate local minimum taxes applicable to foreign subsidiaries. We continue to monitor legislative and administrative developments and assess the potential tax impact on future years.
+
+Non-GAAP Financial Measures
+We use non-GAAP financial measures of our performance which exclude certain items which we believe are not representative of our continuing operations, as they may be non-recurring or have no cash impact, and may distort our longer-term operating trends. We consider non-GAAP measures useful to investors because they provide greater transparency into management’s view and assessment of our ongoing operating performance.
+We exclude the following from our GAAP financial results to arrive at our non-GAAP financial results:
+•Gains and losses on equity investments. Gains and losses on equity investments include periodic non-cash fair value adjustments and gains and losses upon sale of an investment. These long-term investments are strategic in nature and are primarily private company investments. Gains and losses associated with these investments are tied to the performance of the companies that we invest in and therefore do not correlate to the underlying performance of our business.
+•Amortization of acquired intangible assets. Amortization of acquired intangible assets consists of amortization of intangible assets such as technology and customer relationships acquired in connection with business combinations executed beginning in fiscal 2019. Amortization charges for our acquired intangible assets are non-cash and are significantly affected by the timing, frequency and size of our acquisitions, rather than our core operations. As such, we have excluded this amount to facilitate an evaluation of our current operating performance and comparison to our past operating performance.
+•Acquisition-related costs. Acquisition-related costs consist primarily of one-time transaction and integration costs associated with our business combinations. These costs include professional fees, technology integration fees, restructuring activities and other direct costs related to the purchase and integration of acquired entities. These costs also include retention equity and deferred compensation when they are agreed upon as part of the purchase price of the transaction but are required to be recognized as expense 
+
+
+45
+
+Table of Contents
+post-combination. We have excluded these amounts as the expenses are recognized for a limited duration and do not reflect the underlying performance of our business.
+•Litigation provision. Litigation provision includes significant accruals related to certain legal matters that are not covered by the U.S. retrospective responsibility plan or the Europe retrospective responsibility plan (uncovered legal matters) and additional accruals associated with the interchange multidistrict litigation which are covered by the U.S. retrospective responsibility plan (U.S. covered litigation). Litigation provision associated with these matters can vary significantly based on the facts and circumstances related to each matter and do not correlate to the underlying performance of our business. During fiscal 2026, 2025 and 2024, we have excluded these amounts to facilitate a comparison to our past operating performance.
+Under the U.S. retrospective responsibility plan, we recover the monetary liabilities related to the U.S. covered litigation through a downward adjustment to the rates at which shares of our class B-1, B-2 and B-3 common stock ultimately convert into shares of class A common stock. During fiscal 2026, basic and diluted earnings per class A common stock increased $0.01, as a result of the downward adjustments of the class B-1, B-2 and B-3 common stock conversion rates during the period. During fiscal 2025, basic and diluted earnings per class A common stock increased $0.01 and was unchanged, respectively, as a result of the downward adjustments of the class B-1 and B-2 common stock conversion rates during the period. During fiscal 2024, basic and diluted earnings per class A common stock was unchanged, as a result of the downward adjustments of the class B-1 and B-2 common stock conversion rates during the period. See Note 5—U.S. and Europe Retrospective Responsibility Plans and Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report.
+•Deferred tax benefit (expense). During fiscal 2026, we recorded a deferred tax adjustment within income tax provision due to a change in the U.S. taxation of certain foreign earnings. We have excluded this one-time non-cash amount as it is not representative of our ongoing operations.
+•Severance costs. During fiscal 2026 and 2025, we recorded severance costs within personnel expense resulting from actions taken to drive operational efficiencies and reinvest in high-growth opportunities. These amounts have been excluded as they are not representative of our ongoing operations.
+•Charitable contributions. During fiscal 2026 and 2024, we donated investments to the Visa Foundation and recognized non-cash general and administrative expenses. We have excluded these amounts as they do not reflect the underlying performance of our business.
+•Lease consolidation costs. During fiscal 2025 and 2024, we recorded charges within general and administrative expense associated with the consolidation of certain leased office spaces. We have excluded these amounts as they do not reflect the underlying performance of our business.
+•Indirect taxes. During fiscal 2024, as a result of the resolution of an audit, we recognized a benefit within general and administrative expense related to the release of the reserve previously recognized in fiscal 2021. This one-time amount is not representative of our ongoing operations.
+
+
+46
+
+Table of Contents
+Non-GAAP operating expenses, non-operating income (expense), income tax provision, effective income tax rate, net income and diluted earnings per share should not be relied upon as substitutes for, or considered in isolation from, measures calculated in accordance with GAAP. The following tables reconcile our GAAP to non-GAAP financial measures:
+
+
+For the Year Ended
+September 30, 2026
+Operating ExpensesNon-operating Income (Expense)
+Income Tax Provision(1)
+Effective Income Tax Rate(2)Net Income
+Diluted Earnings Per Share(2)
+(in millions, except percentages and per share data)
+
+GAAP$17,793 $(17)$4,589 16.3%$23,504 $12.32 
+(Gains) losses on equity investments, net— (124)(27)(97)(0.05)
+Amortization of acquired intangible assets(229)— 66 163 0.09 
+Acquisition-related costs(76)— 9 67 0.04 
+Litigation provision(1,724)— 386 1,338 0.70 
+Deferred tax benefit (expense)— — 314 (314)(0.16)
+Severance costs(563)— 125 438 0.23 
+
+Charitable contributions(282)— 67 215 0.11 
+Non-GAAP$14,919 $(141)$5,529 17.9%$25,314 $13.27 
+
+
+
+For the Year Ended
+September 30, 2025
+Operating ExpensesNon-operating Income (Expense)
+Income Tax Provision(1)
+Effective Income Tax Rate(2)Net Income
+Diluted Earnings Per Share(2)
+(in millions, except percentages and per share data)
+
+GAAP$16,006 $200 $4,136 17.1%$20,058 $10.20 
+(Gains) losses on equity investments, net— 87 19 68 0.03 
+Amortization of acquired intangible assets(218)— 54 164 0.08 
+Acquisition-related costs(97)— 7 90 0.05 
+Severance costs(213)— 45 168 0.09 
+
+Lease consolidation costs(39)— 9 30 0.02 
+Litigation provision(2,533)— 569 1,964 1.00 
+
+
+Non-GAAP$12,906 $287 $4,839 17.7%$22,542 $11.47 
+
+
+47
+
+Table of Contents
+
+
+For the Year Ended
+September 30, 2024
+Operating ExpensesNon-operating Income (Expense)
+Income Tax Provision(1)
+Effective Income Tax Rate(2)Net Income
+Diluted Earnings Per Share(2)
+(in millions, except percentages and per share data)
+
+GAAP$12,331 $321 $4,173 17.4%$19,743 $9.73 
+(Gains) losses on equity investments, net— 94 12 82 0.04 
+Amortization of acquired intangible assets(178)— 43 135 0.07 
+Acquisition-related costs(104)— 8 96 0.05 
+Litigation provision(434)— 97 337 0.17 
+Lease consolidation costs(57)— 13 44 0.02 
+Indirect taxes118 — (29)(89)(0.04)
+Charitable contributions(67)— 26 41 0.02 
+Non-GAAP$11,609 $415 $4,343 17.6%$20,389 $10.05 
+(1)Determined by applying applicable tax rates.
+(2)Figures in the table may not recalculate exactly due to rounding. Effective income tax rate, diluted earnings per share and their respective totals are calculated based on unrounded numbers.
+
+Liquidity and Capital Resources
+Based on our current cash flow budgets and forecasts of our short-term and long-term liquidity needs, we believe that our current and projected sources of liquidity, including cash generated from operations, will be sufficient to meet our projected liquidity needs for more than the next 12 months. We will continue to assess our liquidity position and potential sources of supplemental liquidity in view of our operating performance, current economic and capital market conditions and other relevant circumstances.
+Cash Flow Data
+The following table summarizes our cash flow activity:
+
+
+For the Years Ended
+September 30,
+202620252024
+(in millions)
+Total cash provided by (used in):
+Operating activities$23,728 $23,059 $19,950 
+Investing activities$(994)$708 $(1,926)
+Financing activities$(28,241)$(18,963)$(20,633)
+Operating activities. Cash provided by operating activities increased in fiscal 2026 over the prior year primarily due to growth in our underlying business, partially offset by higher litigation payments and timing of payments related to income taxes.
+Investing activities. Cash used in investing activities increased in fiscal 2026 over the prior year primarily due to lower proceeds from maturities and sales of investment securities.
+Financing activities. Cash used in financing activities increased in fiscal 2026 over the prior year primarily due to the principal debt repayments upon maturity of senior notes, higher share repurchases and lower proceeds from the issuance of senior notes.
+Sources of Liquidity 
+Cash, cash equivalents and investments. As of September 30, 2026, our cash and cash equivalents balance was $12.9 billion and primarily consisted of cash and money market funds. As of September 30, 2026, our available-for-sale debt securities balance was $850 million and consisted of debt securities issued by the U.S. 
+
+
+48
+
+Table of Contents
+Treasury and U.S. government-sponsored agencies. Our investment portfolio is designed to meet our working capital and liquidity needs. Factors that may impact the liquidity of our investment portfolio include, but are not limited to, changes to credit ratings of the securities, uncertainty related to regulatory developments, actions by central banks and other monetary authorities and the ongoing strength and quality of credit markets. 
+Commercial paper program. We maintain a commercial paper program to support our working capital requirements and for other general corporate purposes. As of September 30, 2026, there were no amounts outstanding under the program. See Note 10—Debt to our consolidated financial statements included in Item 8 of this report.
+Credit facility. We have an unsecured revolving credit facility, which is maintained to ensure the integrity of the payment card settlement process and for general corporate purposes. As of September 30, 2026, there were no amounts outstanding under the credit facility. See Note 10—Debt to our consolidated financial statements included in Item 8 of this report.
+Senior notes. In February 2026, we issued fixed-rate senior notes in a public offering in an aggregate principal amount of $3.0 billion, with maturities ranging between 3 and 10 years. See Note 10—Debt to our consolidated financial statements included in Item 8 of this report.
+U.S. Litigation escrow account. Pursuant to the terms of the U.S. retrospective responsibility plan, which was created to insulate Visa and our class A common shareholders from financial liability for certain litigation cases, we maintain a U.S. litigation escrow account from which monetary liabilities from settlements of, or judgments in, the U.S. covered litigation will be payable. As these funds are restricted for the sole purpose of making payments related to the U.S. covered litigation matters, we do not rely on them for other operational needs. See Note 5—U.S. and Europe Retrospective Responsibility Plans and Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report.
+Uses of Liquidity 
+Payments settlement. Payments settlement due to and from our issuing and acquiring clients can represent a substantial daily liquidity requirement. Most U.S. dollar settlements are settled within the same day and do not result in a receivable or payable balance, while settlements in currencies other than the U.S. dollar generally remain outstanding for one to two business days, which is consistent with industry practice for such transactions. In general, during fiscal 2026, we were not required to fund settlement-related working capital. As of September 30, 2026, we held $9.9 billion of our total available liquidity to fund daily settlement in the event one or more of our issuing and acquiring clients are unable to settle, with the remaining liquidity available to support our working capital and other liquidity needs. See Note 12—Settlement Guarantee Management to our consolidated financial statements included in Item 8 of this report.
+Litigation. Judgments in and settlements of litigation or other fines imposed in investigations and proceedings could give rise to future liquidity needs. During fiscal 2026, we deposited $1.3 billion into the U.S. litigation escrow account to address claims associated with the interchange multidistrict litigation. The balance of this account as of September 30, 2026 was $628 million and is reflected as restricted cash equivalents in our consolidated balance sheets. See Note 5—U.S. and Europe Retrospective Responsibility Plans and Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report.
+Common stock repurchases. During fiscal 2026, we repurchased shares of our class A common stock in the open market for $20.5 billion. As of September 30, 2026, our share repurchase programs had remaining authorized funds of $24.4 billion. Share repurchases will be executed at prices we deem appropriate subject to various factors, including market conditions and our financial performance, and may be effected through accelerated share repurchase programs, open market purchases or privately negotiated transactions, including through Rule 10b5-1 plans. See Note 15—Stockholders’ Equity to our consolidated financial statements included in Item 8 of this report.
+Dividends. During fiscal 2026, we declared and paid $5.1 billion in dividends to holders of our common and preferred stock. On October 27, 2026, our board of directors declared a 16% increase in our quarterly cash dividend to $0.78 per share of class A common stock (determined in the case of all other outstanding common and preferred stock on an as-converted basis). We expect to continue paying quarterly dividends in cash, subject to approval by the board of directors. See Note 15—Stockholders’ Equity to our consolidated financial statements included in Item 8 of this report.
+
+
+49
+
+Table of Contents
+Acquisitions. In August 2026, we entered into a definitive agreement to acquire BioCatch, a leading provider of behavioral-first, multi-signal fraud intelligence, for $2.4 billion in cash. This acquisition is subject to customary closing conditions, including applicable regulatory approvals.
+In February 2026, we acquired Prisma and Newpay in Argentina for a total purchase consideration of $1.5 billion in cash. See Note 2—Acquisitions to our consolidated financial statements included in Item 8 of this report.
+Senior notes. As of September 30, 2026, we had an outstanding aggregate principal amount relating to our senior notes of $22.6 billion. Principal payments on our senior notes totaling $2.75 billion are due between April 2027 and September 2027 for which we have sufficient liquidity. See Note 10—Debt to our consolidated financial statements included in Item 8 of this report.
+Client incentives. As of September 30, 2026, we had short-term and long-term liabilities recorded on the consolidated balance sheet related to client incentive contracts of $12.2 billion and $0.2 billion, respectively.
+Uncertain tax positions. As of September 30, 2026, we had long-term liabilities for uncertain tax positions of $278 million. See Note 19—Income Taxes to our consolidated financial statements included in Item 8 of this report.
+
+Purchase obligations. As of September 30, 2026, we had short-term and long-term obligations of $1.8 billion and $0.2 billion, respectively, related to agreements to purchase goods and services that specify significant terms, including fixed or minimum quantities to be purchased, minimum or variable price provisions, and the approximate timing of the transaction. For obligations where the individual years of spend are not specified in the contract, we have estimated the timing of when these amounts will be spent. For future obligations related to sponsorships and software arrangements, see Note 18—Commitments to our consolidated financial statements included in Item 8 of this report.
+Leases. For future lease payments related to leases that have commenced and have not yet commenced, see Note 9—Leases to our consolidated financial statements included in Item 8 of this report.
+Indemnifications
+We indemnify our issuing and acquiring clients for settlement losses suffered due to the failure of any other client to fund its settlement obligations in accordance with our operating rules. The amount of the indemnification is limited to the amount of unsettled Visa payment transactions at any point in time. We maintain and regularly review global settlement risk policies and procedures to manage settlement risk, which may require clients to post collateral if certain credit standards are not met. See Note 1—Summary of Significant Accounting Policies and Note 12—Settlement Guarantee Management to our consolidated financial statements included in Item 8 of this report. 
+The Central Bank of Brazil has adopted regulations applicable to payment networks like Visa that impose enhanced prudential requirements, including requirements that would obligate Visa to absorb certain settlement related losses for certain transactions involving sellers in Brazil when settlement failures occur and our risk mitigation measures do not fully protect against the resulting exposure. The evolving regulatory landscape and the new regulatory framework create additional risk, uncertainty and operational challenges for Visa. In response to these regulations, we have submitted to the Central Bank of Brazil enhanced operating rule provisions, which, when approved, are expected to increase our settlement exposure and related collateral requirements. We are updating our processes and risk management protocols to comply with these requirements and mitigate our exposure. 
+
+Accounting Pronouncements Not Yet Adopted
+In November 2024, the FASB issued ASU 2024-03, which requires disclosure of additional information about specific expense categories underlying certain income statement expense line items. Subsequently, the FASB also issued an amendment to this standard. The amendments in the ASU are effective for our annual periods beginning October 1, 2027, and interim periods beginning October 1, 2028, and require either prospective or retrospective application. We are currently evaluating the impact of the ASU on our disclosures.
+In September 2025, the FASB issued ASU 2025-06, which modernizes the accounting for internal-use software by eliminating project stage-based capitalization and clarifying the probable-to-complete threshold to commence the capitalization of software costs. This ASU is effective for our annual and interim periods beginning October 1, 2028, and transition approaches include prospective, retrospective or modified methods. We are currently evaluating the impact of the ASU on our consolidated financial statements.
+
+
+50
+
+
+Table of Contents
+Critical Accounting Estimates 
+Our consolidated financial statements are prepared in accordance with accounting principles generally accepted in the United States of America which require us to make judgments, assumptions and estimates that affect the amounts reported. See Note 1—Summary of Significant Accounting Policies to our consolidated financial statements included in Item 8 of this report. We have established policies and control procedures which seek to ensure that assumptions and estimates are appropriately governed and applied consistently from period to period. However, actual results could differ from our assumptions and estimates, and such differences could be material. 
+We believe that the following accounting estimates are the most critical to fully understand and evaluate our reported financial results, as they require our most subjective or complex management judgments, resulting from the need to make estimates about the effect of matters that are inherently uncertain and unpredictable. 
+Revenue Recognition—Client Incentives 
+Critical estimates. We enter into long-term incentive contracts with our clients, such as our financial institution clients, sellers and other business partners for various programs that provide cash and other incentives designed to increase revenue by growing payments volume, increasing Visa product acceptance, encouraging seller acceptance and use of Visa’s payment services, and driving innovation. These incentives are primarily accounted for as reductions to net revenue; however, if a separate identifiable benefit at fair value can be established, they are accounted for as operating expenses. Incentives are recognized systematically and rationally based on management’s estimate of each client’s performance. These estimates are regularly reviewed and adjusted, as appropriate, based on changes in performance expectations, actual client performance, amendments to existing contracts or the execution of new contracts.
+Assumptions and judgment. Estimation of client incentives relies on forecasts of performance metrics such as payments volume, transaction count, card issuance and card conversion. Performance is estimated using client-reported information, transactional information accumulated from our systems, historical information, market and economic conditions and discussions with our clients.
+Impact if actual results differ from assumptions. If actual performance is not consistent with our estimates, client incentives may be materially different than initially recorded. Increases in incentive payments are generally driven by increased payments volume and transaction count, which drive our net revenue. As a result, in the event incentive payments exceed estimates, such payments are not expected to have a material effect on our overall financial condition, results of operations or cash flows. The cumulative impact of a revision in estimates is recorded in the period such revisions become probable and estimable. 
+Legal and Regulatory Matters 
+Critical estimates. We are currently involved in various legal and regulatory proceedings, the outcomes of which are not within our complete control and may not be known for prolonged periods of time. Management is required to assess the probability of loss and estimate the amount of such loss, if any, in preparing our consolidated financial statements. 
+Assumptions and judgment. We evaluate the likelihood of a potential loss from legal or regulatory proceedings to which we are a party. We record a liability for such claims when a loss is deemed probable and the amount can be reasonably estimated. Significant judgment may be required in the determination of both the probability and whether a loss is reasonably estimable. Our judgments are inherently subjective and based on a number of factors, including management’s understanding of the legal or regulatory profile and the specifics of each proceeding, our history with similar matters, advice of internal and external legal counsel and management’s best estimate of potential loss. As additional information becomes available, we reassess the potential loss related to pending claims and may revise our estimates. 
+We have entered into loss sharing agreements that reduce our potential liability in connection with certain litigation. However, our U.S. retrospective responsibility plan only addresses monetary liabilities from settlements of, or final judgments in, the U.S. covered litigation. The plan’s mechanisms include the use of the U.S. litigation escrow account. The accrual related to the U.S. covered litigation could be either higher or lower than the U.S. litigation escrow account balance. Our Europe retrospective responsibility plan only covers Visa Europe territory covered litigation (and resultant liabilities and losses) relating to the covered period, subject to certain limitations, and does not cover any fines or penalties incurred in the European Commission proceedings or any other matter. See Note 5
+
+
+51
+
+Table of Contents
+—U.S. and Europe Retrospective Responsibility Plans and Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report. 
+Impact if actual results differ from assumptions. Due to the inherent uncertainties of the legal and regulatory processes in the multiple jurisdictions in which we operate, our judgments may be materially different than the actual outcomes, which could have material adverse effects on our business, financial conditions and results of operations in the period in which the effect becomes probable and reasonably estimable. See Note 20—Legal Matters to our consolidated financial statements included in Item 8 of this report. 
+Income Taxes 
+Critical estimates. The determination of our provision for income taxes and income tax assets and liabilities requires estimates with respect to the timing and amount of income, deductions and credits. Significant judgment is required in interpreting and applying complex tax laws and evaluating our tax positions.
+Assumptions and judgment. Our estimates may change as a result of changes in tax laws or interpretations, actual or forecasted operating results by jurisdiction, or other facts and circumstances. In assessing the realizability of deferred tax assets, we record a valuation allowance to reduce deferred tax assets to the amount that is believed more likely than not to be realized based on available evidence. We also exercise judgment in evaluating uncertain tax positions, including the expected outcomes of examinations and other proceedings with taxing authorities. 
+Impact if actual results differ from assumptions. Although we believe our estimates and judgments are reasonable, if actual results differ from our estimates, we may recognize additional income tax expense or benefits. If taxing authorities successfully challenge positions for which tax benefits have been recorded, we may recognize additional income tax expense. These amounts could have a material effect on our financial condition, results of operations or cash flows.
+
+ITEM 7A. 

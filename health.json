@@ -1,0 +1,81 @@
+{
+ "quotes": {
+  "last_run": "2026-11-07T01:10:47Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "generated_at": "2026-11-07T16:31:34Z",
+ "history": {
+  "last_run": "2026-11-07T01:10:47Z",
+  "ok": true,
+  "count": 27,
+  "errors": []
+ },
+ "news": {
+  "last_run": "2026-11-07T01:10:47Z",
+  "ok": true,
+  "count": 60,
+  "errors": []
+ },
+ "filings": {
+  "last_run": "2026-11-07T16:31:34Z",
+  "ok": true,
+  "count": 0,
+  "errors": []
+ },
+ "fundamentals": {
+  "last_run": "2026-11-07T01:10:47Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "mgmt": {
+  "last_run": "2026-11-07T01:10:47Z",
+  "ok": true,
+  "count": 15,
+  "errors": [
+   "V releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "LIN releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "LLY releases: Gemini gemini-3.8-flash returned 503",
+   "MU releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "MSFT releases: Gemini gemini-3.8-flash returned 503",
+   "JPM releases: Gemini gemini-3.8-flash returned 503",
+   "WM releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "COST releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "KO releases: Gemini gemini-3.8-flash returned 503",
+   "AMZN releases: Gemini gemini-3.8-flash returned 429",
+   "AMT releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)"
+  ]
+ },
+ "evidence": {
+  "last_run": "2026-11-07T16:31:34Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "peers": {
+  "last_run": "2026-11-07T01:46:39Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "segments": {
+  "last_run": "2026-11-07T01:46:39Z",
+  "ok": true,
+  "count": 14,
+  "errors": []
+ },
+ "bench": {
+  "last_run": "2026-11-07T01:46:39Z",
+  "ok": true,
+  "count": 12,
+  "errors": []
+ },
+ "baserates": {
+  "last_run": "2026-11-03T10:04:13Z",
+  "ok": true,
+  "count": 11541,
+  "errors": []
+ }
+}

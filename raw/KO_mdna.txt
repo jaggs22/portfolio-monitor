@@ -1,0 +1,391 @@
+10-Q for period 2026-10-02, filed 2026-10-28
+
+Management’s Discussion and Analysis of Financial Condition and Results of Operations
+When used in this report, the terms “The Coca-Cola Company,” “Company,” “we,” “us” and “our” mean The Coca-Cola Company and all entities included in our consolidated financial statements.
+
+CRITICAL ACCOUNTING POLICIES AND ESTIMATES
+Recoverability of Equity Method Investments and Indefinite-Lived Intangible Assets
+Our Company faces many uncertainties and risks related to various economic, political and regulatory environments in the countries and territories in which we operate, particularly in developing and emerging markets. Refer to the headings “Item 1A. Risk Factors” in Part I and “Our Business — Challenges and Risks” in Part II of our Annual Report on Form 10-K for the year ended December 31, 2025, as well as the heading “Operations Review” below, for additional information related to our present business environment. As a result, management must make numerous assumptions, which involve a significant amount of judgment, when performing impairment tests of equity method investments and indefinite-lived intangible assets in various regions around the world. The performance of impairment tests involves critical accounting estimates. These estimates require significant management judgment and include inherent uncertainties. Factors that management must estimate include, among others, the economic lives of the assets, sales volume, pricing, royalty rates, cost of raw materials, delivery costs, long-term growth rates, discount rates, marketing spending, foreign currency exchange rates, tax rates, capital spending and proceeds from the sale of assets. The variability of these factors depends on a number of conditions, and thus our accounting estimates may change from period to period. These factors are even more difficult to estimate given the highly volatile global financial markets. As these factors are often interdependent and may not change in isolation, we do not believe it is practicable or meaningful to present the impact of changing a single factor. 
+During the three months ended December 31, 2025, the operating results related to our BodyArmor sports performance and hydration beverage business, combined with lower expectations of future performance compared to the original forecasts, triggered the need to update the Company’s impairment analysis, including a reassessment of the business projections for the trademark. Based on this assessment, the Company concluded that the fair value of the trademark was less than its carrying value and recorded an impairment charge of $960 million. The decrease in fair value was primarily driven by the revised projections of future operating results, including a slowing of the projected long-term growth rate for the category, an intensifying competitive environment, and more focused innovation and international rollout plans. The remaining carrying value of the trademark is $2,440 million. As of October 2, 2026, the fair value of this trademark approximates its carrying value. If the near-term operating results of this trademark do not achieve our revised financial projections, or if the macroeconomic conditions change, causing the discount rate to increase without an offsetting increase in the operating results, it is likely that we would be required to recognize an additional impairment charge. Management will continue to monitor the fair value of this trademark in future periods.
+
+OPERATIONS REVIEW
+Sales of our ready-to-drink beverages are somewhat seasonal, with the second and third calendar quarters typically accounting for the highest sales volumes. The volume of sales in the beverage business may be affected by weather conditions. 
+While our operations are primarily local, we remain subject to global trade dynamics, which may impact certain components of our cost structure as well as the cost structures of our bottlers and our customers and may affect consumer sentiment across our markets.
+
+Structural Changes, Acquired Brands and Newly Licensed Brands
+In order to continually improve upon the Company’s operating performance, from time to time we engage in buying and selling ownership interests in bottling partners and other manufacturing operations. In addition, we periodically acquire brands and their related operations or enter into license agreements for certain brands to supplement our beverage offerings. These items impact our operating results and certain key metrics used by management in assessing the Company’s performance.
+Unit case volume growth is a key metric used by management to evaluate the Company’s performance because it measures demand for our products at the consumer level. The Company’s unit case volume represents the number of unit cases (or unit case equivalents) of Company beverage products directly or indirectly sold by the Company and its bottling partners (collectively, “Coca-Cola system”) to customers or consumers and, therefore, reflects unit case volume for both consolidated and unconsolidated bottlers. Refer to the heading “Beverage Volume” below.
+Concentrate sales volume represents the amount of concentrates, syrups, source waters and powders/minerals (in all instances expressed in unit case equivalents) sold by, or used in finished products sold by, the Company to its bottling partners or other customers. For our Costa non-ready-to-drink beverage products, concentrate sales volume represents the amount of beverages, primarily measured in number of transactions (in all instances expressed in unit case equivalents), sold by the Company to customers or consumers. Refer to the heading “Beverage Volume” below.
+
+
+33
+
+
+
+When we analyze our net operating revenues, we generally consider the following factors: (1) volume growth (concentrate sales volume or unit case volume, as applicable); (2) changes in price/mix; (3) foreign currency exchange rate fluctuations; and (4) acquisitions and divestitures (including structural changes as defined below), as applicable. Refer to the heading “Net Operating Revenues” below. The Company sells concentrates and syrups to both consolidated and unconsolidated bottling partners. The ownership structure of our bottling partners impacts the timing of recognizing concentrate revenue and concentrate sales volume. When we sell concentrates or syrups to our consolidated bottling partners, we do not recognize the concentrate revenue or concentrate sales volume until the bottling partner has sold finished products manufactured from the concentrates or syrups to a third party. When we sell concentrates or syrups to our unconsolidated bottling partners, we recognize the concentrate revenue and concentrate sales volume when the concentrates or syrups are sold to the bottling partner. The subsequent sale of the finished products manufactured from the concentrates or syrups to a third party does not impact the timing of recognizing the concentrate revenue or concentrate sales volume. When we account for an unconsolidated bottling partner as an equity method investment, we eliminate the intercompany profit related to concentrate sales to the extent of our ownership interest, until the equity method investee has sold finished products manufactured from the concentrates or syrups to a third party. We typically report unit case volume when finished products manufactured from the concentrates or syrups are sold to a third party, regardless of our ownership interest in the bottling partner, if any.
+We generally refer to acquisitions and divestitures of bottling operations as “structural changes,” which are a component of acquisitions and divestitures. Typically, structural changes do not impact the Company’s unit case volume on a consolidated basis or at the geographic operating segment level. We recognize unit case volume for all sales of Company beverage products, regardless of our ownership interest in the bottling partner, if any. However, the unit case volume reported by our Bottling Investments operating segment is generally impacted by structural changes because it only includes the unit case volume of our consolidated bottling operations. Refer to Note 2 of Notes to Consolidated Financial Statements for additional information on the Company’s acquisitions and divestitures.
+“Acquired brands” refers to brands acquired during the past 12 months. Typically, the Company has not reported unit case volume or recognized concentrate sales volume related to acquired brands in periods prior to the closing of a transaction. Therefore, the unit case volume and concentrate sales volume related to an acquired brand are incremental to prior year volume. We generally do not consider the acquisition of a brand to be a structural change.
+“Licensed brands” refers to brands not owned by the Company but for which we hold certain rights, generally including, but not limited to, distribution rights, and from which we derive an economic benefit when the related products are sold. Typically, the Company has not reported unit case volume or recognized concentrate sales volume related to a licensed brand in periods prior to the beginning of the term of a license agreement. Therefore, in the year that a license agreement is entered into, the unit case volume and concentrate sales volume related to a licensed brand are incremental to prior year volume. We generally do not consider the licensing of a brand to be a structural change.
+In May 2025, the Company refranchised our bottling operations in certain territories in India. The impact of this refranchising has been included as a structural change in our analysis of net operating revenues on a consolidated basis as well as for the Bottling Investments and Asia Pacific operating segments for the nine months ended October 2, 2026. Additionally, in October 2025, the Company sold our finished product operations in Nigeria. The impact of this sale has been included as a divestiture in our analysis of net operating revenues on a consolidated basis as well as for the EMEA operating segment for the three and nine months ended October 2, 2026.
+
+Beverage Volume
+We measure the volume of Company beverage products sold in two ways: (1) unit cases of finished products and (2) concentrate sales. As used in this report, “unit case” means a unit of measurement equal to 192 U.S. fluid ounces of finished beverage (24 eight-ounce servings), with the exception of unit case equivalents for Costa non-ready-to-drink beverage products, which are primarily measured in number of transactions; and “unit case volume” means the number of unit cases (or unit case equivalents) of Company beverage products directly or indirectly sold by the Company and its bottling partners to customers or consumers. Unit case volume primarily consists of beverage products bearing Company trademarks. Also included in unit case volume are certain brands licensed to, or distributed by, our Company, and brands owned by Coca-Cola system bottlers for which our Company provides marketing support and from the sale of which we derive an economic benefit. In addition, unit case volume includes sales by certain joint ventures in which the Company has an ownership interest. We believe unit case volume is one of the indicators of the underlying strength of the Coca-Cola system because it measures demand for our products at the consumer level. The unit case volume numbers used in this report are derived based on estimates received by the Company from its bottling partners and distributors. Concentrate sales volume represents the amount of concentrates, syrups, source waters and powders/minerals (in all instances expressed in unit case equivalents) sold by, or used in finished beverages sold by, the Company to its bottling partners or other customers. For Costa non-ready-to-drink beverage products, concentrate sales volume represents the amount of beverages, primarily measured in number of transactions (in all instances expressed in unit case equivalents), sold by the Company to customers or consumers. Unit case volume and concentrate sales volume growth 
+
+
+34
+
+
+
+rates are not necessarily equal during any given period. Factors such as seasonality, bottlers’ inventory practices, supply point changes, timing of price increases, new product introductions and changes in product mix can create differences between unit case volume and concentrate sales volume growth rates. In addition to these items, the impact of unit case volume from certain joint ventures in which the Company has an ownership interest, but to which the Company does not sell concentrates, syrups, source waters or powders/minerals, may give rise to differences between unit case volume and concentrate sales volume growth rates. 
+Information about our volume growth worldwide and for each of our operating segments is as follows: 
+
+
+Percent Change 2026 versus 2025
+Three Months Ended
+October 2, 2026Nine Months Ended
+October 2, 2026
+
+Unit Cases1,2,3
+Concentrate Sales4
+Unit Cases1,2,3
+Concentrate Sales4
+Worldwide5%6%
+64%6%
+EMEA5 6 3 4 
+Latin America6 8 3 6 
+North America— 2 2 5 
+Asia Pacific6 8 7 10 
+Bottling Investments8 
+5 N/A5 
+5N/A
+1Bottling Investments operating segment data reflects unit case volume growth for consolidated bottlers only.
+2Geographic operating segment data reflects unit case volume growth for all bottlers, both consolidated and unconsolidated, and distributors in the applicable geographic areas. Unit case volume growth for Costa retail stores is reflected in the EMEA operating segment data. 
+3Unit case volume percent change is based on average daily sales. Unit case volume growth based on average daily sales is computed by comparing the average daily sales in each of the corresponding periods. Average daily sales are the unit cases sold during the period divided by the number of days in the period.
+4Concentrate sales volume represents the amount of concentrates, syrups, source waters and powders/minerals (in all instances expressed in unit case equivalents) sold by, or used in finished beverages sold by, the Company to its bottling partners or other customers and is not based on average daily sales. For Costa non-ready-to-drink beverage products, concentrate sales volume represents the amount of beverages, primarily measured in number of transactions (in all instances expressed in unit case equivalents), sold by the Company to customers or consumers and is not based on average daily sales. Each of our quarters, other than the fourth quarter, ends on the Friday closest to the last day of the corresponding quarterly calendar period. As a result, the first quarter of 2026 had six additional days when compared to the first quarter of 2025, and the fourth quarter of 2026 will have six fewer days when compared to the fourth quarter of 2025.
+5After considering the impact of structural changes, unit case volume for Bottling Investments for the three and nine months ended October 2, 2026 increased 10% and 7%, respectively.
+6After considering the impact of divestiture activities, worldwide concentrate sales volume for the three months ended October 2, 2026 increased 7%.
+Unit Case Volume 
+Although a significant portion of our Company’s net operating revenues is not based directly on unit case volume, we believe unit case volume performance is one of the indicators of the underlying strength of the Coca-Cola system because it measures demand for our products at the consumer level. 
+Three Months Ended October 2, 2026 versus Three Months Ended September 26, 2025
+Unit case volume in EMEA increased 5%, which included 6% growth in Trademark Coca-Cola, 5% growth in water, sports, coffee and tea, 3% growth in sparkling flavors, as well as growth in energy drinks, partially offset by an 8% decline in juice, value-added dairy and plant-based beverages, which was driven by the impact of the sale of our finished product operations in Nigeria in 2025. The operating segment’s volume performance included an increase in unit case volume of 8% in the Eurasia and Middle East operating unit, 7% in the Africa operating unit and 2% in the Europe operating unit. 
+Unit case volume in Latin America increased 6%, which included 6% growth in Trademark Coca-Cola, 7% growth in water, sports, coffee and tea, 6% growth in sparkling flavors, 2% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks. The operating segment’s volume performance included 3% growth in Mexico, 6% growth in Brazil, 26% growth in Peru and 17% growth in Colombia.
+Unit case volume in North America was even, which included 2% growth in Trademark Coca-Cola, 1% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks, offset by a 4% decline in water, sports, coffee and tea as well as a 2% decline in sparkling flavors.
+
+
+35
+
+
+
+Unit case volume in Asia Pacific increased 6%, which included 7% growth in both Trademark Coca-Cola and water, sports, coffee and tea, 4% growth in sparkling flavors, 3% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks. The operating segment’s volume performance included 17% growth in the India and Southwest Asia operating unit, 6% growth in both the Greater China and Mongolia and the ASEAN and South Pacific operating units, partially offset by a 5% decline in the Japan and South Korea operating unit. 
+Unit case volume for Bottling Investments increased 8%, primarily driven by growth in India and Africa.
+Nine Months Ended October 2, 2026 versus Nine Months Ended September 26, 2025
+Unit case volume in EMEA increased 3%, which included 3% growth in Trademark Coca-Cola, 5% growth in water, sports, coffee and tea, 2% growth in sparkling flavors, as well as growth in energy drinks, partially offset by an 11% decline in juice, value-added dairy and plant-based beverages, which was driven by the impact of the sale of our finished product operations in Nigeria. The operating segment’s volume performance included an increase in unit case volume of 5% in both the Eurasia and Middle East and Africa operating units and 2% growth in the Europe operating unit. 
+Unit case volume in Latin America increased 3%, which included 3% growth in Trademark Coca-Cola, 4% growth in water, sports, coffee and tea, 3% growth in sparkling flavors, 1% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks. The operating segment’s volume performance included 5% growth in Brazil, 16% growth in Peru, 15% growth in Colombia and 1% growth in Mexico, partially offset by a decline of 4% in Argentina.
+Unit case volume in North America increased 2%, which included 4% growth in Trademark Coca-Cola, 2% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks. Unit case volume in both sparkling flavors and water, sports, coffee and tea was even.
+Unit case volume in Asia Pacific increased 7%, which included 7% growth in Trademark Coca-Cola, 8% growth in water, sports, coffee and tea, 6% growth in sparkling flavors, 4% growth in juice, value-added dairy and plant-based beverages, as well as growth in energy drinks. The operating segment’s volume performance included 11% growth in the India and Southwest Asia operating unit, 7% growth in the Greater China and Mongolia operating unit and 6% growth in the ASEAN and South Pacific operating unit. Unit case volume in the Japan and South Korea operating unit was even.
+Unit case volume for Bottling Investments increased 5%, primarily driven by growth in India and Africa, partially offset by the impact of refranchising certain territories of our bottling operations in India.
+Concentrate Sales Volume
+During the three months ended October 2, 2026, worldwide concentrate sales volume increased 6% and unit case volume increased 5% compared to the three months ended September 26, 2025. During the nine months ended October 2, 2026, worldwide concentrate sales volume increased 6% and unit case volume increased 4% compared to the nine months ended September 26, 2025. Concentrate sales volume growth is calculated based on the amount sold during the reporting periods, which is impacted by the number of days. Conversely, unit case volume growth is calculated based on average daily sales, which is not impacted by the number of days in the reporting periods. The first quarter of 2026 had six additional days when compared to the first quarter of 2025, which contributed to the differences between concentrate sales volume and unit case volume growth rates on a consolidated basis and for the individual operating segments during the nine months ended October 2, 2026. Additionally, the differences between concentrate sales volume and unit case volume growth rates for the operating segments were impacted by the timing of concentrate shipments. We generally expect the differences between concentrate sales volume and unit case volume growth rates to be minimal on a full year basis; however, for the full year 2026 we currently expect worldwide concentrate sales volume growth to be slightly behind unit case volume growth.
+
+
+36
+
+
+
+
+Net Operating Revenues 
+Three Months Ended October 2, 2026 versus Three Months Ended September 26, 2025
+During the three months ended October 2, 2026, net operating revenues were $13,380 million, compared to $12,455 million during the three months ended September 26, 2025, an increase of $925 million, or 7%.
+The following table illustrates, on a percentage basis, the estimated impact of the factors resulting in the increase (decrease) in net operating revenues on a consolidated basis and for each of our operating segments:
+
+
+Percent Change 2026 versus 2025
+
+Volume1Price/MixForeign Currency Fluctuations 
+Acquisitions & Divestitures2 Total
+Consolidated7%1%1%(1)%7%
+EMEA6 1—(3)4
+Latin America879—25
+North America21——3
+Asia Pacific8(2)(3)—4
+Bottling Investments1031—13
+
+Note: Certain rows may not add due to rounding.
+1Represents the percent change in net operating revenues attributable to the increase (decrease) in concentrate sales volume for our geographic operating segments (expressed in unit case equivalents) after considering the impact of acquisitions and divestitures, if any. For our Bottling Investments operating segment, this represents the percent change in net operating revenues attributable to the increase (decrease) in unit case volume computed by comparing the total sales (rather than the average daily sales) in each of the corresponding periods after considering the impact of structural changes, if any. Our Bottling Investments operating segment data reflects unit case volume growth for consolidated bottlers only after considering the impact of structural changes, if any. Refer to the heading “Beverage Volume” above.
+2Includes structural changes, if any. Refer to the heading “Structural Changes, Acquired Brands and Newly Licensed Brands” above.
+Refer to the heading “Beverage Volume” above for additional information related to changes in our unit case and concentrate sales volumes.
+“Price/mix” refers to the change in net operating revenues caused by factors such as pricing actions taken by the Company and, where applicable, our bottling partners; the mix of categories, products and packages sold; and the mix of channels and geographic territories where the sales occurred. Management believes that providing investors with price/mix enhances their understanding about the combined impact that these items had on the Company’s net operating revenues. The impact of price/mix is calculated by subtracting the change in net operating revenues resulting from volume increases or decreases, fluctuations in foreign currency exchange rates, and acquisitions and divestitures from the total change in net operating revenues. Management uses this measure in making financial, operating and planning decisions and in evaluating the Company’s performance.
+Price/mix had a 1% favorable impact on our consolidated net operating revenues. Price/mix was impacted by a variety of factors and events, including, but not limited to, the following:
+•EMEA — favorable pricing initiatives, including inflationary pricing, partially offset by unfavorable mix;
+•Latin America — favorable pricing initiatives, including inflationary pricing, and favorable mix; 
+•North America — favorable pricing initiatives, partially offset by unfavorable mix;
+•Asia Pacific — unfavorable mix; and
+•Bottling Investments — favorable pricing initiatives, partially offset by unfavorable mix.
+Fluctuations in foreign currency exchange rates, including the effects of our hedging activities, favorably impacted our consolidated net operating revenues by 1%. Net operating revenues were favorably impacted by a weaker U.S. dollar compared to certain foreign currencies, including the Mexican peso, Brazilian real, South African rand and Chinese yuan, which had a favorable impact on our Latin America, EMEA, Asia Pacific and Bottling Investments operating segments. The favorable impact of a weaker U.S. dollar compared to the currencies listed above was partially offset by the impact of a stronger U.S. dollar compared to certain other foreign currencies, including the Japanese yen, Indian rupee, euro and Turkish lira, which had an unfavorable impact on our Asia Pacific, EMEA and Bottling Investments operating segments. Refer to the heading “Liquidity, Capital Resources and Financial Position — Foreign Exchange” below.
+
+
+37
+
+
+
+“Acquisitions and divestitures” generally refers to acquisitions and divestitures of brands or businesses, some of which the Company considers to be structural changes. The impact of acquisitions and divestitures is the difference between the change in net operating revenues and the change in what our net operating revenues would have been if we removed the net operating revenues associated with an acquisition or a divestiture from either the current year or the prior year, as applicable. Management believes that quantifying the impact that acquisitions and divestitures had on the Company’s net operating revenues provides investors with useful information to enhance their understanding of the Company’s net operating revenue performance by improving their ability to compare our period-to-period results. Management considers the impact of acquisitions and divestitures when evaluating the Company’s performance. Refer to the heading “Structural Changes, Acquired Brands and Newly Licensed Brands” above for additional information related to acquisitions and divestitures.
+Nine Months Ended October 2, 2026 versus Nine Months Ended September 26, 2025
+During the nine months ended October 2, 2026, net operating revenues were $39,232 million, compared to $36,119 million during the nine months ended September 26, 2025, an increase of $3,113 million, or 9%.
+The following table illustrates, on a percentage basis, the estimated impact of the factors resulting in the increase (decrease) in net operating revenues on a consolidated basis and for each of our operating segments:
+
+
+Percent Change 2026 versus 2025
+
+Volume1Price/MixForeign Currency Fluctuations 
+Acquisitions & Divestitures2 Total
+Consolidated6%1%2%(1)%9%
+EMEA4 23(3)6
+Latin America648—18
+North America52——7
+Asia Pacific10(6)(1)—3
+Bottling Investments1012(1)11
+
+Note: Certain rows may not add due to rounding.
+1Represents the percent change in net operating revenues attributable to the increase (decrease) in concentrate sales volume for our geographic operating segments (expressed in unit case equivalents) after considering the impact of acquisitions and divestitures, if any. For our Bottling Investments operating segment, this represents the percent change in net operating revenues attributable to the increase (decrease) in unit case volume computed by comparing the total sales (rather than the average daily sales) in each of the corresponding periods after considering the impact of structural changes, if any. Our Bottling Investments operating segment data reflects unit case volume growth for consolidated bottlers only after considering the impact of structural changes, if any. Refer to the heading “Beverage Volume” above.
+2Includes structural changes, if any. Refer to the heading “Structural Changes, Acquired Brands and Newly Licensed Brands” above.
+Refer to the heading “Beverage Volume” above for additional information related to changes in our unit case and concentrate sales volumes.
+Price/mix had a 1% favorable impact on our consolidated net operating revenues. Price/mix was impacted by a variety of factors and events, including, but not limited to, the following:
+•EMEA — favorable pricing initiatives, including inflationary pricing, partially offset by unfavorable mix;
+•Latin America — favorable pricing initiatives, including inflationary pricing, and favorable mix; 
+•North America — favorable pricing initiatives, partially offset by unfavorable mix;
+•Asia Pacific — unfavorable mix, including affordability initiatives; and
+•Bottling Investments — favorable pricing initiatives, partially offset by unfavorable mix.
+Fluctuations in foreign currency exchange rates, including the effects of our hedging activities, favorably impacted our consolidated net operating revenues by 2%. Net operating revenues were favorably impacted by a weaker U.S. dollar compared to certain foreign currencies, including the Mexican peso, Brazilian real, South African rand and euro, which had a favorable impact on our Latin America, EMEA and Bottling Investments operating segments. The favorable impact of a weaker U.S. dollar compared to the currencies listed above was partially offset by the impact of a stronger U.S. dollar compared to certain other foreign currencies, including the Indian rupee, Japanese yen, Turkish lira and Argentine peso, which had an unfavorable impact on our Asia Pacific, EMEA, Latin America and Bottling Investments operating segments. Refer to the heading “Liquidity, Capital Resources and Financial Position — Foreign Exchange” below.
+
+
+38
+
+
+
+Net operating revenue growth rates are impacted by sales volume; price/mix; foreign currency exchange rate fluctuations; and acquisitions and divestitures. The size and timing of acquisitions and divestitures are not consistent from period to period. Based on current spot rates and our hedging coverage in place, we expect foreign currency exchange rate fluctuations will have a favorable impact on our full year 2026 net operating revenues.
+
+Gross Profit Margin
+Gross profit margin is a ratio calculated by dividing gross profit by net operating revenues. Management believes gross profit margin provides investors with useful information related to the profitability of our business prior to considering all of the selling, general and administrative expenses and other operating charges incurred. Management uses this measure in making financial, operating and planning decisions and in evaluating the Company’s performance. 
+Our gross profit margin increased to 63.2% for the three months ended October 2, 2026, compared to 61.5% for the three months ended September 26, 2025. Our gross profit margin increased to 63.0% for the nine months ended October 2, 2026, compared to 62.1% for the nine months ended September 26, 2025. The increases were primarily due to the favorable impact of pricing initiatives and foreign currency exchange rate fluctuations, commodity cost stabilization, as well as the impact of the sale of our finished product operations in Nigeria. 
+
+Selling, General and Administrative Expenses
+During the three months ended October 2, 2026, selling, general and administrative expenses were $3,975 million, compared to $3,618 million during the three months ended September 26, 2025, an increase of $357 million, or 10%. The increase was primarily due to increased marketing spending and increased annual incentive expense due to timing. 
+During the nine months ended October 2, 2026, selling, general and administrative expenses were $11,167 million, compared to $10,322 million during the nine months ended September 26, 2025, an increase of $845 million, or 8%. The increase was primarily due to increased marketing spending, partially offset by lower annual incentive expense. Additionally, during the nine months ended October 2, 2026, foreign currency exchange rate fluctuations increased selling, general and administrative expenses by 2%.
+Advertising expenses for the three months ended October 2, 2026 and September 26, 2025 were $1,777 million and $1,523 million, respectively. Advertising expenses for the nine months ended October 2, 2026 and September 26, 2025 were $4,719 million and $3,940 million, respectively. 
+
+Other Operating Charges
+Other operating charges incurred by our operating segments and Corporate were as follows (in millions):
+
+
+Three Months EndedNine Months Ended
+October 2,
+2026September 26,
+2025October 2,
+2026September 26,
+2025
+EMEA$— $— $— $— 
+Latin America— — — 31 
+North America6 — 16 — 
+Asia Pacific— — — — 
+Bottling Investments— — — — 
+Corporate4 58 38 171 
+Total$10 $58 $54 $202 
+During the three months ended October 2, 2026, the Company recorded other operating charges of $10 million. These charges consisted of $6 million related to North America modernization initiatives and $4 million for the amortization of noncompete agreements related to the BodyArmor acquisition.
+During the nine months ended October 2, 2026, the Company recorded other operating charges of $54 million. These charges consisted of $19 million related to an indemnification agreement entered into as a part of the refranchising of certain of our bottling operations, $16 million related to North America modernization initiatives, $11 million for the amortization of noncompete agreements related to the BodyArmor acquisition and $8 million related to tax litigation expense.
+During the three months ended September 26, 2025, the Company recorded other operating charges of $58 million. These charges included $27 million related to an indemnification agreement entered into as a part of the refranchising of certain of our bottling operations, $24 million related to the Company’s productivity and reinvestment program, $4 million for the amortization of noncompete agreements related to the BodyArmor acquisition and $3 million related to tax litigation expense.
+
+
+39
+
+
+
+During the nine months ended September 26, 2025, the Company recorded other operating charges of $202 million. These charges consisted of $47 million related to the remeasurement of our contingent consideration liability to fair value in conjunction with our acquisition of fairlife in 2020, which brought the total liability to $6,173 million and was paid in March 2025. Additionally, other operating charges included $63 million related to the Company’s productivity and reinvestment program, $35 million related to an indemnification agreement entered into as a part of the refranchising of certain of our bottling operations, $31 million related to the impairment of a trademark in Latin America, $11 million for the amortization of noncompete agreements related to the BodyArmor acquisition, $8 million related to tax litigation expense and $7 million of transaction costs related to the refranchising of our bottling operations in certain territories in India.
+Refer to Note 2 of Notes to Consolidated Financial Statements for additional information on our divestiture activities. Refer to Note 9 of Notes to Consolidated Financial Statements for additional information on the tax litigation. Refer to Note 15 of Notes to Consolidated Financial Statements for additional information on the impairment charge.
+
+Operating Income and Operating Margin
+Information about our operating income contribution by operating segment and Corporate on a percentage basis is as follows:
+
+
+Three Months EndedNine Months Ended
+October 2,
+2026September 26,
+2025October 2,
+2026September 26,
+2025
+EMEA26.2%27.5%27.7%29.3%
+Latin America25.8 22.5 25.023.1 
+North America39.6 42.2 37.538.9 
+Asia Pacific12.6 13.2 13.015.0 
+Bottling Investments4.6 1.4 3.62.0 
+Corporate(8.8)(6.8)(6.8)(8.3)
+Total100.0%100.0%100.0%100.0%
+Operating margin is a ratio calculated by dividing operating income by net operating revenues. Management believes operating margin provides investors with useful information related to the profitability of our business after considering all of the selling, general and administrative expenses and other operating charges incurred. Management uses this measure in making financial, operating and planning decisions and in evaluating the Company’s performance. 
+Information about our operating margin on a consolidated basis and for each of our operating segments and Corporate is as follows:
+
+
+Three Months EndedNine Months Ended
+October 2,
+2026September 26,
+2025October 2,
+2026September 26,
+2025
+Consolidated33.4%32.0%34.4%33.0%
+EMEA39.338.942.142.0
+Latin America58.9 57.1 61.5 59.5 
+North America32.8 32.0 32.3 31.7 
+Asia Pacific37.6 36.3 39.8 42.4 
+Bottling Investments13.4 4.2 10.4 5.6 
+Corporate****
+* Calculation is not meaningful.
+Three Months Ended October 2, 2026 versus Three Months Ended September 26, 2025
+During the three months ended October 2, 2026, operating income was $4,465 million, compared to $3,982 million during the three months ended September 26, 2025, an increase of $483 million, or 12%. The increase was primarily driven by an increase in concentrate sales volume of 7%, favorable price/mix, lower commodity costs, lower other operating charges and a favorable foreign currency exchange rate impact of 3%, partially offset by increased marketing spending and higher operating expenses. 
+Fluctuations in foreign currency exchange rates, including the effects of our hedging activities, favorably impacted consolidated operating income by 3% due to a weaker U.S. dollar compared to certain foreign currencies, including the Mexican peso and Brazilian real, which had a favorable impact on our Latin America operating segment. The favorable impact of a weaker U.S. dollar compared to the currencies listed above was partially offset by the impact of a stronger U.S. dollar compared to certain 
+
+
+40
+
+
+
+other foreign currencies, including the Japanese yen and euro, which had an unfavorable impact on our Asia Pacific and EMEA operating segments. Refer to the heading “Liquidity, Capital Resources and Financial Position — Foreign Exchange” below.
+The EMEA operating segment reported operating income of $1,171 million and $1,097 million for the three months ended October 2, 2026 and September 26, 2025, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 6%, favorable price/mix and lower commodity costs, partially offset by increased marketing spending and higher operating expenses.
+Latin America reported operating income of $1,152 million and $897 million for the three months ended October 2, 2026 and September 26, 2025, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 8%, favorable price/mix, lower commodity costs, lower operating expenses and a favorable foreign currency exchange rate impact of 14%, partially offset by increased marketing spending.
+Operating income for North America for the three months ended October 2, 2026 and September 26, 2025 was $1,766 million and $1,681 million, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 2%, favorable price/mix and decreased marketing spending partly due to timing, partially offset by higher commodity costs, higher operating expenses and higher other operating charges. 
+Asia Pacific’s operating income for the three months ended October 2, 2026 and September 26, 2025 was $563 million and $521 million, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 8%, partially offset by unfavorable price/mix and an unfavorable foreign currency exchange rate impact of 6%.
+Bottling Investments’ operating income for the three months ended October 2, 2026 and September 26, 2025 was $205 million and $57 million, respectively. The increase in operating income was primarily driven by an increase in unit case volume of 10%, favorable price/mix, lower commodity costs and lower operating expenses, partially offset by an unfavorable foreign currency exchange rate impact of 2%.
+Corporate’s operating loss for the three months ended October 2, 2026 and September 26, 2025 was $392 million and $271 million, respectively. This increase is primarily a result of higher annual incentive expense due to timing and increased marketing expenses, partially offset by lower other operating charges. 
+Nine Months Ended October 2, 2026 versus Nine Months Ended September 26, 2025
+During the nine months ended October 2, 2026, operating income was $13,496 million, compared to $11,921 million during the nine months ended September 26, 2025, an increase of $1,575 million, or 13%. The increase was primarily driven by an increase in concentrate sales volume of 6%, favorable price/mix, lower operating expenses, lower other operating charges and a favorable foreign currency exchange rate impact of 4%, partially offset by higher commodity costs and increased marketing spending. 
+Fluctuations in foreign currency exchange rates, including the effects of our hedging activities, favorably impacted consolidated operating income by 4% due to a weaker U.S. dollar compared to certain foreign currencies, including the Mexican peso, Brazilian real and euro, which had a favorable impact on our Latin America and EMEA operating segments. The favorable impact of a weaker U.S. dollar compared to the currencies listed above was partially offset by the impact of a stronger U.S. dollar compared to certain other foreign currencies, including the Argentine peso, Japanese yen, Indian rupee and Turkish lira, which had an unfavorable impact on our Latin America, Asia Pacific, EMEA and Bottling Investments operating segments. Refer to the heading “Liquidity, Capital Resources and Financial Position — Foreign Exchange” below.
+The EMEA operating segment reported operating income of $3,739 million and $3,487 million for the nine months ended October 2, 2026 and September 26, 2025, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 4%, favorable price/mix, lower commodity costs and a favorable foreign currency exchange rate impact of 3%, partially offset by increased marketing spending and higher operating expenses. 
+Latin America reported operating income of $3,367 million and $2,758 million for the nine months ended October 2, 2026 and September 26, 2025, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 6%, favorable price/mix, lower commodity costs, lower operating expenses, lower other operating charges and a favorable foreign currency exchange rate impact of 12%, partially offset by increased marketing spending.
+Operating income for North America for the nine months ended October 2, 2026 and September 26, 2025 was $5,067 million and $4,643 million, respectively. The increase in operating income was primarily driven by an increase in concentrate sales volume of 5%, favorable price/mix and lower operating expenses, partially offset by higher commodity costs, increased marketing spending and higher other operating charges.
+Asia Pacific’s operating income for the nine months ended October 2, 2026 and September 26, 2025 was $1,755 million and $1,792 million, respectively. The decrease in operating income was primarily driven by unfavorable price/mix, higher 
+
+
+41
+
+
+
+commodity costs and increased marketing spending, partially offset by an increase in concentrate sales volume of 10% and lower operating expenses.
+Bottling Investments’ operating income for the nine months ended October 2, 2026 and September 26, 2025 was $487 million and $235 million, respectively. The increase in operating income was primarily driven by an increase in unit case volume of 10%, favorable price/mix, lower commodity costs and lower operating expenses, partially offset by increased marketing spending.
+Corporate’s operating loss for the nine months ended October 2, 2026 and September 26, 2025 was $919 million and $994 million, respectively. This decrease is primarily a result of lower operating expenses due to lower annual incentive expense and lower other operating charges, partially offset by increased marketing expenses. 
+Based on current spot rates and our hedging coverage in place, we expect foreign currency exchange rate fluctuations will have a favorable impact on our full year 2026 operating income.
+
+Interest Income
+During the three months ended October 2, 2026, interest income was $224 million, compared to $185 million during the three months ended September 26, 2025, an increase of $39 million, or 21%. During the nine months ended October 2, 2026, interest income was $644 million, compared to $553 million during the nine months ended September 26, 2025, an increase of $91 million, or 17%. The increases were primarily driven by higher average investment balances.
+Interest Expense
+During the three months ended October 2, 2026, interest expense was $354 million, compared to $391 million during the three months ended September 26, 2025, a decrease of $37 million, or 9%. During the nine months ended October 2, 2026, interest expense was $1,098 million, compared to $1,223 million during the nine months ended September 26, 2025, a decrease of $125 million, or 10%. The decreases were primarily due to lower average short-term debt balances. 
+
+Equity Income (Loss) — Net
+During the three months ended October 2, 2026, equity income was $653 million, compared to equity income of $644 million during the three months ended September 26, 2025, an increase of $9 million, or 1%. During the nine months ended October 2, 2026, equity income was $1,641 million, compared to equity income of $1,556 million during the nine months ended September 26, 2025, an increase of $85 million, or 5%. These increases reflect, among other items, the impact of more favorable operating results reported by certain of our equity method investees, and a favorable foreign currency exchange rate impact. These favorable impacts were partially offset by the increase of net charges resulting from the Company’s proportionate share of significant operating and nonoperating items recorded by certain of our equity method investees, and the impact of the sale of our ownership interests in certain equity method investees in 2025.
+
+Other Income (Loss) — Net
+Three Months Ended October 2, 2026 versus Three Months Ended September 26, 2025
+During the three months ended October 2, 2026, other income (loss) — net was a loss of $155 million. The Company recorded expense of $194 million related to the non-service cost components of net periodic benefit cost, which included charges of $167 million and $25 million for a settlement loss and special termination benefits, respectively, related to a non-U.S. pension plan and foreign currency exchange losses of $29 million. Other income (loss) — net also included $14 million of costs related to our trade accounts receivable factoring program. Additionally, other income (loss) — net included a net gain of $37 million related to realized and unrealized gains and losses on equity securities and trading debt securities as well as realized gains and losses on available-for-sale debt securities and dividend income of $44 million. The Company also recorded a $5 million reduction in the previously recorded impairment charge related to our bottling operations in Africa, which are held for sale. This reduction is based on management’s revised estimates. 
+During the three months ended September 26, 2025, other income (loss) — net was a loss of $237 million. The Company recorded a charge of $393 million related to certain operations held for sale in Nigeria, $13 million of costs related to our trade accounts receivable factoring program, net foreign currency exchange losses of $11 million and a charge of $8 million related to the refranchising of certain bottling operations in Ghana. Additionally, the Company recognized a net gain of $151 million related to realized and unrealized gains and losses on equity securities and trading debt securities as well as realized gains and losses on available-for-sale debt securities, and dividend income of $36 million. Other income (loss) — net also included income of $4 million related to the non-service cost components of net periodic benefit cost.
+
+
+42
+
+
+
+Refer to Note 2 of Notes to Consolidated Financial Statements for additional information on our bottling operations in Africa and our divestiture activities. Refer to Note 4 of Notes to Consolidated Financial Statements for additional information on equity and debt securities. Refer to Note 13 of Notes to Consolidated Financial Statements for additional information on net periodic benefit cost or income. Refer to Note 15 of Notes to Consolidated Financial Statements for additional information on the impairment charges and the bottling operations in Ghana.
+Nine Months Ended October 2, 2026 versus Nine Months Ended September 26, 2025
+During the nine months ended October 2, 2026, other income (loss) — net was income of $236 million. The Company recognized a net gain of $338 million related to realized and unrealized gains and losses on equity securities and trading debt securities as well as realized gains and losses on available-for-sale debt securities and dividend income of $115 million. Additionally, other income (loss) — net included expense of $196 million related to the non-service cost components of net periodic benefit cost, which included charges of $167 million and $25 million for a settlement loss and special termination benefits, respectively, related to a non-U.S. pension plan. The Company also recorded net foreign currency exchange losses of $36 million and a $61 million reduction in the previously recorded impairment charge related to our bottling operations in Africa, which are held for sale. This reduction is based on management’s revised estimates. Other income (loss) — net also included $41 million of costs related to our trade accounts receivable factoring program.
+During the nine months ended September 26, 2025, other income (loss) — net was income of $229 million. The Company recognized a gain of $331 million related to the sale of a portion of our ownership interest in CCEP, a net gain of $295 million related to realized and unrealized gains and losses on equity securities and trading debt securities as well as realized gains and losses on available-for-sale debt securities, dividend income of $127 million and a gain of $102 million related to the refranchising of our bottling operations in certain territories in India. Additionally, the Company recorded a charge of $393 million related to certain operations held for sale in Nigeria as well as other-than-temporary impairment charges of $40 million related to an equity method investee in Latin America and $25 million related to a joint venture in Latin America. Other income (loss) — net also included $49 million of costs related to our trade accounts receivable factoring program, a charge of $36 million related to the refranchising of certain bottling operations in Ghana, net foreign currency exchange losses of $31 million and expense of $26 million related to the non-service cost components of net periodic benefit cost, which included charges of $25 million and $11 million for special termination benefits and a curtailment loss, respectively, related to non-U.S. pension activity.
+Refer to Note 2 of Notes to Consolidated Financial Statements for additional information on our bottling operations in Africa and our divestiture activities. Refer to Note 4 of Notes to Consolidated Financial Statements for additional information on equity and debt securities. Refer to Note 13 of Notes to Consolidated Financial Statements for additional information on our pension activities. Refer to Note 15 of Notes to Consolidated Financial Statements for additional information on the impairment charges and the bottling operations in Ghana. 
+
+Income Taxes
+The Company recorded income taxes of $777 million (16.1% effective tax rate) and $500 million (11.9% effective tax rate) during the three months ended October 2, 2026 and September 26, 2025, respectively. The Company recorded income taxes of $2,459 million (16.5% effective tax rate) and $2,215 million (17.0% effective tax rate) during the nine months ended October 2, 2026 and September 26, 2025, respectively.
+The Company’s effective tax rates for the three and nine months ended October 2, 2026 and September 26, 2025 vary from the statutory U.S. federal tax rate of 21.0%, primarily due to the tax impact of significant operating and nonoperating items, as described in Note 12 of Notes to Consolidated Financial Statements, along with the tax benefits of having significant earnings generated outside of the United States and significant earnings generated in investments accounted for under the equity method, both of which are generally taxed at rates lower than the statutory U.S. federal tax rate.
+The Company’s effective tax rates for the three and nine months ended October 2, 2026 included $172 million and $491 million, respectively, of net tax benefits related to various discrete tax items, including net interest income of $57 million and $155 million, respectively, related to the IRS Tax Litigation Deposit recorded in the line item income taxes in our consolidated statements of income, in accordance with our accounting policy. The Company’s effective tax rates for the three and nine months ended October 2, 2026 also included net tax benefits of $117 million and $298 million, respectively, primarily related to return to provision adjustments.
+The Company’s effective tax rates for the three and nine months ended September 26, 2025 included $442 million and $597 million, respectively, of net tax benefits related to various discrete tax items, including net interest income of $55 million and $162 million, respectively, related to the IRS Tax Litigation Deposit recorded in the line item income taxes in our consolidated statements of income, in accordance with our accounting policy. Also included were tax benefits of $258 million and $344 million, respectively, related to changes in the Company’s indefinite reinvestment assertion and reassessments of the realizability of deferred tax assets for certain foreign entities.
+
+
+43
+
+
+
+We are currently in litigation with the IRS for tax years 2007 through 2009. Refer to Note 9 of Notes to Consolidated Financial Statements for additional information on the tax litigation.
+At the end of each quarter, we make our best estimate of the effective tax rate expected to be applicable for the full fiscal year. This estimate reflects, among other items, our best estimate of operating results and foreign currency exchange rates. Based on current tax laws, including the impact of several countries enacting global minimum tax regulations, the Company’s effective tax rate in 2026 is expected to be approximately 19.7% before considering the potential impact of any significant operating and nonoperating items that may affect our effective tax rate. This rate does not include the impact of the ongoing tax litigation with the IRS, if the Company were not to prevail.
+Many jurisdictions have enacted legislation and adopted policies resulting from the Organization for Economic Co-operation and Development’s (“OECD”) Anti-Base Erosion and Profit Shifting project. The OECD is currently coordinating a two-pillared project on behalf of the Group of Twenty (G20) and other participating countries which would grant additional taxing rights over profits earned by multinational enterprises to the countries in which their products are sold and services rendered. Pillar One would allow countries to reallocate a portion of profits earned by multinational businesses with an annual global revenue exceeding €20 billion and a profit margin of over 10% to applicable market jurisdictions. While the OECD issued draft language for the international implementation of Pillar One in October 2023, both the substantive rules and implementation process remain under discussion at the OECD, so the timetable for any implementation remains uncertain.
+In December 2021, the OECD issued Pillar Two model rules, which would establish a global per-country minimum tax of 15%, and the European Union has approved a directive requiring member states to incorporate similar provisions into their respective domestic laws. The directive requires, with certain limited exceptions, the rules to initially become effective for fiscal years starting on or after December 31, 2023. Numerous countries have enacted legislation that implemented certain aspects of Pillar Two effective January 1, 2024, or adopted legislation that became effective in 2025, while additional jurisdictions may enact similar legislation in the future. In June 2025, the Group of Seven (G7) released a statement announcing an understanding of a potential side-by-side system approach to the Pillar Two framework that would exclude U.S.-parented groups from certain Pillar Two provisions in recognition of existing U.S. minimum tax rules. In January 2026, the OECD issued further administrative guidance introducing a side‑by‑side framework under Pillar Two, largely exempting U.S.-headquartered companies from the application of Pillar Two. The OECD and implementing countries are expected to continue to make further revisions to their legislation and release additional guidance intended to adopt this side-by-side framework into law in each of the member countries. The Company will continue to monitor developments to determine any potential impact in the countries in which we operate.
+
+LIQUIDITY, CAPITAL RESOURCES AND FINANCIAL POSITION
+We believe our ability to generate cash flows from operating activities is one of the fundamental strengths of our business. Refer to the heading “Cash Flows from Operating Activities” below. The Company does not typically raise capital through the issuance of stock. Instead, we use debt financing to lower our overall cost of capital and increase our return on shareowners’ equity. Refer to the heading “Cash Flows from Financing Activities” below. We have a history of borrowing funds both domestically and internationally at reasonable interest rates, and we expect to be able to continue to borrow funds at reasonable rates over the long term. Our debt financing also includes the use of a commercial paper program. We currently have the ability to borrow funds in this market at levels that are consistent with our debt financing strategy, and we expect to continue to be able to do so in the future. The Company regularly reviews its optimal mix of short-term and long-term debt.
+The Company’s cash, cash equivalents, short-term investments and marketable securities totaled $16.6 billion as of October 2, 2026. In addition to these funds, our commercial paper program, and our ability to issue long-term debt, we had $6.6 billion in unused backup lines of credit for general corporate purposes as of October 2, 2026. These backup lines of credit expire at various times through 2031. 
+Our current payment terms with the majority of our suppliers are 120 days. Certain financial institutions offer a voluntary supply chain finance program which enables our suppliers, at their sole discretion, to sell their receivables from the Company to these financial institutions on a non-recourse basis at a rate that leverages our credit rating and thus may be more beneficial to them. We do not believe there is a risk that our payment terms will be shortened in the near future. Refer to Note 7 of Notes to Consolidated Financial Statements for additional information.
+
+
+44
+
+
+
+The Company has a trade accounts receivable factoring program in certain countries. Under this program, we can elect to sell trade accounts receivables to unaffiliated financial institutions at a discount. In these factoring arrangements, for ease of administration, the Company collects customer payments related to the factored receivables and remits those payments to the financial institutions. The Company sold $10,629 million and $11,822 million of trade accounts receivables under this program during the nine months ended October 2, 2026 and September 26, 2025, respectively. The costs of factoring such receivables were $41 million and $49 million for the nine months ended October 2, 2026 and September 26, 2025, respectively. The cash received from the financial institutions is reflected within the operating activities section of our consolidated statement of cash flows. 
+Our current capital allocation priorities are as follows: investing wisely to support our business operations, continuing to grow our dividend payment, enhancing our beverage portfolio and capabilities through consumer-centric acquisitions and using excess cash to repurchase shares over time. We currently expect 2026 capital expenditures to be approximately $2.2 billion. During 2026, we expect to repurchase shares to offset dilution resulting from employee stock-based compensation. 
+We are currently in litigation with the IRS for tax years 2007 through 2009. On November 18, 2020, the Tax Court issued the Opinion in which it predominantly sided with the IRS. On November 8, 2023, the Tax Court issued a supplemental opinion, siding with the IRS in concluding both that certain U.S. tax regulations (known as the blocked-income regulations) that address the effect of certain Brazilian legal restrictions on royalty payments by the Company’s licensee in Brazil apply to the Company’s operations and that the Tax Court opinion in the 3M case controlled as to the validity of those regulations. On October 1, 2025, the U.S. Court of Appeals for the Eighth Circuit issued an opinion reversing the judgment of the Tax Court in the 3M case. In its decision, the court concluded that the blocked-income regulation was inconsistent with IRC Section 482 and that the IRS therefore could not reallocate income from 3M’s subsidiary in Brazil to 3M in contravention of Brazilian restrictions on the payment of royalties. Further, the U.S. Court of Appeals for the Eighth Circuit specifically rejected the IRS’ argument that the ability of 3M’s subsidiary in Brazil to pay dividends, rather than royalties, meant that royalty income should not be treated as blocked. Both of these conclusions are highly supportive of the Company’s position in its case and reinforce its prior conclusions. 
+On August 2, 2024, the Tax Court entered a decision reflecting additional federal income tax of $2.7 billion for the 2007 through 2009 tax years. With applicable interest, the total liability for the 2007 through 2009 tax years resulting from the Tax Court’s decision is $6.0 billion, for which the IRS issued the Company invoices on September 3, 2024. The Company paid the IRS Tax Litigation Deposit on September 10, 2024, which stopped interest from accruing on the additional tax due for the 2007 through 2009 tax years. That amount, plus interest earned, would be refunded in full or in part if the Company’s tax positions are ultimately sustained on appeal. For the three and nine months ended October 2, 2026, the Company recorded net interest income of $57 million and $155 million, respectively, and for the three and nine months ended September 26, 2025, the Company recorded net interest income of $55 million and $162 million, respectively, related to this tax payment in the line item income taxes in our consolidated statements of income, in accordance with our accounting policy. The payment of the IRS invoices and the related accrued interest were recorded in the line item other noncurrent assets in our consolidated balance sheets as of October 2, 2026 and December 31, 2025. On October 22, 2024, the Company appealed the Tax Court’s decision to the U.S. Court of Appeals for the Eleventh Circuit. The Company filed its principal appellate brief with the U.S. Court of Appeals for the Eleventh Circuit on March 12, 2025. The IRS filed its appellate brief on July 7, 2025. The Company filed its reply brief on August 27, 2025. The U.S. Court of Appeals for the Eleventh Circuit heard the case on June 25, 2026. 
+The Company strongly disagrees with the IRS’ positions and the portions of the Opinions affirming such positions and intends to vigorously defend our positions utilizing every available avenue of appeal. While the Company believes that it is more likely than not that we will ultimately prevail in this litigation upon appeal, it is possible that all, or some portion of, the adjustments proposed by the IRS and sustained by the Tax Court could ultimately be upheld. In that event, the Company would not receive a refund of the applicable portion or all of the $6.0 billion it paid in response to the IRS invoices issued in September 2024 and the related accrued interest receivable of $589 million as of October 2, 2026. Additionally, the Company would likely be subject to significant additional liabilities for subsequent years, which could have a material adverse impact on the Company’s financial position, results of operations and cash flows. The Company estimates that the potential aggregate remaining incremental tax and interest liability for the tax years 2010 through 2025 could be approximately $14 billion as of December 31, 2025. Additional income tax and interest on any unpaid potential liabilities for the 2010 through 2025 tax years would continue to accrue until the time any such potential liability, or portion thereof, were to be paid. The Company estimates the impact of the continued application of the methodology asserted by the IRS and affirmed in the Opinions for the three and nine months ended October 2, 2026 would increase the potential aggregate incremental tax and interest liability by approximately $450 million and $1.4 billion, respectively. Refer to Note 9 of Notes to Consolidated Financial Statements for additional information on the tax litigation. 
+While we believe it is more likely than not that we will prevail in the tax litigation discussed above, we are confident that, between our ability to generate cash flows from operating activities and our ability to borrow funds at reasonable interest rates, we can manage the range of possible outcomes in the final resolution of the matter.
+
+
+45
+
+
+
+Based on all of the aforementioned factors, the Company believes its current liquidity position is strong and will continue to be sufficient to fund our operating activities and cash commitments for investing and financing activities for the foreseeable future. 
+
+Cash Flows from Operating Activities
+Net cash provided by operating activities during the nine months ended October 2, 2026 and September 26, 2025 was $12,471 million and $3,652 million, respectively. The increase was primarily driven by strong cash operating results, a benefit of the trade accounts receivable factoring program in the current year, lower income tax payments, a favorable impact due to foreign currency exchange rate fluctuations, timing of working capital initiatives, lower net interest payments and lower annual incentive payments. These items were partially offset by higher prior year transfers of surplus non-U.S. plan assets from pension trusts to general assets of the Company, higher restructuring payments and unfavorable hedging activity. 
+Additionally, the activity in 2025 included $6,069 million of the $6,173 million final milestone payment for fairlife that was made during the nine months ended September 26, 2025. Refer to Note 12 of Notes to Consolidated Financial Statements for additional information on our milestone payment for fairlife.
+
+Cash Flows from Investing Activities
+Net cash provided by investing activities during the nine months ended October 2, 2026 and September 26, 2025 was $1,161 million and $977 million, respectively.
+Purchases of Investments and Proceeds from Disposals of Investments
+During the nine months ended October 2, 2026, purchases of investments were $3,706 million and proceeds from disposals of investments were $5,952 million, resulting in a net cash inflow of $2,246 million. During the nine months ended September 26, 2025, purchases of investments were $3,292 million and proceeds from disposals of investments were $4,300 million, resulting in a net cash inflow of $1,008 million. This activity primarily represents the purchases of, and proceeds from the disposals of, investments in marketable securities and short-term investments that were made as part of the Company’s overall cash management strategy. Also included in this activity are purchases of, and proceeds from the disposals of, investments held by our captive insurance companies. Refer to Note 4 of Notes to Consolidated Financial Statements for additional information on our investments.
+Acquisitions of Businesses, Equity Method Investments and Nonmarketable Securities
+During the nine months ended October 2, 2026 and September 26, 2025, the Company’s acquisitions of businesses, equity method investments and nonmarketable securities totaled $204 million and $356 million, respectively. The activity during the nine months ended October 2, 2026 and September 26, 2025 included additional investments of $112 million and $54 million, respectively, in an equity method investee in Japan. The activity during the nine months ended October 2, 2026 and September 26, 2025 also included $75 million and $271 million, respectively, of investments in alternative energy limited partnerships. Refer to Note 14 of Notes to Consolidated Financial Statements for additional information on these investments. 
+Proceeds from Disposals of Businesses, Equity Method Investments and Nonmarketable Securities
+During the nine months ended October 2, 2026 and September 26, 2025, proceeds from disposals of businesses, equity method investments and nonmarketable securities were $1 million and $1,020 million, respectively. The activity during the nine months ended September 26, 2025 primarily related to the sale of a portion of our ownership interest in CCEP and the refranchising of certain of our bottling operations. Refer to Note 2 of Notes to Consolidated Financial Statements.
+Purchases of Property, Plant and Equipment
+Purchases of property, plant and equipment during the nine months ended October 2, 2026 and September 26, 2025 were $1,063 million and $1,230 million, respectively.
+Other Investing Activities
+During the nine months ended October 2, 2026 and September 26, 2025, the total cash inflow was $271 million and $214 million, respectively. The activity during the nine months ended October 2, 2026 included the return of an advance payment of $184 million to acquire additional shares in an equity method investee in Japan. The activity during the nine months ended September 26, 2025 included $139 million related to the reimbursement of advance payments made to finance the construction of leased assets.
+
+
+46
+
+
+
+
+Cash Flows from Financing Activities
+Net cash used in financing activities during the nine months ended October 2, 2026 and September 26, 2025 was $10,546 million and $3,088 million, respectively.
+Loans, Notes Payable and Long-Term Debt
+The Company made payments of debt of $3,165 million during the nine months ended October 2, 2026, which consisted of $1,031 million of payments related to commercial paper and short-term debt with maturities of 90 days or less, $500 million of payments related to commercial paper and short-term debt with maturities greater than 90 days and payments of long-term debt of $1,634 million. 
+During the nine months ended September 26, 2025, the Company had issuances of debt of $4,854 million, which consisted of $764 million of net issuances of commercial paper and short-term debt with maturities of 90 days or less, $3,442 million of issuances of commercial paper and short-term debt with maturities greater than 90 days and long-term debt issuances of $648 million, net of related discounts and issuance costs. 
+The Company made payments of debt of $4,166 million during the nine months ended September 26, 2025, which consisted of $3,427 million of payments related to commercial paper and short-term debt with maturities greater than 90 days and payments of long-term debt of $739 million. 
+Issuances of Stock
+The issuances of stock during the nine months ended October 2, 2026 and September 26, 2025 were related to the exercise of stock options by employees. 
+Purchases of Stock for Treasury
+During the nine months ended October 2, 2026, the total cash outflow for treasury stock purchases was $900 million. The Company repurchased 10.0 million shares of common stock under the share repurchase plan authorized by our Board of Directors. These shares were repurchased at an average cost of $78.77 per share, for a total cost of $787 million. In addition to shares repurchased under the share repurchase plan, the Company’s treasury stock activity included shares surrendered to the Company to pay the exercise price and/or to satisfy tax withholding obligations in connection with stock swap exercises of employee stock options and/or the vesting of restricted stock issued to employees. The net impact of the Company’s issuances of stock and share repurchases during the nine months ended October 2, 2026 resulted in a net cash outflow of $545 million. 
+During the nine months ended September 26, 2025, the total cash outflow for treasury stock purchases was $644 million. The Company repurchased 8.0 million shares of common stock under the share repurchase plan authorized by our Board of Directors. These shares were repurchased at an average cost of $67.14 per share, for a total cost of $534 million. In addition to shares repurchased under the share repurchase plan, the Company’s treasury stock activity included shares surrendered to the Company to pay the exercise price and/or to satisfy tax withholding obligations in connection with stock swap exercises of employee stock options and/or the vesting of restricted stock issued to employees. The net impact of the Company’s issuances of stock and share repurchases during the nine months ended September 26, 2025 resulted in a net cash outflow of $401 million. 
+Dividends
+During the nine months ended October 2, 2026 and September 26, 2025, the Company paid dividends of $6,842 million and $4,391 million, respectively. As a result of the timing of our quarterly reporting periods as well as our dividend payment dates, the Company paid all of the 2026 third quarterly dividend in the third quarter and paid substantially all of the 2025 third quarterly dividend in the fourth quarter.
+Our Board of Directors approved the Company’s regular quarterly dividend of $0.53 per share at its October 2026 meeting. This dividend is payable on December 15, 2026 to shareowners of record as of the close of business on December 1, 2026.
+Proceeds from Sale of a Noncontrolling Interest
+During the nine months ended September 26, 2025, the Company received proceeds of $1,277 million from the sale of a noncontrolling interest. Refer to Note 11 of Notes to Consolidated Financial Statements for additional information.
+Other Financing Activities 
+During the nine months ended October 2, 2026 and September 26, 2025, the total cash outflow for other financing activities was $13 million and $261 million, respectively. The cash outflow during the nine months ended September 26, 2025 included $149 million of withholding taxes and other direct costs related to the sale of a noncontrolling interest. Refer to Note 11 of Notes to Consolidated Financial Statements for additional information. Additionally, the cash outflow during the nine months ended September 26, 2025 included $104 million of the $6,173 million final milestone payment for fairlife. 
+
+
+47
+
+
+
+
+Foreign Exchange
+Our international operations are subject to certain opportunities and risks, including currency fluctuations and governmental actions. We closely monitor our operations in each country and seek to adopt appropriate strategies that are responsive to changing economic and political environments as well as to fluctuations in currencies.
+Due to the geographic diversity of our operations, weakness in some currencies may be offset by strength in other currencies over time. Our hedging activities are designed to mitigate, over time, a portion of the impact of exchange rate fluctuations on our net income. Taking into account the effects of our hedging activities, the impact of fluctuations in foreign currency exchange rates increased our operating income for the three and nine months ended October 2, 2026 by 3% and 4%, respectively.
+Based on current spot rates and our hedging coverage in place, we expect foreign currency exchange rate fluctuations will have a favorable impact on operating income and cash flows from operating activities through the end of the year.
+
+Item 3. 
