@@ -1,0 +1,581 @@
+10-Q for period 2026-09-30, filed 2026-10-28
+
+Management’s Discussion and Analysis of Financial Condition and Results of Operations included in our Annual Report on Form 10-K for the year ended December 31, 2025.
+This Quarterly Report on Form 10-Q contains certain forward-looking statements that are made subject to the safe harbor protections provided by the Private Securities Litigation Reform Act of 1995. Forward-looking statements are often identified by the words, “will,” “may,” “should,” “continue,” “anticipate,” “believe,” “expect,” “plan,” “forecast,” “project,” “estimate,” “intend,” and words of a similar nature and include estimates or projections of financial and other data; comments on expectations relating to future periods; plans or objectives for the future; and statements of opinions, views or beliefs about current and future events, circumstances or performance. You should view these statements with caution. They are based on the facts and circumstances known to us as of the date the statements are made. These forward looking statements are subject to risks and uncertainties that could cause actual results to be materially different from those set forth in such forward-looking statements, including but not limited to failure to implement our optimization, automation, growth and cost savings initiatives and overall business strategy; failure to obtain the results anticipated from strategic initiatives, investments, acquisitions or new lines of business; failure to identify acquisition targets, consummate and integrate acquisitions, including our ability to integrate the acquisition of Stericycle, Inc. (“Stericycle”) (which is now presented as our Healthcare Solutions segment) and achieve the anticipated benefits therefrom, including synergies; legal, regulatory, operational, technological and other matters that may affect the costs and timing of our ability to integrate and deliver all of the expected benefits of the Stericycle acquisition; existing or new environmental and other regulations, including developments related to emerging contaminants, gas emissions, renewable energy, recyclables, extended producer responsibility and our natural gas fleet; significant environmental, safety or other incidents resulting in liabilities or brand damage; failure to obtain and maintain necessary permits due to land scarcity, public opposition or otherwise; diminishing landfill capacity, resulting in increased costs and the need for disposal alternatives; failure to attract, hire and retain key team members and a high quality workforce; increases in labor costs due to union organizing activities or changes in wage and labor related regulations; disruption and costs resulting from severe weather and destructive climate events; failure to achieve our sustainability goals or execute on our sustainability-related strategy and initiatives, including within planned timelines or anticipated budgets due to disruptions, delays, cost increases or changes in environmental or tax regulations and incentives; focus on and regulation of, environmental and sustainability-related disclosures, which could lead to increased costs, risk of non-compliance, brand damage and litigation risk related to our sustainability efforts; macroeconomic conditions, geopolitical conflict and large-scale market disruption resulting in labor, supply chain and transportation constraints, inflationary cost pressures and fluctuations in commodity prices, fuel and other energy costs; increased competition and pricing pressure; impacts from international trade restrictions and tariffs; competitive disposal alternatives, diversion of waste from landfills and declining waste volumes; changes in general economic conditions, capital markets or consumer trends; changing conditions in the recycling industry, including impacts on demand, pricing and availability of counterparties; changing conditions in the healthcare industry; adoption of new tax legislation; fuel shortages; failure to develop and protect new technology; failure of technology to perform as expected; inability to adapt and manage the benefits and risks of artificial intelligence; failure to prevent, detect and address cybersecurity incidents or comply with privacy regulations; negative outcomes of litigation or governmental proceedings, including those acquired through transactions; failure to maintain an effective system of internal control over financial reporting; and operational or management decisions or developments that result in impairment charges and other risks discussed in our filings with the SEC, including Part I, Item 1A of our Annual Report on Form 10-K for the year ended December 31, 2025. We assume no obligation to update any forward-looking statement, including financial estimates and forecasts, whether as a result of future events, circumstances or developments or otherwise. 
+
+
+25 
+
+
+
+
+Overview
+We are North America’s leading provider of comprehensive environmental solutions, providing services throughout the United States (“U.S.”) and Canada. We partner with our customers and the communities we serve to manage and reduce waste at each stage from collection to disposal, while recovering valuable resources and creating clean, renewable energy. We own or operate the largest network of landfills throughout the U.S. and Canada. In order to make disposal more practical for larger urban markets, where the distance to landfills is typically farther, we manage transfer stations that consolidate, compact and transport waste efficiently and economically. Our solid waste business is operated and managed locally by our subsidiaries that focus on distinct geographic areas and provide collection, transfer, disposal, recycling and resource recovery services. Through our Renewable Energy segment, we are also a leading developer, operator and owner of landfill gas-to-energy facilities in the U.S. and Canada that produce renewable electricity and renewable natural gas (“RNG”), which is a significant source of fuel that we allocate to our natural gas fleet. Our Healthcare Solutions segment provides regulated waste and compliance services and secure information destruction services in the U.S., Canada and Western Europe that protect people and brands, promote health and well-being and safeguard the environment. Additionally, through our Recycling Processing and Sales segment, we are a leading recycler in the U.S. and Canada, handling materials that include paper, cardboard, glass, plastic and metal.
+Our senior management evaluates, oversees and manages the financial performance of our business through five reportable segments, referred to as (i) Collection and Disposal - East Tier (“East Tier”); (ii) Collection and Disposal - West Tier (“West Tier”); (iii) Recycling Processing and Sales; (iv) Renewable Energy and (v) Healthcare Solutions. Our East and West Tiers, along with certain ancillary services (“Other Ancillary”) that are not managed through our Tier segments, but that support our collection and disposal operations, form our “Collection and Disposal” business. We also provide additional services not managed through our five reportable segments, which are presented as Corporate and Other.
+
+Strategy
+Our fundamental strategy has not changed; we remain dedicated to providing long-term value to our stockholders by successfully executing our core strategy of focused differentiation and continuous improvement. We have enabled a people-first, technology-led focus to drive our mission to maximize resource value, while minimizing environmental impact, and sustainability and environmental stewardship are embedded in all that we do. Our strategy leverages and sustains the strongest asset network in the industry to drive best-in-class customer experience and growth. Our strategic planning processes appropriately consider that the future of our business and the industry can be influenced by changes in economic conditions, the competitive landscape, the regulatory environment, asset and resource availability and technology. We believe that focused differentiation, which is driven by capitalizing on our unique and extensive network of assets, will deliver profitable growth and position us to leverage competitive advantages. Simultaneously, we believe that investing in automation to improve processes and drive operational efficiency combined with a focus on the cost to serve our customers will yield an attractive profit margin and enhanced service quality. We have furthered our strategy of focused differentiation and continuous improvement beyond our traditional waste operations through our sustainability growth strategy, which has positioned us to capitalize on the significant investments made in our Renewable Energy and Recycling Processing and Sales segments, while increasing automation and reducing labor dependency. In addition, our Healthcare Solutions segment provides a complementary business platform in medical waste, a sector with attractive near- and long-term growth dynamics, and in secure information destruction services to further our leading suite of comprehensive waste and environmental solutions. Furthermore, we continue to evaluate and plan to pursue emerging diversion technologies that may generate additional value.
+
+
+26 
+
+
+
+
+Business Environment
+The waste industry is a comparatively mature and stable industry. However, customers increasingly expect more of their waste materials to be recovered and those waste streams are becoming more complex. In addition, many state and local governments mandate diversion, recycling and waste reduction at the source and prohibit the disposal of certain types of waste at landfills. We monitor these developments to adapt our service offerings. As companies, individuals and communities look for ways to be more sustainable, we promote our comprehensive services that go beyond our core business of collecting and disposing of waste in order to meet their needs. This includes expanding traditional recycling services, increasing organics collection and processing, providing medical waste services and expanding our renewable energy projects to meet the evolving needs of our diverse customer base. As North America’s leading provider of comprehensive environmental solutions, we are taking big, bold steps to catalyze positive change – change that will impact our Company as well as the communities we serve. Consistent with our Company’s long-standing commitment to sustainability and environmental stewardship, we have published our 2026 Sustainability Report, providing details on our sustainability-related performance and outlining progress towards our 2030 sustainability goals. The 2026 Sustainability Report conveys the strong linkage between the Company’s sustainability goals and our growth strategy, inclusive of the expansion of the Company’s Recycling Processing and Sales and Renewable Energy segments. The information in this report can be found at sustainability.wm.com but it does not constitute a part of, and is not incorporated by reference into, this Quarterly Report on Form 10-Q.
+We encounter intense competition from governmental, quasi-governmental and private service providers based on pricing, and to a much lesser extent, the nature of service offerings, particularly in the residential line of business. Our industry is directly affected by changes in general economic factors, including increases and decreases in consumer spending, business expansions and construction activity. These factors generally correlate to volumes of waste generated and impact our revenue. Negative economic conditions and other macroeconomic trends can and have caused customers to reduce their service needs. Such negative economic conditions, in addition to competitor actions, can impact our strategy to negotiate, renew, or expand service contracts and grow our business. We also encounter competition for acquisitions and growth opportunities. General economic factors and the market for consumer goods, in addition to regulatory developments, can also significantly impact commodity prices for the recyclable materials we sell. Significant components of our operating expenses vary directly as we experience changes in revenue due to volume and inflation. Volume changes can fluctuate significantly by line of business and can impact key financial metrics. We must dynamically manage our cost structure in response to volume changes and cost inflation.
+We believe the Company’s industry-leading asset network and strategic focus on investing in our people and our digital platform will give the Company the necessary tools to address the evolving challenges impacting the Company and our industry. In line with our commitment to continuous improvement and a differentiated customer experience, we remain focused on our automation and optimization investments to enhance our operational efficiency and change the way we interact with our customers. Advancements made through these initiatives are intended to seamlessly and digitally connect all enterprise functions required to service customers and provide the best experience. We have made significant progress in executing this technology enablement strategy to automate and optimize certain elements of our service delivery model. The key benefits are reduced labor dependency on certain high-turnover jobs, particularly in customer experience, recycling and residential collection, while further elevating our customer self-service through digitalization and implementation of technologies to enhance the safety, reliability and efficiency within our collection operations. 
+We sometimes experience variability in earnings and margins from our commodity-driven businesses, specifically within our Recycling Processing and Sales and Renewable Energy segments. During the nine months ended September 30, 2026, market prices for recycled commodities declined when compared to the prior year period. Additionally, we experienced declines in commodity prices from the prior year period that had an unfavorable impact on the Renewable Energy segment. We continue to take proactive steps to adjust our business models to protect against the downside risk of changes in commodity prices.
+Variability in economic conditions, including inflation, interest rates, employment trends and supply chain reliability, can create risk and uncertainty in our financial outlook. We take proactive steps to recover and mitigate inflationary cost pressures through our overall pricing efforts and by managing our costs through efficiency, labor productivity and investments in technology to automate certain aspects of our business. We remain committed to putting our people first to ensure that they are well positioned to execute our daily operations diligently and safely. We remain focused on delivering outstanding customer service, managing our variable costs with changing volumes and investing in technology that will enhance our customers’ experience and provide operating efficiencies intended to reduce our cost to serve.
+
+
+27 
+
+
+
+
+Current Quarter Financial Results
+During the third quarter of 2026, we continued to focus on our priorities to advance our strategy – growing the core business by focusing on customer lifetime value; delivering operational excellence and capitalizing on network advantages; capturing and enhancing returns from our investments in our Recycling Processing and Sales and Renewable Energy segments and driving accretive growth as we take our Healthcare Solutions segment from integration to scalable growth. We continue to invest in our people through paying a competitive market wage, investing in our digital platform and providing training for our team members. During the third quarter of 2026, we also allocated $957 million of available cash to our shareholders through dividends and common stock repurchases.
+
+Key elements of our financial results for the third quarter of 2026 include:
+
+
+•Revenues of $6,846 million, compared to $6,443 million in the prior year period, an increase of $403 million, or 6.3%. The increase is primarily due to (i) higher yield in our Collection and Disposal business; (ii) increases in our energy surcharge due to higher fuel prices; (iii) yield and volume growth in our Recycling Processing and Sales segment and (iv) volume growth in our Renewable Energy segment. These increases are partially offset by lower Collection and Disposal volumes and a reduction in RNG prices;
+
+•Operating expenses of $4,093 million, or 59.8% of revenues, compared to $3,798 million, or 58.9% of revenues, in the prior year period. The $295 million increase is primarily due to (i) higher fuel prices; (ii) increased risk management costs; (iii) annual employee wage increases and higher employee medical costs and (iv) growth in our Renewable Energy segment. These increases were partially offset by (i) the Company’s ability to flex spending with volume changes and (ii) continued operating efficiency and cost control initiatives;
+
+•Selling, general and administrative expenses of $655 million, or 9.6% of revenues, compared to $665 million, or 10.3% of revenues, in the prior year period. The $10 million decrease is primarily due to decreases in labor costs resulting from synergies achieved from our acquisitions, particularly Stericycle. These decreases were partially offset by higher bad debt expenses; 
+
+•Income from operations of $1,279 million, or 18.7% of revenues, compared to $989 million, or 15.3% of revenues, in the prior year period. The $290 million increase is primarily due to (i) $197 million of impairment charges incurred in the prior year; (ii) growth in our Collection and Disposal business driven by yield; (iii) contributions from increased volumes in our Recycling Processing and Sales and Renewable Energy segments and (iv) benefits from the realization of synergies in our Healthcare Solutions segment;
+
+•Net income attributable to Waste Management, Inc. of $820 million, or $2.05 per diluted share, compared to $603 million, or $1.49 per diluted share, in the prior year period. The $217 million increase is primarily due to the increase in income from operations, discussed above, partially offset by higher income tax expense;
+
+•Net cash provided by operating activities of $1,640 million compared to $1,592 million in the prior year period. The $48 million increase in net cash provided by operating activities is primarily due to higher earnings and favorable changes in working capital, net of effects from acquisitions and divestitures, partially offset by higher cash taxes;
+
+•Free cash flow of $985 million compared to $821 million in the prior year period. The $164 million increase in free cash flow is primarily due to the increase in net cash provided by operating activities described above as well as a decrease in capital spending driven by (i) lower spend on collection vehicles and (ii) planned reductions in capital investments in our sustainability growth projects due to our transition from peak construction of this portfolio into a period of harvesting returns. Free cash flow is a non-GAAP measure of liquidity. Refer to Free Cash Flow below for our definition of free cash flow, additional information about our use of this measure and a reconciliation to net cash provided by operating activities, which is the most comparable GAAP measure.
+
+
+
+
+
+28 
+
+
+
+Results of Operations
+
+Operating Revenues
+
+The mix of operating revenues for the three and nine months ended September 30 are as follows (in millions):
+
+
+Net
+Operating
+RevenuesIntercompany
+Operating
+Revenues(a)Gross
+Operating
+Revenues
+Three Months Ended September 30:
+2026
+Commercial$1,494 $243 $1,737 
+Industrial843 257 1,100 
+Residential926 19 945 
+Other collection878 74 952 
+Total collection4,141 593 4,734 
+Landfill 1,018 431 1,449 
+Transfer420 306 726 
+Total Collection and Disposal5,579 1,330 6,909 
+Recycling Processing and Sales441 89 530 
+Renewable Energy167 1 168 
+Healthcare Solutions651 101 752 
+Corporate and Other8 7 15 
+Total$6,846 $1,528 $8,374 
+
+2025
+Commercial$1,419 $223 $1,642 
+Industrial808 234 1,042 
+Residential884 22 906 
+Other collection819 69 888 
+Total collection3,930 548 4,478 
+Landfill 995 407 1,402 
+Transfer396 294 690 
+Total Collection and Disposal5,321 1,249 6,570 
+Recycling Processing and Sales372 98 470 
+Renewable Energy115 1 116 
+Healthcare Solutions628 110 738 
+Corporate and Other7 7 14 
+Total$6,443 $1,465 $7,908 
+
+
+29 
+
+
+
+
+
+Net
+Operating
+RevenuesIntercompany
+Operating
+Revenues(a)Gross
+Operating
+Revenues
+Nine Months Ended September 30:
+2026
+Commercial$4,408 $708 $5,116 
+Industrial2,421 724 3,145 
+Residential2,725 56 2,781 
+Other collection2,521 220 2,741 
+Total collection12,075 1,708 13,783 
+Landfill 2,886 1,242 4,128 
+Transfer1,178 877 2,055 
+Total Collection and Disposal16,139 3,827 19,966 
+Recycling Processing and Sales1,212 264 1,476 
+Renewable Energy483 3 486 
+Healthcare Solutions1,903 312 2,215 
+Corporate and Other20 23 43 
+Total$19,757 $4,429 $24,186 
+
+2025
+Commercial$4,197 $657 $4,854 
+Industrial2,339 656 2,995 
+Residential2,628 66 2,694 
+Other collection2,368 209 2,577 
+Total collection11,532 1,588 13,120 
+Landfill 2,871 1,170 4,041 
+Transfer1,121 842 1,963 
+Total Collection and Disposal15,524 3,600 19,124 
+Recycling Processing and Sales1,137 280 1,417 
+Renewable Energy321 2 323 
+Healthcare Solutions1,893 326 2,219 
+Corporate and Other16 23 39 
+Total$18,891 $4,231 $23,122 
+___________________________________________________________
+(a)Includes each segment’s intercompany activity, including transactions within a segment and between segments. Transactions within and between segments are generally made on a basis intended to reflect the market value of the service.
+
+
+
+
+
+30 
+
+
+
+
+The following table provides details associated with the period-to-period change in revenues and average yield (dollars in millions):
+
+
+
+Period-to-Period Change for the
+Three Months Ended
+September 30, 2026 vs. 2025
+Period-to-Period Change for the
+Nine Months Ended
+September 30, 2026 vs. 2025
+Amount
+As a % of
+Related
+Business(a)Amount
+As a % of
+Total
+Company(b)Amount
+As a % of
+Related
+Business(a)Amount
+As a % of
+Total
+Company(b)
+Collection and Disposal$171 3.4 %$533 3.6 %
+
+Recycling Processing and Sales and Renewable Energy (c)43 8.6 1 — 
+Energy surcharge and mandated fees112 42.2 234 30.0 
+Total average yield$326 5.1 %$768 4.1 %
+
+Volume (d)53 0.8 43 0.2 
+
+Healthcare Solutions (e)1 — (42)(0.2)
+Internal revenue growth380 5.9 769 4.1 
+Acquisitions33 0.6 101 0.5 
+Divestitures(5)(0.1)(14)(0.1)
+Foreign currency translation(5)(0.1)10 0.1 
+Total$403 6.3 %$866 4.6 %
+___________________________________________________________
+(a)Calculated by dividing the increase or decrease for the current year period by the prior year period’s related business revenues adjusted to exclude the impacts of divestitures for the current year period.
+(b)Calculated by dividing the increase or decrease for the current year period by the prior year period’s total Company revenues adjusted to exclude the impacts of divestitures for the current year period.
+(c)Includes combined impact of commodity price variability in both our Recycling Processing and Sales and Renewable Energy segments, as well as changes in certain recycling fees charged by our collection and disposal operations.
+(d)Includes activities from our Corporate and Other businesses.
+(e)The amounts reported herein represent the change in our revenues from the combined impacts of yield and volume, and exclude energy surcharges, attributable to our Healthcare Solutions segment.
+The significant items affecting revenues during the three and nine months ended September 30, 2026, as compared to the prior year periods, are summarized below:
+
+Average Yield
+Collection and Disposal Average Yield — This measure reflects the effect on our revenues from the pricing activities of our collection, transfer and landfill operations, exclusive of volume changes. Revenue growth from Collection and Disposal average yield includes not only base rate changes and environmental and service fee fluctuations, but also (i) certain average price changes related to the overall mix of services, which are due to the types of services provided; (ii) changes in average price from new and lost business and (iii) price decreases to retain customers. 
+
+
+31 
+
+
+
+
+The details of our revenue growth from Collection and Disposal average yield are as follows (dollars in millions):
+
+
+
+Period-to-Period Change for the
+Three Months Ended
+September 30, 2026 vs. 2025
+Period-to-Period Change for the
+Nine Months Ended
+September 30, 2026 vs. 2025
+AmountAs a % of
+Related
+BusinessAmountAs a % of
+Related
+Business
+Commercial$64 4.2 %$193 4.3 %
+Industrial30 3.1 89 3.2 
+Residential46 5.4 150 5.9 
+Total collection140 4.0 432 4.2 
+Landfill21 2.2 67 2.5 
+Transfer10 2.7 34 3.2 
+Total Collection and Disposal$171 3.4 %$533 3.6 %
+Our overall pricing efforts are focused on keeping pace with the increasing costs and capital intensity of our business. We continue to see yield growth in our landfill business primarily driven by municipal solid waste, which achieved average yield of 4.2% and 5.3% for the three and nine months ended September 30, 2026, respectively. 
+
+Recycling Processing and Sales and Renewable Energy — Recycling Processing and Sales revenues attributable to yield increased $51 million and $21 million for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods. Average market prices for single-stream recycled commodities increased 20% and decreased 7% for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods. Higher processing fee revenue from our recycling facilities more than offset commodity declines, driving yield growth for the nine months ended September 30, 2026. Revenues attributable to yield in our Renewable Energy segment decreased $8 million and $20 million for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods, primarily due to lower RNG pricing, partially offset by higher electricity prices. While there may be short-term fluctuations in our commodity-driven businesses as prices change, we believe that our business models and processes appropriately mitigate the downside risk of changes in commodity prices.
+
+Energy Surcharge and Mandated Fees — These fees increased $112 million and $234 million for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods. The increase in energy surcharge revenues was primarily due to an increase of approximately 50% and 40% in market prices for diesel fuel for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods. 
+
+Volume
+Our revenues from volume (excluding volumes from acquisitions and divestitures, as well as Healthcare Solutions) increased $53 million, or 0.8%, and $43 million, or 0.2%, for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods. Volume increased in both our Recycling Processing and Sales and our Renewable Energy segments primarily due to contributions from recycling automation and growth projects and new renewable natural gas plants. These volume increases were largely offset by declines in our collection business primarily due to our intentional shedding of lower-margin residential business and lower commercial collection volumes. Additionally, during the nine months ended September 30, 2026, special waste volumes declined compared to the prior year period, which benefited from wildfire cleanup activities in the West Tier.
+
+Healthcare Solutions
+Revenues from our Healthcare Solutions segment were relatively unchanged for the three months ended September 30, 2026 and decreased $42 million, or 0.2%, for the nine months ended September 30, 2026, as compared to the prior year periods, as contributions from pricing activities were meaningfully offset by declines in volumes.
+
+Acquisitions and Divestitures
+Acquisitions and divestitures resulted in a net increase in revenues of $28 million, or 0.5%, and $87 million, or 0.4%, for the three and nine months ended September 30, 2026, respectively, as compared to the prior year periods primarily due to our investments in tuck-in collection and disposal businesses.
+
+
+32 
+
+
+
+
+Operating Expenses 
+
+The following table summarizes the major components of our operating expenses for the three and nine months ended September 30 (in millions of dollars and as a percentage of revenues):
+
+
+Three Months Ended
+September 30,Nine Months Ended
+September 30,
+2026202520262025
+Labor and related benefits$1,173 17.1 %$1,139 17.7 %$3,438 17.4 %$3,342 17.7 %
+Transfer and disposal costs378 5.5 357 5.5 1,067 5.4 1,055 5.6 
+Maintenance and repairs613 9.0 569 8.8 1,745 8.8 1,698 9.0 
+Subcontractor costs690 10.1 657 10.2 1,996 10.1 1,888 10.0 
+Cost of goods sold265 3.9 233 3.6 702 3.6 715 3.8 
+Fuel173 2.5 132 2.1 486 2.5 392 2.1 
+Disposal and franchise fees and taxes217 3.2 211 3.3 623 3.1 607 3.2 
+Landfill operating costs118 1.7 103 1.6 338 1.7 298 1.6 
+Risk management135 2.0 72 1.1 346 1.7 278 1.4 
+Other331 4.8 325 5.0 1,001 5.1 940 5.0 
+$4,093 59.8 %$3,798 58.9 %$11,742 59.4 %$11,213 59.4 %
+Our operating expenses for the three and nine months ended September 30, 2026 increased as compared to the prior year periods, primarily due to (i) higher fuel prices; (ii) increased risk management costs; (iii) annual employee wage increases and higher employee medical costs and (iv) growth in our Renewable Energy segment. These increases were partially offset by (i) the Company’s ability to flex spending with lower collection and special waste volumes and (ii) continued operating efficiency and cost control initiatives.
+
+
+The significant items affecting operating expenses during the three and nine months ended September 30, 2026, as compared to the prior year periods, are summarized below:
+
+Labor and Related Benefits — The increase in labor and related benefits costs was primarily due to annual employee wage increases and an increase in employee medical costs as compared with the prior year periods. These increases were partially offset by (i) lower annual incentive compensation; (ii) the Company’s ability to flex spending with volume changes; (iii) residential collection efficiency improvements and (iv) improved driver retention.
+
+Transfer and Disposal Costs — The increase in transfer and disposal costs for the three and nine months ended September 30, 2026, as compared to the prior year periods, was primarily due to increased disposal fees at third-party sites and higher rates from our third-party haulers due to increases in fuel costs. This increase was partially offset by lower transfer and disposal volumes attributable to harsh winter weather during the first quarter of 2026 and intentional shedding of lower margin residential contracts. 
+
+
+
+Maintenance and Repairs — The increase in maintenance and repairs costs was primarily due to (i) annual wage increases and increased maintenance technician headcount as the result of an effort to reduce reliance on third-party services; (ii) increased costs for parts, supplies and third-party services driven by inflation and (iii) growth of our Renewable Energy segment. The increase was partially offset by reduced demand for third-party services driven by fleet and operational optimization.
+
+
+
+Subcontractor Costs — The increase in subcontractor costs was primarily due to increases in market prices for diesel fuel as previously mentioned.
+
+Cost of Goods Sold — The changes in cost of goods sold were primarily due to fluctuations in average market prices for single-stream recycling commodities discussed above. Additional pipeline transportation costs attributable to new RNG facilities brought online during 2025 and 2026 also increased costs for the three and nine months ended September 30, 2026.
+
+
+33 
+
+
+
+
+Fuel — The increase in fuel costs was primarily due to the increases in average market prices for diesel fuel previously mentioned. This increase was partially offset by reduced fuel consumption due to declines in collection volumes.
+
+Disposal and Franchise Fees and Taxes — The increase in disposal and franchise fees and taxes was primarily due to an increase in landfill host fees and other fees and taxes paid to municipalities on our disposal volumes and an increase in collection franchise fees in certain markets.
+
+Landfill Operating Costs — The increase in landfill operating costs was primarily due to higher leachate treatment costs in our West and East Tiers.
+
+Risk Management — The increase in risk management costs was primarily due to increased claims costs as compared to the prior year periods and an insurance recovery benefiting the third quarter of 2025 associated with a 2022 transfer station fire.
+
+
+
+Other — The increase in other operating costs was primarily due to increased utility costs largely attributable to higher electricity prices and new RNG plants brought online during 2025 and 2026.
+
+Selling, General and Administrative Expenses
+
+The following table summarizes the major components of our selling, general and administrative expenses for the three and nine months ended September 30 (in millions of dollars and as a percentage of revenues):
+
+
+Three Months Ended
+September 30,Nine Months Ended
+September 30,
+2026202520262025
+Labor and related benefits$388 5.7 %$402 6.2 %$1,231 6.2 %$1,241 6.6 %
+Professional fees98 1.4 100 1.6 270 1.4 298 1.6 
+Provision for bad debts27 0.4 18 0.3 96 0.5 61 0.3 
+Other142 2.1 145 2.2 448 2.3 448 2.3 
+$655 9.6 %$665 10.3 %$2,045 10.4 %$2,048 10.8 %
+Selling, general and administrative expenses decreased for the three months ended September 30, 2026, as compared to the prior year period, primarily due to decreases in labor costs resulting from synergies achieved from our acquisitions, particularly Stericycle, partially offset by higher bad debt expenses. Selling, general and administrative expenses decreased for the nine months ended September 30, 2026, as compared to the prior year period, primarily due to lower professional fees and continued synergies in labor offset by increases in bad debt expenses and technology costs.
+The significant items affecting selling, general and administrative expenses during the three and nine months ended September 30, 2026, as compared to the prior year periods, are summarized below:
+
+Labor and Related Benefits — The decrease in labor and related benefits costs was primarily due to a reduction in workforce as we achieved synergies from our acquisitions, particularly Stericycle, and lower annual incentive compensation costs. These decreases were partially offset by annual employee wage increases and, for the nine months ended September 30, 2026, higher long term incentive compensation. 
+
+Professional Fees — The decrease in professional fees was primarily due to higher consulting costs incurred in the prior year periods to support the integration of Stericycle.
+
+Provision for Bad Debts — The increase in provision for bad debts in the three months ended September 30, 2026, as compared to the prior year period, was primarily due to a favorable adjustment related to our Healthcare Solutions segment that reduced the provision for bad debts in the third quarter of 2025. The increase for the nine months ended September 30, 2026, as compared to the prior year period, was primarily driven by increased write-offs of specific accounts within our Collection and Disposal business and an unfavorable adjustment related to specific accounts within our Healthcare Solutions segment in 2026.
+
+
+34 
+
+
+
+
+Depreciation, Depletion, Amortization and Accretion Expenses
+The following table summarizes the components of our depreciation, depletion, amortization and accretion expenses for the three and nine months ended September 30 (in millions of dollars and as a percentage of revenues):
+
+
+Three Months Ended
+September 30,Nine Months Ended
+September 30,
+2026202520262025
+Depreciation of tangible property and equipment$424 6.2 %$394 6.1 %$1,243 6.3 %$1,151 6.1 %
+Depletion of landfill airspace230 3.4 227 3.5 652 3.3 630 3.3 
+Amortization of intangible assets99 1.4 108 1.7 292 1.5 312 1.7 
+Interest accretion on landfill and environmental remediation liabilities39 0.6 35 0.6 117 0.6 106 0.5 
+$792 11.6 %$764 11.9 %$2,304 11.7 %$2,199 11.6 %
+The increase in depreciation of tangible property and equipment for the three and nine months ended September 30, 2026, as compared to the prior year periods, was primarily due to investments in capital assets placed in service during 2025 and 2026, particularly within our sustainability businesses. The increase in depletion of landfill airspace for the three and nine months ended September 30, 2026, as compared to the prior year periods, was primarily due to changes in rates from revisions in landfill estimates within our East Tier, partially offset by volume declines in our West Tier. The decrease in amortization of intangible assets for the three and nine months ended September 30, 2026, as compared to the prior year periods, was due to a reduction in amortization associated with our Healthcare Solutions business and the conclusion of amortization related to a prior year acquisition within our East Tier. The increase in interest accretion on landfill and environmental remediation liabilities for the three and nine months ended September 30, 2026, as compared to the prior year periods, was primarily due to revisions in landfill cost estimates.
+
+Restructuring
+Restructuring charges for the three and nine months ended September 30, 2026 were not material. Restructuring charges for the three and nine months ended September 30, 2025 were primarily due to employee costs related to integration of our November 2024 acquisition of Stericycle.
+
+(Gain) Loss from Divestitures, Asset Impairments and Unusual Items, Net 
+(Gain) loss from divestitures, asset impairments and unusual items, net for the three months ended September 30, 2026 primarily relates to an $18 million impairment charge related to the decision to accelerate the closure of a landfill within our East Tier. The nine months ended September 30, 2026 also includes a $34 million gain on a business divestiture in our West Tier, partially offset by immaterial charges related to legal and remediation liabilities. 
+(Gain) loss from divestitures, asset impairments and unusual items, net for the three months ended September 30, 2025 includes (i) a $152 million impairment charge related to the decision to suspend the operations of a business engaged in plastic film and wrap recycling within our Recycling Processing and Sales segment resulting from significant deterioration of market pricing and demand for post-consumer plastics; (ii) a $45 million impairment charge related to the decision to accelerate the closure of a landfill within our East Tier and (iii) an $11 million negotiated payment for early termination of a contract in our Renewable Energy segment. The nine months ended September 30, 2025 also includes a $16 million goodwill impairment charge related to a business engaged in oil recovery and sludge processing services reflected in Other Ancillary within our Collection and Disposal business.
+
+
+35 
+
+
+
+
+Income from Operations
+The following table summarizes income from operations for our reportable segments for the three and nine months ended September 30 (dollars in millions):
+
+
+Three Months Ended September 30,Nine Months Ended September 30,
+20262025Period-to-Period Change20262025Period-to-Period Change
+Collection and Disposal:
+East Tier $771 $740 $31 4.2 %$2,278 $2,130 $148 6.9 %
+West Tier766 728 38 5.2 2,264 2,164 100 4.6 
+Other Ancillary5 — 5 *10 (20)30 *
+Collection and Disposal 1,542 1,468 74 5.0 4,552 4,274 278 6.5 
+Recycling Processing and Sales 36 (137)173 126.3 91 (95)186 195.8 
+Renewable Energy37 21 16 76.2 132 78 54 69.2 
+Healthcare Solutions20 (21)41 195.2 8 (65)73 112.3 
+Corporate and Other(356)(342)(14)4.1 (1,138)(1,039)(99)9.5 
+Total$1,279 $989 $290 29.3 %$3,645 $3,153 $492 15.6 %
+Percentage of revenues18.7 %15.3 %18.4 %16.7 %
+___________________________________________________________
+*Percentage change does not provide a meaningful comparison.
+The significant items affecting income from operations for our segments during the three and nine months ended September 30, 2026, as compared to the prior year periods, are summarized below: 
+
+Collection and Disposal — Income from operations in our Collection and Disposal business increased primarily due to (i) revenue growth from price increases, which translates into increased yield or average unit price; (ii) actions to improve efficiency and the operating costs incurred to serve our customers and (iii) a $45 million impairment charge in the prior year period compared with an $18 million impairment charge in the current year period, both related to the decision to accelerate the closure of a landfill within our East Tier. These increases were partially offset by higher risk management costs. For the nine months ended September 30, 2026, the increases were further offset by declines in special waste volume in our West Tier, which was favorably impacted by wildfire clean-up activities in the prior year period, and lower volumes caused by harsh winter weather in early 2026.
+
+Recycling Processing and Sales — Our Recycling Processing and Sales segment generated income from operations compared to a loss in the prior year for both the three and nine months ended September 30, 2026. The improvement for the three months ended September 30, 2026 was primarily due to (i) a $152 million impairment charge related to the decision to suspend the operations of a business incurred in the third quarter of 2025 and lower related expenses from the suspension of the business; (ii) increased volumes and reduced costs from the automation of our recycling facilities as well as investments in new facilities and (iii) improved commodity pricing compared to the prior year periods. For the nine months ended September 30, 2026, these increases were partially offset by declines in commodity prices as compared to the prior year period.
+
+Renewable Energy — The increase in income from operations in our Renewable Energy segment was primarily due to higher volumes driven by the completion of projects that increase the beneficial use of landfill gas sold to third parties. This increase was partially offset by a decline in RINs pricing.
+
+Healthcare Solutions — Our Healthcare Solutions segment generated income from operations compared to a loss in the prior year for both the three and nine months ended September 30, 2026. The improvement across both time periods is primarily due to non-recurring integration costs incurred during the prior year periods along with lower costs in the current year from the realization of synergies and contributions from energy surcharges. These increases were partially offset by lower volumes.
+
+
+36 
+
+
+
+
+Corporate and Other — The loss from operations in Corporate and Other increased in the three months ended September 30, 2026 primarily due to higher risk management expenses, partially offset by lower employee annual incentive compensation. The loss from operations in Corporate and Other increased in the nine months ended September 30, 2026 primarily due to (i) higher technology costs to support our strategic initiatives; (ii) higher risk management expenses; (iii) annual wage increases and (iv) increased employee medical costs. These increases were partially offset by a decrease in consulting fees, due to expenses incurred in the prior year in connection with the Stericycle acquisition.
+
+Interest Expense, Net
+Our interest expense, net was $237 million and $695 million for the three and nine months ended September 30, 2026, respectively, compared to $225 million and $689 million for the three and nine months ended September 30, 2025, respectively. Interest expense, net increased due to lower capitalized interest resulting from the completion of the majority of our planned sustainability growth projects by the end of 2025. For the nine months ended September 30, 2026, this increase was partially offset by a decrease in our average debt balance as compared to the prior year period. 
+
+Income Tax Expense
+
+Our income tax expense and effective income tax rate was $224 million, or 21.5%, and $630 million, or 21.3%, for the three and nine months ended September 30, 2026, respectively, compared to $172 million, or 22.2%, and $524 million, or 21.0%, for the three and nine months ended September 30, 2025, respectively. See Note 4 to the Condensed Consolidated Financial Statements for more information related to income taxes.
+
+Tax Legislation — The Inflation Reduction Act of 2022 (“IRA”) contains several tax-related provisions, including with respect to (i) alternative fuel tax credits; (ii) tax incentives for investments in renewable energy production, carbon capture and other climate actions and (iii) the overall measurement of corporate income taxes. Given the complexity and uncertainty around the applicability of the legislation to our specific facts and circumstances, we continue to analyze the IRA provisions to identify and quantify potential opportunities and applicable benefits included in the legislation. We secured approximately $60 million of annual pre-tax benefit through the provisions of the IRA related to alternative fuel tax credits (recorded as a reduction in our operating expense) in 2024. The alternative fuel credit expired at the end of 2024 and will not provide any future benefit to the Company without further legislative action. With respect to the Section 48 investment tax credit, we expect our cumulative benefit to be between $400 million and $425 million, $309 million of which was recognized between 2023 and 2025 with the remainder anticipated to be realized in 2026 and 2027. Finally, in February 2026 the Internal Revenue Service issued proposed regulatory guidance clarifying qualification for the Section 45Z clean fuel production tax credit. We expect our cumulative benefit from this clean fuel production tax credit to be as much as $225 million through 2029. This expected benefit is dependent on a number of estimates and assumptions, which we continue to monitor and factor into our credit realization expectations.
+
+Liquidity and Capital Resources
+The Company consistently generates cash flow from operations that meets and exceeds our working capital needs, allows for payment of our dividends, investment in the business through capital expenditures and tuck-in acquisitions and funding of strategic sustainability growth investments. We continually monitor our actual and forecasted cash flows, our liquidity and our capital resources, enabling us to plan for our present needs and fund unbudgeted business requirements that may arise during the year. The Company believes that its investment grade credit ratings, diverse investor base, large value of unencumbered assets and modest leverage enable it to obtain adequate financing, and refinance upcoming maturities, as necessary to meet its ongoing capital, operating, strategic and other liquidity requirements. We also have the ability to manage liquidity during periods of significant financial market disruption through temporary modification of our capital expenditure and share repurchase plans.
+
+
+37 
+
+
+
+
+Summary of Cash and Cash Equivalents, Restricted Funds and Debt Obligations
+The following is a summary of our cash and cash equivalents, restricted funds and debt balances (in millions):
+
+
+September 30,
+2026December 31,
+2025
+Cash and cash equivalents$247 $201 
+Restricted funds and other:
+Insurance reserves$566 $472 
+Final capping, closure, post-closure and environmental remediation funds144 140 
+Other1 10 
+Total restricted funds and other (a)$711 $622 
+Debt:
+Current portion$1,524 $711 
+Long-term portion21,846 22,196 
+Total debt$23,370 $22,907 
+___________________________________________________________
+(a)As of September 30, 2026 and December 31, 2025, $100 million and $109 million, respectively, of these account balances were included in other current assets in our Condensed Consolidated Balance Sheets.
+
+Debt — As of September 30, 2026, we had approximately $4.4 billion of debt maturing within the next 12 months, including (i) $2.2 billion of tax-exempt bonds with term interest rate periods that expire within the next 12 months, which is prior to their scheduled maturities; (ii) $1.2 billion of short-term borrowings under our commercial paper program (net of related discount on issuance); (iii) $750 million of 4.95% senior notes that mature in July 2027 and (iv) $211 million of other debt with scheduled maturities within the next 12 months. As of September 30, 2026, we have classified $2.9 billion of debt maturing in the next 12 months as long-term because we have the intent and ability to refinance these borrowings on a long-term basis as supported by the forecasted available capacity under our $3.5 billion long-term U.S. and Canadian revolving credit facility. The remaining $1.5 billion of debt maturing in the next 12 months is classified as current obligations. 
+
+Guarantor Financial Information
+WM Holdings, Inc. (“WM Holdings”) has fully and unconditionally guaranteed all of Waste Management, Inc.’s (“WMI’s”) senior indebtedness. WMI has fully and unconditionally guaranteed all of WM Holdings’ senior indebtedness. None of WMI’s other subsidiaries have guaranteed any of WMI’s or WM Holdings’ debt. In lieu of providing separate financial statements for the subsidiary issuer and guarantor (WMI and WM Holdings), we have presented the accompanying supplemental summarized combined balance sheet and income statement information for WMI and WM Holdings on a combined basis after elimination of intercompany transactions between WMI and WM Holdings and amounts related to investments in any subsidiary that is a non-guarantor (in millions):
+
+
+
+September 30,
+2026December 31,
+2025
+Balance Sheet Information:
+Current assets$6 $44 
+Noncurrent assets12 13 
+Current liabilities1,271 738 
+Noncurrent liabilities:
+Advances due to affiliates20,804 18,160 
+Other noncurrent liabilities19,282 19,733 
+
+
+38 
+
+
+
+
+
+
+Nine Months Ended September 30, 2026
+Income Statement Information:
+Revenue$— 
+Operating income— 
+Net loss(489)
+
+Summary of Cash Flow Activity
+
+The following is a summary of our cash flows for the nine months ended September 30 (in millions):
+
+
+20262025
+Net cash provided by operating activities$4,867 $4,345 
+Net cash used in investing activities(2,059)(2,699)
+Net cash used in financing activities(2,766)(1,830)
+
+Net Cash Provided by Operating Activities — Our operating cash flows increased by $522 million for the nine months ended September 30, 2026, as compared to the prior year period, primarily due to (i) higher earnings, particularly driven by our Collection and Disposal business; (ii) favorable changes in working capital, net of effects from acquisitions and divestitures and (iii) lower annual incentive compensation payments. These increases were partially offset by higher cash taxes.
+
+Net Cash Used in Investing Activities — The most significant items included in our investing cash flows for the nine months ended September 30, 2026 and 2025 are summarized below: 
+
+•Capital Expenditures — We used $1,937 million and $2,339 million for capital expenditures during the nine months ended September 30, 2026 and 2025, respectively. The decrease in capital spending is primarily driven by (i) lower spend on collection vehicles and (ii) planned reductions in capital investments in our sustainability growth projects due to our transition from peak construction of this portfolio into a period of harvesting returns.
+
+•Acquisitions — Our cash spending on acquisitions was $102 million and $403 million during the nine months ended September 30, 2026 and 2025, respectively, of which $89 million and $395 million, respectively, are considered cash used in investing activities. The remaining spend is cash used in financing activities related to the timing of contingent consideration paid. These acquisitions are related to our solid waste and recycling businesses.
+
+•Divestitures — Proceeds from divestitures of businesses and other assets, net of cash divested, were $79 million and $108 million for the nine months ended September 30, 2026 and 2025, respectively. Proceeds in 2026 primarily related to a business divestiture in our West Tier. Proceeds in 2025 primarily related to the sale of our Healthcare Solutions segment’s Spain and Portugal subsidiaries.
+
+•Other, Net — The change in other investing activities were primarily driven by changes in our investment portfolio associated with a wholly-owned insurance captive. During the nine months ended September 30, 2026 and 2025, we used $108 million and $75 million, respectively, of cash from restricted cash and cash equivalents to invest in available-for-sale securities. 
+
+
+39 
+
+
+
+
+Net Cash Used in Financing Activities — The most significant items affecting the comparison of our financing cash flows for the nine months ended September 30, 2026 and 2025 are summarized below:
+
+•Debt Borrowings and Repayments — The following summarizes our cash borrowings and repayments of debt for the nine months ended September 30 (in millions):
+
+
+20262025
+Borrowings:
+Commercial paper, net of discount$18,051 $14,704 
+Canadian senior notes493 — 
+Tax-exempt bonds100 252 
+$18,644 $14,956 
+Repayments:
+Commercial paper$(17,920)$(15,133)
+Senior notes(238)(422)
+Canadian senior notes(357)— 
+Tax-exempt bonds— (110)
+Other debt(153)(107)
+$(18,668)$(15,772)
+Net cash borrowings (repayments)$(24)$(816)
+Refer to Note 3 to the Condensed Consolidated Financial Statements for additional information related to our debt borrowings and repayments.
+
+•Common Stock Repurchase Program — During the nine months ended September 30, 2026, we paid cash of $1,583 million for common stock repurchases. There were no share repurchases made in 2025. See Note 11 to the Condensed Consolidated Financial Statements for additional information about our share repurchase activity.
+
+•Cash Dividends — We paid cash dividends of $1,141 million and $1,001 million during the nine months ended September 30, 2026 and 2025, respectively. The increase in dividend payments is primarily due to our quarterly per share dividend increasing from $0.825 in 2025 to $0.945 in 2026.
+
+
+
+Free Cash Flow
+We are presenting free cash flow, which is a non-GAAP measure of liquidity, in our disclosures because we use this measure in the evaluation and management of our business. We define free cash flow as net cash provided by operating activities, less capital expenditures, plus proceeds from divestitures of businesses and other assets, net of cash divested. We believe it is indicative of our ability to pay our quarterly dividends, repurchase common stock, fund acquisitions and other investments and, in the absence of refinancings, to repay our debt obligations. Free cash flow is not intended to replace net cash provided by operating activities, which is the most comparable GAAP measure. We believe free cash flow gives investors useful insight into how we view our liquidity, but the use of free cash flow as a liquidity measure has material limitations because it excludes certain expenditures that are required or that we have committed to, such as declared dividend payments and debt service requirements.
+
+
+40 
+
+
+
+Our calculation of free cash flow and reconciliation to net cash provided by operating activities for the three and nine months ended September 30, 2026 and 2025 is shown in the table below (in millions) and may not be calculated the same as similarly-titled measures presented by other companies:
+
+
+Three Months Ended
+September 30,Nine Months Ended
+September 30,
+2026202520262025
+Net cash provided by operating activities$1,640 $1,592 $4,867 $4,345 
+Capital expenditures to support the business(602)(635)(1,746)(1,910)
+Capital expenditures - sustainability growth investments (a)(55)(141)(191)(429)
+Total capital expenditures(657)(776)(1,937)(2,339)
+Proceeds from divestitures of businesses and other assets, net of cash divested2 5 79 108 
+Free cash flow$985 $821 $3,009 $2,114 
+___________________________________________________________
+(a)These growth investments are intended to further our sustainability leadership position by increasing recycling volumes and growing renewable natural gas generation. We expect they will deliver circular solutions for our customers and drive environmental value to the communities we serve.
+
+Critical Accounting Estimates and Assumptions
+In preparing our financial statements, we make numerous estimates and assumptions that affect the accounting for and recognition and disclosure of assets, liabilities, equity, revenues and expenses. We must make these estimates and assumptions because certain information that we use is dependent on future events, cannot be calculated with precision from available data or simply cannot be calculated. In some cases, these estimates are difficult to determine and we must exercise significant judgment. In preparing our financial statements, the most difficult, subjective and complex estimates and the assumptions that present the greatest amount of uncertainty relate to our accounting for landfills, environmental remediation liabilities, long-lived asset impairments, intangible asset impairments and the fair value of assets and liabilities acquired in business combinations, as described in Item 7 of our Annual Report on Form 10-K for the year ended December 31, 2025. Actual results could differ materially from the estimates and assumptions that we use in the preparation of our financial statements.
+
+Seasonal Trends
+Our financial and operating results may fluctuate for many reasons, including period-to-period changes in the relative contribution of revenue by each line of business, changes in commodity prices and general economic conditions. Our operating revenues and volumes typically experience seasonal increases in the summer months that are reflected in second and third quarter revenues and results of operations.
+Service or operational disruptions caused by severe storms, extended periods of inclement weather or climate events can significantly affect the operating results of the geographic areas affected. Extreme weather events may also lead to supply chain disruption and delayed project development, or disruption of our customers’ businesses, reducing the amount of waste generated by their operations. 
+Conversely, certain destructive weather and climate conditions, such as wildfires in the Western U.S. and hurricanes that most often impact our operations in the Southern and Eastern U.S. during the second half of the year, can increase our revenues in the geographic areas affected as a result of the waste volumes generated by these events.
+
+
+41 
+
+
+
+
+Inflation
+Variability in economic conditions, including inflation, interest rates, employment trends and supply chain reliability, can create risk and uncertainty in our financial outlook. We take proactive steps to recover and mitigate inflationary cost pressures through our overall pricing efforts and by managing our costs through efficiency, labor productivity and investments in technology to automate certain aspects of our business. These efforts may not be successful for various reasons including the pace of inflation, operating cost inefficiencies, market responses and contractual limitations, such as the timing lag in our ability to recover increased costs under certain contracts that are tied to a price escalation index with a lookback provision.
+
+Item 3. 

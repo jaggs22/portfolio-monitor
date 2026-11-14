@@ -1,0 +1,81 @@
+{
+ "quotes": {
+  "last_run": "2026-11-14T01:44:40Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "generated_at": "2026-11-14T18:07:54Z",
+ "history": {
+  "last_run": "2026-11-14T01:44:40Z",
+  "ok": true,
+  "count": 27,
+  "errors": []
+ },
+ "news": {
+  "last_run": "2026-11-14T01:44:40Z",
+  "ok": true,
+  "count": 60,
+  "errors": []
+ },
+ "filings": {
+  "last_run": "2026-11-14T18:07:54Z",
+  "ok": true,
+  "count": 0,
+  "errors": []
+ },
+ "fundamentals": {
+  "last_run": "2026-11-14T01:44:40Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "mgmt": {
+  "last_run": "2026-11-14T01:44:40Z",
+  "ok": true,
+  "count": 15,
+  "errors": [
+   "V releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "LIN releases: Gemini gemini-3.8-flash returned 503",
+   "LLY releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "MU releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "MSFT releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "JPM releases: Gemini gemini-3.8-flash returned 503",
+   "WM releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "COST releases: Gemini gemini-3.8-flash returned 503",
+   "KO releases: Gemini gemini-3.8-flash returned 503",
+   "AMZN releases: Gemini gemini-3.8-flash returned 503",
+   "AMT releases: Gemini gemini-3.8-flash returned 503"
+  ]
+ },
+ "evidence": {
+  "last_run": "2026-11-14T18:07:54Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "peers": {
+  "last_run": "2026-11-14T02:14:42Z",
+  "ok": true,
+  "count": 15,
+  "errors": []
+ },
+ "segments": {
+  "last_run": "2026-11-14T02:14:42Z",
+  "ok": true,
+  "count": 14,
+  "errors": []
+ },
+ "bench": {
+  "last_run": "2026-11-14T02:14:42Z",
+  "ok": true,
+  "count": 12,
+  "errors": []
+ },
+ "baserates": {
+  "last_run": "2026-11-03T10:04:13Z",
+  "ok": true,
+  "count": 11541,
+  "errors": []
+ }
+}
