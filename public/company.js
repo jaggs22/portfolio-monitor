@@ -1105,7 +1105,7 @@
             result.replaceChildren(
               h('div', { class: 'callout' }, h('b', null, '1. The case for the engine. '), c.steelman),
               h('div', { class: 'callout' }, h('b', null, '2. What your number does. '), c.quantified, ' ', `Expected return ${fmt.pct(c.before.expectedIrr)} → ${fmt.pct(c.after.expectedIrr)}; edge over hurdle ${fmt.pts(c.before.edge)} → ${fmt.pts(c.after.edge)}.`),
-              c.tripwires.length ? h('div', { class: 'callout' }, h('b', null, '3. What would prove you right. '), c.tripwires.map((x) => x.text).join('; ') + '.') : null,
+              ...(c.tripwires.length ? [h('div', { class: 'callout' }, h('b', null, '3. What would prove you right. '), c.tripwires.map((x) => x.text).join('; ') + '.')] : []),
               h('div', { class: 'row-actions' },
                 btn('Keep my view', () => {
                   state.disputes = state.disputes.filter((x) => !(x.ticker === t && x.driver === driver)).concat([disp]);
