@@ -2,19 +2,19 @@
  "ticker": "LIN",
  "name": "Linde",
  "depth": "deep",
- "as_of": "2026-07-31",
+ "as_of": "2026-10-29",
  "horizon": 3,
  "header": {
   "one_liner": "Contracted industrial gases with pass-through pricing; steady, and priced like it.",
-  "thesis": "Linde compounds at 8% to 9% EPS growth with a record $8.1B contractual gas backlog. The engine's base case assumes a modest de-rating from 27.6x, which leaves the expected return below the hurdle. The disagreement is almost entirely about the exit multiple."
+  "thesis": "Linde delivered a record $4.59 of adjusted EPS in Q3 and nudged full-year guidance up to $17.82 to $17.92 (8% to 9% growth). The shares have risen to about 29x that guide, while the sale-of-gas backlog slipped to $7.9B and engineering orders fell. The engine's base case still assumes a de-rating, so the expected return sits below the hurdle; the disagreement remains the exit multiple."
  },
  "base": {
-  "eps0": 17.8,
-  "eps_label": "FY2026 adjusted EPS, midpoint of company guidance $17.70 to $17.90",
-  "rev0": 37.0,
-  "shares0": 0.464,
-  "div": 6.3,
-  "rev_label": "FY2026E sales ($B), annualised from Q2 sales of $9.289B",
+  "eps0": 17.87,
+  "eps_label": "FY2026 adjusted EPS, midpoint of updated guidance $17.82 to $17.92",
+  "rev0": 36.9,
+  "shares0": 0.462,
+  "div": 6.4,
+  "rev_label": "FY2026E sales ($B): nine months actual $27.47B plus a fourth quarter near Q3's $9.40B",
   "fy0": 2026
  },
  "probs": {
@@ -28,131 +28,143 @@
    "bear": 2,
    "bull": 7,
    "kind": "sourced",
-   "why": "Q2 underlying sales rose 4% (2% price, 2% volume); reported sales rose 9% with currency and acquisitions. A record $8.1B sale-of-gas backlog and $11B project backlog support mid single digit growth.",
-   "source": "Linde Q2 2026 release"
+   "why": "Q3 underlying sales rose 5% (3% price, 2% volume) and reported sales 9% with 1% currency. The Americas led at 9% underlying; EMEA managed 3%. The sale-of-gas backlog of $7.9B and $11B total project backlog support mid single digit growth, but the backlog is now shrinking, not growing.",
+   "source": "Linde Q3 2026 release"
   },
   "margin_end": {
    "base": 23,
    "bear": 21.5,
    "bull": 24,
    "kind": "judgment",
-   "why": "Net margin is about 22.3% on guided EPS. The base case adds roughly twenty basis points a year from productivity and mix. Adjusted operating margin was 29.5% in Q2, but the release says margin fell 60 basis points year on year, so expansion is not a given.",
-   "source": "Linde Q2 2026 release; engine judgment"
+   "why": "Adjusted net margin is about 22.4% on guided EPS. Q3 adjusted operating margin was 29.4%, 30 basis points lower than a year ago but flat excluding cost pass-through. The base case adds roughly twenty basis points a year from productivity and the $425M cost programme taken in Q3. This is the engine's judgment.",
+   "source": "Linde Q3 2026 release and 10-Q; engine judgment"
   },
   "share_chg": {
    "base": -1,
    "bear": -0.5,
    "bull": -1.5,
-   "kind": "judgment",
-   "why": "Shareholder returns were $1,590M in Q2 including dividends; the split is not disclosed. The base case assumes a net buyback of about one percent a year.",
-   "source": "Linde Q2 2026 release (split not stated)"
+   "kind": "sourced",
+   "why": "Linde bought back $2.63B of shares in the first nine months, about 1.5% of the market value annualised. The base case assumes about 1% a year net as capex of $5.5B to $6.0B absorbs more of the cash.",
+   "source": "Linde Q3 2026 10-Q (purchases of ordinary shares $2,632M, nine months)"
   },
   "exit_pe": {
    "base": 25,
    "bear": 20,
    "bull": 28,
    "kind": "judgment",
-   "why": "Current multiple is 27.6x on guided EPS. The base case assumes a two-and-a-half point de-rating to 25x, against a 10-year yield near 5%. This is the number that decides the stance.",
+   "why": "Current multiple is about 29x guided 2026 EPS, up from 27.6x when this was last written, with the 10-year Treasury near 5.15%. The base case assumes a de-rating to 25x. This is the number that decides the stance.",
    "source": "Engine judgment"
   }
  },
  "pillars": [
   {
    "title": "Contracts lock in volume and pass through energy",
-   "claim": "Most gas is sold under long contracts with minimum purchase terms and energy cost pass-through, so profit grows even when volume is flat.",
+   "claim": "Most gas is sold under long contracts with minimum purchase terms and energy cost pass-through, so profit grows even when industrial volume is soft.",
    "evidence": [
     {
-     "t": "Q2 sales +9% but underlying +4%; 2% price, 2% volume",
-     "src": "Q2 release"
+     "t": "Q3 sales $9,404M, +9%; underlying +5% from 3% price and 2% volume",
+     "src": "Q3 release"
     },
     {
-     "t": "Record sale-of-gas backlog of $8.1B (contractual)",
-     "src": "Q2 release"
+     "t": "Americas underlying +9% (6% price, 3% volume); EMEA +3%; APAC +8%",
+     "src": "Q3 release"
     },
     {
-     "t": "APAC margin down 120 bps but only 70 bps excluding cost pass-through",
-     "src": "Q2 release"
+     "t": "EMEA margin down 80 bps reported but flat excluding cost pass-through",
+     "src": "Q3 release"
     }
    ],
    "test": "Does underlying sales growth stay at or above 3%?"
   },
   {
-   "title": "Margin is flat to slightly down at the group",
-   "claim": "Group operating margin was 60 basis points lower than a year ago in the quarter. Segment margins fell in all three regions.",
+   "title": "Margin has stopped falling",
+   "claim": "Adjusted operating margin of 29.4% was 30 basis points below last year, against a 60 basis point decline in Q2. Excluding pass-through it was flat, and the Americas expanded.",
    "evidence": [
     {
-     "t": "Americas 31.2% (-50 bps), APAC 28.4% (-120 bps), EMEA 35.7% (-40 bps)",
-     "src": "Q2 release"
+     "t": "Americas 35.1% (+50 bps), EMEA 35.1% (-80 bps), APAC 27.4% (-70 bps)",
+     "src": "Q3 release"
+    },
+    {
+     "t": "$425M cost reduction and other charges: $200M severance, $42M other, $183M non-cash mainly US homecare",
+     "src": "Q3 10-Q"
     }
    ],
-   "test": "Does adjusted operating margin stop falling in Q3?"
+   "test": "Does adjusted operating margin turn positive year on year in Q4?"
   },
   {
    "title": "Capital intensity is rising",
-   "claim": "FY2026 capex is guided to $5.5B to $6.0B; Q2 free cash flow was $833M on $2,271M operating cash flow. Growth is being funded by investment.",
+   "claim": "Nine-month capex was $4.17B and full-year capex is guided to $5.5B to $6.0B. Q3 free cash flow improved to $1,777M on $3,169M of operating cash flow.",
    "evidence": [
     {
-     "t": "Q2 capex $1,438M; free cash flow $833M",
-     "src": "Q2 release"
+     "t": "Q3 capex $1,392M; free cash flow $1,777M; operating cash flow +8%",
+     "src": "Q3 release"
     },
     {
-     "t": "Return on capital 23.5%",
-     "src": "Q2 release"
+     "t": "Nine-month buybacks $2,632M plus dividends $2,214M",
+     "src": "Q3 10-Q"
     }
    ],
-   "test": "Does return on capital hold above 23% as capex rises?"
+   "test": "Does free cash flow cover dividends and buybacks in Q4?"
   },
   {
-   "title": "Engineering backlog is a lead indicator",
-   "claim": "Third-party equipment backlog of $3.0B and order intake of $871M show project demand, but engineering margin is only 16%.",
+   "title": "The lead indicators cooled",
+   "claim": "Engineering order intake fell to $499M from $871M in Q2, the third-party equipment backlog slipped to $2.9B, and the sale-of-gas backlog fell to $7.9B. Management says electronics proposal activity remains robust.",
    "evidence": [
     {
-     "t": "Engineering sales $625M, +13%; operating profit $100M, 16.0% margin",
-     "src": "Q2 release"
+     "t": "Engineering sales $582M, +12%; operating profit $107M, 18.4% margin; orders $499M",
+     "src": "Q3 release"
+    },
+    {
+     "t": "Sale-of-gas backlog $7.9B (Q2: $8.1B); total project backlog $11B",
+     "src": "Q3 release"
     }
    ],
-   "test": "Does order intake stay above $800M a quarter?"
+   "test": "Do engineering orders recover above $800M a quarter, or does the gas backlog grow again?"
   }
  ],
  "variant": {
-  "street": "Premium multiple for the most defensive industrial: low volatility, contracted cash flows, and a record backlog.",
-  "ours": "The business case is intact. The return case is weak because the price already pays a staple-like multiple while Treasuries yield about 5%; the engine needs a 28x exit to reach the hurdle.",
-  "could_be_wrong": "If long rates fall and defensive compounders re-rate, a 28x multiple is plausible and this becomes a positive stance.",
-  "would_change_mind": "Underlying volume above 3% for two quarters, or the price falling toward 22x guided EPS."
+  "street": "About 29x this year's guided earnings for the most defensive industrial: low volatility, contracted cash flows and an $11B project backlog.",
+  "ours": "The business case is intact and Q3 was a clean beat. The return case is weaker than before because the price rose while the backlog shrank; the engine needs a near-29x exit to reach the hurdle with Treasuries above 5%.",
+  "could_be_wrong": "If the backlog dip is plants starting up rather than fewer wins, and long rates fall, a 28x to 29x multiple is defensible and this becomes a positive stance.",
+  "would_change_mind": "Sale-of-gas backlog back above $8.0B with underlying volume above 3% for two quarters, or the price falling toward 22x guided EPS."
  },
  "moat": {
   "rating": 5,
-  "summary": "Local density, long contracts and pass-through pricing; the duopoly-style structure makes margin defensible.",
+  "summary": "Local density, long contracts and pass-through pricing; Q3 margins held flat excluding pass-through in a soft industrial economy.",
   "detail": "Existing Porter card (FY2025 10-K) rates Linde Strong."
  },
  "quality": {
-  "leverage_note": "Net debt not retrieved from the release (not stated).",
-  "leverage_ok": null,
-  "incentive_note": null,
-  "checks": []
+  "leverage_note": "Total debt $26.7B against cash of $3.9B at 30 September 2026 (net about $22.8B, our arithmetic): modest against about $14B of annualised adjusted EBITDA (nine months $10.6B).",
+  "leverage_ok": true,
+  "incentive_note": "Nine-month buybacks and dividends ($4.85B) exceeded free cash flow (about $3.5B); the gap is debt-funded.",
+  "incentive_ok": false,
+  "checks": [
+   "Reported EPS $3.66 (-11%) vs adjusted $4.59 (+9%): the gap is the $425M cost programme and Linde AG purchase accounting",
+   "$183M of the Q3 charge was non-cash and mainly in the US homecare business"
+  ]
  },
  "catalysts": [
   {
-   "date": "2026-10-29",
-   "label": "Linde Q3 2026 earnings and conference call",
-   "confirmed": true,
-   "note": "Guide: Q3 adjusted EPS $4.45 to $4.55 (+6% to +8%); FY $17.70 to $17.90.",
+   "date": "2027-02-05",
+   "label": "Linde Q4 2026 earnings and 2027 guidance (date not confirmed; usually early February)",
+   "confirmed": false,
+   "note": "Guide: Q4 adjusted EPS $4.40 to $4.50 (+5% to +7%). Watch 2027 EPS guide and backlog.",
    "importance": "High"
   }
  ],
  "tripwires": [
   {
    "id": "l1",
-   "text": "Q3 adjusted EPS below $4.45 (bottom of guide)",
-   "metric": "q3_eps",
+   "text": "Q4 adjusted EPS below $4.40 (bottom of guide)",
+   "metric": "q4_eps",
    "op": "<",
-   "threshold": 4.45,
-   "current": 4.5,
-   "unit": "$ (Q2 actual)",
+   "threshold": 4.4,
+   "current": 4.59,
+   "unit": "$ (Q3 actual)",
    "drivers": [
     "margin_end"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release"
   },
   {
    "id": "l2",
@@ -160,12 +172,12 @@
    "metric": "underlying",
    "op": "<",
    "threshold": 3,
-   "current": 4,
+   "current": 5,
    "unit": "%",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release"
   },
   {
    "id": "l3",
@@ -173,49 +185,57 @@
    "metric": "backlog",
    "op": "<",
    "threshold": 8.0,
-   "current": 8.1,
+   "current": 7.9,
    "unit": "$B",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release",
+   "status": "tripped",
+   "note": "Fell to $7.9B from $8.1B. The release does not split start-ups from new wins, so this may be conversion rather than weaker demand; the threshold is kept so the dispute stays visible."
   }
  ],
  "risks": [
-  "Industrial and chemical volume weakness in EMEA (volume was lower in Q2).",
-  "Project execution on large on-site plants.",
-  "Rising capex diluting free cash flow."
+  "Industrial and chemical volume weakness in EMEA (underlying growth only 3% in Q3).",
+  "Electronics capex timing: the backlog and engineering orders both fell in Q3.",
+  "Rising capex and debt-funded buybacks."
  ],
  "lenses": {
-  "eisman": "Segment margins fell in all three regions; ask whether pass-through is hiding real cost pressure.",
-  "munger": "A great business bought at 27x earnings is still an average investment if rates stay here.",
-  "buffett": "Exactly his kind of franchise; the question is only the price.",
-  "hohn": "Durable, contracted, pricing power: the cleanest profile of the four, the question is the 8.1B backlog conversion."
+  "eisman": "Adjusted EPS rose 9% while reported EPS fell 11%. Ask what the $425M programme and the homecare write-down say about the parts of Linde nobody talks about.",
+  "munger": "A great business bought at 29x earnings is still an average investment if Treasuries pay more than 5%.",
+  "buffett": "Exactly his kind of franchise; the price moved up while the backlog moved down, which is the wrong combination for a buyer.",
+  "hohn": "Durable, contracted, pricing power: the cleanest profile of the four. The test is now whether the $7.9B backlog refills."
  },
  "sources": [
   {
    "tier": "A",
-   "title": "Linde plc Form 8-K, Q2 2026 earnings release",
-   "url": "https://www.sec.gov/Archives/edgar/data/0001707925/000165495426007052/lin_ex991.htm",
-   "date": "2026-07-31"
+   "title": "Linde plc Form 8-K, Q3 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001707925/000165495426009199/lin_ex991.htm",
+   "date": "2026-10-29"
+  },
+  {
+   "tier": "A",
+   "title": "Linde plc Form 10-Q, quarter ended 30 September 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001707925/000162828026068079/lin-20260930.htm",
+   "date": "2026-10-29"
   },
   {
    "tier": "C",
-   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
-   "url": "https://site.financialmodelingprep.com",
-   "date": "2026-10-14"
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: close of 13 November 2026 ($526.06), dividend rate",
+   "url": "https://finance.yahoo.com/quote/LIN",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
-  "Net debt, dividends and buybacks not stated in the release.",
-  "FY2026 reported sales not stated; annualised from Q2.",
-  "Consensus estimates not retrieved."
+  "Return on capital and the Linde AG purchase accounting add-back for Q3 not retrieved.",
+  "The release does not say how much of the backlog decline is plant start-ups versus fewer new contracts.",
+  "Q4 2026 earnings date not confirmed."
  ],
- "base_period_end": "2026-06-30",
+ "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-10-27",
-  "basis": "Q2 2026 10-Q and release. Q3 reports on 29 October; this review refreshes after the print.",
-  "headline": "The best operator in a three-player oligopoly. The business is not the debate; the 20% premium to gas peers is.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026), with prices to the 13 November 2026 close; news reviewed to 16 November. Q4 and 2027 guidance come in early February; this review refreshes after the print.",
+  "headline": "The best operator in a three-player oligopoly, now at about 29x earnings. The business is not the debate; the premium is, and the backlog just stopped growing.",
   "model": "Linde sells industrial gases (oxygen, nitrogen, hydrogen, specialty gases) under long contracts, and builds the plants that make them.",
   "how_it_earns": [
    {
@@ -243,25 +263,25 @@
      "match": "Americas",
      "label": "Americas",
      "role": "Largest and steadiest",
-     "driver": "US electronics and manufacturing volumes, 2% pricing"
+     "driver": "Underlying +9%: 6% price, 3% volume from electronics, chemicals and energy, metals and mining"
     },
     {
      "match": "EMEA",
      "label": "EMEA",
      "role": "Highest margin, weakest volume",
-     "driver": "Price and productivity offset falling manufacturing volume"
+     "driver": "Underlying +3%; margin flat excluding pass-through"
     },
     {
      "match": "APAC",
      "label": "APAC",
      "role": "Fastest growth",
-     "driver": "New plants starting up, electronics and chemicals"
+     "driver": "Underlying +8% on 5% volume from new plants, electronics and chemicals"
     },
     {
      "match": "Engineering",
      "label": "Engineering",
      "role": "Lead indicator",
-     "driver": "Project timing; $3.0B third-party backlog, $871M Q2 orders"
+     "driver": "Project timing; $2.9B third-party backlog, $499M Q3 orders (Q2: $871M)"
     },
     {
      "match": "Corporate And Other",
@@ -284,57 +304,57 @@
   },
   "what_numbers_say": [
    {
-    "t": "Growth is half price, half volume",
-    "d": "Underlying sales +4% in Q2: price +2%, volume +2%. Reported +9% adds currency, acquisitions and pass-through, which carry little profit."
+    "t": "Growth picked up a point",
+    "d": "Underlying sales +5% in Q3 (Q2: +4%): price +3%, volume +2%. The Americas carried it at +9%."
    },
    {
-    "t": "Margin slipped 60 bps",
-    "d": "Adjusted operating margin 29.5% vs 30.1%. Cost inflation outran pricing in every region; EMEA held up only after stripping pass-through."
+    "t": "Margin decline narrowed",
+    "d": "Adjusted operating margin 29.4%, down 30 bps (Q2: down 60 bps) and flat excluding pass-through. Americas margin rose 50 bps to 35.1%."
    },
    {
-    "t": "Capex is rising to fund the backlog",
-    "d": "H1 capex $2.78B against $4.51B operating cash flow. Full-year capex guide $5.5B to $6.0B for an $8.1B sale-of-gas backlog."
+    "t": "A charge sits under the beat",
+    "d": "Adjusted EPS $4.59 (+9%), reported $3.66 (-11%). The $425M cost programme includes $200M severance and $183M non-cash, mainly US homecare."
    },
    {
-    "t": "Returns to shareholders exceed free cash flow",
-    "d": "H1 buybacks $1.66B plus dividends $1.48B against free cash flow of $1.73B; net new debt of $1.65B filled the gap."
+    "t": "Returns still exceed free cash flow",
+    "d": "Nine months: buybacks $2.63B plus dividends $2.21B against about $3.5B of free cash flow (operating cash flow less $4.17B capex)."
    }
   ],
   "balance": {
-   "read": "Leverage is modest and the rating is protected, but buybacks are now partly debt-funded.",
+   "read": "Leverage is modest and the rating is protected, but shareholder returns are partly debt-funded.",
    "facts": [
-    "$5.0B and $1.5B undrawn credit lines, no covenants",
-    "€1.6B notes issued, $725M repaid in H1",
+    "Total debt $26.7B, cash $3.9B at 30 September",
+    "$2.09B of long-term borrowing in nine months, including €1.6B of notes issued in May",
     "Management commits to strong Moody's and S&P ratings"
    ]
   },
   "flags": [
    {
-    "flag": "Adjusted EPS excludes merger accounting, eight years on",
-    "evidence": "Linde AG purchase accounting adds $0.35 to Q2 adjusted EPS of $4.50 (8%). GAAP EPS was $4.15.",
+    "flag": "Adjusted EPS excludes merger accounting and restructuring",
+    "evidence": "Q3 reported EPS $3.66 vs adjusted $4.59. The gap is the $425M cost reduction and other charges plus Linde AG purchase accounting, eight years after the merger.",
     "severity": "watch"
    },
    {
-    "flag": "Return on capital is quoted on the adjusted base",
-    "evidence": "Company quotes 23.5% return on capital. On reported equity and debt, ROIC is about 12% because the merger goodwill stays in the base.",
+    "flag": "US homecare write-down",
+    "evidence": "$183M of non-cash Q3 charges relate primarily to the US homecare business. The 10-Q does not say whether more is to come.",
     "severity": "watch"
    },
    {
     "flag": "Pass-through inflates sales, not profit",
-    "evidence": "Cost pass-through added 1% to Q2 sales with minimal profit. Margin comparisons should use underlying sales.",
+    "evidence": "Margin comparisons should use underlying sales; EMEA's 80 bps margin decline disappears excluding pass-through.",
     "severity": "info"
    }
   ],
   "forecast_basis": {
    "rev_cagr": "Driver-based: price plus volume plus backlog start-ups, cross-checked with guidance",
-   "margin_end": "Judgment: assumes productivity offsets inflation; Q2 shows it did not",
-   "share_chg": "Below trend: buybacks ran -2.2% a year; base assumes -1% as capex rises",
-   "exit_pe": "Judgment: modest de-rating with 10-year yields near 5%"
+   "margin_end": "Judgment: productivity and the Q3 cost programme offset inflation; Q3 shows margin flat ex pass-through",
+   "share_chg": "Below trend: buybacks ran about 1.5% a year; base assumes 1% as capex rises",
+   "exit_pe": "Judgment: de-rating from about 29x with 10-year yields above 5%"
   },
   "scenarios": {
    "base": {
     "story": "Price and start-ups carry 4% to 5% underlying growth, EPS compounds 8% to 9%, the multiple drifts lower.",
-    "needs": "Pricing at or above inflation; backlog starts on time"
+    "needs": "Pricing at or above inflation; the backlog refills as plants start up"
    },
    "downside": {
     "story": "Industrial recession: volumes fall in EMEA and the Americas, price fades, the premium multiple compresses.",
@@ -356,7 +376,7 @@
    },
    {
     "cause": "Electronics capex cycle turns",
-    "how": "Chip fabs are the main source of new on-site contracts. Delays push out start-ups and shrink the backlog.",
+    "how": "Chip fabs are the main source of new on-site contracts. The sale-of-gas backlog fell to $7.9B and engineering orders to $499M in Q3.",
     "watch": "Sale-of-gas backlog",
     "trip": "l3",
     "sev": "medium",
@@ -364,7 +384,7 @@
    },
    {
     "cause": "Pricing power fades as inflation cools",
-    "how": "Linde's price gains track inflation. If price falls below cost inflation, margin compresses, as it did by 60 bps in Q2.",
+    "how": "Linde's price gains track inflation. Price was +3% in Q3 and margin was flat ex pass-through; if price falls below cost inflation, margin compresses.",
     "watch": "Price/mix vs margin change",
     "trip": "l1",
     "sev": "medium",
@@ -380,7 +400,7 @@
    },
    {
     "cause": "Premium multiple compresses with rates",
-    "how": "A staple-like multiple competes with a 5% Treasury yield. Higher-for-longer rates lower what investors pay for steady growth.",
+    "how": "A 29x multiple competes with a 10-year Treasury yield above 5%. Higher-for-longer rates lower what investors pay for steady growth.",
     "watch": "10-year yield",
     "trip": null,
     "sev": "medium",
@@ -388,21 +408,21 @@
    }
   ],
   "peer_read": {
-   "why_premium": "Linde earns more on capital than Air Liquide and Air Products, has delivered 12 straight earnings beats, and has avoided the large project write-downs that hit Air Products.",
+   "why_premium": "Linde earns more on capital than Air Liquide and Air Products, has a long record of beating its own guidance (Q3 EPS of $4.59 topped the $4.45 to $4.55 guide), and has avoided the large project write-downs that hit Air Products.",
    "why_not": "Air Products' normalised EBITDA margin is higher, and Air Liquide trades at a lower multiple on similar consensus growth. The premium rests on execution, not structural superiority.",
    "peers_note": "Air Liquide reports half-yearly, so its trailing figures are the last full fiscal year."
   },
   "questions": [
-   "Is buyback spending above free cash flow a sign of confidence or of a mature business?",
-   "Should the eight-year-old merger adjustment still be excluded from EPS?",
-   "Does the 23.5% return on capital hold on new electronics contracts?"
+   "Is the backlog dip plants starting up, or fewer electronics wins?",
+   "Should a $425M restructuring and eight-year-old merger accounting both sit outside adjusted EPS?",
+   "Is debt-funded buyback spending a sign of confidence or of a mature business?"
   ],
   "sources": [
    {
     "tier": "A",
-    "title": "Linde plc Form 10-Q, quarter ended 30 June 2026 (MD&A, segment note)",
-    "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026051289/lin-20260630.htm",
-    "date": "2026-07-31"
+    "title": "Linde plc Form 10-Q, quarter ended 30 September 2026 (cost programme, cash flow, debt)",
+    "url": "https://www.sec.gov/Archives/edgar/data/0001707925/000162828026068079/lin-20260930.htm",
+    "date": "2026-10-29"
    },
    {
     "tier": "A",
@@ -412,12 +432,12 @@
    }
   ],
   "title": "Best in class, priced for it",
-  "lead": "We rate Linde {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). This is the best-run industrial gas company, but a premium to gas peers already pays for that, and our next-year EPS is {vs_cons} consensus.",
+  "lead": "We rate Linde {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Q3 was a clean beat and margins stopped falling, but the shares now trade at about 29x guided earnings while the backlog shrank, and our next-year EPS is {vs_cons} consensus.",
   "call_reason": "Quality is fully reflected: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
   "arguments": [
    {
     "label": "Growth",
-    "text": "Underlying sales grew 4% in Q2, split evenly between price and volume. The record $8.1B sale-of-gas backlog, mostly electronics, supports mid single digit growth as plants start up, but EMEA volumes are already falling."
+    "text": "Underlying sales grew 5% in Q3, 3% from price and 2% from volume, led by the Americas at 9%. The sale-of-gas backlog slipped to $7.9B and engineering orders fell to $499M, so the next leg of growth is less visible than it was in Q2."
    },
    {
     "label": "Moat",
@@ -425,11 +445,11 @@
    },
    {
     "label": "Profitability",
-    "text": "Adjusted operating margin of 29.5% leads the sector, but it fell 60 bps as cost inflation outran pricing in every region. Productivity has to do more of the work from here."
+    "text": "Adjusted operating margin of 29.4% leads the sector and was flat excluding pass-through, an improvement on Q2. Reported EPS fell 11% on a $425M cost programme that management expects to lift productivity."
    },
    {
     "label": "Capital",
-    "text": "Buybacks and dividends ran ahead of free cash flow in H1, partly funded with new debt, while capex rises to $5.5B to $6.0B for the year. Leverage is still modest."
+    "text": "Buybacks and dividends of $4.85B in nine months ran ahead of free cash flow of about $3.5B, with the gap funded by debt, while capex rises to $5.5B to $6.0B for the year. Leverage is still modest."
    },
    {
     "label": "Valuation",
@@ -437,18 +457,18 @@
    }
   ],
   "thesis_long": [
-   "Linde is the highest-quality way to own industrial gases. Contracts, density and pass-through pricing make its profit stream unusually predictable: earnings have beaten consensus in each of the last 12 quarters and adjusted EPS is guided up 8% to 9% in 2026. We do not argue with any of that.",
-   "What we question is how much more the market will pay for it. The stock trades at about 28x this year's guided earnings and at a premium to Air Liquide and Air Products on forward EV/EBITDA, while 10-year Treasuries yield close to 5%. Growth is not accelerating: underlying sales rose 4%, EMEA volumes are falling and margins slipped. To beat its cost of equity, the shares need either faster growth than the backlog implies or a multiple that holds near today's level.",
-   "Our base case has EPS compounding about 7% a year with a modest de-rating, which leaves the shares close to fair value over 12 months. The upside case needs electronics start-ups and a European recovery to coincide; the downside is an industrial recession that takes volume and the premium multiple together. We would turn more positive on underlying volume growth above 3% for two quarters, or a price nearer 22x earnings."
+   "Linde is the highest-quality way to own industrial gases. Contracts, density and pass-through pricing make its profit stream unusually predictable: Q3 adjusted EPS was a record $4.59, up 9%, and full-year guidance was raised to $17.82 to $17.92. We do not argue with any of that.",
+   "What we question is how much more the market will pay for it. The stock has risen to about 29x this year's guided earnings and trades at a premium to Air Liquide and Air Products on forward EV/EBITDA, while 10-year Treasuries yield above 5%. Meanwhile the lead indicators cooled: the sale-of-gas backlog fell to $7.9B, engineering orders nearly halved from Q2, and EMEA grew only 3%. A $425M restructuring, including a write-down in US homecare, sits outside adjusted EPS.",
+   "Our base case has EPS compounding about 7% a year with a de-rating to 25x, which leaves a 12-month return well short of the cost of equity. The upside case needs electronics start-ups to refill the backlog while long rates fall; the downside is an industrial recession that takes volume and the premium multiple together. We would turn more positive on a backlog back above $8.0B with volume growth above 3%, or a price nearer 22x earnings."
   ],
   "upside_risks": [
    {
-    "cause": "Electronics and clean-energy start-ups land together",
-    "how": "The $8.1B backlog converts faster than planned, lifting volume growth above 3% and making today's multiple look reasonable."
+    "cause": "The backlog refills with electronics wins",
+    "how": "Management says proposal activity remains robust in electronics. New on-site contracts would lift the backlog back above $8B and support faster volume growth."
    },
    {
     "cause": "Long rates fall",
-    "how": "Lower Treasury yields would re-rate defensive compounders, and a 28x multiple would then look sustainable."
+    "how": "Lower Treasury yields would re-rate defensive compounders, and a 29x multiple would then look sustainable."
    }
   ]
  },

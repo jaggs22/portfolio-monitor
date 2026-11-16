@@ -2,19 +2,19 @@
  "ticker": "LLY",
  "name": "Eli Lilly",
  "depth": "deep",
- "as_of": "2026-08-05",
+ "as_of": "2026-10-29",
  "horizon": 3,
  "header": {
-  "one_liner": "The incretin franchise: volume is exploding, price per unit is falling, and the multiple already assumes the volume wins.",
-  "thesis": "Revenue grew 48% on 60% more volume and 13% lower prices. The base case fades growth to 18% a year and compresses the P/E from 32x to 24x, which beats the hurdle (10.1% a year), but the bear case loses 18% a year, so the probability-weighted return is about the hurdle. The central debate is price erosion versus volume."
+  "one_liner": "The incretin franchise: volume is still exploding, price per unit is falling faster, and the multiple already assumes the volume wins.",
+  "thesis": "Q3 revenue grew 39% on 53% more volume and 15% lower prices, and Lilly raised 2026 revenue guidance by $5.5B to $91B to $92B. Two of our tripwires crossed: US price fell 7% and gross margin dipped below 85%. The base case fades growth to 18% a year and compresses the P/E toward 24x; the bear tail is fat, so the probability-weighted return falls short of the hurdle. The central debate is still price erosion versus volume."
  },
  "base": {
-  "eps0": 36.0,
-  "eps_label": "FY2026 non-GAAP EPS, midpoint of guidance $35.50 to $36.50 (includes $3.03 of Q2 acquired IPR&D)",
-  "rev0": 86.0,
+  "eps0": 35.5,
+  "eps_label": "FY2026 non-GAAP EPS, midpoint of updated guidance $35.00 to $36.00 (includes $3.03 of Q2 and $4.57 of Q3 acquired IPR&D; about $43 before those charges)",
+  "rev0": 91.5,
   "shares0": 0.894,
   "div": 6.92,
-  "rev_label": "FY2026 revenue, midpoint of guidance $85B to $87B",
+  "rev_label": "FY2026 revenue, midpoint of raised guidance $91B to $92B",
   "fy0": 2026
  },
  "probs": {
@@ -28,96 +28,96 @@
    "bear": 8,
    "bull": 25,
    "kind": "judgment",
-   "why": "Q2 revenue +48%: volume +60%, price -13% (US price -3%, outside US -36%). Retatrutide BLA is planned for Q1 2027 and orforglipron (Foundayo) is launching. The base case fades growth from 48% toward the high teens as price erosion and comparables bite. This is the engine's judgment.",
-   "source": "Lilly Q2 2026 release"
+   "why": "Q3 revenue +39%: volume +53%, price -15% (US volume +41%, price -7%; outside the US volume +76%, price -29%). About $900M of Q3 revenue was one-off (Jardiance milestones, rebate estimate changes). The base case fades growth from the high 30s toward the high teens as price erosion widens. This is the engine's judgment.",
+   "source": "Lilly Q3 2026 release"
   },
   "margin_end": {
    "base": 40,
    "bear": 32,
    "bull": 43,
    "kind": "judgment",
-   "why": "Net margin is about 37% on guided EPS including acquired IPR&D. Gross margin was 85.8%. The base case assumes slight leverage as R&D falls as a share of revenue (17% in Q2), offset by price erosion.",
-   "source": "Lilly Q2 2026 release; engine judgment"
+   "why": "Net margin is about 35% on guided EPS, which carries $7.60 a share of acquired IPR&D from Q2 and Q3. Before those charges it is about 42%. The base case lands at 40% as one-off charges fall away, offset by price erosion; non-GAAP gross margin was 84.4% in Q3.",
+   "source": "Lilly Q3 2026 release; engine judgment"
   },
   "share_chg": {
    "base": -0.3,
    "bear": 0,
    "bull": -0.5,
    "kind": "sourced",
-   "why": "Weighted diluted shares fell from 894.8M (H1) to 893.7M (Q2). The release does not state repurchases.",
-   "source": "Lilly Q2 2026 release"
+   "why": "Guidance assumes about 894M diluted shares, unchanged from mid-year. Lilly repurchased $2.4B in Q1 (call); later quarters were not stated. Buybacks roughly offset dilution.",
+   "source": "Lilly Q3 2026 release (share assumption); Q1 2026 call"
   },
   "exit_pe": {
    "base": 24,
    "bear": 16,
    "bull": 30,
    "kind": "judgment",
-   "why": "Current multiple is 32x. Large pharmaceutical growth names have historically traded between 16x and 30x. The base case assumes a growth-driven premium that narrows as volume growth slows. The bear case prices a patent-style cliff on pricing.",
+   "why": "Current multiple is about 41x guided 2026 EPS, or about 33x before this year's acquired IPR&D charges. Large pharmaceutical growth names have historically traded between 16x and 30x. The base case assumes a growth premium that narrows as volume growth slows. The bear case prices a reset in US pricing.",
    "source": "Engine judgment"
   }
  },
  "pillars": [
   {
    "title": "Volume is the story, price is the cost",
-   "claim": "Volume +60% against price -13% means the franchise is growing by getting cheaper per dose and bigger in aggregate. The ex-US price drop of 36% is the leading indicator of where US pricing could go.",
+   "claim": "Volume +53% against price -15% means the franchise is growing by getting cheaper per dose and bigger in aggregate. US price fell 7%, up from 3% in Q2, so the ex-US pattern is starting to show at home.",
    "evidence": [
     {
-     "t": "Revenue $22,974M, +48%; US $14.4B (+33%), ex-US $8.6B (+80%)",
-     "src": "Q2 release"
+     "t": "Revenue $24,397M, +39%; US $15.1B (+34%), ex-US $9.3B (+47%)",
+     "src": "Q3 release"
     },
     {
-     "t": "Mounjaro $9,943M (+91%); Zepbound $4,928M (+46%)",
-     "src": "Q2 release"
+     "t": "Mounjaro $10,723M (+65%); Zepbound $5,352M (+49%)",
+     "src": "Q3 release"
     }
    ],
-   "test": "Does US realised price stay within -5% a year while volume grows above 30%?"
+   "test": "Does US realised price stay within -8% a year while volume grows above 30%?"
   },
   {
-   "title": "Margins are very high and rising",
-   "claim": "Non-GAAP gross margin 86.3% and operating margin about 39% after $2.8B of acquired IPR&D; R&D is only 17% of revenue.",
+   "title": "Margins are very high but slipped",
+   "claim": "Non-GAAP gross margin was 84.4%, below Q2's level, and $4.2B of acquired IPR&D cut operating margin to about 35%. R&D held at 17% of revenue.",
    "evidence": [
     {
-     "t": "Gross margin 85.8% GAAP; R&D $3,819M (+14%)",
-     "src": "Q2 release"
+     "t": "Gross margin 83.9% GAAP, 84.4% non-GAAP; R&D $4,247M (+23%)",
+     "src": "Q3 release"
     },
     {
-     "t": "Operating income $8,978M (+31%)",
-     "src": "Q2 release"
+     "t": "Operating income $8,608M (+17%) after $4,181M acquired IPR&D",
+     "src": "Q3 release"
     }
    ],
-   "test": "Does gross margin stay above 85% as prices fall?"
+   "test": "Does non-GAAP gross margin recover above 85% as Foundayo scales?"
   },
   {
    "title": "The pipeline widens the franchise",
-   "claim": "Retatrutide has a complete obesity data package with BLA in Q1 2027; orforglipron was submitted for type 2 diabetes; new products added $98M to $201M each in the quarter.",
+   "claim": "Retatrutide beat Ozempic head to head in type 2 diabetes, with BLA planned for Q1 2027; Foundayo is launching globally; newer immunology, oncology and neuroscience products doubled.",
    "evidence": [
     {
-     "t": "Foundayo $98M, Jaypirca $192M, Ebglyss $201M, Kisunla $167M",
-     "src": "Q2 release"
+     "t": "Foundayo $184M, Jaypirca $228M, Ebglyss $202M, Kisunla $193M, Omvoh $114M",
+     "src": "Q3 release"
     },
     {
-     "t": "Retatrutide BLA planned for Q1 2027",
-     "src": "Q2 release"
+     "t": "Retatrutide Phase 3: more than double the weight loss of Ozempic's highest approved dose",
+     "src": "Q3 release"
     }
    ],
    "test": "Is the retatrutide BLA submitted on schedule?"
   },
   {
-   "title": "Guidance was raised on revenue, not EPS",
-   "claim": "Revenue guide rose $3B to $85B to $87B but EPS guide midpoint fell $0.25 because of $3.03 of IPR&D charges. Underlying EPS rose $2.78.",
+   "title": "Guidance rose on revenue, not EPS",
+   "claim": "Revenue guide rose $5.5B to $91B to $92B and underlying EPS by $4.07, but the EPS range fell to $35.00 to $36.00 because of $4.57 of Q3 acquired IPR&D.",
    "evidence": [
     {
-     "t": "EPS guide $35.50 to $36.50 from $35.50 to $37.00; performance margin raised to 49% to 50.5%",
-     "src": "Q2 release"
+     "t": "EPS guide $35.00 to $36.00 from $35.50 to $36.50; performance margin raised to 52.0% to 52.5%",
+     "src": "Q3 release"
     }
    ],
    "test": "Does acquired IPR&D stay a one-off or become a recurring charge?"
   }
  ],
  "variant": {
-  "street": "The market prices a long runway of incretin growth at 32x earnings and a $1.1T market cap.",
-  "ours": "The engine lands neutral: the base case clears the hurdle but the bear tail is fat. Three of four drivers are judgment, so this is the position to challenge hardest on price erosion and the multiple.",
-  "could_be_wrong": "If volume keeps compounding at 50% and price stabilises, the bull case is understated.",
+  "street": "The market prices a long runway of incretin growth at about 41x this year's EPS and a market value near $1.3T.",
+  "ours": "The engine leans negative: the base case roughly earns the hurdle but the bear tail is fat, and two of four tripwires crossed in Q3 even as revenue beat. Three of four drivers are judgment, so this is the position to challenge hardest on price erosion and the multiple.",
+  "could_be_wrong": "If volume keeps compounding near 50% and US price stabilises around -7%, the bull case is understated.",
   "would_change_mind": "US realised price falling more than 8% a year, or retatrutide delayed beyond 2027."
  },
  "moat": {
@@ -126,18 +126,21 @@
   "detail": "Existing Porter card (FY2025 10-K) rates Lilly Moderate because buyer power is high."
  },
  "quality": {
-  "leverage_note": "Cash and debt not stated in the release.",
-  "leverage_ok": null,
-  "incentive_note": "Acquired IPR&D of $3.36B in H1 is large; ask whether it is a recurring cost of staying ahead.",
+  "leverage_note": "Total debt about $49.5B at 30 September, down from $54.9B at 30 June, after $18.2B of business development cash in nine months (third-party tally of the 10-Q).",
+  "leverage_ok": true,
+  "incentive_note": "Acquired IPR&D of $4.2B in Q3 alone ($7.6 a share across Q2 and Q3); ask whether it is a recurring cost of staying ahead.",
   "incentive_ok": false,
-  "checks": []
+  "checks": [
+   "About $900M of Q3 revenue was one-off: $410M of Jardiance milestones (none remain) plus favourable rebate and discount estimate changes",
+   "Non-GAAP tax rate rose to 24.0% from 17.7%; full-year guide raised to 19% to 20%"
+  ]
  },
  "catalysts": [
   {
-   "date": "2026-10-30",
-   "label": "Lilly Q3 2026 earnings (date not confirmed; typically late October or early November)",
+   "date": "2027-02-04",
+   "label": "Lilly Q4 2026 earnings and 2027 guidance (date not confirmed; usually early February)",
    "confirmed": false,
-   "note": "Watch US price versus volume split.",
+   "note": "Watch 2027 revenue guide, US price versus volume, and acquired IPR&D.",
    "importance": "High"
   },
   {
@@ -155,13 +158,15 @@
    "metric": "price",
    "op": "<",
    "threshold": -15,
-   "current": -13,
+   "current": -15,
    "unit": "%",
    "drivers": [
     "rev_cagr",
     "margin_end"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release",
+   "status": "watch",
+   "note": "At the threshold: -15% in Q3 after -13% in Q2."
   },
   {
    "id": "y2",
@@ -169,12 +174,14 @@
    "metric": "us_price",
    "op": "<",
    "threshold": -6,
-   "current": -3,
+   "current": -7,
    "unit": "%",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release",
+   "status": "tripped",
+   "note": "US price -7% in Q3 (Q2: -3%), partly offset by favourable rebate estimate changes."
   },
   {
    "id": "y3",
@@ -182,12 +189,13 @@
    "metric": "gm",
    "op": "<",
    "threshold": 85,
-   "current": 85.8,
-   "unit": "%",
+   "current": 83.9,
+   "unit": "% (GAAP; non-GAAP 84.4%)",
    "drivers": [
     "margin_end"
    ],
-   "src": "Q2 release"
+   "src": "Q3 release",
+   "status": "tripped"
   },
   {
    "id": "y4",
@@ -201,53 +209,58 @@
     "rev_cagr",
     "exit_pe"
    ],
-   "src": "Q2 release",
+   "src": "Q3 release",
    "status": "holding",
-   "note": "Company still states Q1 2027."
+   "note": "Positive head-to-head Phase 3 in Q3; company still states Q1 2027."
   }
  ],
  "risks": [
-  "Government pricing action and wholesaler concentration.",
-  "Compounded and competing GLP-1 products.",
+  "Government pricing action and wholesaler concentration; a new Congress sits from January 2027.",
+  "Compounded and competing GLP-1 products, and cheaper self-pay channels (Hims & Hers from November 2026).",
   "Manufacturing capacity and supply.",
   "Large acquired IPR&D charges."
  ],
  "lenses": {
-  "eisman": "Volume +60% with price -13%: ask whether growth is being bought with price, and what the ex-US 36% decline implies for the US.",
-  "munger": "Invert it: what kills this? A pricing reset that arrives faster than volume.",
-  "buffett": "Wonderful business, but he would refuse to underwrite a three-year price path he cannot see; circle-of-competence test is hard.",
-  "hohn": "Durable demand and pricing power are the test: price is falling, so durability rests on volume and the pipeline."
+  "eisman": "Volume +53% with price -15%, and $900M of one-offs in the quarter: ask what growth looks like without rebate estimate changes and milestones.",
+  "munger": "Invert it: what kills this? A US pricing reset that arrives faster than volume. US price went from -3% to -7% in one quarter.",
+  "buffett": "Wonderful business, but he would refuse to underwrite a three-year price path he cannot see; the circle-of-competence test is hard.",
+  "hohn": "Durable demand and pricing power are the test: price is falling faster, so durability rests on volume, Foundayo and retatrutide."
  },
  "sources": [
   {
    "tier": "A",
-   "title": "Eli Lilly Form 8-K, Q2 2026 sales and earnings release",
-   "url": "https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000077/q226lillysalesandearningsp.htm",
-   "date": "2026-08-05"
+   "title": "Eli Lilly Form 8-K, Q3 2026 sales and earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000104/q326lillysalesandearningsp.htm",
+   "date": "2026-10-29"
+  },
+  {
+   "tier": "A",
+   "title": "Lilly and Hims & Hers expand access to FDA-approved Lilly medicines",
+   "url": "https://investor.lilly.com/node/55266",
+   "date": "2026-11-06"
   },
   {
    "tier": "C",
-   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
-   "url": "https://site.financialmodelingprep.com",
-   "date": "2026-10-14"
+   "title": "sec-api.io: Eli Lilly Q3 2026 10-Q analysis (debt, business development cash)",
+   "url": "https://sec-api.io/insights/eli-lilly-lly-q3-2026-earnings-sec-filing-analysis",
+   "date": "2026-10-31"
   }
  ],
  "gaps": [
-  "Verzenio, Jardiance, Trulicity revenue not stated in the release.",
-  "Cash, debt and repurchases not stated.",
-  "Q3 earnings date not confirmed.",
-  "Consensus estimates not retrieved."
+  "Verzenio, Trulicity and Taltz revenue not stated in the release.",
+  "Q3 repurchases and capex not stated in the release; debt is from a third-party tally.",
+  "Q4 earnings date not confirmed."
  ],
- "base_period_end": "2026-06-30",
+ "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-10-27",
-  "basis": "Q2 2026 10-Q. Q3 is expected around 30 October (date not confirmed); this review refreshes after the print.",
-  "headline": "The incretin leader, growing 48% on one molecule. Volume is winning; price and policy decide how long the premium lasts.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026), with prices to the 13 November 2026 close; news reviewed to 16 November. Q4 and 2027 guidance come in early February; this review refreshes after the print.",
+  "headline": "The incretin leader, growing 39% on one molecule. Volume is winning; US price fell 7% in Q3, and price and policy decide how long the premium lasts.",
   "model": "Lilly discovers, makes and sells branded medicines. Tirzepatide, sold as Mounjaro for diabetes and Zepbound for obesity, is now the company.",
   "how_it_earns": [
    {
     "k": "Cardiometabolic",
-    "v": "Incretins for diabetes and obesity. 80% of Q2 revenue."
+    "v": "Incretins for diabetes and obesity. About two-thirds of Q3 revenue from Mounjaro, Zepbound and Foundayo."
    },
    {
     "k": "Oncology",
@@ -270,7 +283,7 @@
      "match": "Cardiometabolic Health",
      "label": "Cardiometabolic",
      "role": "The engine",
-     "driver": "Volume +60% group-wide; price down on access deals and China NRDL",
+     "driver": "Volume +53% group-wide; price -15% on access deals, self-pay and China NRDL",
      "children": [
       "Mounjaro",
       "Zepbound",
@@ -327,38 +340,38 @@
   "what_numbers_say": [
    {
     "t": "Volume is doing all the work",
-    "d": "Q2 revenue +48%: volume +60%, price -13%. Outside the US, price fell 36% as Mounjaro entered China's reimbursement list."
+    "d": "Q3 revenue +39%: volume +53%, price -15%. US price -7% (Q2: -3%); outside the US price -29% on 76% more volume."
    },
    {
-    "t": "Margins rose despite lower prices",
-    "d": "Gross margin 85.8% (+1.5 pts) on better production cost and mix. R&D fell to 17% of revenue as sales outgrew it."
+    "t": "Margins dipped",
+    "d": "Non-GAAP gross margin 84.4% and GAAP 83.9%, below Q2. $4.2B of acquired IPR&D cut operating margin to about 35%."
    },
    {
     "t": "Concentration is extreme",
-    "d": "Mounjaro and Zepbound were 65% of H1 revenue. Any setback to one molecule hits the whole company."
+    "d": "Mounjaro, Zepbound and Foundayo were about two-thirds of Q3 revenue. Any setback to tirzepatide hits the whole company."
    },
    {
-    "t": "Growth is now partly bought",
-    "d": "$13.3B spent on acquisitions in H1 2026, $2.0B more in July and a $2.8B deal pending. Acquired IPR&D was $2.8B in Q2."
+    "t": "The beat had help",
+    "d": "About $900M of Q3 revenue was one-off: $410M of final Jardiance milestones plus favourable rebate and discount estimate changes."
    }
   ],
   "balance": {
-   "read": "Leverage is still low against EBITDA, but debt rose $12.4B in six months to fund deals.",
+   "read": "Leverage is low against EBITDA; debt fell in Q3 after rising $12.4B in H1 to fund deals.",
    "facts": [
-    "Total debt $54.9B at 30 June, up from $42.5B",
-    "Cash $9.0B plus $3.9B investments",
-    "$10.1B undrawn credit facilities; $7.0B buyback authorisation left"
+    "Total debt about $49.5B at 30 September (third-party tally), from $54.9B at 30 June",
+    "$18.2B of business development cash in nine months",
+    "Merida Biosciences acquired after quarter end"
    ]
   },
   "flags": [
    {
-    "flag": "Rebate estimate changes flattered US price",
-    "evidence": "MD&A: lower US realised prices were partially offset by adjustments to estimates for rebates and discounts. Gross-to-net reserves are judgment calls.",
+    "flag": "Rebate estimate changes flattered revenue",
+    "evidence": "Part of about $900M of Q3 one-off benefits came from favourable adjustments to rebate and discount estimates. Gross-to-net reserves are judgment calls.",
     "severity": "watch"
    },
    {
     "flag": "Acquired IPR&D is large and recurring",
-    "evidence": "$2.8B in Q2 and $3.4B in H1. Lilly includes it in non-GAAP EPS, which is the conservative choice, but it makes EPS lumpy.",
+    "evidence": "$4.2B in Q3 (AtaiBeckley, Curevo) after $2.8B in Q2. Lilly includes it in non-GAAP EPS, which is the conservative choice, but it makes EPS lumpy.",
     "severity": "info"
    },
    {
@@ -376,7 +389,7 @@
   "scenarios": {
    "base": {
     "story": "Volume keeps compounding as access widens; price erosion slows; growth fades to the high teens and the multiple compresses.",
-    "needs": "US price decline stays mild; orforglipron and retatrutide launch on time"
+    "needs": "US price decline stays within -8% a year; Foundayo and retatrutide launch on time"
    },
    "downside": {
     "story": "Policy and competition reset US price faster than volume grows; the market re-rates Lilly toward big-pharma multiples.",
@@ -390,7 +403,7 @@
   "risks": [
    {
     "cause": "Price falls faster than volume grows",
-    "how": "Wider access (Medicare bridge, cash-pay cuts, China NRDL) lowers price per dose. If volume growth slows first, revenue growth collapses.",
+    "how": "Wider access (Medicare bridge, $299 Zepbound and $149 Foundayo self-pay, China NRDL) lowers price per dose. Q3 price was -15%; if volume growth slows first, revenue growth collapses.",
     "watch": "Realised price change",
     "trip": "y1",
     "sev": "high",
@@ -398,7 +411,7 @@
    },
    {
     "cause": "US policy resets drug prices",
-    "how": "Most-favoured-nation pricing and IRA negotiation pull US prices toward international levels, which are far lower.",
+    "how": "Most-favoured-nation pricing and IRA negotiation pull US prices toward international levels. US price already fell 7% in Q3.",
     "watch": "US realised price",
     "trip": "y2",
     "sev": "high",
@@ -435,16 +448,16 @@
    "peers_note": "Novo reports in DKK; ratios are computed in DKK and sizes converted to USD. Trailing pharma P/Es are distorted by acquired IPR&D, so NTM is the cleaner read."
   },
   "questions": [
-   "How much of the US price decline is policy, and how much is Lilly buying volume?",
-   "Is debt-funded deal-making a sign of a thin pipeline outside incretins?",
+   "How much of the 7% US price decline is policy, and how much is Lilly buying volume through self-pay?",
+   "Strip out $900M of one-offs: what is underlying growth?",
    "Would you own this at Novo's multiple if growth halved?"
   ],
   "sources": [
    {
     "tier": "A",
-    "title": "Eli Lilly Form 10-Q, quarter ended 30 June 2026 (MD&A, revenue by product)",
-    "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000081/lly-20260630.htm",
-    "date": "2026-08-05"
+    "title": "Eli Lilly Form 10-Q, quarter ended 30 September 2026",
+    "url": "https://last10k.com/sec-filings/lly/0000059478-26-000108.htm",
+    "date": "2026-10-29"
    },
    {
     "tier": "A",
@@ -454,24 +467,24 @@
    }
   ],
   "title": "Winning on volume, exposed on price",
-  "lead": "We rate Eli Lilly {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Lilly is winning the incretin market on volume, but price per dose is falling fast and our next-year EPS is {vs_cons} consensus: the shares already discount much of the good news.",
+  "lead": "We rate Eli Lilly {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Lilly is winning the incretin market on volume and just raised revenue guidance by $5.5B, but US price per dose fell 7% in Q3 and our next-year EPS is {vs_cons} consensus: the shares already discount much of the good news.",
   "call_reason": "Leadership is priced in: the target implies {ret} over 12 months against a cost of equity of {hurdle}, with a fat tail if US prices reset.",
   "arguments": [
    {
     "label": "Growth",
-    "text": "Q2 revenue grew 48% on 60% more volume and 13% lower prices. Mounjaro and Zepbound were 65% of H1 revenue: the growth is real, but it rests on one molecule."
+    "text": "Q3 revenue grew 39% on 53% more volume and 15% lower prices. Mounjaro and Zepbound alone were $16.1B of $24.4B: the growth is real, but it rests on one molecule, and about $900M of the quarter was one-off."
    },
    {
     "label": "Moat",
-    "text": "Patents, injectable manufacturing scale and a deep follow-on pipeline (orforglipron launched for obesity, retatrutide filing planned for Q1 2027) keep Lilly ahead. Buyers and governments, not rivals, are the weak spot."
+    "text": "Patents, injectable manufacturing scale and a deep follow-on pipeline (Foundayo launching globally, retatrutide beating Ozempic head to head with a filing planned for Q1 2027) keep Lilly ahead. Buyers and governments, not rivals, are the weak spot."
    },
    {
     "label": "Profitability",
-    "text": "Gross margin rose to 85.8% even as prices fell, and R&D dropped to 17% of revenue. Operating leverage is strong for as long as volume grows faster than price falls."
+    "text": "Non-GAAP gross margin slipped to 84.4% and $4.2B of acquired IPR&D cut operating margin to about 35%. Operating leverage stays strong for as long as volume grows faster than price falls."
    },
    {
     "label": "Capital",
-    "text": "Debt rose $12.4B in six months to $54.9B to fund $13.3B of acquisitions, with more pending. Leverage is still low against EBITDA, but more of the growth is now bought."
+    "text": "Lilly spent $18.2B on business development in nine months and expenses much of it as acquired IPR&D. Debt fell back to about $49.5B in Q3 and leverage is low against EBITDA, but more of the growth is now bought."
    },
    {
     "label": "Valuation",
@@ -479,14 +492,14 @@
    }
   ],
   "thesis_long": [
-   "Lilly has won the first round of the obesity and diabetes market. Volume grew about 60% in the quarter, revenue outside the US rose 80%, and consensus has Novo Nordisk's revenue falling in 2026 while Lilly's grows by more than a third. Margins expanded despite lower prices. On execution there is little to criticise.",
-   "The debate is price. Realised prices fell 13% in Q2, and 36% outside the US as Mounjaro entered China's reimbursement list. Wider US access points the same way: the Medicare obesity bridge, lower cash-pay prices, and government price-setting for Jardiance now and Trulicity and Verzenio from 2028. Lilly's own filing notes that changes in rebate estimates softened the reported US price decline. As volume growth normalises, price erosion matters more each quarter.",
-   "Our base case fades revenue growth to the high teens and lets the multiple compress toward large-pharma levels, which leaves 12-month returns close to the cost of equity. The upside case needs the oral and next-generation launches to open new patient groups while price stabilises; the downside is a US price reset that arrives before volume growth slows. A US realised price decline worse than 8% a year, or a retatrutide delay, would turn us negative."
+   "Lilly has won the first round of the obesity and diabetes market. Volume grew 53% in Q3, revenue outside the US rose 47%, and 2026 revenue guidance has now been raised three times, to $91B to $92B. Foundayo is launching, retatrutide beat Ozempic head to head, and newer products outside incretins doubled. On execution there is little to criticise.",
+   "The debate is price. Realised prices fell 15% in Q3, and US prices fell 7%, more than double Q2's decline. Access is widening in ways that lower price per dose: $299 a month self-pay Zepbound, $149 Foundayo, the Medicare bridge, and from November a direct channel on Hims & Hers. About $900M of Q3 revenue came from one-offs including rebate estimate changes, and government price-setting for Trulicity and Verzenio starts in 2028.",
+   "Our base case fades revenue growth to the high teens and lets the multiple compress toward large-pharma levels, which leaves 12-month returns close to the cost of equity. The upside case needs Foundayo and retatrutide to open new patient groups while US price settles near today's decline; the downside is a US price reset that arrives before volume growth slows. A US realised price decline worse than 8% a year, or a retatrutide delay, would turn us negative."
   ],
   "upside_risks": [
    {
-    "cause": "Price stabilises while volume keeps compounding",
-    "how": "If realised price declines ease as access widens, revenue growth stays above 30% and EPS runs well ahead of our base case."
+    "cause": "Price settles while volume keeps compounding",
+    "how": "If US price declines hold near -7% as access widens, revenue growth stays above 30% and EPS runs well ahead of our base case."
    },
    {
     "cause": "Medicare obesity coverage becomes permanent",
@@ -512,7 +525,7 @@
  "variant_view": {
   "metric": "eps",
   "fy": 2027,
-  "why": "We assume price erosion continues (realised price fell 13% in Q2) and fades revenue growth toward the high teens; consensus has 2027 EPS growth near 40%. Our research predates Lilly’s Q3 print and is due a refresh.",
+  "why": "We assume price erosion widens (US price went from -3% in Q2 to -7% in Q3) and fades revenue growth toward the high teens; consensus has 2027 EPS growth near 40% from this year's IPR&D-depressed base.",
   "proof": {
    "event": "Q4 2026 results and 2027 guidance (date not confirmed)",
    "date": "2027-02"

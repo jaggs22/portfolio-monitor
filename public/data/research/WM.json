@@ -6,7 +6,7 @@
  "horizon": 3,
  "header": {
   "one_liner": "Pricing power in a landfill oligopoly, compounding cash flow; the valuation already assumes it.",
-  "thesis": "WM grew revenue 6.3% in the third quarter on 5.8% core price, with volume slightly down by choice, and lifted nine-month free cash flow 42% as heavy investment in recycling and renewable gas winds down. Healthcare Solutions (the former Stericycle) is finally adding profit. At about 29x earnings the price already reflects a dependable compounder."
+  "thesis": "WM grew revenue 6.3% in the third quarter on 5.8% core price, with volume slightly down by choice, and lifted nine-month free cash flow 42% as heavy investment in recycling and renewable gas winds down. Healthcare Solutions (the former Stericycle) is finally adding profit. At about 30x earnings the price already reflects a dependable compounder."
  },
  "base": {
   "eps0": 8.1,
@@ -52,7 +52,7 @@
    "bear": 22,
    "bull": 30,
    "kind": "judgment",
-   "why": "Today's multiple is about 29x 2026 adjusted EPS, below Republic Services and Waste Connections. The base case assumes a small de-rating as growth settles in mid single digits.",
+   "why": "Today's multiple is about 30x 2026 adjusted EPS, below Republic Services and Waste Connections. The base case assumes a small de-rating as growth settles in mid single digits.",
    "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
   }
  },
@@ -103,7 +103,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 29x earnings for the largest landfill network in North America and steady pricing power.",
+  "street": "The market pays about 30x earnings for the largest landfill network in North America and steady pricing power.",
   "ours": "A dependable compounder at a full price. Our base case grows EPS about 10% a year with a small de-rating, which earns about the cost of equity.",
   "could_be_wrong": "If Healthcare Solutions and renewable energy lift margins faster, EPS growth could reach the low teens and support the multiple.",
   "would_change_mind": "Core price below 4%, or the price nearer 24x earnings."
@@ -197,6 +197,12 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -206,8 +212,8 @@
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 and 2027 guidance come in late January; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 and 2027 guidance come in late January; this review refreshes after the print.",
   "headline": "Steady pricing power and a cash flow upswing as big investments finish. Quality is fully priced.",
   "model": "WM collects rubbish from homes and businesses, takes it to its own transfer stations and landfills, and earns more from recycling, landfill gas turned into renewable natural gas, and medical waste through Healthcare Solutions.",
   "how_it_earns": [
@@ -389,7 +395,7 @@
   "questions": [
    "How long can price do all the work while volume shrinks?",
    "When does Healthcare Solutions earn its cost of capital?",
-   "Is 29x right for 10% EPS growth?"
+   "Is 30x right for 10% EPS growth?"
   ],
   "sources": [
    {
@@ -433,7 +439,7 @@
   "thesis_long": [
    "WM owns the largest network of landfills, transfer stations and collection trucks in North America, and new landfills are almost impossible to permit. That gives it steady pricing power: core price rose 5.8% in the third quarter, enough to grow revenue 6.3% even with volume slightly down.",
    "Two things are improving. Free cash flow rose 42% in nine months as heavy spending on recycling plants and renewable natural gas facilities winds down, and Healthcare Solutions, bought as Stericycle, grew operating EBITDA more than 30%. Against that, fuel and risk management costs are rising and collection volume is shrinking.",
-   "Our base case grows EPS about 10% a year with a small de-rating from 29x, which earns about the cost of equity over 12 months. We would turn positive if Healthcare Solutions reached a double-digit margin or the price fell nearer 24x, and negative if core price slipped below 4%."
+   "Our base case grows EPS about 10% a year with a small de-rating from 30x, which earns about the cost of equity over 12 months. We would turn positive if Healthcare Solutions reached a double-digit margin or the price fell nearer 24x, and negative if core price slipped below 4%."
   ],
   "upside_risks": [
    {

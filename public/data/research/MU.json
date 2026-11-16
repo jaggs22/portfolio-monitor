@@ -185,7 +185,10 @@
   "AI spending pauses.",
   "Lower HBM share with the largest GPU maker.",
   "Capex runs ahead of demand.",
-  "Export controls and China."
+  "Export controls and China.",
+  "Sentiment on AI spending: AI infrastructure stocks sold off on 5 November (S&P 500 -4.4%, Philadelphia semiconductor index -12.3%), and Nvidia's CEO Jensen Huang resigned on 11 November with the CFO as interim CEO.",
+  "Reports on 5 November said construction at a Taiwan memory plant had largely stalled over a labour dispute; Micron says Taiwan operations run normally.",
+  "TrendForce expects Q4 PC DRAM contract prices to rise 13% to 18% quarter on quarter, slower than the previous quarter."
  ],
  "lenses": {
   "eisman": "Ask what happens to an 87% gross margin when every competitor's new fab comes online at once.",
@@ -211,17 +214,54 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Stockanalysis.com: S&P 500 loses about $2.9T in market value on 5 November",
+   "url": "https://stockanalysis.com/news/sp-500-record-one-day-market-value-loss/",
+   "date": "2026-11-05"
+  },
+  {
+   "tier": "A",
+   "title": "NVIDIA Form 8-K: CEO transition (Jensen Huang resigns; Colette Kress interim CEO)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+   "date": "2026-11-12"
+  },
+  {
+   "tier": "C",
+   "title": "Trefis: What sent Micron stock lower? (5 November move and context)",
+   "url": "https://www.trefis.com/stock/mu/articles/623345/what-sent-micron-stock-lower/2026-11-06",
+   "date": "2026-11-06"
+  },
+  {
+   "tier": "C",
+   "title": "FourWeekMBA: memory spot prices vs Micron, with TrendForce Q4 contract outlook",
+   "url": "https://fourweekmba.com/ai-has-memory-peaked-spot-prices-slip-as-micron-rallies-24/",
+   "date": "2026-11-12"
+  },
+  {
+   "tier": "C",
+   "title": "Kalkine: Micron falls as memory stocks unwind (Taiwan plant report)",
+   "url": "https://kalkine.ca/news/technology/why-did-a-700-drop-hit-micron-nasdaqmu-as-memory-stocks-unwound-on-heavy-activity",
+   "date": "2026-11-06"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
   "Fiscal 2027 capex guidance in dollars not retrieved.",
   "HBM revenue is not disclosed separately.",
-  "Fiscal Q1 2027 report date not yet confirmed by the company."
+  "Fiscal Q1 2027 report date not yet confirmed by the company.",
+  "Spot and contract DRAM price data after 11 November not retrieved."
  ],
  "base_period_end": "2026-09-03",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Fiscal 2026 10-K (year to 3 September 2026) and FQ4 release. FQ1 2027 reports in December; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Fiscal 2026 10-K (year to 3 September 2026) and FQ4 release. Prices to the 13 November 2026 close; news reviewed to 16 November. FQ1 2027 reports in December; this review refreshes after the print.",
   "headline": "Record earnings at a single-digit multiple. The market is not missing the boom; it is pricing the end of it.",
   "model": "Micron makes memory chips: DRAM, which holds the data a processor is working on, and NAND, which stores it. AI servers need far more of both, especially high-bandwidth memory (HBM) stacked next to the GPU.",
   "how_it_earns": [
@@ -325,6 +365,11 @@
     "flag": "Non-GAAP close to GAAP",
     "evidence": "FY2026 non-GAAP EPS $75.52 vs GAAP $74.33: adjustments are small and mostly stock compensation.",
     "severity": "info"
+   },
+   {
+    "flag": "The share price is now the volatile input",
+    "evidence": "Micron fell 17.5% on 5 November to $656.39, the end of a 39.7% fall over the month, then recovered to $778.31 by 13 November. The fundamentals reported in September did not change; the market's view of how long peak pricing lasts did.",
+    "severity": "watch"
    }
   ],
   "forecast_basis": {
@@ -440,7 +485,7 @@
   ],
   "thesis_long": [
    "Micron is having the best year any memory maker has ever had. AI servers need far more DRAM and high-bandwidth memory than ordinary servers, supply has not kept up, and prices have risen so fast that every business unit now earns operating margins above 70%. Fiscal 2026 EPS was $75.52 and the first quarter of fiscal 2027 is guided to $38.15.",
-   "The question is duration. Memory supply responds to price with a lag of two to three years, and all three makers are now building. Micron's own new clean rooms in Japan, Singapore and Taiwan mostly come online from late 2028. Strategic agreements covering about 35% of bits soften the cycle but do not remove it. A 5x multiple says the market agrees the earnings will fall; it does not yet say how far.",
+   "The question is duration. Memory supply responds to price with a lag of two to three years, and all three makers are now building. Micron's own new clean rooms in Japan, Singapore and Taiwan mostly come online from late 2028. Strategic agreements covering about 35% of bits soften the cycle but do not remove it. A 5x multiple says the market agrees the earnings will fall; it does not yet say how far. The early November sell-off, when the stock fell 17.5% in one day, shows how quickly that question can move the price even before earnings turn.",
    "Our base case keeps fiscal 2027 near the guided run-rate and then lets revenue drift down and net margin fall to about 50%, which is still above any prior peak. On that path the 12-month return falls short of Micron's high cost of equity. We would turn positive if long-term agreements with price floors covered more than half of bits, or if two more quarters of guided price rises came with flat capex."
   ],
   "upside_risks": [

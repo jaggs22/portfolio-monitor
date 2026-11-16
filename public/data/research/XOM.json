@@ -107,7 +107,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 14x this year's earnings, the top of the integrated oils, for Exxon's growth and discipline.",
+  "street": "The market pays about 13.5x this year's earnings, the top of the integrated oils, for Exxon's growth and discipline.",
   "ours": "This year's earnings include a refining windfall from disrupted Middle East supply. Our base case lets prices and margins normalise, which leaves the shares above our 12-month target.",
   "could_be_wrong": "If disruption persists through 2027 and Permian and Guyana growth adds volume, earnings stay high and the multiple holds.",
   "would_change_mind": "Refining margins staying above their 10-year range into 2027, or the price falling toward 11x normalised earnings."
@@ -201,6 +201,12 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -210,8 +216,8 @@
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q (quarter to 30 September 2026). Q4 reports in late January; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 reports in late January; this review refreshes after the print.",
   "headline": "Earnings doubled on a refining windfall from disrupted Middle East supply. The business is strong; this year's profit is not the run rate.",
   "model": "Exxon finds and produces oil and gas (Upstream), refines it into fuels (Energy Products), and makes chemicals and lubricants (Chemical and Specialty Products). Profit depends mostly on oil and gas prices and refining margins.",
   "how_it_earns": [
@@ -418,7 +424,7 @@
   ],
   "thesis_long": [
    "Exxon is having an exceptional year. Restricted supply through the Strait of Hormuz and lost refining capacity pushed refining margins to historic highs and international gas prices above their 10-year range. Third-quarter earnings doubled to $15.4B; Energy Products alone earned $7.2B, nearly four times a year earlier. Underneath, the company is executing well: Permian and Guyana are growing, costs are falling and capex is down.",
-   "The question is what to pay for a windfall. Production actually fell 273,000 barrels a day on Middle East and Kazakhstan disruptions, and the extra profit came from prices and margins that depend on supply staying short. Consensus already expects 2027 EPS to fall about 12%. At about 14x this year's earnings, Exxon trades at the top of the majors.",
+   "The question is what to pay for a windfall. Production actually fell 273,000 barrels a day on Middle East and Kazakhstan disruptions, and the extra profit came from prices and margins that depend on supply staying short. Consensus already expects 2027 EPS to fall about 12%. At about 13.5x this year's earnings, Exxon trades at the top of the majors.",
    "Our base case lets prices and refining margins normalise over three years, partly offset by volume growth and $20B a year of buybacks. On that path the 12-month target is below today's price. We would turn positive if refining margins stayed above their 10-year range into 2027, or if the price fell toward 11x normalised earnings."
   ],
   "upside_risks": [
@@ -476,11 +482,11 @@
   "unit": "$",
   "fy": null,
   "ours": 10.29,
-  "consensus": 12.39,
+  "consensus": 11.76,
   "material": true,
-  "consensus_label": "Implied: price $179.67 / 14.5x normal multiple",
+  "consensus_label": "Implied: price $170.59 / 14.5x normal multiple",
   "ours_label": "Our mid-cycle EPS",
-  "why": "At $180 and Exxon’s normal 14.5x the market is capitalising about $12.40 of EPS, close to this year’s windfall. Our mid-cycle EPS across 2022 to 2029 is about $10.30.",
+  "why": "At $171 and Exxon’s normal 14.5x the market is capitalising about $11.76 of EPS, still above our mid-cycle EPS across 2022 to 2029 of about $10.30. The shares fell about 5% from $180 since 3 November.",
   "proof": {
    "event": "Q4 2026 results: refining margins and realised prices as Middle East supply normalises",
    "date": "2027-01-30"

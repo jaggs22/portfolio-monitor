@@ -6,7 +6,7 @@
  "horizon": 3,
  "header": {
   "one_liner": "The most loyal customers in retail and steady 6% to 7% comps, at 46 times earnings.",
-  "thesis": "Costco grew fiscal 2026 net sales 10% and EPS 14% to $20.76, with comparable sales up 6.6% excluding gasoline and currency, a 92.3% renewal rate in the US and Canada, and digital sales up a fifth. Nothing in the business is wrong. At about 46x fiscal 2027 earnings, the share price already assumes it stays that way for a long time."
+  "thesis": "Costco grew fiscal 2026 net sales 10% and EPS 14% to $20.76, with comparable sales up 6.6% excluding gasoline and currency, a 92.3% renewal rate in the US and Canada, and digital sales up a fifth. Nothing in the business is wrong. At about 49x fiscal 2027 earnings, the share price already assumes it stays that way for a long time."
  },
  "base": {
   "eps0": 22.6,
@@ -52,7 +52,7 @@
    "bear": 32,
    "bull": 46,
    "kind": "judgment",
-   "why": "Today's multiple is about 46x fiscal 2027 EPS, near the top of Costco's range and above Walmart. The base case assumes it drifts toward 40x as EPS grows about 10% a year.",
+   "why": "Today's multiple is about 49x fiscal 2027 EPS, near the top of Costco's range and above Walmart. The base case assumes it drifts toward 40x as EPS grows about 10% a year.",
    "source": "Engine judgment; current multiple computed from price and FY27E EPS"
   }
  },
@@ -97,13 +97,17 @@
     {
      "t": "Q4 EPS $6.75 included a $0.15 benefit from tariff refunds, partly reinvested in member values",
      "src": "Q4 release"
+    },
+    {
+     "t": "$30 special dividend (about $13.3B) declared 10 November; $4B buyback reauthorised to November 2030",
+     "src": "8-K, 10 November 2026"
     }
    ],
    "test": "Does EPS growth stay near 10% without one-offs?"
   }
  ],
  "variant": {
-  "street": "The market pays about 46x fiscal 2027 earnings for the most consistent retailer in the world.",
+  "street": "The market pays about 49x fiscal 2027 earnings for the most consistent retailer in the world.",
   "ours": "The business is close to flawless; the multiple is the risk. Our base case grows EPS about 10% a year and lets the multiple drift toward 40x, which earns less than the cost of equity over 12 months.",
   "could_be_wrong": "If the market keeps paying any price for consistency, the multiple holds and returns track EPS growth plus the dividend.",
   "would_change_mind": "The price nearer 38x earnings, or another membership fee increase that lifts EPS growth into the mid-teens."
@@ -123,6 +127,13 @@
   ]
  },
  "catalysts": [
+  {
+   "date": "2026-11-24",
+   "label": "Record date for the $30 special dividend (paid 4 December)",
+   "confirmed": true,
+   "note": "About $13.3B in total, double the $15 special paid in January 2024. The share price will fall by about the dividend on the ex-date.",
+   "importance": "Medium"
+  },
   {
    "date": "2026-12-10",
    "label": "Costco fiscal Q1 2027 earnings (date not confirmed)",
@@ -182,7 +193,7 @@
  "lenses": {
   "eisman": "Nothing to short in the business; the only question is the multiple.",
   "munger": "Exactly the kind of business he admired; he also knew that price decides the return.",
-  "buffett": "A wonderful company; at 46x it is not a wonderful price.",
+  "buffett": "A wonderful company; at 49x it is not a wonderful price.",
   "hohn": "Customer loyalty, a fee annuity and pricing discipline; the return now depends on the multiple holding."
  },
  "sources": [
@@ -197,18 +208,31 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "A",
+   "title": "Costco Form 8-K: $30 special cash dividend and $4B repurchase reauthorisation",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000909832/000090983226000134/costex9918-k111026.htm",
+   "date": "2026-11-10"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
   "No formal earnings guidance; Costco does not provide it.",
   "Timing of any future membership fee increase or special dividend is unknown.",
-  "Fiscal Q1 2027 report date not yet confirmed by the company."
+  "Fiscal Q1 2027 report date not yet confirmed by the company.",
+  "The engine's 12-month return excludes the $30 special dividend."
  ],
  "base_period_end": "2026-08-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Fiscal 2026 10-K (year to 30 August 2026) and Q4 release. Q1 fiscal 2027 reports in December; this review refreshes after the print.",
-  "headline": "Close to a flawless retailer. At 46x earnings the stock is priced like one.",
+  "as_of": "2026-11-16",
+  "basis": "Fiscal 2026 10-K (year to 30 August 2026) and Q4 release. Prices to the 13 November 2026 close; news reviewed to 16 November. Q1 fiscal 2027 reports in December; this review refreshes after the print.",
+  "headline": "Close to a flawless retailer. At 49x earnings the stock is priced like one.",
   "model": "Costco charges an annual membership fee for access to warehouses that sell a limited range of goods at very low markups. Membership fees are most of the profit; merchandise is sold close to cost to keep members loyal.",
   "how_it_earns": [
    {
@@ -287,7 +311,8 @@
    "facts": [
     "Capex about $6.4B a year",
     "25 net new warehouses in fiscal 2026; 939 in total",
-    "Buybacks about $0.85B in fiscal 2026"
+    "Buybacks about $0.85B in fiscal 2026",
+    "$30 special dividend ($13.3B) payable 4 December; new $4B buyback authorisation to November 2030 replaces the 2023 plan ($3.1B used)"
    ]
   },
   "flags": [
@@ -305,6 +330,11 @@
     "flag": "Concentration in California",
     "evidence": "California is 26% of US net sales.",
     "severity": "info"
+   },
+   {
+    "flag": "Special dividend sits outside the model",
+    "evidence": "The $30 special dividend (about 2.7% of the 13 November price) is paid within 12 months but is not in the engine's dividend line, so the stated 12-month return understates what a holder of record on 24 November receives by about that amount.",
+    "severity": "watch"
    }
   ],
   "forecast_basis": {
@@ -330,7 +360,7 @@
   "risks": [
    {
     "cause": "The multiple compresses",
-    "how": "At 46x earnings, a move to Walmart-like or historical multiples would cost far more than a year of EPS growth.",
+    "how": "At 49x earnings, a move to Walmart-like or historical multiples would cost far more than a year of EPS growth.",
     "watch": "Price-to-earnings",
     "trip": null,
     "sev": "high",
@@ -394,7 +424,7 @@
    }
   ],
   "title": "Flawless, and priced that way",
-  "lead": "We rate Costco {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Comps, renewals and digital growth are excellent, our next-year EPS is {vs_cons} consensus, and at 46x earnings the multiple, not the business, sets the return.",
+  "lead": "We rate Costco {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Comps, renewals and digital growth are excellent, our next-year EPS is {vs_cons} consensus, and at 49x earnings the multiple, not the business, sets the return.",
   "call_reason": "The business is fine; the multiple carries the risk: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
   "arguments": [
    {
@@ -415,12 +445,12 @@
    },
    {
     "label": "Valuation",
-    "text": "{peer_line} About 46x earnings is near the top of Costco's own range."
+    "text": "{peer_line} About 49x earnings is at the top of Costco's own range."
    }
   ],
   "thesis_long": [
    "Costco is the most consistent large retailer in the world. Fiscal 2026 sales grew 10%, comparable sales grew 6.6% excluding gasoline and currency on both higher tickets and more trips, digital sales grew about a fifth and the renewal rate in the US and Canada held at 92.3%. EPS rose 14% to $20.76.",
-   "The problem is only price. At about 46x fiscal 2027 earnings, the stock trades near the top of its range and above Walmart, and the company's own 10-K warns that the share price reflects high expectations. EPS growth near 10% a year cannot keep up with even a modest return toward historical multiples.",
+   "The problem is only price. At about 49x fiscal 2027 earnings, the stock trades near the top of its range and above Walmart, and the company's own 10-K warns that the share price reflects high expectations. EPS growth near 10% a year cannot keep up with even a modest return toward historical multiples.",
    "Our base case grows EPS about 10% a year and lets the multiple drift toward 40x, which earns less than the cost of equity over 12 months. We would turn positive nearer 38x earnings, or on a membership fee increase that lifts EPS growth into the mid-teens."
   ],
   "upside_risks": [

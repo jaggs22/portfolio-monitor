@@ -52,7 +52,7 @@
    "bear": 20,
    "bull": 32,
    "kind": "judgment",
-   "why": "Today's multiple is about 31x 2026 operating EPS and 23x consensus 2027. The base case assumes a modest de-rating as heavy capex keeps free cash flow low.",
+   "why": "Today's multiple is about 33x 2026 operating EPS and 25x consensus 2027. The base case assumes a modest de-rating as heavy capex keeps free cash flow low.",
    "source": "Engine judgment; current multiple computed from price and FY26E operating EPS"
   }
  },
@@ -115,7 +115,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 23x consensus 2027 EPS for AWS re-acceleration and rising retail margins.",
+  "street": "The market pays about 25x consensus 2027 EPS for AWS re-acceleration and rising retail margins.",
   "ours": "Operations are the best they have been, but the cash is going into capex and AI stakes. Our base case earns a little above Amazon's cost of equity: a good business at a reasonable price, not yet a bargain.",
   "could_be_wrong": "If AWS grows above 40% for two years as management projects and capex then levels off, free cash flow could swing by more than $100B and the stock is cheap.",
   "would_change_mind": "AWS growth below 30%, or 2027 capex guided materially above 2026 without faster AWS growth."
@@ -189,7 +189,8 @@
   "AWS growth slows.",
   "Consumer slowdown.",
   "AI stakes lose value.",
-  "Regulation."
+  "Regulation.",
+  "Sentiment on AI spending: AI infrastructure stocks sold off on 5 November (S&P 500 -4.4%, Philadelphia semiconductor index -12.3%), and Nvidia's CEO Jensen Huang resigned on 11 November with the CFO as interim CEO. Amazon's own AWS numbers were not affected."
  ],
  "lenses": {
   "eisman": "Take out the gains on AI stakes and look at free cash flow: minus $42B over twelve months.",
@@ -215,6 +216,24 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Stockanalysis.com: S&P 500 loses about $2.9T in market value on 5 November",
+   "url": "https://stockanalysis.com/news/sp-500-record-one-day-market-value-loss/",
+   "date": "2026-11-05"
+  },
+  {
+   "tier": "A",
+   "title": "NVIDIA Form 8-K: CEO transition (Jensen Huang resigns; Colette Kress interim CEO)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+   "date": "2026-11-12"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -224,8 +243,8 @@
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 reports in early February; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 reports in early February; this review refreshes after the print.",
   "headline": "Record margins and AWS back near 40% growth. The catch is capex: free cash flow has gone negative.",
   "model": "Amazon runs the largest online store, a marketplace for third-party sellers, a fast-growing advertising business and AWS, the largest cloud provider. Retail is high-volume and low-margin; AWS and advertising make most of the profit.",
   "how_it_earns": [

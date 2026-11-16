@@ -2,25 +2,25 @@
  "ticker": "V",
  "name": "Visa",
  "depth": "deep",
- "as_of": "2026-07-28",
+ "as_of": "2026-10-27",
  "horizon": 3,
  "header": {
-  "one_liner": "Toll road on global card volume; quality is not in question, the price already pays for it.",
-  "thesis": "Visa converts roughly 10% payments-volume growth into low-teens EPS growth at a 59% operating margin. At 30x current earnings the market already assumes that continues; the engine's base case earns about the hurdle, so the stance is a position to challenge rather than an obvious add."
+  "one_liner": "Toll road on global card volume; quality is not in question, but the cost of keeping the banks is rising.",
+  "thesis": "Visa closed fiscal 2026 with 15% net revenue growth and guides fiscal 2027 to low double digit revenue and low double digit to low teens EPS growth. At about 29x fiscal 2027 EPS the market assumes that holds. Client incentives grew 21% in Q4, crossing the engine's 20% tripwire, so the scenario weights tilt toward the bear case and the stance is a position to challenge, not an add."
  },
  "base": {
-  "eps0": 13.1,
-  "eps_label": "FY2026E non-GAAP EPS, implied by company guidance (9M actual $9.79 plus Q4 at guided growth)",
-  "rev0": 45.7,
-  "shares0": 1.898,
-  "div": 2.68,
-  "rev_label": "FY2026E net revenue ($B): 9M actual $33.76B plus Q4 at the guided high end of low double digits",
-  "fy0": 2026
+  "eps0": 14.85,
+  "eps_label": "FY2027E non-GAAP EPS (year to September 2027): fiscal 2026 $13.27 grown about 12%, the middle of guidance for low double digit to low teens growth",
+  "rev0": 50.9,
+  "shares0": 1.88,
+  "div": 3.12,
+  "rev_label": "FY2027E net revenue ($B): fiscal 2026 $45.9B grown about 11%, in line with guidance for low double digit growth",
+  "fy0": 2027
  },
  "probs": {
-  "bear": 0.25,
+  "bear": 0.3,
   "base": 0.5,
-  "bull": 0.25
+  "bull": 0.2
  },
  "drivers": {
   "rev_cagr": {
@@ -28,116 +28,131 @@
    "bear": 6,
    "bull": 13,
    "kind": "sourced",
-   "why": "Fiscal Q3 net revenue grew 14% (13% constant dollar) on 10% payments volume and 12% cross-border growth. Management guides Q4 to the high end of low double digits and full-year to the low end of low teens. The base case assumes three more years of a slowing low double digit rate.",
-   "source": "Visa FQ3 2026 release; call highlights"
+   "why": "Q4 net revenue grew 13% on 9% payments volume, 14% cross-border volume and 10% more processed transactions; fiscal 2026 grew 15%. Management guides fiscal 2027 net revenue to low double digit growth. The base case assumes about 11% a year, fading slightly over three years.",
+   "source": "Visa FQ4 2026 release; FY2027 outlook from the earnings call"
   },
   "margin_end": {
    "base": 54.5,
    "bear": 51,
    "bull": 55.5,
    "kind": "judgment",
-   "why": "Non-GAAP net margin is about 54% today. The base case holds it flat because opex is guided to grow as fast as revenue (low end of low teens) and client incentives grew 18% in the quarter, faster than revenue. This is the engine's judgment, not a company number.",
-   "source": "Computed from FQ3 2026 release; opex and incentive growth as printed"
+   "why": "Non-GAAP net margin was about 55% in fiscal 2026 ($25.3B on $45.9B). The base case holds it near 54.5% because opex is guided to grow low double digits, in line with revenue, while client incentives grew 21% in Q4, faster than gross revenue. This is the engine's judgment, not a company number.",
+   "source": "Computed from FQ4 2026 release; FY2027 opex outlook from the call"
   },
   "share_chg": {
    "base": -2.5,
    "bear": -2,
    "bull": -3,
    "kind": "sourced",
-   "why": "Visa repurchased $16.4B in nine months against a $739B market cap, about 3% annualised. Base case assumes the pace slows slightly as the price rises.",
-   "source": "Visa FQ3 2026 release (nine-month repurchases $16,430M)"
+   "why": "Visa repurchased about 61M shares for $20.5B in fiscal 2026, roughly 3% of the count, and has $24.4B of authorisation left. The base case assumes about 2.5% a year as the $2.4B BioCatch purchase and litigation escrow take some cash.",
+   "source": "Visa FQ4 2026 release and call (repurchases, remaining authorisation)"
   },
   "exit_pe": {
    "base": 27,
    "bear": 21,
    "bull": 31,
    "kind": "judgment",
-   "why": "Current multiple is about 30x. The base case assumes a three-point de-rating as growth slows toward ten percent. Bear assumes regulatory or competitive pressure takes it to the low twenties. This is the most disputable number on the page.",
-   "source": "Engine judgment; current multiple computed from price and FY26E EPS"
+   "why": "Current multiple is about 29x fiscal 2027 EPS and 32x fiscal 2026. The base case assumes a de-rating to 27x as growth settles near ten percent. Bear assumes regulatory or competitive pressure takes it to the low twenties. This is the most disputable number on the page.",
+   "source": "Engine judgment; current multiple computed from the 13 November close and FY27E EPS"
   }
  },
  "pillars": [
   {
    "title": "Network effects convert volume into earnings",
-   "claim": "Payments volume of +10% and 71.7B processed transactions (+10%) feed net revenue of +14%, because pricing and value-added services grow on top of volume.",
+   "claim": "Payments volume of +9% and 74.2B processed transactions (+10%) fed net revenue of +13%, because pricing and value-added services grow on top of volume.",
    "evidence": [
     {
-     "t": "Net revenue $11,633M, +14%; payments volume +10% constant dollar; processed transactions 71.7B, +10%",
-     "src": "FQ3 release"
+     "t": "Net revenue $12.1B, +13% nominal and constant dollar; fiscal 2026 $45.9B, +15%",
+     "src": "FQ4 release"
     },
     {
-     "t": "Data processing revenue +17% and other revenue +45%, faster than volume",
-     "src": "FQ3 release"
+     "t": "Data processing revenue $6.2B (+16%); other revenue $1.65B (+40%)",
+     "src": "FQ4 release"
     }
    ],
-   "test": "Does net revenue growth stay above payments volume growth for the next two quarters?"
+   "test": "Does net revenue growth stay above payments volume growth through fiscal 2027?"
   },
   {
-   "title": "Margin is high but not rising",
-   "claim": "GAAP operating margin of 59.1% in the quarter is below the nine-month 61.7% because of $253M litigation and $563M severance. Underlying margin is stable, not expanding.",
+   "title": "Cost growth cooled",
+   "claim": "Non-GAAP opex grew 12% in Q4 against 17% in Q3, back below revenue growth. Fiscal 2027 opex is guided to low double digit growth, in line with revenue.",
    "evidence": [
     {
-     "t": "Total opex $4,756M, +19% in the quarter against revenue +14%",
-     "src": "FQ3 release"
+     "t": "Non-GAAP opex about $4.1B, +12%; personnel $1.9B, marketing $711M",
+     "src": "FQ4 release; Zacks summary"
     },
     {
-     "t": "Severance of $563M recorded as personnel expense; roles cut mainly in technology and product",
-     "src": "FQ3 release; call highlights"
+     "t": "Q4 special items: $469M litigation provision, $282M donation of investments to the Visa Foundation",
+     "src": "FQ4 release"
     }
    ],
-   "test": "Does opex growth settle at or below revenue growth after the restructuring?"
+   "test": "Does opex growth stay at or below revenue growth in fiscal 2027?"
   },
   {
    "title": "Client incentives are the quiet cost lever",
-   "claim": "Incentives of $4,680M grew 18%, faster than revenue. They are the price Visa pays to keep issuers and processors on the network, and they are where competitive pressure would show first.",
+   "claim": "Incentives of $5.1B grew 21%, up from 18% in Q3 and 16% in Q2, and are now about 30% of gross revenue. They are the price Visa pays to keep issuers on the network, and they are where competitive pressure shows first.",
    "evidence": [
     {
-     "t": "Client incentives $(4,680)M, up 18%",
-     "src": "FQ3 release"
+     "t": "Client incentives $(5.1)B, up 21%",
+     "src": "FQ4 release"
+    },
+    {
+     "t": "Gross revenue lines: service $5.26B (+14%), data processing $6.2B (+16%), international $4.12B (+8%), other $1.65B (+40%)",
+     "src": "FQ4 release"
     }
    ],
-   "test": "Do incentives as a share of gross revenue keep rising?"
+   "test": "Do incentives grow slower than gross revenue in fiscal Q1 2027?"
   },
   {
    "title": "Capital return supports EPS",
-   "claim": "A 2.5% to 3% annual share count reduction adds roughly three points to EPS growth.",
+   "claim": "A 2.5% to 3% annual share count reduction adds roughly three points to EPS growth, and the dividend rose 16%.",
    "evidence": [
     {
-     "t": "Repurchases $16,430M in nine months; dividends $3,852M; quarterly dividend $0.670",
-     "src": "FQ3 release"
+     "t": "Fiscal 2026 buybacks $20.5B (61M shares); dividends $5.1B; $24.4B authorisation left",
+     "src": "FQ4 release and call"
+    },
+    {
+     "t": "Quarterly dividend raised 16% to $0.780",
+     "src": "FQ4 release"
     }
    ],
-   "test": "Does the repurchase pace hold as the price sits near its 52-week high?"
+   "test": "Does the buyback pace hold with BioCatch ($2.4B) closing by March 2027?"
   }
  ],
  "variant": {
-  "street": "The market pays about 30x current-year earnings, which prices a durable low-teens EPS compounder with little regulatory drag.",
-  "ours": "The engine's base case earns about the hurdle: a high-quality business at a full price. The variant view is not that Visa is weak, but that the exit multiple, not growth, decides the return.",
-  "could_be_wrong": "If volume growth holds at 10% and agentic commerce adds a new fee pool, a 30x multiple can persist and the bull case becomes the base case.",
-  "would_change_mind": "Two consecutive quarters where net revenue growth falls below 10%, or incentives growing faster than 20%."
+  "street": "The market pays about 29x fiscal 2027 EPS, which prices a durable low-teens compounder with little regulatory drag.",
+  "ours": "The engine's base case earns about the hurdle: a high-quality business at a full price. Incentives growing 21% tripped the test we set, so we now weight the bear case at 30% and the bull at 20%. The variant view is that the share Visa pays back to banks, not volume, decides the next leg.",
+  "could_be_wrong": "If incentive growth was front-loaded renewals and cools in fiscal 2027 while value-added services keep growing 30%, a 29x multiple can persist and the bull case becomes the base case.",
+  "would_change_mind": "Back to neutral weights if incentives grow slower than gross revenue for two quarters. Negative on two quarters of net revenue growth below 10%."
  },
  "moat": {
   "rating": 5,
-  "summary": "Two-sided network with issuers and merchants on both sides; 59% operating margin through restructuring and litigation charges.",
-  "detail": "The existing Porter card (10-K based, FY2025) rates Visa Strong; the new quarter does not contradict it."
+  "summary": "Two-sided network with issuers and merchants on both sides; fiscal 2026 non-GAAP net margin about 55%.",
+  "detail": "The existing Porter card (10-K based, FY2025) rates Visa Strong. The fiscal 2026 10-K does not contradict it, but buyer power from issuers shows in incentives growing faster than revenue."
  },
  "quality": {
-  "leverage_note": "Debt about $23.9B against cash and investments of $13.9B at 30 June 2026: modest leverage for a business earning about $28B a year pre-tax.",
+  "leverage_note": "Debt about $22.1B against cash, restricted cash and investments of about $14.8B at 30 September 2026 (third-party tally of the 10-K): modest leverage for a business earning about $30B a year pre-tax.",
   "leverage_ok": true,
-  "incentive_note": "Incentives to clients are rising faster than revenue; watch whether this is share defence.",
+  "incentive_note": "Incentives to clients grew 21% in Q4 against 13% net revenue growth, the third quarter in a row of acceleration.",
   "incentive_ok": false,
   "checks": [
-   "Tax rate 18.4% non-GAAP in the quarter",
-   "Cash conversion: nine-month operating cash flow $16.3B against GAAP net income $17.5B (timing of litigation escrow and tax)"
+   "Tax rate 18.4% non-GAAP in Q4; fiscal 2027 guided at about 19%",
+   "Fiscal 2026 free cash flow about $22.1B against $25.6B of buybacks and dividends (third-party tally); the gap was funded from cash"
   ]
  },
  "catalysts": [
   {
-   "date": "2026-10-27",
-   "label": "Visa fiscal Q4 2026 earnings",
-   "confirmed": true,
-   "note": "Guide: net revenue growth high end of low double digits, EPS growth low end of mid-teens, tax rate about 19%.",
+   "date": "2027-01-28",
+   "label": "Visa fiscal Q1 2027 earnings (date not confirmed; usually late January)",
+   "confirmed": false,
+   "note": "Guide: net revenue and opex growth low double digits; EPS growth low end of mid-teens.",
    "importance": "High"
+  },
+  {
+   "date": "2027-03-31",
+   "label": "BioCatch acquisition ($2.4B cash) expected to close by end of March 2027",
+   "confirmed": false,
+   "note": "Company-stated timing: by fiscal Q2 2027.",
+   "importance": "Low"
   }
  ],
  "tripwires": [
@@ -147,12 +162,12 @@
    "metric": "net_rev_growth",
    "op": "<",
    "threshold": 10,
-   "current": 14,
+   "current": 13,
    "unit": "%",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "FQ3 release"
+   "src": "FQ4 release"
   },
   {
    "id": "v2",
@@ -160,12 +175,14 @@
    "metric": "incentive_growth",
    "op": ">",
    "threshold": 20,
-   "current": 18,
+   "current": 21,
    "unit": "%",
    "drivers": [
     "margin_end"
    ],
-   "src": "FQ3 release"
+   "src": "FQ4 release",
+   "status": "tripped",
+   "note": "Q2 16%, Q3 18%, Q4 21%. Scenario weights moved to 30% bear, 50% base, 20% bull."
   },
   {
    "id": "v3",
@@ -173,12 +190,12 @@
    "metric": "xborder",
    "op": "<",
    "threshold": 8,
-   "current": 12,
+   "current": 14,
    "unit": "%",
    "drivers": [
     "rev_cagr"
    ],
-   "src": "FQ3 release"
+   "src": "FQ4 release"
   },
   {
    "id": "v4",
@@ -186,57 +203,68 @@
    "metric": "opex_vs_rev",
    "op": ">",
    "threshold": 0,
-   "current": 5,
-   "unit": "pts (opex 19% vs revenue 14%)",
+   "current": -1,
+   "unit": "pts (opex 12% vs revenue 13%)",
    "drivers": [
     "margin_end"
    ],
-   "src": "FQ3 release",
-   "status": "watch",
-   "note": "Seen in one quarter so far (opex +19% vs revenue +14%); the tripwire needs two."
+   "src": "FQ4 release",
+   "note": "Q3's gap (opex +17% vs revenue +14%) did not repeat in Q4."
   }
  ],
  "risks": [
-  "Interchange litigation and the Credit Card Competition Act (not covered by the sources retrieved).",
+  "Interchange litigation: the merchant settlement has preliminary court approval (June 2026) but not final approval; routing legislation remains possible with a new Congress in January 2027.",
   "Account-to-account and stablecoin rails taking low-value volume.",
   "Agentic commerce is an opportunity in the company's words, with no revenue disclosed."
  ],
  "lenses": {
-  "eisman": "Look at the incentive line, not the headline: 18% growth in what Visa pays clients is the number that would move first if the network's pricing power weakened.",
-  "munger": "Invert it: what makes Visa a bad investment from here? Only the price. The business has few ways to fail.",
-  "buffett": "A toll road with a 59% margin is exactly the kind of business he buys, at a price he would call full when the yield is 3.3% against a 5.2% Treasury.",
-  "hohn": "A durable network with growing incentives and a restructuring: check that the cost cuts are funding reinvestment, not hiding a growth slowdown."
+  "eisman": "Look at the incentive line, not the headline: 16%, then 18%, then 21% growth in what Visa pays banks is the number that moves first if the network's pricing power weakens.",
+  "munger": "Invert it: what makes Visa a bad investment from here? The price, and banks taking a bigger slice. The business has few ways to fail.",
+  "buffett": "A toll road with a 55% net margin is exactly the kind of business he buys, at a price he would call full when the earnings yield is about 3.5% against a 5.15% Treasury.",
+  "hohn": "Cost growth cooled to 12% and the dividend rose 16%. Check that the $2.4B BioCatch deal and rising incentives are buying growth rather than defending share."
  },
  "sources": [
   {
    "tier": "A",
-   "title": "Visa Inc. Form 8-K, fiscal Q3 2026 earnings release",
-   "url": "https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000103/q32026earningsrelease.htm",
-   "date": "2026-07-28"
+   "title": "Visa Inc. fiscal Q4 and full-year 2026 earnings release and Form 10-K (accession 0001403161-26-000134) (via last10k.com)",
+   "url": "https://last10k.com/sec-filings/v/0001403161-26-000134.htm",
+   "date": "2026-11-05"
   },
   {
    "tier": "C",
-   "title": "Visa Q3 earnings call highlights",
-   "url": "https://www.nasdaq.com/articles/visa-q3-earnings-call-highlights",
-   "date": "2026-07-28"
+   "title": "Visa fiscal Q4 2026 results explained (revenue lines, special items, buybacks, FY2027 outlook from the call)",
+   "url": "https://news.ifyouspent.com/en/news/visa-earnings-results-october-2026",
+   "date": "2026-10-28"
   },
   {
    "tier": "C",
-   "title": "Financial Modeling Prep: company profile, treasury rates, market risk premium",
-   "url": "https://site.financialmodelingprep.com",
-   "date": "2026-10-14"
+   "title": "Zacks: Visa Q4 earnings beat estimates on strong payment volumes",
+   "url": "https://www.zacks.com/stock/news/3017346/visa-q4-earnings-beat-estimates-on-strong-payment-volumes",
+   "date": "2026-10-28"
+  },
+  {
+   "tier": "C",
+   "title": "Finsee: Visa Q4 2026 earnings review (incentive share of gross revenue, cash, debt, free cash flow)",
+   "url": "https://finsee.ai/earnings/v/2026/q4/en/",
+   "date": "2026-10-28"
+  },
+  {
+   "tier": "C",
+   "title": "Visa statement on preliminary approval of the MDL settlement",
+   "url": "https://corporate.visa.com/en/sites/visa-perspectives/company-news/visa-statement-mdl-settlement.html",
+   "date": "2026-06-09"
   }
  ],
  "gaps": [
-  "FY2026 GAAP and non-GAAP EPS for Q4 not yet reported.",
-  "Interchange settlement and regulatory status not retrieved.",
-  "Consensus estimates not retrieved."
+  "Cash, debt and free cash flow are from a third-party tally of the 10-K, not read from the filing directly.",
+  "Final court approval date for the interchange settlement not found.",
+  "Fiscal Q1 2027 earnings date not confirmed."
  ],
- "base_period_end": "2026-06-30",
+ "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-10-27",
-  "basis": "Fiscal Q3 2026 10-Q (June quarter). Fiscal Q4 reports on 27 October US time; this review refreshes after the print.",
-  "headline": "A toll road on global spending with 68% EBITDA margins. Quality is not in question; the price already assumes it lasts.",
+  "as_of": "2026-11-16",
+  "basis": "Fiscal 2026 10-K and Q4 release (year to 30 September 2026), the fiscal 2027 outlook from the call, and prices to the 13 November 2026 close; news reviewed to 16 November. Fiscal Q1 2027 reports in late January; this review refreshes after the print.",
+  "headline": "A toll road on global spending with a 55% net margin. Quality is not in question; what Visa pays banks to stay is rising faster than what it earns.",
   "model": "Visa runs the network that connects card-issuing banks and merchants' banks. It earns a small fee on volume and per transaction, and never lends money.",
   "how_it_earns": [
    {
@@ -270,31 +298,31 @@
      "match": "Service",
      "label": "Service",
      "role": "Volume tollgate",
-     "driver": "Payments volume +11% (prior quarter), pricing"
+     "driver": "Prior-quarter payments volume +10%, pricing"
     },
     {
      "match": "International Transaction Revenues",
      "label": "International",
-     "role": "Highest margin, slowing",
-     "driver": "Cross-border volume +14%, offset by lower FX volatility"
+     "role": "Highest margin, lagging volume",
+     "driver": "Cross-border volume +14%, but revenue only +8% as Visa Direct transfers carry lower fees"
     },
     {
      "match": "Service Other",
      "label": "Other",
      "role": "Fastest growth",
-     "driver": "Advisory, consulting and other services"
+     "driver": "Consulting, marketing and other services, +40%"
     },
     {
      "match": "Client Incentives",
      "label": "Client incentives",
      "role": "The cost of share",
-     "driver": "Growing faster than gross revenue"
+     "driver": "+21%, faster than gross revenue for a third quarter"
     }
    ],
    "callout": {
     "match": "Value Added Services",
     "label": "Value-added services",
-    "text": "Cuts across the lines above. Growing about a third a year and now a third of net revenue."
+    "text": "Cuts across the lines above. About $14B in fiscal 2026, up 30% in constant dollars."
    }
   },
   "position": "One of two global open-loop networks with Mastercard. Larger by revenue and market value; Mastercard is growing slightly faster.",
@@ -311,70 +339,70 @@
   "what_numbers_say": [
    {
     "t": "Revenue outgrows volume",
-    "d": "Net revenue +14% on payments volume +11% and transactions +10%. Pricing and value-added services add the gap."
+    "d": "Q4 net revenue +13% on payments volume +9% and transactions +10%. Fiscal 2026 net revenue +15%, the fastest in over 15 years outside the post-pandemic rebound."
    },
    {
     "t": "Value-added services are the new engine",
-    "d": "$3.8B in Q3, +33%. Consulting engagements up about 30%."
+    "d": "About $14B in fiscal 2026, +30%. Other revenue, where consulting sits, rose 40% to $1.65B in Q4."
    },
    {
-    "t": "Incentives keep creeping up",
-    "d": "Client incentives +18% vs gross revenue +15%. They are now about 29% of gross revenue."
+    "t": "Incentives keep accelerating",
+    "d": "Client incentives +21% in Q4 (Q3 +18%, Q2 +16%), about 30% of gross revenue."
    },
    {
-    "t": "Costs ran ahead of revenue",
-    "d": "Non-GAAP opex +17% vs net revenue +14%, on marketing (World Cup) and hiring. GAAP opex +19% with $563M severance."
+    "t": "Costs came back in line",
+    "d": "Non-GAAP opex +12% in Q4 against net revenue +13%, after +17% in Q3. Fiscal 2027 opex is guided to low double digit growth."
    }
   ],
   "balance": {
    "read": "Net cash-like leverage. The real liabilities are litigation and settlement guarantees, not debt.",
    "facts": [
-    "Repaid $5.6B of notes, issued $3.0B in FY2026",
-    "$16.5B buybacks in nine months; $28.4B authorised",
-    "Interchange litigation funded by class B conversion, not class A cash"
+    "Total debt about $22.1B, down from $25.2B a year earlier",
+    "$20.5B of buybacks in fiscal 2026; $24.4B authorised",
+    "Interchange litigation funded by class B conversion: $469M Q4 provision, $405M escrow deposit in September"
    ]
   },
   "flags": [
    {
     "flag": "Litigation costs sit outside non-GAAP and outside class A",
-    "evidence": "$1.1B of interchange accruals in nine months, excluded from non-GAAP. They are funded by reducing class B conversion rates, so class A EPS is unaffected.",
+    "evidence": "$469M of Q4 interchange provisions, excluded from non-GAAP. They are funded by reducing class B conversion rates, so class A EPS is unaffected.",
     "severity": "info"
    },
    {
-    "flag": "Cash conversion dipped",
-    "evidence": "Nine-month operating cash flow $16.3B vs GAAP net income $17.5B, on litigation payments, incentive payments and tax timing.",
+    "flag": "Cross-border revenue lags cross-border volume",
+    "evidence": "Cross-border volume +14% but international transaction revenue only +8% in Q4, partly because lower-fee Visa Direct transfers are a growing share.",
     "severity": "watch"
    },
    {
-    "flag": "New off-balance-sheet guarantee in Brazil",
-    "evidence": "New Brazilian rules will require Visa to extend settlement guarantees to sellers; Visa expects settlement exposure to increase.",
+    "flag": "Brazil settlement guarantees",
+    "evidence": "New Brazilian rules require Visa to extend settlement guarantees to sellers; Visa expects settlement exposure to increase.",
     "severity": "watch"
    }
   ],
   "forecast_basis": {
-   "rev_cagr": "Driver-based: volume plus pricing plus value-added services, fading toward 10%",
+   "rev_cagr": "Guidance-anchored: fiscal 2027 low double digits, fading toward 10%",
    "margin_end": "Trend: held flat because opex is guided to grow with revenue",
    "share_chg": "Trend: about 2.5% a year from buybacks",
-   "exit_pe": "Judgment: modest de-rating as growth slows"
+   "exit_pe": "Judgment: modest de-rating from about 29x as growth settles"
   },
   "scenarios": {
    "base": {
-    "story": "Volume grows high single digits, pricing and services add a few points, buybacks add three; EPS compounds low teens.",
+    "story": "Volume grows high single digits, pricing and services add a few points, buybacks add three; EPS compounds low teens, as guided for fiscal 2027.",
     "needs": "No change to US interchange or routing rules"
    },
    "downside": {
     "story": "Routing mandates or an interchange settlement cut the toll; incentives rise to defend share; the multiple falls toward the low twenties.",
-    "needs": "Credit Card Competition Act passes, or incentives grow above 20%"
+    "needs": "Routing legislation passes, or incentives keep growing above 20%"
    },
    "upside": {
     "story": "Value-added services and agentic commerce become a second engine; growth holds at 12% and the multiple stays near 30x.",
-    "needs": "Services above a third of revenue with margins intact"
+    "needs": "Value-added services keep growing about 30% with margins intact"
    }
   },
   "risks": [
    {
     "cause": "Regulators cut the toll",
-    "how": "Routing mandates or interchange limits let merchants send transactions to cheaper networks, lowering Visa's fee per dollar.",
+    "how": "Routing mandates or interchange limits let merchants send transactions to cheaper networks. The merchant settlement awaits final approval, and routing bills could return in the new Congress.",
     "watch": "Service revenue per dollar of volume",
     "trip": null,
     "sev": "high",
@@ -382,7 +410,7 @@
    },
    {
     "cause": "Big banks demand a bigger share",
-    "how": "Issuers are concentrated and can switch networks at renewal. Visa pays them through rising incentives.",
+    "how": "Issuers are concentrated and can switch networks at renewal. Incentives grew 21% in Q4, the fastest of the year.",
     "watch": "Incentive growth vs revenue growth",
     "trip": "v2",
     "sev": "medium",
@@ -390,7 +418,7 @@
    },
    {
     "cause": "Cross-border spending normalises",
-    "how": "International fees are the highest-margin line and depend on travel and currency volatility, both cyclical.",
+    "how": "International fees are the highest-margin line. Revenue grew only 8% on 14% volume in Q4 as lower-fee transfers grew.",
     "watch": "Cross-border volume growth",
     "trip": "v3",
     "sev": "medium",
@@ -406,7 +434,7 @@
    },
    {
     "cause": "Costs outgrow revenue",
-    "how": "Visa is investing in marketing, people and acquisitions. If that persists, the margin slips from a very high base.",
+    "how": "Opex growth cooled to 12% in Q4, but World Cup marketing and the BioCatch deal add cost in fiscal 2027.",
     "watch": "Opex growth vs revenue growth",
     "trip": "v4",
     "sev": "low",
@@ -420,15 +448,15 @@
   },
   "questions": [
    "Are rising incentives a cost of growth or a sign of weakening bargaining power?",
-   "Does value-added services growth carry the same margin as the core network?",
+   "Why did cross-border revenue grow at half the rate of cross-border volume?",
    "Would you pay a premium to Mastercard for slower growth?"
   ],
   "sources": [
    {
     "tier": "A",
-    "title": "Visa Inc. Form 10-Q, quarter ended 30 June 2026 (MD&A, revenue components)",
-    "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm",
-    "date": "2026-07-29"
+    "title": "Visa Inc. Form 10-K, year ended 30 September 2026 (via last10k.com)",
+    "url": "https://last10k.com/sec-filings/v/0001403161-26-000134.htm",
+    "date": "2026-11-05"
    },
    {
     "tier": "A",
@@ -437,25 +465,25 @@
     "date": "2025-11-06"
    }
   ],
-  "title": "A full toll on a great road",
-  "lead": "We rate Visa {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). The network turns about 10% volume growth into low-teens EPS growth with no credit risk, but the shares trade at a premium to Mastercard despite slower consensus growth, and our next-year EPS is {vs_cons} consensus.",
-  "call_reason": "Great business, full price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "title": "A full toll, and the banks want more",
+  "lead": "We rate Visa {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Fiscal 2026 was Visa's strongest year in over a decade, but client incentives grew 21% in Q4, the shares trade at a premium to Mastercard, and our next-year EPS is {vs_cons} consensus.",
+  "call_reason": "Great business, full price, rising cost of share: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
   "arguments": [
    {
     "label": "Growth",
-    "text": "Net revenue grew 14% in the June quarter on 11% payments volume growth and 10% more transactions. Value-added services grew 33% and are now about a third of net revenue."
+    "text": "Net revenue grew 13% in Q4 and 15% in fiscal 2026 on 9% payments volume growth and 10% more transactions. Management guides fiscal 2027 to low double digit revenue growth and low double digit to low teens EPS growth."
    },
    {
     "label": "Moat",
-    "text": "A two-sided network accepted almost everywhere and embedded with banks and merchants. Regulators and large issuers, not rival networks, decide how much of the toll Visa keeps."
+    "text": "A two-sided network accepted almost everywhere and embedded with banks and merchants. Regulators and large issuers, not rival networks, decide how much of the toll Visa keeps, and incentives show the issuers pushing."
    },
    {
     "label": "Profitability",
-    "text": "Margins lead the industry, but non-GAAP operating expenses grew 17% against 14% revenue growth, and client incentives grew 18%. The cost of growth is rising."
+    "text": "Margins lead the industry and cost growth cooled to 12% in Q4, back below revenue growth. The pressure point is client incentives, up 21% and now about 30% of gross revenue."
    },
    {
     "label": "Capital",
-    "text": "Buybacks of $16.5B in nine months cut the share count by about 2.5% a year. The real liabilities are interchange litigation, funded through the class B shares, and a new settlement guarantee in Brazil."
+    "text": "Buybacks of $20.5B in fiscal 2026 cut the share count by about 3%, and the dividend rose 16%. The real liabilities are interchange litigation, funded through the class B shares, and a new settlement guarantee in Brazil."
    },
    {
     "label": "Valuation",
@@ -463,18 +491,18 @@
    }
   ],
   "thesis_long": [
-   "Visa earns a small fee on a very large and steadily growing base of card spending, never lends money, and converts roughly two-thirds of revenue into EBITDA. Earnings have been predictable for years and buybacks add about 3 points to EPS growth every year. Quality is not in question.",
-   "The question is what it is worth against its twin. Consensus expects Mastercard to grow revenue faster over the next year, yet Visa trades at a slightly higher forward EV/EBITDA. Inside Visa the mix is shifting: incentives paid to banks are growing faster than gross revenue, cross-border fees are slowing as currency volatility falls, and costs grew ahead of revenue in the latest quarter.",
-   "Our base case keeps growth near 11% with flat margins and steady buybacks, which supports low-teens EPS growth and a 12-month return close to the cost of equity. The upside case needs value-added services and agentic commerce to become a second engine; the downside is US routing legislation or an interchange settlement that cuts the toll while incentives rise. Two quarters of net revenue growth below 10%, or incentives growing faster than 20%, would turn us negative."
+   "Visa earns a small fee on a very large and steadily growing base of card spending, never lends money, and converts more than half of net revenue into net income. Fiscal 2026 net revenue grew 15% and EPS 16%, and management guides another year of low double digit growth. Quality is not in question.",
+   "The question is what it is worth, and who keeps the toll. Client incentives grew 16%, 18% and 21% in the last three quarters, faster than gross revenue each time; cross-border revenue grew 8% on 14% volume; and Visa still trades at a premium to Mastercard on forward EV/EBITDA despite slower consensus growth. The merchant settlement awaits final approval, and routing legislation could return with a new Congress in January 2027.",
+   "Our base case keeps growth near 11% with flat margins and steady buybacks, which supports low-teens EPS growth and a base-case 12-month return a few points above the cost of equity. Incentives crossing 20% tripped the test we set, so we weight the downside more heavily than before, and on those weights the expected return is about the hurdle. The upside case needs value-added services to keep growing 30%; the downside is routing legislation or rising incentives cutting the toll. Two quarters of incentives growing slower than gross revenue would bring us back to neutral."
   ],
   "upside_risks": [
    {
     "cause": "Services become a second engine",
-    "how": "Value-added services above a third of revenue at core-network margins would lift growth and support a premium to Mastercard."
+    "how": "Value-added services of about $14B grew 30% in fiscal 2026. Sustained at core-network margins, they would lift growth and support a premium to Mastercard."
    },
    {
     "cause": "The regulatory overhang clears",
-    "how": "An interchange settlement on manageable terms, or the routing bill failing again, would remove the main bear argument."
+    "how": "Final approval of the merchant settlement on current terms would remove the main bear argument."
    }
   ]
  },

@@ -128,6 +128,13 @@
  },
  "catalysts": [
   {
+   "date": "2026-11-17",
+   "label": "Virginia SCC evidentiary hearing on the Dominion merger opens (case PUR-2026-00112)",
+   "confirmed": true,
+   "note": "NextEra and Dominion accepted 101 of 117 conditions proposed by SCC staff and the consumer counsel and 13 more with changes, including a ring-fenced holding company for Dominion Energy Virginia.",
+   "importance": "High"
+  },
+  {
    "date": "2027-01-15",
    "label": "Virginia and South Carolina orders on the Dominion merger (expected January 2027)",
    "confirmed": false,
@@ -208,17 +215,30 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "E+E Leader: NextEra and Dominion accept 101 Virginia merger conditions",
+   "url": "https://www.environmentenergyleader.com/articles/print/45510-nextera-and-dominion-accept-101-virginia-merger-conditions",
+   "date": "2026-11-04"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
   "Segment data not available from the XBRL instance; FPL and NEER figures are from the release.",
   "Merger accretion per share not stated in the release.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Fourth-quarter report date not yet confirmed by the company.",
+  "The three Virginia conditions not accepted, and their cost, are not detailed in the sources retrieved."
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Merger orders expected January 2027; this review refreshes then.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Merger orders expected January 2027; this review refreshes then.",
   "headline": "Two growth engines and a transforming merger. 8%+ EPS growth is credible; at 21x the shares already pay for it.",
   "model": "NextEra owns Florida Power & Light, a regulated utility that earns an allowed return on what it invests, and NextEra Energy Resources, which builds wind, solar and battery projects and sells the power under long contracts.",
   "how_it_earns": [
@@ -425,7 +445,7 @@
   ],
   "thesis_long": [
    "NextEra combines Florida's largest regulated utility with the largest developer of wind, solar and storage in North America. Both are growing: adjusted EPS rose 9.7% in the third quarter, FPL's capital employed grew 9.2%, and the renewables and storage backlog reached 36.7 GW after 3.7 GW of additions. Data center demand is adding a new channel through federal hub projects and owned generation.",
-   "In May NextEra agreed to buy Dominion Energy for about 0.81 NextEra shares per Dominion share, adding regulated utilities in Virginia and the Carolinas. Shareholders have approved; state commissions decide from January 2027 and closing is expected in the second half of 2027. The combined company targets 9%+ EPS growth, but the deal brings approval risk and more leverage to a company already at about 6.7 times EBITDA.",
+   "In May NextEra agreed to buy Dominion Energy for about 0.81 NextEra shares per Dominion share, adding regulated utilities in Virginia and the Carolinas. Shareholders have approved; state commissions decide from January 2027 and closing is expected in the second half of 2027. The combined company targets 9%+ EPS growth, but the deal brings approval risk and more leverage to a company already at about 6.7 times EBITDA. Ahead of the Virginia hearing that opens on 17 November, the companies accepted 101 of 117 proposed conditions outright and 13 with changes, including a bankruptcy-remote holding company for the Virginia utility.",
    "Our standalone base case grows EPS about 8% a year with a small de-rating from 21x, which earns about the cost of equity over 12 months. We would turn positive on a clean merger approval with data center contracts converting into owned assets, and negative on heavy merger conditions or backlog additions below 2 GW a quarter."
   ],
   "upside_risks": [

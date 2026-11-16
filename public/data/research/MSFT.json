@@ -52,7 +52,7 @@
    "bear": 20,
    "bull": 30,
    "kind": "judgment",
-   "why": "Today's multiple is about 25x fiscal 2027E EPS. The base case holds it, because growth accelerated this year; the bear case is a de-rating if AI capex stops earning its keep.",
+   "why": "Today's multiple is about 26x fiscal 2027E EPS. The base case holds it, because growth accelerated this year; the bear case is a de-rating if AI capex stops earning its keep.",
    "source": "Engine judgment; current multiple computed from price and FY27E EPS"
   }
  },
@@ -107,7 +107,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 25x fiscal 2027 earnings for accelerating cloud growth and a $677B order book.",
+  "street": "The market pays about 26x fiscal 2027 earnings for accelerating cloud growth and a $677B order book.",
   "ours": "Growth is excellent and well covered by contracts. The engine's base case holds the multiple and lets margin slip on depreciation, and still compounds EPS in the mid-teens: on an unchanged multiple that beats the cost of equity.",
   "could_be_wrong": "If AI services earn software-like margins, depreciation is absorbed easily and earnings grow faster than revenue.",
   "would_change_mind": "Azure growth below 35% while capex keeps rising, or operating margin below 45%."
@@ -181,7 +181,8 @@
   "One customer is a large share of growth.",
   "Capacity and power constraints.",
   "PC and consumer decline.",
-  "Regulation."
+  "Regulation.",
+  "Sentiment on AI spending: AI infrastructure stocks sold off on 5 November (S&P 500 -4.4%, Philadelphia semiconductor index -12.3%), and Nvidia's CEO Jensen Huang resigned on 11 November with the CFO as interim CEO."
  ],
  "lenses": {
   "eisman": "Ask how much of the $677B backlog is one AI lab, and what happens to the capex if that customer slows.",
@@ -207,6 +208,24 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Stockanalysis.com: S&P 500 loses about $2.9T in market value on 5 November",
+   "url": "https://stockanalysis.com/news/sp-500-record-one-day-market-value-loss/",
+   "date": "2026-11-05"
+  },
+  {
+   "tier": "A",
+   "title": "NVIDIA Form 8-K: CEO transition (Jensen Huang resigns; Colette Kress interim CEO)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+   "date": "2026-11-12"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -216,8 +235,8 @@
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Fiscal Q1 2027 10-Q (quarter to 30 September 2026) and release. Q2 reports in late January; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Fiscal Q1 2027 10-Q (quarter to 30 September 2026) and release. Prices to the 13 November 2026 close; news reviewed to 16 November. Q2 reports in late January; this review refreshes after the print.",
   "headline": "The best-positioned AI platform, growing faster than a year ago. The return clears the cost of equity, but our numbers are close to the Street’s; the risk is the depreciation bill.",
   "model": "Microsoft sells cloud computing (Azure), workplace software (Microsoft 365, Teams, Dynamics, LinkedIn) and consumer products (Windows, Xbox, Bing). Most revenue is recurring subscriptions sold to businesses.",
   "how_it_earns": [
@@ -411,7 +430,7 @@
   "questions": [
    "What return does Microsoft earn on the next $100B of AI capex?",
    "How concentrated is the $677B backlog?",
-   "Is 25x fair for earnings growth in the high teens?"
+   "Is 26x fair for earnings growth in the high teens?"
   ],
   "sources": [
    {
@@ -455,7 +474,7 @@
   "thesis_long": [
    "Microsoft is the best-positioned large company for enterprise AI. It owns the software most businesses already pay for, one of three hyperscale clouds, and a large stake in the leading AI lab. Growth accelerated this year: revenue +19%, Azure +48%, and a $677B order book that covers years of cloud revenue.",
    "The cost is capital. Additions to property and equipment nearly doubled to $39.4B in the quarter, and free cash flow fell to $18.6B even as net income rose. That spend becomes depreciation over the next several years, so margins depend on AI pricing staying above the cost of the infrastructure. Some of the backlog likely sits with a small number of very large AI customers.",
-   "Our base case lets growth fade toward the mid-teens and margin slip about two points, with the multiple held near 25x. EPS still compounds in the mid-teens, which beats the cost of equity over 12 months. But our estimates sit close to consensus, so that return reflects our cost of equity rather than something the market is missing, and without a variant view we hold the call at Equal weight. We would turn positive if operating margin held near 50% while capex rose, and negative if Azure growth fell below 35% with capex still climbing."
+   "Our base case lets growth fade toward the mid-teens and margin slip about two points, with the multiple held near 26x. EPS still compounds in the mid-teens, which beats the cost of equity over 12 months. But our estimates sit close to consensus, so that return reflects our cost of equity rather than something the market is missing, and without a variant view we hold the call at Equal weight. We would turn positive if operating margin held near 50% while capex rose, and negative if Azure growth fell below 35% with capex still climbing."
   ],
   "upside_risks": [
    {

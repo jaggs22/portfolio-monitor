@@ -6,7 +6,7 @@
  "horizon": 3,
  "header": {
   "one_liner": "The steadiest compounder in staples: volume is growing again, but commodity costs eat this year's earnings growth.",
-  "thesis": "P&G grew organic sales 4% in the September quarter on 2.4% volume growth, but gross margin fell 160 basis points on commodity costs and product investment, and full-year core EPS is guided flat to up 3%. The business is not the debate; whether 23x earnings is right for low-single-digit EPS growth is."
+  "thesis": "P&G grew organic sales 4% in the September quarter on 2.4% volume growth, but gross margin fell 160 basis points on commodity costs and product investment, and full-year core EPS is guided flat to up 3%. The business is not the debate; whether 24x earnings is right for low-single-digit EPS growth is."
  },
  "base": {
   "eps0": 7.0,
@@ -52,7 +52,7 @@
    "bear": 19,
    "bull": 25,
    "kind": "judgment",
-   "why": "Today's multiple is about 23x fiscal 2027 core EPS. The base case assumes a slight de-rating while EPS growth stays in low single digits; the bear case is close to where P&G traded when growth stalled in the mid-2010s.",
+   "why": "Today's multiple is about 24x fiscal 2027 core EPS. The base case assumes a slight de-rating while EPS growth stays in low single digits; the bear case is close to where P&G traded when growth stalled in the mid-2010s.",
    "source": "Engine judgment; current multiple computed from price and guided core EPS"
   }
  },
@@ -107,7 +107,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 23x fiscal 2027 core EPS for the most reliable earnings in staples.",
+  "street": "The market pays about 24x fiscal 2027 core EPS for the most reliable earnings in staples.",
   "ours": "The volume recovery is real but this year's EPS growth is flat to 3% because of commodity costs. Our base case earns roughly the cost of equity: a fair price for quality, not a bargain.",
   "could_be_wrong": "If commodity costs fall and productivity savings drop through, EPS growth returns to the mid-to-high single digits and the multiple holds.",
   "would_change_mind": "Organic sales growth below 2% for two quarters, or the price falling toward 20x core EPS."
@@ -201,6 +201,12 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -210,8 +216,8 @@
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q1 fiscal 2027 10-Q (quarter to 30 September 2026) and release. Q2 reports in January; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q1 fiscal 2027 10-Q (quarter to 30 September 2026) and release. Prices to the 13 November 2026 close; news reviewed to 16 November. Q2 reports in January; this review refreshes after the print.",
   "headline": "Volume is growing again and the brands are gaining share, but commodity costs take this year's EPS growth. Quality is fully priced.",
   "model": "P&G sells everyday household and personal care brands: Tide, Pampers, Gillette, Oral-B, Olay, Pantene and Vicks among them. It earns by selling more units and charging more for better products, and spends heavily on advertising to keep shelf space.",
   "how_it_earns": [
@@ -370,7 +376,7 @@
    },
    {
     "cause": "Higher rates lower the multiple",
-    "how": "Staples trade like bonds. With 10-year yields near 5%, a 23x multiple and 2.7% dividend yield face competition from risk-free income.",
+    "how": "Staples trade like bonds. With 10-year yields above 5%, a 24x multiple and 2.6% dividend yield face competition from risk-free income.",
     "watch": "10-year Treasury yield",
     "trip": null,
     "sev": "medium",
@@ -393,7 +399,7 @@
   "questions": [
    "Is the volume recovery bought with product investment that lowers gross margin?",
    "How much of the commodity headwind reverses if oil prices fall?",
-   "Is 23x right for flat to 3% EPS growth?"
+   "Is 24x right for flat to 3% EPS growth?"
   ],
   "sources": [
    {
@@ -436,7 +442,7 @@
   ],
   "thesis_long": [
    "P&G is one of the most dependable earners in consumer staples. It returns about $15B a year to shareholders and earns a return on capital near 20%. The September quarter showed the shape of the next phase: growth from volume and mix, with almost no price increase.",
-   "The pressure is on cost. Commodity, energy and freight costs are guided as a $1.4B after-tax headwind this year, and product investment to win volume cost another 140 basis points of gross margin in the quarter. Together with higher interest costs they hold core EPS growth to 0% to 3%. At about 23x earnings the stock pays for P&G's long-run growth rate, not this year's.",
+   "The pressure is on cost. Commodity, energy and freight costs are guided as a $1.4B after-tax headwind this year, and product investment to win volume cost another 140 basis points of gross margin in the quarter. Together with higher interest costs they hold core EPS growth to 0% to 3%. At about 24x earnings, after a rise to a 52-week high, the stock pays for P&G's long-run growth rate, not this year's.",
    "Our base case grows sales about 3% a year and recovers a little margin as commodity costs stabilise, which earns roughly the cost of equity over 12 months. We would turn positive on gross margin back above 51% or the price nearer 20x earnings, and negative on two quarters of organic growth below 2%."
   ],
   "upside_risks": [

@@ -5,7 +5,7 @@
  "as_of": "2026-10-27",
  "horizon": 3,
  "header": {
-  "one_liner": "Volume is growing 5% and guidance went up; at 29x earnings the stock already prices that in.",
+  "one_liner": "Volume is growing 5% and guidance went up; at about 30x earnings, a record high, the stock already prices that in.",
   "thesis": "Coca-Cola grew unit case volume 5% and organic revenue 7% in the third quarter, widened its comparable operating margin by a point and raised full-year guidance to at least 11% comparable EPS growth. The sale of its African bottling business will cut 2027 revenue by about 8% but raise margins. The franchise is excellent; the valuation leaves little to earn."
  },
  "base": {
@@ -52,7 +52,7 @@
    "bear": 21,
    "bull": 28,
    "kind": "judgment",
-   "why": "Today's multiple is about 29x 2026 comparable EPS, at the top of Coca-Cola's long-run range and far above PepsiCo and Keurig Dr Pepper. The base case assumes a de-rating toward 25x as growth returns to mid single digits.",
+   "why": "Today's multiple is about 30x 2026 comparable EPS, at the top of Coca-Cola's long-run range and far above PepsiCo and Keurig Dr Pepper. The base case assumes a de-rating toward 25x as growth returns to mid single digits.",
    "source": "Engine judgment; peer multiples from the Moat Monitor peer table"
   }
  },
@@ -103,7 +103,7 @@
   }
  ],
  "variant": {
-  "street": "The market pays about 29x 2026 earnings, the top of Coca-Cola's range, for accelerating volume and raised guidance.",
+  "street": "The market pays about 30x 2026 earnings, the top of Coca-Cola's range, for accelerating volume and raised guidance.",
   "ours": "This is a very good year for a very good business, priced as if it lasts. Our base case grows EPS mid single digits and lets the multiple drift down, which earns less than the cost of equity over 12 months.",
   "could_be_wrong": "If emerging-market volume keeps growing 5% and currency stays a tailwind, high-single-digit EPS growth supports today's multiple.",
   "would_change_mind": "2027 guidance above 8% comparable EPS growth, or the price falling toward 24x earnings."
@@ -181,7 +181,7 @@
  ],
  "lenses": {
   "eisman": "Concentrate shipments ran 2 points ahead of consumer volume; check that bottlers are not building inventory.",
-  "munger": "One of the great businesses of all time; 29x earnings asks you to pay for that twice.",
+  "munger": "One of the great businesses of all time; 30x earnings asks you to pay for that twice.",
   "buffett": "His longest-held stock, a perfect franchise; he would note the price is full.",
   "hohn": "Asset-light, pricing power, growing volume: the refranchising makes it cleaner still."
  },
@@ -197,6 +197,12 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
@@ -206,9 +212,9 @@
  ],
  "base_period_end": "2026-10-02",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q and release (quarter to 2 October 2026). Q4 and 2027 guidance come in February; this review refreshes after the print.",
-  "headline": "A rare year of volume, margin and guidance all moving up. At 29x earnings, the stock already pays for it.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 2 October 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 and 2027 guidance come in February; this review refreshes after the print.",
+  "headline": "A rare year of volume, margin and guidance all moving up. At 30x earnings, the stock already pays for it.",
   "model": "Coca-Cola makes concentrate and sells it to bottlers, which make, package and distribute the drinks. It earns high margins on concentrate and owns a few bottlers it is gradually selling.",
   "how_it_earns": [
    {
@@ -366,7 +372,7 @@
    },
    {
     "cause": "Valuation compresses",
-    "how": "At 29x, a return to the middle of its historical range would cost 15% or more.",
+    "how": "At 30x, a return to the middle of its historical range would cost 15% or more.",
     "watch": "Price-to-earnings vs history",
     "trip": "k3",
     "sev": "medium",
@@ -383,7 +389,7 @@
   ],
   "peer_read": {
    "why_premium": "Coca-Cola has higher margins and faster volume growth than PepsiCo and Keurig Dr Pepper, and is more asset-light.",
-   "why_not": "At 27x next-year earnings it is far more expensive than PepsiCo (16x) and Keurig Dr Pepper (15x).",
+   "why_not": "At 28x next-year earnings it is far more expensive than PepsiCo (16x) and Keurig Dr Pepper (15x).",
    "peers_note": "Monster trades higher still because it grows faster with no bottling assets."
   },
   "questions": [
@@ -406,7 +412,7 @@
    }
   ],
   "title": "A great year, already paid for",
-  "lead": "We rate Coca-Cola {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Volume grew 5% and guidance went up, but at 29x earnings the stock prices that in, and our next-year EPS is {vs_cons} consensus.",
+  "lead": "We rate Coca-Cola {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Volume grew 5% and guidance went up, but at 30x earnings the stock prices that in, and our next-year EPS is {vs_cons} consensus.",
   "call_reason": "Excellent franchise, full multiple: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
   "arguments": [
    {
@@ -432,7 +438,7 @@
   ],
   "thesis_long": [
    "Coca-Cola is having one of its best years. Unit case volume grew 5% in the third quarter, led by India, China, Mexico and Brazil, organic revenue grew 7% and comparable operating margin widened by a point. Management raised full-year guidance to at least 11% comparable EPS growth and $13B of free cash flow.",
-   "The question is price. At about 29x this year's earnings the stock sits at the top of its historical range and about 70% above PepsiCo's multiple. Part of this year's growth came from currency (about 3 points of EPS) and concentrate shipments that ran ahead of consumer volume. 2027 will look smaller on paper as the African bottlers are sold, though margins rise.",
+   "The question is price. At about 30x this year's earnings, after closing at a record high on 13 November, the stock sits at the top of its historical range and far above PepsiCo's multiple. Part of this year's growth came from currency (about 3 points of EPS) and concentrate shipments that ran ahead of consumer volume. 2027 will look smaller on paper as the African bottlers are sold, though margins rise.",
    "Our base case grows EPS mid single digits and lets the multiple drift toward 25x, which earns less than the cost of equity over 12 months even for a low-risk stock. We would turn positive on 2027 guidance above 8% EPS growth or a price nearer 24x earnings."
   ],
   "upside_risks": [

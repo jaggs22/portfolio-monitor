@@ -185,7 +185,8 @@
   "Rate cuts squeeze NII.",
   "Trading normalises.",
   "Capital rules.",
-  "Succession."
+  "Succession.",
+  "Reputational and legal: a planned Senate inquiry into the Epstein relationship from early 2027."
  ],
  "lenses": {
   "eisman": "Credit is the swing factor at a bank this size; check card charge-offs every quarter.",
@@ -205,17 +206,30 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "IBTimes: JPMorgan Chase faces renewed scrutiny over Epstein relationship",
+   "url": "https://www.ibtimes.co.uk/senate-democrats-jpmorgan-epstein-inquiry-1830484",
+   "date": "2026-11-05"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
   "Q3 2026 10-Q not yet in the pipeline; figures are from the earnings supplement.",
   "The reason for the slower buyback pace is not stated in the pages retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Fourth-quarter report date not yet confirmed by the company.",
+  "Scope, timing and any financial exposure from the planned Senate inquiry are not known."
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 earnings release financial supplement (quarter to 30 September 2026). Q4 reports in mid-January; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 earnings release financial supplement (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 reports in mid-January; this review refreshes after the print.",
   "headline": "The strongest US bank, earning about 20% on tangible equity. The premium to peers is deserved and already in the price.",
   "model": "JPMorgan takes deposits and lends them out (consumer, card, commercial), runs the largest US investment bank and trading business, and manages money for wealthy clients and institutions. It earns the spread on loans, plus fees.",
   "how_it_earns": [
@@ -318,6 +332,11 @@
    {
     "flag": "Buyback pace dropped",
     "evidence": "Repurchases $1.1B in Q3 vs $6.7B in Q2 and $8.3B a year earlier.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Renewed congressional scrutiny of the Epstein relationship",
+    "evidence": "Reports on 5 November (CNBC, via Reuters) said Senate Finance Committee Democratic staff plan an inquiry into how senior executives handled Jeffrey Epstein's accounts, expected to start in early 2027. The shares fell about 3% intraday. It is a planned inquiry, not a finding; the financial exposure is not quantifiable from what is public.",
     "severity": "watch"
    }
   ],

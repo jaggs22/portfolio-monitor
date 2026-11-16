@@ -182,7 +182,8 @@
   "Interest rates.",
   "Currency.",
   "Data center competition.",
-  "Carrier consolidation and churn."
+  "Carrier consolidation and churn.",
+  "Starlink Mobile could add a tenant, but its build plan may rely on rooftops rather than macro towers; no SpaceX lease is confirmed."
  ],
  "lenses": {
   "eisman": "Look at organic tenant billings, not headline revenue: 1.1% growth is a utility, priced like one.",
@@ -202,17 +203,36 @@
    "title": "Yahoo Finance via the Moat Monitor pipeline: consensus estimates, peers, prices",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-03"
+  },
+  {
+   "tier": "C",
+   "title": "TIKR: Crown Castle soars 6% as SpaceX taps Qualcomm for a credible fourth mobile network",
+   "url": "https://www.tikr.com/blog/crown-castle-soars-6-as-spacex-taps-qualcomm-for-a-credible-fourth-mobile-network",
+   "date": "2026-11-04"
+  },
+  {
+   "tier": "C",
+   "title": "Wireless Estimator: SpaceX wants to be a fourth major network, but it's building around towers",
+   "url": "https://wirelessestimator.com/articles/2026/spacex-wants-to-be-a-fourth-major-network-but-its-building-around-towers-not-on-them/",
+   "date": "2026-11-05"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
+   "url": "https://finance.yahoo.com",
+   "date": "2026-11-14"
   }
  ],
  "gaps": [
   "Consensus EPS is on a GAAP basis and is not comparable with AFFO per share.",
   "Carrier-level churn detail not retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Fourth-quarter report date not yet confirmed by the company.",
+  "Whether SpaceX will lease American Tower sites, and on what terms, is not known."
  ],
  "base_period_end": "2026-09-30",
  "review": {
-  "as_of": "2026-11-03",
-  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Q4 and the 2027 outlook come in February; this review refreshes after the print.",
+  "as_of": "2026-11-16",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Q4 and the 2027 outlook come in February; this review refreshes after the print.",
   "headline": "Towers grow slowly, data centers fast. At 17x AFFO with leverage repaired, the stock is fairly priced.",
   "model": "American Tower owns more than 100,000 communications sites worldwide and leases space on them to mobile carriers under long contracts with annual escalators. It also owns CoreSite data centers in the US.",
   "how_it_earns": [
@@ -454,6 +474,10 @@
    {
     "cause": "Value of CoreSite recognised",
     "how": "A sale or separate valuation of the data center business could show more value than the blended multiple implies."
+   },
+   {
+    "cause": "A fourth US network leases towers",
+    "how": "On 4 November SpaceX picked Qualcomm to supply base stations for a Starlink Mobile terrestrial 5G network from 2027, and is reported to want access to up to 80,000 sites. AMT rose about 4% that day. No lease has been signed, and SpaceX has described a build that leans on rooftops as well as towers."
    }
   ]
  },
