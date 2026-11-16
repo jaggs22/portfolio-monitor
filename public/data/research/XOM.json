@@ -128,8 +128,22 @@
  },
  "catalysts": [
   {
-   "date": "2027-01-30",
-   "label": "Exxon Mobil Q4 2026 earnings (date not confirmed)",
+   "date": "2026-12-31",
+   "label": "2027 plan metrics press release, due by end of Q4 (no December plan event this year; exact date not given)",
+   "confirmed": false,
+   "note": "Management said it would reaffirm key 2027 metrics, including $20B of buybacks, by press release later in Q4.",
+   "importance": "Medium"
+  },
+  {
+   "date": "2026-12-31",
+   "label": "Longtail (Guyana gas and condensate) final investment decision targeted by end-2026",
+   "confirmed": false,
+   "note": "Needs government approval of the development plan first; no approval confirmed as of 16 November.",
+   "importance": "Medium"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Exxon Mobil Q4 2026 earnings (not yet announced; most calendars show 29 January, last year 30 January)",
    "confirmed": false,
    "note": "Watch refining margins, Middle East volumes and 2027 capex and buyback plans.",
    "importance": "High"
@@ -207,12 +221,17 @@
    "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-14"
+  },
+  {
+   "tier": "C",
+   "title": "OilNOW: Longtail, Guyana's entry into gas development (FID targeted end-2026) (accessed 16 November; publication date not shown)",
+   "url": "https://oilnow.gy/?p=91605",
+   "date": "2026-11-16"
   }
  ],
  "gaps": [
   "Earnings release and 2027 corporate plan not retrieved.",
-  "Diluted share count and EPS excluding identified items estimated from the 10-Q totals.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Diluted share count and EPS excluding identified items estimated from the 10-Q totals."
  ],
  "base_period_end": "2026-09-30",
  "review": {

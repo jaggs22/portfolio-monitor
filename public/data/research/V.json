@@ -130,28 +130,28 @@
   "detail": "The existing Porter card (10-K based, FY2025) rates Visa Strong. The fiscal 2026 10-K does not contradict it, but buyer power from issuers shows in incentives growing faster than revenue."
  },
  "quality": {
-  "leverage_note": "Debt about $22.1B against cash, restricted cash and investments of about $14.8B at 30 September 2026 (third-party tally of the 10-K): modest leverage for a business earning about $30B a year pre-tax.",
+  "leverage_note": "Debt $22.1B ($2.7B current, $19.4B long-term) against cash and equivalents of $12.9B plus $0.85B of debt securities at 30 September 2026 (10-K): modest leverage for a business earning about $30B a year pre-tax.",
   "leverage_ok": true,
   "incentive_note": "Incentives to clients grew 21% in Q4 against 13% net revenue growth, the third quarter in a row of acceleration.",
   "incentive_ok": false,
   "checks": [
    "Tax rate 18.4% non-GAAP in Q4; fiscal 2027 guided at about 19%",
-   "Fiscal 2026 free cash flow about $22.1B against $25.6B of buybacks and dividends (third-party tally); the gap was funded from cash"
+   "Fiscal 2026 free cash flow $22.1B (operating cash flow $23.7B less $1.7B capex) against $25.6B of buybacks ($20.5B) and dividends ($5.1B); the gap came from cash, which fell from $17.2B to $12.9B"
   ]
  },
  "catalysts": [
   {
    "date": "2027-01-28",
-   "label": "Visa fiscal Q1 2027 earnings (date not confirmed; usually late January)",
+   "label": "Visa fiscal Q1 2027 earnings (not yet announced; estimates 26 to 28 January, last year 29 January)",
    "confirmed": false,
-   "note": "Guide: net revenue and opex growth low double digits; EPS growth low end of mid-teens.",
+   "note": "Guide: net revenue and opex growth low double digits; EPS growth low end of mid-teens. Fiscal 2027 value-added services guided to low-to-mid 20s growth; about 25% of payments volume up for renewal this year.",
    "importance": "High"
   },
   {
    "date": "2027-03-31",
-   "label": "BioCatch acquisition ($2.4B cash) expected to close by end of March 2027",
+   "label": "BioCatch acquisition ($2.4B cash): third-party summaries cite a close by March 2027",
    "confirmed": false,
-   "note": "Company-stated timing: by fiscal Q2 2027.",
+   "note": "The 10-K gives no closing date; it is subject to regulatory approvals.",
    "importance": "Low"
   }
  ],
@@ -226,8 +226,8 @@
  "sources": [
   {
    "tier": "A",
-   "title": "Visa Inc. fiscal Q4 and full-year 2026 earnings release and Form 10-K (accession 0001403161-26-000134) (via last10k.com)",
-   "url": "https://last10k.com/sec-filings/v/0001403161-26-000134.htm",
+   "title": "Visa Inc. Form 10-K, year ended 30 September 2026 (balance sheet, cash flow, liquidity)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000134/v-20260930.htm",
    "date": "2026-11-05"
   },
   {
@@ -244,21 +244,20 @@
   },
   {
    "tier": "C",
-   "title": "Finsee: Visa Q4 2026 earnings review (incentive share of gross revenue, cash, debt, free cash flow)",
-   "url": "https://finsee.ai/earnings/v/2026/q4/en/",
-   "date": "2026-10-28"
-  },
-  {
-   "tier": "C",
    "title": "Visa statement on preliminary approval of the MDL settlement",
    "url": "https://corporate.visa.com/en/sites/visa-perspectives/company-news/visa-statement-mdl-settlement.html",
    "date": "2026-06-09"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance: Visa Q4 earnings call highlights (FY27 and Q1 outlook, VAS growth guide)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/visa-q4-earnings-call-highlights-165400310.html",
+   "date": "2026-10-29"
   }
  ],
  "gaps": [
-  "Cash, debt and free cash flow are from a third-party tally of the 10-K, not read from the filing directly.",
   "Final court approval date for the interchange settlement not found.",
-  "Fiscal Q1 2027 earnings date not confirmed."
+  "Fiscal Q1 2027 earnings date not yet announced by Visa."
  ],
  "base_period_end": "2026-09-30",
  "review": {
@@ -357,7 +356,7 @@
   "balance": {
    "read": "Net cash-like leverage. The real liabilities are litigation and settlement guarantees, not debt.",
    "facts": [
-    "Total debt about $22.1B, down from $25.2B a year earlier",
+    "Total debt $22.1B, down from $25.2B a year earlier (10-K balance sheet)",
     "$20.5B of buybacks in fiscal 2026; $24.4B authorised",
     "Interchange litigation funded by class B conversion: $469M Q4 provision, $405M escrow deposit in September"
    ]
@@ -454,8 +453,8 @@
   "sources": [
    {
     "tier": "A",
-    "title": "Visa Inc. Form 10-K, year ended 30 September 2026 (via last10k.com)",
-    "url": "https://last10k.com/sec-filings/v/0001403161-26-000134.htm",
+    "title": "Visa Inc. Form 10-K, year ended 30 September 2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000134/v-20260930.htm",
     "date": "2026-11-05"
    },
    {

@@ -124,8 +124,15 @@
  },
  "catalysts": [
   {
+   "date": "2027-01-04",
+   "label": "John Morris succeeds Jim Fish as WM CEO",
+   "confirmed": true,
+   "note": "Announced 26 August 2026 (8-K). The Q4 call will be his first as CEO.",
+   "importance": "Medium"
+  },
+  {
    "date": "2027-01-28",
-   "label": "WM Q4 2026 earnings and 2027 guidance (date not confirmed)",
+   "label": "WM Q4 2026 earnings and 2027 guidance (not yet announced; estimates 27 January to 3 February, last year 28 January)",
    "confirmed": false,
    "note": "2026 guide: revenue at the high end of $26.275B to $26.475B; adjusted operating EBITDA $8.15B to $8.25B; free cash flow at the high end of $3.75B to $3.85B.",
    "importance": "High"
@@ -203,12 +210,17 @@
    "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-14"
+  },
+  {
+   "tier": "A",
+   "title": "WM Form 8-K: Jim Fish to retire; John Morris named CEO effective 4 January 2027",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000823768/000110465926101077/tm2624023d1_ex99-1.htm",
+   "date": "2026-08-26"
   }
  ],
  "gaps": [
   "2027 guidance not given until the Q4 report.",
-  "Landfill capacity and remaining life not retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Landfill capacity and remaining life not retrieved."
  ],
  "base_period_end": "2026-09-30",
  "review": {

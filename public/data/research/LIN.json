@@ -146,9 +146,9 @@
  "catalysts": [
   {
    "date": "2027-02-05",
-   "label": "Linde Q4 2026 earnings and 2027 guidance (date not confirmed; usually early February)",
+   "label": "Linde Q4 2026 earnings and 2027 guidance (not yet announced; last year 5 February, some calendars show 11 February)",
    "confirmed": false,
-   "note": "Guide: Q4 adjusted EPS $4.40 to $4.50 (+5% to +7%). Watch 2027 EPS guide and backlog.",
+   "note": "Guide: Q4 adjusted EPS $4.40 to $4.50 (+5% to +7%). Last year Linde announced the date on 9 January.",
    "importance": "High"
   }
  ],
@@ -229,7 +229,7 @@
  "gaps": [
   "Return on capital and the Linde AG purchase accounting add-back for Q3 not retrieved.",
   "The release does not say how much of the backlog decline is plant start-ups versus fewer new contracts.",
-  "Q4 2026 earnings date not confirmed."
+  "Q4 2026 earnings date not yet announced (calendars disagree: 5 or 11 February)."
  ],
  "base_period_end": "2026-09-30",
  "review": {

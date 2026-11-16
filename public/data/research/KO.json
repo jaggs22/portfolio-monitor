@@ -124,8 +124,8 @@
  },
  "catalysts": [
   {
-   "date": "2027-02-10",
-   "label": "Coca-Cola Q4 2026 earnings and 2027 guidance (date not confirmed)",
+   "date": "2027-02-09",
+   "label": "Coca-Cola Q4 2026 earnings and 2027 guidance (not yet announced; estimates 9 to 16 February, last year 10 February)",
    "confirmed": false,
    "note": "2027 considerations: about 8% revenue and 2% EPS headwind from divestitures; slight currency headwind.",
    "importance": "High"
@@ -207,8 +207,7 @@
  ],
  "gaps": [
   "2027 guidance not given until the Q4 report.",
-  "Terms of the African bottling sale not retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Terms of the African bottling sale not retrieved."
  ],
  "base_period_end": "2026-10-02",
  "review": {

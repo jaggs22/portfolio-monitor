@@ -136,8 +136,8 @@
  },
  "catalysts": [
   {
-   "date": "2027-02-05",
-   "label": "Amazon Q4 2026 earnings (date not confirmed)",
+   "date": "2027-02-04",
+   "label": "Amazon Q4 2026 earnings (not yet announced; estimates 4 to 5 February, last year 5 February)",
    "confirmed": false,
    "note": "Guide: net sales $240.0B to $247.0B; operating income $28.5B to $33.5B; 2027 capex outlook.",
    "importance": "High"
@@ -238,8 +238,7 @@
  ],
  "gaps": [
   "2027 capex guidance not yet given.",
-  "AWS backlog not retrieved from the sources.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "AWS backlog not retrieved from the sources."
  ],
  "base_period_end": "2026-09-30",
  "review": {

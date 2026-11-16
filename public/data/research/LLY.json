@@ -126,7 +126,7 @@
   "detail": "Existing Porter card (FY2025 10-K) rates Lilly Moderate because buyer power is high."
  },
  "quality": {
-  "leverage_note": "Total debt about $49.5B at 30 September, down from $54.9B at 30 June, after $18.2B of business development cash in nine months (third-party tally of the 10-Q).",
+  "leverage_note": "Total debt $49.5B at 30 September ($2.5B short-term, $47.0B long-term), up $7.0B since December; cash $4.9B (10-Q).",
   "leverage_ok": true,
   "incentive_note": "Acquired IPR&D of $4.2B in Q3 alone ($7.6 a share across Q2 and Q3); ask whether it is a recurring cost of staying ahead.",
   "incentive_ok": false,
@@ -138,7 +138,7 @@
  "catalysts": [
   {
    "date": "2027-02-04",
-   "label": "Lilly Q4 2026 earnings and 2027 guidance (date not confirmed; usually early February)",
+   "label": "Lilly Q4 2026 earnings and 2027 guidance (not yet announced; estimates 3 to 10 February)",
    "confirmed": false,
    "note": "Watch 2027 revenue guide, US price versus volume, and acquired IPR&D.",
    "importance": "High"
@@ -240,16 +240,16 @@
    "date": "2026-11-06"
   },
   {
-   "tier": "C",
-   "title": "sec-api.io: Eli Lilly Q3 2026 10-Q analysis (debt, business development cash)",
-   "url": "https://sec-api.io/insights/eli-lilly-lly-q3-2026-earnings-sec-filing-analysis",
-   "date": "2026-10-31"
+   "tier": "A",
+   "title": "Eli Lilly Form 10-Q, quarter ended 30 September 2026 (financial condition and liquidity)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000108/lly-20260930.htm",
+   "date": "2026-10-29"
   }
  ],
  "gaps": [
   "Verzenio, Trulicity and Taltz revenue not stated in the release.",
-  "Q3 repurchases and capex not stated in the release; debt is from a third-party tally.",
-  "Q4 earnings date not confirmed."
+  "Q3 repurchases and capex not stated in the release.",
+  "Q4 earnings date not yet announced (estimates 3 to 10 February)."
  ],
  "base_period_end": "2026-09-30",
  "review": {
@@ -356,11 +356,11 @@
    }
   ],
   "balance": {
-   "read": "Leverage is low against EBITDA; debt fell in Q3 after rising $12.4B in H1 to fund deals.",
+   "read": "Leverage is low against EBITDA; debt fell in Q3 after commercial paper was repaid, but is up $7.0B on the year to fund deals.",
    "facts": [
-    "Total debt about $49.5B at 30 September (third-party tally), from $54.9B at 30 June",
-    "$18.2B of business development cash in nine months",
-    "Merida Biosciences acquired after quarter end"
+    "Total debt $49.5B at 30 September, from $54.9B at 30 June and $42.5B at December (10-Q)",
+    "Cash $4.9B, down from $7.3B at December",
+    "$9.0B of long-term notes issued in May for acquisitions (Centessa, Kelonia); Merida Biosciences acquired after quarter end"
    ]
   },
   "flags": [
@@ -456,7 +456,7 @@
    {
     "tier": "A",
     "title": "Eli Lilly Form 10-Q, quarter ended 30 September 2026",
-    "url": "https://last10k.com/sec-filings/lly/0000059478-26-000108.htm",
+    "url": "https://www.sec.gov/Archives/edgar/data/0000059478/000005947826000108/lly-20260930.htm",
     "date": "2026-10-29"
    },
    {
@@ -484,7 +484,7 @@
    },
    {
     "label": "Capital",
-    "text": "Lilly spent $18.2B on business development in nine months and expenses much of it as acquired IPR&D. Debt fell back to about $49.5B in Q3 and leverage is low against EBITDA, but more of the growth is now bought."
+    "text": "Lilly issued $9.0B of notes in May to fund acquisitions and expenses much of what it buys as acquired IPR&D. Debt fell back to $49.5B in Q3 and leverage is low against EBITDA, but more of the growth is now bought."
    },
    {
     "label": "Valuation",

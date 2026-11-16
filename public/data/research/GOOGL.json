@@ -133,7 +133,7 @@
  "catalysts": [
   {
    "date": "2027-02-03",
-   "label": "Alphabet Q4 2026 earnings (date not confirmed)",
+   "label": "Alphabet Q4 2026 earnings (not yet announced; estimate 3 February, last year 4 February)",
    "confirmed": false,
    "note": "Watch Cloud growth and margin, 2027 capex guidance and whether buybacks resume.",
    "importance": "High"
@@ -230,8 +230,7 @@
  ],
  "gaps": [
   "2027 capex guidance not retrieved.",
-  "Status of US search and ad tech antitrust remedies not retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company."
+  "Status of US search and ad tech antitrust remedies not retrieved."
  ],
  "base_period_end": "2026-09-30",
  "review": {

@@ -136,8 +136,8 @@
   },
   {
    "date": "2026-12-10",
-   "label": "Costco fiscal Q1 2027 earnings (date not confirmed)",
-   "confirmed": false,
+   "label": "Costco fiscal Q1 2027 earnings (confirmed: after the close, call 2:00 pm PT)",
+   "confirmed": true,
    "note": "Monthly sales reports in between; watch adjusted comps and membership fee growth.",
    "importance": "High"
   }
@@ -220,12 +220,17 @@
    "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-14"
+  },
+  {
+   "tier": "A",
+   "title": "Costco investor relations: Q1 2027 earnings call event",
+   "url": "https://investor.costco.com/events-and-presentations/events/event-details/2026/Q1-2027-Earnings-Call/default.aspx",
+   "date": "2026-11-16"
   }
  ],
  "gaps": [
   "No formal earnings guidance; Costco does not provide it.",
   "Timing of any future membership fee increase or special dividend is unknown.",
-  "Fiscal Q1 2027 report date not yet confirmed by the company.",
   "The engine's 12-month return excludes the $30 special dividend."
  ],
  "base_period_end": "2026-08-30",

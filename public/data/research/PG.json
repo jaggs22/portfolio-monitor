@@ -129,7 +129,7 @@
  "catalysts": [
   {
    "date": "2027-01-21",
-   "label": "P&G fiscal Q2 2027 earnings (date not confirmed)",
+   "label": "P&G fiscal Q2 2027 earnings (not yet announced; estimates 20 or 21 January)",
    "confirmed": false,
    "note": "FY2027 guide: organic sales +1% to +3%; core EPS $6.89 to $7.11.",
    "importance": "High"
@@ -211,8 +211,7 @@
  ],
  "gaps": [
   "Market share by category not retrieved in full.",
-  "Thorne revenue and margin not yet disclosed.",
-  "Fiscal Q2 report date not yet confirmed by the company."
+  "Thorne revenue and margin not yet disclosed."
  ],
  "base_period_end": "2026-09-30",
  "review": {

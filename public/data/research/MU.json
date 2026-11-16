@@ -132,10 +132,10 @@
  },
  "catalysts": [
   {
-   "date": "2026-12-17",
-   "label": "Micron fiscal Q1 2027 earnings (date not confirmed)",
+   "date": "2026-12-23",
+   "label": "Micron fiscal Q1 2027 earnings (not yet announced; most calendars show 23 December, last year was 17 December)",
    "confirmed": false,
-   "note": "Guide: revenue $61.5B ± $1.5B; non-GAAP gross margin about 86.25%; EPS $38.15 ± $1.00.",
+   "note": "Guide: revenue $61.5B ± $1.5B; non-GAAP gross margin about 86.25%; EPS $38.15 ± $1.00. Last year Micron announced the date on 19 November, so confirmation is likely within days.",
    "importance": "High"
   }
  ],

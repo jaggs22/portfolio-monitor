@@ -135,17 +135,24 @@
    "importance": "High"
   },
   {
-   "date": "2027-01-15",
-   "label": "Virginia and South Carolina orders on the Dominion merger (expected January 2027)",
-   "confirmed": false,
-   "note": "Virginia hearings in November, South Carolina in December; North Carolina hearings begin February 2027.",
+   "date": "2026-12-08",
+   "label": "South Carolina PSC evidentiary hearing on the Dominion merger (Docket 2026-186-EG)",
+   "confirmed": true,
+   "note": "Proposed order due 29 December.",
    "importance": "High"
   },
   {
-   "date": "2027-01-27",
-   "label": "NextEra Q4 2026 earnings (date not confirmed)",
+   "date": "2027-01-26",
+   "label": "NextEra Q4 2026 earnings (not yet announced; estimates 20 to 27 January, last year 27 January)",
    "confirmed": false,
    "note": "2026 adjusted EPS guide $3.92 to $4.02, targeting the high end.",
+   "importance": "High"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "South Carolina PSC final order on the Dominion merger expected by this date",
+   "confirmed": false,
+   "note": "Schedule can move for good cause. Virginia and North Carolina order dates not confirmed in sources retrieved.",
    "importance": "High"
   }
  ],
@@ -227,18 +234,23 @@
    "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-14"
+  },
+  {
+   "tier": "C",
+   "title": "Live 5 News: SC regulators set hearing schedule for Dominion-NextEra merger",
+   "url": "https://www.live5news.com/2026/08/04/sc-regulators-set-hearing-schedule-proposed-dominion-energy-nextera-merger/",
+   "date": "2026-08-04"
   }
  ],
  "gaps": [
   "Segment data not available from the XBRL instance; FPL and NEER figures are from the release.",
   "Merger accretion per share not stated in the release.",
-  "Fourth-quarter report date not yet confirmed by the company.",
   "The three Virginia conditions not accepted, and their cost, are not detailed in the sources retrieved."
  ],
  "base_period_end": "2026-09-30",
  "review": {
   "as_of": "2026-11-16",
-  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. Merger orders expected January 2027; this review refreshes then.",
+  "basis": "Q3 2026 10-Q and release (quarter to 30 September 2026). Prices to the 13 November 2026 close; news reviewed to 16 November. South Carolina merger order expected by 29 January 2027; this review refreshes then.",
   "headline": "Two growth engines and a transforming merger. 8%+ EPS growth is credible; at 21x the shares already pay for it.",
   "model": "NextEra owns Florida Power & Light, a regulated utility that earns an allowed return on what it invests, and NextEra Energy Resources, which builds wind, solar and battery projects and sells the power under long contracts.",
   "how_it_earns": [

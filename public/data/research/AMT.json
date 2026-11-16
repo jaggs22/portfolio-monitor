@@ -130,7 +130,7 @@
  "catalysts": [
   {
    "date": "2027-02-24",
-   "label": "American Tower Q4 2026 earnings and 2027 outlook (date not confirmed)",
+   "label": "American Tower Q4 2026 earnings and 2027 outlook (not yet announced; estimates 23 to 25 February, last year 24 February)",
    "confirmed": false,
    "note": "2026 guide: AFFO per share $11.04 to $11.16; property revenue $10.785B to $10.865B.",
    "importance": "High"
@@ -226,7 +226,6 @@
  "gaps": [
   "Consensus EPS is on a GAAP basis and is not comparable with AFFO per share.",
   "Carrier-level churn detail not retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company.",
   "Whether SpaceX will lease American Tower sites, and on what terms, is not known."
  ],
  "base_period_end": "2026-09-30",

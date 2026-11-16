@@ -129,7 +129,7 @@
  "catalysts": [
   {
    "date": "2027-01-27",
-   "label": "Microsoft fiscal Q2 2027 earnings (date not confirmed)",
+   "label": "Microsoft fiscal Q2 2027 earnings (not yet announced; estimates 26 to 28 January)",
    "confirmed": false,
    "note": "Watch Azure growth, capex and operating margin guidance.",
    "importance": "High"
@@ -230,8 +230,7 @@
  ],
  "gaps": [
   "Full-year capex guidance: press reports differ on whether the about $175B figure is for fiscal 2027 or calendar 2026.",
-  "Share of the remaining performance obligation from OpenAI not disclosed in the sources retrieved.",
-  "Fiscal Q2 report date not yet confirmed by the company."
+  "Share of the remaining performance obligation from OpenAI not disclosed in the sources retrieved."
  ],
  "base_period_end": "2026-09-30",
  "review": {

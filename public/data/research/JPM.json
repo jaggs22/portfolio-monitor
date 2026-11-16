@@ -132,9 +132,9 @@
  },
  "catalysts": [
   {
-   "date": "2027-01-13",
-   "label": "JPMorgan Q4 2026 earnings (date not confirmed)",
-   "confirmed": false,
+   "date": "2027-01-14",
+   "label": "JPMorgan Q4 2026 earnings (confirmed: release about 6:45 am ET, call 8:30 am ET)",
+   "confirmed": true,
    "note": "Watch 2027 NII guidance, expenses and the pace of buybacks.",
    "importance": "High"
   }
@@ -218,12 +218,17 @@
    "title": "Yahoo Finance chart feed via the Moat Monitor pipeline: closing prices of 13 November 2026",
    "url": "https://finance.yahoo.com",
    "date": "2026-11-14"
+  },
+  {
+   "tier": "A",
+   "title": "JPMorganChase: conference call dates for 2026 earnings (Q4 2026 on 14 January 2027)",
+   "url": "https://www.jpmorganchase.com/ir/news/2025/jpmc-announces-conference-calls-to-review-first-quarter-second-quarter-third-quarter-and-fourth-quarter-2026-earnings",
+   "date": "2025-05-21"
   }
  ],
  "gaps": [
   "Q3 2026 10-Q not yet in the pipeline; figures are from the earnings supplement.",
   "The reason for the slower buyback pace is not stated in the pages retrieved.",
-  "Fourth-quarter report date not yet confirmed by the company.",
   "Scope, timing and any financial exposure from the planned Senate inquiry are not known."
  ],
  "base_period_end": "2026-09-30",
