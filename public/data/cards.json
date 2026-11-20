@@ -3964,5 +3964,299 @@
    "story": "Long non-cancellable leases with fixed escalators and a short list of tower peers support stable pricing, but three carriers hold about half of revenue and give buyers leverage.",
    "numbers": "Operating margin of 45.5% and 2% churn fit the story; the DISH default and 359% debt to equity show the concentration and leverage risks."
   }
+ },
+ "RYCEY": {
+  "id": "RYCEY-2026H1",
+  "ticker": "RYCEY",
+  "name": "Rolls-Royce",
+  "version": "1.0",
+  "as_of": "2026-06-30",
+  "data_note": "Based on the FY2025 and FY2023 results releases, the H1 2026 results and the 12 November 2026 trading update (Rolls-Royce files no 10-K; these are its regulatory announcements). Underlying figures, in sterling. Underlying revenue and operating profit for 2023 to 2025 and the first halves of 2025 and 2026 were retrieved. Customer and supplier concentration figures were not found.",
+  "verdict": "Moderate",
+  "trend": "improving",
+  "confidence": "Medium",
+  "summary": "Rolls-Royce is the sole engine on the Airbus A350 and A330neo and services its fleet under long-term agreements, so entrants and substitutes score 4. Supply chain shortages, costing £150M to £200M of cash in 2026, keep suppliers at 2. Underlying operating margin rose from 10.3% in 2023 to 17.3% in 2025 and 22.5% in the first half of 2026.",
+  "forces": {
+   "rivalry": {
+    "score": 3,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Underlying operating margin: 2023 10.3%, 2024 13.8%, 2025 17.3%; underlying revenue grew from £15,409M to £20,059M.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Rolls-Royce 2025 Full Year Results",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+       "date": "2026-02-26"
+      }
+     },
+     {
+      "text": "The Trent 1000 competes with GE's GEnx on the Boeing 787; the company has no engine in the narrowbody market, where GE and Safran's CFM joint venture and Pratt & Whitney compete.",
+      "basis": "management",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce 2025 Full Year Results",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+       "date": "2026-02-26"
+      }
+     },
+     {
+      "text": "Large engine order backlog of about 2,500 engines, with 70 Trent 7000 engines for Avolon and 22 for Cathay ordered in the second half of 2026.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce Trading Update",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+       "date": "2026-11-12"
+      }
+     }
+    ]
+   },
+   "buyers": {
+    "score": 3,
+    "trend": "strengthening",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Civil Aerospace margin rose to 25.3% in H1 2026 from 24.9%, on higher long-term service agreement margins and contractual improvements.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce 2026 Half Year Results press release",
+       "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+       "date": "2026-07-30"
+      }
+     },
+     {
+      "text": "Airlines and lessors buy engines through the airframer, and Airbus and Boeing negotiate engine supply; the Trent 7000 is the exclusive engine for the A330neo.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce welcomes Avolon order for 70 Trent 7000 engines",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/13-10-2026-rr-welcomes-avolon-order-for-70-trent-7000-engines.aspx",
+       "date": "2026-10-13"
+      }
+     },
+     {
+      "text": "Civil revenue £6,186M in H1 2026 against £4,786M a year earlier (+29% organic), while operating profit rose from £1,193M to £1,567M.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Rolls-Royce 2026 Half Year Results press release",
+       "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+       "date": "2026-07-30"
+      }
+     }
+    ]
+   },
+   "suppliers": {
+    "score": 2,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "2026 free cash flow guidance includes a £150M to £200M cash impact from the aerospace supply chain, expected to be gone by the mid-term.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce 2026 Half Year Results press release",
+       "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+       "date": "2026-07-30"
+      }
+     },
+     {
+      "text": "FY2025: parts availability is improving but still constrained.",
+      "basis": "management",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce 2025 Full Year Results",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+       "date": "2026-02-26"
+      }
+     },
+     {
+      "text": "Civil service agreement balance grew £86M in H1 2026 against £472M in H1 2025, partly on higher supply chain costs in long-term service agreements.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Rolls-Royce 2026 Half Year Results press release",
+       "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+       "date": "2026-07-30"
+      }
+     }
+    ]
+   },
+   "entrants": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "The Trent XWB is the exclusive engine for the A350.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Trent XWB in focus",
+       "url": "https://www.rolls-royce.com/media/our-stories/discover/2020/post-covid-19.aspx",
+       "date": "2020-08-11"
+      }
+     },
+     {
+      "text": "Large engine flying hours were 114% of 2019 levels in the first ten months of 2026, and legacy engine retirements were the lowest since 2018.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce Trading Update",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+       "date": "2026-11-12"
+      }
+     },
+     {
+      "text": "The company and the UK government plan a 10-year, £2.5bn research and technology programme for gas turbine technology.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce Trading Update",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+       "date": "2026-11-12"
+      }
+     }
+    ]
+   },
+   "substitutes": {
+    "score": 4,
+    "trend": "stable",
+    "firm_adjust": 0,
+    "evidence": [
+     {
+      "text": "Large engine order backlog of about 2,500 engines; the Airbus A350F has more than 100 orders from 14 airlines and enters service in 2027.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce Trading Update",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+       "date": "2026-11-12"
+      }
+     },
+     {
+      "text": "Power Systems order intake rose 62% in the first nine months of 2026 and the backlog reached a record £8.6bn, led by data centre power.",
+      "basis": "filing",
+      "tier": "M",
+      "source": {
+       "title": "Rolls-Royce Trading Update",
+       "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+       "date": "2026-11-12"
+      }
+     },
+     {
+      "text": "Underlying revenue grew 26% organically in H1 2026, with all three divisions growing: Civil 29%, Power Systems 28%, Defence 17%.",
+      "basis": "computed",
+      "tier": "H",
+      "source": {
+       "title": "Rolls-Royce 2026 Half Year Results press release",
+       "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+       "date": "2026-07-30"
+      }
+     }
+    ]
+   }
+  },
+  "supporting": [
+   {
+    "text": "Underlying operating profit rose from £1,590M (2023) to £3,462M (2025) and £2,534M in H1 2026 alone.",
+    "source": {
+     "title": "Rolls-Royce 2025 Full Year Results",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+     "date": "2026-02-26"
+    }
+   },
+   {
+    "text": "Sole engine on the A350 and A330neo, with a large engine backlog of about 2,500 engines.",
+    "source": {
+     "title": "Rolls-Royce Trading Update",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+     "date": "2026-11-12"
+    }
+   },
+   {
+    "text": "Net cash of £2,136M at 30 June 2026, from net debt of £1,952M at the end of 2023.",
+    "source": {
+     "title": "Rolls-Royce 2026 Half Year Results press release",
+     "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+     "date": "2026-07-30"
+    }
+   }
+  ],
+  "counter": [
+   {
+    "text": "Supply chain shortages cost £150M to £200M of cash in 2026 and slowed service balance growth to £86M in H1 2026.",
+    "source": {
+     "title": "Rolls-Royce 2026 Half Year Results press release",
+     "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+     "date": "2026-07-30"
+    }
+   },
+   {
+    "text": "No current narrowbody engine, the largest part of the civil engine market.",
+    "source": {
+     "title": "Rolls-Royce 2025 Full Year Results",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+     "date": "2026-02-26"
+    }
+   },
+   {
+    "text": "Large engine flying hours are guided to the lower end of 115% to 120% of 2019 for 2026, after fuel-driven capacity cuts.",
+    "source": {
+     "title": "Rolls-Royce Trading Update",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+     "date": "2026-11-12"
+    }
+   }
+  ],
+  "falsifiers": [
+   {
+    "id": "RYCEY-F1",
+    "text": "Margin gains reverse.",
+    "threshold": "Underlying operating margin below 18% for a full year",
+    "status": "holding"
+   },
+   {
+    "id": "RYCEY-F2",
+    "text": "Service economics weaken.",
+    "threshold": "Civil service agreement balance shrinks over a full year",
+    "status": "watch"
+   },
+   {
+    "id": "RYCEY-F3",
+    "text": "Flying hours stall.",
+    "threshold": "Large engine flying hours below 110% of 2019 for a full year",
+    "status": "holding"
+   }
+  ],
+  "reconciliation": {
+   "status": "pass",
+   "tests": [
+    {
+     "name": "Operating margin 2023 to H1 2026",
+     "result": "10.3%, 13.8%, 17.3%, then 22.5% in H1 2026. Rising in every period."
+    },
+    {
+     "name": "Divisional sum, H1 2026",
+     "result": "Civil £1,567M + Defence £522M + Power Systems £528M + other businesses (£30M) + corporate (£53M) = £2,534M, matching group underlying operating profit."
+    },
+    {
+     "name": "Cash against profit",
+     "result": "H1 2026 free cash flow £1,964M, 78% of underlying operating profit; FY2025 £3,270M, 94%."
+    },
+    {
+     "name": "Margin change vs peers",
+     "result": "Not completed. Safran, GE Aerospace and MTU results were not retrieved for this card."
+    }
+   ],
+   "story": "Sole-source widebody engines serviced for decades, repriced under new management.",
+   "numbers": "Margins and cash flow have risen in every period since 2023, consistent with the story; supply chain cost and slower service balance growth are the exceptions."
+  }
  }
 }

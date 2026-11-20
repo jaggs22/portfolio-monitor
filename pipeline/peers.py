@@ -117,6 +117,13 @@ PEERS = {
         "why": "Crown Castle and SBA Communications are the other two US tower companies. Equinix and Digital Realty are "
                "optional data center comparisons, a business American Tower owns through CoreSite.",
     },
+    "RYCEY": {
+        "default": ["GE", "SAF.PA", "MTX.DE"],
+        "optional": ["RTX", "BA.L"],
+        "why": "GE Aerospace and Safran are the other two large civil engine makers, and MTU Aero Engines is the engine "
+               "partner and repair specialist; all three earn most of their profit from aftermarket service. RTX (owner "
+               "of Pratt & Whitney) and BAE Systems are optional aerospace and defence comparisons.",
+    },
 }
 
 NAMES = {
@@ -136,6 +143,8 @@ NAMES = {
     "SHEL": "Shell", "TTE": "TotalEnergies", "COP": "ConocoPhillips", "BP": "BP", "NEE": "NextEra Energy", "DUK": "Duke Energy",
     "SO": "Southern Company", "D": "Dominion Energy", "AEP": "American Electric Power", "CEG": "Constellation Energy",
     "AMT": "American Tower", "CCI": "Crown Castle", "SBAC": "SBA Communications", "EQIX": "Equinix", "DLR": "Digital Realty",
+    "RYCEY": "Rolls-Royce", "GE": "GE Aerospace", "SAF.PA": "Safran", "MTX.DE": "MTU Aero Engines", "RTX": "RTX",
+    "BA.L": "BAE Systems",
 }
 
 QROWS = {
@@ -255,6 +264,22 @@ def _fy_row(annual, last_fy):
     return annual[0][1]
 
 
+def align_eps_currency(e0, e1, price, fwd_pe, fx_to_fin):
+    """Consensus EPS for a listing quoted in one currency and reported in another (an ADR such as Rolls-Royce: price in
+    USD, estimates often in GBP). The quote-currency figure is checked against Yahoo's forward P/E: kept if it agrees,
+    converted at fx_to_fin if the reporting-currency figure agrees instead, otherwise dropped so the app never compares
+    our dollar EPS with a sterling consensus. Returns (e0, e1, note or None)."""
+    if not (price and fwd_pe and fwd_pe > 0 and e1 and fx_to_fin):
+        return None, None, "Consensus EPS dropped: its currency could not be checked against the forward P/E."
+    implied = price / fwd_pe
+    if 0.87 < e1 / implied < 1.15:
+        return e0, e1, None
+    conv = 1 / fx_to_fin
+    if 0.87 < e1 * conv / implied < 1.15:
+        return (round(e0 * conv, 4) if e0 else e0), round(e1 * conv, 4), "Consensus EPS converted from the reporting currency to the quote currency."
+    return None, None, "Consensus EPS dropped: it did not reconcile with the forward P/E in either currency."
+
+
 def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, today=None):
     """One peer row. info: yfinance info dict. quarters/annual: frame_to_periods output in reporting currency.
     est: consensus {'rev_g0','rev_g1','eps0','eps1'} (growth decimals, EPS averages) or empty.
@@ -296,6 +321,10 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
     e0, e1 = _f((est or {}).get("eps0")), _f((est or {}).get("eps1"))
     fwd_eps = _f(info.get("forwardEps"))
     same_ccy = (info.get("currency") or "") == (info.get("financialCurrency") or info.get("currency") or "")
+    if not same_ccy and (e0 or e1):
+        e0, e1, note = align_eps_currency(e0, e1, price, _f(info.get("forwardPE")), fx_to_fin)
+        if note:
+            notes.append(note)
     if fwd_eps and fwd_eps > 0 and same_ccy and e1 and abs(e1 / fwd_eps - 1) > 0.04:
         notes.append(f"Next-year consensus EPS ({e1:.2f}) disagreed with Yahoo's forward EPS ({fwd_eps:.2f}); forward EPS used.")
         e1 = fwd_eps

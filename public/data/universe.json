@@ -88,5 +88,11 @@
   "name": "Exxon Mobil",
   "sector": "Energy",
   "tier": "core"
+ },
+ {
+  "ticker": "RYCEY",
+  "name": "Rolls-Royce",
+  "sector": "Industrials",
+  "tier": "core"
  }
 ]

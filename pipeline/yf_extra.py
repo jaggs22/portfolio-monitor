@@ -124,6 +124,19 @@ def profile_from_info(info):
     return out
 
 
+def to_usd(frames, rate):
+    """Convert normalized frames from the reporting currency to USD at one rate. Share counts are left alone.
+    Used for a company that reports in another currency (Rolls-Royce reports in sterling), so every figure the app
+    labels in dollars is in dollars. One spot rate is applied to all periods; the profile records it."""
+    if not rate or rate == 1:
+        return frames
+    out = {}
+    for part, rows in frames.items():
+        out[part] = {end: {k: (v if k == "shares_diluted" or v is None else round(v * rate, 4 if k in PER_SHARE else 3))
+                           for k, v in row.items()} for end, row in rows.items()}
+    return out
+
+
 def fetch_yf(ticker):
     """Live call into yfinance. Returns (frames_normalized, profile, news_items). Each part fails independently."""
     import yfinance as yf
@@ -137,7 +150,18 @@ def fetch_yf(ticker):
     except Exception as e:  # noqa: BLE001 - Yahoo failures are expected
         errors.append(f"statements: {e}")
     try:
-        prof = profile_from_info(t.info)
+        info = t.info or {}
+        prof = profile_from_info(info)
+        fc = info.get("financialCurrency")
+        if fc and fc != "USD":
+            from .peers import _fx
+            rate = _fx(yf, fc, "USD")
+            if rate:
+                res = to_usd(res, rate)
+                prof.update({"report_currency": fc, "usd_rate": round(rate, 4)})
+            else:
+                errors.append(f"fx {fc}->USD not retrieved; statements left in {fc}")
+                prof["report_currency"] = fc
     except Exception as e:  # noqa: BLE001
         errors.append(f"info: {e}")
     try:

@@ -169,6 +169,17 @@
    "chg": -1.7145,
    "industry": "REIT - Specialty",
    "cik": "0001053507"
+  },
+  "RYCEY": {
+   "price": 17.84,
+   "mcap": 147.4,
+   "beta": 1.34,
+   "div": 0.15,
+   "lo": 13.25,
+   "hi": 21.27,
+   "chg": -1.39,
+   "note": "US ADR, one ordinary share each. Seed price is the 13 November 2026 London close of 1,350.60p at GBP/USD 1.3211; the live feed replaces it. No SEC CIK.",
+   "industry": "Aerospace & Defense"
   }
  }
 }

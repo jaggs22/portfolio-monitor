@@ -66,8 +66,8 @@ ok('lens read returns rows', () => {
   const ev = E.evaluate(rs.V, mk.stocks.V, mk.rates);
   for (const l of L) { const r = E.lensRead(l, rs.V, ev, mk.stocks.V, mk.rates); assert.ok(r.rows.length === l.checks.length); }
 });
-ok('light valuation and technical read for all 15', () => {
-  assert.strictEqual(Object.keys(mk.stocks).length, 15);
+ok('light valuation and technical read for all 16', () => {
+  assert.strictEqual(Object.keys(mk.stocks).length, 16);
   for (const t in mk.stocks) { const v = E.lightValuation(mk.stocks[t], mk.rates); assert.ok(v.pos >= 0 && v.pos <= 1.0001, t + v.pos); const tr = E.technicalRead(mk.stocks[t]); assert.ok(tr.reasons.length, t); }
 });
 ok('rebase from filing replaces starting point only', () => {
