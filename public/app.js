@@ -377,7 +377,7 @@
     search.value = state.covQ;
     search.addEventListener('input', () => { state.covQ = search.value; draw(); });
     draw();
-    return [h('section', { class: 'hero' }, h('div', null, eyebrow(`${state.data.universe.length} US stocks · rating, target and 5-page report on each`), h('h1', { style: { marginTop: '8px' } }, 'Coverage')), search), listBox];
+    return [h('section', { class: 'hero' }, h('div', null, eyebrow(`${state.data.universe.length} stocks · rating, target and 5-page report on each`), h('h1', { style: { marginTop: '8px' } }, 'Coverage')), search), listBox];
   }
 
   /* ---------- markets ---------- */
@@ -492,7 +492,7 @@
     win.open({ title: 'How this works', build: () => stackOf(() => h('div', null,
       h('p', { class: 'read' }, 'A research tool, not advice. It explains each business before it values it, then lets you argue with the numbers.'),
       ...[['Read top to bottom', 'Each company page follows an analyst’s order: how it makes money, the moat, financials, balance sheet, management, valuation, scenarios, risks. Tap any tile to open it.'],
-        ['Where the numbers come from', 'Statements and segments come straight from SEC filings and refresh when a 10-Q or 10-K lands. Peers, consensus and prices come from Yahoo Finance daily. Written analysis is dated and refreshed after each earnings print.'],
+        ['Where the numbers come from', 'Statements and segments come straight from SEC filings and refresh when a 10-Q or 10-K lands; Rolls-Royce, which reports in London, comes from its results releases and Yahoo Finance, converted to dollars. Peers, consensus and prices come from Yahoo Finance daily. Written analysis is dated and refreshed after each earnings print.'],
         ['Dispute anything', 'In Scenarios, every assumption has a Dispute button. The engine argues back, shows what your number does to the return, and remembers your view on this device.'],
         ['Peers are yours to set', 'In Valuation, switch peers on and off. The median and the premium update instantly.'],
         ['Install it', 'On iPhone: Share, then Add to Home Screen. On Android: menu, then Install app.']].map(([t, d]) => disclose(t, d)),

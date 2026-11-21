@@ -1,0 +1,506 @@
+{
+ "ticker": "RYCEY",
+ "name": "Rolls-Royce",
+ "depth": "deep",
+ "as_of": "2026-11-16",
+ "horizon": 3,
+ "header": {
+  "one_liner": "A transformed engine franchise earning record margins on its installed base; the price already assumes the transformation lasts.",
+  "thesis": "Rolls-Royce lifted underlying operating profit 46% in the first half of 2026 to £2.53bn at a 22.5% margin, raised 2026 guidance to £4.7bn to £4.9bn and reaffirmed it on 12 November. Large engine flying hours reached 114% of 2019, Power Systems orders rose 62% on data centre demand, and the group holds £2.1bn of net cash while buying back £4bn of stock in about 14 months. At about 32 times our 2026 EPS the price already reflects that delivery. Covered through the US ADR (RYCEY, one ordinary share each); all figures are converted from sterling at $1.3211."
+ },
+ "base": {
+  "eps0": 0.56,
+  "eps_label": "FY2026E underlying EPS: about 42.5p, converted at $1.3211. H1 22.17p plus a second half at the guidance midpoint (£4.8bn operating profit) and a 25.7% tax rate, the first-half rate before the £181m tax credit. Consensus is about 43.7p",
+  "rev0": 31.3,
+  "shares0": 8.3,
+  "div": 0.15,
+  "rev_label": "FY2026E underlying revenue ($B): about £23.7bn, in line with consensus, converted at $1.3211",
+  "fy0": 2026
+ },
+ "probs": {
+  "bear": 0.25,
+  "base": 0.5,
+  "bull": 0.25
+ },
+ "drivers": {
+  "rev_cagr": {
+   "base": 9.5,
+   "bear": 5.5,
+   "bull": 12.5,
+   "kind": "sourced",
+   "why": "Organic revenue grew 26% in the first half: Civil Aerospace 29%, Power Systems 28%, Defence 17%. Management targets power generation original equipment revenue growth of 25% a year to 2030 and governmental 20%, and consensus has revenue up about 11% in 2027. The base case slows to 9.5% a year as the delivery ramp and price gains annualise.",
+   "source": "Rolls-Royce H1 2026 results; 12 November 2026 trading update; Yahoo Finance consensus (RR.L)"
+  },
+  "margin_end": {
+   "base": 16.5,
+   "bear": 14,
+   "bull": 18,
+   "kind": "judgment",
+   "why": "Net margin is about 15% this year (underlying operating margin about 20% at the guidance midpoint, a 25.7% tax rate). Contract repricing, cost cuts and a richer aftermarket mix add margin, but management's own 2028 target is an 18% to 20% operating margin, below this year's level. The base case adds about 1.5 points as Power Systems and Defence margins keep rising.",
+   "source": "H1 2026 results (divisional margins); FY2025 results (mid-term targets)"
+  },
+  "share_chg": {
+   "base": -2,
+   "bear": -1,
+   "bull": -3,
+   "kind": "sourced",
+   "why": "The £7bn to £9bn buyback runs from 2026 to 2028. £2.5bn for 2026 is substantially done and another £1.5bn completes by 25 February 2027, about 3.6% of a £112bn market value in 14 months. What is left, £3bn to £5bn over two years, is 1.5% to 2% a year.",
+   "source": "12 November 2026 trading update; FY2025 results"
+  },
+  "exit_pe": {
+   "base": 26,
+   "bear": 20,
+   "bull": 31,
+   "kind": "judgment",
+   "why": "Today's multiple is about 32 times our 2026 EPS and about 26 times 2027 consensus. Morningstar puts Safran near 30 times normalised earnings and MTU near 20 times. The base case assumes 26 times in year three, a modest de-rating as growth slows to the low teens.",
+   "source": "Engine judgment; peer multiples from Morningstar and the Moat Monitor peer table"
+  }
+ },
+ "pillars": [
+  {
+   "title": "Aftermarket pricing reset",
+   "claim": "Civil Aerospace margin rose to 25.3% in the first half on better long-term service agreement margins and contract repricing.",
+   "evidence": [
+    {
+     "t": "Civil revenue £6,186M (+29% organic); operating profit £1,567M (H1 2025: £1,193M)",
+     "src": "H1 2026 results"
+    }
+   ],
+   "test": "Does civil margin hold above 22% as loss-making new engine deliveries rise?"
+  },
+  {
+   "title": "A young widebody fleet still growing",
+   "claim": "Large engine flying hours rose 4% in the first ten months to 114% of 2019, with legacy retirements at their lowest since 2018.",
+   "evidence": [
+    {
+     "t": "Large engine order backlog about 2,500 engines; 70 Trent 7000 for Avolon, 22 for Cathay in the second half",
+     "src": "12 November 2026 trading update"
+    }
+   ],
+   "test": "Does 2026 land within the 115% to 120% of 2019 range, even at the lower end as guided?"
+  },
+  {
+   "title": "Power Systems rides data centres",
+   "claim": "Power Systems order intake rose 62% in nine months and the backlog reached a record £8.6bn.",
+   "evidence": [
+    {
+     "t": "H1 margin 20.3% (H1 2025: 15.3%); book-to-bill 1.8x; gas engine orders nearly tripled",
+     "src": "H1 2026 results; trading update"
+    }
+   ],
+   "test": "Is the hyperscaler backup engine contract signed, and does book-to-bill stay above 1.1x?"
+  },
+  {
+   "title": "Balance sheet now funds returns",
+   "claim": "Net cash of £2.1bn and A-grade ratings fund a £7bn to £9bn buyback and a dividend paid at about a third of profit.",
+   "evidence": [
+    {
+     "t": "First-half free cash flow £1,964M, 78% of underlying operating profit",
+     "src": "H1 2026 results"
+    }
+   ],
+   "test": "Does free cash flow reach the £3.8bn to £4.0bn guidance for 2026?"
+  }
+ ],
+ "variant": {
+  "street": "Twenty analysts mostly rate the shares a buy, with an average target near 1,723p against 1,351p, on continued upgrades.",
+  "ours": "The transformation is real and the numbers keep beating, but this year's margin is already above management's 2028 target. Our base case grows EPS about 16% a year and de-rates to 26 times, which earns slightly less than the cost of equity.",
+  "could_be_wrong": "If the February 2027 mid-term targets reset well above £5.2bn of operating profit, consensus and the multiple could both rise.",
+  "would_change_mind": "New mid-term targets that imply operating margins of 22% or more, or the price nearer 1,150p (about 27 times 2026 EPS)."
+ },
+ "moat": {
+  "rating": 4,
+  "summary": "Sole engine on the A350 and A330neo, a long-lived installed base serviced under long-term agreements, and sovereign defence positions.",
+  "detail": "Rated from the FY2025 results, the H1 2026 results and the 12 November 2026 trading update; see the moat window for the sources of advantage."
+ },
+ "quality": {
+  "leverage_note": "Net cash £2.1bn at 30 June 2026 (gross debt £2.7bn, leases £1.7bn, cash £6.5bn); Moody's A3, Fitch A-, S&P A- after a September upgrade.",
+  "leverage_ok": true,
+  "incentive_note": null,
+  "checks": [
+   "H1 underlying operating profit £2,534M vs statutory £2,418M; underlying EPS excludes a £181M tax credit for surplus advance corporation tax",
+   "H1 free cash flow £1,964M, about 78% of underlying operating profit; the civil service balance grew only £86M against £472M a year earlier"
+  ]
+ },
+ "catalysts": [
+  {
+   "date": "2026-12-31",
+   "label": "Trent XWB-84 life-limited part extension due for certification by year end",
+   "confirmed": false,
+   "note": "Company target, restated on 12 November. Longer time on wing cuts shop visit cost under service agreements.",
+   "importance": "Medium"
+  },
+  {
+   "date": "2027-02-25",
+   "label": "Rolls-Royce FY2026 results, 2027 guidance and revised mid-term targets",
+   "confirmed": true,
+   "note": "Date given in the 12 November 2026 trading update. The £1.5bn buyback completes by then. 2026 guide: underlying operating profit £4.7bn to £4.9bn, free cash flow £3.8bn to £4.0bn.",
+   "importance": "High"
+  },
+  {
+   "date": "2027-12-31",
+   "label": "Airbus A350F, powered by the Trent XWB-97, enters service in 2027 (planned)",
+   "confirmed": false,
+   "note": "First flight in September 2026; more than 100 aircraft ordered by 14 airlines. Trent XWB-97 durability improvements due for certification by the end of 2027.",
+   "importance": "Medium"
+  }
+ ],
+ "tripwires": [
+  {
+   "id": "r1",
+   "text": "Large engine flying hours below 110% of 2019",
+   "metric": "efh_vs_2019",
+   "op": "<",
+   "threshold": 110,
+   "current": 114,
+   "unit": "%",
+   "drivers": [
+    "rev_cagr",
+    "margin_end"
+   ],
+   "src": "12 November 2026 trading update (first ten months)"
+  },
+  {
+   "id": "r2",
+   "text": "Underlying operating margin below 18%, the bottom of the mid-term range",
+   "metric": "op_margin",
+   "op": "<",
+   "threshold": 18,
+   "current": 22.5,
+   "unit": "%",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "H1 2026 results"
+  },
+  {
+   "id": "r3",
+   "text": "Power Systems book-to-bill below 1.1x",
+   "metric": "ps_book_to_bill",
+   "op": "<",
+   "threshold": 1.1,
+   "current": 1.8,
+   "unit": "x",
+   "drivers": [
+    "rev_cagr"
+   ],
+   "src": "H1 2026 results"
+  },
+  {
+   "id": "r4",
+   "text": "Civil service agreement balance shrinks over a half year",
+   "metric": "ltsa_growth",
+   "op": "<",
+   "threshold": 0,
+   "current": 86,
+   "unit": "£M",
+   "drivers": [
+    "margin_end"
+   ],
+   "src": "H1 2026 results",
+   "status": "watch",
+   "note": "Growth slowed to £86M from £472M a year earlier as shop visits rose; management expects 2026 below 2025's £572M."
+  }
+ ],
+ "risks": [
+  "Air travel shock.",
+  "Supply chain.",
+  "Durability and shop visit costs.",
+  "Valuation already high.",
+  "Currency."
+ ],
+ "lenses": {
+  "eisman": "Margin is already above the 2028 target; check how much of the beat is repricing that cannot repeat.",
+  "munger": "Once an airline picks the engine, it pays for service for 25 years. That is a moat, if the engine lasts.",
+  "buffett": "A toll on widebody flying with a strong balance sheet; the price leaves little margin of safety.",
+  "hohn": "Installed base and pricing power after a turnaround; the test is cash returns once delivery losses rise."
+ },
+ "sources": [
+  {
+   "tier": "A",
+   "title": "Rolls-Royce Holdings plc 2026 Half Year Results",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/30-07-2026-rr-holdings-plc-2026-half-year-results.aspx",
+   "date": "2026-07-30"
+  },
+  {
+   "tier": "A",
+   "title": "Rolls-Royce Holdings plc Trading Update: strong progress; buyback phasing accelerated",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+   "date": "2026-11-12"
+  },
+  {
+   "tier": "A",
+   "title": "Rolls-Royce Holdings plc 2025 Full Year Results and mid-term targets",
+   "url": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+   "date": "2026-02-26"
+  },
+  {
+   "tier": "C",
+   "title": "Yahoo Finance RR.L analysis: consensus EPS 0.44 (2026) and 0.51 (2027) in sterling, 17 analysts",
+   "url": "https://finance.yahoo.com/quote/RR.L/analysis/",
+   "date": "2026-11-16"
+  },
+  {
+   "tier": "C",
+   "title": "Closing price 13 November 2026: 1,350.60p (London Stock Exchange, via Investing.com)",
+   "url": "https://www.investing.com/equities/rolls-royce-historical-data",
+   "date": "2026-11-13"
+  },
+  {
+   "tier": "C",
+   "title": "GBP/USD close 13 November 2026: 1.3211",
+   "url": "https://www.tradingnews.com/news/gbp-usd-slips-to-13148-near-2026-low-as-uk-cpi",
+   "date": "2026-11-18"
+  }
+ ],
+ "gaps": [
+  "No SEC filings: statements in the app come from Yahoo, converted from sterling at one spot rate, and segments are entered by hand from the H1 2026 release.",
+  "Mid-term targets are being revised on 25 February 2027.",
+  "Divisional profit for full-year 2025 in pounds not retrieved; margins only."
+ ],
+ "base_period_end": "2026-06-30",
+ "review": {
+  "as_of": "2026-11-16",
+  "basis": "H1 2026 results (half to 30 June 2026) and the 12 November 2026 trading update. Price is the 13 November 2026 London close of 1,350.60p, converted at $1.3211 to $17.84 a share; news reviewed to 16 November. FY2026 results and new mid-term targets come on 25 February 2027; this review refreshes after the print.",
+  "headline": "Record margins and rising cash returns from a transformed engine maker. The price already assumes the transformation lasts.",
+  "model": "Rolls-Royce designs and builds large jet engines for widebody aircraft and business jets, then earns most of its profit servicing them under long-term agreements paid per flying hour. It also makes military engines and submarine reactors (Defence), and mtu engines and generator sets for data centres, ships and governments (Power Systems).",
+  "how_it_earns": [
+   {
+    "k": "Civil Aerospace",
+    "v": "Trent engines for the A350, A330neo and 787, sold near or below cost, then serviced for decades under long-term service agreements. Also business jet engines."
+   },
+   {
+    "k": "Defence",
+    "v": "Combat and transport aircraft engines, naval propulsion and the reactors for UK submarines; long government contracts and a £17.5bn backlog."
+   },
+   {
+    "k": "Power Systems",
+    "v": "mtu diesel and gas engines and generator sets for backup and prime power at data centres, plus marine and governmental engines; about 40% of profit from services."
+   },
+   {
+    "k": "New markets",
+    "v": "Small modular reactors, contracted in the UK, Czech Republic and Sweden; not yet a profit contributor."
+   }
+  ],
+  "mix": {
+   "axis": "segment",
+   "note": "Reported divisions, first half of 2026 against the first half of 2025, converted from sterling at $1.3211. Operating margin is underlying operating profit over underlying revenue. Growth here is reported; organic growth was 29%, 17% and 28%.",
+   "rows": [
+    {
+     "match": "Civil Aerospace",
+     "label": "Civil Aerospace",
+     "role": "Core profit engine",
+     "driver": "Service agreement pricing; flying hours 114% of 2019"
+    },
+    {
+     "match": "Power Systems",
+     "label": "Power Systems",
+     "role": "Fastest growth",
+     "driver": "Data centre power; orders +62% in nine months"
+    },
+    {
+     "match": "Defence",
+     "label": "Defence",
+     "role": "Steadiest",
+     "driver": "Long government contracts; margin 21.0%"
+    }
+   ],
+   "callout": null
+  },
+  "position": "One of three makers of large civil jet engines with GE Aerospace and Pratt & Whitney, and the leader in widebody: the sole engine on the A350 and A330neo and one of two on the 787. It has no current narrowbody engine.",
+  "moat": {
+   "rating": 4,
+   "sources": [
+    "Sole-source positions on the A350 and A330neo",
+    "A long-lived installed base serviced under long-term agreements",
+    "Certification cost and decades of engine know-how",
+    "Sovereign defence programmes, including UK submarine reactors"
+   ],
+   "threat": "Engine durability problems that raise service costs, supply chain shortages, and absence from the narrowbody market."
+  },
+  "what_numbers_say": [
+   {
+    "t": "Profit +46%",
+    "d": "Underlying operating profit £2.53bn in the first half; margin 22.5% from 19.1%."
+   },
+   {
+    "t": "Revenue +26% organic",
+    "d": "Civil +29%, Power Systems +28%, Defence +17%."
+   },
+   {
+    "t": "Free cash flow £2.0bn",
+    "d": "Up from £1.6bn; 78% of operating profit."
+   },
+   {
+    "t": "Guidance raised",
+    "d": "2026 operating profit £4.7bn to £4.9bn from £4.0bn to £4.2bn; reaffirmed on 12 November."
+   }
+  ],
+  "balance": {
+   "read": "Net cash and investment-grade ratings in the A range, after net debt of £2.0bn at the end of 2023.",
+   "facts": [
+    "Net cash £2.1bn at 30 June 2026",
+    "£4bn of buybacks between January 2026 and February 2027",
+    "Interim dividend 6.0p a share"
+   ]
+  },
+  "flags": [
+   {
+    "flag": "Service balance growth slowing",
+    "evidence": "Civil service agreement balance grew £86M in the first half against £472M a year earlier, as shop visits rose and supply chain costs bit.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Margin above the 2028 target",
+    "evidence": "First-half margin of 22.5% compares with a mid-term target of 18% to 20%; the targets are revised in February.",
+    "severity": "watch"
+   },
+   {
+    "flag": "Adjusted vs reported",
+    "evidence": "Underlying figures exclude hedging and one-offs: H1 underlying operating profit £2,534M vs statutory £2,418M, and underlying EPS excludes a £181M tax credit.",
+    "severity": "info"
+   }
+  ],
+  "forecast_basis": {
+   "rev_cagr": "Sourced: divisional growth targets and consensus",
+   "margin_end": "Judgment: repricing and mix, against a lower mid-term target",
+   "share_chg": "Sourced: £7bn to £9bn buyback over 2026 to 2028",
+   "exit_pe": "Judgment: modest de-rating to 26 times"
+  },
+  "scenarios": {
+   "base": {
+    "story": "Flying hours grow a few percent a year, Power Systems keeps compounding and buybacks continue; EPS grows about 16% a year.",
+    "needs": "Operating margin above 20%"
+   },
+   "downside": {
+    "story": "An air travel shock or supply chain costs squeeze civil margins and the multiple falls toward 20 times.",
+    "needs": "Flying hours below 110% of 2019"
+   },
+   "upside": {
+    "story": "February's new targets lift the 2028 bar well above £5.2bn and data centre orders keep accelerating.",
+    "needs": "New operating profit target above £5.5bn"
+   }
+  },
+  "risks": [
+   {
+    "cause": "Air travel shock",
+    "how": "Civil profit depends on engine flying hours. The 2026 Middle East conflict and high fuel prices cut capacity outside the region, and 2026 is guided to the low end of 115% to 120% of 2019.",
+    "watch": "Large engine flying hours",
+    "trip": "r1",
+    "sev": "high",
+    "cat": "Demand"
+   },
+   {
+    "cause": "Supply chain",
+    "how": "Parts shortages slow shop visits and deliveries; the 2026 free cash flow guide includes a £150M to £200M supply chain cost.",
+    "watch": "Supply chain cash impact and shop visit output",
+    "trip": null,
+    "sev": "medium",
+    "cat": "Operations"
+   },
+   {
+    "cause": "Durability and shop visit costs",
+    "how": "Service agreements pay per flying hour, so engines that need early overhauls cost Rolls-Royce money. Trent 1000 and XWB-97 upgrades are still rolling out.",
+    "watch": "Civil service agreement balance",
+    "trip": "r4",
+    "sev": "medium",
+    "cat": "Execution"
+   },
+   {
+    "cause": "Valuation already high",
+    "how": "At about 32 times 2026 EPS and above its own 2028 margin target, the price needs further upgrades to keep rising.",
+    "watch": "Operating margin and February targets",
+    "trip": "r2",
+    "sev": "medium",
+    "cat": "Valuation"
+   },
+   {
+    "cause": "Currency",
+    "how": "Results are in sterling while much civil revenue is in dollars, partly hedged; the ADR price also moves with sterling.",
+    "watch": "GBP/USD and hedge book",
+    "trip": null,
+    "sev": "low",
+    "cat": "Currency"
+   }
+  ],
+  "peer_read": {
+   "why_premium": "Rolls-Royce earns the most from long-term service on widebody engines and now holds net cash, and its margins have risen fastest of the group.",
+   "why_not": "GE Aerospace and Safran have the bigger narrowbody fleets and longer records of steady margins; Rolls-Royce's margin is newer and partly from one-off repricing.",
+   "peers_note": "Safran and MTU report in euros and Rolls-Royce in sterling; their multiples are computed in their own currency, and sizes are shown in dollars."
+  },
+  "questions": [
+   "How much of the margin gain is one-off contract repricing?",
+   "What do the February 2027 targets assume for flying hours and Power Systems?",
+   "Is a narrowbody engine worth the investment it would need?"
+  ],
+  "sources": [
+   {
+    "tier": "A",
+    "title": "Rolls-Royce Holdings plc 2026 Half Year Results press release (divisional tables)",
+    "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+    "date": "2026-07-30"
+   },
+   {
+    "tier": "A",
+    "title": "Rolls-Royce Holdings plc Trading Update",
+    "url": "https://www.rolls-royce.com/media/press-releases/2026/12-11-2026-rr-holdings-plc-trading-update.aspx",
+    "date": "2026-11-12"
+   }
+  ],
+  "title": "Transformed, and priced for it",
+  "lead": "We rate Rolls-Royce {rating} with a 12-month target of {pt} ({upside} upside, {ret} total return against a cost of equity of {hurdle}). Record margins, rising cash returns and data centre demand make it a far better business than three years ago, our next-year EPS is {vs_cons} consensus, and the price already reflects it.",
+  "call_reason": "A transformed franchise at a full price: the target implies {ret} over 12 months against a cost of equity of {hurdle}.",
+  "arguments": [
+   {
+    "label": "Growth",
+    "text": "Organic revenue grew 26% in the first half, led by Civil Aerospace (+29%) and Power Systems (+28%). Power Systems orders rose 62% in nine months on data centre demand."
+   },
+   {
+    "label": "Moat",
+    "text": "The sole engine on the A350 and A330neo, with a young widebody fleet serviced for decades under long-term agreements. The large engine order backlog is about 2,500 engines."
+   },
+   {
+    "label": "Profitability",
+    "text": "Underlying operating margin rose to 22.5% from 19.1%, higher in all three divisions. It is already above the 18% to 20% management targets for 2028."
+   },
+   {
+    "label": "Capital",
+    "text": "First-half free cash flow was £2.0bn and net cash £2.1bn. Buybacks of £4bn between January 2026 and February 2027 retire about 3.6% of the shares."
+   },
+   {
+    "label": "Valuation",
+    "text": "{peer_line} About 32 times our 2026 EPS and 26 times 2027 consensus."
+   }
+  ],
+  "thesis_long": [
+   "Under Tufan Erginbilgic, chief executive since 2023, Rolls-Royce has repriced its engine service contracts, cut costs and fixed its balance sheet. Underlying operating profit has risen from £1.6bn in 2023 to a guided £4.7bn to £4.9bn in 2026, the margin from 10.3% to above 20%, and net debt of £2.0bn has turned into £2.1bn of net cash.",
+   "Demand is still supportive. Large engine flying hours reached 114% of 2019 despite the Middle East conflict, legacy retirements are the lowest since 2018, and Power Systems has a record £8.6bn backlog from data centre power. Against that, this year's margin is already above management's 2028 target, service balance growth has slowed, and supply chain costs persist.",
+   "Our base case grows EPS about 16% a year with a de-rating from 32 to 26 times, which earns a little less than the cost of equity over 12 months. We would turn positive if February's new targets implied margins of 22% or more, or if the price fell nearer 1,150p, and negative if flying hours fell below 110% of 2019."
+  ],
+  "upside_risks": [
+   {
+    "cause": "Targets reset higher",
+    "how": "If new mid-term targets in February 2027 lift operating profit well above £5.2bn, consensus and the multiple could rise together."
+   },
+   {
+    "cause": "Data centre power",
+    "how": "A signed multi-year hyperscaler contract and gas engine prime power orders could keep Power Systems growing above 20% a year."
+   }
+  ]
+ },
+ "peers": {
+  "default": [
+   "GE",
+   "SAF.PA",
+   "MTX.DE"
+  ]
+ },
+ "valuation": {
+  "method": "pe",
+  "dcf": {
+   "cf0": 0.62,
+   "basis": "free cash flow",
+   "label": "2026 free cash flow guidance midpoint (£3.9bn) per share, converted at $1.3211"
+  }
+ }
+}

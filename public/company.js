@@ -16,6 +16,13 @@
     const us = (t) => (ui[t] = ui[t] || { range: '1Y', sma50: true, sma200: false, stmt: 'income', freq: 'annual', line: null, rfreq: 'annual', basis: 'ntm', period: 'quarterly', axis: null, valTab: null, finTab: 'statements' });
     const dat = (t, k) => (cs(t)[k] && cs(t)[k].data) || null;
     const loaded = (t, k) => cs(t)[k] !== undefined;
+    /* Where the statements came from: SEC filings for US filers; Yahoo Finance, converted to dollars, for a company that
+       files elsewhere (Rolls-Royce reports in sterling under IFRS). */
+    const finSourceNote = (f) => {
+      const src = (f && f.sources) || [], p = (f && f.profile) || {};
+      if (!src.some((x) => /SEC/.test(x))) return `Company-reported figures via Yahoo Finance${p.report_currency && p.report_currency !== 'USD' ? `, converted from ${p.report_currency} at ${p.usd_rate} dollars` : ''}; the company files no statements with the SEC.`;
+      return `Company-reported GAAP figures from SEC filings${src.length > 1 ? ', gaps filled from Yahoo Finance' : ''}.`;
+    };
     const KINDS = ['fundamentals', 'history', 'mgmt', 'evidence', 'news', 'peers', 'segments', 'intraday'];
     let pending = false;
     const rerender = () => {
@@ -207,7 +214,7 @@
       const prem = mine && med ? mine / med - 1 : null;
       const map = {
         rating: c ? c.rating : 'not rated', pt: c ? fmt.px(c.pt) : '–', upside: c ? fmt.spct(c.upside, 1) : '–', ret: c ? fmt.spct(c.totalReturn, 1) : '–', hurdle: c ? fmt.pct(c.hurdle) : '–',
-        vs_cons: g == null ? 'compared with consensus' : Math.abs(g) < 0.01 ? 'in line with' : `${fmt.pct(Math.abs(g))} ${g < 0 ? 'below' : 'above'}`,
+        vs_cons: g == null ? 'not yet compared with' : Math.abs(g) < 0.01 ? 'in line with' : `${fmt.pct(Math.abs(g))} ${g < 0 ? 'below' : 'above'}`,
         peer_line: prem == null ? '' : `The shares trade at ${fmt.mult(mine)} next-12-month ${k === 'pe' ? 'P/E' : 'EV/EBITDA'}, a ${fmt.pct(Math.abs(prem), 0)} ${prem >= 0 ? 'premium' : 'discount'} to the peer median of ${fmt.mult(med)}.`
       };
       return text.replace(/\{(\w+)\}/g, (_, k2) => (map[k2] !== undefined ? map[k2] : ''));
@@ -552,7 +559,9 @@
         out.push(h('div', { class: 'callout' }, h('b', null, 'Position. '), rv.position));
       }
       const fl = seg0.filings || {};
-      out.push(note(['From the company’s XBRL filings: ', [fl.quarterly, fl.annual].filter(Boolean).map((x, i) => [i ? ' and ' : '', h('a', { href: x.url, target: '_blank', rel: 'noopener' }, `${x.form} for ${fmt.date(x.period)}`)]), '. Refreshed automatically when a new 10-Q or 10-K lands.']));
+      const fromXbrl = /XBRL/.test(seg0.source || '');
+      out.push(note([fromXbrl ? 'From the company’s XBRL filings: ' : 'From the company’s results: ', [fl.quarterly, fl.annual].filter(Boolean).map((x, i) => [i ? ' and ' : '', h('a', { href: x.url, target: '_blank', rel: 'noopener' }, `${x.form} for ${fmt.date(x.period)}`)]),
+        fromXbrl ? '. Refreshed automatically when a new 10-Q or 10-K lands.' : `. ${seg0.source || ''}`]));
       return h('div', null, out);
     }
     function geoRows(v) {
@@ -620,7 +629,7 @@
       else if (S.finTab === 'returns') body = finReturns(t, f);
       else body = finStatements(t, f);
       return h('div', null, tabs, body,
-        note(`Company-reported GAAP figures from SEC filings${(f.sources || []).length > 1 ? ', gaps filled from Yahoo Finance' : ''}. USD millions except per share. As of ${(f.asof || '').slice(0, 10)}.`));
+        note(finSourceNote(f) + ` USD millions except per share. As of ${(f.asof || '').slice(0, 10)}.`));
     }
     function finStatements(t, f) {
       const S = us(t), spec = STMT[S.stmt], blk = f[S.freq];
@@ -1231,6 +1240,6 @@
       })), note('Collected automatically; links go to the publisher. Not curated or rated.'));
     }
 
-    return { page, openWin, load, priceOf, mkOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel, callOf, estimates, estTable, consensusOf, caseText, methodShort, methodWhy, variantFacts, checkFacts, midYears, relPerf, fill, framework, ratingKind, benchOf, rates };
+    return { page, openWin, load, finSourceNote, priceOf, mkOf, evalFor, researchOf, review, tripStatus, statusKind, stanceKind, peerStats, sliceBars, dat, WINS, finSnapshot, mixView, mappedRows, periodLabel, callOf, estimates, estTable, consensusOf, caseText, methodShort, methodWhy, variantFacts, checkFacts, midYears, relPerf, fill, framework, ratingKind, benchOf, rates };
   };
 })();

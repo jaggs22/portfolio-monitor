@@ -15,8 +15,9 @@ YAHOO_UA = os.environ.get(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
 )
 
-# The 15 covered names, all with full research.
-TIERS = {t: "core" for t in ["V", "LIN", "LLY", "MU", "PG", "MSFT", "JPM", "GOOGL", "WM", "COST", "KO", "AMZN", "XOM", "NEE", "AMT"]}
+# The 16 covered names, all with full research. Rolls-Royce is covered through its US ADR (RYCEY, one ordinary share each),
+# so prices stay in dollars; it files no SEC statements, so its fundamentals come from Yahoo, converted from sterling.
+TIERS = {t: "core" for t in ["V", "LIN", "LLY", "MU", "PG", "MSFT", "JPM", "GOOGL", "WM", "COST", "KO", "AMZN", "XOM", "NEE", "AMT", "RYCEY"]}
 BASIC = []
 TICKERS = list(TIERS) + BASIC
 

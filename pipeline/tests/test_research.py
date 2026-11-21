@@ -29,7 +29,8 @@ def test_build_row_multiples_and_currency():
     q = [(e, _q(10 * B, 3 * B, 2 * B, 2.5 * B, -1 * B, 2.6 * B, 0.5 * B, 2.5 * B)) for e in ("2026-06-30", "2026-03-31", "2025-12-31", "2025-09-30")]
     a = [("2025-12-31", {"revenue": 38 * B, "net_income": 7.5 * B})]
     fy_end = int(dt.datetime(2025, 12, 31, tzinfo=dt.timezone.utc).timestamp())
-    info = {"marketCap": 200 * B, "currency": "USD", "financialCurrency": "DKK", "lastFiscalYearEnd": fy_end, "currentPrice": 40.0}
+    info = {"marketCap": 200 * B, "currency": "USD", "financialCurrency": "DKK", "lastFiscalYearEnd": fy_end, "currentPrice": 40.0,
+            "forwardPE": 18.5}  # consensus already in USD, so it reconciles with the forward P/E and is kept
     # quote currency USD, reporting DKK: 1 USD = 6.5 DKK; 1 DKK = 1/6.5 USD
     row = P.build_row("NVO", info, q, a, {"rev_g0": 0.10, "rev_g1": 0.10, "eps0": 2.0, "eps1": 2.2}, 6.5, 1 / 6.5, today=dt.date(2026, 9, 30))
     mcap_dkk = 200 * B * 6.5
@@ -101,3 +102,23 @@ def test_humanize():
     assert S.humanize("lly:MounjaroMember") == "Mounjaro"
     assert S.humanize("v:DataProcessingRevenuesMember") == "Data Processing Revenues"
     assert S.humanize("country:US") == "US"
+
+
+def test_adr_consensus_currency_is_checked():
+    from pipeline import peers as P
+    # quote in USD, consensus in GBP: converted when the reporting-currency figure matches the forward P/E
+    e0, e1, note = P.align_eps_currency(0.43, 0.50, 17.84, 27.0, 1 / 1.3211)
+    assert abs(e1 - 0.50 * 1.3211) < 1e-3 and abs(e0 - 0.43 * 1.3211) < 1e-3 and "converted" in note
+    # already in the quote currency: kept
+    assert P.align_eps_currency(0.57, 0.66, 17.84, 27.0, 1 / 1.3211)[:2] == (0.57, 0.66)
+    # no forward P/E to check against: dropped rather than guessed
+    assert P.align_eps_currency(0.43, 0.50, 17.84, None, 1 / 1.3211)[:2] == (None, None)
+
+
+def test_statements_converted_to_usd():
+    from pipeline import yf_extra
+    frames = {"annual": {"2025-12-31": {"revenue": 20059.0, "eps_diluted": 0.29, "shares_diluted": 8400.0}}, "quarterly": {}}
+    out = yf_extra.to_usd(frames, 1.32)
+    row = out["annual"]["2025-12-31"]
+    assert row["revenue"] == round(20059.0 * 1.32, 3) and row["eps_diluted"] == round(0.29 * 1.32, 4) and row["shares_diluted"] == 8400.0
+    assert yf_extra.to_usd(frames, 1.0) is frames

@@ -68,7 +68,7 @@
     function contextFor(t) {
       const lines = [];
       const U = state.data.universe;
-      lines.push(`Coverage: ${U.length} US stocks. ` + (new Set(U.map((u) => u.tier)).size === 1 ? `Every one has full research: ${U.map((u) => u.name).join(', ')}.` : '') + (new Set(U.map((u) => u.tier)).size === 1 ? '' : [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basics only']].map(([k, l]) => { const xs = U.filter((u) => u.tier === k); return xs.length ? `${l}: ${xs.map((u) => u.name).join(', ')}.` : ''; }).filter(Boolean).join(' ')));
+      lines.push(`Coverage: ${U.length} stocks. ` + (new Set(U.map((u) => u.tier)).size === 1 ? `Every one has full research: ${U.map((u) => u.name).join(', ')}.` : '') + (new Set(U.map((u) => u.tier)).size === 1 ? '' : [['core', 'Full research'], ['lighter', 'Lighter research'], ['basic', 'Basics only']].map(([k, l]) => { const xs = U.filter((u) => u.tier === k); return xs.length ? `${l}: ${xs.map((u) => u.name).join(', ')}.` : ''; }).filter(Boolean).join(' ')));
       const hs = L.cleanHoldings(state.holdings);
       if (hs.length) lines.push(`The investor's book (dollars): ${hs.map((x) => `${x.ticker} ${Math.round(x.weight)}`).join(', ')}.`);
       U.filter((u) => u.tier !== 'basic').forEach((u) => { const c = CO.callOf(u.ticker, false); if (c) lines.push(`${u.name} (${u.ticker}): ${c.rating}, 12-month target $${c.pt.toFixed(2)} (${fmt.spct(c.upside, 1)}).`); });
