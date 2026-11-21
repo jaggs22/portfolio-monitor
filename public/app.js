@@ -382,7 +382,8 @@
 
   /* ---------- markets ---------- */
   const TV = 'https://s3.tradingview.com/external-embedding/';
-  const EXCH = { MSFT: 'NASDAQ', GOOGL: 'NASDAQ', COST: 'NASDAQ', AMZN: 'NASDAQ', LIN: 'NASDAQ', MU: 'NASDAQ' };
+  // TradingView exchange prefix; NYSE unless listed. Rolls-Royce's ADR trades over the counter (OTC:RYCEY).
+  const EXCH = { MSFT: 'NASDAQ', GOOGL: 'NASDAQ', COST: 'NASDAQ', AMZN: 'NASDAQ', LIN: 'NASDAQ', MU: 'NASDAQ', RYCEY: 'OTC' };
   const tvSym = (t) => `${EXCH[t] || 'NYSE'}:${t}`;
   function tvWidget(name, config, height) {
     const box = h('div', { class: 'tradingview-widget-container tv-box', style: { height: height + 'px' } }, h('div', { class: 'tradingview-widget-container__widget', style: { height: '100%' } }));
