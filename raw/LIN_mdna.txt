@@ -1,0 +1,631 @@
+10-Q for period 2026-09-30, filed 2026-10-29
+
+Management’s Discussion and Analysis of Financial Condition and Results of Operations ("MD&A")
+
+Non-GAAP Measures
+Throughout the MD&A, Linde plc ("Linde" or "the company") provides adjusted operating results exclusive of certain items such as Cost reduction program and other charges, purchase accounting impacts of the Linde AG merger, and pension settlement charges. Adjusted amounts are non-GAAP measures which are intended to supplement investors’ understanding of the company’s financial information by providing measures which investors, financial analysts and management find useful in evaluating the company’s operating performance. Items which the company does not believe to be indicative of on-going business performance are excluded from these calculations so that investors can better evaluate and analyze historical and future business trends on a consistent basis. In addition, operating results, excluding these items, is important to management's development of annual and long-term employee incentive compensation plans. Definitions of these non-GAAP measures may not be comparable to similar definitions used by other companies and are not a substitute for similar GAAP measures. 
+The non-GAAP measures and reconciliations are separately included in a later section in the MD&A titled "Non-GAAP Measures and Reconciliations."
+Outlook
+Linde provides quarterly updates on operating results, material trends that may affect financial performance, and financial guidance via quarterly earnings releases and investor teleconferences. These updates are available on the company's website, www.linde.com, but are not incorporated herein.
+
+
+
+
+
+23
+
+Table of Contents 
+Consolidated Results
+The following provides summary information for the quarters and nine months ended September 30, 2026 and 2025 and comparisons of 2026 to the respective 2025 periods. The amounts indicated as adjusted or as other financial data are non-GAAP measures intended to supplement investors' understanding of the company's financial information, which are not a substitute for GAAP measures.
+
+
+
+ Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars, except per share data)20262025Variance20262025Variance
+Sales$9,404 $8,615 9 %$27,474 $25,222 9 %
+Cost of sales, exclusive of depreciation and amortization$4,962 $4,379 13 %$14,346 $12,842 12 %
+As a percent of sales52.8 %50.8 %52.2 %50.9 %
+Selling, general and administrative$892 $897 (1)%$2,676 $2,553 5 %
+As a percent of sales9.5 %10.4 %9.7 %10.1 %
+Depreciation and amortization$965 $961 — %$2,879 $2,813 2 %
+Cost reduction program and other charges$425 $(11)N/M$425 $44 N/M
+Other income (expense) - net$27 $14 N/M$107 $47 N/M
+Operating profit$2,150 $2,367 (9)%$7,143 $6,905 3 %
+Operating margin22.9 %27.5 %26.0 %27.4 %
+Interest expense - net$71 $64 11 %$194 $191 2 %
+Net pension and OPEB cost (benefit), excluding service cost$(49)$(57)(14)%$(156)$(172)(9)%
+Effective tax rate21.1 %18.0 %22.9 %21.9 %
+Income from equity investments$61 $36 69 %$137 $107 28 %
+Noncontrolling interests$(48)$(43)12 %$(135)$(117)15 %
+Net Income – Linde plc$1,692 $1,929 (12)%$5,477 $5,368 2 %
+Diluted earnings per share$3.66 $4.09 (11)%$11.79 $11.34 4 %
+Diluted shares outstanding462,512 471,509 (2)%464,440 473,500 (2)%
+Number of employees64,512 65,489 (1)%64,512 65,489 (1)%
+Adjusted Amounts (a)
+Depreciation and amortization$777 $759 2 %$2,310 $2,222 4 %
+Operating profit$2,763 $2,558 8 %$8,137 $7,552 8 %
+Operating margin29.4 %29.7 %29.6 %29.9 %
+Effective tax rate23.8 %22.7 %23.7 %23.5 %
+
+Net Income – Linde plc$2,122 $1,987 7 %$6,230 $5,804 7 %
+Diluted earnings per share$4.59 $4.21 9 %$13.41 $12.26 9 %
+Other Financial Data (a)
+EBITDA$3,176 $3,364 (6)%$10,159 $9,825 3 %
+As percent of sales33.8 %39.0 %37.0 %39.0 %
+Adjusted EBITDA$3,620 $3,377 7 %$10,641 $9,941 7 %
+As percent of sales38.5 %39.2 %38.7 %39.4 %
+(a)Adjusted amounts and Other Financial Data are non-GAAP performance measures. A reconciliation of reported amounts to adjusted amounts can be found in the "Non-GAAP Measures and Reconciliations" section of this MD&A. 
+Sales for the third quarter of 2026 were $9,404 million, 9% above the prior year. Sales grew 3% from higher price attainment and 2% from higher volumes primarily driven by the electronics, chemicals and energy, and manufacturing end markets. Sales also increased 1% from currency translation, 1% from acquisitions, 1% from cost pass-through, which represents the contractual billing of energy cost variances primarily to on-site customers, and 1% from engineering sales.
+
+
+Operating profit for the third quarter of 2026 was $2,150 million, or 22.9% of sales, 9% below the prior year. The decrease was primarily driven by cost reduction program and other charges and cost inflation, partially offset by higher pricing and productivity initiatives. The effective tax rate ("ETR") was 21.1% in the third quarter of 2026 versus 18.0% in 2025. Diluted 
+
+
+24
+
+Table of Contents 
+earnings per share ("EPS") was $3.66 in the third quarter of 2026, or 11% below EPS of $4.09 for 2025. The decrease was due to lower net income - Linde plc partially offset by lower diluted shares outstanding.
+On an adjusted basis, operating profit for the third quarter of 2026 was $2,763 million, or 29.4% of sales, 8% above the prior year. The increase was primarily driven by higher pricing and productivity initiatives, partially offset by cost inflation. On an adjusted basis, the ETR was 23.8% for the third quarter of 2026 versus 22.7% in 2025. On an adjusted basis, EPS was $4.59 in the third quarter of 2026, or 9% above EPS of $4.21 for 2025. The increase was due to higher adjusted net income - Linde plc and lower diluted shares outstanding.
+
+Results of Operations
+Below is a discussion of the results of operations for the third quarter of 2026 and for the nine months ended September 30, 2026 compared to the respective 2025 periods.
+Sales
+
+Quarter Ended September 30, 2026 vs. 2025Nine months ended September 30, 2026 vs. 2025
+% Change% Change
+Factors Contributing to Changes - Sales
+Volume2 %2 %
+Price/Mix3 %3 %
+Cost pass-through1 %1 %
+Currency1 %2 %
+Acquisitions/divestitures1 %1 %
+Engineering1 %— %
+9 %9 %
+Sales increased by 9% both in the third quarter of 2026 and for the nine months ended September 30, 2026. Higher price attainment increased sales by 3% both in the quarter and nine months ended September 30, 2026. Volumes increased sales by 2% both in the quarter and nine months ended September 30, 2026 primarily driven by the electronics, chemicals and energy, and manufacturing end markets. Currency translation increased sales by 1% in the quarter and 2% for the nine months ended September 30, 2026 driven primarily by the strengthening of the Euro, Mexican peso, Chinese yuan, and Brazilian real against the U.S. dollar. Acquisitions increased sales by 1% both in the quarter and nine months ended September 30, 2026. Cost pass-through also increased sales by 1% both in the quarter and nine months ended September 30, 2026, with minimal impact on operating profit. Engineering sales increased by 1% in the quarter and were flat in the nine months ended September 30, 2026.
+Cost of sales, exclusive of depreciation and amortization
+Cost of sales, exclusive of depreciation and amortization, increased $583 million, or 13%, for the third quarter of 2026 and increased $1,504 million, or 12%, for the nine months ended September 30, 2026. The increases were primarily due to higher costs and currency translation, partially offset by productivity gains. Cost of sales, exclusive of depreciation and amortization, was 52.8% and 52.2% of sales for the quarter and nine months ended September 30, 2026, respectively, versus 50.8% and 50.9% for the respective 2025 periods. The increase as a percentage of sales was primarily due to higher costs and cost pass-through, partially offset by productivity gains.
+Selling, general and administrative
+Selling, general and administrative expenses ("SG&A") decreased $5 million, or 1% including an increase of $4 million from currency, in the third quarter of 2026 and increased $123 million, or 5% including an increase of $57 million from currency, for the nine months ended September 30, 2026. SG&A was 9.5% and 9.7% of sales for the quarter and nine months ended September 30, 2026, respectively, versus 10.4% and 10.1% of sales for the respective 2025 periods. Excluding currency impacts, the underlying year-to-date SG&A increase was driven primarily by higher costs. 
+Depreciation and amortization
+Depreciation and amortization expense increased $4 million, or 0%, for the third quarter of 2026 and increased $66 million, or 2%, for the nine months ended September 30, 2026. On an adjusted basis, excluding merger-related impacts, depreciation and amortization increased $18 million, or 2% including an increase of $6 million from currency, in the third quarter of 2026 and 
+
+
+25
+
+Table of Contents 
+increased $88 million, or 4% including an increase of $49 million from currency, for the nine months ended September 30, 2026. Excluding currency, the underlying depreciation and amortization increases were largely driven by new project start-ups.
+Cost reduction program and other charges
+Cost reduction program and other charges increased $436 million for the third quarter of 2026 and increased $381 million for the nine months ended September 30, 2026. The increase is due to the 2026 program recognized during the third quarter, which includes global severance and other cost reduction charges of $200 million and $42 million, respectively, and various non-cash charges totaling $183 million primarily related to the U.S. homecare business. On an adjusted basis, these costs have been excluded. 
+Other income (expense) - net
+Other income increased $13 million for the third quarter of 2026 and increased $60 million for the nine months ended September 30, 2026. The year-to-date period includes a gain on a divestiture in the Americas business in the first quarter of 2026. 
+Operating profit 
+Operating profit decreased $217 million, or 9%, for the third quarter of 2026 and increased $238 million, or 3%, for the nine months ended September 30, 2026. The decrease in the third quarter was primarily driven by cost reduction program and other charges. The year-to-date increase was primarily driven by higher pricing, productivity initiatives and currency impact, partially offset by cost inflation and cost reduction program and other charges.
+On an adjusted basis, which excludes the impacts of merger-related purchase accounting as well as cost reduction program and other charges, operating profit increased $205 million, or 8%, for the third quarter of 2026 and increased $585 million, or 8%, for the nine months ended September 30, 2026. Adjusted operating profit growth was driven by higher pricing and productivity initiatives, partially offset by cost inflation. A discussion of operating profit by segment is included in the segment discussion that follows.
+Interest expense - net 
+Interest expense - net increased $7 million, or 11%, for the third quarter of 2026 and increased $3 million, or 2%, for the nine months ended September 30, 2026.
+Net pension and OPEB cost (benefit), excluding service cost
+Net pension and OPEB benefit, excluding service cost, decreased $8 million for the third quarter of 2026 and decreased $16 million for the nine months ended September 30, 2026. The decreases were primarily driven by lower amortization of deferred gains. 
+Effective tax rate
+The ETR for the quarter and nine months ended September 30, 2026 was 21.1% and 22.9%, respectively, versus 18.0% and 21.9% for the respective 2025 periods. The increases were primarily due to the impact of a tax rate change in EMEA in 2025.
+On an adjusted basis, the ETR for the quarter and nine months ended September 30, 2026 was 23.8% and 23.7%, respectively, versus 22.7% and 23.5% for the respective 2025 periods. 
+Income from equity investments 
+Income from equity investments increased $25 million for the third quarter of 2026 and increased $30 million for the nine months ended September 30, 2026. 
+On an adjusted basis, income from equity investments increased $20 million for the third quarter of 2026 and increased $27 million for the nine months ended September 30, 2026. 
+Noncontrolling interests 
+At September 30, 2026, noncontrolling interests consisted primarily of noncontrolling shareholders' investments in APAC (primarily China). Noncontrolling interest income increased $5 million for the third quarter of 2026 and increased $18 million for the nine months ended September 30, 2026. 
+
+
+26
+
+Table of Contents 
+Net Income – Linde plc
+Net income - Linde plc decreased $237 million, or 12%, for the third quarter of 2026, and increased $109 million, or 2%, for the nine months ended September 30, 2026. On an adjusted basis, which excludes the impacts of merger-related purchase accounting and cost reduction program and other charges, net income - Linde plc increased $135 million, or 7%, for the third quarter of 2026, and increased $426 million, or 7%, for the nine months ended September 30, 2026. The increases were largely driven by higher operating profit.
+Diluted earnings per share 
+Diluted earnings per share decreased $0.43, or 11%, for the third quarter of 2026 and increased $0.45, or 4%, for the nine months ended September 30, 2026. 
+On an adjusted basis, diluted EPS increased $0.38, or 9%, for the third quarter of 2026 and increased $1.15, or 9%, for the nine months ended September 30, 2026. The increases were primarily due to higher adjusted net income - Linde plc and lower diluted shares outstanding. 
+Employees
+The number of employees at September 30, 2026 was 64,512, a decrease of 977 employees from September 30, 2025 due to the ongoing impact of cost reduction programs, partially offset by acquisitions.
+Other Financial Data
+EBITDA decreased $188 million, or 6%, for the third quarter of 2026 and increased $334 million, or 3%, for the nine months ended September 30, 2026.
+Adjusted EBITDA increased $243 million, or 7%, for the third quarter of 2026 and increased $700 million, or 7%, for the nine months ended September 30, 2026. The increases were driven by higher adjusted net income - Linde plc versus prior year.
+See the "Non-GAAP Measures and Reconciliations" section for definitions and reconciliations of adjusted non-GAAP measures to reported GAAP amounts.
+Other Comprehensive Income (Loss)
+Other comprehensive income for the quarter and nine months ended September 30, 2026 was $310 million and $617 million, respectively, which primarily related to currency translation adjustments of $298 million and $599 million, respectively. The translation adjustments reflect the impact of translating local currency foreign subsidiary financial statements to U.S. dollars and are largely driven by the movement of the U.S. dollar against major currencies, including the Euro and British pound. See the "Currency" section of the MD&A for exchange rates used for translation purposes and Note 10 to the condensed consolidated financial statements for a summary of the currency translation adjustment component of accumulated other comprehensive income (loss) by segment.
+
+
+
+
+
+27
+
+Table of Contents 
+Segment Discussion
+The following summary of sales and operating profit by segment provides a basis for the discussion that follows. Linde evaluates the performance of its reportable segments based on operating profit, excluding items not indicative of ongoing business trends. The reported amounts are GAAP amounts from the Consolidated Statement of Income.
+In the third quarter of 2026, the company's segment reporting structure was revised. As a result, the U.S. homecare business, previously reported within the Americas segment, is now included in the Other category for segment reporting purposes. See Note 9 to the condensed consolidated financial statements. Prior period amounts have been recast to conform to current presentation. 
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+SALES
+Americas$3,601 $3,253 11 %$10,553 $9,557 10 %
+EMEA2,327 2,178 7 %6,801 6,371 7 %
+APAC1,950 1,741 12 %5,521 4,935 12 %
+Engineering582 519 12 %1,724 1,635 5 %
+Other944 924 2 %2,875 2,724 6 %
+Total sales$9,404 $8,615 9 %$27,474 $25,222 9 %
+
+SEGMENT OPERATING PROFIT
+Americas$1,263 $1,124 12 %$3,682 $3,279 12 %
+EMEA817 781 5 %2,424 2,283 6 %
+APAC534 490 9 %1,542 1,431 8 %
+Engineering107 101 6 %308 305 1 %
+Other42 62 (32)%181 254 (29)%
+Segment operating profit$2,763 $2,558 8 %$8,137 $7,552 8 %
+Reconciliation to reported operating profit:
+Cost reduction program and other charges(425)11 (425)(44)
+Purchase accounting impacts - Linde AG (a)(188)(202)(569)(603)
+Total operating profit$2,150 $2,367 $7,143 $6,905 
+(a)To adjust for purchase accounting impacts related to the merger.
+
+
+28
+
+
+Table of Contents 
+Americas
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+Sales$3,601 $3,253 11 %$10,553 $9,557 10 %
+
+Operating profit$1,263 $1,124 12 %$3,682 $3,279 12 %
+As a percent of sales35.1 %34.6 %34.9 %34.3 %
+
+
+Quarter Ended September 30, 2026 vs. 2025Nine Months Ended September 30, 2026 vs. 2025
+% Change% Change
+
+Factors Contributing to Changes - Sales
+Volume3 %3 %
+Price/Mix6 %4 %
+Cost pass-through— %— %
+Currency1 %2 %
+Acquisitions/divestitures1 %1 %
+
+11 %10 %
+The Americas segment includes Linde's industrial gases operations in approximately 20 countries including the United States, Canada, Mexico and Brazil.
+Sales
+Sales for the Americas segment increased $348 million, or 11%, in the third quarter of 2026 and increased $996 million, or 10%, for the nine months ended September 30, 2026. Pricing increased sales by 6% in the quarter, primarily from ongoing price actions in addition to recovery of costs incurred in the current and prior periods. Volumes increased sales by 3% both in the quarter and year-to-date periods primarily driven by the electronics, chemicals and energy, and metals and mining end markets. Cost pass-through was flat in the quarter and year-to-date, with minimal impact on operating profit. Currency translation increased sales by 1% in the quarter and 2% year-to-date driven primarily by the strengthening of the Mexican peso and Brazilian real against the U.S. dollar. Acquisitions increased sales by 1% in the quarter and year-to-date.
+Operating profit 
+Operating profit in the Americas segment increased $139 million, or 12%, in the third quarter of 2026, and increased $403 million, or 12%, for the nine months ended September 30, 2026. The increase was driven primarily by higher pricing, productivity initiatives and currency translation, partially offset by cost inflation. 
+
+
+
+EMEA
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+Sales$2,327 $2,178 7 %$6,801 $6,371 7 %
+
+Operating profit$817 $781 5 %$2,424 $2,283 6 %
+As a percent of sales35.1 %35.9 %35.6 %35.8 %
+
+
+29
+
+Table of Contents 
+
+
+Quarter Ended September 30, 2026 vs. 2025Nine Months Ended September 30, 2026 vs. 2025
+% Change% Change
+
+Factors Contributing to Changes - Sales
+Volume1 %(1)%
+Price/Mix2 %2 %
+Cost pass-through3 %1 %
+Currency— %4 %
+Acquisitions/divestitures1 %1 %
+
+7 %7 %
+The EMEA segment includes Linde's industrial gases operations in approximately 50 European, Middle Eastern and African countries including Germany, the United Kingdom, France, the Republic of South Africa and Sweden.
+Sales 
+Sales for the EMEA segment increased $149 million, or 7%, in the third quarter of 2026 and increased $430 million, or 7%, for the nine months ended September 30, 2026. Currency translation was flat in the quarter and increased sales by 4% year-to-date largely due to the strengthening of the Euro against the U.S. dollar. Higher price attainment increased sales by 2% both in the quarter and the year-to-date periods. Acquisitions increased sales by 1% both in the quarter and the year-to-date periods. Cost pass-through increased sales by 3% in the quarter and 1% year-to-date with minimal impact on operating profit. Volumes increased sales by 1% in the quarter and decreased sales by 1% year-to-date.
+Operating Profit
+Operating profit in the EMEA segment increased $36 million, or 5%, for the third quarter of 2026, and increased $141 million, or 6%, for the nine months ended September 30, 2026. The increase was driven by productivity initiatives, currency translation, and higher pricing, partially offset by cost inflation. 
+
+APAC
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+Sales$1,950 $1,741 12 %$5,521 $4,935 12 %
+
+Operating profit$534 $490 9 %$1,542 $1,431 8 %
+As a percent of sales27.4 %28.1 %27.9 %29.0 %
+
+
+Quarter Ended September 30, 2026 vs. 2025Nine Months Ended September 30, 2026 vs. 2025
+% Change% Change
+
+Factors Contributing to Changes - Sales
+
+Volume/Equipment5 %5 %
+Price/Mix3 %2 %
+Cost pass-through1 %1 %
+Currency3 %3 %
+Acquisitions/divestitures— %1 %
+
+12 %12 %
+The APAC segment includes Linde's industrial gases operations in approximately 15 Asian and South Pacific countries and regions including China, Australia, India, and South Korea.
+Sales 
+Sales for the APAC segment increased $209 million, or 12%, in the third quarter of 2026 and increased $586 million, or 12%, for the nine months ended September 30, 2026. Volumes increased sales by 5% both in the quarter and year-to-date periods, primarily driven by electronics and chemicals and energy end markets and project start-ups. Currency translation increased 
+
+
+30
+
+Table of Contents 
+sales by 3% both in the quarter and year-to-date periods primarily due to the strengthening of the Chinese yuan and Australian dollar against the U.S. dollar. Higher pricing increased sales by 3% in the quarter and 2% year-to-date. Acquisitions were flat in the quarter and increased sales by 1% year-to-date. Cost pass-through increased sales by 1% in the third quarter and year-to-date, with minimal impact on operating profit.
+Operating profit 
+Operating profit in the APAC segment increased $44 million, or 9%, in the third quarter of 2026 and increased $111 million, or 8%, for the nine months ended September 30, 2026. The increase was driven primarily by higher pricing, productivity initiatives, and currency translation, partially offset by cost inflation.
+
+Engineering
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+Sales$582 $519 12 %$1,724 $1,635 5 %
+
+Operating profit$107 $101 6 %$308 $305 1 %
+As a percent of sales18.4 %19.5 %17.9 %18.7 %
+
+
+Quarter Ended September 30, 2026 vs. 2025Nine Months Ended September 30, 2026 vs. 2025
+% Change% Change
+
+Factors Contributing to Changes - Sales
+
+
+
+Currency— %3 %
+
+Other12 %2 %
+12 %5 %
+Sales 
+Sales for the Engineering segment increased $63 million, or 12%, in the third quarter of 2026 and increased $89 million, or 5%, for the nine months ended September 30, 2026 primarily due to project timing. Currency translation was flat in the quarter and increased sales by 3% year-to-date primarily due to the strengthening of the Euro against the U.S. dollar.
+Operating profit 
+Operating profit for the Engineering segment increased $6 million, or 6% for the third quarter of 2026 and $3 million, or 1%, for the nine months ended September 30, 2026 primarily due to project timing and currency translation. 
+
+Other
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+(Millions of dollars)20262025Variance20262025Variance
+Sales$944 $924 2 %$2,875 $2,724 6 %
+
+Operating profit (loss)$42 $62 (32)%$181 $254 (29)%
+As a percent of sales4.4 %6.7 %6.3 %9.3 %
+
+
+Quarter Ended September 30, 2026 vs. 2025Nine Months Ended September 30, 2026 vs. 2025
+% Change% Change
+
+Factors Contributing to Changes - Sales
+
+Volume/price— %4 %
+Cost pass-through2 %2 %
+Currency— %— %
+Acquisitions/divestitures— %— %
+
+2 %6 %
+
+
+
+31
+
+Table of Contents 
+Other consists of corporate costs and a few smaller businesses including Linde Advanced Material Technologies (LAMT), U.S. homecare and global helium wholesale, which individually do not meet the quantitative thresholds for separate presentation. 
+Sales 
+Sales for Other increased $20 million, or 2%, in the third quarter of 2026 and increased $151 million, or 6%, for the nine months ended September 30, 2026 primarily due to higher volume/price and pass-through costs in LAMT. 
+Operating profit 
+Operating profit in Other decreased $20 million, or 32%, in the third quarter of 2026 and $73 million, or 29%, year-to-date primarily due to declines in the U.S. homecare business partially offset by growth in LAMT. 
+
+Currency
+The results of Linde’s non-U.S. operations are translated to the company’s reporting currency, the U.S. dollar, from the functional currencies used in the countries in which the company operates. For most foreign operations, Linde uses the local currency as its functional currency. There is inherent variability and unpredictability in the relationship of these functional currencies to the U.S. dollar and such currency movements may materially impact Linde’s results of operations in any given period.
+To help understand the reported results, the following is a summary of the significant currencies underlying Linde’s consolidated results and the exchange rates used to translate the financial statements (rates of exchange expressed in units of local currency per U.S. dollar):
+
+
+
+Percentage of YTD 2026 Consolidated SalesExchange Rate for
+Income StatementExchange Rate for
+Balance Sheet
+Year-To-Date AverageSeptember 30,December 31,
+Currency2026202520262025
+Euro16 %0.86 0.89 0.88 0.85 
+Chinese yuan8 %6.82 7.22 6.71 6.99 
+British pound4 %0.74 0.76 0.75 0.74 
+Brazilian real4 %5.15 5.65 5.17 5.47 
+Australian dollar4 %1.42 1.56 1.44 1.50 
+Mexican peso4 %17.40 19.48 18.07 18.01 
+Korean won3 %1,460 1,412 1,357 1,440 
+Canadian dollar3 %1.39 1.40 1.42 1.37 
+Indian rupee2 %93.86 86.50 95.83 89.88 
+Swedish krona1 %9.38 9.92 10.01 9.21 
+South African rand1 %16.37 18.13 16.42 16.56 
+Swiss franc1 %0.80 0.84 0.84 0.79 
+
+
+32
+
+
+Table of Contents 
+Liquidity, Capital Resources and Other Financial Data
+The following selected cash flow information provides a basis for the discussion that follows:
+
+
+Nine Months Ended September 30,
+(Millions of dollars)20262025
+Net Cash Provided By (Used For):
+Operations
+Net income (including noncontrolling interests)$5,612 $5,485 
+Non-cash charges (credits):
+Add: Depreciation and amortization2,879 2,813 
+Add: Deferred income taxes(166)(458)
+Add: Share-based compensation104 133 
+Add: Cost reduction program and other charges, net of payments313 (71)
+Net income adjusted for non-cash charges8,742 7,902 
+Less: Working capital(775)(461)
+
+
+
+
+
+
+Less: Pension contributions(23)(20)
+ Other(264)(101)
+Net cash provided by (used for) operating activities$7,680 $7,320 
+Investing
+Capital expenditures(4,172)(3,803)
+Acquisitions, net of cash acquired(411)(393)
+Divestitures, net of cash divested and asset sales178 31 
+Other investing, net37 (95)
+Net cash provided by (used for) investing activities$(4,368)$(4,260)
+Financing
+Debt increase (decrease) - net504 1,917 
+Issuances (purchases) of common stock - net(2,606)(3,191)
+Cash dividends - Linde plc shareholders(2,214)(2,113)
+Noncontrolling interest transactions and other(129)(149)
+Net cash provided by (used for) financing activities$(4,445)$(3,536)
+
+Effect of exchange rate changes on cash and cash equivalents$24 $135 
+Cash and cash equivalents, end-of-period$3,947 $4,509 
+Cash Flow from Operations
+Cash provided by operations of $7,680 million for the nine months ended September 30, 2026, increased $360 million, or 5%, versus 2025. The increase was driven primarily by higher net income adjusted for non-cash charges, partially offset by higher working capital requirements. 
+Linde estimates that the total 2026 required contributions to its pension plans will be in the range of approximately $25 million to $35 million, of which $23 million has been made through September 30, 2026.
+Investing
+Net cash used for investing activities of $4,368 million for the nine months ended September 30, 2026 increased $108 million, or 3%, versus 2025. The increase was primarily due to higher capital expenditures, partially offset by higher inflows from divestitures and asset sales. 
+Capital expenditures for the nine months ended September 30, 2026 were $4,172 million, $369 million higher than the prior year, primarily due to investments in new plant and production equipment for backlog growth requirements.
+
+
+33
+
+Table of Contents 
+At September 30, 2026, Linde's sale of gas backlog of large projects under construction was approximately $7.9 billion. This represents the total estimated capital cost of large plants under construction.
+Acquisitions, net of cash acquired, were $411 million for the nine months ended September 30, 2026, and primarily related to businesses in the Americas and EMEA. Acquisitions, net of cash acquired, were $393 million for the nine months ended September 30, 2025 and related primarily to businesses in the Americas, APAC, and EMEA segments. 
+Divestitures, net of cash divested and asset sales, for the nine months ended September 30, 2026 were $178 million and included proceeds from the sale of a business in the Americas. Divestitures for the nine months ended September 30, 2025, net of cash divested and asset sales, were $31 million.
+
+
+Other investing, net for the nine months ended September 30, 2026 was an inflow of $37 million versus an outflow of $95 million in the respective 2025 period, due to a decrease in cash outflows for settlement of foreign exchange contracts designated in a net investment hedging relationship.
+Financing
+Cash used for financing activities was $4,445 million for the nine months ended September 30, 2026 as compared to $3,536 million for the nine months ended September 30, 2025. Cash provided by debt was $504 million for the nine months ended September 30, 2026, versus cash provided by debt of $1,917 million for the nine months ended September 30, 2025, driven primarily by lower net debt issuances in 2026. During the nine months ended September 30, 2026, Linde issued €1.6 billion of Euro-denominated notes and repaid $925 million and €700 million of U.S. dollar-denominated and Euro-denominated notes, respectively.
+Net purchases of ordinary shares were $2,606 million for the nine months ended September 30, 2026, versus $3,191 million for the nine months ended September 30, 2025. For additional information related to the share repurchase programs, see Part II Item 2. Unregistered Sales of Equity Securities and Use of Proceeds.
+Cash dividends for the nine months ended September 30, 2026 were $2,214 million, having increased $101 million from the nine months ended September 30, 2025, driven primarily by a 7% increase in quarterly dividends per share from $1.50 per share to $1.60 per share and partially offset by lower shares outstanding. Cash used for noncontrolling interest transactions and other was $129 million for the nine months ended September 30, 2026 versus $149 million for the nine months ended September 30, 2025.
+The company continues to believe it has sufficient operating flexibility, cash, and funding sources to maintain adequate amounts of liquidity to meet its business needs around the world. The company maintains a $5.0 billion and a $1.5 billion unsecured and undrawn revolving credit agreement with no associated financial covenants. No borrowings were outstanding under the credit agreements as of September 30, 2026. The company does not anticipate any limitations on its ability to access the debt capital markets and/or other external funding sources and remains committed to its strong ratings from Moody’s and Standard & Poor’s.
+Legal Proceedings
+See Note 8 to the condensed consolidated financial statements.
+
+
+34
+
+Table of Contents 
+
+
+
+NON-GAAP MEASURES AND RECONCILIATIONS
+(Millions of dollars, except per share data)
+The following non-GAAP measures are intended to supplement investors’ understanding of the company’s financial information by providing measures which investors, financial analysts and management use to help evaluate the company’s operating performance and liquidity. Items which the company does not believe to be indicative of on-going business trends are excluded from these calculations so that investors can better evaluate and analyze historical and future business trends on a consistent basis. Definitions of these non-GAAP measures may not be comparable to similar definitions used by other companies and are not a substitute for similar GAAP measures. 
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+2026202520262025
+Adjusted Operating Profit and Operating Margin
+Reported operating profit$2,150 $2,367 $7,143 $6,905 
+Add: Cost reduction program and other charges425 (11)425 44 
+
+Add: Purchase accounting impacts - Linde AG (c)188 202 569 603 
+Total adjustments613 191 994 647 
+Adjusted operating profit$2,763 $2,558 $8,137 $7,552 
+
+Reported percentage change(9)%3 %
+Adjusted percentage change8 %8 %
+
+Reported sales$9,404 $8,615 $27,474 $25,222 
+
+Reported operating margin22.9 %27.5 %26.0 %27.4 %
+Adjusted operating margin29.4 %29.7 %29.6 %29.9 %
+
+Adjusted Depreciation and Amortization
+Reported depreciation and amortization$965 $961 $2,879 $2,813 
+Less: Purchase accounting impacts - Linde AG (c)(188)(202)(569)(591)
+Adjusted depreciation and amortization$777 $759 $2,310 $2,222 
+
+Adjusted Other Income (Expense) - net
+Reported other income (expense) - net$27 $14 $107 $47 
+Add: Purchase accounting impacts - Linde AG (c)— — — (12)
+Adjusted other income (expense) - net$27 $14 $107 $59 
+
+Adjusted Net Pension and OPEB Cost (Benefit), Excluding Service Cost
+Reported net pension and OPEB cost (benefit), excluding service cost$(49)$(57)$(156)$(172)
+Add: Pension settlement charges(4)(2)(4)(2)
+Adjusted Net Pension and OPEB cost (benefit), excluding service costs$(53)$(59)$(160)$(174)
+
+Adjusted Income Taxes (a)
+Reported income taxes$449 $424 $1,630 $1,508 
+Add: Purchase accounting impacts - Linde AG (c)43 155 133 245 
+Add: Pension settlement charges1 — 1 — 
+Add: Cost reduction program and other charges160 1 160 19 
+Total adjustments 204 156 294 264 
+Adjusted income taxes $653 $580 $1,924 $1,772 
+
+
+
+
+35
+
+Table of Contents 
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+2026202520262025
+Adjusted Effective Tax Rate (a)
+Reported income before income taxes and equity investments$2,128 $2,360 $7,105 $6,886 
+Add: Pension settlement charge4 2 4 2 
+Add: Purchase accounting impacts - Linde AG (c)188 202 569 603 
+Add: Cost reduction program and other charges425 (11)425 44 
+Total adjustments 617 193 998 649 
+Adjusted income before income taxes and equity investments$2,745 $2,553 $8,103 $7,535 
+
+Reported Income taxes $449 $424 $1,630 $1,508 
+Reported effective tax rate21.1 %18.0 %22.9 %21.9 %
+
+Adjusted income taxes $653 $580 $1,924 $1,772 
+Adjusted effective tax rate23.8 %22.7 %23.7 %23.5 %
+
+Adjusted Income from Equity Investments
+Reported income from equity investments$61 $36 $137 $107 
+Add: Purchase accounting impacts - Linde AG (c)19 18 57 54 
+Add: Cost reduction program and other charges— 6 — 6 
+Total adjustments19 24 57 60 
+Adjusted income from equity investments $80 $60 $194 $167 
+
+Adjusted Noncontrolling Interests
+Reported noncontrolling interests$(48)$(43)$(135)$(117)
+Add: Purchase accounting impacts - Linde AG (c)(2)(3)(8)(9)
+
+Total adjustments(2)(3)(8)(9)
+Adjusted noncontrolling interests$(50)$(46)$(143)$(126)
+
+Adjusted Net Income - Linde plc (b)
+Reported net income$1,692 $1,929 $5,477 $5,368 
+Add: Pension settlement charge3 2 3 2 
+Add: Cost reduction program and other charges265 (6)265 31 
+Add: Purchase accounting impacts - Linde AG (c)162 62 485 403 
+Total adjustments430 58 753 436 
+Adjusted net income - Linde plc$2,122 $1,987 $6,230 $5,804 
+
+Adjusted Diluted EPS (b)
+Reported diluted EPS$3.66 $4.09 $11.79 $11.34 
+Add: Pension settlement charge0.01 — 0.01 — 
+Add: Cost reduction program and other charges0.57 (0.01)0.57 0.07 
+Add: Purchase accounting impacts - Linde AG (c)0.35 0.13 1.04 0.85 
+Total adjustments0.93 0.12 1.62 0.92 
+Adjusted diluted EPS$4.59 $4.21 $13.41 $12.26 
+
+
+Reported percentage change(11)%4 %
+Adjusted percentage change9 %9 %
+
+
+
+
+36
+
+Table of Contents 
+
+
+Quarter Ended September 30,Nine Months Ended September 30,
+2026202520262025
+Adjusted EBITDA and % of Sales
+Net Income - Linde plc$1,692 $1,929 $5,477 $5,368 
+Add: Noncontrolling interests48 43 135 117 
+Add: Net pension and OPEB cost (benefit), excluding service cost(49)(57)(156)(172)
+Add: Interest expense71 64 194 191 
+Add: Income taxes449 424 1,630 1,508 
+Add: Depreciation and amortization965 961 2,879 2,813 
+EBITDA$3,176 $3,364 $10,159 $9,825 
+Add: Cost reduction program and other charges425 (5)425 50 
+Add: Purchase accounting impacts - Linde AG (c)19 18 57 66 
+Total adjustments444 13 482 116 
+Adjusted EBITDA$3,620 $3,377 $10,641 $9,941 
+
+Reported sales $9,404 $8,615 $27,474 $25,222 
+% of sales 
+EBITDA33.8 %39.0 %37.0 %39.0 %
+Adjusted EBITDA as a % of Sales38.5 %39.2 %38.7 %39.4 %
+
+
+(a) The income tax expense (benefit) on the non-GAAP pre-tax adjustments was determined using the applicable tax rates for the jurisdictions that were utilized in calculating the GAAP income tax expense (benefit) and included both current and deferred income tax amounts.
+(b) Net of income taxes which are shown separately in "Adjusted Income Taxes and Effective Tax Rate".
+
+(c) The company believes that its non-GAAP measures excluding merger Purchase accounting impacts - Linde AG are useful to investors because: 
+(i) the 2018 business combination was a merger of equals in an all-stock merger transaction, with no cash consideration, 
+(ii) the company is managed on a geographic basis and the results of certain geographies are more heavily impacted by merger purchase accounting than others, causing results that are not comparable at the reportable segment level, therefore, the impacts of merger purchase accounting adjustments to each segment vary and are not comparable within the company and when compared to other companies in similar regions, 
+(iii) business management is evaluated and variable compensation is determined based on results excluding merger purchase accounting impacts, and; 
+(iv) it is important to investors and analysts to understand the purchase accounting impacts to the financial statements.
+A summary of each of the adjustments made for Purchase accounting impacts - Linde AG are as follows:
+
+
+Adjusted Operating Profit and Margin: The purchase accounting adjustments for the periods presented relate primarily to depreciation and amortization related to the fair value step up of fixed assets and intangible assets (primarily customer related) acquired in the merger and the allocation of fair value step-up for ongoing Linde AG asset disposals (reflected in Other Income/(Expense)).
+
+
+Adjusted Income Taxes and Effective Tax Rate: Relates to the current and deferred income tax impact on the adjustments discussed above. The income tax expense (benefit) on the non-GAAP pre-tax adjustments was determined using the applicable tax rates for the jurisdictions that were utilized in calculating the GAAP income tax expense (benefit) and included both current and deferred income tax amounts.
+
+
+Adjusted Income from Equity Investments: Represents the amortization of increased fair value on equity investments related to depreciable and amortizable assets.
+
+
+Adjusted Noncontrolling Interests: Represents the noncontrolling interests’ ownership portion of the adjustments described above determined on an entity-by-entity basis.
+
+
+
+37
+
+
+Table of Contents 
+Supplemental Guarantee Information
+On May 5, 2026, the company filed a Form S-3 Registration Statement with the SEC ("the Registration Statement").
+Linde plc may offer debt securities, preferred shares, depositary shares and ordinary shares under the Registration Statement, and debt securities exchangeable for or convertible into preferred shares, ordinary shares or other debt securities. Debt securities of Linde plc may be guaranteed by Linde Inc. and/or Linde GmbH. Linde plc may provide guarantees of debt securities offered by its wholly owned subsidiary Linde Inc. under the Registration Statement.
+Linde Inc. is a wholly owned subsidiary of Linde plc. Linde Inc. may offer debt securities under the Registration Statement. Debt securities of Linde Inc. will be guaranteed by Linde plc, and such guarantees by Linde plc may be guaranteed by Linde GmbH. Linde Inc. may also provide guarantees of debt securities offered by Linde plc under the Registration Statement.
+Linde GmbH is a wholly owned subsidiary of Linde plc. Linde GmbH may provide (i) guarantees of debt securities offered by Linde plc under the Registration Statement and (ii) upstream guarantees of downstream guarantees provided by Linde plc of debt securities of Linde Inc. offered under the Registration Statement.
+In September 2019, Linde plc provided downstream guarantees of all pre-existing Linde Inc. and Linde Finance notes, and Linde GmbH and Linde Inc., respectively, provided upstream guarantees of Linde plc’s downstream guarantees.
+Linde plc established a European debt issuance program on May 11, 2020, and filed a base prospectus with the Luxembourg Stock Exchange as subsequently updated on May 4, 2026, for a €25.0 billion debt issuance program (or the equivalent in other currencies), under which Linde plc may offer debt securities. Linde Inc. and Linde GmbH have provided to Linde plc upstream guarantees in relation to debt securities of Linde plc offered under the European debt issuance program, as confirmed to the current program amount. Under the European debt issuance program, Linde plc may issue unsecured notes with such terms, including currency, interest rate and maturity, as agreed by Linde plc and the purchasers of such notes at the time of sale and as set out in the final terms for the relevant issue of notes. The current European debt issuance program will be valid for a period of one year from May 4, 2026, after which it will require updating prior to any further issuance of notes.
+By virtue of these guarantee structures, unless specified otherwise, debt securities of Linde plc and Linde Inc. offered under the Registration Statement will be pari passu in right of payment with each other and with the existing Linde Inc. notes, any Linde plc notes issued under the European debt program and any existing Linde Finance notes.
+For further information about the guarantees of the debt securities registered under the Registration Statement (including the ranking of such guarantees, limitations on enforceability of such guarantees and the circumstances under which such guarantees may be released), see "Description of Debt Securities – Guarantees" and "Description of Debt Securities – Ranking" in the Registration Statement, which subsections are incorporated herein by reference.
+
+
+38
+
+Table of Contents 
+The following tables present summarized financial information for Linde plc, Linde Inc., Linde GmbH and Linde Finance on a combined basis, after eliminating intercompany transactions and balances between them and excluding investments in and equity in earnings from non-guarantor subsidiaries.
+
+
+(Millions of dollars)
+Statement of Income DataNine Months Ended September 30, 2026Twelve Months Ended December 31, 2025
+Sales$6,833 $8,844 
+Operating profit1,112 1,512 
+Net income(302)3 
+Transactions with non-guarantor subsidiaries2,893 3,989 
+
+Balance Sheet Data (at period end)
+Current assets (a)$4,593 $4,815 
+Long-term assets (b)17,256 16,808 
+Current liabilities (c)9,986 10,085 
+Long-term liabilities (d)77,398 73,336 
+
+(a) From current assets above, amount due from non-guarantor subsidiaries$1,818 $1,097 
+(b) From long-term assets above, amount due from non-guarantor subsidiaries371 724 
+(c) From current liabilities above, amount due to non-guarantor subsidiaries1,440 1,325 
+(d) From long-term liabilities above, amount due to non-guarantor subsidiaries52,878 48,301 
+
+Item 3. 

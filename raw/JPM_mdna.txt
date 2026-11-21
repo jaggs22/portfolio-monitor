@@ -1,0 +1,2155 @@
+10-Q for period 2026-09-30, filed 2026-11-03
+
+Management’s discussion and analysis of the financial condition and results of operations (“MD&A”) of JPMorgan Chase & Co. (“JPMorganChase” or the “Firm”) for the third quarter of 2026. 
+This Quarterly Report on Form 10-Q for the third quarter of 2026 (“Form 10-Q”) should be read together with JPMorganChase’s Annual Report on Form 10-K for the year ended December 31, 2025 (“2025 Form 10-K”). Refer to the Glossary of terms and acronyms and line of business metrics on pages 193-201 for definitions of terms and acronyms used throughout this Form 10-Q.
+This Form 10-Q contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These forward-looking statements are based on the beliefs and expectations of JPMorganChase’s management, speak only as of the date of this Form 10-Q and are subject to significant risks and uncertainties. Refer to Forward-looking Statements on page 91 of this Form 10-Q and Part I, Item 1A, Risk Factors on pages 9–31 of the 2025 Form 10-K for a discussion of certain of those risks and uncertainties and the factors that could cause JPMorganChase’s actual results to differ materially because of those risks and uncertainties. There is no assurance that actual results will be in line with any outlook information set forth herein, and the Firm does not undertake to update any forward-looking statements.
+JPMorgan Chase & Co. (NYSE: JPM), a financial holding company incorporated under Delaware law in 1968, is a leading financial services firm based in the United States of America (“U.S.”), with operations worldwide. JPMorganChase had $5.1 trillion in assets and $372.4 billion in stockholders’ equity as of September 30, 2026. The Firm is a leader in investment banking, financial services for consumers and small businesses, commercial banking, financial transaction processing and asset management. Under the J.P. Morgan and Chase brands, the Firm serves millions of customers, predominantly in the U.S., and many of the world’s most prominent corporate, institutional and government clients globally. 
+JPMorganChase’s principal bank subsidiary is JPMorgan Chase Bank, National Association (“JPMorgan Chase Bank, N.A.”), a national banking association with U.S. branches in 48 states and Washington, D.C. JPMorganChase’s principal non-bank subsidiary is J.P. Morgan Securities LLC (“J.P. Morgan Securities”), a U.S. broker-dealer. The bank and non-bank subsidiaries of JPMorganChase operate nationally as well as through overseas branches and subsidiaries, representative offices and subsidiary foreign banks. The Firm’s principal operating subsidiaries outside the U.S. are J.P. Morgan Securities 
+
+
+plc and J.P. Morgan SE (“JPMSE”), which are subsidiaries of JPMorgan Chase Bank, N.A. and are based in the United Kingdom (“U.K.”) and Germany, respectively.
+For management reporting purposes, the Firm has three reportable business segments – Consumer & Community Banking (“CCB”), Commercial & Investment Bank (“CIB”) and Asset & Wealth Management (“AWM”) – with the remaining activities in Corporate. The Firm's consumer business segment is CCB, and the Firm's wholesale business segments are CIB and AWM. Refer to Business Segment & Corporate Results on pages 21-43 and Note 25 of this Form 10-Q, and Note 32 of JPMorganChase's 2025 Form 10-K, for a description of the Firm’s reportable business segments and the products and services they provide to their respective client bases, as well as a description of Corporate activities.
+The Firm's website is www.jpmorganchase.com. JPMorganChase makes available on its website, free of charge, annual reports on Form 10-K, quarterly reports on Form 10-Q and current reports on Form 8-K pursuant to Section 13(a) or Section 15(d) of the Securities Exchange Act of 1934, as soon as reasonably practicable after it electronically files or furnishes such material to the U.S. Securities and Exchange Commission (the “SEC”) at www.sec.gov. JPMorganChase makes new and important information about the Firm available on its website at https://www.jpmorganchase.com, including on the Investor Relations section of its website at https://www.jpmorganchase.com/ir. Information on the Firm's website, including documents on the website that are referenced in this Form 10-Q, is not incorporated by reference into this Form 10-Q or the Firm’s other filings with the SEC.
+
+
+4
+
+
+
+
+
+
+EXECUTIVE OVERVIEW
+This executive overview of the MD&A highlights selected information and does not contain all of the information that is important to readers of this Form 10-Q. For a complete description of the trends and uncertainties, as well as the risks and critical accounting estimates affecting the Firm, this Form 10-Q and the 2025 Form 10-K should be read together and in their entirety.
+
+
+Financial performance of JPMorganChase
+
+(unaudited)
+As of or for the period ended,
+(in millions, except per share data and ratios)Three months ended September 30,Nine months ended September 30,
+20262025Change20262025Change
+
+Selected income statement data
+Noninterest revenue$23,136 $22,461 3 %$79,442 $66,201 20 %
+Net interest income27,036 23,966 13 77,913 70,448 11 
+Total net revenue50,172 46,427 8 157,355 136,649 15 
+Total noninterest expense27,295 24,281 12 81,461 71,657 14 
+Pre-provision profit22,877 22,146 3 75,894 64,992 17 
+Provision for credit losses2,743 3,403 (19)7,765 9,557 (19)
+Net income15,305 14,393 6 52,954 44,023 20 
+Diluted earnings per share5.57 5.07 10 19.20 15.38 25 
+Selected ratios and metrics
+Return on common equity17 %17 %20 %17 %
+
+Return on tangible common equity20 20 24 21 
+Book value per share$132.30 $124.96 6 $132.30 $124.96 6 
+Tangible book value per share112.64 105.70 7 112.64 105.70 7 
+
+Capital ratios - Standardized(a)
+CET1 capital14.0 %14.8 %14.0 %14.8 %
+Tier 1 capital14.9 15.8 14.9 15.8 
+Total capital16.9 17.7 16.9 17.7 
+Memo:
+
+NII excluding Markets(b)$24,726 $23,391 6 $71,683 $68,734 4 
+
+NIR excluding Markets(b)15,861 14,785 7 53,825 42,537 27 
+
+Markets(c)10,320 8,944 15 33,957 27,543 23 
+Total net revenue - managed basis$50,907 $47,120 8 %$159,465 $138,814 15 %
+(a)As of September 30, 2026, the Advanced total capital ratio was more binding on the Firm than the Standardized total capital ratio. Refer to Capital Risk Management on pages 45-52 of this Form 10-Q and pages 89–99 of JPMorganChase’s 2025 Form 10-K for additional information.
+(b)NII and NIR refer to net interest income and noninterest revenue, respectively.
+(c)Markets consists of CIB's Fixed Income Markets and Equity Markets businesses. The Firm assesses the performance of its Markets business on a total net revenue basis, as revenues in NII generally have offsets across other revenue lines, primarily principal transactions revenue.
+
+
+
+Comparisons noted in the sections below are for the third quarter of 2026 versus the third quarter of 2025, unless otherwise specified.
+Firmwide overview 
+For the third quarter of 2026, JPMorganChase reported net income of $15.3 billion, up 6%, with earnings per share of $5.57, ROE of 17% and ROTCE of 20%. The Firm's results included $658 million of net investment securities losses ($498 million after tax) in Treasury and CIO. 
+•Total net revenue was $50.2 billion, up 8%, reflecting:
+–Net interest income ("NII") of $27.0 billion, up 13%, driven by higher Markets net interest income, higher deposit balances, higher balances in Card Services, and higher wholesale loan balances, 
+
+
+partially offset by the impact of lower rates. NII excluding Markets was $24.7 billion, up 6%.
+–Noninterest revenue ("NIR") of $23.1 billion, up 3%, driven by higher asset management fees in AWM and CCB, higher investment banking fees, higher card income, and higher auto operating lease income, predominantly offset by higher net investment securities losses in Treasury and CIO, lower Markets noninterest revenue, and losses on certain equity investments. 
+•Noninterest expense was $27.3 billion, up 12%, predominantly driven by higher compensation expense as a result of higher revenue-related compensation, wage inflation, and growth in the number of front office employees, as well as higher 
+
+
+5
+
+
+
+
+
+brokerage expense and distribution fees, and continued investments in technology and marketing. 
+•The provision for credit losses was $2.7 billion. Net charge-offs were $2.2 billion, down $389 million, driven by wholesale. The net addition to the allowance for credit losses was $539 million, primarily in wholesale.
+In the prior year, the provision was $3.4 billion, net charge-offs were $2.6 billion and the net addition to the allowance for credit losses was $810 million. 
+•The total allowance for credit losses was $32.0 billion at September 30, 2026. The Firm had an allowance for loan losses to retained loans coverage ratio of 1.75%, compared with 1.88% in the prior year.
+Refer to Consolidated Results of Operations and Consolidated Balance Sheets Analysis on pages 9-14 and pages 15-17, respectively, for a further discussion of the Firm's results, including the provision for credit losses.
+Pre-provision profit, ROTCE, TCE, TBVPS, NII and NIR excluding Markets, and total net revenue on a managed basis are non-GAAP financial measures. Refer to Explanation and Reconciliation of the Firm’s Use of Non-GAAP Financial Measures on pages 19-20 for a further discussion of each of these measures.
+•The Firm’s nonperforming assets totaled $10.0 billion at September 30, 2026, down 6%, primarily driven by:
+–lower wholesale nonaccrual loans, reflecting net portfolio activity, predominantly offset by net downgrades, and
+–lower consumer nonaccrual loans, driven by the normalization of loans following the forbearances related to California wildfires that were initiated in the prior year.
+Refer to Wholesale Credit Portfolio and Consumer Credit Portfolio on pages 66-74 and pages 62-65, respectively, for additional information.
+•Firmwide average loans of $1.6 trillion were up 10%, predominantly driven by higher loans in CIB and AWM.
+•Firmwide average deposits of $2.7 trillion were up 8%, reflecting:
+–net inflows primarily in Payments,
+–growth in new accounts in Corporate related to the Firm's international consumer initiatives
+–growth in new accounts in CCB, and
+–growth in both new accounts and balances in existing accounts in AWM.
+Refer to Liquidity Risk Management on pages 53-59 for additional information.
+
+
+Selected capital and other metrics
+•CET1 capital was $304 billion, and the Standardized and Advanced CET1 ratios were each 14.0%.
+•SLR was 5.5%.
+•TBVPS grew 7%, ending the third quarter of 2026 at $112.64.
+•As of September 30, 2026, the Firm had eligible end-of-period High Quality Liquid Assets (“HQLA”) of approximately $947 billion and unencumbered marketable securities with a fair value of approximately $563 billion, resulting in approximately $1.5 trillion of liquidity sources. 
+Refer to Capital Risk Management and Liquidity Risk Management on pages 45-52 and pages 53-59, respectively, for additional information.
+
+
+6
+
+
+
+
+
+Business segment highlights
+Selected business metrics for each of the Firm’s lines of business ("LOB") are presented below for the third quarter of 2026.
+
+
+
+CCB
+ROE 36%
+•Average deposits up 4% year-over-year ("YoY"), flat quarter-over-quarter ("QoQ"); client investment assets up 15%
+•Average loans up 2% YoY and 1% QoQ; Card Services net charge-off rate of 2.91% 
+•Debit and credit card sales volume(a) up 10% 
+•Active mobile customers up 7% 
+
+CIB
+ROE 18%
+•Investment banking fees up 14% YoY, down 8% QoQ; #1 ranking for global investment banking fees with 9.2% wallet share year-to-date ("YTD")(b)
+•Markets revenue up 15%, with Fixed Income Markets down 4% and Equity Markets up 49%
+•Average Banking & Payments loans up 11% YoY, flat QoQ; average client deposits(c) up 10% YoY, up 1% QoQ
+
+
+AWM
+ROE 45%
+•Assets under management ("AUM") of $5.2 trillion, up 13%
+•Average loans up 20% YoY and 6% QoQ; average deposits up 5% YoY, down 3% QoQ
+(a)Excludes Commercial Card.
+(b)Source: Dealogic as of October 1, 2026.
+(c)Represents client deposits and other third-party liabilities pertaining to the Payments and Securities Services businesses.
+Refer to the Business Segment & Corporate Results on pages 21-43 for a detailed discussion of results by business segment.
+
+
+
+
+Credit provided and capital raised
+JPMorganChase continues to support consumers, businesses and communities around the globe. The Firm provided new and renewed credit and raised capital for wholesale and consumer clients during the first nine months of 2026, consisting of approximately:
+
+
+$2.9 
+trillion
+Total credit provided and capital(a) raised (including loans and commitments) 
+
+$240
+billion
+Credit for consumers
+
+$27
+billion
+Credit for U.S. small businesses
+
+$2.5
+trillion
+Credit and capital for corporations and non-U.S. government entities(b)
+
+$79
+ billion
+Credit and capital for nonprofit and U.S. government entities(c)
+(a)Represents new and renewed credit, including loans and lending-related commitments, as well as unused amounts of advised uncommitted lines of credit where the Firm has discretion on whether to make a loan under these lines.
+(b)Includes Individuals and Individual Entities primarily consisting of Global Private Bank clients within AWM. Corporations include U.S. and non-U.S. corporations.
+(c)Includes states, municipalities, hospitals and universities.
+
+
+
+
+7
+
+
+
+
+
+Outlook
+The statements set forth below are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Such forward-looking statements are based on the beliefs and expectations of JPMorganChase’s management, speak only as of the date on which they were made, and are subject to significant risks and uncertainties. Refer to Forward-Looking Statements on page 91 of this Form 10-Q and Part I, Item 1A, Risk Factors on pages 9–31 of the 2025 Form 10-K for a further discussion of certain of those risks and uncertainties and the other factors that could cause JPMorganChase’s actual results to differ materially because of those risks and uncertainties. There is no assurance that actual results in 2026 will be in line with the outlook information set forth below, and the Firm does not undertake to update any forward-looking statements.
+JPMorganChase’s outlook for the fourth quarter and full year 2026 should be viewed against the backdrop of the global and U.S. economies, financial markets activity, the geopolitical environment, the competitive environment, client and customer activity levels, and regulatory and legislative developments in the U.S. and other countries where the Firm does business. Each of these factors will affect the performance of the Firm. The Firm will continue to make appropriate adjustments to its businesses and operations in response to ongoing developments in the business, economic, regulatory and legal environments in which it operates.
+The Firm provided the following outlook information on October 13, 2026 in connection with announcing its results for the quarter ended September 30, 2026:
+
+
+
+
+Fourth quarter 2026
+•Management expects net interest income to be approximately $28 billion and net interest income excluding Markets to be approximately $25.5 billion, market dependent.
+•Management expects adjusted expense to be approximately $27.5 billion, market dependent.
+Full-year 2026
+•Management expects net interest income to be approximately $106.2 billion and net interest income excluding Markets to be approximately $97.2 billion, market dependent.
+•Management expects adjusted expense to be approximately $108.6 billion, market dependent.
+•Management expects the net charge-off rate in Card Services to be approximately 3.2%.
+Net interest income excluding Markets and adjusted expense are non-GAAP financial measures. Refer to Explanation and Reconciliation of the Firm’s Use of Non-GAAP Financial Measures on pages 19-20.
+
+
+
+
+
+8
+
+
+
+
+
+
+CONSOLIDATED RESULTS OF OPERATIONS
+This section provides a comparative discussion of JPMorganChase’s Consolidated Results of Operations on a reported basis for the three and nine months ended September 30, 2026 and 2025, unless otherwise specified. Factors that relate primarily to a single business segment or Corporate are discussed in more detail in the results of that segment or Corporate. Refer to pages 86-88 of this Form 10-Q and pages 154–157 of JPMorganChase’s 2025 Form 10-K for a discussion of the Critical Accounting Estimates Used by the Firm that affect the Consolidated Results of Operations.
+
+
+Visa shares: On April 13, 2026, Visa Inc. commenced an exchange offer for Visa Class B-2 common shares. On May 11, 2026, Visa accepted the Firm’s tender of its 18.6 million Visa Class B-2 common shares in exchange for a combination of Visa Class B-3 common shares and Visa Class C common shares (“Visa C shares”), resulting in a $4.6 billion net gain in Corporate for the three months ended June 30, 2026. As of September 30, 2026, the Firm had sold all of its Visa C shares.
+
+
+Gains on certain equity investments: The second quarter of 2026 results included $1.0 billion of gains on certain equity investments, consisting of $763 million in Corporate and $263 million in CIB. These gains represented a measurement alternative markup on an equity investment and initial gains on transition from measurement alternative to recurring fair value on certain other equity investments.
+
+
+Revenue
+Three months ended September 30,Nine months ended September 30,
+(in millions)20262025Change20262025Change
+Investment banking fees$2,960 $2,612 13 %$9,026 $7,289 24 %
+Principal transactions6,516 7,109 (8)23,510 21,872 7 
+Lending- and deposit-related fees2,579 2,349 10 7,484 6,729 11 
+Asset management fees5,897 5,120 15 17,070 14,626 17 
+Commissions and other fees2,584 2,204 17 7,680 6,431 19 
+
+Investment securities gains/(losses)(658)105 NM(989)14 NM
+Mortgage fees and related income274 383 (28)919 1,024 (10)
+Card income1,428 1,140 25 3,966 3,700 7 
+
+Other income(a)1,556 1,439 8 10,776 
+(b)4,516 139 
+Noninterest revenue23,136 22,461 3 79,442 66,201 20 
+Net interest income27,036 23,966 13 77,913 70,448 11 
+Total net revenue$50,172 $46,427 8 %$157,355 $136,649 15 %
+(a)Included operating lease income of $1.2 billion and $990 million for the three months ended September 30, 2026 and 2025, respectively, and $3.6 billion and $2.7 billion for the nine months ended September 30, 2026 and 2025, respectively. Refer to Note 5 for additional information.
+(b)Included a $4.6 billion net gain related to Visa shares and $1.0 billion of gains on certain equity investments, both recorded in the second quarter of 2026. Refer to Note 5 for additional information. 
+
+
+Quarterly results
+Investment banking fees increased, reflecting in CIB:
+•higher advisory fees driven by higher fees from deals in the Healthcare, Diversified Industries and Technology sectors, partially offset by lower fees from deals in the Financial Institutions sector,
+•higher debt underwriting fees driven by higher non-investment grade loans, largely offset by lower non-investment grade bonds, and
+•higher equity underwriting fees driven by higher revenue from follow-on offerings, partially offset by lower revenue from private placements.
+Refer to CIB segment results on pages 28-35 and Note 5 for additional information.
+
+
+
+
+Principal transactions revenue decreased, reflecting in CIB:
+•lower Fixed Income Markets revenue across products,
+largely offset by
+•higher Equity Markets revenue predominantly driven by Equity Derivatives and Prime Finance.
+Principal transactions revenue in CIB generally has offsets across other revenue lines, including net interest income. The Firm assesses the performance of its Markets business on a total net revenue basis.
+Refer to CIB segment results on pages 28-35 and Note 5 for additional information. 
+
+
+
+
+9
+
+
+
+
+
+Lending- and deposit-related fees increased, reflecting:
+•in CIB, higher cash management fees in Payments, as a result of higher volume, and
+•in CCB, higher deposit-related fees as a result of higher transaction volume and new accounts. 
+Refer to CCB and CIB segment results on pages 23-27 and pages 28-35, respectively, and Note 5 for additional information.
+Asset management fees increased driven by higher average market levels and net inflows in AWM and CCB. Refer to CCB and AWM segment results on pages 23-27 and pages 36-40, respectively, and Note 5 for additional information.
+Commissions and other fees increased in CIB and AWM, predominantly due to higher brokerage commissions on higher volume and, to a lesser extent, higher custody fees as a result of higher market levels and client activity. Refer to CIB and AWM segment results on pages 28-35 and pages 36-40, respectively, and Note 5 for additional information.
+Investment securities was a net loss, compared with a net gain in the prior year, associated with repositioning the investment securities portfolio in Treasury and CIO. The current quarter net loss was primarily related to sales of U.S. Treasuries. Refer to Corporate results on pages 41-43 and Note 9 for additional information.
+Mortgage fees and related income decreased in Home Lending predominantly driven by lower production revenue, primarily associated with warehouse loans held-for-sale. Refer to CCB segment results on pages 23-27 and Note 14 for additional information. 
+Card income increased, primarily in CCB, reflecting higher annual fees. Refer to CCB segment results on pages 23-27 and Note 5 for additional information.
+Other income increased, primarily reflecting: 
+•higher auto operating lease income in CCB due to growth in volume, 
+predominantly offset by 
+•a net loss compared with a net gain in the prior year on certain equity investments in Corporate and CIB. 
+Refer to CCB and CIB segment and Corporate results on pages 23-27, pages 28-35 and pages 41-43, respectively, for additional information.
+Net interest income increased driven by higher Markets net interest income, higher deposit balances across the LOBs and Corporate, higher revolving balances in Card Services, and higher wholesale loan balances, partially offset by the impact of lower rates.
+The Firm’s average interest-earning assets were $4.3 trillion, up $440 billion, and the yield was 4.86%, down 19 basis points (“bps”). The net yield on these assets, 
+
+
+on an FTE basis, was 2.48%, an increase of 3 bps. The net yield excluding Markets was 3.70%, down 3 bps.
+Refer to the Consolidated average balance sheets, interest and rates schedule on pages 191-192 for additional information. Net yield excluding Markets is a non-GAAP financial measure. Refer to Explanation and Reconciliation of the Firm’s Use of Non-GAAP Financial Measures on pages 19-20 for an additional discussion of net yield excluding Markets.
+Year-to-date results
+Investment banking fees increased, reflecting in CIB:
+•higher advisory fees driven by higher fees from deals in the Diversified Industries, Healthcare, Technology, Natural Resource Group and Media & Communication sectors, partially offset by lower fees from deals in the Consumer & Retail sector,
+•higher equity underwriting fees driven by higher revenue across all products, and
+•higher debt underwriting fees driven by higher investment grade loans and bonds, partially offset by lower non-investment grade bonds.
+Principal transactions revenue increased, reflecting the net impact in CIB of:
+•higher Equity Markets revenue predominantly driven by Prime Finance and Equity Derivatives, and
+•lower Fixed Income Markets revenue driven by Securitized Products, Rates, Fixed Income Financing and Currencies & Emerging Markets, partially offset by higher revenue in Credit.
+Principal transactions revenue in CIB generally has offsets across other revenue lines, including net interest income. The Firm assesses the performance of its Markets business on a total net revenue basis. 
+Lending- and deposit-related fees increased, reflecting:
+•in CIB, higher cash management fees, and higher lending-related fees, primarily loan commitment fees, both as a result of higher volume, and
+•in CCB, higher deposit-related fees as a result of higher transaction volume and new accounts.
+Asset management fees increased driven by higher average market levels and net inflows in AWM and CCB. 
+Commissions and other fees increased in CIB and AWM, predominantly due to higher brokerage commissions on higher volume and, to a lesser extent, higher custody fees as a result of higher market levels and client activity.
+Investment securities was a net loss, compared with a net gain in the prior year, associated with repositioning the investment securities portfolio in Treasury and CIO. The current year net loss was primarily related to sales of U.S. GSE and government agency MBS and U.S. Treasuries. 
+
+
+10
+
+
+
+
+
+Mortgage fees and related income decreased in Home Lending largely driven by lower production revenue, primarily associated with warehouse loans held-for-sale. 
+Card income increased, primarily in CCB, reflecting higher annual fees, largely offset by an increase in amortization related to new account origination costs and lower net interchange income. Net interchange income decreased as the impact of increased debit and credit card sales volume was more than offset by higher rewards costs and partner payments.
+Other income increased, reflecting: 
+•the $4.6 billion net gain related to Visa shares in Corporate recorded in the second quarter of 2026,
+•higher net gains on certain equity investments, including the $1.0 billion of gains recorded in the second quarter of 2026, consisting of $763 million in Corporate and $263 million in CIB, 
+•higher auto operating lease income in CCB due to growth in volume, and
+•higher investment valuation gains in AWM,
+partially offset by 
+•lower First Republic-related revenues primarily driven by the absence of the $588 million gain recorded in the prior year in Corporate.
+Refer to Note 5 for additional information.
+Net interest income increased driven by higher Markets net interest income, higher deposit balances across the LOBs and Corporate, higher revolving balances in Card Services, and higher wholesale loan balances, partially offset by the impact of lower rates.
+The Firm’s average interest-earning assets were $4.3 trillion, up $450 billion, and the yield was 4.82%, down 27 bps. The net yield on these assets, on an FTE basis, was 2.46%, a decrease of 3 bps. The net yield excluding Markets was 3.69%, down 5 bps.
+
+
+
+
+11
+
+
+
+
+
+Provision for credit losses
+Three months ended September 30,Nine months ended September 30,
+(in millions)20262025Change20262025Change
+Consumer, excluding credit card$147 $167 (12)%$302 $502 (40)%
+Credit card1,929 2,412 (20)5,999 6,731 (11)
+Total consumer2,076 2,579 (20)6,301 7,233 (13)
+Wholesale667 827 (19)1,475 2,354 (37)
+Investment securities— (3)100(11)(30)63
+Total provision for credit losses$2,743 $3,403 (19)%$7,765 $9,557 (19)%
+
+
+Quarterly results 
+The provision for credit losses was $2.7 billion. Net charge-offs were $2.2 billion and the net addition to the allowance for credit losses was $539 million. 
+The provision for credit losses included:
+•$2.1 billion in consumer, reflecting net charge-offs of $2.0 billion, predominantly driven by Card Services. The net addition to the allowance for credit losses was $104 million, driven by Card Services, and
+•$667 million in wholesale, predominantly driven by the impact of net increases in the loan and lending-related commitment portfolios and changes in the credit quality of certain exposures. The net addition to the allowance for credit losses was $435 million and net charge-offs were $232 million. 
+In the prior year, the provision was $3.4 billion, net charge-offs were $2.6 billion and the net addition to the allowance for credit losses was $810 million.
+Refer to CCB, CIB and AWM segment and Corporate results on pages 23-27, pages 28-35, pages 36-40, and pages 41-43, respectively; Allowance for Credit Losses on pages 75-77; Critical Accounting Estimates Used by the Firm on pages 86-88; and Notes 11 and 12 for additional information on the credit portfolio and the allowance for credit losses.
+
+
+Year-to-date results
+The provision for credit losses was $7.8 billion. Net charge-offs were $6.9 billion and the net addition to the allowance for credit losses was $879 million. 
+The provision for credit losses included:
+•$6.3 billion in consumer, reflecting net charge-offs of $6.3 billion, predominantly driven by Card Services. The net reduction in the allowance for credit losses was $24 million, driven by updates to certain macroeconomic variables, including improvements in home prices in the first quarter of 2026, predominantly offset by loan growth, and
+•$1.5 billion in wholesale, driven by changes in the credit quality of certain exposures and the impact of net increases in the loan and lending-related commitment portfolios. The net addition to the allowance for credit losses was $914 million and net charge-offs were $561 million. 
+In the prior year, the provision was $9.6 billion, net charge-offs were $7.3 billion and the net addition to the allowance for credit losses was $2.2 billion.
+
+
+12
+
+
+
+
+
+Noninterest expense
+(in millions)Three months ended September 30,Nine months ended September 30,
+20262025Change20262025Change
+
+Compensation expense$14,772 $13,566 9 %$45,270 $41,369 9 %
+Noncompensation expense:
+Occupancy1,525 1,420 7 4,454 3,986 12 
+
+Technology, communications and equipment(a)3,335 2,839 17 9,463 8,121 17 
+Professional and outside services3,897 3,173 23 11,235 9,018 25 
+Marketing1,917 1,480 30 5,191 4,063 28 
+Other expense1,849 1,803 3 5,848 5,100 15 
+Total noncompensation expense12,523 10,715 17 36,191 30,288 19 
+
+Total noninterest expense$27,295 $24,281 12 %$81,461 $71,657 14 %
+
+Certain components of other expense(b)
+
+FDIC-related expense$371 $258 $1,053 $549 
+Operating losses284 301 850 1,001 
+(a)Includes depreciation expense associated with auto operating lease assets. Refer to Note 16 for additional information.
+(b)Refer to Note 5 for additional information.
+
+
+Quarterly results
+Compensation expense increased predominantly driven by:
+•higher revenue-related compensation across the LOBs,
+•the impact of wage inflation, and
+•growth in the number of employees, particularly front office employees.
+Noncompensation expense increased, reflecting:
+•continued investments in technology across the LOBs and Corporate, and in marketing, primarily in CCB,
+•higher brokerage expense in CIB and higher distribution fees in AWM,
+•higher depreciation expense on higher auto operating lease assets in CCB, 
+•higher FDIC-related expense, primarily in Corporate, which included the absence of an FDIC special assessment accrual release of $79 million recorded in the prior year, and
+•higher occupancy expense, reflecting the impact of net additions to and improvements in the Firm’s properties, including its corporate headquarters, other corporate offices and retail branches.
+Refer to Note 5 for additional information on other expense.
+
+
+Year-to-date results
+Compensation expense increased driven by:
+•higher revenue-related compensation across the LOBs,
+•the impact of wage inflation, and
+•growth in the number of employees, particularly front office employees.
+Noncompensation expense increased, reflecting:
+•continued investments in technology across the LOBs and Corporate, and in marketing, primarily in CCB,
+•higher brokerage expense in CIB and higher distribution fees in AWM,
+•higher depreciation expense on higher auto operating lease assets in CCB,
+•higher FDIC-related expense, primarily in Corporate, driven by the absence of FDIC special assessment accrual releases of $437 million recorded in the prior year, and
+•higher occupancy expense, reflecting the impact of net additions to and improvements in the Firm’s properties, including its corporate headquarters, other corporate offices and retail branches,
+partially offset by 
+•lower operating losses largely in CCB.
+
+
+13
+
+
+
+
+
+Income tax expense
+(in millions)Three months ended September 30,Nine months ended September 30,
+20262025Change20262025Change
+Income before income tax expense$20,134 $18,743 7 %$68,129 $55,435 23 %
+Income tax expense4,829 4,350 11 15,175 11,412 33 
+Effective tax rate24.0 %23.2 %22.3 %20.6 %
+
+
+Quarterly results
+The effective tax rate increased driven by:
+•the current-period tax expense related to the filing of prior-year tax returns as compared with a benefit in the prior year, and 
+•changes in the level and mix of income and expenses subject to U.S. federal, state and local taxes,
+largely offset by 
+•tax benefits related to the resolution of certain tax audits.
+
+
+Year-to-date results
+The effective tax rate increased driven by:
+•lower tax benefits related to the resolution of certain tax audits and the impact of tax regulations, including the absence of a $774 million income tax benefit recorded in the prior year, 
+•changes in the level and mix of income and expenses subject to U.S. federal, state and local taxes, and
+•current-period tax expense related to the filing of prior-year tax returns as compared with a benefit in the prior year,
+partially offset by 
+•higher tax benefits related to the vesting of employee share-based awards.
+
+
+14
+
+
+
+
+
+
+CONSOLIDATED BALANCE SHEETS AND CASH FLOWS ANALYSIS
+Consolidated balance sheets analysis
+The following is a discussion of the significant changes between September 30, 2026 and December 31, 2025. Refer to pages 86-88 of this Form 10-Q and pages 154–157 of JPMorganChase’s 2025 Form 10-K for a discussion of the Critical Accounting Estimates Used by the Firm that affect the Consolidated Balance Sheets.
+
+
+Selected Consolidated balance sheets data
+(in millions)September 30,
+2026December 31,
+2025Change
+Assets
+Cash and due from banks$21,259 $21,742 (2)%
+Deposits with banks305,012 321,596 (5)
+Federal funds sold and securities purchased under resale agreements461,851 336,426 37 
+Securities borrowed329,862 286,191 15 
+Trading assets1,093,352 802,873 36 
+Available-for-sale securities547,191 507,198 8 
+Held-to-maturity securities274,564 270,134 2 
+Investment securities, net of allowance for credit losses821,755 777,332 6 
+Loans1,584,641 1,493,429 6 
+Allowance for loan losses(26,272)(25,765)2 
+Loans, net of allowance for loan losses1,558,369 1,467,664 6 
+Accrued interest and accounts receivable164,997 111,599 48 
+Premises and equipment38,678 36,244 7 
+Goodwill, MSRs and other intangible assets64,870 64,458 1 
+Other assets231,540 198,775 16 
+Total assets$5,091,545 $4,424,900 15 %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cash and due from banks and deposits with banks decreased driven by Markets activities in CIB, higher loans, and net purchases of investment securities in Treasury and CIO, predominantly offset by the impact of higher deposits, and higher long-term debt.
+Federal funds sold and securities purchased under resale agreements increased driven by Markets, reflecting higher client-driven market-making activities, as well as when compared with seasonally lower levels at year-end.
+Securities borrowed increased driven by Markets, predominantly due to a higher demand for securities to cover short positions.
+Refer to Note 10 for additional information on securities purchased under resale agreements and securities borrowed.
+Trading assets increased due to higher levels of equity and debt instruments in Markets, primarily related to client-driven market-making activities, as well as when compared with seasonally lower levels at year-end. Refer to Notes 2 and 4 for additional information. 
+Investment securities increased due to:
+•higher available-for-sale ("AFS") securities, reflecting net purchases, predominantly U.S. Treasuries, non-U.S. government debt securities, and U.S. GSE and government agency MBS, largely offset by maturities 
+
+
+and paydowns and unrealized losses, recognized in accumulated other comprehensive income (“AOCI”); and
+•higher held to-maturity (“HTM”) securities driven by purchases of U.S. Treasuries, predominantly offset by maturities and paydowns. 
+Refer to Corporate results on pages 41-43, Investment Portfolio Risk Management on page 78, and Notes 2 and 9 for additional information. 
+Loans increased as a result of:
+•higher securities-based lending and custom lending in AWM due to higher client demand, and
+•higher wholesale loans in CIB Banking and Markets due to higher client demand.
+The allowance for loan losses increased, reflecting a net addition of $507 million, and consisted of:
+•$624 million in wholesale, largely driven by the impact of a net increase in the loan portfolio and changes in the credit quality of certain exposures, and 
+•a net reduction of $117 million in consumer, driven by updates to certain macroeconomic variables, including improvements in home prices in the first quarter of 2026, predominantly offset by loan growth.
+
+
+15
+
+
+
+
+
+Refer to Consolidated Results of Operations and Credit and Investment Risk Management on pages 9-14 and pages 60-78, respectively, Critical Accounting Estimates Used by the Firm on pages 86-88, and Notes 2, 3, 11 and 12 for additional information on loans and the total allowance for credit losses.
+Accrued interest and accounts receivable increased predominantly due to client-driven activities in Markets, including prime brokerage.
+Premises and equipment increased, reflecting the fixed asset additions to and improvements in the Firm's 
+
+
+properties, including its corporate headquarters, other corporate offices and retail branches. Refer to Note 16 for additional information. 
+Goodwill, MSRs and other intangible assets: refer to Note 14 for additional information.
+Other assets increased predominantly due to a higher level of securities financing transactions, and higher cash collateral placed with central counterparties ("CCP"), both in Markets; higher equity investments, predominantly in Corporate related to the Security and Resiliency Initiative; and higher deferred tax assets.
+
+
+Selected Consolidated balance sheets data (continued)
+(in millions)September 30,
+2026December 31,
+2025Change
+Liabilities
+Deposits$2,780,793 $2,559,320 9 %
+Federal funds purchased and securities loaned or sold under repurchase agreements703,392 442,396 59 
+Short-term borrowings71,339 64,776 10 
+Trading liabilities297,911 216,019 38 
+Accounts payable and other liabilities377,354 316,794 19 
+Beneficial interests issued by consolidated variable interest entities (“VIEs”)28,228 27,951 1 
+Long-term debt460,160 435,206 6 
+Total liabilities4,719,177 4,062,462 16 
+Stockholders’ equity372,368 362,438 3 
+Total liabilities and stockholders’ equity$5,091,545 $4,424,900 15 %
+
+
+Deposits increased, reflecting:
+•an increase in CIB due to net inflows related to client-driven activities, primarily in Payments and Securities Services,
+•an increase in Corporate as a result of growth in new accounts related to the Firm's international consumer initiatives, 
+•an increase in CCB predominantly driven by growth in new accounts, and 
+•an increase in AWM driven by growth in both new accounts and balances in existing accounts, including the impact of higher-yielding product offerings, offset by continued migration into other investment products and seasonal tax outflows.
+Federal funds purchased and securities loaned or sold under repurchase agreements increased driven by Markets, reflecting higher client-driven market-making activities and higher secured financing of trading assets, as well as when compared with seasonally lower levels at year-end.
+Short-term borrowings increased primarily due to higher short-term funding and liquidity management activity in Treasury and CIO.
+Refer to Liquidity Risk Management on pages 53-59 for additional information on deposits, federal funds purchased and securities loaned or sold under repurchase agreements, and short-term borrowings; 
+
+
+and Notes 2 and 15 for deposits; and Note 10 for federal funds purchased and securities loaned or sold under repurchase agreements.
+Trading liabilities increased due to:
+•client-driven market-making activities, which resulted in higher levels of short positions, and
+•higher derivative payables, primarily as a result of market movements.
+Refer to Notes 2 and 4 for additional information. 
+Accounts payable and other liabilities increased predominantly due to client-driven activities and the impact of a higher level of securities financing transactions in Markets, including prime brokerage.
+Beneficial interests issued by consolidated VIEs: refer to Liquidity Risk Management on pages 53-59 and Notes 13 and 22 for additional information related to Firm-sponsored VIEs and loan securitization trusts.
+Long-term debt increased as a result of: 
+•net issuances of structured notes in Markets due to client demand, and
+•net issuances of long-term debt, predominantly offset by fair value hedge accounting adjustments related to higher rates in Treasury and CIO. 
+Refer to Liquidity Risk Management on pages 53-59 for additional information. 
+
+
+16
+
+
+
+
+
+Stockholders’ equity increased, reflecting:
+•net income, 
+predominantly offset by
+•the impact of capital actions, including net repurchases of common shares and dividend payments on common and preferred stock, and
+•higher net unrealized losses in AOCI, driven by the impact of higher interest rates on the AFS securities portfolio and cash flow hedges in Treasury and CIO. 
+Refer to Consolidated statements of changes in stockholders’ equity on page 95, Capital Actions on page 50, and Note 19 for additional information.
+
+
+
+
+17
+
+
+
+Consolidated cash flows analysis
+
+
+The following is a discussion of cash flow activities during the nine months ended September 30, 2026 and 2025.
+
+
+(in millions)Nine months ended September 30,
+20262025
+Net cash provided by/(used in)
+Operating activities$(203,883)$(267,506)
+Investing activities(301,483)(312,447)
+Financing activities491,945 393,090 
+Effect of exchange rate changes on cash(3,646)20,982 
+
+Net decrease in cash and due from banks and deposits with banks$(17,067)$(165,881)
+Operating activities
+•In 2026, cash used resulted from higher trading assets, higher accrued interest and accounts receivable, higher securities borrowed and higher other assets, partially offset by higher trading liabilities and higher accounts payable and other liabilities.
+•In 2025, cash used resulted from higher trading assets, higher accrued interest and accounts receivable, higher securities borrowed and net originations and purchases of loans held-for-sale, partially offset by higher trading liabilities.
+Investing activities
+•In 2026, cash used resulted from higher securities purchased under resale agreements, net loan originations and net purchases of investment securities.
+•In 2025, cash used resulted from higher securities purchased under resale agreements, net purchases of investment securities and net originations of loans.
+
+
+Financing activities
+•In 2026, cash provided reflected higher securities loaned or sold under repurchase agreements, higher deposits, and net proceeds from long- and short-term borrowings.
+•In 2025, cash provided reflected higher securities loaned or sold under repurchase agreements, higher deposits, and net proceeds from long- and short-term borrowings.
+•For both periods, cash was used for repurchases of common stock and cash dividends on common and preferred stock. 
+* * *
+Refer to Consolidated Balance Sheets Analysis on pages 15-17, Capital Risk Management on pages 45-52, and Liquidity Risk Management on pages 53-59, and the Consolidated Statements of Cash Flows on page 96 of this Form 10-Q, and pages 100–107 of JPMorganChase’s 2025 Form 10-K for a further discussion of the activities affecting the Firm’s cash flows.
+
+
+
+
+18
+
+
+
+
+
+
+
+EXPLANATION AND RECONCILIATION OF THE FIRM’S USE OF NON-GAAP FINANCIAL MEASURES
+
+
+The Firm prepares its Consolidated Financial Statements in accordance with U.S. GAAP and this presentation is referred to as “reported” basis; these financial statements appear on pages 92-96.
+In addition to analyzing the Firm’s results on a reported basis, the Firm also reviews and uses certain non-GAAP financial measures at the Firmwide and segment level. These non-GAAP measures include:
+•Firmwide “managed” basis results, including the overhead ratio, which include certain reclassifications to present total net revenue from investments that receive tax credits and tax-exempt securities on a basis comparable to taxable investments and securities (“FTE” basis). The corresponding income tax impact related to tax-exempt items is recorded within income tax 
+
+
+expense. These adjustments have no impact on net income as reported by the Firm as a whole or by the LOBs;
+•Pre-provision profit, which represents total net revenue less total noninterest expense;
+•Net interest income, net yield, and noninterest revenue excluding Markets;
+•TCE, ROTCE, and TBVPS; and
+•Adjusted expense, which represents noninterest expense excluding Firmwide legal expense.
+Refer to Explanation and Reconciliation of the Firm’s Use of Non-GAAP Financial Measures on pages 59–61 of JPMorganChase’s 2025 Form 10-K for a further discussion of management’s use of non-GAAP financial measures.
+The following summary table provides a reconciliation from the Firm’s reported U.S. GAAP results to managed basis. 
+
+
+Three months ended September 30,
+20262025
+(in millions, except ratios)Reported
+Fully taxable-equivalent adjustments(a)Managed
+basisReported
+Fully taxable-equivalent adjustments(a)Managed
+basis
+Other income$1,556 $626 $2,182 $1,439 $588 $2,027 
+Total noninterest revenue23,136 626 23,762 22,461 588 23,049 
+Net interest income27,036 109 27,145 23,966 105 24,071 
+Total net revenue50,172 735 50,907 46,427 693 47,120 
+Total noninterest expense27,295 NA27,295 24,281 NA24,281 
+Pre-provision profit22,877 735 23,612 22,146 693 22,839 
+Provision for credit losses2,743 NA2,743 3,403 NA3,403 
+Income before income tax expense20,134 735 20,869 18,743 693 19,436 
+Income tax expense4,829 735 5,564 4,350 693 5,043 
+Net income$15,305 NA$15,305 $14,393 NA$14,393 
+
+Overhead ratio54 %NM54 %52 %NM52 %
+
+Nine months ended September 30,
+20262025
+(in millions, except ratios)Reported
+Fully taxable-equivalent adjustments(a)Managed
+basisReported
+Fully taxable-equivalent adjustments(a)Managed
+basis
+Other income$10,776 $1,777 $12,553 $4,516 $1,853 $6,369 
+Total noninterest revenue79,442 1,777 81,219 66,201 1,853 68,054 
+Net interest income77,913 333 78,246 70,448 312 70,760 
+Total net revenue157,355 2,110 159,465 136,649 2,165 138,814 
+Total noninterest expense81,461 NA81,461 71,657 NA71,657 
+Pre-provision profit75,894 2,110 78,004 64,992 2,165 67,157 
+Provision for credit losses7,765 NA7,765 9,557 NA9,557 
+Income before income tax expense68,129 2,110 70,239 55,435 2,165 57,600 
+Income tax expense15,175 2,110 17,285 11,412 2,165 13,577 
+Net income$52,954 NA$52,954 $44,023 NA$44,023 
+
+Overhead ratio52 %NM51 %52 %NM52 %
+(a)For other income, recognized in CIB, and for net interest income, predominantly recognized in CIB and Corporate.
+
+
+
+
+19
+
+
+
+The following table provides information on net interest income, net yield, and noninterest revenue excluding Markets.
+
+
+
+
+(in millions, except rates)Three months ended September 30,Nine months ended September 30,
+20262025Change20262025Change
+
+Net interest income – reported(a) $27,036 $23,966 13 %$77,913 $70,448 11 %
+
+Fully taxable-equivalent adjustments109 105 4 333 312 7 
+Net interest income – managed basis$27,145 $24,071 13 $78,246 $70,760 11 
+
+Less: Markets net interest income(b)2,419 680 256 6,563 2,026 224 
+Net interest income excluding Markets$24,726 $23,391 6 $71,683 $68,734 4 
+
+
+Average interest-earning assets(a)$4,336,216 $3,895,764 11 $4,254,037 $3,804,210 12 
+
+Less: Average Markets interest-earning assets(b)1,688,170 1,404,633 20 1,658,228 1,349,670 23 
+Average interest-earning assets excluding Markets$2,648,046 $2,491,131 6 $2,595,809 $2,454,540 6 
+
+Net yield on average interest-earning assets – managed basis2.48 %2.45 %2.46 %2.49 %
+
+Net yield on average Markets interest-earning assets(b)0.57 0.19 0.53 0.20 
+Net yield on average interest-earning assets excluding Markets3.70 %3.73 %3.69 %3.74 %
+
+Noninterest revenue – reported$23,136 $22,461 3 $79,442 $66,201 20 
+Fully taxable-equivalent adjustments626 588 6 1,777 1,853 (4)
+Noninterest revenue – managed basis$23,762 $23,049 3 $81,219 $68,054 19 
+
+Less: Markets noninterest revenue(b)7,901 8,264 (4)27,394 25,517 7 
+Noninterest revenue excluding Markets$15,861 $14,785 7 $53,825 $42,537 27 
+
+
+Memo: Total Markets net revenue(b)$10,320 $8,944 15 %$33,957 $27,543 23 %
+
+(a)Includes the effect of derivatives that qualify for hedge accounting. Taxable-equivalent amounts are used where applicable. Refer to Note 5 of the Firm’s 2025 Form 10-K for additional information on hedge accounting.
+(b)Refer to page 34 for further information on Markets.
+The following summary table provides a reconciliation from the Firm’s common stockholders’ equity to TCE.
+
+
+
+Period-endAverage
+(in millions, except per share and ratio data)Sep 30,
+2026Dec 31,
+2025Three months ended September 30,Nine months ended September 30,
+2026202520262025
+
+Common stockholders’ equity$351,328 $342,393 $351,360 $336,335 $345,223 $330,203 
+Less: Goodwill52,717 52,731 52,737 52,731 52,738 52,669 
+
+Less: Other intangible assets2,378 2,560 2,407 2,678 2,462 2,749 
+
+Add: Certain deferred tax liabilities(a)2,897 2,916 2,900 2,917 2,908 2,927 
+Tangible common equity$299,130 $290,018 $299,116 $283,843 $292,931 $277,712 
+
+Return on tangible common equityNANA20 %20 %24 %21 %
+Tangible book value per share$112.64 $107.56 NANANANA
+(a)Represents deferred tax liabilities related to tax-deductible goodwill and to identifiable intangibles created in nontaxable transactions, which are netted against goodwill and other intangibles when calculating TCE.
+
+
+20
+
+
+
+
+
+
+BUSINESS SEGMENT & CORPORATE RESULTS
+
+
+The Firm is managed on an LOB basis. There are three reportable business segments – Consumer & Community Banking, Commercial & Investment Bank, and Asset & Wealth Management – with the remaining activities in Corporate.
+The business segments are determined based on the products and services provided, or the type of customer served, and they reflect the manner in which financial information is evaluated by the Firm’s Operating Committee, whose members act collectively as the Firm’s chief operating decision maker. Segment results are presented on a managed basis. Refer to Explanation and Reconciliation of the Firm’s Use of Non-GAAP Financial Measures on pages 19-20 for a definition of managed basis.
+Description of business segment reporting methodology
+Results of the reportable business segments are intended to present each segment as if it were a stand-alone business. The management reporting process that derives business segment results includes the allocation of certain income and expense items. The Firm periodically assesses the assumptions, methodologies and reporting classifications used for segment reporting, and therefore further refinements may be implemented in future periods. The Firm also assesses the level of capital required for each LOB on at least an annual basis. The Firm’s LOBs also provide various business metrics which are utilized by the Firm and its investors and analysts in assessing performance.
+Revenue sharing 
+When business segments or businesses within each segment join efforts to sell products and services to the Firm’s clients and customers, the participating businesses may agree to share revenue from those transactions. Revenue is generally recognized in the segment responsible for the related product or service, with allocations to the other segments or businesses involved in the transaction. The segment and business results reflect these revenue-sharing agreements.
+
+
+
+
+Funds transfer pricing 
+Funds transfer pricing (“FTP”) is the process by which the Firm allocates interest income and expense to the LOBs and Other Corporate and transfers the primary interest rate risk and liquidity risk to Treasury and CIO. 
+The funds transfer pricing process considers the interest rate and liquidity risk characteristics of assets and liabilities and off-balance sheet products. Periodically, the methodology and assumptions utilized in the FTP process are adjusted to reflect economic conditions and other factors, which may impact the allocation of net interest income to the segments.
+Foreign exchange risk
+Foreign exchange risk is transferred from the LOBs and Other Corporate to Treasury and CIO for certain revenues and expenses. Treasury and CIO manages these risks centrally and reports the impact of foreign exchange rate movements related to the transferred risk in its results. Refer to Market Risk Management on pages 79-84 for additional information.
+Capital allocation
+The amount of capital assigned to each LOB and Corporate is referred to as equity. At least annually, the assumptions, judgments and methodologies used to allocate capital are reassessed and, as a result, the capital allocated to the LOBs and Corporate may change. Refer to Line of business and Corporate equity on page 49, and page 96 of JPMorganChase’s 2025 Form 10-K for additional information on capital allocation.
+Refer to Business Segment & Corporate Results – Description of business segment reporting methodology on pages 62–82 and Note 32 of JPMorganChase’s 2025 Form 10-K for a further discussion of those methodologies.
+
+
+21
+
+
+
+
+
+Segment & Corporate Results – Managed basis
+
+
+The following tables summarize the Firm’s results by business segments and Corporate for the periods indicated.
+
+
+Three months ended September 30,Consumer & Community Banking
+Commercial & Investment BankAsset & Wealth Management
+(in millions, except ratios)20262025Change20262025Change20262025Change
+Total net revenue$21,171 $19,473 9 %$22,734 $19,878 14 %$6,909 $6,066 14 %
+Total noninterest expense11,580 10,296 12 10,771 9,722 11 4,358 3,818 14 
+
+Pre-provision profit9,591 9,177 5 11,963 10,156 18 2,551 2,248 13 
+Provision for credit losses2,026 2,538 (20)663 809 (18)84 59 42 
+
+Net income5,670 5,009 13 %8,247 6,901 20 %1,843 1,658 11 %
+Return on equity (“ROE”)36 %35 %18 %18 %45 %40 %
+
+
+Three months ended September 30,CorporateTotal
+(in millions, except ratios)20262025Change20262025Change
+Total net revenue$93$1,703(95)%$50,907 $47,120 8 %
+Total noninterest expense58644532 27,295 24,281 12 
+Pre-provision profit/(loss)(493)1,258NM23,612 22,839 3 
+Provision for credit losses(30)(3)NM2,743 3,403 (19)
+Net income/(loss)(455)825NM15,305 14,393 6 %
+ROENMNM17 %17 %
+
+
+Nine months ended September 30,Consumer & Community BankingCommercial & Investment BankAsset & Wealth Management
+(in millions, except ratios)20262025Change20262025Change20262025Change
+Total net revenue$61,011 $56,633 8 %$70,966 $59,079 20 %$20,134 $17,557 15 %
+Total noninterest expense33,667 30,011 12 33,297 29,205 14 12,732 11,264 13 
+Pre-provision profit27,344 26,622 3 37,669 29,874 26 7,402 6,293 18 
+Provision for credit losses6,232 7,249 (14)1,501 2,210 (32)73 95 (23)
+Net income15,957 14,603 9 %26,969 20,493 32 %5,575 4,714 18 %
+ROE34 %34 %20 %18 %46 %39 %
+
+
+Nine months ended September 30,CorporateTotal
+(in millions, except ratios)20262025Change20262025Change
+Total net revenue$7,354
+(a)$5,54533 %$159,465 $138,814 15 %
+Total noninterest expense1,7651,17750 81,461 71,657 14 
+Pre-provision profit5,5894,36828 78,004 67,157 16 
+Provision for credit losses(41)3NM7,765 9,557 (19)
+Net income4,4534,2136 %52,954 44,023 20 %
+ROENMNM20 %17 %
+(a)Included a $4.6 billion net gain related to Visa shares and $763 million of gains on certain equity investments, both recorded in the second quarter of 2026. Refer to Consolidated Results of Operations on pages 9-14 and Note 5 for additional information.
+Refer to Note 25 for further details on total net revenue and total noninterest expense.
+The following sections provide a comparative discussion of the Firm’s results by business segments and Corporate as of or for the three and nine months ended September 30, 2026 and 2025, unless otherwise specified.
+
+
+22
+
+
+
+
+
+
+CONSUMER & COMMUNITY BANKING
+Refer to pages 65–68 of JPMorganChase's 2025 Form 10-K and Line of Business Metrics on page 200 for a discussion of the business profile of CCB.
+
+
+Selected income statement data
+Three months ended September 30,Nine months ended September 30,
+
+(in millions, except ratios)20262025Change20262025Change
+Revenue
+Lending- and deposit-related fees$1,036 $969 7 %$2,954 $2,696 10 %
+Asset management fees1,469 1,189 
+
+24 4,151 3,392 22 
+Mortgage fees and related income258 372 (31)886 982 (10)
+Card income770 514 50 2,053 1,854 11 
+
+All other income(a)1,819 1,573 16 5,318 4,316 23 
+Noninterest revenue5,352 4,617 16 15,362 13,240 16 
+Net interest income15,819 14,856 6 45,649 43,393 5 
+Total net revenue21,171 19,473 9 61,011 56,633 8 
+
+Provision for credit losses2,026 2,538 (20)6,232 7,249 (14)
+
+Noninterest expense
+
+Compensation expense4,715 4,357 
+(e)8 14,019 12,992 
+(e)8 
+
+Noncompensation expense(b)(c)6,865 5,939 
+(e)16 19,648 17,019 
+(e)15 
+Total noninterest expense11,580 10,296 12 33,667 30,011 12 
+Income before income tax expense7,565 6,639 14 21,112 19,373 9 
+Income tax expense1,895 1,630 16 5,155 4,770 8 
+Net income$5,670 $5,009 13 $15,957 $14,603 9 
+
+
+Revenue by business
+Banking & Wealth Management$11,673 $11,040 6 $33,479 $31,992 5 
+Home Lending1,217 1,260 (3)3,734 3,717 — 
+Card Services & Auto8,281 7,173 15 23,798 20,924 14 
+
+
+Mortgage fees and related income details:
+Production revenue46 173 (73)371 434 (15)
+
+Net mortgage servicing revenue(d)212 199 7 515 548 (6)
+
+Mortgage fees and related income$258 $372 (31)%$886 $982 (10)%
+
+Financial ratios
+Return on equity36 %35 %34 %34 %
+Overhead ratio55 53 55 53 
+(a)Primarily includes operating lease income and commissions and other fees. Operating lease income was $1.2 billion and $987 million for the three months ended September 30, 2026 and 2025, respectively, and $3.6 billion and $2.7 billion for the nine months ended September 30, 2026 and 2025, respectively.
+(b)Included compensation expense recorded in and allocated from Corporate of $827 million and $787 million for the three months ended September 30, 2026 and 2025, respectively, and $2.5 billion and $2.4 billion for the nine months ended September 30, 2026 and 2025, respectively. Refer to Note 25, footnote (d) of the Segment & Corporate results and reconciliation table for additional information on the allocation.
+(c)Included depreciation expense on leased assets of $792 million and $649 million for the three months ended September 30, 2026 and 2025, respectively, and $2.2 billion and $1.7 billion for the nine months ended September 30, 2026 and 2025, respectively.
+(d)Included MSR risk management results of $73 million and $55 million for the three months ended September 30, 2026 and 2025, respectively, and $97 million and $111 million for the nine months ended September 30, 2026 and 2025, respectively.
+(e)In the first quarter of 2026, Risk functions that were previously aligned with the LOBs were centralized into Corporate. As a result, the employees and compensation expense related to those functions are now reflected in Corporate, and a corresponding expense allocation from Corporate is reflected in noncompensation expense of the respective LOBs. These adjustments had no impact on total noninterest expense of the LOBs or Corporate. Prior periods have been revised to conform with the current presentation.
+
+
+
+
+
+
+23
+
+
+
+
+
+Quarterly results
+Net income was $5.7 billion, up 13%.
+Net revenue was $21.2 billion, up 9%. 
+Net interest income was $15.8 billion, up 6%, predominantly driven by:
+•higher Card Services NII on higher revolving balances and higher net yield, and
+•higher NII in Banking & Wealth Management ("BWM") on higher average deposit balances.
+Noninterest revenue was $5.4 billion, up 16%, driven by:
+•higher asset management fees in BWM, reflecting higher average market levels and net inflows,
+•higher card income, reflecting higher annual fees, and
+•higher auto operating lease income as a result of growth in volume,
+partially offset by
+•lower production revenue in Home Lending, primarily associated with warehouse loans held-for-sale.
+Refer to Note 5 for additional information on asset management fees and card income.
+Noninterest expense was $11.6 billion, up 12%, reflecting:
+•higher noncompensation expense, predominantly driven by continued investments in marketing and technology, and higher auto lease depreciation on higher auto operating lease assets, as well as
+•higher compensation expense, predominantly for advisors and bankers, including higher revenue-related compensation, and for employees in technology.
+The provision for credit losses was $2.0 billion. Net charge-offs were $2.0 billion, relatively flat. The net addition to the allowance for credit losses was $50 million, primarily driven by Card Services. 
+In the prior year, the provision was $2.5 billion, net charge-offs were $2.0 billion and the net addition to the allowance for credit losses was $575 million.
+Refer to Credit and Investment Risk Management on pages 60-78 and Allowance for Credit Losses on pages 75-77 for a further discussion of the credit portfolios and the allowance for credit losses.
+
+
+Year-to-date results
+Net income was $16.0 billion, up 9%.
+Net revenue was $61.0 billion, up 8%. 
+Net interest income was $45.6 billion, up 5%, driven by: 
+•higher Card Services NII on higher revolving balances and higher net yield, and
+•higher NII in BWM, driven by higher average deposit balances, largely offset by lower deposit margin.
+Noninterest revenue was $15.4 billion, up 16%, driven by:
+•higher auto operating lease income as a result of growth in volume,
+•in BWM, higher asset management fees, reflecting higher average market levels and net inflows, as well as higher deposit-related fees as a result of higher transaction volume and new accounts, and
+•higher card income, driven by higher annual fees, largely offset by an increase in amortization related to new account origination costs and lower net interchange. Net interchange decreased as the impact of increased debit and credit card sales volume was more than offset by higher rewards costs and partner payments.
+Refer to Note 5 for additional information on deposit-related fees.
+Noninterest expense was $33.7 billion, up 12%, reflecting:
+•higher noncompensation expense, predominantly driven by continued investments in marketing and technology, higher auto lease depreciation on higher auto operating lease assets and higher legal expense, as well as
+•higher compensation expense, predominantly for advisors and bankers, including higher revenue-related compensation, and for employees in technology.
+The provision for credit losses was $6.2 billion. Net charge-offs were $6.3 billion, up $124 million, driven by Card Services, reflecting loan growth. The net reduction in the allowance for credit losses of $95 million was driven by updates to certain macroeconomic variables, including improvements in home prices in the first quarter of 2026, predominantly offset by loan growth.
+In the prior year, the provision was $7.2 billion, net charge-offs were $6.2 billion and the net addition to the allowance for credit losses was $1.0 billion.
+
+
+
+
+24
+
+
+
+
+
+Selected metrics
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+(in millions, except employees)20262025Change20262025Change
+
+Selected balance sheet data (period-end)
+Total assets$674,011 $652,275 3 %$674,011 $652,275 3 %
+Loans:
+Banking & Wealth Management34,457 33,259 4 34,457 33,259 4 
+
+Home Lending(a)233,538 240,633 (3)233,538 240,633 (3)
+Card Services252,684 235,491 7 252,684 235,491 7 
+Auto 73,041 71,095 3 73,041 71,095 3 
+Total loans593,720 580,478 2 593,720 580,478 2 
+
+Deposits1,104,429 1,058,388 4 1,104,429 1,058,388 4 
+Equity61,500 56,000 10 61,500 56,000 10 
+
+Selected balance sheet data (average)
+Total assets$672,863 $650,277 3 $663,828 $644,114 3 
+Loans:
+Banking & Wealth Management34,196 33,351 3 33,693 33,350 1 
+
+Home Lending(b)237,817 241,772 (2)239,008 242,897 (2)
+Card Services250,117 234,412 7 244,298 229,153 7 
+Auto 72,176 70,895 2 71,287 71,583 — 
+Total loans594,306 580,430 2 588,286 576,983 2 
+Deposits1,097,118 1,058,025 4 1,089,649 1,057,371 3 
+Equity61,500 56,000 10 61,500 56,000 10 
+
+
+Employees144,888 142,600 
+(c)2 %144,888 142,600 
+(c)2 %
+(a)At September 30, 2026 and 2025, Home Lending loans held-for-sale and loans at fair value were $12.4 billion and $9.4 billion, respectively. 
+(b)Average Home Lending loans held-for-sale and loans at fair value were $15.2 billion and $10.1 billion for the three months ended September 30, 2026 and 2025, respectively, and $13.3 billion and $8.9 billion for the nine months ended September 30, 2026 and 2025, respectively.
+(c)Refer to footnote (e) on page 23 for further information on the centralization of Risk functions.
+
+
+
+
+
+
+
+
+
+
+25
+
+
+
+
+
+Selected metrics
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+(in millions, except ratio data)20262025Change20262025Change
+Credit data and quality statistics
+
+Nonaccrual loans(a)$3,525 $3,596 (2)%$3,525 $3,596 (2)%
+Net charge-offs/(recoveries)
+Banking & Wealth Management85 85 — 257 284 (10)
+Home Lending(17)(63)73 (50)(110)55 
+Card Services1,833 1,860 (1)5,902 5,781 2 
+Auto75 81 (7)218 248 (12)
+Total net charge-offs/(recoveries)$1,976 $1,963 1 $6,327 $6,203 2 
+
+Net charge-off/(recovery) rate
+Banking & Wealth Management0.99 %1.01 %1.02 %1.14 %
+Home Lending(0.03)(0.11)(0.03)(0.06)
+Card Services2.91 3.15 3.23 3.37 
+Auto0.41 0.46 0.41 0.46 
+Total net charge-off/(recovery) rate1.35 %1.37 %1.47 %1.46 %
+
+30+ day delinquency rate
+
+Home Lending(b)0.79 %0.89 %0.79 %0.89 %
+Card Services1.97 2.14 1.97 2.14 
+Auto 0.96 1.17 0.96 1.17 
+
+90+ day delinquency rate - Card Services0.96 %1.07 %0.96 %1.07 %
+
+Allowance for credit losses:
+
+ Allowance for loan losses
+Banking & Wealth Management$715 $765 (7)$715 $765 (7)
+Home Lending507 647 (22)507 647 (22)
+Card Services15,563 15,558 — 15,563 15,558 — 
+Auto 587 587 — 587 587 — 
+Total allowance for loan losses$17,372 $17,557 (1)$17,372 $17,557 (1)
+Allowance for lending-related commitments$2,380 
+(c)$90 NM$2,380 
+(c)$90 NM
+Total allowance for credit losses$19,752 $17,647 12 %$19,752 $17,647 12 %
+(a)Excludes mortgage loans past due and insured by U.S. government agencies, which are primarily 90 or more days past due. These loans have been excluded based upon the government guarantee. At September 30, 2026 and 2025, mortgage loans 90 or more days past due and insured by U.S. government agencies were $60 million and $65 million, respectively. In addition, the Firm’s policy is generally to exempt credit card loans from being placed on nonaccrual status as permitted by regulatory guidance.
+(b)At September 30, 2026 and 2025, excluded mortgage loans insured by U.S. government agencies of $81 million and $95 million, respectively, that are 30 or more days past due. These amounts have been excluded based upon the government guarantee.
+(c)Included $2.3 billion associated with the Apple Card transaction. Refer to Note 12 of this Form 10-Q and Note 13 of the Firm's 2025 Form 10-K for additional information.
+
+
+26
+
+
+
+
+
+Selected metrics
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+
+(in billions, except ratios and where otherwise noted)20262025Change20262025Change
+Business Metrics
+Number of branches5,164 5,018 3 %5,164 5,018 3 %
+
+Active digital customers (in thousands)77,960 74,041 5 77,960 74,041 5 
+
+Active mobile customers (in thousands)64,919 60,924 7 64,919 60,924 7 
+
+Debit and credit card sales volume$539.5 $492.3 10 $1,562.9 $1,428.2 9 
+
+Total payments transaction volume (in trillions)1.9 1.8 6 5.6 5.2 8 
+
+Banking & Wealth Management
+
+Average deposits$1,078.9 $1,040.4 4 $1,072.3 $1,041.2 3 
+
+Deposit margin2.78 %2.79 %2.70 %2.75 %
+Business Banking average loans$17.8 $18.9 (6)$18.2 $19.2 (5)
+Business banking origination volume0.7 0.8 (15)2.2 2.5 (14)
+
+Client investment assets(a)1,419.8 1,232.4 15 1,419.8 1,232.4 15 
+Number of client advisors6,433 6,025 7 6,433 6,025 7 
+
+Home Lending
+
+Mortgage origination volume by channel 
+
+Retail$8.7 $8.4 4 $28.0 $22.6 24 
+
+Correspondent 7.3 5.5 33 18.9 14.2 33 
+
+Total mortgage origination volume(b)$16.0 $13.9 15 $46.9 $36.8 27 
+
+
+Third-party mortgage loans serviced (period-end)$651.9 $663.6 (2)$651.9 $663.6 (2)
+
+MSR carrying value (period-end)9.7 9.1 7 9.7 9.1 7 
+
+Card Services
+Sales volume, excluding commercial card$376.0 $344.4 9 $1,086.7 $995.0 9 
+Net revenue rate10.76 %10.03 %10.64 %10.15 %
+Net yield on average loans10.67 10.28 10.63 10.21 
+
+
+Auto
+
+Loan and lease origination volume$10.8 $12.0 (10)$33.5 $34.0 (1)
+
+Average auto operating lease assets21.5 17.0 26 %21.0 15.3 37 %
+(a)Includes assets invested in managed accounts and J.P. Morgan mutual funds where AWM is the investment manager. Refer to AWM segment results on pages 36-40 for additional information. 
+(b)Firmwide mortgage origination volume was $20.4 billion and $16.9 billion for the three months ended September 30, 2026 and 2025, respectively, and $58.2 billion and $44.4 billion for the nine months ended September 30, 2026 and 2025, respectively.
+
+
+27
+
+
+
+
+
+
+COMMERCIAL & INVESTMENT BANK
+Refer to pages 69–75 of JPMorganChase’s 2025 Form 10-K and Line of Business Metrics on page 200 for a discussion of the business profile of CIB.
+
+
+Selected income statement data
+Three months ended September 30,Nine months ended September 30,
+(in millions, except ratios)20262025Change20262025Change
+Revenue
+Investment banking fees$3,005 $2,627 14 %$9,165 $7,388 24 %
+Principal transactions6,498 7,090 (8)23,163 21,807 6 
+Lending- and deposit-related fees1,486 1,315 13 4,367 3,841 14 
+Commissions and other fees1,727 1,493 16 5,189 4,423 17 
+Card income640 613 4 1,874 1,809 4 
+All other income628 660 (5)2,570 2,144 20 
+Noninterest revenue13,984 13,798 1 46,328 41,412 12 
+Net interest income8,750 6,080 44 24,638 17,667 39 
+
+Total net revenue(a)22,734 19,878 14 70,966 59,079 20 
+Provision for credit losses663 809 (18)1,501 2,210 (32)
+
+Noninterest expense
+
+Compensation expense5,066 4,662 
+(c)9 16,350 14,604 
+(c)12 
+
+Noncompensation expense(b)5,705 5,060 
+(c)13 16,947 14,601 
+(c)16 
+Total noninterest expense10,771 9,722 11 33,297 29,205 14 
+
+Income before income tax expense11,300 9,347 21 36,168 27,664 31 
+Income tax expense3,053 2,446 25 9,199 7,171 28 
+Net income$8,247 $6,901 20 %$26,969 $20,493 32 %
+Financial ratios
+Return on equity18 %18 %20 %18 %
+Overhead ratio47 49 47 49 
+
+Compensation expense as percentage of total net revenue22 23 
+(c)23 25 
+(c)
+(a)Included taxable-equivalent adjustments primarily from income tax credits from investments in alternative energy, affordable housing and new markets, income from tax-exempt securities and loans, and the related amortization and other tax benefits of the investments in alternative energy and affordable housing of $684 million and $644 million for the three months ended September 30, 2026 and 2025, respectively, and $2.0 billion for both the nine months ended September 30, 2026 and 2025.
+(b)Included compensation expense recorded in and allocated from Corporate of $1.2 billion and $1.1 billion for the three months ended September 30, 2026 and 2025, respectively, and $3.6 billion and $3.5 billion for the nine months ended September 30, 2026 and 2025, respectively. Refer to Note 25, footnote (d) of the Segment & Corporate results and reconciliation table for additional information on the allocation.
+(c)In the first quarter of 2026, Risk functions that were previously aligned with the LOBs were centralized into Corporate. As a result, the employees and compensation expense related to those functions are now reflected in Corporate, and a corresponding expense allocation from Corporate is reflected in noncompensation expense of the respective LOBs. These adjustments had no impact on total noninterest expense of the LOBs or Corporate. Prior periods have been revised to conform with the current presentation.
+
+
+28
+
+
+
+
+
+Selected income statement data
+Three months ended September 30,Nine months ended September 30,
+(in millions)20262025Change20262025Change
+Revenue by business
+
+Investment Banking$3,098 $2,694 15 %$10,136 $7,646 33 %
+Payments5,620 4,917 14 16,039 14,217 13 
+Lending2,240 1,872 20 6,370 5,616 13 
+
+Other— — —— 6 NM
+Total Banking & Payments10,958 9,483 16 32,545 27,485 18 
+Fixed Income Markets5,366 5,613 (4)18,497 17,152 8 
+Equity Markets4,954 3,331 49 15,460 10,391 49 
+Securities Services1,626 1,423 14 4,782 4,110 16 
+
+Credit Adjustments & Other(a)(170)28 NM(318)(59)(439)
+
+Total Markets & Securities Services11,776 10,395 13 38,421 31,594 22 
+Total net revenue$22,734 $19,878 14 %$70,966 $59,079 20 %
+(a)Consists primarily of centrally-managed credit valuation adjustments (“CVA”), funding valuation adjustments (“FVA”) on derivatives, other valuation adjustments, and certain components of fair value option elected liabilities, which are primarily reported in principal transactions revenue. Results are presented net of associated hedging activities and net of CVA and FVA amounts allocated to Fixed Income Markets and Equity Markets. Refer to Notes 2, 3 and 19 for additional information.
+
+
+Selected income statement data
+Three months ended September 30,Nine months ended September 30,
+(in millions)20262025Change20262025Change
+
+Banking & Payments revenue by client coverage segment(a)
+Global Corporate Banking & Global Investment Banking$7,549 $6,544 15 %$22,611 $18,792 20 %
+
+Commercial Banking3,409 2,939 16 9,934 8,693 14 
+Commercial & Specialized Industries2,458 2,038 21 7,210 6,061 19 
+Commercial Real Estate Banking951 901 6 2,724 2,632 3 
+Total Banking & Payments revenue$10,958 $9,483 16 %$32,545 $27,485 18 %
+(a)Refer to Line of Business Metrics on page 200 for a description of each of the client coverage segments.
+
+
+Quarterly results
+Net income was $8.2 billion, up 20%.
+Net revenue was $22.7 billion, up 14%.
+Banking & Payments revenue was $11.0 billion, up 16%.
+•Investment Banking revenue was $3.1 billion, up 15%, predominantly driven by higher investment banking fees. Investment banking fees were up 14%, predominantly driven by higher advisory fees. The Firm ranked #1 for global investment banking fees for the three months ended September 30, 2026, according to Dealogic.
+–Advisory fees were $1.2 billion, up 32%, driven by higher fees from deals in the Healthcare, Diversified Industries and Technology sectors, partially offset by lower fees from deals in the Financial Institutions sector.
+–Equity underwriting fees were $564 million, up 7%, driven by higher revenue from follow-on offerings, partially offset by lower revenue from private placements.
+
+
+–Debt underwriting fees were $1.2 billion, up 4%, driven by higher non-investment grade loans, largely offset by lower non-investment grade bonds.
+•Payments revenue was $5.6 billion, up 14%, driven by higher average deposits, higher deposit margin and fee growth.
+•Lending revenue was $2.2 billion, up 20%, largely driven by lower fair value losses on credit protection purchased against certain retained loans and lending-related commitments, higher loan balances and higher lending-related fees.
+Markets & Securities Services revenue was $11.8 billion, up 13%. Markets revenue was $10.3 billion, up 15%.
+•Equity Markets revenue was $5.0 billion, up 49%, driven by strong performance across products, particularly in Prime and Derivatives.
+•Fixed Income Markets revenue was $5.4 billion, down 4%, driven by lower revenue in Commodities, 
+
+
+29
+
+
+
+
+
+Rates, Credit and Public Finance, largely offset by higher revenue in Currencies & Emerging Markets.
+•Securities Services revenue was $1.6 billion, up 14%, predominantly driven by fee growth on higher market levels and client activity, as well as higher average deposits and higher deposit margin.
+•Credit Adjustments & Other was a loss of $170 million, compared with a gain of $28 million in the prior year.
+Noninterest expense was $10.8 billion, up 11%, predominantly driven by higher brokerage expense and higher compensation expense, including higher revenue-related compensation.
+The provision for credit losses was $663 million, predominantly driven by the impact of net increases in the loan and lending-related commitment portfolios and changes in the credit quality of certain exposures. The net addition to the allowance for credit losses was $452 million and net charge-offs were $211 million. 
+In the prior year, the provision was $809 million, the net charge-offs were $567 million and the net addition to the allowance for credit losses was $242 million.
+Refer to Credit and Investment Risk Management on pages 60-78, Allowance for Credit Losses on pages 75-77, and Critical Accounting Estimates on pages 86-88 for a further discussion of the credit portfolios and the allowance for credit losses.
+Year-to-date results
+Net income was $27.0 billion, up 32%.
+Net revenue was $71.0 billion, up 20%.
+Banking & Payments revenue was $32.5 billion, up 18%.
+•Investment Banking revenue was $10.1 billion, up 33%, predominantly driven by higher investment banking fees and net gains on equity investments. Investment banking fees were up 24%, driven by higher fees across products. The Firm ranked #1 for global investment banking fees for the nine months ended September 30, 2026, according to Dealogic.
+–Advisory fees were $3.5 billion, up 42%, driven by higher fees from deals in the Diversified Industries, Healthcare, Technology, Natural Resource Group and Media & Communication sectors, partially offset by lower fees from deals in the Consumer & Retail sector.
+
+
+–Equity underwriting fees were $1.9 billion, up 42%, driven by higher revenue across all products. 
+–Debt underwriting fees were $3.8 billion, up 5%, driven by higher investment grade loans and bonds, partially offset by lower non-investment grade bonds.
+•Payments revenue was $16.0 billion, up 13%, driven by higher average deposits, fee growth and higher deposit margin.
+•Lending revenue was $6.4 billion, up 13%, largely driven by higher loan balances, lower fair value losses on credit protection purchased against certain retained loans and lending-related commitments, and higher lending-related fees.
+Markets & Securities Services revenue was $38.4 billion, up 22%. Markets revenue was $34.0 billion, up 23%.
+•Equity Markets revenue was $15.5 billion, up 49%, driven by strong performance across products, particularly in Prime and Derivatives.
+•Fixed Income Markets revenue was $18.5 billion, up 8%, driven by higher revenue in Currencies & Emerging Markets, Credit, Securitized Products and Commodities, partially offset by lower revenue in Rates.
+•Securities Services revenue was $4.8 billion, up 16%, predominantly driven by fee growth on higher market levels and client activity as well as higher average deposits and higher deposit margin.
+•Credit Adjustments & Other was a loss of $318 million, compared with a loss of $59 million in the prior year.
+Noninterest expense was $33.3 billion, up 14%, predominantly driven by higher compensation, including higher revenue-related compensation, as well as higher brokerage expense.
+The provision for credit losses was $1.5 billion, predominantly driven by changes in the credit quality of certain exposures and the impact of net increases in the loan and lending-related commitment portfolios. The net addition to the allowance for credit losses was $963 million and net charge-offs were $538 million.
+In the prior year, the provision was $2.2 billion, the net addition to the allowance for credit losses was $1.1 billion and net charge-offs were $1.1 billion.
+
+
+30
+
+
+
+
+
+Selected metrics
+(in millions, except employees)As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+20262025Change20262025Change
+
+Selected balance sheet data (period-end)
+
+Total assets$2,760,833 $2,328,000 19 %$2,760,833 $2,328,000 19 %
+Loans:
+Loans retained599,834 538,016 11 599,834 538,016 11 
+
+Loans held-for-sale and loans at fair value(a)75,037 56,057 34 75,037 56,057 34 
+Total loans674,871 594,073 14 674,871 594,073 14 
+Equity175,000 149,500 17 175,000 
+(d)149,500 17 
+
+
+Banking & Payments loans by client coverage segment (period-end)(b)
+Global Corporate Banking & Global Investment Banking$168,213 $132,560 27 $168,213 $132,560 27 
+Commercial Banking229,404 222,464 3 229,404 222,464 3 
+Commercial & Specialized Industries80,664 76,010 6 80,664 76,010 6 
+Commercial Real Estate Banking148,740 146,454 2 148,740 146,454 2 
+Total Banking & Payments loans397,617 355,024 12 397,617 355,024 12 
+
+
+Selected balance sheet data (average)
+
+Total assets$2,658,362 $2,266,445 17 $2,607,834 $2,173,201 20 
+Trading assets-debt and equity instruments935,432 796,017 18 920,865 746,796 23 
+Trading assets-derivative receivables71,283 61,132 17 70,768 58,986 20 
+Loans:
+Loans retained$589,160 $528,135 12 $574,063 $507,502 13 
+
+Loans held-for-sale and loans at fair value(a)71,120 55,545 28 72,362 50,784 42 
+Total loans$660,280 $583,680 13 $646,425 $558,286 16 
+Deposits1,309,689 1,194,410 10 1,275,652 1,157,201 10 
+Equity175,000 149,500 17 171,264 
+(d)149,500 15 
+
+
+Banking & Payments loans by client coverage segment (average)(b)
+Global Corporate Banking & Global Investment Banking$163,655 $132,101 24 $160,150 $126,386 27 
+Commercial Banking228,263 221,534 3 225,585 220,005 3 
+Commercial & Specialized Industries79,801 75,270 6 78,334 74,434 5 
+Commercial Real Estate Banking148,462 146,264 2 147,251 145,571 1 
+Total Banking & Payments loans$391,918 $353,635 11 $385,735 $346,391 11 
+
+
+Employees92,746 90,895 
+(c)2 %92,746 90,895 
+(c)2 %
+(a)Loans held-for-sale and loans at fair value primarily reflect lending-related positions originated and purchased in Markets, including loans held for securitization.
+(b)Refer to Line of Business Metrics on page 200 for a description of each of the client coverage segments.
+(c)Refer to footnote (c) on page 28 for further information on the centralization of Risk functions.
+(d)During the three months ended June 30, 2026, the capital allocated to CIB from Corporate was increased by $8.5 billion, compared with the capital allocated in the first quarter of 2026, in connection with growth in the business.
+
+
+31
+
+
+
+
+
+Selected metrics 
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+
+(in millions, except ratios)20262025Change20262025Change
+
+Credit data and quality statistics
+
+Net charge-offs/(recoveries)$211 $567 (63)%$538 $1,069 (50)%
+Nonperforming assets:
+Nonaccrual loans:
+
+Nonaccrual loans retained(a)$3,817 $4,033 (5)$3,817 $4,033 (5)
+
+Nonaccrual loans held-for-sale and loans at fair value(b)1,149 1,338 (14)1,149 1,338 (14)
+Total nonaccrual loans4,966 5,371 (8)4,966 5,371 (8)
+Derivative receivables149 224 (33)149 224 (33)
+
+Assets acquired in loan satisfactions381 197 93 381 197 93 
+Total nonperforming assets$5,496 $5,792 (5)$5,496 $5,792 (5)
+Allowance for credit losses:
+Allowance for loan losses$8,300 $7,609 9 $8,300 $7,609 9 
+Allowance for lending-related commitments3,185 2,798 14 3,185 2,798 14 
+
+Total allowance for credit losses$11,485 $10,407 10 %$11,485 $10,407 10 %
+
+Net charge-off/(recovery) rate(c)0.14 %0.43 %0.13 %0.28 %
+Allowance for loan losses to period-end loans retained1.38 1.41 1.38 1.41 
+
+
+Allowance for loan losses to nonaccrual loans retained(a)217 189 217 189 
+Nonaccrual loans to total period-end loans0.74 %0.90 %0.74 %0.90 %
+(a)Allowance for loan losses of $672 million and $724 million were held against these nonaccrual loans at September 30, 2026 and 2025, respectively.
+(b)Excludes mortgage loans past due and insured by U.S. government agencies, which are primarily 90 or more days past due. These loans have been excluded based upon the government guarantee. At September 30, 2026 and 2025, mortgage loans 90 or more days past due and insured by U.S. government agencies were $207 million and $93 million, respectively.
+(c)Loans held-for-sale and loans at fair value were excluded when calculating the net charge-off/(recovery) rate.
+
+
+Investment banking fees
+Three months ended September 30,Nine months ended September 30,
+
+(in millions)20262025Change20262025Change
+
+Advisory$1,222 $926 32 %$3,500 $2,464 42 %
+
+Equity underwriting564 527 7 1,865 1,316 42 
+
+Debt underwriting(a)1,219 1,174 4 3,800 3,608 5 
+
+Total investment banking fees$3,005 $2,627 14 %$9,165 $7,388 24 %
+(a)Represents long-term debt and loan syndications.
+
+
+32
+
+
+
+
+
+League table results – wallet share
+Three months ended September 30,Nine months ended September 30,Full-year 2025
+2026202520262025
+RankShareRankShareRankShareRankShareRankShare
+
+Based on fees(a)
+
+M&A(b)
+Global#2 10.9 %#2 8.2 %#2 9.8 %#2 8.0 %#2 8.0 %
+U.S.2 11.3 2 8.8 2 10.5 2 8.7 2 8.5 
+
+Equity and equity-related(c)
+Global1 9.5 1 9.9 1 9.9 1 10.6 1 9.3 
+U.S.1 12.8 1 12.4 1 12.6 1 13.8 1 12.3 
+
+Long-term debt(d)
+Global1 5.8 1 7.4 1 7.1 1 7.4 1 7.1 
+U.S.2 8.9 1 10.0 1 10.7 1 10.3 1 10.1 
+
+Loan syndications
+Global1 10.9 2 9.7 1 11.5 1 10.7 2 10.1 
+U.S.2 11.1 2 10.5 1 12.6 2 12.1 2 11.2 
+
+Global investment banking fees(e)#1 9.2 %#1 8.4 %#1 9.2 %#1 8.5 %#1 8.2 %
+(a)Source: Dealogic as of October 1, 2026. Reflects the ranking of revenue wallet and market share. 
+(b)Global M&A excludes any withdrawn transactions. U.S. M&A revenue wallet represents wallet from client parents based in the U.S.
+(c)Global equity and equity-related ranking includes rights offerings and Chinese A-Shares.
+(d)Long-term debt rankings include investment grade, high-yield, supranationals, sovereigns, agencies, covered bonds, asset-backed securities ("ABS") and mortgage-backed securities ("MBS"); and exclude money market, short-term debt and U.S. municipal securities.
+(e)Global investment banking fees exclude money market, short-term debt and shelf securities.
+
+
+33
+
+
+
+Markets revenue
+
+
+The following table summarizes selected income statement data for the Markets businesses. Markets includes both Fixed Income Markets and Equity Markets. Markets revenue consists of principal transactions, fees, commissions and other income, as well as net interest income. The Firm assesses its Markets business performance on a total revenue basis, as offsets generally occur across revenue line items. For example, securities that generate net interest income may be risk-managed by derivatives 
+
+
+that are reflected at fair value in principal transactions revenue. Refer to Notes 5 and 6 for a description of the composition of these income statement line items. Refer to Markets revenue on page 73 of JPMorganChase’s 2025 Form 10-K for further information.
+For the periods presented below, the primary source of principal transactions revenue was the amount recognized upon executing new transactions.
+
+
+Three months ended September 30,Three months ended September 30,
+20262025
+
+(in millions)Fixed Income MarketsEquity
+MarketsTotal
+Markets
+Fixed Income Markets
+Equity
+MarketsTotal
+Markets
+
+Principal transactions$1,655 $4,822 $6,477 $3,115 $3,907 $7,022 
+
+Lending- and deposit-related fees94 69 163 101 51 152 
+Commissions and other fees139 774 913 143 623 766 
+All other income449 (101)348 361 (37)324 
+Noninterest revenue2,337 5,564 7,901 3,720 4,544 8,264 
+
+Net interest income3,029 (610)2,419 1,893 (1,213)680 
+Total net revenue$5,366 $4,954 $10,320 $5,613 $3,331 $8,944 
+
+Nine months ended September 30,Nine months ended September 30,
+20262025
+
+(in millions)Fixed Income MarketsEquity
+MarketsTotal
+MarketsFixed Income MarketsEquity
+MarketsTotal
+Markets
+
+Principal transactions$8,321 $14,782 $23,103 $9,742 $11,946 $21,688 
+
+Lending- and deposit-related fees314 187 501 344 125 469 
+Commissions and other fees435 2,335 2,770 474 1,819 2,293 
+All other income1,251 (231)1,020 1,143 (76)1,067 
+Noninterest revenue10,321 17,073 27,394 11,703 13,814 25,517 
+Net interest income8,176 (1,613)6,563 5,449 (3,423)2,026 
+Total net revenue$18,497 $15,460 $33,957 $17,152 $10,391 $27,543 
+
+
+Selected metrics
+
+(in millions, except where otherwise noted)As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+20262025Change20262025Change
+
+Assets under custody ("AUC") by asset class (period-end)
+(in billions):
+Fixed Income$18,606 $18,026 3 %$18,606 $18,026 3 %
+Equity19,818 17,404 14 19,818 17,404 14 
+
+Other(a)5,683 4,698 21 5,683 4,698 21 
+Total AUC$44,107 $40,128 10 $44,107 $40,128 10 
+
+Client deposits and other third-party liabilities (average)(b)$1,219,019 $1,111,143 10 %$1,197,291 $1,078,717 11 %
+(a)Consists of mutual funds, unit investment trusts, currencies, annuities, insurance contracts, options and other contracts.
+(b)Client deposits and other third-party liabilities pertain to the Payments and Securities Services businesses.
+
+
+34
+
+
+
+
+
+International metrics 
+(in millions, except where otherwise noted)As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+20262025Change20262025Change
+
+Total net revenue(a)
+Europe/Middle East/Africa$4,360 $4,106 6 %$15,173 $13,164 15 %
+Asia-Pacific4,039 2,819 43 12,093 8,105 49 
+Latin America/Caribbean731 676 8 2,310 1,937 19 
+
+Total international net revenue9,130 7,601 20 29,576 23,206 27 
+North America13,604 12,277 11 41,390 35,873 15 
+Total net revenue$22,734 $19,878 14 $70,966 $59,079 20 
+
+
+Loans retained (period-end)(a)
+Europe/Middle East/Africa$67,534 $57,786 17 $67,534 $57,786 17 
+Asia-Pacific28,021 18,898 48 28,021 18,898 48 
+Latin America/Caribbean15,525 10,818 44 15,525 10,818 44 
+Total international loans111,080 87,502 27 111,080 87,502 27 
+North America488,754 450,514 8 488,754 450,514 8 
+Total loans retained$599,834 $538,016 11 $599,834 $538,016 11 
+
+
+Client deposits and other third-party liabilities (average)(b)
+Europe/Middle East/Africa$302,297 $299,490 1 $308,973 $295,183 5 
+Asia-Pacific179,866 154,457 16 173,166 154,776 12 
+Latin America/Caribbean54,858 48,288 14 54,489 46,292 18 
+Total international$537,021 $502,235 7 $536,628 $496,251 8 
+North America681,998 608,908 12 660,663 582,466 13 
+
+Total client deposits and other third-party liabilities$1,219,019 $1,111,143 10 $1,197,291 $1,078,717 11 
+
+
+AUC (period-end)(b)
+(in billions)
+North America$29,974 $26,992 11 $29,974 $26,992 11 
+All other regions14,133 13,136 8 14,133 13,136 8 
+Total AUC$44,107 $40,128 10 %$44,107 $40,128 10 %
+(a)Total net revenue and loans retained (excluding loans held-for-sale and loans at fair value) are based on the location of the trading desk, booking location, or domicile of the client, as applicable.
+(b)Client deposits and other third-party liabilities pertaining to the Payments and Securities Services businesses, and AUC, are based on the domicile of the client or booking location, as applicable.
+
+
+35
+
+
+
+
+
+
+ASSET & WEALTH MANAGEMENT
+Refer to pages 76–79 of JPMorganChase’s 2025 Form 10-K and Line of Business Metrics on page 201 for a discussion of the business profile of AWM.
+
+
+Selected income statement data
+
+(in millions, except ratios)Three months ended September 30,Nine months ended September 30,
+20262025Change20262025Change
+Revenue
+Asset management fees$4,413 $3,885 14 %$12,765 $11,122 15 %
+Commissions and other fees432 296 46 1,246 883 41 
+All other income157 156 1 681 398 71 
+Noninterest revenue5,002 4,337 15 14,692 12,403 18 
+Net interest income1,907 1,729 10 5,442 5,154 6 
+Total net revenue6,909 6,066 14 20,134 17,557 15 
+
+Provision for credit losses84 59 42 73 95 (23)
+
+Noninterest expense
+
+Compensation expense2,406 2,125 
+(b)13 7,067 6,275 
+(b)13 
+
+Noncompensation expense(a)1,952 1,693 
+(b)15 5,665 4,989 
+(b)14 
+Total noninterest expense4,358 3,818 14 12,732 11,264 13 
+
+Income before income tax expense2,467 2,189 13 7,329 6,198 18 
+Income tax expense624 531 18 1,754 1,484 18 
+Net income$1,843 $1,658 11 $5,575 $4,714 18 
+
+Revenue by line of business
+Asset Management$3,248 $2,916 11 $9,640 $8,292 16 
+Global Private Bank3,661 3,150 16 10,494 9,265 13 
+Total net revenue$6,909 $6,066 14 %$20,134 $17,557 15 %
+
+Financial ratios
+Return on equity45 %40 %46 %39 %
+Overhead ratio63 63 63 64 
+Pre-tax margin ratio:
+Asset Management35 35 35 33 
+Global Private Bank36 37 38 37 
+Asset & Wealth Management36 36 36 35 
+(a)Included compensation expense recorded in and allocated from Corporate of $289 million and $279 million for the three months ended September 30, 2026 and 2025, respectively, and $876 million and $820 million for the nine months ended September 30, 2026 and 2025, respectively. Refer to Note 25, footnote (d) of the Segment & Corporate results and reconciliation table for additional information on the allocation.
+(b)In the first quarter of 2026, Risk functions that were previously aligned with the LOBs were centralized into Corporate. As a result, the employees and compensation expense related to those functions are now reflected in Corporate, and a corresponding expense allocation from Corporate is reflected in noncompensation expense of the respective LOBs. These adjustments had no impact on total noninterest expense of the LOBs or Corporate. Prior periods have been revised to conform with the current presentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+36
+
+
+
+
+
+Quarterly results
+Net income was $1.8 billion, up 11%.
+Net revenue was $6.9 billion, up 14%. Net interest income was $1.9 billion, up 10%. Noninterest revenue was $5.0 billion, up 15%.
+Revenue from Asset Management was $3.2 billion, up 11%, driven by:
+•higher asset management fees, reflecting higher average market levels and strong net inflows, partially offset by
+•lower investment valuation gains.
+Revenue from Global Private Bank was $3.7 billion, up 16%, reflecting:
+•higher noninterest revenue, predominantly driven by higher management fees due to strong net inflows and higher average market levels, as well as higher brokerage commissions, and
+•higher net interest income driven by higher average loans, partially offset by deposit margin compression.
+Noninterest expense was $4.4 billion, up 14%, largely driven by higher compensation, primarily higher revenue-related compensation and continued growth in private banking advisor teams, as well as higher distribution fees.
+The provision for credit losses was $84 million. The net addition to the allowance for credit losses was $68 million and net charge-offs were $16 million. In the prior year, the provision was $59 million, net charge-offs were $62 million and the net reduction in the allowance for credit losses was $3 million. 
+Refer to Credit and Investment Risk Management on pages 60-78 and Allowance for Credit Losses on pages 75-77 for further discussions of the credit portfolios and the allowance for credit losses.
+
+
+Year-to-date results
+Net income was $5.6 billion, up 18%.
+Net revenue was $20.1 billion, up 15%. Net interest income was $5.4 billion, up 6%. Noninterest revenue was $14.7 billion, up 18%.
+Revenue from Asset Management was $9.6 billion, up 16%, predominantly driven by:
+•higher asset management fees, reflecting higher average market levels and strong net inflows, and
+•higher investment valuation gains.
+Revenue from Global Private Bank was $10.5 billion, up 13%, reflecting:
+•higher noninterest revenue, predominantly driven by higher management fees due to strong net inflows and higher average market levels, as well as higher brokerage commissions, and
+•higher net interest income driven by higher average loans and deposits, partially offset by narrower spreads on loans and deposit margin compression.
+Noninterest expense was $12.7 billion, up 13%, largely driven by higher compensation, primarily higher revenue-related compensation and continued growth in private banking advisor teams, as well as higher distribution fees.
+The provision for credit losses was $73 million. The net addition to the allowance for credit losses was $54 million and net charge-offs were $19 million. In the prior year, the provision was $95 million, net charge-offs were $62 million and the net addition in the allowance for credit losses was $33 million.
+
+
+
+
+37
+
+
+
+
+
+Selected metrics
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+
+(in millions, except ranking data, ratios and employees)20262025Change20262025Change
+
+% of JPM mutual fund assets and ETFs rated as 4- or 5-star(a)56 %65 %56 %65 %
+
+% of JPM mutual fund assets and ETFs ranked in 1st or 2nd quartile:(b)
+1 year45 62 45 62 
+3 years52 66 52 66 
+5 years67 78 67 78 
+
+
+Selected balance sheet data (period-end)(c)
+Total assets$338,451 $282,322 20 %$338,451 $282,322 20 %
+Loans313,240 257,988 21 313,240 257,988 21 
+
+Deposits261,008 239,999 9 261,008 239,999 9 
+Equity16,000 16,000 — 16,000 16,000 — 
+
+
+Selected balance sheet data (average)(c)
+Total assets$326,983 $272,954 20 $309,094 $262,556 18 
+Loans301,646 250,730 20 284,761 241,812 18 
+
+Deposits253,528 241,454 5 255,775 244,635 5 
+Equity16,000 16,000 — 16,000 16,000 — 
+
+
+Employees30,380 29,135 
+(e)4 30,380 29,135 
+(e)4 
+
+Number of Global Private Bank client advisors4,460 4,050 10 4,460 4,050 10 
+
+
+Credit data and quality statistics(c)
+Net charge-offs/(recoveries)$16 $62 (74)$19 $62 (69)
+Nonaccrual loans867 
+(d)1,129 (23)867 
+(d)1,129 (23)
+Allowance for credit losses:
+Allowance for loan losses$588 $555 6 $588 $555 6 
+
+Allowance for lending-related commitments44 52 (15)44 52 (15)
+
+Total allowance for credit losses$632 $607 4 %$632 $607 4 %
+Net charge-off/(recovery) rate0.02 %0.10 %0.01 %0.03 %
+
+Allowance for loan losses to period-end loans0.19 
+(d)0.22 0.19 
+(d)0.22 
+
+Allowance for loan losses to nonaccrual loans74 
+(d)49 74 
+(d)49 
+
+Nonaccrual loans to period-end loans0.28 %0.44 %0.28 %0.44 %
+(a)Represents the Morningstar Rating for all domiciled funds except for Japan domiciled funds which use Nomura. Includes only Asset Management retail active open-ended mutual funds and active ETFs that have a rating. Excludes money market funds, Undiscovered Managers Fund, and Brazil domiciled funds.
+(b)Quartile ranking sourced from Morningstar, Lipper and Nomura based on country of domicile. Includes only Asset Management retail active open-ended mutual funds and active ETFs that are ranked by the aforementioned sources. Excludes money market funds, Undiscovered Managers Fund, and Brazil domiciled funds. 
+(c)Loans, deposits and related credit data and quality statistics relate to the Global Private Bank business.
+(d)Included $67 million of nonaccrual loans held-for-sale at September 30, 2026, which are excluded from the allowance coverage ratio calculations. 
+(e)Refer to footnote (b) on page 36 for further information on the centralization of Risk functions.
+
+
+
+
+38
+
+
+
+Client assets
+Assets under management were $5.2 trillion, up 13%, and client assets were $7.9 trillion, up 15%. These increases were driven by continued net inflows and higher market levels.
+
+
+As of September 30,
+(in billions)20262025Change
+Assets by asset class
+Liquidity$1,367 $1,174 16 %
+Fixed income1,062 971 9 
+Equity1,576 1,371 15 
+Multi-asset955 855 12 
+Alternatives250 228 10 
+Total assets under management5,210 4,599 13 
+
+Custody/brokerage/administration/deposits2,685 2,239 20 
+
+Total client assets(a)$7,895 $6,838 15 
+
+Assets by client segment
+Private Banking$1,601 $1,364 17 
+Global Institutional2,111 1,837 15 
+Global Funds1,498 1,398 7 
+Total assets under management$5,210 $4,599 13 
+
+
+Private Banking$3,938 $3,423 15 
+Global Institutional2,445 1,994 23 
+Global Funds1,512 1,421 6 
+
+Total client assets(a)$7,895 $6,838 15 %
+(a)Includes CCB client investment assets invested in managed accounts and J.P. Morgan mutual funds where AWM is the investment manager.
+
+
+Client assets (continued)
+
+Three months ended September 30,Nine months ended September 30,
+(in billions)2026202520262025
+
+Assets under management rollforward
+Beginning balance$5,140 $4,343 $4,791 $4,045 
+Net asset flows:
+Liquidity42 37 77 78 
+Fixed income27 31 82 69 
+
+Equity7 31 37 84 
+Multi-asset9 4 25 5 
+Alternatives8 6 11 (1)
+
+Market/performance/other impacts(23)147 187 319 
+Ending balance, September 30$5,210 $4,599 $5,210 $4,599 
+
+
+Client assets rollforward
+Beginning balance$7,663 $6,421 $7,118 $5,932 
+Net asset flows263 147 522 347 
+
+Market/performance/other impacts(31)270 255 559 
+Ending balance, September 30$7,895 $6,838 $7,895 $6,838 
+
+
+39
+
+
+
+
+
+
+Selected metrics
+As of September 30,
+20262025Change
+Firmwide Wealth Management
+
+Client assets (in billions)(a)$5,011 $4,373 15 %
+Number of client advisors10,893 10,075 8 
+
+Stock Plan Administration
+Number of stock plan participants (in thousands)2,293 1,796 28 
+Client assets (in billions)$415 $357 16 %
+(a)Consists of Global Private Bank in AWM and client investment assets in J.P. Morgan Wealth Management in CCB.
+
+
+
+
+International metrics
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+(in billions, except where otherwise noted)20262025Change20262025Change
+
+Total net revenue (in millions)(a)
+Europe/Middle East/Africa$1,127 $1,008 12 %$3,289 $2,912 13 %
+Asia-Pacific749 625 20 2,270 1,775 28 
+Latin America/Caribbean377 313 20 1,104 897 23 
+
+Total international net revenue2,253 1,946 16 6,663 5,584 19 
+North America4,656 4,120 13 13,471 11,973 13 
+
+Total net revenue(a)$6,909 $6,066 14 $20,134 $17,557 15 
+
+Assets under management
+Europe/Middle East/Africa$801 $690 16 $801 $690 16 
+Asia-Pacific400 357 12 400 357 12 
+Latin America/Caribbean139 122 14 139 122 14 
+
+Total international assets under management1,340 1,169 15 1,340 1,169 15 
+North America3,870 3,430 13 3,870 3,430 13 
+
+Total assets under management$5,210 $4,599 13 $5,210 $4,599 13 
+
+Client assets
+Europe/Middle East/Africa$1,133 $994 14 $1,133 $994 14 
+Asia-Pacific646 606 7 646 606 7 
+Latin America/Caribbean338 293 15 338 293 15 
+
+Total international client assets2,117 1,893 12 2,117 1,893 12 
+North America5,778 4,945 17 5,778 4,945 17 
+Total client assets$7,895 $6,838 15 %$7,895 $6,838 15 %
+
+
+(a)Regional revenue is based on the domicile of the client.
+
+
+
+
+40
+
+
+
+
+
+
+CORPORATE
+Refer to pages 80–82 of JPMorganChase’s 2025 Form 10-K for a discussion of Corporate.
+
+
+Selected income statement and balance sheet data
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+(in millions, except employees)20262025Change20262025Change
+Revenue
+Principal transactions$(94)$(54)(74)%$24 $(195)NM
+Investment securities gains/(losses)(658)105 NM(993)14 NM
+All other income176 246 (28)5,806 
+(e)1,180 392 %
+Noninterest revenue(576)297 NM4,837 999 384 
+Net interest income669 1,406 (52)2,517 4,546 (45)
+
+Total net revenue(a)93 1,703 (95)7,354 5,545 33 
+Provision for credit losses(30)(3)NM(41)3 NM
+
+Noninterest expense586 445 
+(d)32 1,765 1,177 
+(d)(f)50 
+Income/(loss) before income tax expense(463)1,261 NM5,630 4,365 29 
+
+Income tax expense/(benefit)(8)436 NM1,177 152 
+(g)NM
+Net income/(loss)$(455)$825 
+
+NM$4,453 $4,213 6 
+
+Total net revenue
+Treasury and CIO$287 $1,687 (83)$2,417 $4,900 (51)
+Other Corporate(194)16 NM4,937 
+(e)645 NM
+Total net revenue$93 $1,703 (95)$7,354 $5,545 33 
+Net income/(loss)
+Treasury and CIO$161 $1,166 (86)$1,532 $3,445 (56)
+Other Corporate(616)(341)(81)2,921 
+(e)768 
+(f)280 
+Total net income/(loss)$(455)$825 
+
+NM$4,453 $4,213 6 
+Total assets (period-end)$1,318,250 
+(c)$1,297,608 2 $1,318,250 
+(c)$1,297,608 2 
+Loans (period-end)2,810 2,707 4 2,810 2,707 4 
+
+Deposits (period-end)(b)79,231 
+
+34,145 132 79,231 34,145 132 
+
+Employees54,950 55,523 
+(d)(1)%54,950 55,523 
+(d)(1)%
+(a)Included tax-equivalent adjustments, predominantly driven by tax-exempt income from municipal bonds, of $42 million and $39 million for the three months ended September 30, 2026 and 2025, respectively, and $130 million and $113 million for the nine months ended September 30, 2026 and 2025, respectively.
+(b)Predominantly relates to the Firm's international consumer initiatives.
+(c)Included equity investments with a carrying value of $5.7 billion made by the Strategic Investment Group. These investments are generally accounted for under the measurement alternative, except for equity that is publicly traded which is carried at fair value.
+(d)In the first quarter of 2026, Risk functions that were previously aligned with the LOBs were centralized into Corporate. As a result, the employees and compensation expense related to those functions are now reflected in Corporate, and a corresponding expense allocation from Corporate is reflected in noncompensation expense of the respective LOBs. These adjustments had no impact on total noninterest expense of the LOBs or Corporate. Prior periods have been revised to conform with the current presentation.
+(e)Included a $4.6 billion net gain related to Visa shares and $763 million of gains on certain equity investments, recorded in the second quarter of 2026. Refer to Consolidated Results of Operations on pages 9-14 and Note 5 for additional information.
+(f)Included an FDIC special assessment accrual release of $437 million for the nine months ended September 30, 2025.
+(g)Included a $774 million income tax benefit driven by the resolution of certain tax audits and the impact of tax regulations related to foreign currency translation gains and losses finalized in 2024 and effective for 2025.
+
+
+
+
+
+
+
+
+41
+
+
+
+
+
+Quarterly results
+Net loss was $455 million, compared with a net income of $825 million in the prior year.
+Net revenue was $93 million, compared with $1.7 billion in the prior year.
+Net interest income was $669 million, down $737 million, predominantly driven by the impact of lower rates.
+Noninterest revenue was a loss of $576 million, compared with revenue of $297 million in the prior year, predominantly driven by:
+•a net loss in investment securities predominantly due to sales of U.S. Treasuries, as compared with a net gain in the prior year, related to repositioning the investment securities portfolio in Treasury and CIO, and 
+•a net loss compared with a gain in the prior year on certain equity investments.
+Refer to Notes 9 and 12 for additional information on the investment securities portfolio and the allowance for credit losses.
+Noninterest expense was $586 million, compared with $445 million in the prior year.
+Income tax benefit was $8 million, compared with $436 million expense in the prior year, driven by:
+•changes in the level and mix of income and expenses subject to U.S. federal, state and local taxes, and 
+•current-period tax benefits related to the resolution of certain tax audits, 
+partially offset by 
+•current-period tax expense related to the filing of prior-year tax returns as compared with a benefit in the prior year.
+
+
+
+
+Year-to-date results
+Net income was $4.5 billion, compared with $4.2 billion in the prior year.
+Net revenue was $7.4 billion, compared with $5.5 billion in the prior year.
+Net interest income was $2.5 billion, down $2.0 billion, driven by the impact of lower rates, partially offset by higher investment securities balances.
+Noninterest revenue was $4.8 billion, compared with $999 million in the prior year. Excluding the $4.6 billion net gain related to Visa shares and $763 million of gains on certain equity investments recorded in the second quarter, noninterest revenue was down $1.6 billion, driven by:
+•a net loss in investment securities due to sales of U.S. GSE and government agency MBS and U.S. Treasuries, as compared with a net gain in the prior year, related to repositioning the investment securities portfolio in Treasury and CIO, and
+•the absence of the $588 million First Republic-related gain recorded in the first quarter of the prior year.
+Refer to Consolidated Results of Operations on pages 9-14 and Note 5 for additional information on Visa shares, the gains on certain equity investments, and the First Republic acquisition.
+Noninterest expense was $1.8 billion, compared with $1.2 billion in the prior year, predominantly due to the absence of an FDIC special assessment accrual release in the prior year and higher costs associated with the Firm's international consumer initiatives.
+Refer to pages 80–82 and Note 6 of JPMorganChase’s 2025 Form 10-K for additional information on FDIC-related expense.
+Income tax expense was $1.2 billion, compared with $152 million expense in the prior year, driven by:
+•lower tax benefits related to the resolution of certain tax audits and the impact of tax regulations, including the absence of a $774 million income tax benefit recorded in the second quarter of 2025,
+•current-period tax expense related to the filing of prior-year tax returns as compared with a benefit in the prior year, and
+•changes in the level and mix of income and expenses subject to U.S. federal, state and local taxes.
+Other Corporate includes equity investments made by the Strategic Investment Group, including those associated with the Firm’s Security and Resiliency Initiative, as well as the Firm's international consumer initiatives, which primarily consist of Chase U.K., Chase Europe (which was launched in Germany in May 2026), J.P. Morgan Personal Investing and an ownership stake in C6 Bank.
+
+
+42
+
+
+
+
+
+Treasury and CIO overview
+
+
+At September 30, 2026, the average credit rating of the Treasury and CIO investment securities comprising the portfolio in the table below was AA+ (based upon external ratings where available and, where not available, based primarily upon internal risk ratings). Refer to Note 9 for further information on the Firm’s investment securities portfolio and internal risk ratings.
+Refer to Liquidity Risk Management on pages 53-59 for further information on liquidity and funding risk. Refer to Market Risk Management on pages 79-84 for information on interest rate and foreign exchange risks.
+
+Selected income statement and balance sheet data
+As of or for the three months 
+ended September 30,As of or for the nine months 
+ended September 30,
+(in millions)20262025Change20262025Change
+Investment securities gains/(losses)$(658)$105 NM$(993)$14 NM
+
+Available-for-sale securities (average)(a)$552,571 $495,777 11 %$538,612 $450,365 20 %
+
+Held-to-maturity securities (average)(a)273,826 269,717 2 271,416 267,366 2 
+Investment securities portfolio (average)$826,397 $765,494 8 $810,028 $717,731 13 
+
+Available-for-sale securities (period-end)(a)$543,234 $487,277 11 $543,234 $487,277 11 
+
+Held-to-maturity securities (period-end)(a)274,564 293,446 (6)274,564 293,446 (6)
+
+Investment securities portfolio, net of allowance for credit losses (period-end)(b)$817,798 $780,723 5 %$817,798 $780,723 5 %
+(a)During 2025, the Firm transferred $44.1 billion of investment securities from AFS to HTM for asset-liability management purposes. Refer to Note 10 of JPMorganChase’s 2025 Form 10-K for additional information on transfers from AFS to HTM securities.
+(b)As of September 30, 2026 and 2025, the allowance for credit losses on investment securities was $42 million and $72 million, respectively.
+
+
+
+
+
+
+
+
+43
+
+
+
+
+
+
+FIRMWIDE RISK MANAGEMENT 
+
+
+Risk is an inherent part of JPMorganChase’s business activities. When the Firm extends a consumer or wholesale loan, advises customers and clients on their investment decisions, makes markets in securities, or offers other products or services, the Firm takes on some degree of risk. The Firm’s overall objective is to manage its business, and the associated risks, in a manner that balances serving the interests of its clients, customers and investors, and protecting the safety and soundness of the Firm. 
+The Firm believes that effective risk management requires, among other things: 
+•Acceptance of responsibility, including identification and escalation of risks by all individuals within the Firm; 
+•Ownership of risk identification, assessment, data and management within each of the LOBs and Corporate; and 
+•A Firmwide risk governance and oversight structure. 
+The Firm follows a disciplined and balanced compensation framework with strong internal governance and independent oversight by the Board of Directors. The impact of risk and control issues is carefully considered in the Firm’s performance evaluation and incentive compensation processes.
+Risk governance framework
+The Firm’s risk governance framework involves understanding drivers of risks, types of risks, and impacts of risks.
+
+Refer to pages 83–87 of JPMorganChase’s 2025 Form 10-K for a further discussion of Firmwide risk management governance and oversight.
+
+
+Risk governance and oversight functions
+The following sections of this Form 10-Q and the 2025 Form 10-K discuss the risk governance and oversight functions in place to oversee the risks inherent in the Firm’s business activities.
+
+
+Risk governance and oversight functions Form 10-Q page referenceForm 10-K page reference
+Strategic Risk88
+Capital Risk45-5289-99
+Liquidity Risk 53-59100-107
+Reputation Risk108
+Consumer Credit Risk62-65112–117
+Wholesale Credit Risk66-74118-128
+Investment Portfolio Risk78132
+Market Risk79-84133-142
+Country Risk85143-144
+Climate Risk145
+Operational Risk 146-149
+Compliance Risk150
+Conduct Risk151
+Legal Risk152
+Estimations and Model Risk153
+
+
+
+
+44
+
+
+
+
+
+
+
+CAPITAL RISK MANAGEMENT
+
+
+Capital risk is the risk that the Firm has an insufficient level or composition of capital to support the Firm’s business activities and associated risks during normal economic environments and under stressed conditions. 
+Refer to pages 89–99 of JPMorganChase’s 2025 Form 10-K, Note 21 of this Form 10-Q and the Firm’s Pillar 3 Regulatory Capital Disclosures reports, which are available on the Firm’s website, for a further discussion of the Firm’s capital risk management.
+Basel III Overview
+The capital rules under Basel III establish minimum capital ratios and overall capital adequacy standards for large and internationally active U.S. Bank Holding Companies (“BHCs”) and banks, including the Firm and JPMorgan Chase Bank, N.A. The minimum amount of regulatory capital that must be held by BHCs and banks is determined by calculating risk-weighted assets ("RWA"), which are on-balance sheet assets and off-balance sheet exposures, weighted according to risk. Under the rules currently in effect, two comprehensive approaches are prescribed for calculating Basel III RWA: a standardized approach (“Standardized”), and an advanced approach (“Advanced”). 
+For each of these risk-based capital ratios, the capital adequacy of the Firm is evaluated against the lower of the Standardized or Advanced approaches compared to their respective regulatory capital ratio requirements. 
+As of September 30, 2026, the Advanced Total Capital ratio continued to be the most binding constraint for the Firm’s Basel III risk-based ratios. However, as of September 30, 2026, the Standardized ratios are more binding than the Advanced ratios with respect to the CET1 and Tier 1 risk-based ratios.
+Additionally, Basel III requires that Advanced Approaches banking organizations, including the Firm, calculate their SLRs. Refer to page 49 of this Form 10-Q and page 96 of JPMorganChase's 2025 Form 10-K for additional information on SLR.
+
+
+
+
+Key Regulatory Developments
+Enhanced Transparency and Public Accountability of the Supervisory Stress Test and SCB Volatility Reduction Final Rules 
+In September 2026, the Federal Reserve issued two final rules related to the Supervisory Stress Test and SCB Volatility Reduction. These rules are intended to enhance the transparency and public accountability of its annual supervisory stress test and to reduce volatility in the Stress Capital Buffer (“SCB”) requirement. The Supervisory Stress Test Final Rule requires the Federal Reserve to request public comment annually on supervisory stress test models and scenarios, including those for the upcoming 2027 stress test, and to submit for public comment any material changes to stress test models and scenarios prior to implementation. In conjunction with the rule finalization, the Federal Reserve has re-proposed new stress testing models for noninterest income. 
+The SCB Volatility Reduction Final Rule will base the SCB on the average of the two preceding stress test results and move the effective date for the SCB requirement from October 1 to January 1. The SCB requirement for firms, including JPMorganChase, will remain at current levels through December 31, 2027, with an updated SCB calculation effective January 1, 2028 based solely on the results of the 2027 Federal Reserve stress test. The first SCB inclusive of averaging will be effective January 1, 2029.
+U.S. Basel III Finalization and GSIB Surcharge
+In March 2026, the Federal Reserve, the OCC and the FDIC (collectively, “the Agencies”) released a proposal to amend the risk-based capital framework entitled "Regulatory capital rule: Category I and II Banking Organizations, Banking Organizations with Significant Trading Activity, and Optional Adoption for Other Banking Organizations," which is referred to in this Form 10-Q as the “U.S. Basel III Re-Proposal.” This proposal reflects changes from the amendments to the risk-based capital framework previously proposed by the Agencies, including replacement of the current dual calculation of Advanced and Standardized RWA with a single calculation based on the expanded risk-based approach (which, among other changes, would not permit the use of internal models for the calculation of RWA, other than for market risk) as well as a new operational risk RWA component. Based on the Firm's understanding of the U.S. Basel III Re-Proposal, as applied to its positions as of December 31, 2025, the estimated impact would be an increase to the Firm's required CET1 capital of approximately 6%.
+The Agencies also released a concurrent proposal, “Regulatory Capital Rule: Risk-Based Capital Surcharges for Global Systemically Important Bank Holding Companies; Systemic Risk Report (FR Y-15),” 
+
+
+45
+
+
+
+
+
+which would amend the calculation of the surcharge for Global Systemically Important Banks (“GSIB”) and which is referred to in this Form 10-Q as the “GSIB Surcharge Re-Proposal.” If adopted as proposed, the amendments reflected in the GSIB Surcharge Re-Proposal would require the Firm to assess its GSIB surcharge on an annual basis, calculated using an average of the underlying measures throughout the calendar year, with daily averaging required for certain measures. The increments in which the GSIB surcharge is assessed would be reduced from 50 basis points to 10 basis points. The GSIB Surcharge Re-Proposal includes an annual adjustment for the relative weights assigned to each indicator based on an average of the growth in nominal GDP, and applies a set weight for Short-Term Wholesale Funding rather than its current weighting relative to average RWA. Under the rules currently in effect, the Firm's GSIB surcharge, calculated as of December 31, 2025, would be 5.5% with an effective date of January 1, 2028. If the GSIB Surcharge Re-Proposal were to be adopted as proposed, the Firm estimates that the 5.5% GSIB surcharge would be reduced to 5.2%. 
+The Firm expects that the changes in requirements reflected in the U.S. Basel III Re-Proposal and the GSIB Surcharge Re-Proposal, taken together, would result in an increase in the Firm’s required CET1 capital of approximately 4% as compared with the CET1 capital requirement that, under current rules, would become effective on January 1, 2028. The estimates do not reflect any actions that the Firm could take to mitigate these impacts.
+Enhanced SLR Final Rule
+On January 1, 2026, the Firm early adopted the enhanced Supplementary Leverage Ratio (“eSLR”) final rule. The final rule amended the eSLR requirements for GSIB BHCs and their insured depository institution (“IDI”) subsidiaries by revising the previous static leverage buffers at the BHC and IDI levels to dynamic buffers that are tied to the BHC’s U.S. Method 1 GSIB Surcharge (the “eSLR buffer”), and by making corresponding updates to the leverage-based buffer requirements for total loss-absorbing capacity (“TLAC”) and eligible long-term debt (“eligi

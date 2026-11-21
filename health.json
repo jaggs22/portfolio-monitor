@@ -1,0 +1,80 @@
+{
+ "quotes": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 16,
+  "errors": []
+ },
+ "generated_at": "2026-11-21T11:09:28Z",
+ "history": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 28,
+  "errors": []
+ },
+ "news": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 60,
+  "errors": []
+ },
+ "filings": {
+  "last_run": "2026-11-21T11:09:28Z",
+  "ok": true,
+  "count": 0,
+  "errors": []
+ },
+ "fundamentals": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 16,
+  "errors": []
+ },
+ "mgmt": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 16,
+  "errors": [
+   "V releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "LIN releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "MU releases: Gemini gemini-3.8-flash returned 503",
+   "MSFT releases: Gemini gemini-3.8-flash returned 429",
+   "JPM releases: Gemini gemini-3.8-flash returned 503",
+   "WM releases: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=90)",
+   "COST releases: Gemini gemini-3.8-flash returned 429",
+   "KO releases: Gemini gemini-3.8-flash returned 429",
+   "AMZN releases: Gemini gemini-3.8-flash returned 429",
+   "AMT releases: Gemini gemini-3.8-flash returned 429"
+  ]
+ },
+ "evidence": {
+  "last_run": "2026-11-21T11:09:28Z",
+  "ok": true,
+  "count": 16,
+  "errors": []
+ },
+ "peers": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 16,
+  "errors": []
+ },
+ "segments": {
+  "last_run": "2026-11-21T05:18:03Z",
+  "ok": true,
+  "count": 14,
+  "errors": []
+ },
+ "bench": {
+  "last_run": "2026-11-21T05:14:45Z",
+  "ok": true,
+  "count": 12,
+  "errors": []
+ },
+ "baserates": {
+  "last_run": "2026-11-03T10:04:13Z",
+  "ok": true,
+  "count": 11541,
+  "errors": []
+ }
+}
