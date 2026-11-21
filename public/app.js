@@ -530,10 +530,11 @@
     else if (r.page === 'book') content = book();
     else content = home();
     document.title = (r.page === 'company' ? nameOf(r.t) + ' · ' : '') + (CFG.appName || 'Moat Monitor');
-    app.replaceChildren(h('div', { class: 'shell' }, sidebar(r),
+    // replaceChildren turns a null argument into the text "null", so drop empty parts first
+    app.replaceChildren(...[h('div', { class: 'shell' }, sidebar(r),
       h('div', { class: 'main' }, topbar(r), h('main', { class: 'page', id: 'view', tabindex: '-1' }, content),
-        h('footer', { class: 'foot' }, 'Research and monitoring tool, not investment advice. Prices delayed. Filings from SEC EDGAR; market data from Yahoo Finance.'))),
-      tabbar(r), r.mode === 'report' ? null : CHAT.fab(r.page === 'company' && state.uniMap[r.t] ? r.t : null));
+        h('footer', { class: 'foot' }, 'Research and monitoring tool, not investment advice. Prices delayed. Filings from SEC EDGAR for US companies and results releases for Rolls-Royce; market data from Yahoo Finance.'))),
+      tabbar(r), r.mode === 'report' ? null : CHAT.fab(r.page === 'company' && state.uniMap[r.t] ? r.t : null)].filter(Boolean));
     if (keepScroll !== false && shellBuilt) window.scrollTo(0, y);
     if (r.page === 'book' && store.get('tour_home', false) && !store.get('tour_book', false) && !document.querySelector('.tour, .ob')) setTimeout(() => { if (route().page === 'book' && !document.querySelector('.tour')) OB.tour('book'); }, 600);
     shellBuilt = true;

@@ -6,7 +6,7 @@
  "horizon": 3,
  "header": {
   "one_liner": "A transformed engine franchise earning record margins on its installed base; the price already assumes the transformation lasts.",
-  "thesis": "Rolls-Royce lifted underlying operating profit 46% in the first half of 2026 to £2.53bn at a 22.5% margin, raised 2026 guidance to £4.7bn to £4.9bn and reaffirmed it on 12 November. Large engine flying hours reached 114% of 2019, Power Systems orders rose 62% on data centre demand, and the group holds £2.1bn of net cash while buying back £4bn of stock in about 14 months. At about 32 times our 2026 EPS the price already reflects that delivery. Covered through the US ADR (RYCEY, one ordinary share each); all figures are converted from sterling at $1.3211."
+  "thesis": "Rolls-Royce lifted underlying operating profit 46% in the first half of 2026 to £2.53bn at a 22.5% margin, raised 2026 guidance to £4.7bn to £4.9bn and reaffirmed it on 12 November. Large engine flying hours reached 114% of 2019, Power Systems orders rose 62% on data centre demand, and the group holds £2.1bn of net cash while buying back £4bn of stock in about 14 months. At the 13 November close, about 32 times our 2026 EPS, the price already reflected that delivery. Covered through the US ADR (RYCEY, one ordinary share each); all figures are converted from sterling at $1.3211."
  },
  "base": {
   "eps0": 0.56,
@@ -52,7 +52,7 @@
    "bear": 20,
    "bull": 31,
    "kind": "judgment",
-   "why": "Today's multiple is about 32 times our 2026 EPS and about 26 times 2027 consensus. Morningstar puts Safran near 30 times normalised earnings and MTU near 20 times. The base case assumes 26 times in year three, a modest de-rating as growth slows to the low teens.",
+   "why": "At the 13 November close the multiple was about 32 times our 2026 EPS and about 26 times 2027 consensus. Morningstar puts Safran near 30 times normalised earnings and MTU near 20 times. The base case assumes 26 times in year three, a modest de-rating as growth slows to the low teens.",
    "source": "Engine judgment; peer multiples from Morningstar and the Moat Monitor peer table"
   }
  },
@@ -254,7 +254,7 @@
   }
  ],
  "gaps": [
-  "No SEC filings: statements in the app come from Yahoo, converted from sterling at one spot rate, and segments are entered by hand from the H1 2026 release.",
+  "No SEC filings: statements for 2024 to the first half of 2026 are statutory IFRS figures entered by hand from the results releases; earlier years come from Yahoo. All are converted from sterling at one spot rate, and segments are entered by hand from the H1 2026 release.",
   "Mid-term targets are being revised on 25 February 2027.",
   "Divisional profit for full-year 2025 in pounds not retrieved; margins only."
  ],
@@ -408,7 +408,7 @@
    },
    {
     "cause": "Valuation already high",
-    "how": "At about 32 times 2026 EPS and above its own 2028 margin target, the price needs further upgrades to keep rising.",
+    "how": "At about 32 times 2026 EPS at the 13 November close, and with margins above its own 2028 target, the price needs further upgrades to keep rising.",
     "watch": "Operating margin and February targets",
     "trip": "r2",
     "sev": "medium",
@@ -469,13 +469,13 @@
    },
    {
     "label": "Valuation",
-    "text": "{peer_line} About 32 times our 2026 EPS and 26 times 2027 consensus."
+    "text": "{peer_line} At the 13 November close, about 32 times our 2026 EPS and 26 times 2027 consensus."
    }
   ],
   "thesis_long": [
    "Under Tufan Erginbilgic, chief executive since 2023, Rolls-Royce has repriced its engine service contracts, cut costs and fixed its balance sheet. Underlying operating profit has risen from £1.6bn in 2023 to a guided £4.7bn to £4.9bn in 2026, the margin from 10.3% to above 20%, and net debt of £2.0bn has turned into £2.1bn of net cash.",
    "Demand is still supportive. Large engine flying hours reached 114% of 2019 despite the Middle East conflict, legacy retirements are the lowest since 2018, and Power Systems has a record £8.6bn backlog from data centre power. Against that, this year's margin is already above management's 2028 target, service balance growth has slowed, and supply chain costs persist.",
-   "Our base case grows EPS about 16% a year with a de-rating from 32 to 26 times, which earns a little less than the cost of equity over 12 months. We would turn positive if February's new targets implied margins of 22% or more, or if the price fell nearer 1,150p, and negative if flying hours fell below 110% of 2019."
+   "Our base case grows EPS about 16% a year with a de-rating from about 32 times (13 November close) to 26 times, which earns a little less than the cost of equity over 12 months. We would turn positive if February's new targets implied margins of 22% or more, or if the price fell nearer 1,150p, and negative if flying hours fell below 110% of 2019."
   ],
   "upside_risks": [
    {

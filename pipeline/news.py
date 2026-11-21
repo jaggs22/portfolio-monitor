@@ -1,4 +1,5 @@
 """News headlines: yfinance when available, the Yahoo RSS feed as a fallback. Headline, source, time and link only."""
+import re
 import datetime as dt
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -68,3 +69,15 @@ def merge(per_ticker, limit=60):
             merged.append(row)
     merged.sort(key=lambda r: r.get("t") or 0, reverse=True)
     return merged[:limit]
+
+
+# Headlines about a different business that shares the name. Rolls-Royce Holdings (the engine maker) is unrelated to
+# Rolls-Royce Motor Cars, which BMW owns, so car stories are dropped from its feed.
+OFFTOPIC = {
+    "RYCEY": re.compile(r"\b(motor cars?|spectre|cullinan|phantom|ghost|wraith|bmw|luxury cars?|supercars?|\$\d[\d,]* cars?|cars? (?:i|he|she) bought|sold his rolls|chauffeur)\b", re.I),
+}
+
+
+def drop_offtopic(sym, items):
+    rx = OFFTOPIC.get(sym)
+    return [x for x in items if not (rx and rx.search(x.get("title") or ""))] if rx else items
