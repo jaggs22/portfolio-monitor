@@ -83,9 +83,10 @@
       const dcol = (k) => (D[k] || []).slice(from);
       const ttm = f.ttm || {};
       const last = (xs) => { for (let i = xs.length - 1; i >= 0; i--) if (num(xs[i]) !== null) return xs[i]; return null; };
-      const r4 = F.rolling4((f.quarterly && f.quarterly.rows.revenue) || []);
-      const ttmGrowth = r4.length > 4 && r4[r4.length - 5] ? r4[r4.length - 1] / r4[r4.length - 5] - 1 : null;
+      const P = F.ppyOf(f), r4 = F.rollingN((f.quarterly && f.quarterly.rows.revenue) || [], P);
+      const ttmGrowth = r4.length > P && r4[r4.length - 1 - P] ? r4[r4.length - 1] / r4[r4.length - 1 - P] - 1 : null;
       const m = (v) => fmt.usdM(v);
+      const usdPs = (x) => (num(x) === null ? '–' : (x < 0 ? '−$' : '$') + Math.abs(x).toFixed(2));
       const rows = [
         ['Revenue', ...col('revenue').map(m), m(ttm.revenue)],
         { cells: ['Growth', ...dcol('rev_growth').map((x) => fmt.spct(x, 1)), fmt.spct(ttmGrowth, 1)], cls: 'sub' },
@@ -93,13 +94,13 @@
         { cells: ['Operating margin', ...dcol('op_margin').map((x) => fmt.pct(x)), num(ttm.op_income) && ttm.revenue ? fmt.pct(ttm.op_income / ttm.revenue) : '–'], cls: 'sub' },
         ['EBITDA', ...col('ebitda').map(m), m(ttm.ebitda)],
         ['Net income', ...col('net_income').map(m), m(ttm.net_income)],
-        ['Diluted EPS', ...col('eps_diluted').map((x) => (num(x) === null ? '–' : '$' + x.toFixed(2))), num(ttm.eps_diluted) ? '$' + ttm.eps_diluted.toFixed(2) : '–'],
+        ['Diluted EPS', ...col('eps_diluted').map((x) => usdPs(x)), usdPs(ttm.eps_diluted)],
         ['Free cash flow', ...col('fcf').map(m), m(ttm.fcf)],
-        { cells: ['ROIC', ...dcol('roic').map((x) => fmt.pct(x)), fmt.pct(last(Q.roic))], cls: 'sub' },
+        { cells: ['ROIC', ...dcol('roic').map((x, i) => (dcol('roic_nm')[i] ? 'n/m' : fmt.pct(x))), (Q.roic_nm || []).slice(-1)[0] ? 'n/m' : fmt.pct(last(Q.roic))], cls: 'sub' },
         { cells: ['Net debt / EBITDA', ...dcol('net_debt_ebitda').map((x) => (num(x) === null ? '–' : x.toFixed(1) + 'x')), num(last(Q.net_debt_ebitda)) ? last(Q.net_debt_ebitda).toFixed(1) + 'x' : '–'], cls: 'sub' }
       ];
       return h('div', null, table(['USD', ...ends.map((e) => 'FY' + e.slice(2, 4)), 'LTM'], rows, { cls: 'num' }),
-        h('p', { class: 'rp-note' }, `${CO.finSourceNote ? CO.finSourceNote(f) : 'Company-reported GAAP figures from SEC filings.'} As of ${(f.asof || '').slice(0, 10)}. ROIC is after tax on reported invested capital.`));
+        h('p', { class: 'rp-note' }, `${CO.finSourceNote ? CO.finSourceNote(f) : 'Company-reported GAAP figures from SEC filings.'} As of ${(f.asof || '').slice(0, 10)}. ROIC is after tax on reported invested capital${(Q.roic_nm || []).slice(-1)[0] ? '; n/m where invested capital is under 10% of assets because customer prepayments fund the business' : ''}.`));
     }
 
     function peerTable(t) {

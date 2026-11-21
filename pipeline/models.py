@@ -23,13 +23,19 @@ def _clean(xs):
     return [x for x in xs if x is not None]
 
 
+def periods_per_year(stmts):
+    """4 for quarterly reporters; 2 for a half-yearly one, whose "quarterly" block holds halves."""
+    return ((stmts or {}).get("meta") or {}).get("periods_per_year") or 4
+
+
 def ttm_series(stmts, key):
-    """Rolling trailing-four-quarter sums aligned to quarter ends. Returns [(end, value)]."""
+    """Rolling trailing-twelve-month sums (four quarters, or two halves) aligned to period ends. Returns [(end, value)]."""
     q = stmts["quarterly"]
     ends, vals = q["period_ends"], _vals(q["rows"], key)
+    n = periods_per_year(stmts)
     out = []
-    for i in range(3, len(ends)):
-        w = vals[i - 3:i + 1]
+    for i in range(n - 1, len(ends)):
+        w = vals[i - n + 1:i + 1]
         if all(v is not None for v in w):
             out.append((ends[i], sum(w)))
     return out
@@ -39,13 +45,14 @@ def growth_model(stmts, engine_base):
     ann = stmts["annual"]
     rev = _clean(_vals(ann["rows"], "revenue"))
     ttm = ttm_series(stmts, "revenue")
-    if len(rev) < 4 or len(ttm) < 5:
+    lag = periods_per_year(stmts)
+    if len(rev) < 4 or len(ttm) < lag + 1:
         return None
     n3 = min(3, len(rev) - 1)
     cagr3 = (rev[-1] / rev[-1 - n3]) ** (1 / n3) - 1
     n5 = min(5, len(rev) - 1)
     cagr5 = (rev[-1] / rev[-1 - n5]) ** (1 / n5) - 1
-    yoy = ttm[-1][1] / ttm[-5][1] - 1 if len(ttm) >= 5 and ttm[-5][1] else cagr3
+    yoy = ttm[-1][1] / ttm[-1 - lag][1] - 1 if len(ttm) >= lag + 1 and ttm[-1 - lag][1] else cagr3
     start = 0.5 * yoy + 0.3 * cagr3 + 0.2 * cagr5
     # growth decays toward the anchor; the driver is the average annual growth over the horizon
     path, g = [], start * 100

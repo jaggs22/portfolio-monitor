@@ -1,6 +1,8 @@
 """yfinance integration: valuation profile, statement gap-filling, and a full fallback when SEC has no history
 (for example a company that re-listed under a new CIK). Frames are passed in, so the logic is testable without a network."""
 import datetime as dt
+import json
+from pathlib import Path
 
 ROWS = {
     "Total Revenue": "revenue", "Cost Of Revenue": "cogs", "Gross Profit": "gross_profit",
@@ -79,25 +81,67 @@ def fill_missing(statements, yf):
     return filled
 
 
-def from_yf_only(yf, max_years=10, max_quarters=20):
-    """Statements entirely from yfinance (shorter history), in the same shape as sec.build_statements."""
+def from_yf_only(yf, max_years=10, max_quarters=20, periods_per_year=4):
+    """Statements entirely from yfinance (shorter history), in the same shape as sec.build_statements.
+    periods_per_year is 2 for a company that reports half-years (the "quarterly" block then holds halves)."""
     from .sec import BALANCE, CASHFLOW, INCOME
     keys = list(INCOME) + list(CASHFLOW) + list(BALANCE) + ["ebitda", "fcf", "total_debt", "net_debt"]
     out = {}
     for part, limit in (("annual", max_years), ("quarterly", max_quarters)):
         src = yf.get(part) or {}
         ends = sorted(src)[-limit:]
-        out[part] = {"period_ends": ends, "rows": {k: [src[e].get(k) for e in ends] for k in keys}, "derived": {}, "filled": {}}
+        rows = {k: [src[e].get(k) for e in ends] for k in keys}
+        # drop leading periods with no statement in them (Yahoo often returns an oldest year holding only net debt)
+        core = ("revenue", "total_assets", "cfo")
+        lead = next((i for i in range(len(ends)) if any(rows[k][i] is not None for k in core)), len(ends))
+        ends, rows = ends[lead:], {k: v[lead:] for k, v in rows.items()}
+        out[part] = {"period_ends": ends, "rows": rows, "derived": {}, "filled": {}}
     q = out["quarterly"]
-    ttm = {}
-    if len(q["period_ends"]) >= 4:
+    ttm, n = {}, periods_per_year
+    if len(q["period_ends"]) >= n:
         for k in list(INCOME) + list(CASHFLOW) + ["ebitda", "fcf"]:
-            last4 = q["rows"][k][-4:]
-            if all(v is not None for v in last4) and k != "shares_diluted":
-                ttm[k] = round(sum(last4), 4)
+            last = q["rows"][k][-n:]
+            if all(v is not None for v in last) and k != "shares_diluted":
+                ttm[k] = round(sum(last), 4)
+        sh = q["rows"].get("shares_diluted") or []
+        if sh and sh[-1] is not None:
+            ttm["shares_diluted"] = sh[-1]
     latest = (q["period_ends"] or out["annual"]["period_ends"] or [None])[-1]
-    out.update({"ttm": ttm, "meta": {"latest_period_end": latest, "units": "USD millions; per-share in USD; shares in millions", "missing": [], "source_note": "yfinance only"}})
+    out.update({"ttm": ttm, "meta": {"latest_period_end": latest, "units": "USD millions; per-share in USD; shares in millions", "missing": [],
+                                     "source_note": "yfinance only", "periods_per_year": periods_per_year}})
     return out
+
+
+def load_curated(sym, root=None):
+    """Hand-entered statements for a company that files no XBRL (pipeline/curated/<SYM>.json), or None."""
+    p = Path(root or Path(__file__).parent / "curated") / f"{sym}.json"
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def apply_curated(yfn, cur, rate):
+    """Overlay curated company-reported figures on the Yahoo frames. Curated values are in the company's currency
+    and are converted at the same rate as the Yahoo frames; annual cells are replaced line by line, and the interim
+    block replaces Yahoo's quarterly frames entirely. Returns the number of cells written."""
+    rate = rate if cur.get("currency", "USD") != "USD" else 1.0
+    if not rate:
+        return 0
+    conv = lambda k, v: None if v is None else (v if k == "shares_diluted" else round(v * rate, 4 if k in PER_SHARE else 3))
+    n = 0
+    ann = yfn.setdefault("annual", {})
+    for end, row in (cur.get("annual") or {}).items():
+        tgt = ann.setdefault(end, {})
+        for k, v in row.items():
+            tgt[k] = conv(k, v)
+            n += 1
+    # EBITDA and net debt follow the curated lines, so the derived rows stay consistent with them
+    for end, row in ann.items():
+        if end in (cur.get("annual") or {}):
+            if row.get("op_income") is not None and row.get("da") is not None and "ebitda" not in cur["annual"][end]:
+                row["ebitda"] = round(row["op_income"] + row["da"], 3)
+    if cur.get("interim"):
+        yfn["quarterly"] = {end: {k: conv(k, v) for k, v in row.items()} for end, row in cur["interim"].items()}
+        n += sum(len(r) for r in cur["interim"].values())
+    return n
 
 
 PROFILE_KEYS = {

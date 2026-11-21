@@ -153,11 +153,11 @@ QROWS = {
     "Tax Provision": "tax", "Operating Cash Flow": "cfo", "Capital Expenditure": "capex",
     "Total Debt": "total_debt", "Cash And Cash Equivalents": "cash",
     "Cash Cash Equivalents And Short Term Investments": "cash_sti", "Stockholders Equity": "equity",
-    "Interest Expense": "interest",
+    "Interest Expense": "interest", "Total Assets": "total_assets",
 }
 FLOWS = ("revenue", "op_income", "ebitda", "ebitda_gaap", "ni_norm", "net_income", "net_income_all", "pretax", "tax", "cfo",
          "capex", "interest")
-STOCKS = ("total_debt", "cash", "cash_sti", "equity")
+STOCKS = ("total_debt", "cash", "cash_sti", "equity", "total_assets")
 
 
 def _f(v):
@@ -360,7 +360,12 @@ def build_row(ticker, info, quarters, annual, est, fx_to_fin, fx_fin_to_usd, tod
         tax_rate = max(0.0, min(0.35, v["tax"] / v["pretax"]))
     ic = debt + (v.get("equity") or 0.0) - cash
     roic = None
-    if v.get("op_income") is not None and v.get("equity") is not None and ic > 0 and ticker not in EV_NOT_MEANINGFUL:
+    ta = v.get("total_assets")
+    if ta and 0 < ic < 0.1 * ta:
+        # customer prepayments fund the business (Rolls-Royce's service agreements), so invested capital is a sliver
+        # of assets and the ratio runs into the hundreds of percent; not meaningful
+        notes.append("ROIC not meaningful: invested capital is under 10% of total assets because customer prepayments fund the business.")
+    elif v.get("op_income") is not None and v.get("equity") is not None and ic > 0 and ticker not in EV_NOT_MEANINGFUL:
         roic = round(v["op_income"] * (1 - (tax_rate if tax_rate is not None else 0.21)) / ic, 4)
         if tax_rate is None:
             notes.append("ROIC uses a 21% tax rate; the effective rate was not retrieved.")

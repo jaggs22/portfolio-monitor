@@ -126,7 +126,7 @@ def job_news(yf_fetch, rss_http, out, tickers=None, now=None):
                 items = newsmod.parse_rss(rss_http.text(f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={sym}&region=US&lang=en-US"))
             except Exception as e:  # noqa: BLE001
                 errors.append(f"{sym} rss: {e}")
-        per[sym] = items[:12]
+        per[sym] = newsmod.drop_offtopic(sym, items)[:12]
         write_json(Path(out) / "news" / f"{sym}.json", {"ticker": sym, "asof": iso(now), "items": per[sym]})
     merged = newsmod.merge(per)
     write_json(Path(out) / "news.json", {"asof": iso(now), "items": merged})
@@ -161,9 +161,20 @@ def job_fundamentals(sec_http, yf_fetch, out, tickers=None, now=None, ciks=None)
             n = yf_extra.fill_missing(stmt, yfn)
             if n:
                 source.append(f"Yahoo Finance (filled {n} empty cells)")
-        elif yfn["annual"] or yfn["quarterly"]:
-            stmt = yf_extra.from_yf_only(yfn)
-            source.append("Yahoo Finance (SEC history unavailable)")
+        elif yfn["annual"] or yfn["quarterly"] or yf_extra.load_curated(sym):
+            cur = yf_extra.load_curated(sym)
+            ppy = 4
+            if cur:
+                n = yf_extra.apply_curated(yfn, cur, prof.get("usd_rate"))
+                if n:
+                    ppy = cur.get("periods_per_year", 4)
+                    source.append(f"Company results releases ({n} figures entered by hand; {cur.get('currency', 'USD')} converted at {prof.get('usd_rate')})")
+                    notes.append(cur.get("basis", ""))
+                    prof["curated_sources"] = cur.get("sources", [])
+                else:
+                    errors.append(f"{sym} curated statements skipped: no {cur.get('currency')} to USD rate")
+            stmt = yf_extra.from_yf_only(yfn, periods_per_year=ppy)
+            source.append("Yahoo Finance for other lines and earlier years" if cur else "Yahoo Finance (SEC history unavailable)")
         if not stmt:
             continue
         doc = {"ticker": sym, "asof": iso(now), "sources": source, "notes": notes, "profile": prof}
@@ -258,7 +269,9 @@ def job_mgmt(sec_http, yf_mgmt, llm_call, out, tickers=None, now=None, ciks=None
                     ex[f["accession"]] = llm.extract(llm_call, sym, f["filed"], text)
             except Exception as e:  # noqa: BLE001
                 errors.append(f"{sym} releases: {e}")
-        ledger = llm.build_ledger(list(ex.values())) if ex else None
+        cur = yf_extra.load_curated(sym)
+        extractions = list(ex.values()) + list((cur or {}).get("releases") or [])
+        ledger = llm.build_ledger(extractions) if extractions else None
         stmts = read_json(out / "fundamentals" / f"{sym}.json")
         if not stmts and not yfm:
             continue

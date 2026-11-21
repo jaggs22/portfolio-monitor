@@ -122,3 +122,36 @@ def test_statements_converted_to_usd():
     row = out["annual"]["2025-12-31"]
     assert row["revenue"] == round(20059.0 * 1.32, 3) and row["eps_diluted"] == round(0.29 * 1.32, 4) and row["shares_diluted"] == 8400.0
     assert yf_extra.to_usd(frames, 1.0) is frames
+
+
+def test_curated_half_year_statements():
+    from pipeline import yf_extra
+    cur = yf_extra.load_curated("RYCEY")
+    assert cur and cur["periods_per_year"] == 2
+    yfn = {"annual": {"2021-12-31": {}, "2025-12-31": {"revenue": 1.0, "interest_expense": 5.0}}, "quarterly": {}}
+    n = yf_extra.apply_curated(yfn, cur, 1.3)
+    assert n > 50
+    a = yfn["annual"]["2025-12-31"]
+    assert a["revenue"] == round(21207 * 1.3, 3) and a["interest_expense"] == 5.0 and a["shares_diluted"] == 8448
+    st = yf_extra.from_yf_only(yfn, periods_per_year=2)
+    assert st["annual"]["period_ends"][0] != "2021-12-31"  # empty leading year dropped
+    assert st["quarterly"]["period_ends"][-1] == "2026-06-30" and st["meta"]["periods_per_year"] == 2
+    # trailing twelve months = second half 2025 + first half 2026
+    assert abs(st["ttm"]["eps_diluted"] - (0.1699 + 0.1928) * 1.3) < 1e-3
+    assert abs(st["ttm"]["revenue"] - (11717 + 11448) * 1.3) < 1
+    # halves reconcile to the full year
+    q = cur["interim"]
+    assert q["2025-06-30"]["revenue"] + q["2025-12-31"]["revenue"] == cur["annual"]["2025-12-31"]["revenue"]
+    # no rate for a sterling file: nothing applied
+    assert yf_extra.apply_curated({"annual": {}, "quarterly": {}}, cur, None) == 0
+
+
+def test_rolls_royce_car_news_dropped():
+    from pipeline import news
+    items = [{"title": "All-electric Spectre is a Rolls-Royce first, EV second: North America CEO"},
+             {"title": "Grant Cardone Says 'I Regret Every $400,000 Car I Bought' — Sold His Rolls-Royce"},
+             {"title": "Rolls-Royce accelerates buyback, reaffirms 2026 guidance"},
+             {"title": "3 British Nuclear Energy Stocks To Own In November 2026"}]
+    kept = [x["title"] for x in news.drop_offtopic("RYCEY", items)]
+    assert kept == ["Rolls-Royce accelerates buyback, reaffirms 2026 guidance", "3 British Nuclear Energy Stocks To Own In November 2026"]
+    assert news.drop_offtopic("WM", items) == items

@@ -119,8 +119,10 @@ def needs_review(research, filing, stmts, models_out, tripwires, now):
         reasons.append({"kind": "new_statements", "text": f"Statements now run to {latest}, later than the baseline period {base_end}."})
     if base_end:
         age = (dt.date.fromtimestamp(now) - dt.date.fromisoformat(base_end)).days
-        if age > STALE_DAYS:
-            reasons.append({"kind": "stale", "text": f"The baseline is {age} days old; a newer quarterly filing is probably due or already out."})
+        half = ((stmts or {}).get("meta") or {}).get("periods_per_year") == 2
+        # a half-yearly reporter publishes about two months after a six-month period, so allow a full half longer
+        if age > (STALE_DAYS + 120 if half else STALE_DAYS):
+            reasons.append({"kind": "stale", "text": f"The baseline is {age} days old; a newer {'half-year' if half else 'quarterly'} report is probably due or already out."})
     for t in tripwires:
         if t.get("status") == "tripped":
             reasons.append({"kind": "tripwire", "text": f"Tripwire {t['id']} reads {t['auto_value']} against its threshold; the thesis needs a decision."})

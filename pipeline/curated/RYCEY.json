@@ -1,0 +1,495 @@
+{
+ "ticker": "RYCEY",
+ "currency": "GBP",
+ "periods_per_year": 2,
+ "basis": "Statutory IFRS figures from Rolls-Royce's results releases, in GBP millions (per share in GBP). Second halves are the full year less the first half. Depreciation includes impairment and its reversals, as reported. Net debt for 2022 and 2023 is the company's own figure; 2024 onward is borrowings and leases less cash.",
+ "sources": [
+  {
+   "title": "Rolls-Royce Holdings plc 2025 Full Year Results (condensed consolidated statements)",
+   "url": "https://pdf.dfcfw.com/pdf/H22_AN202602261820064156_1.pdf",
+   "date": "2026-02-26"
+  },
+  {
+   "title": "Rolls-Royce Holdings plc 2026 Half Year Results press release",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-holdings-plc-2026-half-year-results-press-release.pdf",
+   "date": "2026-07-30"
+  },
+  {
+   "title": "Rolls-Royce Holdings plc 2025 Half Year Results press release",
+   "url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/investors/rr-plc-holdings-2025-half-year-results-press-release.pdf",
+   "date": "2025-07-31"
+  },
+  {
+   "title": "Rolls-Royce Holdings plc 2023 Full Year Results (statutory operating profit 2023 and 2022)",
+   "url": "https://www.rolls-royce.com/investors/results-reports-and-presentations/financial-results/rr-holdings-plc-2023-full-year-results.aspx",
+   "date": "2024-02-22"
+  }
+ ],
+ "annual": {
+  "2022-12-31": {
+   "op_income": 837,
+   "net_debt": 3251
+  },
+  "2023-12-31": {
+   "op_income": 1944,
+   "net_debt": 1952
+  },
+  "2024-12-31": {
+   "revenue": 18909,
+   "cogs": 14688,
+   "gross_profit": 4221,
+   "sga": 1284,
+   "rnd": 203,
+   "op_income": 2906,
+   "pretax": 2234,
+   "tax": -250,
+   "net_income": 2521,
+   "eps_diluted": 0.2987,
+   "shares_diluted": 8439,
+   "cfo": 3782,
+   "capex": 876,
+   "da": 853,
+   "sbc": 136,
+   "dividends": 0,
+   "buybacks": 0,
+   "fcf": 2906,
+   "ebitda": 3759,
+   "cash": 5575,
+   "inventory": 5092,
+   "current_assets": 21627,
+   "ppe": 3724,
+   "intangibles": 3393,
+   "total_assets": 35686,
+   "payables": 8009,
+   "current_liabilities": 16763,
+   "st_debt": 1097,
+   "lt_debt": 4035,
+   "total_liabilities": 36567,
+   "equity": -881,
+   "total_debt": 5132,
+   "net_debt": -443
+  },
+  "2025-12-31": {
+   "revenue": 21207,
+   "cogs": 15032,
+   "gross_profit": 6175,
+   "sga": 1268,
+   "rnd": 495,
+   "op_income": 4468,
+   "pretax": 6935,
+   "tax": 1099,
+   "net_income": 5841,
+   "eps_diluted": 0.6914,
+   "shares_diluted": 8448,
+   "cfo": 4565,
+   "capex": 978,
+   "da": 737,
+   "sbc": 104,
+   "dividends": 885,
+   "buybacks": 1010,
+   "fcf": 3587,
+   "ebitda": 5205,
+   "cash": 6244,
+   "inventory": 5728,
+   "receivables": 8946,
+   "current_assets": 23172,
+   "ppe": 4013,
+   "intangibles": 3570,
+   "total_assets": 38115,
+   "payables": 8863,
+   "current_liabilities": 19287,
+   "st_debt": 1426,
+   "lt_debt": 2846,
+   "total_liabilities": 35362,
+   "equity": 2753,
+   "total_debt": 4272,
+   "net_debt": -1972
+  }
+ },
+ "interim": {
+  "2024-06-30": {
+   "revenue": 8861,
+   "cogs": 6753,
+   "gross_profit": 2108,
+   "sga": 641,
+   "rnd": -101,
+   "op_income": 1646,
+   "pretax": 1416,
+   "tax": 280,
+   "net_income": 1149,
+   "eps_diluted": 0.1363,
+   "cfo": 1669,
+   "capex": 298,
+   "da": 47,
+   "sbc": 59,
+   "dividends": 0,
+   "buybacks": 0,
+   "shares_diluted": 8430,
+   "fcf": 1371,
+   "ebitda": 1693
+  },
+  "2024-12-31": {
+   "revenue": 10048,
+   "cogs": 7935,
+   "gross_profit": 2113,
+   "sga": 643,
+   "rnd": 304,
+   "op_income": 1260,
+   "pretax": 818,
+   "tax": -530,
+   "net_income": 1372,
+   "eps_diluted": 0.1624,
+   "cfo": 2113,
+   "capex": 578,
+   "da": 806,
+   "sbc": 77,
+   "dividends": 0,
+   "buybacks": 0,
+   "shares_diluted": 8448,
+   "fcf": 1535,
+   "ebitda": 2066,
+   "cash": 5575,
+   "inventory": 5092,
+   "current_assets": 21627,
+   "ppe": 3724,
+   "intangibles": 3393,
+   "total_assets": 35686,
+   "payables": 8009,
+   "current_liabilities": 16763,
+   "st_debt": 1097,
+   "lt_debt": 4035,
+   "total_liabilities": 36567,
+   "equity": -881,
+   "total_debt": 5132,
+   "net_debt": -443
+  },
+  "2025-06-30": {
+   "revenue": 9490,
+   "cogs": 6563,
+   "gross_profit": 2927,
+   "sga": 631,
+   "rnd": 246,
+   "op_income": 2074,
+   "pretax": 4841,
+   "tax": 433,
+   "net_income": 4416,
+   "eps_diluted": 0.5215,
+   "cfo": 2018,
+   "capex": 369,
+   "da": 256,
+   "sbc": 60,
+   "dividends": 507,
+   "buybacks": 380,
+   "shares_diluted": 8468,
+   "fcf": 1649,
+   "ebitda": 2330,
+   "cash": 6044,
+   "inventory": 5611,
+   "receivables": 8717,
+   "current_assets": 22526,
+   "ppe": 3732,
+   "intangibles": 4488,
+   "total_assets": 37940,
+   "payables": 8105,
+   "current_liabilities": 18218,
+   "st_debt": 2071,
+   "lt_debt": 2838,
+   "total_liabilities": 35506,
+   "equity": 2434,
+   "total_debt": 4909,
+   "net_debt": -1135
+  },
+  "2025-12-31": {
+   "revenue": 11717,
+   "cogs": 8469,
+   "gross_profit": 3248,
+   "sga": 637,
+   "rnd": 249,
+   "op_income": 2394,
+   "pretax": 2094,
+   "tax": 666,
+   "net_income": 1425,
+   "eps_diluted": 0.1699,
+   "cfo": 2547,
+   "capex": 609,
+   "da": 481,
+   "sbc": 44,
+   "dividends": 378,
+   "buybacks": 630,
+   "shares_diluted": 8387,
+   "fcf": 1938,
+   "ebitda": 2875,
+   "cash": 6244,
+   "inventory": 5728,
+   "receivables": 8946,
+   "current_assets": 23172,
+   "ppe": 4013,
+   "intangibles": 3570,
+   "total_assets": 38115,
+   "payables": 8863,
+   "current_liabilities": 19287,
+   "st_debt": 1426,
+   "lt_debt": 2846,
+   "total_liabilities": 35362,
+   "equity": 2753,
+   "total_debt": 4272,
+   "net_debt": -1972
+  },
+  "2026-06-30": {
+   "revenue": 11448,
+   "cogs": 8021,
+   "gross_profit": 3427,
+   "sga": 797,
+   "rnd": 228,
+   "op_income": 2418,
+   "pretax": 1931,
+   "tax": 316,
+   "net_income": 1613,
+   "eps_diluted": 0.1928,
+   "cfo": 2570,
+   "capex": 390,
+   "da": 434,
+   "sbc": 43,
+   "dividends": 417,
+   "buybacks": 1097,
+   "shares_diluted": 8366,
+   "fcf": 2180,
+   "ebitda": 2852,
+   "cash": 6484,
+   "inventory": 6151,
+   "receivables": 9504,
+   "current_assets": 24333,
+   "ppe": 4148,
+   "intangibles": 3600,
+   "total_assets": 39006,
+   "payables": 9461,
+   "current_liabilities": 19647,
+   "st_debt": 452,
+   "lt_debt": 3859,
+   "total_liabilities": 36124,
+   "equity": 2882,
+   "total_debt": 4311,
+   "net_debt": -2173
+  }
+ },
+ "releases_note": "Guidance and outturns for underlying operating profit and free cash flow, as stated in the company's results releases (underlying basis, GBP millions).",
+ "releases": [
+  {
+   "date": "2023-02-23",
+   "source": "https://www.rolls-royce.com/media/press-releases/2023/23-02-2023-rr-holdings-plc-2022-full-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2023",
+     "low": 800,
+     "high": 1000,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "Underlying 2023 financial guidance: Operating profit £0.8bn-£1.0bn"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2023",
+     "low": 600,
+     "high": 800,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "Free cash flow £0.6bn-£0.8bn"
+    }
+   ],
+   "reported": []
+  },
+  {
+   "date": "2023-08-03",
+   "source": "https://www.rolls-royce.com/investors/results-reports-and-presentations/financial-results/rr-holdings-plc-2023-half-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2023",
+     "low": 1200,
+     "high": 1400,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "upgraded 2023 guidance for underlying operating profit to £1.2bn-£1.4bn"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2023",
+     "low": 900,
+     "high": 1000,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "free cash flow to £0.9bn-£1.0bn"
+    }
+   ],
+   "reported": []
+  },
+  {
+   "date": "2024-02-22",
+   "source": "https://www.rolls-royce.com/investors/results-reports-and-presentations/financial-results/rr-holdings-plc-2023-full-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2024",
+     "low": 1700,
+     "high": 2000,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "2024 guidance: underlying operating profit between £1.7bn and £2.0bn"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2024",
+     "low": 1700,
+     "high": 1900,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "free cash flow between £1.7bn and £1.9bn"
+    }
+   ],
+   "reported": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2023",
+     "value": 1590,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Underlying operating profit £1,590m"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2023",
+     "value": 1285,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Record free cash flow of £1.3bn (£1,285m)"
+    }
+   ]
+  },
+  {
+   "date": "2025-02-27",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/27-02-2025-rr-holdings-plc-2024-full-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2025",
+     "low": 2700,
+     "high": 2900,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "2025 guidance of £2.7bn-2.9bn underlying operating profit"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2025",
+     "low": 2700,
+     "high": 2900,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "£2.7bn-2.9bn free cash flow"
+    }
+   ],
+   "reported": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2024",
+     "value": 2464,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Underlying operating profit 2,464"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2024",
+     "value": 2425,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Free cash flow 2,425"
+    }
+   ]
+  },
+  {
+   "date": "2025-07-31",
+   "source": "https://www.rolls-royce.com/media/press-releases/2025/31-07-2025-rr-holdings-plc-2025-half-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2025",
+     "low": 3100,
+     "high": 3200,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "we now expect £3.1bn-£3.2bn underlying operating profit"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2025",
+     "low": 3000,
+     "high": 3100,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "£3.0bn-£3.1bn free cash flow"
+    }
+   ],
+   "reported": []
+  },
+  {
+   "date": "2026-02-26",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/26-02-2026-rr-holdings-plc-2025-full-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2026",
+     "low": 4000,
+     "high": 4200,
+     "unit": "gbp_millions",
+     "direction": "initiate",
+     "quote": "2026 guidance of £4.0bn-£4.2bn underlying operating profit"
+    }
+   ],
+   "reported": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2025",
+     "value": 3462,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Underlying operating profit £3,462m"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2025",
+     "value": 3270,
+     "unit": "gbp_millions",
+     "basis": "adjusted",
+     "quote": "Free cash flow £3,270m"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-30",
+   "source": "https://www.rolls-royce.com/media/press-releases/2026/30-07-2026-rr-holdings-plc-2026-half-year-results.aspx",
+   "guidance": [
+    {
+     "metric": "operating_profit",
+     "period": "FY2026",
+     "low": 4700,
+     "high": 4900,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "we now expect £4.7bn-£4.9bn underlying operating profit"
+    },
+    {
+     "metric": "fcf",
+     "period": "FY2026",
+     "low": 3800,
+     "high": 4000,
+     "unit": "gbp_millions",
+     "direction": "raise",
+     "quote": "£3.8bn-£4.0bn free cash flow"
+    }
+   ],
+   "reported": []
+  }
+ ]
+}

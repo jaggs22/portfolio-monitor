@@ -15,14 +15,18 @@
   const endsOf = (st, freq) => (st && st[freq] && st[freq].period_ends) || [];
   const col = (rows, k, n) => (rows[k] && rows[k].length === n ? rows[k] : new Array(n).fill(null));
 
-  /* Rolling sum of the last four values, aligned to the latest of the four (null until four exist). */
-  function rolling4(xs) {
+  /* Rolling sum of the last n values, aligned to the latest of them (null until n exist). */
+  function rollingN(xs, n) {
     return xs.map((_, i) => {
-      if (i < 3) return null;
-      const w = xs.slice(i - 3, i + 1);
-      return w.every((v) => num(v) !== null) ? w[0] + w[1] + w[2] + w[3] : null;
+      if (i < n - 1) return null;
+      const w = xs.slice(i - n + 1, i + 1);
+      return w.every((v) => num(v) !== null) ? w.reduce((a, b) => a + b, 0) : null;
     });
   }
+  const rolling4 = (xs) => rollingN(xs, 4);
+  /* Interim periods a year: 4 for quarterly reporters, 2 for a half-yearly one (Rolls-Royce), whose "quarterly"
+     block then holds halves. */
+  const ppyOf = (st) => (st && st.meta && st.meta.periods_per_year) || 4;
 
   /* Year-on-year growth: annual vs previous year, quarterly vs the same quarter a year earlier. */
   function yoy(xs, lag) {
@@ -34,11 +38,11 @@
   function derive(st, freq) {
     const ends = endsOf(st, freq), n = ends.length, R = rowsOf(st, freq);
     const g = (k) => col(R, k, n);
-    const q = freq === 'quarterly';
-    const flow = (k) => (q ? rolling4(g(k)) : g(k));
+    const q = freq === 'quarterly', P = q ? ppyOf(st) : 1;
+    const flow = (k) => (q ? rollingN(g(k), P) : g(k));
     const rev = g('revenue'), cogs = g('cogs'), gp = g('gross_profit'), op = g('op_income'), ni = g('net_income');
     const ebitda = g('ebitda'), fcf = g('fcf'), cfo = g('cfo'), capex = g('capex'), sbc = g('sbc'), da = g('da');
-    const out = { ends, freq };
+    const out = { ends, freq, meta: st && st.meta };
     const ratio = (a, b) => a.map((x, i) => div(x, b[i]));
     out.gross_margin = rev.map((r, i) => div(num(gp[i]) !== null ? gp[i] : sub(r, cogs[i]), r));
     out.op_margin = ratio(op, rev);
@@ -50,7 +54,7 @@
     out.capex_pct = ratio(capex, rev);
     out.sbc_pct = ratio(sbc, rev);
     out.tax_rate = ratio(g('tax'), g('pretax'));
-    const lag = q ? 4 : 1;
+    const lag = q ? P : 1;
     out.rev_growth = yoy(rev, lag);
     out.op_growth = yoy(op, lag);
     out.ni_growth = yoy(ni, lag);
@@ -69,17 +73,19 @@
     out.roe = ratio(niF, aEq);
     out.roa = ratio(niF, aTa);
     const ic = eq.map((e, i) => (num(e) !== null ? e + (debt[i] || 0) - (cash[i] || 0) - (sti[i] || 0) : null));
-    out.roic = opF.map((o, i) => (num(o) !== null && num(ic[i]) !== null && ic[i] > 0 ? o * (1 - taxRate[i]) / avg2(ic[i], i > 0 ? ic[i - 1] : null) : null));
+    // invested capital under 10% of assets (customer prepayments fund the business) makes ROIC not meaningful
+    out.roic_nm = ic.map((c, i) => num(c) !== null && num(ta[i]) !== null && c > 0 && c < 0.1 * ta[i]);
+    out.roic = opF.map((o, i) => (!out.roic_nm[i] && num(o) !== null && num(ic[i]) !== null && ic[i] > 0 ? o * (1 - taxRate[i]) / avg2(ic[i], i > 0 ? ic[i - 1] : null) : null));
     out.asset_turnover = ratio(revF, aTa);
     out.equity_multiplier = ratio(aTa, aEq);
     out.debt_to_equity = ratio(debt, eq);
     out.net_debt = g('net_debt');
     out.net_debt_ebitda = ratio(out.net_debt, ebF);
-    out.interest_cover = ratio(q ? rolling4(g('op_income')) : op, q ? rolling4(g('interest_expense')) : g('interest_expense'));
+    out.interest_cover = ratio(q ? rollingN(g('op_income'), P) : op, q ? rollingN(g('interest_expense'), P) : g('interest_expense'));
     out.current_ratio = ratio(bs('current_assets'), bs('current_liabilities'));
-    out.quick_ratio = bs('current_liabilities').map((l, i) => div((cash[i] || 0) + (sti[i] || 0) + (bs('receivables')[i] || 0), l));
-    const days = q ? 91.3 * 4 : 365;
-    const cogsF = q ? rolling4(cogs) : cogs;
+    out.quick_ratio = bs('current_liabilities').map((l, i) => (num(bs('receivables')[i]) === null || num(cash[i]) === null ? null : div(cash[i] + (sti[i] || 0) + bs('receivables')[i], l)));
+    const days = 365;
+    const cogsF = q ? rollingN(cogs, P) : cogs;
     out.dso = bs('receivables').map((x, i) => (div(x, revF[i]) !== null ? div(x, revF[i]) * days : null));
     out.dio = bs('inventory').map((x, i) => (div(x, cogsF[i]) !== null ? div(x, cogsF[i]) * days : null));
     out.dpo = bs('payables').map((x, i) => (div(x, cogsF[i]) !== null ? div(x, cogsF[i]) * days : null));
@@ -132,8 +138,9 @@
   /* Multiple at each quarter end: the close on or before the date over trailing-four-quarter flows. */
   function valuationHistory(st, bars) {
     const ends = endsOf(st, 'quarterly'), R = rowsOf(st, 'quarterly'), n = ends.length;
-    if (!bars || !bars.length || n < 8) return [];
-    const eps = rolling4(col(R, 'eps_diluted', n)), rev = rolling4(col(R, 'revenue', n)), fcf = rolling4(col(R, 'fcf', n)), ebitda = rolling4(col(R, 'ebitda', n));
+    const P = ppyOf(st);
+    if (!bars || !bars.length || n < 2 * P) return [];
+    const eps = rollingN(col(R, 'eps_diluted', n), P), rev = rollingN(col(R, 'revenue', n), P), fcf = rollingN(col(R, 'fcf', n), P), ebitda = rollingN(col(R, 'ebitda', n), P);
     const sh = col(R, 'shares_diluted', n), debt = col(R, 'total_debt', n), cash = col(R, 'cash', n), sti = col(R, 'st_investments', n);
     const day = (t) => new Date(t * 1000).toISOString().slice(0, 10);
     const out = [];
@@ -172,5 +179,5 @@
   const mult = (x, d) => (num(x) === null ? '–' : x.toFixed(d == null ? 1 : d) + 'x');
   const dec = (x, d) => (num(x) === null ? '–' : x.toFixed(d == null ? 2 : d));
 
-  return { derive, valuation, valuationHistory, percentile, cagr, rolling4, yoy, last, money, pct, spct, mult, dec, num };
+  return { derive, valuation, valuationHistory, percentile, cagr, rolling4, rollingN, ppyOf, yoy, last, money, pct, spct, mult, dec, num };
 });

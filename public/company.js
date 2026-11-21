@@ -18,9 +18,15 @@
     const loaded = (t, k) => cs(t)[k] !== undefined;
     /* Where the statements came from: SEC filings for US filers; Yahoo Finance, converted to dollars, for a company that
        files elsewhere (Rolls-Royce reports in sterling under IFRS). */
+    /* Column label for a statement period (stmtPeriod): FY'25 for a year, 26/06 for a quarter, H1'26 for a half-year. */
+    const stmtPeriod = (e, freq, f) => (freq === 'annual' ? "FY'" + e.slice(2, 4)
+      : F.ppyOf(f) === 2 ? (+e.slice(5, 7) <= 6 ? "H1'" : "H2'") + e.slice(2, 4) : e.slice(2, 7).replace('-', '/'));
+    const interimName = (f) => (F.ppyOf(f) === 2 ? 'Half-year' : 'Quarterly');
     const finSourceNote = (f) => {
       const src = (f && f.sources) || [], p = (f && f.profile) || {};
-      if (!src.some((x) => /SEC/.test(x))) return `Company-reported figures via Yahoo Finance${p.report_currency && p.report_currency !== 'USD' ? `, converted from ${p.report_currency} at ${p.usd_rate} dollars` : ''}; the company files no statements with the SEC.`;
+      const fx = p.report_currency && p.report_currency !== 'USD' ? `, converted to dollars at $${p.usd_rate} per ${p.report_currency === 'GBP' ? 'pound' : p.report_currency}` : '';
+      if (src.some((x) => /results releases/.test(x))) return `Statutory IFRS figures from the company’s results releases${fx}, entered by hand because it files no statements with the SEC; earlier years and lines the releases do not give come from Yahoo Finance. Half-years: the second half is the full year less the first.`;
+      if (!src.some((x) => /SEC/.test(x))) return `Company-reported figures via Yahoo Finance${fx}; the company files no statements with the SEC.`;
       return `Company-reported GAAP figures from SEC filings${src.length > 1 ? ', gaps filled from Yahoo Finance' : ''}.`;
     };
     const KINDS = ['fundamentals', 'history', 'mgmt', 'evidence', 'news', 'peers', 'segments', 'intraday'];
@@ -232,6 +238,7 @@
         L('growth', 'Growth', d >= 0.02 ? 'g' : d <= -0.02 ? 'r' : 'a', fmt.spct(ps.me.ntm.rev_growth, 1), `Consensus next 12 months vs peers ${fmt.spct(ps.med('ntm', 'rev_growth'), 1)}`, 'business');
       } else if (s && s.growth != null) L('growth', 'Growth', s.growth >= 0.08 ? 'g' : s.growth < 0.03 ? 'r' : 'a', fmt.spct(s.growth, 1), 'Revenue, last 12 months', 'financials');
       const roic = ps && ps.me && ps.me.roic != null ? ps.me.roic : s && s.roic;
+      if (roic == null && s && s.roicNm) L('returns', 'Returns', 'a', 'n/m', 'ROIC not meaningful: customer prepayments fund the business', 'financials');
       if (roic != null) L('returns', 'Returns', roic >= 0.15 ? 'g' : roic < 0.08 ? 'r' : 'a', fmt.pct(roic), ps && ps.me ? `ROIC vs peer median ${fmt.pct(ps.med(null, 'roic'))}` : 'ROIC on reported capital', 'financials');
       if (s && s.ndE != null) L('balance', 'Balance sheet', s.ndE < 1.5 ? 'g' : s.ndE <= 3 ? 'a' : 'r', s.ndE < 0 ? 'Net cash' : fmt.mult(s.ndE), 'Net debt to EBITDA', 'balance');
       const eq = m && (m.components || []).find((c) => c.key === 'earnings_quality');
@@ -306,13 +313,13 @@
     function finSnapshot(t) {
       const f = dat(t, 'fundamentals');
       if (!f) return null;
-      const q = F.derive(f, 'quarterly');
+      const q = F.derive(f, 'quarterly'), P = F.ppyOf(f);
       const rev = f.quarterly && f.quarterly.rows.revenue || [];
-      const r4 = F.rolling4(rev);
+      const r4 = F.rollingN(rev, P);
       const n = r4.length;
-      const ttm = r4[n - 1], prior = r4[n - 5];
-      return { f, q, ttm, growth: num(ttm) && num(prior) && prior > 0 ? ttm / prior - 1 : null, spark: r4.slice(-12),
-        opm: f.ttm && num(f.ttm.op_income) && f.ttm.revenue ? f.ttm.op_income / f.ttm.revenue : lastNum(q.op_margin), fcf: f.ttm && f.ttm.fcf, ndE: lastNum(q.net_debt_ebitda), cover: lastNum(q.interest_cover), debt: lastNum(f.quarterly.rows.total_debt), cash: lastNum(f.quarterly.rows.cash), roic: lastNum(q.roic) };
+      const ttm = r4[n - 1], prior = r4[n - 1 - P];
+      return { f, q, ttm, growth: num(ttm) && num(prior) && prior > 0 ? ttm / prior - 1 : null, spark: r4.slice(-3 * P),
+        opm: f.ttm && num(f.ttm.op_income) && f.ttm.revenue ? f.ttm.op_income / f.ttm.revenue : lastNum(q.op_margin), fcf: f.ttm && f.ttm.fcf, ndE: lastNum(q.net_debt_ebitda), cover: lastNum(q.interest_cover) != null ? lastNum(q.interest_cover) : lastNum(F.derive(f, 'annual').interest_cover), debt: lastNum(f.quarterly.rows.total_debt), cash: lastNum(f.quarterly.rows.cash), roic: lastNum(q.roic), roicNm: !!(q.roic_nm || []).slice(-1)[0] };
     }
 
     function tFinancials(t) {
@@ -321,7 +328,7 @@
       return tile('financials', 'bars', 'Financials',
         [big(fmt.usdM(s.ttm), 'revenue, last 12 months'), h('div', { class: 'row-actions' }, chg(s.growth, 1), h('span', { class: 'small muted' }, 'year on year')),
           spark(s.spark, { cls: s.growth >= 0 ? '' : 'down' })],
-        [`Operating margin ${fmt.pct(s.opm)}`, '·', `ROIC ${fmt.pct(s.roic)}`]);
+        [`Operating margin ${fmt.pct(s.opm)}`, '·', s.roicNm ? 'ROIC not meaningful' : `ROIC ${fmt.pct(s.roic)}`]);
     }
 
     function tBalance(t) {
@@ -340,11 +347,14 @@
       if (!m) return tile('management', 'people', 'Management & governance', [loadingTile(t, 'mgmt') || line('Management record not published yet.')]);
       const sp = m.surprises || {};
       const eq = (m.components || []).find((c) => c.key === 'earnings_quality');
-      const cc = eq && eq.note ? (eq.note.match(/([\d.]+)x net income/) || [])[1] : null;
+      const ccm = eq && eq.note ? eq.note.match(/([\d.]+)x net income over (\d+) years/) : null;
       const flags = rv ? rv.flags.filter((x) => x.severity === 'watch').length : 0;
+      const g = m.guidance;
+      const head = sp.n ? big(`${sp.beats} of ${sp.n}`, 'quarters beat consensus')
+        : g && g.n ? big(`${g.hits} of ${g.n}`, 'guides met or beaten') : big('–', 'quarters beat consensus');
       return tile('management', 'people', 'Management & governance',
-        [big(sp.n ? `${sp.beats} of ${sp.n}` : '–', 'quarters beat consensus'),
-          line(cc ? `Operating cash flow ${cc}x net income over five years.` : 'Earnings quality evidence inside.')],
+        [head,
+          line(ccm ? `Operating cash flow ${ccm[1]}x net income over ${ccm[2]} years.` : 'Earnings quality evidence inside.')],
         [flags ? pill(`${flags} to judge`, 'warn') : null, 'Evidence, not a score']);
     }
 
@@ -634,10 +644,14 @@
     function finStatements(t, f) {
       const S = us(t), spec = STMT[S.stmt], blk = f[S.freq];
       if (!blk || !blk.period_ends.length) return empty('No periods published.');
-      const keep = S.freq === 'annual' ? 7 : 8, n = blk.period_ends.length, from = Math.max(0, n - keep);
+      const keep = S.freq === 'annual' ? 7 : 8, n0 = blk.period_ends.length;
+      // skip leading periods with no figures at all, so no empty column is drawn
+      const filled = (i) => spec.rows.some((r) => num((blk.rows[r[0]] || [])[i]));
+      let first = 0; while (first < n0 - 1 && !filled(first)) first++;
+      const n = n0, from = Math.max(first, n - keep);
       const ends = blk.period_ends.slice(from);
       const D2 = F.derive(f, S.freq);
-      const lab = (e) => (S.freq === 'annual' ? "FY'" + e.slice(2, 4) : e.slice(2, 7).replace('-', '/'));
+      const lab = (e) => stmtPeriod(e, S.freq, f);
       const lineKey = S.line || spec.rows[0][0];
       const all = spec.rows.concat(spec.derived);
       const meta = all.find((r) => r[0] === lineKey) || spec.rows[0];
@@ -659,7 +673,7 @@
       return h('div', { class: 'block' },
         h('div', { class: 'controls' },
           seg(Object.keys(STMT).map((k) => [k, STMT[k].label]), S.stmt, (k) => { S.stmt = k; S.line = null; win.refresh(); }, 'Statement'),
-          seg([['annual', 'Annual'], ['quarterly', 'Quarterly']], S.freq, (k) => { S.freq = k; win.refresh(); }, 'Period')),
+          seg([['annual', 'Annual'], ['quarterly', interimName(f)]], S.freq, (k) => { S.freq = k; win.refresh(); }, 'Period')),
         h('div', null, h('p', { class: 'small muted', style: { marginBottom: '6px' } }, meta[1] + ' · tap a row to chart it'), host),
         wrap);
     }
@@ -671,7 +685,7 @@
     ];
     function ratioTable(D2, groups, freq, keep) {
       const n = D2.ends.length, from = Math.max(0, n - keep);
-      const lab = (e) => (freq === 'annual' ? "FY'" + e.slice(2, 4) : e.slice(2, 7).replace('-', '/'));
+      const lab = (e) => stmtPeriod(e, freq, D2);
       const f2 = (v, k) => (!num(v) ? '–' : k === 'p' ? fmt.pct(v) : k === 'g' ? fmt.spct(v) : k === 'd' ? v.toFixed(0) : v.toFixed(2) + 'x');
       const rows = [];
       groups.forEach(([title, items]) => {
@@ -688,8 +702,8 @@
     }
     function finRatios(t, f) {
       const S = us(t), D2 = F.derive(f, S.rfreq);
-      return h('div', { class: 'block' }, seg([['annual', 'Annual'], ['quarterly', 'Quarterly']], S.rfreq, (k) => { S.rfreq = k; win.refresh(); }, 'Period'),
-        ratioTable(D2, RATIOS, S.rfreq, S.rfreq === 'annual' ? 6 : 8), note('Quarterly ratios use trailing four-quarter flows over average balances.'));
+      return h('div', { class: 'block' }, seg([['annual', 'Annual'], ['quarterly', interimName(f)]], S.rfreq, (k) => { S.rfreq = k; win.refresh(); }, 'Period'),
+        ratioTable(D2, RATIOS, S.rfreq, S.rfreq === 'annual' ? 6 : 8), note(F.ppyOf(f) === 2 ? 'Half-year ratios use trailing two-half flows over average balances.' : 'Quarterly ratios use trailing four-quarter flows over average balances.'));
     }
     function finReturns(t, f) {
       const S = us(t), D2 = F.derive(f, S.rfreq), n = D2.ends.length;
@@ -704,7 +718,8 @@
           stat('Return on assets', fmt.pct(lastNum(D2.roa))),
           ps && ps.me && ps.me.roic != null ? stat('Peer median ROIC', fmt.pct(ps.med(null, 'roic')), ps.peers.length + ' peers') : null),
         adj ? h('div', { class: 'callout warn' }, h('b', null, adj.flag + '. '), adj.evidence) : null,
-        seg([['annual', 'Annual'], ['quarterly', 'Quarterly']], S.rfreq, (k) => { S.rfreq = k; win.refresh(); }, 'Period'),
+        (D2.roic_nm || []).slice(-1)[0] ? h('div', { class: 'callout' }, h('b', null, 'ROIC is not meaningful here. '), 'Customer prepayments, such as payments under long-term service agreements, fund most of the business, so invested capital (equity plus debt less cash) is under 10% of total assets and any return on it runs into the hundreds of percent. Read returns on equity and assets, and the company’s own return on capital in the research, instead.') : null,
+        seg([['annual', 'Annual'], ['quarterly', interimName(f)]], S.rfreq, (k) => { S.rfreq = k; win.refresh(); }, 'Period'),
         ratioTable(D2, [['Returns', [['roic', 'Return on invested capital', 'p'], ['roe', 'Return on equity', 'p'], ['roa', 'Return on assets', 'p']]]], S.rfreq, S.rfreq === 'annual' ? 6 : 8),
         num(dp.roe) ? block('Where return on equity comes from',
           h('div', { class: 'stats boxed' }, stat('Net margin', fmt.pct(dp.net_margin)), stat('× Asset turnover', fmt.mult(dp.asset_turnover, 2)), stat('× Equity multiplier', fmt.mult(dp.equity_multiplier, 2)), stat('= Return on equity', fmt.pct(dp.roe))),
@@ -751,7 +766,7 @@
       const cap = m.capital || {}, eq = comp('earnings_quality'), gov = comp('governance');
       const govScore = gov.note ? (gov.note.match(/([\d.]+) of 10/) || [])[1] : null;
       const cards = h('div', { class: 'grid g2' },
-        ev('Delivery', 'Consensus surprise', sp.n ? `${sp.beats} of ${sp.n} beats` : '–', sp.n ? `Average surprise ${fmt.spct(sp.avg_surprise_pct / 100, 1)}; worst ${fmt.spct(sp.worst_pct / 100, 1)}.` : null, 'Managements help set consensus. Is the streak skill or sandbagging?'),
+        ev('Delivery', 'Consensus surprise', sp.n ? `${sp.beats} of ${sp.n} beats` : '–', sp.n ? `Average surprise ${fmt.spct(sp.avg_surprise_pct / 100, 1)}; worst ${fmt.spct(sp.worst_pct / 100, 1)}.` : (F.ppyOf(dat(t, 'fundamentals')) === 2 ? 'Reports half-yearly with no quarterly EPS, so there is no consensus-surprise history; delivery is read from the guidance record below.' : null), 'Managements help set consensus. Is the streak skill or sandbagging?'),
         ev('Earnings quality', 'Accruals, cash conversion', eq.score != null ? (eq.note.match(/([\d.]+)x net income/) || [])[1] + 'x cash to profit' : '–', eq.note ? eq.note.replace(/^Operating cash flow was [\d.]+x net income over 5 years\. /, '') : null, 'Do adjusted earnings and cash tell the same story?'),
         ev('Capital allocation', 'Buybacks, payout, M&A', cap.share_change_pct_pa != null ? fmt.spct(cap.share_change_pct_pa / 100, 1) + ' shares a year' : '–',
           [cap.payout_of_fcf_pct != null ? `Dividends and buybacks took ${cap.payout_of_fcf_pct}% of free cash flow.` : null, cap.goodwill_pct_assets != null ? ` Goodwill is ${cap.goodwill_pct_assets}% of assets.` : null].filter(Boolean).join(''), 'Is cash going where returns are highest?'),
@@ -993,7 +1008,7 @@
       return h('div', { class: 'stack' },
         h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl checks' }, h('thead', null, h('tr', null, ['Check', 'Ours', 'What comparable companies did', 'Percentile'].map((x) => h('th', null, x)))), h('tbody', null, rows))),
         dcf ? h('p', { class: 'small' }, h('b', null, 'Reverse DCF. '), `At ${fmt.px(k.m.price)} and a ${fmt.pct(dcf.r, 1)} cost of equity, the price implies ${dcf.basis} per share of $${dcf.cf0.toFixed(2)} growing ${fmt.spct(dcf.growth, 1)} a year for ${dcf.years} years, then ${(dcf.gt * 100).toFixed(0)}% a year.${dcf.label ? ' Basis: ' + dcf.label + '.' : ''}`) : null,
-        rc ? (flags ? note(`${flags} assumption${flags === 1 ? '' : 's'} sit outside what 80% of comparable companies achieved. That is not wrong, but it needs a specific reason, which the research should state.`) : note('Every base-case assumption sits inside what 80% of comparable companies achieved.')) : null,
+        rc ? (flags ? note(`${flags} assumption${flags === 1 ? ' sits' : 's sit'} outside what 80% of comparable companies achieved. That is not wrong, but it needs a specific reason, which the research should state.`) : note('Every base-case assumption sits inside what 80% of comparable companies achieved.')) : null,
         table ? disclose('How the base rates are built', [h('p', { class: 'small' }, table.method), h('ul', { class: 'small', style: { paddingLeft: '18px' } }, (table.caveats || []).map((x) => h('li', null, x))), h('p', { class: 'small muted' }, `Source: ${table.source}, ${table.filers ? table.filers.toLocaleString() + ' filers, ' : ''}fiscal years ${table.years[0]} to ${table.years[1]}, built ${fmt.date(table.asof)}.`)])
           : note('Base rates from SEC filings are loading or have not been built yet.'));
     }
@@ -1114,7 +1129,7 @@
             result.replaceChildren(
               h('div', { class: 'callout' }, h('b', null, '1. The case for the engine. '), c.steelman),
               h('div', { class: 'callout' }, h('b', null, '2. What your number does. '), c.quantified, ' ', `Expected return ${fmt.pct(c.before.expectedIrr)} → ${fmt.pct(c.after.expectedIrr)}; edge over hurdle ${fmt.pts(c.before.edge)} → ${fmt.pts(c.after.edge)}.`),
-              c.tripwires.length ? h('div', { class: 'callout' }, h('b', null, '3. What would prove you right. '), c.tripwires.map((x) => x.text).join('; ') + '.') : null,
+              ...(c.tripwires.length ? [h('div', { class: 'callout' }, h('b', null, '3. What would prove you right. '), c.tripwires.map((x) => x.text).join('; ') + '.')] : []),
               h('div', { class: 'row-actions' },
                 btn('Keep my view', () => {
                   state.disputes = state.disputes.filter((x) => !(x.ticker === t && x.driver === driver)).concat([disp]);
