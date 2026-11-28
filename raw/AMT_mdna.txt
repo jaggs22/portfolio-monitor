@@ -1,0 +1,775 @@
+10-Q for period 2026-09-30, filed 2026-10-27
+
+MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS
+This Quarterly Report on Form 10-Q (this “Quarterly Report”) contains statements about future events and expectations, or “forward-looking statements,” which relate to our goals, beliefs, strategies, plans or current expectations and other statements that are not of historical facts. For example, when we use words such as “project,” “plan,” “believe,” “anticipate,” “expect,” “forecast,” “estimate,” “intend,” “should,” “would,” “could,” “may” or other words that convey uncertainty of future events or outcomes, we are making forward-looking statements. Certain important factors may cause actual results to differ materially from those indicated by our forward-looking statements, including those factors set forth under the caption “Risk Factors” in Part I, Item 1A of our Annual Report on Form 10-K for the year ended December 31, 2025 (the “2025 Form 10-K”). Forward-looking statements represent management’s current expectations, beliefs and assumptions, and are inherently uncertain. We do not undertake any obligation to update our forward-looking statements.
+The discussion and analysis of our financial condition and results of operations that follow are based upon our consolidated and condensed consolidated financial statements, which have been prepared in accordance with accounting principles generally accepted in the United States (“GAAP”). The preparation of our financial statements requires us to make estimates and assumptions that affect the reported amounts of assets and liabilities, revenues and expenses, and the related disclosure of contingent assets and liabilities at the date of our financial statements. Actual results may differ from these estimates and such differences could be material to the financial statements. This discussion should be read in conjunction with our consolidated and condensed consolidated financial statements herein and the accompanying notes, information set forth under the caption “Critical Accounting Policies and Estimates” in the 2025 Form 10-K, and in particular, the information set forth therein under Item 7 “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” 
+
+Overview
+We are one of the largest global real estate investment trusts and a leading independent owner, operator and developer of multitenant communications real estate. Our primary business is the leasing of space on communications sites to wireless service providers, radio and television broadcast companies, wireless data providers, government agencies and municipalities and tenants in a number of other industries. In addition to the communications sites in our portfolio, we manage rooftop and tower sites for property owners under various contractual arrangements. We also hold other telecommunications infrastructure and property interests that we lease primarily to communications service providers and third-party tower operators, and, as discussed further below, we hold a portfolio of highly interconnected data center facilities and related assets in the United States. Our customers include our tenants, licensees and other payers. We refer to the business encompassing the above as our property operations, which accounted for 98% and 98% of our total revenues for the three and nine months ended September 30, 2026, respectively, and includes our U.S. & Canada property, Africa & Asia-Pacific (“APAC”) property, Europe property and Latin America property segments and Data Centers segment.
+We also offer tower-related services in the United States, including site application, zoning and permitting, structural and mount analyses, and construction management, which primarily support our site leasing business, including the addition of new tenants and equipment on our sites.
+
+
+28 
+
+
+
+The following table details the number of communications sites, excluding managed sites, that we owned or operated as of September 30, 2026: 
+
+
+Number of
+Owned TowersNumber of
+Operated 
+Towers (1)Number of
+Owned DAS Sites
+U.S. & Canada:
+Canada (2)226 — — 
+United States26,939 14,602 426 
+U.S. & Canada total27,165 14,602 426 
+Africa & APAC: (3)
+Burkina Faso733 — — 
+Ghana3,430 — 37 
+Kenya4,578 — 11 
+Niger973 — — 
+Nigeria9,815 — — 
+
+South Africa2,480 — — 
+Uganda4,584 — 47 
+Africa & APAC total26,593 — 95 
+Europe:
+France4,366 303 9 
+Germany15,783 — — 
+Spain 12,526 — 1 
+Europe total32,675 303 10 
+Latin America:
+Argentina491 — 11 
+Brazil20,655 195 117 
+Chile3,672 — 107 
+Colombia4,801 — 6 
+Costa Rica711 — 2 
+Mexico8,645 185 72 
+Paraguay1,449 — — 
+Peru3,930 450 1 
+Latin America total44,354 830 316 
+Total130,787 15,735 847 
+_______________
+(1)Approximately 98% of the operated towers are held pursuant to long-term finance leases, including those subject to purchase options.
+(2)We expect to complete the sale of our operations in Canada during the fourth quarter of 2026.
+(3)During the three months ended June 30, 2026, we completed the sales of our subsidiary in the Philippines (“ATC Philippines”) and our controlling interest in Kirtonkhola Tower Bangladesh Limited (“KTBL” and, together with ATC Philippines, the “APAC operations” and the sites therein, the “APAC sites”).
+
+
+
+
+29 
+
+
+
+As of September 30, 2026, our property portfolio included 30 operating data center facilities across 11 markets in the United States that collectively comprise approximately 3.9 million net rentable square feet (“NRSF”) of data center space, as follows:
+
+
+Number of Data CentersTotal NRSF (1)
+(in thousands)
+San Francisco Bay, CA91,107
+Los Angeles, CA3734
+Northern Virginia, VA3627
+New York, NY3417
+Chicago, IL2328
+Denver, CO2143
+Boston, MA1143
+Miami, FL2130
+Orlando, FL1104
+Atlanta, GA295
+Washington, D.C.247
+Total303,875 _______________
+(1)Excludes approximately 0.4 million of office and light industrial NRSF. 
+Sale of Philippines Subsidiary—On June 15, 2026, we completed the sale of ATC Philippines. Prior to the divestiture, ATC Philippines’s operating results were included within the Africa & APAC property segment.
+Sale of Bangladesh Partnership—On June 29, 2026, we completed the sale of our controlling interest in KTBL. Prior to the divestiture, KTBL’s operating results were included within the Africa & APAC property segment.
+The 2025 Form 10-K contains information regarding management’s expectations of long-term drivers of demand for our communications sites, as well as key trends, which management believes provide valuable insight into our operating and financial resource allocation decisions. The discussion below should be read in conjunction with the 2025 Form 10-K and, in particular, the information set forth therein under Item 7 “Management’s Discussion and Analysis of Financial Condition and Results of Operations—Executive Overview.”
+In most of our markets, our tenant leases for our communications sites with wireless carriers generally have initial non-cancellable terms of five to ten years with multiple renewal terms. Accordingly, the vast majority of the revenue generated by our property operations during the nine months ended September 30, 2026 was recurring revenue that we should continue to receive in future periods. Most of our tenant leases for our communications sites have provisions that periodically increase or “escalate” the rent due under the lease, typically based on (a) an annual fixed escalation (averaging approximately 3% in the United States), (b) an inflationary index in most of our international markets, or (c) a combination of both. In addition, certain of our tenant leases provide for additional revenue primarily to cover costs (pass-through revenue), such as ground rent or power and fuel costs.
+Based upon existing customer leases and foreign currency exchange rates as of September 30, 2026, we expect to generate nearly $49 billion of non-cancellable customer lease revenue over future periods, before the impact of straight-line lease accounting. 
+The revenues generated by our property operations may be affected by cancellations of existing tenant leases. As discussed above, most of our tenant leases with wireless carriers and broadcasters are multiyear contracts, which typically are non-cancellable; however, in some instances, a lease may be cancelled upon the payment of a termination fee. Revenue lost from either tenant lease cancellations or the non-renewal of leases or rent renegotiations, which we refer to as churn, has historically not had a material adverse effect on the revenues generated by our consolidated property operations. During the nine months ended September 30, 2026, churn was approximately 5% of our tenant billings, primarily driven by churn due to one of our U.S. customers, DISH Wireless L.L.C., a subsidiary of DISH Network Corporation (“DISH”) in our U.S. & Canada property segment, as discussed below. Beginning on January 1, 2026, 100% of DISH revenue has been reflected in churn.
+
+
+30 
+
+
+
+AT&T Mexico Dispute. We are currently engaged in a legal dispute (the “Arbitration”) with one of our customers in Mexico, AT&T Comunicaciones Digitales, S. de R.L. de C.V. and related entities (collectively, “AT&T Mexico”). AT&T Mexico, which represented approximately $300 million of tenant revenue in 2025, is challenging the calculation of the monthly lease amount established under our Master Lease Agreement with AT&T Mexico (the “MLA”), as well as certain other provisions of the MLA, seeking rent abatement both retroactively and prospectively, and had been withholding tower rents since the start of 2025. We incurred approximately $30 million of reserves during the year ended December 31, 2025, and approximately $30 million of additional reserves during the nine months ended September 30, 2026, related to this customer. We expect to record future reserves until the Arbitration is settled. We believe we have meritorious defenses to the claims raised in this Arbitration, are vigorously defending the full enforceability of the MLA and remain confident in the terms and conditions of the MLA. The Arbitration hearing began in August 2026 and we expect a final ruling in 2027.
+On September 23, 2025, we and AT&T Mexico reached an agreement pursuant to which AT&T Mexico will remit payment of the majority of the withheld tower rents and will resume monthly payments of the majority of its owed tower rents. The remainder of the outstanding receivables and the future monthly tower rent amounts not remitted directly to us will be deposited into an irrevocable escrow account, overseen by an independent trustee, to be released in accordance with a final ruling in the Arbitration or by mutual consent of us and AT&T Mexico.
+DISH Dispute. On September 24, 2025, DISH delivered a notice purporting to be excused from its contractual obligations under our Strategic Collocation Agreement entered into in March 2021 (the “SCA”). On October 20, 2025, we filed a complaint in the U.S. District Court for the District of Colorado seeking a declaratory judgment that DISH had not been excused from its obligations under the SCA, that the SCA remained in full force and effect, and that DISH remained required to perform all of its obligations under the SCA. Thereafter, DISH failed to meet its payment obligations, and as of January 2026, has been in default under the SCA. We remain confident that DISH was not excused from its obligations under the SCA. We delivered notices of termination, effective June 2, 2026, to DISH of the SCA and related agreements with DISH. 
+On June 15, 2026, we amended the complaint to (i) add claims seeking damages for DISH’s breaches of the SCA and other agreements, and (ii) add DISH’s parent company, EchoStar Corporation, as a party for tortious interference with such agreements. On June 30, 2026, DISH filed petitions for relief under chapter 11 of the United States Bankruptcy Code. Consistent with applicable law, we continue to seek relief in connection with DISH’s failure to comply with its obligations under the SCA and other agreements described in the amended complaint. DISH represented approximately 2% and 4% of our total annual property revenue and total annual U.S. & Canada property revenue, respectively, for 2025. DISH is reflected in churn for the nine months ended September 30, 2026. During the nine months ended September 30, 2026, we recorded impairment charges related to DISH of $17.5 million.
+
+Non-GAAP Financial Measures 
+Included in our analysis of our results of operations are discussions regarding earnings before interest, taxes, depreciation, amortization and accretion, as adjusted (“Adjusted EBITDA”), Funds From Operations, as defined by the National Association of Real Estate Investment Trusts (“Nareit FFO”) attributable to American Tower Corporation common stockholders, Adjusted Funds From Operations (“AFFO”) attributable to American Tower Corporation common stockholders (“AFFO attributable to American Tower Corporation common stockholders”) and Segment gross margin.
+We define Adjusted EBITDA as Net income before Income (loss) from equity method investments; Income (loss) from discontinued operations, net of taxes; Income tax benefit (provision); Other income (expense); Gain (loss) on retirement of long-term obligations; Interest expense; Interest income; Other operating income (expense), including Goodwill impairment; Depreciation, amortization and accretion; and stock-based compensation expense.
+Nareit FFO attributable to American Tower Corporation common stockholders is defined as net income before gains or losses from the sale or disposal of real estate, real estate related impairment charges, real estate related depreciation, amortization and accretion, and including adjustments and distributions for unconsolidated affiliates and noncontrolling interests and adjustments for discontinued operations. In this section, we refer to Nareit FFO attributable to American Tower Corporation common stockholders as “Nareit FFO (common stockholders).”
+We define AFFO attributable to American Tower Corporation common stockholders as Nareit FFO (common stockholders) before (i) straight-line revenue and expense; (ii) stock-based compensation expense; (iii) the deferred portion of income tax and other income tax adjustments; (iv) non-real estate related depreciation, amortization and 
+
+
+31 
+
+
+
+accretion; (v) amortization of deferred financing costs, debt discounts and premiums and long-term deferred interest charges; (vi) other income (expense); (vii) gain (loss) on retirement of long-term obligations; and (viii) other operating income (expense); less cash payments related to capital improvements and cash payments related to corporate capital expenditures and including adjustments and distributions for unconsolidated affiliates and noncontrolling interests and adjustments for discontinued operations, which includes the impact of noncontrolling interests and discontinued operations on both Nareit FFO and the corresponding adjustments included in AFFO. In this section, we refer to AFFO attributable to American Tower Corporation common stockholders as “AFFO (common stockholders).”
+We define Segment gross margin as segment revenue less segment operating expenses, excluding depreciation, amortization and accretion; selling, general, administrative and development expense; and other operating expenses.
+Adjusted EBITDA, Nareit FFO (common stockholders), AFFO (common stockholders) and Segment gross margin are not intended to replace net income or any other performance measures determined in accordance with GAAP. None of Adjusted EBITDA, Nareit FFO (common stockholders), AFFO (common stockholders) or Segment gross margin represents cash flows from operating activities in accordance with GAAP and, therefore, these measures should not be considered indicative of cash flows from operating activities, as a measure of liquidity or a measure of funds available to fund our cash needs, including our ability to make cash distributions. Rather, Adjusted EBITDA, Nareit FFO (common stockholders), AFFO (common stockholders) and Segment gross margin are presented as we believe each is a useful indicator of our current operating performance. We believe that these metrics are useful to an investor in evaluating our operating performance because (1) each is a key measure used by our management team for decision making purposes and for evaluating our operating segments’ performance; (2) Adjusted EBITDA is a component underlying our credit ratings; (3) Adjusted EBITDA is widely used in the telecommunications real estate sector to measure operating performance as depreciation, amortization and accretion may vary significantly among companies depending upon accounting methods and useful lives, particularly where acquisitions and non-operating factors are involved; (4) AFFO (common stockholders) is widely used in the telecommunications real estate sector to adjust Nareit FFO (common stockholders) for items that may otherwise cause material fluctuations in Nareit FFO (common stockholders) growth from period to period that would not be representative of the underlying performance of property assets in those periods; (5) Segment gross margin provides valuable insight into the site-level profitability of our assets; (6) each provides investors with a meaningful measure for evaluating our period-to-period operating performance by eliminating items that are not operational in nature; and (7) each provides investors with a measure for comparing our results of operations to those of other companies, particularly those in our industry.
+Our measurement of Adjusted EBITDA, Nareit FFO (common stockholders), AFFO (common stockholders) and Segment gross margin may not, however, be fully comparable to similarly titled measures used by other companies. Reconciliations of Adjusted EBITDA, Nareit FFO (common stockholders) and AFFO (common stockholders) to net income and Segment gross margin to gross margin, the most directly comparable GAAP measures, have been included below.
+
+
+32 
+
+
+
+
+Results of Operations
+Three and Nine Months Ended September 30, 2026 and 2025 
+(in millions, except percentages)
+Revenue
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Property
+U.S. & Canada$1,275.2 $1,318.8 (3)%$3,811.2 $3,924.2 (3)%
+Africa & APAC427.9 370.8 15 1,221.8 1,040.7 17 
+Europe257.9 243.6 6 778.0 689.3 13 
+Latin America460.0 416.5 10 1,381.7 1,205.1 15 
+Data Centers313.0 266.6 17 899.0 772.6 16 
+Total property2,734.0 2,616.3 4 8,091.7 7,631.9 6 
+Services51.4 101.1 (49)180.3 275.2 (34)
+Total revenues$2,785.4 $2,717.4 3 %$8,272.0 $7,907.1 5 %
+Three Months Ended September 30, 2026 
+U.S. & Canada property segment revenue decrease of $43.6 million was attributable to:
+• A decrease of $44.1 million in other revenue, primarily due to a decrease of $47.1 million due to straight-line accounting;
+• Partially offset by tenant billings growth of $0.5 million, which was driven by:
+• $25.4 million due to leasing additional space on our sites (“colocations”) and amendments; and
+• $0.4 million generated from sites acquired or constructed since the beginning of the prior-year period (“newly acquired or constructed sites”); 
+• Partially offset by decreases of:
+• $24.8 million resulting from churn in excess of contractual escalations, primarily related to DISH; and
+• $0.5 million from other tenant billings.
+Segment revenue decrease was not meaningfully impacted by foreign currency translation related to fluctuations in Canadian Dollar (“CAD”).
+Africa & APAC property segment revenue growth of $57.1 million was attributable to:
+• An increase of $36.9 million in pass-through revenue, primarily due to an increase in fuel costs; and
+• Tenant billings growth of $29.9 million, which was driven by:
+• $19.1 million due to colocations and amendments;
+• $8.9 million generated from newly acquired or constructed sites;
+• $1.7 million resulting from contractual escalations, net of churn; and
+• $0.2 million from other tenant billings;
+• Partially offset by a decrease of $21.4 million in other revenue, primarily due to an increase in revenue reserves as a result of tenant settlements in the prior-year period, and a decrease due to straight-line accounting.
+Segment revenue growth included an increase of $11.7 million attributable to the impact of foreign currency translation, which included, among others, positive impacts of $14.0 million related to fluctuations in Nigerian Naira (“NGN”) and $3.9 million related to fluctuations in South African Rand (“ZAR”), partially offset by negative impacts of $3.4 million related to fluctuations in Ugandan Shilling (“UGX”) and $2.1 million related to fluctuations in Ghanaian Cedi (“GHS”) . 
+Europe property segment revenue growth of $14.3 million was attributable to:
+• Tenant billings growth of $9.9 million, which was driven by:
+• $5.3 million due to colocations and amendments;
+• $3.0 million generated from newly acquired or constructed sites; and
+• $2.5 million resulting from contractual escalations, net of churn;
+• Partially offset by a decrease of $0.9 million from other tenant billings;
+• An increase of $4.5 million in pass-through revenue; and
+
+
+33 
+
+
+
+• An increase of $3.9 million in other revenue.
+
+
+Segment revenue growth was partially offset by a decrease of $4.0 million attributable to the negative impact of foreign currency translation related to fluctuations in Euro (“EUR”).
+Latin America property segment revenue growth of $43.5 million was attributable to:
+• An increase of $32.8 million attributable to the impact of foreign currency translation, which included, among others, positive impacts of $11.5 million related to fluctuations in Brazilian Real (“BRL”), $10.3 million related to fluctuations in Mexican Peso (“MXN”) and $8.0 million related to fluctuations in Colombian Peso (“COP”);
+• An increase of $13.0 million in other revenue, primarily due to a decrease in revenue reserves; and
+• An increase of $4.1 million in pass-through revenue;
+• Partially offset by a decrease in tenant billings of $6.4 million, which was driven by:
+• $13.0 million from churn in excess of contractual escalations, primarily related to customer cancellations in Brazil; 
+• Partially offset by an increase of $6.6 million due to colocations and amendments.
+Data Centers segment revenue growth of $46.4 million was attributable to: 
+•An increase of $29.4 million in rental, related and other revenue, primarily due to new lease commencements, customer expansions and rent increases upon customer renewals;
+•An increase of $10.4 million in power revenue from new lease commencements, increased power consumption and pricing increases from existing customers; 
+•An increase of $3.5 million in straight-line revenue; and
+•An increase of $3.1 million in interconnection revenue, primarily due to customer interconnection net additions and pricing increases from existing cross connects.
+Services segment revenue decrease of $49.7 million was primarily attributable to decreases in site application, zoning and permitting services, structural and mount analyses services and construction management services.
+Nine Months Ended September 30, 2026
+U.S. & Canada property segment revenue decrease of $113.0 million was attributable to:
+• A decrease of $131.3 million in other revenue, primarily due to a decrease of $126.0 million due to straight-line accounting;
+• Partially offset by tenant billings growth of $18.3 million, which was driven by:
+• $93.1 million due to colocations and amendments; and
+• $1.7 million generated from newly acquired or constructed sites;
+• Partially offset by decreases of:
+• $74.6 million resulting from churn in excess of contractual escalations, primarily related to DISH; and
+• $1.9 million from other tenant billings.
+Segment revenue decrease was not meaningfully impacted by foreign currency translation related to fluctuations in CAD.
+Africa & APAC property segment revenue growth of $181.1 million was attributable to:
+• Tenant billings growth of $96.7 million, which was driven by:
+• $53.8 million due to colocations and amendments;
+• $26.1 million generated from newly acquired or constructed sites;
+• $15.0 million resulting from contractual escalations, net of churn; and
+• $1.8 million from other tenant billings; and
+• An increase of $47.9 million in pass-through revenue, primarily due to an increase in fuel costs;
+• Partially offset by a decrease of $30.8 million in other revenue, primarily due to an increase in revenue reserves as a result of tenant settlements in the prior-year period, and a decrease due to straight-line accounting, partially offset by tenant settlements in South Africa.
+Segment revenue growth included an increase of $67.3 million attributable to the impact of foreign currency translation, which included, among others, positive impacts of $35.8 million related to fluctuations in NGN, $18.9 million related to fluctuations in GHS and $14.5 million related to fluctuations in ZAR, partially offset by a negative impact of $3.8 million related to fluctuations in UGX.
+Europe property segment revenue growth of $88.7 million was attributable to:
+
+
+34 
+
+
+
+• Tenant billings growth of $28.0 million, which was driven by:
+• $14.1 million due to colocations and amendments;
+• $9.1 million generated from newly acquired or constructed sites; and
+• $7.5 million resulting from contractual escalations, net of churn;
+• Partially offset by a decrease of $2.7 million from other tenant billings;
+• An increase of $20.8 million in other revenue, primarily due to the impact of incremental capital contributions, which are amortized over the term of the lease; and
+• An increase of $9.5 million in pass-through revenue. 
+Segment revenue growth included an increase of $30.4 million attributable to the positive impact of foreign currency translation related to fluctuations in EUR.
+Latin America property segment revenue growth of $176.6 million was attributable to:
+• An increase of $127.7 million attributable to the impact of foreign currency translation, which included, among others, positive impacts of $54.3 million related to fluctuations in BRL, $43.9 million related to fluctuations in MXN and $16.7 million related to fluctuations in COP;
+• An increase of $59.1 million in other revenue, primarily due to an increase of $25.7 million from straight-line accounting resulting largely from tenant settlements in Brazil and a decrease in revenue reserves; and
+• An increase of $9.0 million in pass-through revenue;
+• Partially offset by a decrease in tenant billings of $19.2 million, which was driven by:
+• $37.0 million from churn in excess of contractual escalations, primarily related to customer cancellations in Brazil; and
+• $1.3 million from other tenant billings;
+• Partially offset by an increase of $19.1 million due to colocations and amendments.
+Data Centers segment revenue growth of $126.4 million was attributable to: 
+•An increase of $75.4 million in rental, related and other revenue, primarily due to new lease commencements, customer expansions and rent increases upon customer renewals;
+•An increase of $28.9 million in power revenue from new lease commencements, increased power consumption and pricing increases from existing customers; 
+•An increase of $11.1 million in straight-line revenue; and
+•An increase of $11.0 million in interconnection revenue, primarily due to customer interconnection net additions and pricing increases from existing cross connects.
+
+
+Services segment revenue decrease of $94.9 million was primarily attributable to decreases in site application, zoning and permitting services, structural and mount analyses services, and construction management services.
+Gross Margin
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Property
+U.S. & Canada$1,050.5 $1,101.4 (5)%$3,159.8 $3,282.3 (4)%
+Africa & APAC276.2 256.7 8 803.2 722.8 11 
+Europe162.1 154.3 5 493.6 437.4 13 
+Latin America326.7 284.2 15 983.8 825.7 19 
+Data Centers193.6 162.7 19 553.7 466.5 19 
+Total property2,009.1 1,959.3 3 5,994.1 5,734.7 5 
+Services19.4 47.3 (59)%76.4 138.4 (45)%
+Three Months Ended September 30, 2026 
+•The decrease in U.S. & Canada property segment gross margin was primarily attributable to the decrease in revenue described above and an increase in direct expenses of $7.2 million, primarily due to an increase in land rent costs and property taxes, partially offset by a decrease in repair and maintenance spending. Direct expenses were also negatively impacted by $0.1 million from the impact of foreign currency translation.
+
+
+35 
+
+
+
+•The increase in Africa & APAC property segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $31.6 million, primarily due to an increase in costs associated with pass-through revenue, including fuel and utility costs. Direct expenses were also negatively impacted by $6.0 million from the impact of foreign currency translation.
+•The increase in Europe property segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $8.0 million, primarily due to an increase in land rent costs. Direct expenses also benefited by $1.5 million from the impact of foreign currency translation.
+•The increase in Latin America property segment gross margin was primarily attributable to the increase in revenue described above and a decrease in direct expenses of $8.6 million, primarily due to a decrease in land rent costs. Direct expenses were also negatively impacted by $9.6 million from the impact of foreign currency translation.
+•The increase in Data Centers segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $15.5 million, primarily due to an increase in costs associated with power revenue, including utility costs, and an increase in property taxes.
+•The decrease in Services segment gross margin was primarily attributable to the decrease in revenue described above, partially offset by a decrease in direct expenses of $21.8 million.
+Nine Months Ended September 30, 2026
+•The decrease in U.S. & Canada property segment gross margin was primarily attributable to the decrease in revenue described above and an increase in direct expenses of $9.4 million, primarily due to an increase in repair and maintenance spending and an increase in property taxes. Direct expenses were also negatively impacted by $0.1 million from the impact of foreign currency translation.
+•The increase in Africa & APAC property segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $72.1 million, primarily due to an increase in costs associated with pass-through revenue, including fuel and utility costs. Direct expenses were also negatively impacted by $28.6 million from the impact of foreign currency translation.
+•The increase in Europe property segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $21.7 million, primarily due to an increase in land rent costs and an increase in costs associated with pass-through revenue, including energy costs. Direct expenses were also negatively impacted by $10.8 million from the impact of foreign currency translation.
+•The increase in Latin America property segment gross margin was primarily attributable to the increase in revenue described above and a decrease in direct expenses of $17.1 million, primarily due to a decrease in land rent costs. Direct expenses were also negatively impacted by $35.6 million from the impact of foreign currency translation.
+•The increase in Data Centers segment gross margin was primarily attributable to the increase in revenue described above, partially offset by an increase in direct expenses of $39.2 million, primarily due to an increase in costs associated with power revenue, including utility costs, and an increase in property taxes.
+•The decrease in Services segment gross margin was primarily attributable to the decrease in revenue described above, partially offset by a decrease in direct expenses of $32.9 million.
+
+
+36 
+
+
+
+Selling, General, Administrative and Development Expense (“SG&A”)
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Property
+U.S. & Canada$40.7 $41.2 (1)%$120.9 $121.8 (1)%
+Africa & APAC20.4 18.5 10 61.3 57.5 7 
+Europe15.6 16.8 (7)48.8 47.2 3 
+Latin America24.6 28.7 (14)78.4 76.8 2 
+Data Centers28.5 22.7 26 79.7 64.7 23 
+Total property129.8 127.9 1 389.1 368.0 6 
+Services6.2 6.2 0 17.2 19.1 (10)
+Other 92.2 98.9 (7)313.1 317.1 (1)
+Total selling, general, administrative and development expense$228.2 $233.0 (2)%$719.4 $704.2 2 %
+Three Months Ended September 30, 2026 
+•The decrease in our U.S. & Canada property segment SG&A was primarily driven by decreased personnel and related costs and lower canceled construction costs.
+•The increase in our Africa & APAC property segment SG&A was primarily driven by increased personnel and related costs to support our business, higher canceled construction costs and the negative impact of foreign currency translation, partially offset by decreased professional services costs. 
+•The decrease in our Europe property segment SG&A was primarily driven by decreased personnel and related costs, lower canceled construction costs and a benefit from the impact of foreign currency translation. 
+•The decrease in our Latin America property segment SG&A was primarily driven by a decrease in bad debt expense and decreased professional services costs, partially offset by the negative impact of foreign currency translation. 
+•The increase in our Data Centers segment SG&A was primarily driven by increased personnel and related costs to support our business and increased professional services costs.
+•Our Services segment SG&A did not have a meaningful change as compared to the prior-year period.
+•The decrease in other SG&A was primarily attributable to a decrease in stock-based compensation expense of $10.4 million, partially offset by an increase in corporate SG&A.
+Nine Months Ended September 30, 2026
+•The decrease in our U.S. & Canada property segment SG&A was primarily driven by decreased personnel and related costs and a decrease in bad debt expense, partially offset by increased professional services costs and higher canceled construction costs.
+•The increase in our Africa & APAC property segment SG&A was primarily driven by increased personnel and related costs to support our business and the negative impact of foreign currency translation, partially offset by decreased professional services costs. 
+•The increase in our Europe property segment SG&A was primarily driven by increased personnel and related costs to support our business and the negative impact of foreign currency translation, partially offset by decreased professional services costs. 
+•The increase in our Latin America property segment SG&A was primarily driven by higher canceled construction costs and the negative impact of foreign currency translation, partially offset by a decrease in bad debt expense of $6.7 million, decreased personnel and related costs and decreased professional services costs.
+
+
+37 
+
+
+
+•The increase in our Data Centers segment SG&A was primarily driven by increased personnel and related costs to support our business and increased legal and professional services costs.
+•The decrease in our Services segment SG&A was primarily driven by a decrease in bad debt expense, decreased personnel and related costs and decreased professional services costs.
+•The decrease in other SG&A was primarily attributable to a decrease in stock-based compensation expense of $18.5 million, partially offset by an increase in corporate SG&A, including an increase in personnel and related costs to support our business.
+Operating Profit
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Property
+U.S. & Canada$1,009.8 $1,060.2 (5)%$3,038.9 $3,160.5 (4)%
+Africa & APAC255.8 238.2 7 741.9 665.3 12 
+Europe146.5 137.5 7 444.8 390.2 14 
+Latin America302.1 255.5 18 905.4 748.9 21 
+Data Centers165.1 140.0 18 474.0 401.8 18 
+Total property1,879.3 1,831.4 3 5,605.0 5,366.7 4 
+Services13.2 41.1 (68)%59.2 119.3 (50)%
+•The decreases in operating profit for the three and nine months ended September 30, 2026 for our U.S. & Canada property segment were primarily attributable to decreases in our segment gross margin, partially offset by decreases in our segment SG&A.
+•The increases in operating profit for the three and nine months ended September 30, 2026 for our Africa & APAC property segment and our Data Centers segment were primarily attributable to increases in our segment gross margin, partially offset by increases in our segment SG&A.
+•The increases in operating profit for the three months ended September 30, 2026 for our Europe property segment and our Latin America property segment were primarily attributable to increases in our segment gross margin and decreases in our segment SG&A. The increases in operating profit for the nine months ended September 30, 2026 for our Europe property segment and our Latin America property segment were primarily attributable to increases in our segment gross margin, partially offset by increases in our segment SG&A.
+•The decrease in operating profit for the three months ended September 30, 2026 for our Services segment was primarily attributable to a decrease in our segment gross margin. The decrease in operating profit for the nine months ended September 30, 2026 for our Services segment was primarily attributable to a decrease in our segment gross margin, partially offset by a decrease in our segment SG&A.
+Depreciation, Amortization and Accretion
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Depreciation, amortization and accretion$519.4 $522.9 (1)%$1,552.0 $1,525.7 2 %
+The decrease in depreciation, amortization and accretion expense for the three months ended September 30, 2026 was primarily attributable to decreases in property and equipment and intangible assets subject to amortization as a result of accelerated amortization, impairments taken and disposals since the beginning of the prior-year period, partially offset by foreign currency exchange rate fluctuations.
+The increase in depreciation, amortization and accretion expense for the nine months ended September 30, 2026 was primarily attributable to foreign currency exchange rate fluctuations.
+
+
+38 
+
+
+
+Other Operating Expense (Income)
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Other operating expense (income)$11.9 $17.4 (32)%$22.1 $(41.9)(153)%
+The decrease in other operating expense (income) during the three months ended September 30, 2026 was primarily attributable to registration fees included in the prior-year period related to our acquisition of Eaton Towers Holdings Limited in 2019 and a decrease in losses on sales or disposals of assets, partially offset by an increase in integration and acquisition related costs, including benefits related to pre-acquisition contingencies and settlements. 
+The change in other operating expense (income) during the nine months ended September 30, 2026 was primarily attributable to a decrease in gains on sales or disposals of assets and an increase in impairment charges, primarily related to DISH in the United States. Operating expense (income) during the nine months ended September 30, 2026 and 2025 includes a net gain on the sales of our APAC operations of $20.4 million and a gain on the sale of our fiber assets in South Africa (“South Africa Fiber”) of $53.6 million, respectively. 
+Total Other Expense
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Total other expense$370.6 $283.3 31 %$851.2 $1,605.8 (47)%
+Total other expense consists primarily of interest expense and realized and unrealized foreign currency gains or losses as a result of foreign currency exchange rate fluctuations primarily associated with our EUR denominated senior unsecured notes, our intercompany notes and similar unaffiliated balances denominated in a currency other than the subsidiaries’ functional currencies. 
+The increase in total other expense during the three months ended September 30, 2026 was primarily due to unrealized losses from equity securities in the United States of $71.5 million as compared to gains of $10.9 million during the prior-year period. 
+The decrease in total other expense during the nine months ended September 30, 2026 was primarily due to foreign currency gains of $137.2 million in the current period, as compared to foreign currency losses of $811.7 million in the prior-year period. Total other expense during the nine months ended September 30, 2026 and 2025 also includes unrealized (losses) gains from equity securities in the United States of $(35.1) million and $129.2 million, respectively.
+Income Tax Provision
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Income tax provision$117.6 $37.4 214 %$379.0 $287.6 32 %
+Effective tax rate13.1 %3.9 %13.0 %13.8 %
+As a real estate investment trust for U.S. federal income tax purposes (“REIT”), we may deduct earnings distributed to stockholders against the income generated by our REIT operations. Consequently, the effective tax rate on income from continuing operations for the three and nine months ended September 30, 2026 and 2025 differs from the federal statutory rate. 
+As of January 1, 2024, we and our subsidiaries, in principle, became subject to the Organization for Economic Cooperation and Development (the “OECD”) Global Anti-Base Erosion Rules (the “Pillar 2 Rules”) as promulgated by jurisdictions. The Pillar 2 Rules can potentially lead to additional taxes (“Top-Up Tax”) when the effective tax rate (as defined by the Pillar 2 Rules) in a jurisdiction is below 15%. The Pillar 2 Rules, however, do not apply to “Excluded Entities” and certain subsidiaries of Excluded Entities. We believe we qualify as an Excluded Entity as a “Real Estate Investment Vehicle.” In the event certain subsidiaries do not qualify as Excluded Entities, available “Safe Harbor” rules could apply that would exempt the entities from any Top-Up Tax. Substantially all of our non-excluded, non-U.S. jurisdictions qualify for one or more of the Safe Harbor rules. The remaining non-U.S. jurisdictions that may not qualify could have immaterial Top-Up Tax. Beginning in fiscal year 2026, the U.S. income of non-excluded U.S. domiciled 
+
+
+39 
+
+
+
+entities may result in immaterial Top-Up Tax; however, on January 5, 2026, the OECD announced a comprehensive Side-by-Side Safe Harbor that, if enacted, would exempt U.S.-parented multinational companies from certain Top-Up Taxes under the Pillar 2 Rules beginning January 1, 2026. While the Side-by-Side Safe Harbor has yet to be enacted in any jurisdiction in which we operate, there is an expectation the Side-by-Side Safe Harbor may be adopted prior to year end. The amount of Top-Up Tax from our U.S. income is immaterial.
+The increases in the income tax provision during the three and nine months ended September 30, 2026 were primarily attributable to increases in earnings in certain foreign jurisdictions in the current year periods and a benefit from the application of a tax law change in Germany in the prior-year periods. These increases were partially offset by (i) unrealized losses from equity securities in the United States during the three and nine months ended September 30, 2026 and (ii) taxes related to the sale of South Africa Fiber and additions to reserves for uncertain tax positions, each during the prior-year periods.
+
+
+40 
+
+
+
+Net Income / Adjusted EBITDA and Net Income / Nareit FFO attributable to American Tower Corporation common stockholders / AFFO attributable to American Tower Corporation common stockholders 
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Net income$780.8 $912.6 (14)%$2,546.8 $1,791.7 42 %
+
+Income tax provision117.6 37.4 214 379.0 287.6 32 
+Other expense (income)52.2 (27.7)(288)(91.8)684.4 (113)
+Loss on retirement of long-term obligations— — — 3.2 — 100 
+Interest expense366.1 347.1 5 1,067.9 1,015.0 5 
+Interest income(47.7)(36.1)32 (128.1)(93.6)37 
+Other operating expense (income)11.9 17.4 (32)22.1 (41.9)(153)
+
+Depreciation, amortization and accretion519.4 522.9 (1)1,552.0 1,525.7 2 
+Stock-based compensation expense31.5 41.9 (25)124.1 142.6 (13)
+Adjusted EBITDA$1,831.8 $1,815.5 1 %$5,475.2 $5,311.5 3 %
+
+
+
+
+
+Three Months Ended September 30,Percent Increase (Decrease)Nine Months Ended September 30,Percent Increase (Decrease)
+2026202520262025
+Net income$780.8 $912.6 (14)%$2,546.8 $1,791.7 42 %
+
+Real estate related depreciation, amortization and accretion486.5 486.0 0 1,450.5 1,418.7 2 
+Losses (gains) from sale or disposal of real estate and real estate related impairment charges (1)8.8 11.4 (23)24.8 (28.6)(187)
+
+Adjustments and distributions for unconsolidated affiliates and noncontrolling interests (2)(111.4)(147.9)(25)(329.2)(339.0)(3)
+
+Nareit FFO attributable to American Tower Corporation common stockholders$1,164.7 $1,262.1 (8)%$3,692.9 $2,842.8 30 %
+Straight-line revenue24.0 (27.7)(187)24.0 (73.0)(133)
+Straight-line expense7.7 9.4 (18)24.7 27.9 (11)
+Stock-based compensation expense31.5 41.9 (25)124.1 142.6 (13)
+Deferred portion of income tax and other income tax adjustments (3)53.4 (2.7)(2,078)151.1 135.7 11 
+
+Non-real estate related depreciation, amortization and accretion32.9 36.9 (11)101.5 107.0 (5)
+Amortization of deferred financing costs, capitalized interest, debt discounts and premiums and long-term deferred interest charges13.0 13.5 (4)39.0 41.0 (5)
+
+Other expense (income) (4)52.2 (27.7)(288)(91.8)684.4 (113)
+Loss on retirement of long-term obligations— — — 3.2 — 100 
+Other operating expense (income) (5)3.1 6.0 (48)(2.7)(13.3)(80)
+Capital improvement capital expenditures(43.9)(48.4)(9)(131.6)(122.5)7 
+Corporate capital expenditures(4.2)(5.9)(29)(12.0)(9.7)24 
+Adjustments and distributions for unconsolidated affiliates and noncontrolling interests (6)0.6 45.7 (99)0.8 48.7 (98)
+
+
+
+AFFO attributable to American Tower Corporation common stockholders$1,335.0 $1,303.1 2 %$3,923.2 $3,811.6 3 %
+
+
+
+
+41 
+
+
+
+_______________
+(1)For the nine months ended September 30, 2026, includes a net gain on the sales of our APAC operations of $20.4 million. For the nine months ended September 30, 2025, includes a gain on the sale of South Africa Fiber of $53.6 million. 
+(2)Includes distributions to noncontrolling interest holders, distributions related to the outstanding mandatorily convertible preferred equity in connection with our agreements with certain investment vehicles affiliated with Stonepeak Partners LP and adjustments for the impact of noncontrolling interests on Nareit FFO attributable to American Tower Corporation common stockholders.
+(3)For the nine months ended September 30, 2026, includes adjustments for refunds in Germany of $0.5 million. For the three and nine months ended September 30, 2025, includes adjustments for taxes paid in Singapore of $0.3 million related to the ATC TIPL Transaction. For the nine months ended September 30, 2025 also includes adjustments for taxes paid in South Africa of $19.6 million, which were incurred as a result of the sale of South Africa Fiber. We believe that these tax adjustments are nonrecurring, and do not believe these are an indication of our operating performance. Accordingly, we believe it is more meaningful to present AFFO attributable to American Tower Corporation common stockholders excluding these amounts.
+(4)Includes (gains) losses on foreign currency exchange rate fluctuations of $(27.0) million, $(18.0) million, $(137.2) million and $811.7 million, respectively.
+(5)Primarily includes acquisition-related costs, integration costs and disposition costs.
+(6)Includes adjustments for the impact of noncontrolling interests on other line items, excluding those already adjusted for in Nareit FFO attributable to American Tower Corporation common stockholders.
+The decrease in net income for the three months ended September 30, 2026 was primarily due to (i) changes in other (expense) income, primarily due to unrealized losses from equity securities in the United States in the current year period and (ii) an increase in the income tax provision, partially offset by an increase in segment operating profit. 
+The increase in net income for the nine months ended September 30, 2026 was primarily due to (i) changes in other (expense) income, primarily due to foreign currency exchange rate fluctuations, partially offset by unrealized losses from equity securities in the United States in the current year period, and (ii) an increase in segment operating profit, partially offset by (w) an increase in the income tax provision, (x) changes in other operating expense (income), which included the net gain on the sales of our APAC operations during the nine months ended September 30, 2026 and the gain on the sale of South Africa Fiber during the nine months ended September 30, 2025, (y) an increase in interest expense and (z) an increase in depreciation, amortization and accretion expense. 
+The increases in Adjusted EBITDA for the three and nine months ended September 30, 2026 were primarily attributable to increases in our gross margin, partially offset by increases in SG&A, excluding the impact of stock-based compensation expense, of $5.6 million and $33.7 million, respectively. 
+The increase in AFFO attributable to American Tower Corporation common stockholders for the three months ended September 30, 2026 was primarily attributable to an increase in our operating profit, excluding the impact of straight-line accounting, partially offset by increases in cash paid for interest and cash paid for income taxes.
+The increase in AFFO attributable to American Tower Corporation common stockholders for the nine months ended September 30, 2026 was primarily attributable to an increase in our operating profit, excluding the impact of straight-line accounting, partially offset by (i) increases in cash paid for interest and cash paid for income taxes, (ii) increases in distributions and adjustments for noncontrolling interests, including distributions to noncontrolling interest holders in our Europe property segment and Data Centers segment, and (iii) increases in capital improvement and corporate capital expenditures.
+
+
+42 
+
+
+
+Segment Gross Margin Reconciliations
+Gross margin is defined as revenue less costs of operations inclusive of real estate related depreciation, amortization and accretion. Segment gross margin excludes depreciation, amortization and accretion. 
+
+
+PropertyTotal 
+Property
+ServicesTotal
+Three Months Ended September 30, 2026U.S. & CanadaAfrica & APACEuropeLatin AmericaData Centers
+Gross margin$903.6 $221.7 $80.2 $278.0 $39.1 $1,522.6 $19.4 $1,542.0 
+Real estate related depreciation, amortization and accretion146.9 54.5 81.9 48.7 154.5 486.5 — 486.5 
+Segment gross margin$1,050.5 $276.2 $162.1 $326.7 $193.6 $2,009.1 $19.4 $2,028.5 
+
+
+PropertyTotal 
+Property
+ServicesTotal
+Three Months Ended September 30, 2025U.S. & CanadaAfrica & APACEuropeLatin AmericaData Centers
+Gross margin$952.6 $203.2 $74.3 $234.0 $9.2 $1,473.3 $47.3 $1,520.6 
+Real estate related depreciation, amortization and accretion148.8 53.5 80.0 50.2 153.5 486.0 — 486.0 
+Segment gross margin$1,101.4 $256.7 $154.3 $284.2 $162.7 $1,959.3 $47.3 $2,006.6 
+
+
+PropertyTotal 
+Property
+ServicesTotal
+Nine Months Ended September 30, 2026U.S. & CanadaAfrica & APACEuropeLatin AmericaData Centers
+Gross margin$2,720.1 $637.4 $248.7 $840.2 $97.2 $4,543.6 $76.4 $4,620.0 
+Real estate related depreciation, amortization and accretion439.7 165.8 244.9 143.6 456.5 1,450.5 — 1,450.5 
+Segment gross margin$3,159.8 $803.2 $493.6 $983.8 $553.7 $5,994.1 $76.4 $6,070.5 
+
+
+PropertyTotal 
+Property
+ServicesTotal
+Nine Months Ended September 30, 2025U.S. & CanadaAfrica & APACEuropeLatin AmericaData Centers
+Gross margin$2,837.0 $575.1 $211.4 $680.3 $12.2 $4,316.0 $138.4 $4,454.4 
+Real estate related depreciation, amortization and accretion445.3 147.7 226.0 145.4 454.3 1,418.7 — 1,418.7 
+Segment gross margin$3,282.3 $722.8 $437.4 $825.7 $466.5 $5,734.7 $138.4 $5,873.1 
+
+
+43 
+
+
+
+
+Liquidity and Capital Resources 
+The information in this section updates as of September 30, 2026 the “Liquidity and Capital Resources” section of the 2025 Form 10-K and should be read in conjunction with that report. 
+Overview 
+During the nine months ended September 30, 2026, our significant financing transactions included:
+•Repayment of our 4.400% senior unsecured notes due 2026 (the “4.400% Notes”), our 1.600% senior unsecured notes due 2026 (the “1.600% Notes”), our 1.950% senior unsecured notes due 2026 (the “1.950% Notes”) and our 1.450% senior unsecured notes due 2026 (the “1.450% Notes”) upon their maturity dates;
+•Partial redemption of 250.0 million EUR of our 4.125% senior unsecured notes due 2027 (the “4.125% Notes”) for an aggregate redemption price of approximately 253.3 million EUR (approximately $290.2 million as of the repayment date);
+•Registered public offering in an aggregate principal amount of $2.5 billion, including 750.0 million EUR, of senior unsecured notes with maturities ranging from 2031 to 2036; 
+•Amendments to the 2021 Multicurrency Credit Facility, the 2021 Credit Facility and the 2021 Term Loan (each as defined below) to, among other things, extend the maturity dates thereunder; and
+•Repurchase of 2,969,052 shares of our common stock for an aggregate of $518.0 million, including commissions and fees, under the Buyback Program (as defined below).
+As a holding company, our cash flows are derived primarily from the operations of, and distributions from, our operating subsidiaries or funds raised through borrowings under our credit facilities and debt or equity offerings.
+The following table summarizes the significant components of our liquidity (in millions):
+
+
+As of September 30, 2026
+Available under the 2021 Multicurrency Credit Facility$4,985.0 
+Available under the 2021 Credit Facility3,770.0 
+Letters of credit(39.4)
+Total available under credit facilities, net$8,715.6 
+Cash and cash equivalents1,871.9 
+Total liquidity$10,587.5 
+Subsequent to September 30, 2026, we made additional net borrowings of $675.0 million under the 2021 Multicurrency Credit Facility and borrowings of $965.0 million under the 2021 Credit Facility.
+Summary cash flow information is set forth below (in millions): 
+
+
+Nine Months Ended September 30,
+20262025
+Net cash provided by (used for):
+Operating activities$4,280.2 $4,036.5 
+Investing activities(1,366.9)(1,391.7)
+Financing activities(2,533.8)(2,764.7)
+Net effect of changes in foreign currency exchange rates on cash and cash equivalents, and restricted cash22.6 112.5 
+Net increase (decrease) in cash and cash equivalents, and restricted cash$402.1 $(7.4)
+We use our cash flows to fund our operations and investments in our business, including maintenance and improvements, communications site and data center construction, managed network installations and acquisitions. Additionally, we use our cash flows to make distributions, including distributions of our REIT taxable income to maintain our qualification for taxation as a REIT under the Internal Revenue Code of 1986, as amended (the “Code”). We may also periodically repay or repurchase our existing indebtedness or equity. We typically fund our international expansion efforts primarily through a combination of cash on hand, intercompany debt and equity contributions.
+
+
+44 
+
+
+
+As of September 30, 2026, we had total outstanding indebtedness of $37.8 billion, with a current portion of $5.4 billion. During the nine months ended September 30, 2026, we generated sufficient cash flow from operations, together with borrowings under our credit facilities, proceeds from our debt issuances and cash on hand, to fund our acquisitions, capital expenditures and debt service obligations, as well as our required distributions. We believe the cash generated by operating activities during the year ending December 31, 2026, together with our borrowing capacity under our credit facilities, will suffice to fund our required distributions, capital expenditures, debt service obligations (interest and principal repayments) and signed acquisitions.
+We utilize notional cash pooling arrangements with financial institutions for cash management purposes. These arrangements allow for cash withdrawals based upon aggregate cash balances on deposit at the same financial institution. 
+Material Cash Requirements— There were no material changes to the Material Cash Requirements section of the 2025 Form 10-K.
+As of September 30, 2026, we had $2.3 billion of cash and cash equivalents held by our foreign subsidiaries including balances subject to the notional cash pooling arrangements discussed above. As of September 30, 2026, we had $245.0 million of cash and cash equivalents held by our joint ventures, of which $196.1 million was held by our foreign joint ventures. Certain foreign subsidiaries may pay us interest or principal on intercompany debt. Additionally, in the event that we repatriate funds from our foreign subsidiaries, we may be required to accrue and pay certain taxes.
+Cash Flows from Operating Activities
+The increase in cash provided by operating activities for the nine months ended September 30, 2026 was primarily attributable to an increase in our operating profit, including the impact of straight-line accounting, and a decrease in cash required for working capital, primarily as a result of changes in accounts receivable, partially offset by increases in cash paid for interest and cash paid for taxes.
+Cash Flows from Investing Activities
+Our significant investing activities during the nine months ended September 30, 2026 are highlighted below:
+•We spent $263.1 million for acquisitions,
+•We received $82.5 million from the sales of our APAC operations, and
+•We spent $1,195.2 million for capital expenditures, as follows (in millions): 
+
+
+Discretionary capital projects (1)$684.3 
+Ground lease purchases (2)131.3 
+Capital improvements and corporate expenditures (3)143.6 
+Redevelopment204.7 
+Start-up capital projects31.3 
+Total capital expenditures$1,195.2 
+_______________
+(1)Includes the construction of 1,083 communications sites globally and approximately $458.6 million of spend related to data center assets.
+(2)Includes $24.9 million of perpetual land easement payments reported in Deferred financing costs and other financing activities in the cash flows from financing activities in our condensed consolidated statements of cash flows. 
+(3)Includes $2.5 million of finance lease payments reported in Repayments of notes payable, credit facilities, senior notes, secured debt and finance leases in the cash flows from financing activities in our condensed consolidated statements of cash flows.
+We plan to continue to allocate our available capital, after satisfying our distribution requirements, among investment alternatives that meet our return on investment criteria, while maintaining our commitment to our long-term financial policies. Accordingly, we expect to continue to deploy capital through our annual capital expenditure program, including land purchases and new site and data center facility construction, and through acquisitions. We also regularly review our portfolios as to capital expenditures required to upgrade our infrastructure to our structural standards or address capacity, structural or permitting issues.
+
+
+45 
+
+
+
+We expect that our 2026 total capital expenditures will be as follows (in millions): 
+
+
+
+
+Discretionary capital projects (1)$1,035 to$1,065 
+Ground lease purchases190 to210 
+Capital improvements and corporate expenditures185 to195 
+Redevelopment315 to345 
+Start-up capital projects40 to60 
+Total capital expenditures$1,765 to$1,875 
+_______________ 
+(1)Includes the construction of approximately 1,300 to 1,900 communications sites globally and approximately $695 million of anticipated spend related to data center assets.
+Cash Flows from Financing Activities 
+Our significant financing activities were as follows (in millions): 
+
+
+Nine Months Ended September 30,
+20262025
+Proceeds from issuance of senior notes, net$2,466.6 $2,153.3 
+Proceeds from credit facilities, net865.0 1,242.2 
+
+
+Repayments of securitized debt— (525.0)
+
+Repayments of senior notes(2,670.7)(3,206.2)
+Contributions from noncontrolling interest holders5.1 148.1 
+Distributions to noncontrolling interest holders(128.5)(140.7)
+Distributions paid on common stock(2,475.6)(2,361.0)
+Purchases of common stock(503.0)— 
+Repayments of Senior Notes
+Repayment of 4.400% Senior Notes—On February 13, 2026, we repaid $500.0 million aggregate principal amount of the 4.400% Notes upon their maturity. The 4.400% Notes were repaid using borrowings under the 2021 Credit Facility and cash on hand. Upon completion of the repayment, none of the 4.400% Notes remained outstanding.
+Repayment of 1.600% Senior Notes—On April 14, 2026, we repaid $700.0 million aggregate principal amount of the 1.600% Notes upon their maturity. The 1.600% Notes were repaid using borrowings under the 2021 Credit Facility and cash on hand. Upon completion of the repayment, none of the 1.600% Notes remained outstanding.
+Repayment of 1.950% Senior Notes—On May 21, 2026, we repaid 500.0 million EUR aggregate principal amount of the 1.950% Notes upon their maturity. The 1.950% Notes were repaid using borrowings under the 2021 Multicurrency Credit Facility. Upon completion of the repayment, none of the 1.950% Notes remained outstanding.
+Partial Redemption of 4.125% Senior Notes—On June 18, 2026, we redeemed 250.0 million EUR of the 4.125% Notes at a price equal to 100.969%, plus accrued and unpaid interest up to, but excluding June 18, 2026, for an aggregate redemption price of approximately 253.3 million EUR (approximately $290.2 million as of the repayment date), including 0.9 million EUR (approximately $1.0 million as of the repayment date) in accrued and unpaid interest. We recorded a loss on retirement of long-term obligations of approximately $3.2 million, which included prepayment consideration of $2.8 million and the associated unamortized discount and deferred financing costs. The redemption was funded with proceeds from the issuance of the 4.000% Notes. Upon completion of this partial redemption, 350.0 million EUR aggregate principal amount of the 4.125% Notes remained outstanding.
+Repayment of 1.450% Senior Notes—On September 14, 2026, we repaid $600.0 million aggregate principal amount of the 1.450% Notes upon their maturity. The 1.450% Notes were repaid using proceeds from the issuance of the 5.300% Notes, the 5.560% Notes and the 5.750% Notes. Upon completion of the repayment, none of the 1.450% Notes remained outstanding.
+
+
+46 
+
+
+
+Repayment of 3.375% Senior Notes—On October 14, 2026, we repaid $1.0 billion aggregate principal amount of our 3.375% senior unsecured notes due 2026 (the “3.375% Notes”) upon their maturity. The 3.375% Notes were repaid using borrowings under the 2021 Credit Facility and cash on hand. Upon completion of the repayment, none of the 3.375% Notes remained outstanding.
+Offerings of Senior Notes
+4.000% Senior Notes Offering—On May 27, 2026, we completed a registered public offering of 750.0 million EUR (approximately $872.0 million at the date of issuance) aggregate principal amount of 4.000% senior unsecured notes due 2033 (the “4.000% Notes”). The net proceeds from this offering were approximately 742.7 million EUR (approximately $863.5 million at the date of issuance), after deducting commissions and estimated expenses. We used the net proceeds to repay existing indebtedness under the 2021 Multicurrency Credit Facility and to partially redeem the 4.125% Notes (as discussed above).
+5.300% Senior Notes, 5.560% Senior Notes and 5.750% Senior Notes Offering—On September 14, 2026, we completed a registered public offering of $500.0 million aggregate principal amount of 5.300% senior unsecured notes due 2031 (the “5.300% Notes”), $500.0 million aggregate principal amount of 5.560% senior unsecured notes due 2033 (the “5.560% Notes”) and $600.0 million aggregate principal amount of 5.750% senior unsecured notes due 2036 (the “5.750% Notes” and, collectively with the 4.000% Notes, the 5.300% Notes and the 5.560% Notes, the “Notes”). The net proceeds from this offering were approximately $1.6 billion, after deducting commissions and estimated expenses. We used the net proceeds to repay the 1.450% Notes, to repay existing indebtedness under the 2021 Multicurrency Credit Facility and for general corporate purposes.
+The key terms of the Notes are as follows:
+
+
+Senior NotesAggregate Principal Amount (in millions)Issue Date and Interest Accrual DateMaturity DateContractual Interest RateFirst Interest PaymentInterest Payments Due (1)Par Call Date (2)
+
+4.000% Notes (3)$872.0 May 27, 2026September 1, 2033
+4.000%September 1, 2026September 1July 1, 2033
+
+5.300% Notes$500.0 September 14, 2026September 15, 2031
+5.300%March 15, 2027March 15 and September 15August 15, 2031
+
+5.560% Notes$500.0 September 14, 2026September 15, 2033
+5.560%March 15, 2027March 15 and September 15July 15, 2033
+
+5.750% Notes$600.0 September 14, 2026September 15, 2036
+5.750%March 15, 2027March 15 and September 15June 15, 2036
+
+
+
+___________
+(1)Accrued and unpaid interest on U.S. Dollar (“USD”) denominated notes is payable in USD semi-annually in arrears and will be computed from the issue date on the basis of a 360-day year comprised of twelve 30-day months. Interest on EUR denominated notes is payable in EUR annually in arrears and will be computed on the basis of the actual number of days in the period for which interest is being calculated and the actual number of days from and including the last date on which interest was paid on the notes, beginning on the issue date.
+(2)We may redeem the Notes at any time, in whole or in part, at a redemption price equal to 100% of the principal amount of the Notes plus a make-whole premium, together with accrued interest to the redemption date. If we redeem the Notes on or after the par call date, we will not be required to pay a make-whole premium.
+(3)The 4.000% Notes are denominated in EUR; dollar amounts represent the aggregate principal amount at the issuance date.
+If we undergo a change of control and corresponding ratings decline, each as defined in the supplemental indenture for the Notes, we may be required to repurchase all of the Notes at a purchase price equal to 101% of the aggregate principal amount of the Notes repurchased, plus accrued and unpaid interest (including additional interest, if any), up to but not including the repurchase date. The Notes rank equally in right of payment with all of our other senior unsecured debt obligations and are structurally subordinated to all existing and future indebtedness and other obligations of our subsidiaries.
+Each applicable supplemental indenture contains certain covenants that restrict our ability to merge, consolidate or sell assets and our (together with our subsidiaries’) ability to incur liens. These covenants are subject to a number of exceptions, including that we and our subsidiaries may incur certain liens on assets, mortgages or other liens securing indebtedness if the aggregate amount of indebtedness secured by such liens does not exceed 3.5x Adjusted EBITDA, as defined in the applicable supplemental indenture.
+Bank Facilities
+
+
+47 
+
+
+
+Amendments to Bank Facilities—On May 7, 2026, we amended our (i) $6.0 billion senior unsecured multicurrency revolving credit facility, as amended and restated on December 8, 2021, as further amended, (the “2021 Multicurrency Credit Facility”), (ii) $4.0 billion senior unsecured revolving credit facility, as amended and restated on December 8, 2021, as further amended, (the “2021 Credit Facility”) and (iii) $1.0 billion unsecured term loan, as amended and restated on December 8, 2021, as further amended, (the “2021 Term Loan” collectively with the 2021 Multicurrency Credit Facility and the 2021 Credit Facility, the “Loans”).
+These amendments, among other things,
+i.extend the maturity dates of the 2021 Multicurrency Credit Facility, the 2021 Credit Facility and the 2021 Term Loan to May 1, 2029, May 1, 2031 and May 1, 2029, respectively;
+ii.include limited conditionality provisions in the 2021 Multicurrency Credit Facility, permitting us to borrow up to $5.0 billion in connection with certain acquisitions subject to such limited conditionality provisions;
+iii.increase the swingline sublimit under each of the 2021 Multicurrency Credit Facility and the 2021 Credit Facility from $50.0 million to $100.0 million;
+iv.amend the covenant governing the incurrence of liens under each of the Loans to permit the incurrence of liens securing indebtedness in an aggregate amount not to exceed the 3.5x ratio of Senior Secured Debt to Adjusted EBITDA (each as defined in each of the Loans); and
+v.amend the covenant governing the incurrence of indebtedness under each of the Loans to restrict the incurrence of indebtedness to our subsidiaries only.
+2021 Multicurrency Credit Facility—During the nine months ended September 30, 2026, we borrowed an aggregate of $3.2 billion, including 500.0 million EUR ($581.1 million as of the borrowing date) and repaid an aggregate of $2.6 billion, including 500.0 million EUR ($581.1 million as of the repayment date) of revolving indebtedness under the 2021 Multicurrency Credit Facility. We used the borrowings to repay outstanding indebtedness, including the 1.950% Notes, and for general corporate purposes. We currently have $18.7 million of undrawn letters of credit and maintain the ability to draw down and repay amounts under the 2021 Multicurrency Credit Facility in the ordinary course.
+2021 Credit Facility—During the nine months ended September 30, 2026, we borrowed an aggregate of $1.3 billion and repaid an aggregate of $1.1 billion of revolving indebtedness under the 2021 Credit Facility. We used the borrowings to repay outstanding indebtedness, including the 4.400% Notes and the 1.600% Notes, and for general corporate purposes. We currently have $20.7 million of undrawn letters of credit and maintain the ability to draw down and repay amounts under the 2021 Credit Facility in the ordinary course.
+As of September 30, 2026, the key terms under the Loans were as follows:
+
+
+Bank FacilityOutstanding Principal Balance 
+($ in millions)Maturity DateSOFR or EURIBOR borrowing interest rate range (1)Base rate borrowing interest rate range (1)Current margin over SOFR or EURIBOR and the base rate, respectively
+2021 Multicurrency Credit Facility(2)$1,015.0 May 1, 2029(3)0.625% - 1.125%0.000% - 0.125%0.875% and 0.000%
+2021 Credit Facility(2)230.0 May 1, 2031(3)0.625% - 1.125%0.000% - 0.125%0.875% and 0.000%
+2021 Term Loan(2)1,000.0 May 1, 20290.625% - 1.125%0.000% - 0.125%0.875% and 0.000%
+
+
+
+___________
+(1)Represents interest rate above: (a) Secured Overnight Financing Rate (“SOFR”) for SOFR based borrowings, (b) Euro Interbank Offer Rate (“EURIBOR”) for EURIBOR based borrowings and (c) the defined base rate for base rate borrowings, in each case based on our debt ratings. 
+(2)Currently borrowed at SOFR. 
+(3)Subject to two optional renewal periods.
+We must pay a quarterly commitment fee on the undrawn portion of each of the 2021 Multicurrency Credit Facility and the 2021 Credit Facility. The commitment fee for the 2021 Multicurrency Credit Facility and the 2021 Credit Facility ranges from 0.060% to 0.150% per annum, based upon our debt ratings, and is currently 0.100%.
+The 2021 Multicurrency Credit Facility, the 2021 Credit Facility and the 2021 Term Loan and the associated loan agreements (the “Bank Loan Agreements”) do not require amortization of principal and may be paid prior to maturity in whole or in part at our option without penalty or premium. We have the option of choosing either a defined base rate, SOFR or EURIBOR as the applicable base rate for borrowings under these bank facilities.
+
+
+48 
+
+
+
+Each Bank Loan Agreement contains certain reporting, information, financial and operating covenants and other restrictions (including limitations on additional debt, guaranties, sales of assets and liens) with which we must comply. Failure to comply with the financial and operating covenants of the loan agreements could not only prevent us from being able to borrow additional funds under the revolving credit facilities, but may constitute a default, which could result in, among other things, the amounts outstanding under the applicable agreement, including all accrued interest and unpaid fees, becoming immediately due and payable.
+Stock Repurchase Program—In December 2017, our Board of Directors approved a stock repurchase program, pursuant to which we are authorized to repurchase up to $2.0 billion of our common stock (the “Buyback Program”).
+During the nine months ended September 30, 2026, we repurchased 2,969,052 shares of our common stock for an aggregate of $518.0 million, including commissions and fees. Subsequent to September 30, 2026, through October 20, 2026, we repurchased 416,186 shares of our common stock for an aggregate of approximately $67.8 million, including commissions and fees.
+As further discussed in Item 5, on October 23, 2026, our Board of Directors approved an increase to the Buyback Program. We expect to continue managing the pacing of the remaining approximately $3.1 billion under the Buyback Program (including the approved increase) in response to general market conditions and other relevant factors. We expect to fund any further repurchases of our common stock through a combination of cash on hand, cash generated by operations and borrowings under our credit facilities. Repurchases under the Buyback Program are subject to, among other things, us having available cash to fund the repurchases.
+Summary of Stock-Based Compensation Plans—We maintain an equity incentive plan that provides for the grant of stock-based awards to our directors, officers and employees. Until May 20, 2026, the American Tower Corporation 2007 Equity Incentive Plan, as amended (the “2007 Plan”), provided for the grant of non-qualified and incentive stock options, as well as restricted stock units, restricted stock and other stock-based awards. The American Tower Corporation 2026 Equity Incentive Plan (the “2026 Plan”) was approved by our stockholders on May 20, 2026, replacing the 2007 Plan, and provides for the grant of equity and equity-based awards, including options (including nonqualified stock options and incentive stock options), restricted stock, restricted stock units and other equity-based awards and cash awards, to employees, directors, consultants and advisors of the Company and its majority-owned subsidiaries.
+Sales of Equity Securities—We receive proceeds from sales of our equity securities pursuant to our employee stock purchase plan and upon exercise of stock options granted under the 2007 Plan. During the nine months ended September 30, 2026, we received an aggregate of $21.0 million in proceeds upon exercises of stock options and sales pursuant to our employee stock purchase plan.
+Future Financing Transactions—We regularly consider various options to obtain financing and access the capital markets, subject to market conditions, to meet our funding needs. Such capital raising alternatives, in addition to those noted above, may include amendments and extensions of our bank facilities, entry into new bank facilities, transactions with private equity funds or partnerships, additional senior note and equity offerings and securitization transactions. No assurance can be given as to whether any such financing transactions will be completed or as to the timing or terms thereof.
+Distributions—As a REIT, we must annually distribute to our stockholders an amount equal to at least 90% of our REIT taxable income (determined before the deduction for distributed earnings and excluding any net capital gain). Generally, we have distributed, and expect to continue to distribute, all or substantially all of our REIT taxable income after taking into consideration our utilization of net operating losses (“NOLs”). We have distributed an aggregate of approximately $26.2 billion to our common stockholders, including the dividend paid in October 2026, primarily classified as ordinary income that may be treated as qualified REIT dividends under Section 199A of the Code.
+During the nine months ended September 30, 2026, we paid $5.28 per share, or $2.5 billion, to our common stockholders of record. In addition, we declared a distribution of $1.79 per share, or $831.0 million, paid on October 20, 2026 to our common stockholders of record at the close of business on September 30, 2026.
+The amount, timing and frequency of future distributions will be at the sole discretion of our Board of Directors and will depend on various factors, a number of which may be beyond our control, including our financial condition and operating cash flows, the amount required to maintain our qualification for taxation as a REIT and reduce any income and excise taxes that we otherwise would be required to pay, limitations on distributions in our existing and future debt and preferred equity instruments, our ability to utilize NOLs to offset our distribution requirements, limitations on our 
+
+
+49 
+
+
+
+ability to fund distributions using cash generated through our taxable REIT subsidiaries and other factors that our Board of Directors may deem relevant.
+We accrue distributions on unvested restricted stock units, which are payable upon vesting. As of September 30, 2026, the amount accrued for distributions payable related to unvested restricted stock units was $13.9 million. During the nine months ended September 30, 2026, we paid $14.7 million of distributions upon the vesting of restricted stock units.
+Factors Affecting Sources of Liquidity 
+As discussed in the “Liquidity and Capital Resources” section of the 2025 Form 10-K, our liquidity depends on our ability to generate cash flow from operating activities, borrow funds under our credit facilities and maintain compliance with the contractual agreements governing our indebtedness. We believe that the debt agreements discussed below represent our material debt agreements that contain covenants, our compliance with which would be material to an investor’s understanding of our financial results and the impact of those results on our liquidity.
+Restrictions Under Loan Agreements Relating to Our Credit Facilities—Each Bank Loan Agreement contains certain financial and operating covenants and other restrictions applicable to us and our subsidiaries that are not designated as unrestricted subsidiaries on a consolidated basis. These restrictions include limitations on additional debt, distributions and dividends, guaranties, sales of assets and liens. These covenants are subject to a number of exceptions, including that the aggregate amount of indebtedness secured by such liens does not exceed 3.5x Adjusted EBITDA (as defined in each of the Loans).
+
+
+The Bank Loan Agreements also contain covenants that establish financial tests with which we and our restricted subsidiaries must comply related to total leverage, as set forth in the table below. As of September 30, 2026, we were in compliance with each of these covenants.
+
+
+Compliance Tests For The 12 Months Ended 
+September 30, 2026
+($ in billions)
+Ratio (1)Additional Debt Capacity Under Covenants (2)Capacity for Adjusted EBITDA Decrease Under Covenants (3)
+Consolidated Total Leverage RatioTotal Debt to Adjusted EBITDA 
+≤ 6.00:1.00~ 6.2~ 1.0
+
+
+_______________
+(1)Each component of the ratio as defined in the applicable loan agreement.
+(2)Assumes no change to Adjusted EBITDA.
+(3)Assumes no change to our debt levels. 
+The Bank Loan Agreements also contain reporting and information covenants that require us to provide financial and operating information to the lenders within certain time periods. If we are unable to provide the required information on a timely basis, we would be in breach of these covenants.
+Failure to comply with the financial maintenance tests and certain other covenants of the Bank Loan Agreements could not only prevent us from being able to borrow additional funds under the revolving credit facilities, but may also constitute a default under these credit facilities, which could result in, among other things, the amounts outstanding, including all accrued interest and unpaid fees, becoming immediately due and payable. If this were to occur, we may not have sufficient cash on hand to repay such indebtedness. The key factors affecting our ability to comply with the debt covenants described above are our financial performance relative to the financial maintenance tests defined in the Bank Loan Agreements and our ability to fund our debt service obligations. Based upon our current expectations, we believe our operating results during the next 12 months will be sufficient to comply with these covenants.
+Restrictions Under Agreements Relating to the Trust Securitization—The indenture and related supplemental indenture governing the loan agreement related to the securitization transactions completed in March 2018 (the “2018 Securitization”) and March 2023 (the “2023 Securitization” and, together with the 2018 Securitization, the “Trust Securitization”) (the “Securitization Loan Agreements”) include certain financial ratios and operating covenants and other restrictions customary for transactions subject to rated securitizations. Among other things, American Tower Asset Sub, LLC and American Tower Asset Sub II, LLC (together, the “AMT Asset Subs”) are prohibited from incurring other indebtedness for borrowed money or further encumbering their assets, subject to customary carve-outs for ordinary course trade payables and permitted encumbrances (as defined in the applicable agreements).
+
+
+50 
+
+
+
+Under the Securitization Loan Agreements, amounts due will be paid from the cash flows generated by the assets securing the nonrecourse loan that secures the Secured Tower Revenue Securities, Series 2018-1, Subclass A (the “Series 2018-1A Securities”), the Secured Tower Revenue Securities, Series 2018-1, Subclass R (the “Series 2018-1R Securities” and, together with the Series 2018-1A Securities, the “2018 Securities”), the Secured Tower Revenue Securities 2023-1, Subclass A (the “Series 2023-1A Securities”), the Secured Tower Revenue Securities, Series 2023-1, Subclass R (the “Series 2023-1R Securities” and, together with the Series 2023-1A Securities, the “2023 Securities”) issued in the Trust Securitization (the “Loan”), as applicable, which must be deposited into certain reserve accounts, and thereafter distributed, solely pursuant to the terms of the applicable agreement. On a monthly basis, after paying all required amounts under the applicable agreement, subject to the conditions described in the table below, the excess cash flows generated from the operation of these assets are released to the AMT Asset Subs, which can then be distributed to us for use. As of September 30, 2026, $70.9 million held in such reserve accounts was classified as restricted cash. 
+Certain information with respect to the Trust Securitization is set forth below. The debt service coverage ratio (“DSCR”) is generally calculated as the ratio of the net cash flow (as defined in the applicable agreement) to the amount of interest, servicing fees and trustee fees required to be paid over the succeeding 12 months on the principal amount of the Loan that will be outstanding on the payment date following such date of determination. 
+
+
+Issuer or BorrowerNotes/Securities IssuedConditions Limiting Distributions of Excess CashExcess Cash Distributed During the Three Months Ended September 30, 2026DSCR 
+as of September 30, 2026Capacity for Decrease in Net Cash Flow Before Triggering Cash Trap DSCR (1)Capacity for Decrease in Net Cash Flow Before Triggering Minimum DSCR (1)
+Cash Trap DSCRAmortization Period
+(in millions)(in millions)(in millions)
+
+Trust SecuritizationAMT Asset SubsSecured Tower Revenue Securities, Series 2023-1, Subclass A, Secured Tower Revenue Securities, Series 2023-1, Subclass R, Secured Tower Revenue Securities, Series 2018-1, Subclass A and Secured Tower Revenue Securities, Series 2018-1, Subclass R1.30x, Tested Quarterly (2)(3)(4)$372.56.52x$470.6$484.1_____________
+(1)Based on the net cash flow of the issuer or borrower as of September 30, 2026 and the expenses payable over the next 12 months on the Loan. 
+(2)If the DSCR were equal to or below 1.30x (the “Cash Trap DSCR”) for any quarter, all cash flow in excess of amounts required to make debt service payments, fund required reserves, pay management fees and budgeted operating expenses and make other payments required under the applicable transaction documents, referred to as excess cash flow, will be deposited into a reserve account (the “Cash Trap Reserve Account”) instead of being released to the applicable issuer or borrower. Once triggered, a Cash Trap DSCR condition continues to exist until the DSCR exceeds the Cash Trap DSCR for two consecutive calendar quarters. 
+(3)An amortization period commences if the DSCR is equal to or below 1.15x (the “Minimum DSCR”) at the end of any calendar quarter and continues to exist until the DSCR exceeds the Minimum DSCR for two consecutive calendar quarters.
+(4)An amortization period exists if the outstanding principal amount has not been paid in full on the applicable anticipated repayment date and continues to exist until the principal has been repaid in full. 
+
+
+A failure to meet the noted DSCR tests could prevent the AMT Asset Subs from distributing excess cash flow to us, which could affect our ability to fund our capital expenditures, including tower construction and acquisitions, and to meet REIT distribution requirements. During an “amortization period,” all excess cash flow and any amounts then in the applicable Cash Trap Reserve Account would be applied to pay the principal of the Loan on each monthly payment date, and so would not be available for distribution to us. Further, additional interest will begin to accrue with respect to the Loan from and after the anticipated repayment date at a per annum rate determined in accordance with the applicable agreement. Furthermore, if the AMT Asset Subs were to default on the Loan, the trustee may seek to foreclose upon or otherwise convert the ownership of all or any portion of the 5,017 broadcast and wireless communications towers and related assets that secure the Loan, in which case we could lose those sites and their associated revenue.
+As discussed above, we use our available liquidity and seek new sources of liquidity to fund capital expenditures, future growth and expansion initiatives, satisfy our distribution requirements and repay or repurchase our debt or equity. If we 
+
+
+51 
+
+
+
+determine that it is desirable or necessary to raise additional capital, we may be unable to do so, or such additional financing may be prohibitively expensive or restricted by the terms of our outstanding indebtedness. Additionally, as further discussed under the caption “Risk Factors” in Item 1A of the 2025 Form 10-K, market volatility and disruption caused by inflation, high interest rates and supply chain disruptions may impact our ability to raise additional capital through debt financing activities or our ability to repay or refinance maturing liabilities, or impact the terms of any new obligations. If we are unable to raise capital when our needs arise, we may not be able to fund capital expenditures, future growth and expansion initiatives, satisfy our REIT distribution requirements and debt service obligations, or refinance our existing indebtedness.
+In addition, our liquidity depends on our ability to generate cash flow from operating activities. As set forth under the caption “Risk Factors” in Item 1A of the 2025 Form 10-K, we derive a substantial portion of our current and projected future revenue from a small number of customers and, consequently, a failure by a significant customer to perform its contractual obligations to us could adversely affect our cash flow and liquidity.
+For more information regarding the terms of our outstanding indebtedness, please see note 8 to our consolidated financial statements included in the 2025 Form 10-K. 
+
+Critical Accounting Policies and Estimates
+Management’s discussion and analysis of financial condition and results of operations are based upon our consolidated and condensed consolidated financial statements, which have been prepared in accordance with GAAP. The preparation of these financial statements requires us to make estimates and assumptions that affect the reported amounts of assets, liabilities, revenues and expenses, as well as related disclosures of contingent assets and liabilities. We evaluate our policies and estimates on an ongoing basis, including those related to accounting and impairment of long-lived assets, revenue recognition, rent expense and income taxes, as further discussed in the 2025 Form 10-K. Management bases its estimates on historical experience and various other assumptions that are believed to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying amounts of assets and liabilities that are not readily apparent from other sources. Actual results may differ from these estimates under different assumptions or conditions.
+We have reviewed our policies and estimates to determine our critical accounting policies for the nine months ended September 30, 2026. We have made no material changes to the critical accounting policies described in the 2025 Form 10-K.
+
+Accounting Standards Update
+For a discussion of recent accounting standards updates, see note 1 to our consolidated and condensed consolidated financial statements included in this Quarterly Report.
+
+
+52 
+
+
+
+
+
+
+
+
+ITEM 3.
